@@ -1,0 +1,427 @@
+[
+  {
+    "ex": [
+      "What medicine should I take for this?",
+      "What should I take for anxiety?",
+      "Give medication advice"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:What\\ medicine\\ should\\ I\\ take\\ for\\ this\\?|What\\ should\\ I\\ take\\ for\\ anxiety\\?|Give\\ medication\\ advice)"
+    },
+    "tags": [
+      "bd",
+      "medical"
+    ],
+    "prio": 2,
+    "safety": "escalate",
+    "cat": "bd",
+    "cand": [
+      "bd_002",
+      "bd_006"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.7,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.55,
+      "in_tok": 220,
+      "out_tok": 72,
+      "tts_ch": 230
+    },
+    "audit": false,
+    "note": "Indication of the limits of medical advice.",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_021",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I should increase my dose",
+      "I can stop the medicine",
+      "I should lower the dose"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ should\\ increase\\ my\\ dose|I\\ can\\ stop\\ the\\ medicine|I\\ should\\ lower\\ the\\ dose)"
+    },
+    "tags": [
+      "bd",
+      "prescription"
+    ],
+    "prio": 2,
+    "safety": "escalate",
+    "cat": "bd",
+    "cand": [
+      "bd_002",
+      "bd_007"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.7,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.55,
+      "in_tok": 220,
+      "out_tok": 72,
+      "tts_ch": 230
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_022",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Write me something",
+      "Give me a recipe",
+      "You can prescribe medicine"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Write\\ me\\ something|Give\\ me\\ a\\ recipe|You\\ can\\ prescribe\\ medicine)"
+    },
+    "tags": [
+      "bd",
+      "rx"
+    ],
+    "prio": 2,
+    "safety": "escalate",
+    "cat": "bd",
+    "cand": [
+      "bd_002",
+      "bd_010"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.7,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.55,
+      "in_tok": 220,
+      "out_tok": 72,
+      "tts_ch": 230
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_023",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "What can I do legally?",
+      "Let me say this in court",
+      "Give legal advice"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:What\\ can\\ I\\ do\\ legally\\?|Let\\ me\\ say\\ this\\ in\\ court|Give\\ legal\\ advice)"
+    },
+    "tags": [
+      "bd",
+      "legal"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "bd",
+    "cand": [
+      "bd_004",
+      "bd_009"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_024",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Write an official certificate",
+      "Give a professional opinion",
+      "I need a paper from you"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Write\\ an\\ official\\ certificate|Give\\ a\\ professional\\ opinion|I\\ need\\ a\\ paper\\ from\\ you)"
+    },
+    "tags": [
+      "bd",
+      "documentation"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "bd",
+    "cand": [
+      "bd_004",
+      "bd_008"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_025",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Don't record anything",
+      "I don't agree to take notes",
+      "Do not store this"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Don't\\ record\\ anything|I\\ don't\\ agree\\ to\\ take\\ notes|Do\\ not\\ store\\ this)"
+    },
+    "tags": [
+      "bd",
+      "consent"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "bd",
+    "cand": [
+      "bd_001",
+      "bd_005"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_026",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Tell me if I'm sick",
+      "I'm asking for a diagnosis now",
+      "What trouble do you think I have?"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Tell\\ me\\ if\\ I'm\\ sick|I'm\\ asking\\ for\\ a\\ diagnosis\\ now|What\\ trouble\\ do\\ you\\ think\\ I\\ have\\?)"
+    },
+    "tags": [
+      "bd",
+      "diagnosis"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "bd",
+    "cand": [
+      "bd_002",
+      "bd_006"
+    ],
+    "fb": "call_llm",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_027",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "You're keeping this a secret, aren't you?",
+      "No one can know about it",
+      "Guarantee you'll never tell"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:You're\\ keeping\\ this\\ a\\ secret,\\ aren't\\ you\\?|No\\ one\\ can\\ know\\ about\\ it|Guarantee\\ you'll\\ never\\ tell)"
+    },
+    "tags": [
+      "bd",
+      "confidentiality"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "bd",
+    "cand": [
+      "bd_001",
+      "bd_005"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_028",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

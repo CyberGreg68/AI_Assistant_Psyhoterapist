@@ -1,0 +1,1092 @@
+[
+  {
+    "ex": [
+      "I want to kill myself",
+      "I'm ending my life",
+      "I can't take it anymore"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ want\\ to\\ kill\\ myself|I'm\\ ending\\ my\\ life|I\\ can't\\ take\\ it\\ anymore)"
+    },
+    "tags": [
+      "cri",
+      "suicide"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_002",
+      "cri_005"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "cult": "Avoid trivializing; direct and sympathetic language is needed.",
+    "note": "Immediate human handover and local emergency information.",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_001",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I will do it today",
+      "I have a plan for tonight",
+      "I've decided to end it today"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ will\\ do\\ it\\ today|I\\ have\\ a\\ plan\\ for\\ tonight|I've\\ decided\\ to\\ end\\ it\\ today)"
+    },
+    "tags": [
+      "cri",
+      "suicide",
+      "plan"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_002",
+      "cri_003",
+      "cri_005"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "note": "A statement referring to a specific plan.",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_002",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I want to cut myself",
+      "I want to hurt myself",
+      "I would harm myself"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ want\\ to\\ cut\\ myself|I\\ want\\ to\\ hurt\\ myself|I\\ would\\ harm\\ myself)"
+    },
+    "tags": [
+      "cri",
+      "selfharm"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_002",
+      "cri_004"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "note": "Self-harm urge.",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_003",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I already cut myself",
+      "I took something against myself",
+      "I just hurt myself"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ already\\ cut\\ myself|I\\ took\\ something\\ against\\ myself|I\\ just\\ hurt\\ myself)"
+    },
+    "tags": [
+      "cri",
+      "selfharm",
+      "recent"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_003",
+      "cri_005"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "note": "A recent statement of self-harm.",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_004",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I'm having a panic attack",
+      "I can't breathe",
+      "Now I'm totally panicking"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I'm\\ having\\ a\\ panic\\ attack|I\\ can't\\ breathe|Now\\ I'm\\ totally\\ panicking)"
+    },
+    "tags": [
+      "cri",
+      "panic"
+    ],
+    "prio": 1,
+    "safety": "escalate",
+    "cat": "cri",
+    "cand": [
+      "cri_003",
+      "cri_004",
+      "cri_006"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.55,
+      "in_tok": 220,
+      "out_tok": 72,
+      "tts_ch": 230
+    },
+    "audit": true,
+    "note": "Acute panic and respiratory distress.",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_005",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I'm completely falling apart",
+      "I'm not in reality",
+      "It's like I'm not here"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I'm\\ completely\\ falling\\ apart|I'm\\ not\\ in\\ reality|It's\\ like\\ I'm\\ not\\ here)"
+    },
+    "tags": [
+      "cri",
+      "dissociation"
+    ],
+    "prio": 1,
+    "safety": "escalate",
+    "cat": "cri",
+    "cand": [
+      "cri_003",
+      "cri_004",
+      "cri_007"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.55,
+      "in_tok": 220,
+      "out_tok": 72,
+      "tts_ch": 230
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_006",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I'm going to hit someone",
+      "I want to hurt someone",
+      "I'm afraid of hurting someone else"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I'm\\ going\\ to\\ hit\\ someone|I\\ want\\ to\\ hurt\\ someone|I'm\\ afraid\\ of\\ hurting\\ someone\\ else)"
+    },
+    "tags": [
+      "cri",
+      "violence"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_002",
+      "cri_005"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "note": "Endangering others.",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_007",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Everything is completely hopeless",
+      "There's no point in me living",
+      "It's all over"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Everything\\ is\\ completely\\ hopeless|There's\\ no\\ point\\ in\\ me\\ living|It's\\ all\\ over)"
+    },
+    "tags": [
+      "cri",
+      "hopelessness"
+    ],
+    "prio": 1,
+    "safety": "escalate",
+    "cat": "cri",
+    "cand": [
+      "cri_003",
+      "cri_004",
+      "cri_008"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.55,
+      "in_tok": 220,
+      "out_tok": 72,
+      "tts_ch": 230
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_008",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I said goodbye to everyone",
+      "I said goodbye to everyone",
+      "I wrote a letter as a farewell"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ said\\ goodbye\\ to\\ everyone|I\\ said\\ goodbye\\ to\\ everyone|I\\ wrote\\ a\\ letter\\ as\\ a\\ farewell)"
+    },
+    "tags": [
+      "cri",
+      "farewell"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_002",
+      "cri_005",
+      "cri_009"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_009",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I have medicine for it",
+      "I have the rope here",
+      "I prepared everything"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ have\\ medicine\\ for\\ it|I\\ have\\ the\\ rope\\ here|I\\ prepared\\ everything)"
+    },
+    "tags": [
+      "cri",
+      "means"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_002",
+      "cri_004",
+      "cri_005"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_010",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I would overdose myself",
+      "I would take a lot of medicine",
+      "I'd rather take everything"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ would\\ overdose\\ myself|I\\ would\\ take\\ a\\ lot\\ of\\ medicine|I'd\\ rather\\ take\\ everything)"
+    },
+    "tags": [
+      "cri",
+      "overdose"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_002",
+      "cri_005"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_011",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I would jump out the window",
+      "I would jump off somewhere",
+      "I just want to jump off"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ would\\ jump\\ out\\ the\\ window|I\\ would\\ jump\\ off\\ somewhere|I\\ just\\ want\\ to\\ jump\\ off)"
+    },
+    "tags": [
+      "cri",
+      "jump"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_002",
+      "cri_005"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_012",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Voices tell me to hurt you",
+      "I hear to do it",
+      "The voices encourage me to do so"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Voices\\ tell\\ me\\ to\\ hurt\\ you|I\\ hear\\ to\\ do\\ it|The\\ voices\\ encourage\\ me\\ to\\ do\\ so)"
+    },
+    "tags": [
+      "cri",
+      "psychosis"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_003",
+      "cri_010"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "note": "Suspected command hallucination.",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_013",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I'm not safe at home",
+      "I'm afraid to go home",
+      "Someone is hurting you at home"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I'm\\ not\\ safe\\ at\\ home|I'm\\ afraid\\ to\\ go\\ home|Someone\\ is\\ hurting\\ you\\ at\\ home)"
+    },
+    "tags": [
+      "cri",
+      "domestic"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_004",
+      "cri_011"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_014",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Now I'm shaking and collapsing",
+      "I'm close to fainting",
+      "I can't calm down"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Now\\ I'm\\ shaking\\ and\\ collapsing|I'm\\ close\\ to\\ fainting|I\\ can't\\ calm\\ down)"
+    },
+    "tags": [
+      "cri",
+      "acute_distress"
+    ],
+    "prio": 1,
+    "safety": "escalate",
+    "cat": "cri",
+    "cand": [
+      "cri_003",
+      "cri_006",
+      "cri_012"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.55,
+      "in_tok": 220,
+      "out_tok": 72,
+      "tts_ch": 230
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_015",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "There is no one by my side now",
+      "I'm all alone in this",
+      "I have no one to call right now"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:There\\ is\\ no\\ one\\ by\\ my\\ side\\ now|I'm\\ all\\ alone\\ in\\ this|I\\ have\\ no\\ one\\ to\\ call\\ right\\ now)"
+    },
+    "tags": [
+      "cri",
+      "isolation"
+    ],
+    "prio": 1,
+    "safety": "escalate",
+    "cat": "cri",
+    "cand": [
+      "cri_004",
+      "cri_005",
+      "cri_013"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.55,
+      "in_tok": 220,
+      "out_tok": 72,
+      "tts_ch": 230
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_016",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I can't promise I'll stay safe",
+      "I might hurt myself today",
+      "I don't feel like I can last until the evening"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ can't\\ promise\\ I'll\\ stay\\ safe|I\\ might\\ hurt\\ myself\\ today|I\\ don't\\ feel\\ like\\ I\\ can\\ last\\ until\\ the\\ evening)"
+    },
+    "tags": [
+      "cri",
+      "unsafe"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_002",
+      "cri_005"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_017",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I can also harm my child",
+      "I'm afraid I'm going to blame it on my family",
+      "I can't control my temper"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ can\\ also\\ harm\\ my\\ child|I'm\\ afraid\\ I'm\\ going\\ to\\ blame\\ it\\ on\\ my\\ family|I\\ can't\\ control\\ my\\ temper)"
+    },
+    "tags": [
+      "cri",
+      "family_risk"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_002",
+      "cri_014"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_018",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "You need to be connected to someone immediately",
+      "I need urgent help",
+      "Connect with a live person now"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:You\\ need\\ to\\ be\\ connected\\ to\\ someone\\ immediately|I\\ need\\ urgent\\ help|Connect\\ with\\ a\\ live\\ person\\ now)"
+    },
+    "tags": [
+      "cri",
+      "handoff_request"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_005",
+      "cri_006",
+      "cri_015"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_019",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I can't stop crying and shaking",
+      "I'm completely broken right now",
+      "Everything is too much now"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ can't\\ stop\\ crying\\ and\\ shaking|I'm\\ completely\\ broken\\ right\\ now|Everything\\ is\\ too\\ much\\ now)"
+    },
+    "tags": [
+      "cri",
+      "decompensation"
+    ],
+    "prio": 1,
+    "safety": "escalate",
+    "cat": "cri",
+    "cand": [
+      "cri_003",
+      "cri_004",
+      "cri_012"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.55,
+      "in_tok": 220,
+      "out_tok": 72,
+      "tts_ch": 230
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_020",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

@@ -1,0 +1,1 @@
+Reserve this folder for German locale-specific mappings such as tag normalization, alias tables, or lookup resources.

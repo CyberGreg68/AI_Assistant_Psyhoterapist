@@ -1,0 +1,218 @@
+[
+  {
+    "ex": [
+      "Foglaljuk össze",
+      "Zárjuk le röviden",
+      "Mi a mai lényeg"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(foglaljuk össze|zárjuk le röviden|mi a mai lényeg)\\\\b"
+    },
+    "tags": [
+      "clo",
+      "summary"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "clo",
+    "cand": [
+      "clo_001",
+      "clo_002"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_097",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Mi legyen a következő lépés",
+      "Mivel menjek tovább",
+      "Adj záró tervet"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(mi legyen a következő lépés|mivel menjek tovább|adj záró tervet)\\\\b"
+    },
+    "tags": [
+      "clo",
+      "next_step"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "clo",
+    "cand": [
+      "clo_003",
+      "clo_010"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_098",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "A végén kérnék forrást",
+      "Adj valamit útravalónak",
+      "Kellene zárás előtt egy kapaszkodó"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(végén kérnék forrást|adj valamit útravalónak|zárás előtt egy kapaszkodó)\\\\b"
+    },
+    "tags": [
+      "clo",
+      "resource"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "clo",
+    "cand": [
+      "clo_005",
+      "clo_008"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_099",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Zárás előtt nézzünk rá a biztonságra",
+      "Lezáráskor kérdezz rá hogy rendben leszek-e",
+      "Befejezés előtt kell egy safety check"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(zárás előtt .*biztonságra|lezáráskor .*rendben leszek-e|befejezés előtt .*safety check)\\\\b"
+    },
+    "tags": [
+      "clo",
+      "safety"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "clo",
+    "cand": [
+      "clo_009",
+      "clo_004"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_100",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

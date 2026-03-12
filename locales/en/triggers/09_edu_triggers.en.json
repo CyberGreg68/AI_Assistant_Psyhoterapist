@@ -1,0 +1,426 @@
+[
+  {
+    "ex": [
+      "Why can't I sleep",
+      "Give me a sleep tip",
+      "My sleep is totally bad"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Why\\ can't\\ I\\ sleep|Give\\ me\\ a\\ sleep\\ tip|My\\ sleep\\ is\\ totally\\ bad)"
+    },
+    "tags": [
+      "edu",
+      "sleep"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "edu",
+    "cand": [
+      "edu_004",
+      "edu_005"
+    ],
+    "fb": "call_llm",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_085",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I am anxious because of the pain",
+      "What do I know about the relationship between stress and pain?",
+      "My body hurts too"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ am\\ anxious\\ because\\ of\\ the\\ pain|What\\ do\\ I\\ know\\ about\\ the\\ relationship\\ between\\ stress\\ and\\ pain\\?|My\\ body\\ hurts\\ too)"
+    },
+    "tags": [
+      "edu",
+      "pain"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "edu",
+    "cand": [
+      "edu_001",
+      "edu_010"
+    ],
+    "fb": "call_llm",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_086",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Tell me what happens when you panic",
+      "What is the mechanism of a panic attack",
+      "I'm interested in the physical reaction"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Tell\\ me\\ what\\ happens\\ when\\ you\\ panic|What\\ is\\ the\\ mechanism\\ of\\ a\\ panic\\ attack|I'm\\ interested\\ in\\ the\\ physical\\ reaction)"
+    },
+    "tags": [
+      "edu",
+      "panic"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "edu",
+    "cand": [
+      "edu_002",
+      "edu_003"
+    ],
+    "fb": "call_llm",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_087",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Explain grounding",
+      "What is 5 4 3 2 1",
+      "How earthing works"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Explain\\ grounding|What\\ is\\ 5\\ 4\\ 3\\ 2\\ 1|How\\ earthing\\ works)"
+    },
+    "tags": [
+      "edu",
+      "grounding"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "edu",
+    "cand": [
+      "edu_003",
+      "edu_011"
+    ],
+    "fb": "call_llm",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_088",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Give an explanation of breathing",
+      "Why slow breathing helps",
+      "You need breathing exercises"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Give\\ an\\ explanation\\ of\\ breathing|Why\\ slow\\ breathing\\ helps|You\\ need\\ breathing\\ exercises)"
+    },
+    "tags": [
+      "edu",
+      "breathing"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "edu",
+    "cand": [
+      "edu_002",
+      "edu_012"
+    ],
+    "fb": "call_llm",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_089",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "What is the essence of therapy",
+      "What's the point of this conversation",
+      "Tell me briefly how the therapy helps"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:What\\ is\\ the\\ essence\\ of\\ therapy|What's\\ the\\ point\\ of\\ this\\ conversation|Tell\\ me\\ briefly\\ how\\ the\\ therapy\\ helps)"
+    },
+    "tags": [
+      "edu",
+      "therapy"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "edu",
+    "cand": [
+      "edu_001",
+      "edu_013"
+    ],
+    "fb": "call_llm",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_090",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Why does my body react this way under stress?",
+      "Tell me about stress",
+      "Why am I so fired up?"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Why\\ does\\ my\\ body\\ react\\ this\\ way\\ under\\ stress\\?|Tell\\ me\\ about\\ stress|Why\\ am\\ I\\ so\\ fired\\ up\\?)"
+    },
+    "tags": [
+      "edu",
+      "stress"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "edu",
+    "cand": [
+      "edu_001",
+      "edu_014"
+    ],
+    "fb": "call_llm",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_091",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Give a short self-help explanation",
+      "I need information that I can use at home",
+      "I am asking for psychoeducation in short"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Give\\ a\\ short\\ self\\-help\\ explanation|I\\ need\\ information\\ that\\ I\\ can\\ use\\ at\\ home|I\\ am\\ asking\\ for\\ psychoeducation\\ in\\ short)"
+    },
+    "tags": [
+      "edu",
+      "coping"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "edu",
+    "cand": [
+      "edu_001",
+      "edu_015"
+    ],
+    "fb": "call_llm",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_092",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

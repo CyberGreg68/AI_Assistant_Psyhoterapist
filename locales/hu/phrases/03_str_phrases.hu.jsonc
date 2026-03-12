@@ -1,0 +1,1385 @@
+[
+  {
+    "id": "str_001",
+    "pri": 2,
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "ag",
+      "proc"
+    ],
+    "pp": [
+      {
+        "txt": "Ma mit szeretnél leginkább megbeszélni?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Mivel kezdjük ma, mi a legfontosabb számodra?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Mi az, ami most a leginkább foglalkoztat, és amivel foglalkoznunk kellene?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_002",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "ag",
+      "expect"
+    ],
+    "pp": [
+      {
+        "txt": "Röviden elmondom, hogyan zajlik a mai beszélgetés: először meghallgatlak, majd összefoglalok, és megbeszéljük a következő lépéseket.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Elmondom a menetrendet: hallgatlak, visszajelzek, és közösen tervezünk egy kis lépést a végén.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "A mai alkalom menete: te beszélsz, én reflektálok, majd együtt döntünk a következő lépésről.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_003",
+    "pri": 1,
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cons",
+      "proc"
+    ],
+    "pp": [
+      {
+        "txt": "Mielőtt folytatjuk: rendben van, ha néha röviden összefoglalom, amit mondasz?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Jó, ha időnként összefoglalom, amit mondtál, hogy biztosan jól értem?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Elfogadod, hogy néha visszakérdezek vagy összefoglalok, hogy pontosak legyünk?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_004",
+    "pri": 1,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "time",
+      "expect"
+    ],
+    "pp": [
+      {
+        "txt": "Van körülbelül 30 percem ma; szeretnéd, hogy ennek megfelelően fókuszáljunk?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ma körülbelül fél óránk van; szeretnéd, hogy erre az időre koncentráljunk?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Figyelembe véve az időt, mit tartasz a legfontosabbnak, hogy ma átbeszéljünk?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_005",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "proc",
+      "expect"
+    ],
+    "pp": [
+      {
+        "txt": "Ha közben szeretnél szünetet, csak jelezd nyugodtan.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ha bármikor szünetet szeretnél, szólj, és tartunk egy rövid pihenőt.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Nyugodtan kérhetsz szünetet, ha szükséged van rá a beszélgetés során.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_006",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cons",
+      "proc"
+    ],
+    "pp": [
+      {
+        "txt": "Minden, amit itt megbeszélünk, bizalmas, kivéve, ha veszély áll fenn — erről szeretnél többet tudni?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "A beszélgetés bizalmas; ha veszélyt észlelek, azt jeleznem kell — szeretnél erről röviden tájékoztatást?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Fontos tudni, hogy a beszélgetés bizalmas, de vannak kivételek veszély esetén; beszéljünk erről, ha szeretnéd.",
+        "t": "n",
+        "l": "l",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_007",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "ag",
+      "proc"
+    ],
+    "pp": [
+      {
+        "txt": "Szeretnél előre megbeszélni egy konkrét célt a mai alkalomra?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Állítsunk fel egy kis célt erre az ülésre, ami segít fókuszálni?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Mi lenne egy reális, rövid cél, amit ma elérnél?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_008",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "sched",
+      "proc"
+    ],
+    "pp": [
+      {
+        "txt": "Szeretnél időpontot egyeztetni a következő beszélgetésre?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Megbeszéljük most, mikor találkozunk legközelebb?",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Jó lenne lefoglalni a következő alkalmat most rögtön?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_009",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "expect",
+      "proc"
+    ],
+    "pp": [
+      {
+        "txt": "Elmondom röviden, mire számíthatsz tőlem a folyamat során: figyelek, visszajelzek és segítek lépéseket tervezni.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "A szerepem az, hogy meghallgassalak, visszatükrözzem, és együtt tervezzünk gyakorlati lépéseket.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Tőlem azt várhatod, hogy támogassalak, kérdezzek és segítsek a következő lépésekben való eligazodásban.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_010",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "proc",
+      "ag"
+    ],
+    "pp": [
+      {
+        "txt": "Szeretnéd, hogy a beszélgetés végén röviden összefoglaljam a megbeszélteket?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Jó ötlet, ha a végén összefoglalom a fő pontokat és a következő lépéseket?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Összefoglaljam a végén, mit vállaltunk és mi a következő lépés?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_011",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "time",
+      "sched"
+    ],
+    "pp": [
+      {
+        "txt": "Ha elfogy az idő, szeretnéd, hogy folytassuk egy másik alkalommal, vagy röviden zárjuk le?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ha lejár az időnk, inkább folytassuk később, vagy zárjuk röviden le a mai beszélgetést?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Mit szeretnél, ha az idő véget érne: folytatás vagy lezárás?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_012",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "proc",
+      "expect"
+    ],
+    "pp": [
+      {
+        "txt": "Ha szeretnéd, a beszélgetés közben megjegyzéseket készíthetek, amiket később áttekinthetsz.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Megjegyzéseket készítek a fontos pontokról; szeretnéd, hogy ezeket megosztsam veled a végén?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Rögzíthetek néhány kulcspontot, amit a végén átbeszélünk — ez megfelel?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_013",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "expect",
+      "proc"
+    ],
+    "pp": [
+      {
+        "txt": "Előfordulhat, hogy néha visszakérdezek részletekre; ez segít pontosan megérteni a helyzetet.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Lehet, hogy néha pontosító kérdéseket teszek fel; ez azért van, hogy jobban megértsem, mit érzel.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ha visszakérdezek, az a pontosabb megértést szolgálja — remélem, ez rendben van számodra.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_014",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "sched"
+    ],
+    "pp": [
+      {
+        "txt": "Szeretnéd, hogy emlékeztesselek a következő alkalom előtt?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Kívánod, hogy küldjek emlékeztetőt a következő találkozó előtt?",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Kéred, hogy beállítsunk egy emlékeztetőt a következő időpontra?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_015",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "clo",
+      "expect"
+    ],
+    "pp": [
+      {
+        "txt": "A beszélgetés végén megbeszéljük a következő lépést és azt, ki mit vállal.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "A végén röviden átbeszéljük, mit teszünk a következő alkalomig és ki mit vállal.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Zárásként egyeztetünk egy kis tervet a következő lépésekre és a felelősségekre.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_016",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "proc",
+      "expect"
+    ],
+    "pp": [
+      {
+        "txt": "Ha valami közben változik, jelezd nyugodtan, és módosítjuk a tervet.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ha a helyzeted változik, szólj, és együtt átállítjuk a következő lépéseket.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Bármikor módosíthatjuk a tervet, ha új információ vagy igény merül fel — ez rendben?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_017",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "proc",
+      "ag"
+    ],
+    "pp": [
+      {
+        "txt": "Szeretnéd, hogy a mai beszélgetés alapján írjak egy rövid összefoglalót?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Kívánod, hogy küldjek egy rövid összefoglalót a mai megbeszélésről?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Szeretnéd, ha a végén elküldenék egy rövid összegzést a megbeszéltekről?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_018",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "expect",
+      "clo"
+    ],
+    "pp": [
+      {
+        "txt": "A mai alkalom célja lehet egy kis megkönnyebbülés és egy gyakorlati lépés meghatározása.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Célunk ma: megérteni, hogyan érzed magad, és találni egy kis, megvalósítható lépést a következő napokra.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ma arra fókuszálunk, hogy kicsit rendezzük a helyzetet és találjunk egy egyszerű, következő lépést.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_019",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "proc",
+      "expect"
+    ],
+    "pp": [
+      {
+        "txt": "Ha szeretnéd, a beszélgetés végén megbeszélhetünk egy kis önsegítő gyakorlatot is.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "A végén adhatok egy rövid gyakorlatot, amit otthon is kipróbálhatsz — szeretnéd?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Szeretnél egy egyszerű gyakorlatot, amit a következő napokban alkalmazhatsz?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_020",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "clo"
+    ],
+    "pp": [
+      {
+        "txt": "A beszélgetés végén megbeszéljük, hogyan érzed magad most, és mit viszel magaddal.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Zárásként röviden átbeszéljük, hogyan érzed magad most, és mi a következő lépésed.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "A végén kérdezem, hogyan érzed magad, és mit szeretnél vinni a következő napokra.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

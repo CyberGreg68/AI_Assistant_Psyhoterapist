@@ -1,0 +1,47 @@
+{
+  "lang": "<lang>",
+  "version": "1.0",
+  "generated_at": "TBD",
+  "category_order": [
+    {
+      "prefix": "01",
+      "name": "crisis",
+      "default_priority": 1,
+      "description": "Immediate safety situations and human handoff.",
+      "filename": "01_crisis.<lang>.jsonc",
+      "typical_tags": ["cri", "saf", "hand", "imm"],
+      "derivation": "Derived from crisis and acute safety protocols.",
+      "clinical_sensitivity": "critical",
+      "requires_clinical_review": true,
+      "handoff_capable": true,
+      "review_owner": "clinical",
+      "review_sla_hours": 24
+    }
+  ],
+  "code_keys": {
+    "tone": {"n": "neutral", "w": "warm", "f": "firm"},
+    "length": {"s": "short", "m": "medium", "l": "long"},
+    "use": {"c": "chat", "t": "tts", "s": "style_snippet"},
+    "rec": {"w": "warm", "n": "neutral", "b": "brief", "f": "firm"}
+  },
+  "selection_rules": {
+    "step_1": "If crisis risk is detected, prioritize crisis and trigger hard handoff.",
+    "step_2": "Filter categories by current intent relevance and manifest order.",
+    "step_3": "Within a category, prefer best tag and tone matches."
+  },
+  "review_policy": {
+    "required_metadata_version": "1.0",
+    "sensitive_categories": ["crisis"],
+    "mandatory_fields_for_sensitive_changes": ["review_status", "reviewed_by_role", "reviewed_at", "safety_notes"],
+    "minimum_reviewer_role": "clinical",
+    "legacy_content_policy": "Legacy data/phrases content is mirror-only; locales and manifests are the primary source of truth."
+  },
+  "data_sources": {
+    "primary_manifest_dir": "manifests",
+    "primary_locale_dir": "locales",
+    "legacy_mirror_dir": "data/phrases",
+    "legacy_mode": "mirror_only"
+  },
+  "derivation_notes": "Use this file as a starting point for a new language manifest.",
+  "file_comment_template": "/* <filename> - <lang> */"
+}

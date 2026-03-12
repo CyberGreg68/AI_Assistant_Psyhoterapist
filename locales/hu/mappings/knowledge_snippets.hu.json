@@ -1,0 +1,282 @@
+[
+  {
+    "id": "kb_hu_001",
+    "text": "Ha a kliens tulterhelt vagy szorongo, eloszor rovid validalas es lassitas segit. Kerulni kell a hosszu magyarazatot az elso valaszban.",
+    "topics": [
+      "szorongas",
+      "validalas",
+      "lassitas"
+    ],
+    "intents": [
+      "emotional_support",
+      "guidance",
+      "support"
+    ],
+    "tags": [
+      "emo",
+      "emp"
+    ],
+    "categories": [
+      "empathy",
+      "variants"
+    ],
+    "audience": [
+      "adult",
+      "senior"
+    ],
+    "risk_level": "general",
+    "allowed_stages": [
+      "phrase_selection",
+      "generative_fallback"
+    ],
+    "source": "curated_hu_demo",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "kb_hu_002",
+    "text": "Kapcsolati veszteseg vagy szakitas eseten gyakran hasznos egy konkret, nyitott kerdes, amely az aktualis terhelest es a tamaszforrasokat terkepezi fel.",
+    "topics": [
+      "szakitas",
+      "veszteseg",
+      "tamogatohalo"
+    ],
+    "intents": [
+      "emotional_support",
+      "guidance"
+    ],
+    "tags": [
+      "oq",
+      "emp"
+    ],
+    "categories": [
+      "open_questions",
+      "empathy"
+    ],
+    "audience": [
+      "adult",
+      "teen"
+    ],
+    "risk_level": "general",
+    "allowed_stages": [
+      "phrase_selection",
+      "generative_fallback"
+    ],
+    "source": "curated_hu_demo",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "kb_hu_003",
+    "text": "Krizisjelzesnel a rendszernek a biztonsagot kell elore vennie. Ilyenkor a helyi, determinisztikus krizis- vagy handoff-phrase prioritast elvezzen az online valasszal szemben.",
+    "topics": [
+      "krizis",
+      "biztonsag",
+      "handoff"
+    ],
+    "intents": [
+      "guidance",
+      "support"
+    ],
+    "tags": [
+      "cri",
+      "saf",
+      "hand"
+    ],
+    "categories": [
+      "crisis",
+      "boundary"
+    ],
+    "audience": [
+      "adult",
+      "senior"
+    ],
+    "risk_level": "critical",
+    "allowed_stages": [
+      "phrase_selection"
+    ],
+    "source": "curated_hu_demo",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "kb_hu_004",
+    "text": "Egyszerubb nyelvezet igenye eseten rovid, koznyelvi mondatok kellenek, kevesebb absztrakcioval es egy lepesre bontott javaslattal.",
+    "topics": [
+      "plain_language",
+      "egyszerusites"
+    ],
+    "intents": [
+      "guidance",
+      "support"
+    ],
+    "tags": [
+      "inf"
+    ],
+    "categories": [
+      "cultural",
+      "psychoeducation"
+    ],
+    "audience": [
+      "adult",
+      "senior"
+    ],
+    "risk_level": "general",
+    "allowed_stages": [
+      "phrase_selection",
+      "generative_fallback"
+    ],
+    "source": "curated_hu_demo",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "kb_hu_005",
+    "text": "Alvasi nehezseg vagy ruminalas eseten hasznos lehet egy rovid, konkret coping-javaslat, de csak akkor, ha elotte tortent validalas.",
+    "topics": [
+      "alvas",
+      "ruminalas",
+      "coping"
+    ],
+    "intents": [
+      "guidance",
+      "support"
+    ],
+    "tags": [
+      "edu",
+      "emp"
+    ],
+    "categories": [
+      "psychoeducation",
+      "encouragement"
+    ],
+    "audience": [
+      "adult",
+      "senior"
+    ],
+    "risk_level": "general",
+    "allowed_stages": [
+      "phrase_selection",
+      "generative_fallback"
+    ],
+    "source": "curated_hu_demo",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "kb_hu_006",
+    "text": "Serdulo vagy fiatal kliens eseten a kapcsolatvesztesegre adott valaszban erdemes az azonnali testi-allapotra, az iskolai vagy csaladi tamaszra es a kovetkezo 24 orara kerdezni.",
+    "topics": [
+      "szakitas",
+      "teen",
+      "tamogatohalo"
+    ],
+    "intents": [
+      "emotional_support",
+      "guidance"
+    ],
+    "tags": [
+      "oq",
+      "emp"
+    ],
+    "categories": [
+      "open_questions",
+      "empathy"
+    ],
+    "audience": [
+      "teen"
+    ],
+    "risk_level": "general",
+    "allowed_stages": [
+      "phrase_selection",
+      "generative_fallback"
+    ],
+    "source": "curated_hu_demo",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "kb_hu_007",
+    "text": "Idosebb vagy alacsonyabb olvasasi terhelesu kliensnel a rovid, egylepeses javaslat es a lassabb tempot jelzo visszajelzes csokkentheti a tulterhelest.",
+    "topics": [
+      "senior",
+      "plain_language",
+      "lassitas"
+    ],
+    "intents": [
+      "guidance",
+      "support",
+      "emotional_support"
+    ],
+    "tags": [
+      "emp",
+      "inf"
+    ],
+    "categories": [
+      "cultural",
+      "empathy",
+      "psychoeducation"
+    ],
+    "audience": [
+      "senior",
+      "low"
+    ],
+    "risk_level": "general",
+    "allowed_stages": [
+      "phrase_selection",
+      "generative_fallback"
+    ],
+    "source": "curated_hu_demo",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

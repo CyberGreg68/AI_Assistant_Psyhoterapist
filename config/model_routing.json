@@ -1,0 +1,46 @@
+{
+  "default_mode": "hybrid_local_first",
+  "latency_budget_ms": 1800,
+  "stages": [
+    {
+      "stage": "stt",
+      "primary_mode": "local",
+      "local_model": "faster-whisper-small",
+      "online_model": "azure_speech_hu",
+      "fallback_mode": "online",
+      "trigger_conditions": ["cpu_overloaded", "microphone_noise_high"]
+    },
+    {
+      "stage": "intent_and_risk",
+      "primary_mode": "local",
+      "local_model": "regex_plus_small_classifier",
+      "online_model": "gpt-4o-mini",
+      "fallback_mode": "online",
+      "trigger_conditions": ["confidence_below_threshold", "novel_input_pattern"]
+    },
+    {
+      "stage": "phrase_selection",
+      "primary_mode": "local",
+      "local_model": "manifest_trigger_phrase_runtime",
+      "online_model": "gpt-4o-mini",
+      "fallback_mode": "local",
+      "trigger_conditions": []
+    },
+    {
+      "stage": "generative_fallback",
+      "primary_mode": "online",
+      "local_model": "llama3_8b_instruct_q4",
+      "online_model": "gpt-4o-mini",
+      "fallback_mode": "local",
+      "trigger_conditions": ["psychoeducation_expansion", "clarification_loop"]
+    },
+    {
+      "stage": "tts",
+      "primary_mode": "local",
+      "local_model": "piper_hu_medium",
+      "online_model": "azure_tts_hu",
+      "fallback_mode": "online",
+      "trigger_conditions": ["voice_clone_required", "device_cpu_overloaded"]
+    }
+  ]
+}

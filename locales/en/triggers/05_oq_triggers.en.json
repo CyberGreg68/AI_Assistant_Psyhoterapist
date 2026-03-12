@@ -1,0 +1,648 @@
+[
+  {
+    "ex": [
+      "My workplace prepares me",
+      "My boss is stressing me out",
+      "I can't stand the pressure of work"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:My\\ workplace\\ prepares\\ me|My\\ boss\\ is\\ stressing\\ me\\ out|I\\ can't\\ stand\\ the\\ pressure\\ of\\ work)"
+    },
+    "tags": [
+      "oq",
+      "work"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_001",
+      "oq_003"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_045",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I'm burnt out at work",
+      "I don't have the energy for work anymore",
+      "I hate going in to work"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I'm\\ burnt\\ out\\ at\\ work|I\\ don't\\ have\\ the\\ energy\\ for\\ work\\ anymore|I\\ hate\\ going\\ in\\ to\\ work)"
+    },
+    "tags": [
+      "oq",
+      "burnout"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_006",
+      "oq_008"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_046",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "My partner and I fight all the time",
+      "My relationship is deteriorating",
+      "We don't understand each other at home"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:My\\ partner\\ and\\ I\\ fight\\ all\\ the\\ time|My\\ relationship\\ is\\ deteriorating|We\\ don't\\ understand\\ each\\ other\\ at\\ home)"
+    },
+    "tags": [
+      "oq",
+      "relationship"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_002",
+      "oq_024"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_047",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I'm post breakup",
+      "They left me and I fell apart",
+      "I can't find myself after the end of the relationship"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I'm\\ post\\ breakup|They\\ left\\ me\\ and\\ I\\ fell\\ apart|I\\ can't\\ find\\ myself\\ after\\ the\\ end\\ of\\ the\\ relationship)"
+    },
+    "tags": [
+      "oq",
+      "breakup"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "oq",
+    "cand": [
+      "oq_002",
+      "oq_007"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_048",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I am very stressed because of my child",
+      "I can't handle my child well",
+      "Parenthood is exhausting"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ am\\ very\\ stressed\\ because\\ of\\ my\\ child|I\\ can't\\ handle\\ my\\ child\\ well|Parenthood\\ is\\ exhausting)"
+    },
+    "tags": [
+      "oq",
+      "parenting"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_005",
+      "oq_009"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_049",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "There is a family conflict",
+      "There is constant tension at home",
+      "I can't stand my relatives"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:There\\ is\\ a\\ family\\ conflict|There\\ is\\ constant\\ tension\\ at\\ home|I\\ can't\\ stand\\ my\\ relatives)"
+    },
+    "tags": [
+      "oq",
+      "family"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_001",
+      "oq_006"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_050",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I'm worried about money",
+      "Financial problems oppress me",
+      "I don't know how I'll get through the month"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I'm\\ worried\\ about\\ money|Financial\\ problems\\ oppress\\ me|I\\ don't\\ know\\ how\\ I'll\\ get\\ through\\ the\\ month)"
+    },
+    "tags": [
+      "oq",
+      "finance"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_003",
+      "oq_008"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_051",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Learning will completely tear you apart",
+      "I'm stressed about exams",
+      "I can't handle the pressure of school"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Learning\\ will\\ completely\\ tear\\ you\\ apart|I'm\\ stressed\\ about\\ exams|I\\ can't\\ handle\\ the\\ pressure\\ of\\ school)"
+    },
+    "tags": [
+      "oq",
+      "school"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_004",
+      "oq_006"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen"
+    ],
+    "lit": "medium",
+    "reg": "youth",
+    "persona": [
+      "student"
+    ],
+    "id": "pt_tr_052",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I don't know what I want",
+      "I feel lost",
+      "I'm not sure of anything"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ don't\\ know\\ what\\ I\\ want|I\\ feel\\ lost|I'm\\ not\\ sure\\ of\\ anything)"
+    },
+    "tags": [
+      "oq",
+      "direction"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_005",
+      "oq_011"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_053",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I worry a lot about my health",
+      "I am afraid of illness",
+      "I keep watching for symptoms"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ worry\\ a\\ lot\\ about\\ my\\ health|I\\ am\\ afraid\\ of\\ illness|I\\ keep\\ watching\\ for\\ symptoms)"
+    },
+    "tags": [
+      "oq",
+      "health_anxiety"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "oq",
+    "cand": [
+      "oq_004",
+      "oq_006"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_054",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I am lonely on weekdays",
+      "I have no one to talk to",
+      "I have few connections left"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ am\\ lonely\\ on\\ weekdays|I\\ have\\ no\\ one\\ to\\ talk\\ to|I\\ have\\ few\\ connections\\ left)"
+    },
+    "tags": [
+      "oq",
+      "loneliness"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_009",
+      "oq_022"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_055",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I don't know what would help now",
+      "I have no idea what to do",
+      "I'm completely stuck"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ don't\\ know\\ what\\ would\\ help\\ now|I\\ have\\ no\\ idea\\ what\\ to\\ do|I'm\\ completely\\ stuck)"
+    },
+    "tags": [
+      "oq",
+      "stuck"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_005",
+      "oq_008"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_056",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

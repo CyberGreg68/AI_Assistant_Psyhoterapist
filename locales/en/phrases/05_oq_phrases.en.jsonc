@@ -1,0 +1,1737 @@
+[
+  {
+    "id": "oq_001",
+    "pri": 2,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "oq",
+      "inf"
+    ],
+    "pp": [
+      {
+        "txt": "Can you tell me more about what exactly happened?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Could you tell me more about what happened?",
+        "t": "w",
+        "l": "l",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Start with what happened first.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "oq_002",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "oq",
+      "emo"
+    ],
+    "pp": [
+      {
+        "txt": "How did you feel when that happened?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "What feelings did you have at that moment?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "How did the event affect you emotionally?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "oq_003",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "oq",
+      "inf"
+    ],
+    "pp": [
+      {
+        "txt": "What was the hardest part of that event?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "What caused you the most problems in that situation?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Which part was the most stressful for you?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "oq_004",
+    "pri": 2,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "oq",
+      "timeline"
+    ],
+    "pp": [
+      {
+        "txt": "When did you first notice this change?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Do you remember when this first started?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "How often does this happen?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "oq_005",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "oq",
+      "plan"
+    ],
+    "pp": [
+      {
+        "txt": "What do you want to achieve next?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "What would be the most important result for you right now?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "What would you consider useful for us to do now?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "oq_006",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "oq",
+      "emo"
+    ],
+    "pp": [
+      {
+        "txt": "What worries you the most right now?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "What concerns you most about this situation?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "What are you most worried about?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "oq_007",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "oq",
+      "inf"
+    ],
+    "pp": [
+      {
+        "txt": "Have you had anything similar before?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Has this happened before in your life?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "If so, when and under what circumstances?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "oq_008",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "oq",
+      "behavior"
+    ],
+    "pp": [
+      {
+        "txt": "What have you done so far to deal with this?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "What steps have you tried?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "What has worked so far and what hasn't?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "oq_009",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "oq",
+      "support"
+    ],
+    "pp": [
+      {
+        "txt": "Is there someone you can lean on right now?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Who is in your support network?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Would you like us to include someone in the support?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "oq_010",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "oq",
+      "insight"
+    ],
+    "pp": [
+      {
+        "txt": "What do you think caused this situation?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "What do you think could be the reason for this change?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Is there a specific event that triggered it?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "oq_011",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "oq",
+      "coping"
+    ],
+    "pp": [
+      {
+        "txt": "What tends to help when you feel the same way?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "What methods have worked before in the fight?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Is there anything you'd like to try right now?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "oq_012",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "oq",
+      "info"
+    ],
+    "pp": [
+      {
+        "txt": "Would you like us to discuss this topic in more detail?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Are you curious to discuss this in more depth?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Want to share more about this now?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "oq_013",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "oq",
+      "values"
+    ],
+    "pp": [
+      {
+        "txt": "What is most important to you in this situation?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "What really matters to you right now?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Which values ​​guide you in this decision?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "oq_014",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "oq",
+      "future"
+    ],
+    "pp": [
+      {
+        "txt": "How do you imagine the next few days in this regard?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "What would you like to see happen in the near future?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "What change do you hope to achieve?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "oq_015",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "oq",
+      "clarify"
+    ],
+    "pp": [
+      {
+        "txt": "Could you clarify what you mean by that?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "What exactly do you mean by this term?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Please give me an example of this.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "oq_016",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "oq",
+      "safety"
+    ],
+    "pp": [
+      {
+        "txt": "Is there anything I'm concerned about for your safety right now?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Do you feel that you are now in danger or that you may be abused?",
+        "t": "f",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Do you need immediate help or protection?",
+        "t": "f",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "oq_017",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "oq",
+      "emotion"
+    ],
+    "pp": [
+      {
+        "txt": "How has this affected your relationships?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "How has this changed your relationships?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Do you feel that this has changed your relationship with others?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "oq_018",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "oq",
+      "info"
+    ],
+    "pp": [
+      {
+        "txt": "Would you like to receive more information about the possibilities?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Are you curious about support options?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Would you like me to recommend some steps?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "oq_019",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "oq",
+      "coping"
+    ],
+    "pp": [
+      {
+        "txt": "What would help you right now?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Is there anything you would like to try right now to feel better?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "What can I do now that would be helpful for you?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "oq_020",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "oq",
+      "followup"
+    ],
+    "pp": [
+      {
+        "txt": "Would you like us to come back to this topic later?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Would it be good if we could talk about this next time?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Is it okay if we continue this conversation later?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "oq_021",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "oq",
+      "insight"
+    ],
+    "pp": [
+      {
+        "txt": "What have you learned from this situation so far?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Is there anything you see differently now than before?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "What recognition have you had so far?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "oq_022",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "oq",
+      "values"
+    ],
+    "pp": [
+      {
+        "txt": "What do you want to keep from the current situation?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "What things are important to you that you don't want to lose?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "What are you clinging to in this situation?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "oq_023",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "oq",
+      "clarify"
+    ],
+    "pp": [
+      {
+        "txt": "Would you like me to summarize what you've said so far?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Would you like me to briefly summarize the point?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "OK, shall I summarize briefly?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "oq_024",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "oq",
+      "future"
+    ],
+    "pp": [
+      {
+        "txt": "If you could change one thing right now, what would it be?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "What would be the first small step you would take?",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "What would you try first if you could decide?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "oq_025",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "oq",
+      "support"
+    ],
+    "pp": [
+      {
+        "txt": "Would you like us to plan a next step together?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Would you like us to develop a plan together?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Shall I help you put together a little plan?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

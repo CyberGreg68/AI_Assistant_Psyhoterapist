@@ -1,0 +1,334 @@
+[
+  {
+    "ex": [
+      "A hitem fontos ebben",
+      "Vallási szempontból is nehéz",
+      "A hitemet is érinti"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(hitem fontos ebben|vallási szempontból is nehéz|hitemet is érinti)\\\\b"
+    },
+    "tags": [
+      "cult",
+      "religion"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "cult",
+    "cand": [
+      "cult_003",
+      "cult_005"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "cult": "Kérj engedélyt a hithez kapcsolódó nyelvezet használata előtt.",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_101",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "A családomban ezt máshogy látják",
+      "Nálunk ez tabutéma",
+      "A családi normák miatt nehéz"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(családomban ezt máshogy látják|nálunk ez tabutéma|családi normák miatt nehéz)\\\\b"
+    },
+    "tags": [
+      "cult",
+      "family_norms"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "cult",
+    "cand": [
+      "cult_001",
+      "cult_005"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "cult": "Kerüld az univerzális feltételezéseket a családi szerepekről.",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_102",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Stigmatizálnának emiatt",
+      "Félek mit szól a közösség",
+      "Nálunk erről nem beszélnek"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(stigmatizálnának emiatt|mit szól a közösség|nálunk erről nem beszélnek)\\\\b"
+    },
+    "tags": [
+      "cult",
+      "stigma"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "cult",
+    "cand": [
+      "cult_001",
+      "cult_004"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "cult": "Validáld a közösségi stigma terhét, ne minősítsd a normákat.",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_103",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Egyszerűbb nyelven mondd",
+      "Más megfogalmazás kell",
+      "Ne ilyen keményen fogalmazz"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(egyszerűbb nyelven mondd|más megfogalmazás kell|ne ilyen keményen fogalmazz)\\\\b"
+    },
+    "tags": [
+      "cult",
+      "language"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "cult",
+    "cand": [
+      "cult_002",
+      "cult_004",
+      "cult_006",
+      "var_021"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "cult": "Ajánlj alternatív megfogalmazást, ne erőltesd az eredeti kifejezést.",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "prefer_text": true
+    },
+    "id": "pt_tr_104",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Migránsként ez más",
+      "Kisebbségiként félek ettől",
+      "A háttérkultúrám miatt nehéz"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(migránsként ez más|kisebbségiként félek ettől|háttérkultúrám miatt nehéz)\\\\b"
+    },
+    "tags": [
+      "cult",
+      "minority"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "cult",
+    "cand": [
+      "cult_003",
+      "cult_005"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "cult": "Ne feltételezz homogén tapasztalatot kisebbségi csoportokon belül.",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_105",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "A nemi szerepek miatt feszít ez",
+      "Nálunk ezt nőként férfiként máshogy nézik",
+      "A közegem elvár valamit tőlem"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(nemi szerepek miatt feszít|nőként férfiként máshogy nézik|közegem elvár valamit tőlem)\\\\b"
+    },
+    "tags": [
+      "cult",
+      "gender_norms"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "cult",
+    "cand": [
+      "cult_001",
+      "cult_003"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "cult": "Használj nyitott, nem normatív kérdéseket a társadalmi szerepekről.",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_106",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

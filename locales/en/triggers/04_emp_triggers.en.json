@@ -1,0 +1,650 @@
+[
+  {
+    "ex": [
+      "I feel very alone",
+      "No one understood me",
+      "I was completely on my own"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ feel\\ very\\ alone|No\\ one\\ understood\\ me|I\\ was\\ completely\\ on\\ my\\ own)"
+    },
+    "tags": [
+      "emp",
+      "isolation"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "emp",
+    "cand": [
+      "emp_001",
+      "emp_007"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_033",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I miss the person who died",
+      "I can't process the loss",
+      "Grief hurts so much"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ miss\\ the\\ person\\ who\\ died|I\\ can't\\ process\\ the\\ loss|Grief\\ hurts\\ so\\ much)"
+    },
+    "tags": [
+      "emp",
+      "grief"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "emp",
+    "cand": [
+      "emp_004",
+      "emp_012"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_034",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I'm confused",
+      "I don't understand what's happening inside me",
+      "Things are swirling in my head"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I'm\\ confused|I\\ don't\\ understand\\ what's\\ happening\\ inside\\ me|Things\\ are\\ swirling\\ in\\ my\\ head)"
+    },
+    "tags": [
+      "emp",
+      "confusion"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "emp",
+    "cand": [
+      "emp_002",
+      "emp_009"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_035",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I'm crying now",
+      "I can't stop crying",
+      "I cried myself to tears"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I'm\\ crying\\ now|I\\ can't\\ stop\\ crying|I\\ cried\\ myself\\ to\\ tears)"
+    },
+    "tags": [
+      "emp",
+      "crying"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "emp",
+    "cand": [
+      "emp_003",
+      "emp_018"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_036",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I am so ashamed",
+      "I am ashamed of this",
+      "I'm disgusted with myself"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ am\\ so\\ ashamed|I\\ am\\ ashamed\\ of\\ this|I'm\\ disgusted\\ with\\ myself)"
+    },
+    "tags": [
+      "emp",
+      "shame"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "emp",
+    "cand": [
+      "emp_010",
+      "emp_014"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_037",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I don't feel anything",
+      "I'm completely empty",
+      "It's like I turned it off"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ don't\\ feel\\ anything|I'm\\ completely\\ empty|It's\\ like\\ I\\ turned\\ it\\ off)"
+    },
+    "tags": [
+      "emp",
+      "numb"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "emp",
+    "cand": [
+      "emp_011",
+      "emp_020"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_038",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I'm really scared now",
+      "I'm terribly scared",
+      "I'm close to panic"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I'm\\ really\\ scared\\ now|I'm\\ terribly\\ scared|I'm\\ close\\ to\\ panic)"
+    },
+    "tags": [
+      "emp",
+      "fear"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "emp",
+    "cand": [
+      "emp_005",
+      "emp_022"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_039",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I feel guilty all the time",
+      "I blame myself for everything",
+      "I messed everything up"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ feel\\ guilty\\ all\\ the\\ time|I\\ blame\\ myself\\ for\\ everything|I\\ messed\\ everything\\ up)"
+    },
+    "tags": [
+      "emp",
+      "guilt"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "emp",
+    "cand": [
+      "emp_006",
+      "emp_023"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_040",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I'm completely exhausted",
+      "I have no energy",
+      "This is too much for me"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I'm\\ completely\\ exhausted|I\\ have\\ no\\ energy|This\\ is\\ too\\ much\\ for\\ me)"
+    },
+    "tags": [
+      "emp",
+      "exhaustion"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "emp",
+    "cand": [
+      "emp_008",
+      "emp_024"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_041",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "They betrayed me",
+      "I was disappointed in them",
+      "They hurt me a lot"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:They\\ betrayed\\ me|I\\ was\\ disappointed\\ in\\ them|They\\ hurt\\ me\\ a\\ lot)"
+    },
+    "tags": [
+      "emp",
+      "betrayal"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "emp",
+    "cand": [
+      "emp_013",
+      "emp_025"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_042",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I've said a lot now",
+      "It's hard to talk about",
+      "I never told anyone that"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I've\\ said\\ a\\ lot\\ now|It's\\ hard\\ to\\ talk\\ about|I\\ never\\ told\\ anyone\\ that)"
+    },
+    "tags": [
+      "emp",
+      "disclosure"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "emp",
+    "cand": [
+      "emp_015",
+      "emp_026"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_043",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I'm overwhelmed with everything",
+      "I can't handle this pressure",
+      "I am crushed by so many burdens"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I'm\\ overwhelmed\\ with\\ everything|I\\ can't\\ handle\\ this\\ pressure|I\\ am\\ crushed\\ by\\ so\\ many\\ burdens)"
+    },
+    "tags": [
+      "emp",
+      "overwhelm"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "emp",
+    "cand": [
+      "emp_016",
+      "emp_027"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_044",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

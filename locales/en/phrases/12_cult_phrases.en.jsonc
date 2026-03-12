@@ -1,0 +1,339 @@
+[
+  {
+    "id": "cult_001",
+    "pri": 2,
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cult",
+      "loc"
+    ],
+    "pp": [
+      {
+        "txt": "Warning: this topic may be culturally sensitive; would you like me to approach you carefully?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cult_002",
+    "pri": 2,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cult",
+      "alt"
+    ],
+    "pp": [
+      {
+        "txt": "An alternative wording: ... (if necessary, I can suggest a less burdensome expression).",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cult_003",
+    "pri": 2,
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cult",
+      "sens"
+    ],
+    "pp": [
+      {
+        "txt": "If religious or cultural details are important, let me know and I'll adjust the language accordingly.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cult_004",
+    "pri": 2,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cult",
+      "loc"
+    ],
+    "pp": [
+      {
+        "txt": "Avoid offensive or stigmatizing terms; I can suggest replacement expressions.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cult_005",
+    "pri": 2,
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cult",
+      "alt"
+    ],
+    "pp": [
+      {
+        "txt": "Local context: certain terms may have different meanings elsewhere; do you want me to pay attention to this?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cult_006",
+    "pri": 2,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cult",
+      "style",
+      "alt"
+    ],
+    "pp": [
+      {
+        "txt": "I can say simpler or more casual, if that's more convenient.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "If you want, I'll paraphrase it in simpler words.",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cult_007",
+    "pri": 2,
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cult",
+      "language",
+      "sens"
+    ],
+    "pp": [
+      {
+        "txt": "Tell me if any of the expressions are foreign or unpleasant; we are looking for a better wording.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Feel free to let me know if it would be easier to talk about it in other words.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

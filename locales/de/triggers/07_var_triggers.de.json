@@ -1,0 +1,673 @@
+[
+  {
+    "ex": [
+      "Bitte wiederholen",
+      "Sag es noch einmal",
+      "Ich habe es wieder nicht verstanden"
+    ],
+    "m": {
+      "t": "hybrid",
+      "p": "(?:Bitte\\ wiederholen|Sag\\ es\\ noch\\ einmal|Ich\\ habe\\ es\\ wieder\\ nicht\\ verstanden)",
+      "i": "repeat_request"
+    },
+    "tags": [
+      "var",
+      "repeat"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "var",
+    "cand": [
+      "var_002",
+      "var_018"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_061",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Machen Sie bitte langsamer",
+      "Es war zu schnell",
+      "Sag es langsamer"
+    ],
+    "m": {
+      "t": "hybrid",
+      "p": "(?:Machen\\ Sie\\ bitte\\ langsamer|Es\\ war\\ zu\\ schnell|Sag\\ es\\ langsamer)",
+      "i": "slow_down"
+    },
+    "tags": [
+      "var",
+      "pace"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "var",
+    "cand": [
+      "var_016",
+      "var_020"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "child",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_062",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Danke",
+      "Danke",
+      "Vielen Dank"
+    ],
+    "m": {
+      "t": "exact",
+      "p": "Danke",
+      "i": "thanks"
+    },
+    "tags": [
+      "var",
+      "thanks"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "var",
+    "cand": [
+      "var_005",
+      "var_006"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_063",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Gib mir eine Minute",
+      "Ich hätte gerne eine Pause",
+      "Lass uns eine Weile innehalten"
+    ],
+    "m": {
+      "t": "hybrid",
+      "p": "(?:Gib\\ mir\\ eine\\ Minute|Ich\\ hätte\\ gerne\\ eine\\ Pause|Lass\\ uns\\ eine\\ Weile\\ innehalten)",
+      "i": "pause_request"
+    },
+    "tags": [
+      "var",
+      "pause"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "var",
+    "cand": [
+      "var_017",
+      "var_016"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_064",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Bitte klären Sie es",
+      "Es ist nicht klar",
+      "Was meinst du damit?"
+    ],
+    "m": {
+      "t": "hybrid",
+      "p": "(?:Bitte\\ klären\\ Sie\\ es|Es\\ ist\\ nicht\\ klar|Was\\ meinst\\ du\\ damit\\?)",
+      "i": "clarify_request"
+    },
+    "tags": [
+      "var",
+      "clarify"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "var",
+    "cand": [
+      "var_003",
+      "var_010"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_065",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Könnten Sie es kurz zusammenfassen?",
+      "Kurz gesagt, worum geht es?",
+      "Brauche eine kurze Zusammenfassung"
+    ],
+    "m": {
+      "t": "hybrid",
+      "p": "(?:Könnten\\ Sie\\ es\\ kurz\\ zusammenfassen\\?|Kurz\\ gesagt,\\ worum\\ geht\\ es\\?|Brauche\\ eine\\ kurze\\ Zusammenfassung)",
+      "i": "recap_request"
+    },
+    "tags": [
+      "var",
+      "recap"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "var",
+    "cand": [
+      "var_011",
+      "var_018"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_066",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich denke immer noch nach",
+      "Warten Sie eine Minute",
+      "Gib mir Zeit"
+    ],
+    "m": {
+      "t": "exact",
+      "p": "Ich denke immer noch nach",
+      "i": "wait_request"
+    },
+    "tags": [
+      "var",
+      "wait"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "var",
+    "cand": [
+      "var_020",
+      "var_017"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_067",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich weiß nicht, wie ich es sagen soll",
+      "Helfen Sie mir, loszulegen",
+      "Es fällt mir schwer, es in Worte zu fassen"
+    ],
+    "m": {
+      "t": "hybrid",
+      "p": "(?:Ich\\ weiß\\ nicht,\\ wie\\ ich\\ es\\ sagen\\ soll|Helfen\\ Sie\\ mir,\\ loszulegen|Es\\ fällt\\ mir\\ schwer,\\ es\\ in\\ Worte\\ zu\\ fassen)",
+      "i": "prompt_request"
+    },
+    "tags": [
+      "var",
+      "prompt"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "var",
+    "cand": [
+      "var_003",
+      "var_004"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_068",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Das ist gut",
+      "Du kannst weitermachen",
+      "Machen wir weiter"
+    ],
+    "m": {
+      "t": "exact",
+      "p": "Das ist gut",
+      "i": "continue"
+    },
+    "tags": [
+      "var",
+      "continue"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "var",
+    "cand": [
+      "var_012",
+      "var_019"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_069",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Du verstehst, oder?",
+      "Du verstehst, oder?",
+      "Ich hoffe, dass du mir folgst"
+    ],
+    "m": {
+      "t": "hybrid",
+      "p": "(?:Du\\ verstehst,\\ oder\\?|Du\\ verstehst,\\ oder\\?|Ich\\ hoffe,\\ dass\\ du\\ mir\\ folgst)",
+      "i": "check_understanding"
+    },
+    "tags": [
+      "var",
+      "checkin"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "var",
+    "cand": [
+      "var_014",
+      "var_015"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_070",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Jetzt hör mir einfach zu",
+      "Fragen Sie nicht gleich",
+      "Lass es mich einfach sagen"
+    ],
+    "m": {
+      "t": "hybrid",
+      "p": "(?:Jetzt\\ hör\\ mir\\ einfach\\ zu|Fragen\\ Sie\\ nicht\\ gleich|Lass\\ es\\ mich\\ einfach\\ sagen)",
+      "i": "listen_request"
+    },
+    "tags": [
+      "var",
+      "listen"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "var",
+    "cand": [
+      "var_001",
+      "var_014"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_071",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Lasst uns durchatmen",
+      "Ich brauche einen ruhigen Moment",
+      "Hilf mir, mich kurz zu beruhigen"
+    ],
+    "m": {
+      "t": "hybrid",
+      "p": "(?:Lasst\\ uns\\ durchatmen|Ich\\ brauche\\ einen\\ ruhigen\\ Moment|Hilf\\ mir,\\ mich\\ kurz\\ zu\\ beruhigen)",
+      "i": "grounding_request"
+    },
+    "tags": [
+      "var",
+      "ground"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "var",
+    "cand": [
+      "var_007",
+      "var_008",
+      "var_009"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_072",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

@@ -1,0 +1,2774 @@
+[
+  {
+    "id": "emp_001",
+    "pri": 1,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "w",
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t",
+      "s"
+    ],
+    "tags": [
+      "val",
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "It's completely understandable that you feel this way.",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "It makes sense that you feel this way.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "It's not surprising that you have these feelings; they are completely valid.",
+        "t": "w",
+        "l": "l",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_002",
+    "pri": 1,
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t",
+      "s"
+    ],
+    "tags": [
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "This must be very hard for you.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "This can be really stressful for you.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "I know that this can often be very difficult and exhausting for you.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_003",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t",
+      "s"
+    ],
+    "tags": [
+      "grat"
+    ],
+    "pp": [
+      {
+        "txt": "Thanks for sharing this with me.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Thank you for telling me.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I really appreciate you sharing these thoughts with me.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_004",
+    "pri": 1,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "I can see why that would be confusing.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I can see why this would cause confusion.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I understand why this seems confusing to you.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_005",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t",
+      "s"
+    ],
+    "tags": [
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "I can see how stressful this is for you right now.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I can see that this is taking a toll on you right now.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "It is noticeable that this situation is taking a lot of energy from you right now.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_006",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val",
+      "fat"
+    ],
+    "pp": [
+      {
+        "txt": "This can often be very exhausting.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "This condition is often very tiring.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I know this can be exhausting and depressing for you at times.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_007",
+    "pri": 1,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "norm"
+    ],
+    "pp": [
+      {
+        "txt": "No wonder you react like that.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "This reaction is not surprising.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "It is completely understandable that you would react this way in such a situation.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_008",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t",
+      "s"
+    ],
+    "tags": [
+      "enc"
+    ],
+    "pp": [
+      {
+        "txt": "It is important that you said this.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Nice of you to share this with me.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "That was important for you to say; thank you for sharing.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_009",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "It's understandable that you're unsure.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Your uncertainty is completely understandable.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "It is understandable that you feel insecure in this situation right now.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_010",
+    "pri": 1,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "It's a perfectly legitimate feeling.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "You're right to feel that way.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "This feeling is completely justified in your situation.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_011",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "I hear that means a lot to you.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I sense that this is important to you.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I can see how much this means to you.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_012",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "fear"
+    ],
+    "pp": [
+      {
+        "txt": "I understand that this can be scary.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I understand that this makes you afraid.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I know it can feel scary, and that's totally understandable.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_013",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "This seems like a really stressful situation.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "That sounds pretty stressful.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "It seems that this situation is particularly stressful for you right now.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_014",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "grat"
+    ],
+    "pp": [
+      {
+        "txt": "Thanks for sharing the details.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Thank you for telling me in detail.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Thank you so much for sharing these details; it helps a lot.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_015",
+    "pri": 1,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "I understand that this is confusing to you.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I can see that this is confusing you.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I understand that this situation is confusing and uncomfortable for you.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_016",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "This can take a toll on you.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "This can really wear on you.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I know this can take a toll on you, and that's understandable.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_017",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "emp",
+      "fat"
+    ],
+    "pp": [
+      {
+        "txt": "I can see that it takes a lot of energy from you.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "It is noticeable that it exhausts you.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "This situation seems to be draining a lot of your energy, and understandably so.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_018",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "This can be understandably upsetting.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Understandably, this is upsetting to you.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "It is completely understandable that this situation creates upsetting and confusing feelings for you.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_019",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "grat"
+    ],
+    "pp": [
+      {
+        "txt": "Thanks for sharing your thoughts.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Thanks for sharing your thoughts with me.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Thank you so much for sharing these thoughts; this helps a lot in understanding.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_020",
+    "pri": 1,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "I understand that this creates uncertainty.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I understand that this makes you insecure.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "It is understandable that this situation causes uncertainty and doubt for you.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_021",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "This must have been very stressful for you.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "It must have been really stressful for you.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I know this situation must have been very stressful for you, and that is understandable.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_022",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "fat",
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "I hear how exhausted you feel.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I hear you feel exhausted.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I can feel how exhausting this situation is for you; this is completely understandable.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_023",
+    "pri": 1,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "norm"
+    ],
+    "pp": [
+      {
+        "txt": "This is a completely understandable reaction in such a situation.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "This is an understandable reaction under these circumstances.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "It's completely normal and understandable that you react this way to a situation like this.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_024",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "grat",
+      "enc"
+    ],
+    "pp": [
+      {
+        "txt": "Thank you for sharing the difficult moment.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Thank you for sharing this difficult moment.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Thank you so much for sharing this difficult moment with me; this is important.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_025",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "I understand that there is a lot of uncertainty involved.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I understand that this creates a lot of uncertainty.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I know this situation comes with a lot of uncertainty and questions.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_026",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "I can see that this affects you deeply.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I can feel this touching you deeply.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "This matter seems to affect you very deeply; this is important to note.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_027",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "It is not easy to be in such a situation, and that is completely understandable.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "It's not easy to be in this situation.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "It is indeed not easy to be in such a position; it's completely understandable that you feel that way.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_028",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "grat",
+      "fear"
+    ],
+    "pp": [
+      {
+        "txt": "Thanks for sharing your fears.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Thank you for sharing your fears.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Thank you so much for sharing your fears; this was an important step.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_029",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val",
+      "fat"
+    ],
+    "pp": [
+      {
+        "txt": "This can be really stressful and tiring.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "This can be really tiring.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "It is understandable that this situation is stressful and exhausting for you.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_030",
+    "pri": 1,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val",
+      "enc"
+    ],
+    "pp": [
+      {
+        "txt": "I understand that this can be frustrating at times.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I understand that this is frustrating.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I know that this situation can often be frustrating and annoying for you.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_031",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "emp",
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "I hear that it often causes isolation.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I can feel that it brings you isolation.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "This situation seems to often cause you loneliness and isolation.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_032",
+    "pri": 1,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t",
+      "s"
+    ],
+    "tags": [
+      "val",
+      "enc"
+    ],
+    "pp": [
+      {
+        "txt": "It's completely understandable and right to feel that way.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "You're right to feel that way.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "It is understandable and right that you have such feelings in this situation.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_033",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "grat"
+    ],
+    "pp": [
+      {
+        "txt": "Thanks for sharing your struggles.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Thank you for sharing your difficulties.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Thank you so much for sharing these difficulties; that was important.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_034",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "I understand that this can be confusing and difficult at times.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I understand that this is confusing and difficult.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I know that this situation often creates confusing and difficult feelings for you.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_035",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "emp",
+      "fat"
+    ],
+    "pp": [
+      {
+        "txt": "I can see that this is often exhausting and burdensome.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "It is noticeable that it exhausts you.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "This situation often seems to exhaust and weigh you down; that's understandable.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_036",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "norm"
+    ],
+    "pp": [
+      {
+        "txt": "It's not surprising that you react this way to such a situation.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "This reaction is not surprising under these circumstances.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "It is completely understandable that you would react this way in such a situation; it's natural.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_037",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "grat",
+      "enc"
+    ],
+    "pp": [
+      {
+        "txt": "Thank you for sharing your thoughts and feelings.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Thank you for sharing your feelings.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Thank you so much for sharing your thoughts and feelings; this helps a lot.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_038",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val",
+      "fear"
+    ],
+    "pp": [
+      {
+        "txt": "I understand that this often comes with uncertainty and worry.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I understand that this causes uncertainty and concern.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I know that this situation often comes with uncertainty and worry.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_039",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "I can see that this touches you deeply and is important information.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I can feel this touching you deeply.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "This obviously affects you deeply and it is important that you spoke about it.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_040",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "It is not easy to experience this; it's completely understandable that you feel that way.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "It is not easy to experience this; it's understandable that you feel that way.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "It is indeed not easy to experience this; it's completely understandable that you feel that way.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

@@ -1,0 +1,673 @@
+[
+  {
+    "ex": [
+      "Repeat please",
+      "Say it again",
+      "I didn't understand, again"
+    ],
+    "m": {
+      "t": "hybrid",
+      "p": "(?:Repeat\\ please|Say\\ it\\ again|I\\ didn't\\ understand,\\ again)",
+      "i": "repeat_request"
+    },
+    "tags": [
+      "var",
+      "repeat"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "var",
+    "cand": [
+      "var_002",
+      "var_018"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_061",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Slow down please",
+      "It was too fast",
+      "Say it more slowly"
+    ],
+    "m": {
+      "t": "hybrid",
+      "p": "(?:Slow\\ down\\ please|It\\ was\\ too\\ fast|Say\\ it\\ more\\ slowly)",
+      "i": "slow_down"
+    },
+    "tags": [
+      "var",
+      "pace"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "var",
+    "cand": [
+      "var_016",
+      "var_020"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "child",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_062",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Thanks",
+      "Thank you",
+      "Thank you very much"
+    ],
+    "m": {
+      "t": "exact",
+      "p": "Thanks",
+      "i": "thanks"
+    },
+    "tags": [
+      "var",
+      "thanks"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "var",
+    "cand": [
+      "var_005",
+      "var_006"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_063",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Give me a minute",
+      "I would like a break",
+      "Let's stop for a while"
+    ],
+    "m": {
+      "t": "hybrid",
+      "p": "(?:Give\\ me\\ a\\ minute|I\\ would\\ like\\ a\\ break|Let's\\ stop\\ for\\ a\\ while)",
+      "i": "pause_request"
+    },
+    "tags": [
+      "var",
+      "pause"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "var",
+    "cand": [
+      "var_017",
+      "var_016"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_064",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Please clarify",
+      "It is not clear",
+      "What do you mean by that?"
+    ],
+    "m": {
+      "t": "hybrid",
+      "p": "(?:Please\\ clarify|It\\ is\\ not\\ clear|What\\ do\\ you\\ mean\\ by\\ that\\?)",
+      "i": "clarify_request"
+    },
+    "tags": [
+      "var",
+      "clarify"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "var",
+    "cand": [
+      "var_003",
+      "var_010"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_065",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Could you summarize it briefly",
+      "In short, what's the point",
+      "Need a quick recap"
+    ],
+    "m": {
+      "t": "hybrid",
+      "p": "(?:Could\\ you\\ summarize\\ it\\ briefly|In\\ short,\\ what's\\ the\\ point|Need\\ a\\ quick\\ recap)",
+      "i": "recap_request"
+    },
+    "tags": [
+      "var",
+      "recap"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "var",
+    "cand": [
+      "var_011",
+      "var_018"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_066",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I'm still thinking",
+      "Wait a minute",
+      "Give me time"
+    ],
+    "m": {
+      "t": "exact",
+      "p": "I'm still thinking",
+      "i": "wait_request"
+    },
+    "tags": [
+      "var",
+      "wait"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "var",
+    "cand": [
+      "var_020",
+      "var_017"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_067",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I don't know how to say",
+      "Help me get started",
+      "It's hard for me to put it into words"
+    ],
+    "m": {
+      "t": "hybrid",
+      "p": "(?:I\\ don't\\ know\\ how\\ to\\ say|Help\\ me\\ get\\ started|It's\\ hard\\ for\\ me\\ to\\ put\\ it\\ into\\ words)",
+      "i": "prompt_request"
+    },
+    "tags": [
+      "var",
+      "prompt"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "var",
+    "cand": [
+      "var_003",
+      "var_004"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_068",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "That's good",
+      "You can go on",
+      "Let's continue"
+    ],
+    "m": {
+      "t": "exact",
+      "p": "That's good",
+      "i": "continue"
+    },
+    "tags": [
+      "var",
+      "continue"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "var",
+    "cand": [
+      "var_012",
+      "var_019"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_069",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "You understand, right?",
+      "You understand, right?",
+      "I hope you follow"
+    ],
+    "m": {
+      "t": "hybrid",
+      "p": "(?:You\\ understand,\\ right\\?|You\\ understand,\\ right\\?|I\\ hope\\ you\\ follow)",
+      "i": "check_understanding"
+    },
+    "tags": [
+      "var",
+      "checkin"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "var",
+    "cand": [
+      "var_014",
+      "var_015"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_070",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Now just listen to me",
+      "Don't ask right away",
+      "Let me just say it"
+    ],
+    "m": {
+      "t": "hybrid",
+      "p": "(?:Now\\ just\\ listen\\ to\\ me|Don't\\ ask\\ right\\ away|Let\\ me\\ just\\ say\\ it)",
+      "i": "listen_request"
+    },
+    "tags": [
+      "var",
+      "listen"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "var",
+    "cand": [
+      "var_001",
+      "var_014"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_071",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Let's take a breath",
+      "I need a quiet moment",
+      "Help me calm down briefly"
+    ],
+    "m": {
+      "t": "hybrid",
+      "p": "(?:Let's\\ take\\ a\\ breath|I\\ need\\ a\\ quiet\\ moment|Help\\ me\\ calm\\ down\\ briefly)",
+      "i": "grounding_request"
+    },
+    "tags": [
+      "var",
+      "ground"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "var",
+    "cand": [
+      "var_007",
+      "var_008",
+      "var_009"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_072",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

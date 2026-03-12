@@ -1,0 +1,1 @@
+Reserve this folder for Hungarian locale-specific runtime rules, policy fragments, and override files.

@@ -1,0 +1,339 @@
+[
+  {
+    "id": "cult_001",
+    "pri": 2,
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cult",
+      "loc"
+    ],
+    "pp": [
+      {
+        "txt": "Warnung: Dieses Thema ist möglicherweise kulturell sensibel. Möchten Sie, dass ich vorsichtig auf Sie zugehe?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cult_002",
+    "pri": 2,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cult",
+      "alt"
+    ],
+    "pp": [
+      {
+        "txt": "Eine alternative Formulierung: ... (ggf. kann ich einen weniger belastenden Ausdruck vorschlagen).",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cult_003",
+    "pri": 2,
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cult",
+      "sens"
+    ],
+    "pp": [
+      {
+        "txt": "Wenn religiöse oder kulturelle Details wichtig sind, lassen Sie es mich wissen und ich werde die Sprache entsprechend anpassen.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cult_004",
+    "pri": 2,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cult",
+      "loc"
+    ],
+    "pp": [
+      {
+        "txt": "Vermeiden Sie beleidigende oder stigmatisierende Begriffe; Ich kann Ersatzausdrücke vorschlagen.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cult_005",
+    "pri": 2,
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cult",
+      "alt"
+    ],
+    "pp": [
+      {
+        "txt": "Lokaler Kontext: Bestimmte Begriffe können anderswo eine andere Bedeutung haben; Soll ich darauf achten?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cult_006",
+    "pri": 2,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cult",
+      "style",
+      "alt"
+    ],
+    "pp": [
+      {
+        "txt": "Ich kann einfacher oder lässiger sagen, wenn das bequemer ist.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wenn Sie möchten, paraphrasiere ich es in einfacheren Worten.",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cult_007",
+    "pri": 2,
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cult",
+      "language",
+      "sens"
+    ],
+    "pp": [
+      {
+        "txt": "Sagen Sie mir, ob einer der Ausdrücke fremd oder unangenehm ist. Wir suchen nach einer besseren Formulierung.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Lassen Sie mich gerne wissen, ob es einfacher wäre, mit anderen Worten darüber zu sprechen.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

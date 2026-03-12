@@ -1,0 +1,20 @@
+{
+  "patient": {
+    "allowed_channels": ["web_chat", "voice", "secure_messaging"],
+    "required_auth": ["session_token"],
+    "audit_events": ["session_started", "consent_updated", "crisis_escalated"],
+    "escalation_targets": ["assistant", "clinical_lead", "emergency"]
+  },
+  "operator": {
+    "allowed_channels": ["admin_console", "secure_email", "ops_phone"],
+    "required_auth": ["mfa", "named_account"],
+    "audit_events": ["config_changed", "override_used", "incident_acknowledged"],
+    "escalation_targets": ["clinical_lead"]
+  },
+  "clinical_lead": {
+    "allowed_channels": ["clinical_console", "secure_chat", "secure_email", "phone"],
+    "required_auth": ["mfa", "named_account", "clinical_role"],
+    "audit_events": ["clinical_override", "review_completed", "safety_protocol_changed"],
+    "escalation_targets": ["emergency", "operator"]
+  }
+}

@@ -1,0 +1,2774 @@
+[
+  {
+    "id": "emp_001",
+    "pri": 1,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "w",
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t",
+      "s"
+    ],
+    "tags": [
+      "val",
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "Es ist völlig verständlich, dass Sie sich so fühlen.",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Es ist nachvollziehbar, dass Sie sich so fühlen.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Es ist nicht überraschend, dass Sie solche Gefühle haben; sie sind vollkommen nachvollziehbar.",
+        "t": "w",
+        "l": "l",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_002",
+    "pri": 1,
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t",
+      "s"
+    ],
+    "tags": [
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "Das muss sehr schwer für Sie sein.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Das kann für Sie sehr stressig sein.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Ich weiß, dass das für einen oft sehr schwierig und anstrengend sein kann.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_003",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t",
+      "s"
+    ],
+    "tags": [
+      "grat"
+    ],
+    "pp": [
+      {
+        "txt": "Vielen Dank, dass Sie dies mit mir geteilt haben.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Danke, dass du es mir erzählt hast.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich weiß es wirklich zu schätzen, dass Sie diese Gedanken mit mir teilen.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_004",
+    "pri": 1,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Ich kann verstehen, warum das verwirrend wäre.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich kann verstehen, warum dies Verwirrung stiften würde.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich verstehe, warum Ihnen das verwirrend vorkommt.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_005",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t",
+      "s"
+    ],
+    "tags": [
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "Ich kann sehen, wie stressig das gerade für dich ist.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich kann sehen, dass Ihnen das im Moment zu schaffen macht.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Es fällt auf, dass Dir diese Situation gerade viel Energie raubt.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_006",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val",
+      "fat"
+    ],
+    "pp": [
+      {
+        "txt": "Das kann oft sehr anstrengend sein.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Dieser Zustand ist oft sehr ermüdend.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich weiß, dass das manchmal anstrengend und deprimierend für Sie sein kann.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_007",
+    "pri": 1,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "norm"
+    ],
+    "pp": [
+      {
+        "txt": "Kein Wunder, dass du so reagierst.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Diese Reaktion ist nicht überraschend.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Es ist völlig verständlich, dass Sie in einer solchen Situation so reagieren.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_008",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t",
+      "s"
+    ],
+    "tags": [
+      "enc"
+    ],
+    "pp": [
+      {
+        "txt": "Es ist wichtig, dass Sie das gesagt haben.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Schön, dass du das mit mir teilst.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Das war Ihnen wichtig zu sagen; Vielen Dank fürs Teilen.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_009",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Es ist verständlich, dass Sie unsicher sind.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ihre Unsicherheit ist völlig verständlich.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Es ist verständlich, dass Sie sich in dieser Situation gerade unsicher fühlen.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_010",
+    "pri": 1,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Es ist ein völlig legitimes Gefühl.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Du hast Recht, wenn du so denkst.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Dieses Gefühl ist in Ihrer Situation völlig berechtigt.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_011",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Ich habe gehört, dass dir das sehr viel bedeutet.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich spüre, dass Ihnen das wichtig ist.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich kann sehen, wie viel Ihnen das bedeutet.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_012",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "fear"
+    ],
+    "pp": [
+      {
+        "txt": "Ich verstehe, dass das beängstigend sein kann.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich verstehe, dass dir das Angst macht.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich weiß, dass es beängstigend sein kann, und das ist völlig verständlich.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_013",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "Das scheint eine wirklich stressige Situation zu sein.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Das klingt ziemlich stressig.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Es scheint, dass diese Situation gerade für Sie besonders belastend ist.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_014",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "grat"
+    ],
+    "pp": [
+      {
+        "txt": "Vielen Dank für die Weitergabe der Details.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Vielen Dank, dass Sie es mir ausführlich erzählt haben.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Vielen Dank für die Weitergabe dieser Details; es hilft sehr.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_015",
+    "pri": 1,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Ich verstehe, dass das für Sie verwirrend ist.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich kann sehen, dass Sie das verwirrt.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich verstehe, dass diese Situation für Sie verwirrend und unangenehm ist.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_016",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "Dies kann eine Belastung für Sie sein.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Das kann Sie wirklich belasten.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich weiß, dass das eine Belastung für Sie sein kann, und das ist verständlich.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_017",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "emp",
+      "fat"
+    ],
+    "pp": [
+      {
+        "txt": "Ich kann sehen, dass es dir viel Energie kostet.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Man merkt, dass es einen erschöpft.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Diese Situation scheint Ihnen viel Energie zu rauben, und das ist verständlich.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_018",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Das kann verständlicherweise ärgerlich sein.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Verständlicherweise ärgert Sie das.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Es ist völlig verständlich, dass diese Situation bei Ihnen beunruhigende und verwirrende Gefühle hervorruft.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_019",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "grat"
+    ],
+    "pp": [
+      {
+        "txt": "Vielen Dank, dass Sie uns Ihre Gedanken mitgeteilt haben.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Vielen Dank, dass Sie Ihre Gedanken mit mir geteilt haben.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Vielen Dank, dass Sie diese Gedanken geteilt haben. das hilft sehr beim Verständnis.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_020",
+    "pri": 1,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Ich verstehe, dass dies Unsicherheit schafft.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich verstehe, dass dich das verunsichert.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Es ist verständlich, dass diese Situation bei Ihnen Unsicherheit und Zweifel auslöst.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_021",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "Das muss für Sie sehr stressig gewesen sein.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Es muss wirklich stressig für dich gewesen sein.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich weiß, dass diese Situation für Sie sehr stressig gewesen sein muss, und das ist verständlich.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_022",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "fat",
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "Ich höre, wie erschöpft du dich fühlst.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich höre, dass du dich erschöpft fühlst.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich spüre, wie anstrengend diese Situation für Dich ist; das ist völlig verständlich.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_023",
+    "pri": 1,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "norm"
+    ],
+    "pp": [
+      {
+        "txt": "Das ist in einer solchen Situation eine völlig verständliche Reaktion.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Unter diesen Umständen ist dies eine verständliche Reaktion.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Es ist völlig normal und verständlich, dass Sie in einer solchen Situation so reagieren.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_024",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "grat",
+      "enc"
+    ],
+    "pp": [
+      {
+        "txt": "Vielen Dank, dass Sie diesen schwierigen Moment geteilt haben.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Vielen Dank, dass Sie diesen schwierigen Moment geteilt haben.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Vielen Dank, dass Sie diesen schwierigen Moment mit mir geteilt haben. das ist wichtig.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_025",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Ich verstehe, dass damit eine Menge Unsicherheit verbunden ist.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich verstehe, dass dies große Unsicherheit schafft.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich weiß, dass diese Situation eine Menge Unsicherheit und Fragen mit sich bringt.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_026",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "Ich kann sehen, dass dich das tief berührt.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich spüre, wie dich das zutiefst berührt.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Diese Angelegenheit scheint Sie sehr zu berühren; Dies ist wichtig zu beachten.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_027",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Es ist nicht einfach, sich in einer solchen Situation zu befinden, und das ist völlig verständlich.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Es ist nicht einfach, in dieser Situation zu sein.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Es ist in der Tat nicht einfach, sich in einer solchen Lage zu befinden; Es ist völlig verständlich, dass du so denkst.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_028",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "grat",
+      "fear"
+    ],
+    "pp": [
+      {
+        "txt": "Danke, dass du deine Ängste teilst.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Vielen Dank, dass Sie Ihre Ängste mit uns teilen.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Vielen Dank, dass Sie uns Ihre Ängste mitgeteilt haben. Das war ein wichtiger Schritt.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_029",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val",
+      "fat"
+    ],
+    "pp": [
+      {
+        "txt": "Das kann wirklich stressig und ermüdend sein.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Das kann wirklich anstrengend sein.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Es ist verständlich, dass diese Situation für Sie belastend und anstrengend ist.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_030",
+    "pri": 1,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val",
+      "enc"
+    ],
+    "pp": [
+      {
+        "txt": "Ich verstehe, dass das manchmal frustrierend sein kann.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich verstehe, dass das frustrierend ist.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich weiß, dass diese Situation für Sie oft frustrierend und ärgerlich sein kann.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_031",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "emp",
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Ich habe gehört, dass es oft zu Isolation führt.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich kann spüren, dass es dich isoliert.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Diese Situation scheint oft zu Einsamkeit und Isolation zu führen.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_032",
+    "pri": 1,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t",
+      "s"
+    ],
+    "tags": [
+      "val",
+      "enc"
+    ],
+    "pp": [
+      {
+        "txt": "Es ist völlig verständlich und richtig, so zu denken.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Du hast Recht, wenn du so denkst.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Es ist verständlich und richtig, dass Sie in dieser Situation solche Gefühle haben.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_033",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "grat"
+    ],
+    "pp": [
+      {
+        "txt": "Vielen Dank, dass Sie Ihre Probleme mit uns geteilt haben.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Vielen Dank, dass Sie uns Ihre Schwierigkeiten mitgeteilt haben.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Vielen Dank, dass Sie diese Schwierigkeiten mit uns geteilt haben. das war wichtig.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_034",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Ich verstehe, dass dies manchmal verwirrend und schwierig sein kann.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich verstehe, dass das verwirrend und schwierig ist.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich weiß, dass diese Situation bei Ihnen oft verwirrende und schwierige Gefühle hervorruft.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_035",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "emp",
+      "fat"
+    ],
+    "pp": [
+      {
+        "txt": "Ich sehe, dass das oft anstrengend und belastend ist.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Man merkt, dass es einen erschöpft.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Diese Situation scheint Sie oft zu erschöpfen und zu belasten; das ist verständlich.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_036",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "norm"
+    ],
+    "pp": [
+      {
+        "txt": "Es ist nicht verwunderlich, dass Sie auf eine solche Situation so reagieren.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Diese Reaktion ist unter diesen Umständen nicht überraschend.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Es ist völlig verständlich, dass Sie in einer solchen Situation so reagieren würden; es ist natürlich.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_037",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "grat",
+      "enc"
+    ],
+    "pp": [
+      {
+        "txt": "Vielen Dank, dass Sie Ihre Gedanken und Gefühle mit uns geteilt haben.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Vielen Dank, dass Sie Ihre Gefühle mit uns geteilt haben.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Vielen Dank, dass Sie Ihre Gedanken und Gefühle mit uns geteilt haben. das hilft sehr.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_038",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val",
+      "fear"
+    ],
+    "pp": [
+      {
+        "txt": "Ich verstehe, dass dies oft mit Unsicherheit und Sorge verbunden ist.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich verstehe, dass dies Unsicherheit und Besorgnis hervorruft.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich weiß, dass diese Situation oft mit Unsicherheit und Sorge verbunden ist.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_039",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "Ich kann sehen, dass Sie das zutiefst berührt und eine wichtige Information ist.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich spüre, wie dich das zutiefst berührt.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Das berührt Sie offensichtlich zutiefst und es ist wichtig, dass Sie darüber sprechen.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_040",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Es ist nicht leicht, dies zu erleben; Es ist völlig verständlich, dass du so denkst.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Es ist nicht leicht, dies zu erleben; es ist verständlich, dass du so denkst.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Es ist in der Tat nicht leicht, dies zu erleben; Es ist völlig verständlich, dass du so denkst.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

@@ -1,0 +1,1054 @@
+[
+  {
+    "id": "var_001",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "ack"
+    ],
+    "pp": [
+      {
+        "txt": "Ich höre.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_002",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "ack"
+    ],
+    "pp": [
+      {
+        "txt": "Ich verstehe.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_003",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "prompt"
+    ],
+    "pp": [
+      {
+        "txt": "Erzähl mir mehr.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_004",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "prompt"
+    ],
+    "pp": [
+      {
+        "txt": "Bitte fahren Sie fort.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_005",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "grat"
+    ],
+    "pp": [
+      {
+        "txt": "Danke.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_006",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "grat"
+    ],
+    "pp": [
+      {
+        "txt": "Es ist gut, dass du es gesagt hast.",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_007",
+    "pri": 2,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "ground"
+    ],
+    "pp": [
+      {
+        "txt": "Lasst uns tief durchatmen.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_008",
+    "pri": 2,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "ground"
+    ],
+    "pp": [
+      {
+        "txt": "Lasst uns gemeinsam atmen.",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_009",
+    "pri": 2,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "ground"
+    ],
+    "pp": [
+      {
+        "txt": "Bleiben wir in der Gegenwart.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_010",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "prompt"
+    ],
+    "pp": [
+      {
+        "txt": "Was würde jetzt helfen?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_011",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "note"
+    ],
+    "pp": [
+      {
+        "txt": "Das ist wichtig.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_012",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "enc"
+    ],
+    "pp": [
+      {
+        "txt": "Okay, mach weiter.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_013",
+    "pri": 2,
+    "rec": [
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "enc"
+    ],
+    "pp": [
+      {
+        "txt": "Es war schön.",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_014",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "ack"
+    ],
+    "pp": [
+      {
+        "txt": "Ich verstehe.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_015",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "ack"
+    ],
+    "pp": [
+      {
+        "txt": "Das ist verständlich.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_016",
+    "pri": 2,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "senior"
+    ],
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "ground"
+    ],
+    "pp": [
+      {
+        "txt": "Lassen wir es etwas langsamer angehen.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_017",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "prompt"
+    ],
+    "pp": [
+      {
+        "txt": "Willst du eine Pause?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_018",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "note"
+    ],
+    "pp": [
+      {
+        "txt": "Das hilft mir zu verstehen.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_019",
+    "pri": 2,
+    "rec": [
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "enc"
+    ],
+    "pp": [
+      {
+        "txt": "Gute Idee.",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_020",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "ack"
+    ],
+    "pp": [
+      {
+        "txt": "Warten Sie einen Moment.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_021",
+    "pri": 2,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "senior"
+    ],
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "clarify",
+      "style"
+    ],
+    "pp": [
+      {
+        "txt": "Soll ich es einfacher ausdrücken?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich kann es kürzer und einfacher sagen.",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_022",
+    "pri": 2,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "senior"
+    ],
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "style",
+      "pace"
+    ],
+    "pp": [
+      {
+        "txt": "Gehen wir langsamer vor, mit kürzeren Sätzen.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wir können es auch entspannter angehen, wenn es bequemer ist.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

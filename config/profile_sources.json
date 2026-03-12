@@ -1,0 +1,17 @@
+{
+  "provider": "json_snapshot",
+  "export_registry_path": "config/profile_registry.generated.jsonc",
+  "json_snapshot": {
+    "patients_path": "data_sources/patients.snapshot.json",
+    "clinicians_path": "data_sources/clinicians.snapshot.json",
+    "assistants_path": "data_sources/assistants.snapshot.json",
+    "assignments_path": "data_sources/assignments.snapshot.json",
+    "history_path": "data_sources/patient_history.snapshot.json",
+    "default_timezone": "Europe/Budapest"
+  },
+  "mapping_policy": {
+    "require_assigned_clinician": true,
+    "prefer_patient_language": true,
+    "history_requires_consent": true
+  }
+}

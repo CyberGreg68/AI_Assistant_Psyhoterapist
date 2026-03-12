@@ -1,0 +1,1054 @@
+[
+  {
+    "id": "var_001",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "ack"
+    ],
+    "pp": [
+      {
+        "txt": "Hallom.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_002",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "ack"
+    ],
+    "pp": [
+      {
+        "txt": "Értem.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_003",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "prompt"
+    ],
+    "pp": [
+      {
+        "txt": "Mesélj még.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_004",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "prompt"
+    ],
+    "pp": [
+      {
+        "txt": "Folytasd, kérlek.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_005",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "grat"
+    ],
+    "pp": [
+      {
+        "txt": "Köszönöm.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_006",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "grat"
+    ],
+    "pp": [
+      {
+        "txt": "Jó, hogy elmondtad.",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_007",
+    "pri": 2,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "ground"
+    ],
+    "pp": [
+      {
+        "txt": "Vegyünk egy mély levegőt.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_008",
+    "pri": 2,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "ground"
+    ],
+    "pp": [
+      {
+        "txt": "Együtt lélegezzünk.",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_009",
+    "pri": 2,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "ground"
+    ],
+    "pp": [
+      {
+        "txt": "Maradjunk a jelenben.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_010",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "prompt"
+    ],
+    "pp": [
+      {
+        "txt": "Mi segítene most?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_011",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "note"
+    ],
+    "pp": [
+      {
+        "txt": "Ez fontos.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_012",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "enc"
+    ],
+    "pp": [
+      {
+        "txt": "Rendben, folytasd.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_013",
+    "pri": 2,
+    "rec": [
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "enc"
+    ],
+    "pp": [
+      {
+        "txt": "Szép volt.",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_014",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "ack"
+    ],
+    "pp": [
+      {
+        "txt": "Megértem.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_015",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "ack"
+    ],
+    "pp": [
+      {
+        "txt": "Ez érthető.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_016",
+    "pri": 2,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "senior"
+    ],
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "ground"
+    ],
+    "pp": [
+      {
+        "txt": "Kicsit lassítsunk.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_017",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "prompt"
+    ],
+    "pp": [
+      {
+        "txt": "Szünetet szeretnél?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_018",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "note"
+    ],
+    "pp": [
+      {
+        "txt": "Ez segít nekem megérteni.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_019",
+    "pri": 2,
+    "rec": [
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "enc"
+    ],
+    "pp": [
+      {
+        "txt": "Jó ötlet.",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_020",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "ack"
+    ],
+    "pp": [
+      {
+        "txt": "Várj egy pillanatot.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_021",
+    "pri": 2,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "senior"
+    ],
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "clarify",
+      "style"
+    ],
+    "pp": [
+      {
+        "txt": "Mondjam egyszerűbben?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Elmondhatom rövidebben és egyszerűbben is.",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "var_022",
+    "pri": 2,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "child",
+      "senior"
+    ],
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "var",
+      "style",
+      "pace"
+    ],
+    "pp": [
+      {
+        "txt": "Lépjünk lassabban, rövidebb mondatokkal.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Vehetjük nyugodtabb tempóban is, ha az kényelmesebb.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "child",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

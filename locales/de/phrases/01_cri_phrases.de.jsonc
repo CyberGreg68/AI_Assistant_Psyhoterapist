@@ -1,0 +1,1117 @@
+[
+  {
+    "id": "cri_001",
+    "pri": 1,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "f",
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cri",
+      "saf",
+      "imm",
+      "hand"
+    ],
+    "pp": [
+      {
+        "txt": "Wenn Sie sich jetzt in Gefahr fühlen, rufen Sie bitte sofort den örtlichen Rettungsdienst an.",
+        "t": "f",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wenn Sie das Gefühl haben, dass Sie in unmittelbarer Gefahr sind, rufen Sie bitte jetzt Ihren örtlichen Rettungsdienst an.",
+        "t": "f",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wenn Sie in Gefahr sind, wenden Sie sich sofort an den örtlichen Rettungsdienst. Brauchen Sie diese Nummer?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "audit": true,
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Krisen-First-Routing und Hard-Handoff-Kontexte.",
+      "evidence_level": "guideline_based"
+    },
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cri_002",
+    "pri": 1,
+    "rec": [
+      "f",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cri",
+      "saf",
+      "hand"
+    ],
+    "pp": [
+      {
+        "txt": "Können Sie mir sagen, ob Sie einen konkreten Plan oder ein konkretes Mittel haben, um Schaden anzurichten?",
+        "t": "f",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Haben Sie im Moment einen konkreten Plan oder ein Mittel, um sich selbst Schaden zuzufügen?",
+        "t": "f",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Bitte sagen Sie mir, haben Sie einen bestimmten Plan oder Zugriff auf ein Gerät, das gefährlich sein könnte?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Krisen-First-Routing und Hard-Handoff-Kontexte.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cri_003",
+    "pri": 1,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cri",
+      "saf"
+    ],
+    "pp": [
+      {
+        "txt": "Haben Sie das Gefühl, dass Sie jetzt sofortige Hilfe benötigen?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Haben Sie das Gefühl, dass Sie gerade jetzt sofortige Unterstützung benötigen?",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Benötigen Sie sofortige Hilfe oder jemanden, der eingreift?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Krisen-First-Routing und Hard-Handoff-Kontexte.",
+      "evidence_level": "guideline_based"
+    },
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cri_004",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cri",
+      "saf",
+      "sup"
+    ],
+    "pp": [
+      {
+        "txt": "Gibt es jemanden neben Ihnen, der für Sicherheit sorgen kann?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Gibt es jemanden in Ihrer Nähe, der Ihnen gerade helfen oder unterstützen kann?",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wem stehen Sie gerade nahe, an den Sie sich bei Bedarf wenden können?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Krisen-First-Routing und Hard-Handoff-Kontexte.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cri_005",
+    "pri": 1,
+    "rec": [
+      "f",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cri",
+      "hand"
+    ],
+    "pp": [
+      {
+        "txt": "Möchten Sie nun, dass ich jemanden für Sie benachrichtige, oder möchten Sie lieber um Hilfe rufen?",
+        "t": "f",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Möchten Sie, dass ich Ihnen dabei helfe, mit jemandem in Kontakt zu treten, der sofort eingreifen kann?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Möchten Sie, dass ich jetzt jemanden in Ihrem Support-Netzwerk oder dem Notdienst benachrichtige?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Krisen-First-Routing und Hard-Handoff-Kontexte.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cri_006",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cri",
+      "saf"
+    ],
+    "pp": [
+      {
+        "txt": "Bitte erzählen Sie mir kurz, was passiert ist und warum Sie sich jetzt in Gefahr fühlen.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Könnten Sie uns kurz erzählen, was Sie zu diesem Punkt geführt hat und warum Sie sich jetzt in Gefahr fühlen?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Es wäre hilfreich, wenn Sie kurz die Situation erläutern könnten und warum Sie sich jetzt bedroht fühlen.",
+        "t": "n",
+        "l": "l",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Krisen-First-Routing und Hard-Handoff-Kontexte.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cri_007",
+    "pri": 1,
+    "rec": [
+      "f",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cri",
+      "saf"
+    ],
+    "pp": [
+      {
+        "txt": "Wenn das Gespräch jetzt nicht sicher ist, lassen Sie es uns kurz wissen und wir warten, bis es sicher ist.",
+        "t": "f",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wenn das Gespräch jetzt nicht sicher ist, schreiben Sie einfach ein kurzes Signal und wir warten, bis es sicher ist.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wenn Sie jetzt keine Details mitteilen können, lassen Sie es mich wissen und ich werde warten, bis es für Sie sicher ist.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Krisen-First-Routing und Hard-Handoff-Kontexte.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cri_008",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cri",
+      "sup"
+    ],
+    "pp": [
+      {
+        "txt": "Möchten Sie gleich eine kurze, sofortige Beruhigungsübung ausprobieren?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Sollen wir jetzt eine schnelle Atemübung versuchen, um Verspannungen abzubauen?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Sollen wir eine kurze Erdungsübung versuchen, um die Situation zu stabilisieren?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Krisen-First-Routing und Hard-Handoff-Kontexte.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cri_009",
+    "pri": 1,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cri",
+      "hand"
+    ],
+    "pp": [
+      {
+        "txt": "Wenn Sie möchten, können wir jetzt jemanden aus Ihrem Support-Netzwerk anrufen; An wen denkst du?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Möchten Sie, dass ich jemanden in Ihrer Nähe benachrichtige, der Ihnen helfen kann?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Gibt es jemanden, den wir jetzt anrufen können, um bei Ihnen zu sein?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Krisen-First-Routing und Hard-Handoff-Kontexte.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cri_010",
+    "pri": 1,
+    "rec": [
+      "f",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cri",
+      "saf"
+    ],
+    "pp": [
+      {
+        "txt": "Bitte sagen Sie mir, ob Sie derzeit eine konkrete Absicht oder einen konkreten Zeitplan für die schädliche Aktion haben.",
+        "t": "f",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Gibt es einen bestimmten Zeitpunkt oder eine bestimmte Methode, über die Sie gerade nachdenken?",
+        "t": "f",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Für Sie ist es wichtig zu wissen: Wenn Sie einen bestimmten Plan oder Zeitplan haben, müssen wir sofort eingreifen – sagen Sie es uns?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Krisen-First-Routing und Hard-Handoff-Kontexte.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cri_011",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cri",
+      "sup"
+    ],
+    "pp": [
+      {
+        "txt": "Bleiben Sie nun noch einen Moment bei mir: Lassen Sie uns gemeinsam ein paar Mal tief durchatmen.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Bleiben Sie eine Minute bei mir und versuchen Sie, langsam mit mir zu atmen – einatmen, ausatmen.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Machen Sie mit mir eine kurze Atemübung, ich helfe Ihnen dabei.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Krisen-First-Routing und Hard-Handoff-Kontexte.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cri_012",
+    "pri": 1,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cri",
+      "hand"
+    ],
+    "pp": [
+      {
+        "txt": "Wenn Sie möchten, kann ich jetzt auf Ihren Wunsch hin den örtlichen Notdienst anrufen; Willst du, dass ich es tue?",
+        "t": "f",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Möchten Sie, dass ich Ihnen bei der Kontaktaufnahme mit Ihrem örtlichen Notdienst helfe?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Brauchen Sie jetzt jemanden, der behördliche Interventionen einleitet?",
+        "t": "f",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Krisen-First-Routing und Hard-Handoff-Kontexte.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cri_013",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cri",
+      "saf",
+      "sup"
+    ],
+    "pp": [
+      {
+        "txt": "Gibt es irgendetwas, das die Situation jetzt sicherer machen kann?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Was können wir jetzt tun, um die Umwelt für Sie sicherer zu machen?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Denken Sie an einen kleinen Schritt, der Ihre Sicherheit sofort erhöhen kann – was könnte das sein?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Krisen-First-Routing und Hard-Handoff-Kontexte.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cri_014",
+    "pri": 1,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cri",
+      "hand"
+    ],
+    "pp": [
+      {
+        "txt": "Wenn Sie im Moment keine Details mitteilen können, teilen Sie uns dies mit. Wir werden dann versuchen, Ihnen auf andere Weise zu helfen.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wenn Sie gerade nicht sprechen können, schreiben Sie eine kurze Nachricht und wir versuchen, Ihnen auf alternative Weise zu helfen.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wenn Sie jetzt nicht näher darauf eingehen, sagen Sie mir bitte, wie ich Sie am besten unterstützen kann, ohne Sie in Gefahr zu bringen.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Krisen-First-Routing und Hard-Handoff-Kontexte.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cri_015",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cri",
+      "saf",
+      "sup"
+    ],
+    "pp": [
+      {
+        "txt": "Bleib bei mir; Ich lasse Sie mit dieser Situation nicht allein.",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Sie sind nicht allein; Ich bin hier bei dir und helfe dir durch diesen Moment.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Warten Sie noch einen Moment, wir schauen gemeinsam, wie wir sofort helfen können.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Krisen-First-Routing und Hard-Handoff-Kontexte.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

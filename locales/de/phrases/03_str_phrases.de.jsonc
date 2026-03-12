@@ -1,0 +1,1385 @@
+[
+  {
+    "id": "str_001",
+    "pri": 2,
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "ag",
+      "proc"
+    ],
+    "pp": [
+      {
+        "txt": "Was möchten Sie heute am liebsten besprechen?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wie fangen wir heute an, was ist Ihnen am wichtigsten?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Was beschäftigt Sie im Moment am meisten und was sollten wir tun?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_002",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "ag",
+      "expect"
+    ],
+    "pp": [
+      {
+        "txt": "Ich erzähle Ihnen kurz, wie das heutige Gespräch abläuft: Zuerst höre ich Ihnen zu, dann fasse ich zusammen und wir besprechen die nächsten Schritte.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich erzähle Ihnen den Zeitplan: Ich höre Ihnen zu, ich melde mich bei Ihnen und gemeinsam planen wir am Ende einen kleinen Schritt.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Der Ablauf der heutigen Sitzung: Sie sprechen, ich denke nach, und dann entscheiden wir gemeinsam über den nächsten Schritt.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_003",
+    "pri": 1,
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cons",
+      "proc"
+    ],
+    "pp": [
+      {
+        "txt": "Bevor wir fortfahren, ist es in Ordnung, wenn ich kurz zusammenfasse, was Sie manchmal sagen?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ist es in Ordnung, wenn ich ab und zu zusammenfasse, was Sie gesagt haben, um sicherzustellen, dass ich es richtig verstehe?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Akzeptieren Sie, dass ich manchmal zurückfrage oder zusammenfasse, um genau zu sein?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_004",
+    "pri": 1,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "time",
+      "expect"
+    ],
+    "pp": [
+      {
+        "txt": "Ich habe heute etwa 30 Minuten Zeit; Möchten Sie, dass wir uns entsprechend fokussieren?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wir haben heute etwa eine halbe Stunde; Möchten Sie, dass wir uns auf diese Zeit konzentrieren?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Was ist angesichts der Zeit Ihrer Meinung nach das Wichtigste, was wir heute besprechen müssen?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_005",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "proc",
+      "expect"
+    ],
+    "pp": [
+      {
+        "txt": "Wenn Sie zwischendurch eine Pause wünschen, sagen Sie mir einfach Bescheid.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wenn Sie zu irgendeinem Zeitpunkt eine Pause wünschen, sagen Sie uns Bescheid und wir machen eine kurze Pause.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Bitten Sie während des Gesprächs gerne um eine Pause, wenn Sie diese benötigen.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_006",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cons",
+      "proc"
+    ],
+    "pp": [
+      {
+        "txt": "Alles, was wir hier besprechen, ist vertraulich, außer es besteht Gefahr – möchten Sie mehr darüber erfahren?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Das Gespräch ist vertraulich; Wenn ich eine Gefahr bemerke, muss ich sie melden – wünschen Sie eine kurze Information dazu?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Es ist wichtig zu wissen, dass das Gespräch vertraulich ist, es gibt jedoch Ausnahmen im Gefahrenfall; Lass uns darüber reden, wenn du willst.",
+        "t": "n",
+        "l": "l",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_007",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "ag",
+      "proc"
+    ],
+    "pp": [
+      {
+        "txt": "Möchten Sie vorab ein konkretes Ziel für heute besprechen?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Sollen wir uns für diese Sitzung ein kleines Ziel setzen, um die Konzentration zu erleichtern?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Was wäre ein realistisches, kurzfristiges Ziel, das Sie heute erreichen würden?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_008",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "sched",
+      "proc"
+    ],
+    "pp": [
+      {
+        "txt": "Möchten Sie einen Termin für das nächste Gespräch vereinbaren?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Sollen wir jetzt reden, wenn wir uns das nächste Mal treffen?",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wäre es sinnvoll, Ihren nächsten Termin gleich jetzt zu buchen?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_009",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "expect",
+      "proc"
+    ],
+    "pp": [
+      {
+        "txt": "Ich erzähle Ihnen kurz, was Sie im Prozess von mir erwarten können: Ich höre zu, gebe Feedback und helfe Ihnen bei der Planung von Schritten.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Meine Aufgabe ist es, Ihnen zuzuhören, zu reflektieren und gemeinsam praktische Schritte zu planen.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Sie können von mir erwarten, dass ich Sie unterstütze, Fragen stelle und Ihnen bei den nächsten Schritten helfe.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_010",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "proc",
+      "ag"
+    ],
+    "pp": [
+      {
+        "txt": "Möchten Sie, dass ich kurz zusammenfasse, was am Ende des Gesprächs besprochen wurde?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ist es eine gute Idee, wenn ich am Ende die wichtigsten Punkte und nächsten Schritte zusammenfasse?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Lassen Sie mich zum Schluss zusammenfassen, was wir unternommen haben und was der nächste Schritt ist.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_011",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "time",
+      "sched"
+    ],
+    "pp": [
+      {
+        "txt": "Wenn die Zeit abläuft, möchten Sie, dass wir ein anderes Mal fortfahren oder den Vorgang verkürzen?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wenn uns die Zeit davonläuft, sollten wir dann später weitermachen oder das heutige Gespräch beenden?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Was soll Ihrer Meinung nach enden: Fortsetzung oder Abschluss?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_012",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "proc",
+      "expect"
+    ],
+    "pp": [
+      {
+        "txt": "Wenn Sie möchten, kann ich mir während des Gesprächs Notizen machen, die Sie später noch einmal durchgehen können.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich mache mir Notizen zu wichtigen Punkten; Möchten Sie, dass ich diese am Ende mit Ihnen teile?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich kann ein paar wichtige Punkte aufschreiben, die wir am Ende besprechen werden – stimmt das?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_013",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "expect",
+      "proc"
+    ],
+    "pp": [
+      {
+        "txt": "Manchmal frage ich nach Einzelheiten; Dies wird Ihnen helfen, die Situation genau zu verstehen.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich kann manchmal klärende Fragen stellen; Dies dient dazu, besser zu verstehen, wie Sie sich fühlen.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wenn ich zurückfrage, dient es einem genaueren Verständnis – ich hoffe, das ist für Sie in Ordnung.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_014",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "sched"
+    ],
+    "pp": [
+      {
+        "txt": "Möchten Sie, dass ich Sie vor dem nächsten Mal daran erinnere?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Möchten Sie, dass ich Ihnen vor dem nächsten Treffen eine Erinnerung schicke?",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Möchten Sie, dass wir eine Erinnerung für den nächsten Termin einrichten?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_015",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "clo",
+      "expect"
+    ],
+    "pp": [
+      {
+        "txt": "Am Ende des Gesprächs besprechen wir den nächsten Schritt und wer was unternimmt.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Am Ende besprechen wir kurz, was wir bis zum nächsten Mal machen werden und wer was machen wird.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Abschließend einigen wir uns auf einen kleinen Plan für die nächsten Schritte und Verantwortlichkeiten.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_016",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "proc",
+      "expect"
+    ],
+    "pp": [
+      {
+        "txt": "Sollte sich in der Zwischenzeit etwas ändern, teilen Sie uns dies gerne mit und wir werden den Plan anpassen.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Sollte sich Ihre Situation ändern, teilen Sie uns dies mit und wir werden gemeinsam die nächsten Schritte anpassen.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wir können den Plan jederzeit ändern, wenn neue Informationen oder Bedürfnisse auftauchen – ist das in Ordnung?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_017",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "proc",
+      "ag"
+    ],
+    "pp": [
+      {
+        "txt": "Möchten Sie, dass ich eine kurze Zusammenfassung basierend auf dem heutigen Gespräch schreibe?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Möchten Sie, dass ich Ihnen eine kurze Zusammenfassung des heutigen Treffens schicke?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Möchten Sie, dass ich Ihnen am Ende eine kurze Zusammenfassung dessen schicke, was besprochen wurde?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_018",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "expect",
+      "clo"
+    ],
+    "pp": [
+      {
+        "txt": "Der Zweck der heutigen Sitzung könnte darin bestehen, etwas Erleichterung zu schaffen und einen praktischen Schritt festzulegen.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Unser heutiges Ziel ist es, zu verstehen, wie Sie sich fühlen, und einen kleinen umsetzbaren Schritt für die nächsten Tage zu finden.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Heute konzentrieren wir uns darauf, die Situation zu klären und einen einfachen nächsten Schritt zu finden.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_019",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "proc",
+      "expect"
+    ],
+    "pp": [
+      {
+        "txt": "Wenn Sie möchten, können wir am Ende des Gesprächs auch eine kleine Selbsthilfeübung besprechen.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Zum Schluss kann ich dir noch eine kurze Übung geben, die du zu Hause ausprobieren kannst – hat es dir gefallen?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Möchten Sie eine einfache Übung, die Sie in den nächsten Tagen anwenden können?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "str_020",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "clo"
+    ],
+    "pp": [
+      {
+        "txt": "Am Ende des Gesprächs besprechen wir, wie es Ihnen jetzt geht und was Sie mitnehmen.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Abschließend besprechen wir kurz, wie es Ihnen jetzt geht und was Ihr nächster Schritt ist.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Zum Abschluss frage ich, wie es Dir geht und was Du für die nächsten Tage mitnehmen möchtest.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

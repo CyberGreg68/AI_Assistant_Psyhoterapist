@@ -1,0 +1,694 @@
+[
+  {
+    "id": "clo_001",
+    "pri": 2,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "clo",
+      "sum"
+    ],
+    "pp": [
+      {
+        "txt": "Vielen Dank, dass Sie mir heute Ihre Gedanken mitgeteilt haben.",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Danke, dass du mir erzählt hast, was mir durch den Kopf geht. es hat sich gelohnt, zuzuhören.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Vielen Dank, dass Sie Ihre Geschichte geteilt haben. Dies wird Ihnen helfen, voranzukommen.",
+        "t": "w",
+        "l": "l",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "clo_002",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "clo",
+      "sum"
+    ],
+    "pp": [
+      {
+        "txt": "Ich fasse kurz zusammen, was wir besprochen haben:…",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Zusammenfassend waren die wichtigsten Punkte heute…",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Um das heutige Gespräch kurz zusammenzufassen: Erstens..., zweitens... und der nächste Schritt...",
+        "t": "n",
+        "l": "l",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "clo_003",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "clo",
+      "next"
+    ],
+    "pp": [
+      {
+        "txt": "Der nächste Schritt könnte darin bestehen, eine kleine Übung auszuprobieren, die wir besprochen haben.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich empfehle Ihnen, den besprochenen kleinen Schritt in den nächsten Tagen auszuprobieren und sich beim nächsten Mal wieder zu melden.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ein einfacher nächster Schritt könnte darin bestehen, täglich 5 Minuten für Atemübungen einzuplanen; Mal sehen, wie es beim nächsten Mal für Sie funktioniert.",
+        "t": "n",
+        "l": "l",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "clo_004",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "clo",
+      "follow"
+    ],
+    "pp": [
+      {
+        "txt": "Möchten Sie, dass wir das nächste Mal darauf zurückkommen?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wäre es gut, wenn wir beim nächsten Gespräch sehen könnten, wie die Übung gelaufen ist?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Sollen wir das nächste Mal besprechen, wie es ausgegangen ist, und den Plan gegebenenfalls anpassen?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "clo_005",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "clo",
+      "ref"
+    ],
+    "pp": [
+      {
+        "txt": "Wenn Sie weitere Hilfe benötigen, kann ich Ihnen Ressourcen oder einen Fachmann empfehlen.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Bei Bedarf stelle ich gerne einige verfügbare Ressourcen zur Verfügung oder helfe Ihnen bei der Suche nach einem Spezialisten.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wenn Sie möchten, kann ich Ihnen einige nützliche Materialien und Kontaktinformationen zusenden, die Ihnen weiterhelfen können.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "clo_006",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "clo",
+      "sum"
+    ],
+    "pp": [
+      {
+        "txt": "Nun möchte ich Sie kurz fragen: Gibt es noch etwas, was Sie sagen möchten, bevor wir zum Schluss kommen?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Bevor wir schließen, möchten Sie noch etwas hinzufügen oder fragen?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Gibt es Ihrer Meinung nach noch etwas Wichtiges zu sagen, bevor wir zum Abschluss kommen?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "clo_007",
+    "pri": 3,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "clo",
+      "follow"
+    ],
+    "pp": [
+      {
+        "txt": "Okay, dann vereinbaren wir einen Termin, um fortzufahren, wenn Sie möchten.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wenn Sie möchten, können wir die nächste Sitzung jetzt buchen; Wann wäre das Richtige für dich?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Möchten Sie, dass wir einen nächsten Termin vereinbaren, oder möchten Sie lieber einen späteren Termin vereinbaren?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "clo_008",
+    "pri": 2,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "clo",
+      "enc"
+    ],
+    "pp": [
+      {
+        "txt": "Es war schön, heute mit dir zu reden; Pass bis dahin auf dich auf.",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Vielen Dank für das heutige Gespräch. Ich hoffe, dass Sie in den nächsten Tagen einige nützliche Schritte finden.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Danke fürs Teilen; Denken Sie an kleine Schritte und bis zum nächsten Mal.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "clo_009",
+    "pri": 1,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "f",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "clo",
+      "safety"
+    ],
+    "pp": [
+      {
+        "txt": "Wenn Sie sich zu irgendeinem Zeitpunkt in Gefahr fühlen, rufen Sie sofort den örtlichen Rettungsdienst an.",
+        "t": "f",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wichtig: Wenn Sie das Gefühl haben, dass eine unmittelbare Gefahr besteht, rufen Sie bitte sofort 911 an.",
+        "t": "f",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wenn Sie in Gefahr sind, warten Sie nicht; Wenden Sie sich umgehend an den örtlichen Notdienst oder bitten Sie Ihre Mitmenschen um Hilfe.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "clo_010",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "clo",
+      "sum"
+    ],
+    "pp": [
+      {
+        "txt": "Zusammenfassend: Heute haben wir die Situation besprochen, einen kleinen Schritt besprochen und uns auf die Fortsetzung geeinigt.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Heute haben wir die wichtigsten Punkte besprochen, einen nächsten Schritt ausgewählt und besprochen, wie wir weitermachen werden.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Die Essenz der heutigen Sitzung: Zuhören, zusammenfassen und einen praktischen Schritt für die nächsten Tage definieren.",
+        "t": "n",
+        "l": "l",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

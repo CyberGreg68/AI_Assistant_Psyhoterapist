@@ -1,0 +1,1 @@
+Place German patient-side trigger files here using the NN_short_triggers.de.json convention when DE trigger content is approved.

@@ -1,0 +1,648 @@
+[
+  {
+    "ex": [
+      "Mein Arbeitsplatz bereitet mich vor",
+      "Mein Chef macht mir Stress",
+      "Ich kann den Arbeitsdruck nicht ertragen"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Mein\\ Arbeitsplatz\\ bereitet\\ mich\\ vor|Mein\\ Chef\\ macht\\ mir\\ Stress|Ich\\ kann\\ den\\ Arbeitsdruck\\ nicht\\ ertragen)"
+    },
+    "tags": [
+      "oq",
+      "work"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_001",
+      "oq_003"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_045",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich bin bei der Arbeit ausgebrannt",
+      "Ich habe keine Energie mehr für die Arbeit",
+      "Ich hasse es, zur Arbeit zu gehen"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ bin\\ bei\\ der\\ Arbeit\\ ausgebrannt|Ich\\ habe\\ keine\\ Energie\\ mehr\\ für\\ die\\ Arbeit|Ich\\ hasse\\ es,\\ zur\\ Arbeit\\ zu\\ gehen)"
+    },
+    "tags": [
+      "oq",
+      "burnout"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_006",
+      "oq_008"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_046",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Mein Partner und ich streiten uns ständig",
+      "Meine Beziehung verschlechtert sich",
+      "Wir verstehen uns zu Hause nicht"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Mein\\ Partner\\ und\\ ich\\ streiten\\ uns\\ ständig|Meine\\ Beziehung\\ verschlechtert\\ sich|Wir\\ verstehen\\ uns\\ zu\\ Hause\\ nicht)"
+    },
+    "tags": [
+      "oq",
+      "relationship"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_002",
+      "oq_024"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_047",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich bin nach der Trennung",
+      "Sie haben mich verlassen und ich bin zusammengebrochen",
+      "Ich kann mich nach dem Ende der Beziehung nicht wiederfinden"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ bin\\ nach\\ der\\ Trennung|Sie\\ haben\\ mich\\ verlassen\\ und\\ ich\\ bin\\ zusammengebrochen|Ich\\ kann\\ mich\\ nach\\ dem\\ Ende\\ der\\ Beziehung\\ nicht\\ wiederfinden)"
+    },
+    "tags": [
+      "oq",
+      "breakup"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "oq",
+    "cand": [
+      "oq_002",
+      "oq_007"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_048",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich bin sehr gestresst wegen meinem Kind",
+      "Ich kann mit meinem Kind nicht gut umgehen",
+      "Elternsein ist anstrengend"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ bin\\ sehr\\ gestresst\\ wegen\\ meinem\\ Kind|Ich\\ kann\\ mit\\ meinem\\ Kind\\ nicht\\ gut\\ umgehen|Elternsein\\ ist\\ anstrengend)"
+    },
+    "tags": [
+      "oq",
+      "parenting"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_005",
+      "oq_009"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_049",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Es gibt einen Familienkonflikt",
+      "Zu Hause herrscht ständig Spannung",
+      "Ich kann meine Verwandten nicht ausstehen"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Es\\ gibt\\ einen\\ Familienkonflikt|Zu\\ Hause\\ herrscht\\ ständig\\ Spannung|Ich\\ kann\\ meine\\ Verwandten\\ nicht\\ ausstehen)"
+    },
+    "tags": [
+      "oq",
+      "family"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_001",
+      "oq_006"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_050",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich mache mir Sorgen um Geld",
+      "Finanzielle Probleme bedrücken mich",
+      "Ich weiß nicht, wie ich den Monat überstehen werde"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ mache\\ mir\\ Sorgen\\ um\\ Geld|Finanzielle\\ Probleme\\ bedrücken\\ mich|Ich\\ weiß\\ nicht,\\ wie\\ ich\\ den\\ Monat\\ überstehen\\ werde)"
+    },
+    "tags": [
+      "oq",
+      "finance"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_003",
+      "oq_008"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_051",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Lernen wird dich völlig auseinanderreißen",
+      "Ich habe Prüfungsstress",
+      "Ich kann dem Druck der Schule nicht standhalten"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Lernen\\ wird\\ dich\\ völlig\\ auseinanderreißen|Ich\\ habe\\ Prüfungsstress|Ich\\ kann\\ dem\\ Druck\\ der\\ Schule\\ nicht\\ standhalten)"
+    },
+    "tags": [
+      "oq",
+      "school"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_004",
+      "oq_006"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen"
+    ],
+    "lit": "medium",
+    "reg": "youth",
+    "persona": [
+      "student"
+    ],
+    "id": "pt_tr_052",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich weiß nicht, was ich will",
+      "Ich fühle mich verloren",
+      "Ich bin mir über nichts sicher"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ weiß\\ nicht,\\ was\\ ich\\ will|Ich\\ fühle\\ mich\\ verloren|Ich\\ bin\\ mir\\ über\\ nichts\\ sicher)"
+    },
+    "tags": [
+      "oq",
+      "direction"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_005",
+      "oq_011"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_053",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich mache mir große Sorgen um meine Gesundheit",
+      "Ich habe Angst vor Krankheit",
+      "Ich achte weiterhin auf Symptome"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ mache\\ mir\\ große\\ Sorgen\\ um\\ meine\\ Gesundheit|Ich\\ habe\\ Angst\\ vor\\ Krankheit|Ich\\ achte\\ weiterhin\\ auf\\ Symptome)"
+    },
+    "tags": [
+      "oq",
+      "health_anxiety"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "oq",
+    "cand": [
+      "oq_004",
+      "oq_006"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_054",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "An Wochentagen bin ich einsam",
+      "Ich habe niemanden, mit dem ich reden kann",
+      "Ich habe nur noch wenige Verbindungen übrig"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:An\\ Wochentagen\\ bin\\ ich\\ einsam|Ich\\ habe\\ niemanden,\\ mit\\ dem\\ ich\\ reden\\ kann|Ich\\ habe\\ nur\\ noch\\ wenige\\ Verbindungen\\ übrig)"
+    },
+    "tags": [
+      "oq",
+      "loneliness"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_009",
+      "oq_022"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_055",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich weiß nicht, was jetzt helfen würde",
+      "Ich habe keine Ahnung, was ich tun soll",
+      "Ich stecke völlig fest"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ weiß\\ nicht,\\ was\\ jetzt\\ helfen\\ würde|Ich\\ habe\\ keine\\ Ahnung,\\ was\\ ich\\ tun\\ soll|Ich\\ stecke\\ völlig\\ fest)"
+    },
+    "tags": [
+      "oq",
+      "stuck"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_005",
+      "oq_008"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_056",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

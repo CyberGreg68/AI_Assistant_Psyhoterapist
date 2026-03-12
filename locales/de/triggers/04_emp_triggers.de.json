@@ -1,0 +1,650 @@
+[
+  {
+    "ex": [
+      "Ich fühle mich sehr allein",
+      "Niemand hat mich verstanden",
+      "Ich war völlig auf mich allein gestellt"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ fühle\\ mich\\ sehr\\ allein|Niemand\\ hat\\ mich\\ verstanden|Ich\\ war\\ völlig\\ auf\\ mich\\ allein\\ gestellt)"
+    },
+    "tags": [
+      "emp",
+      "isolation"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "emp",
+    "cand": [
+      "emp_001",
+      "emp_007"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_033",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich vermisse die Person, die gestorben ist",
+      "Ich kann den Verlust nicht verarbeiten",
+      "Trauer tut so weh"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ vermisse\\ die\\ Person,\\ die\\ gestorben\\ ist|Ich\\ kann\\ den\\ Verlust\\ nicht\\ verarbeiten|Trauer\\ tut\\ so\\ weh)"
+    },
+    "tags": [
+      "emp",
+      "grief"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "emp",
+    "cand": [
+      "emp_004",
+      "emp_012"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_034",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich bin verwirrt",
+      "Ich verstehe nicht, was in mir vorgeht",
+      "In meinem Kopf schwirren die Dinge"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ bin\\ verwirrt|Ich\\ verstehe\\ nicht,\\ was\\ in\\ mir\\ vorgeht|In\\ meinem\\ Kopf\\ schwirren\\ die\\ Dinge)"
+    },
+    "tags": [
+      "emp",
+      "confusion"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "emp",
+    "cand": [
+      "emp_002",
+      "emp_009"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_035",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich weine jetzt",
+      "Ich kann nicht aufhören zu weinen",
+      "Ich weinte zu Tränen"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ weine\\ jetzt|Ich\\ kann\\ nicht\\ aufhören\\ zu\\ weinen|Ich\\ weinte\\ zu\\ Tränen)"
+    },
+    "tags": [
+      "emp",
+      "crying"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "emp",
+    "cand": [
+      "emp_003",
+      "emp_018"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_036",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich schäme mich so",
+      "Ich schäme mich dafür",
+      "Ich bin angewidert von mir selbst"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ schäme\\ mich\\ so|Ich\\ schäme\\ mich\\ dafür|Ich\\ bin\\ angewidert\\ von\\ mir\\ selbst)"
+    },
+    "tags": [
+      "emp",
+      "shame"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "emp",
+    "cand": [
+      "emp_010",
+      "emp_014"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_037",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich spüre nichts",
+      "Ich bin völlig leer",
+      "Es ist, als hätte ich es ausgeschaltet"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ spüre\\ nichts|Ich\\ bin\\ völlig\\ leer|Es\\ ist,\\ als\\ hätte\\ ich\\ es\\ ausgeschaltet)"
+    },
+    "tags": [
+      "emp",
+      "numb"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "emp",
+    "cand": [
+      "emp_011",
+      "emp_020"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_038",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich habe jetzt wirklich Angst",
+      "Ich habe schreckliche Angst",
+      "Ich bin der Panik nahe"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ habe\\ jetzt\\ wirklich\\ Angst|Ich\\ habe\\ schreckliche\\ Angst|Ich\\ bin\\ der\\ Panik\\ nahe)"
+    },
+    "tags": [
+      "emp",
+      "fear"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "emp",
+    "cand": [
+      "emp_005",
+      "emp_022"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_039",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich fühle mich ständig schuldig",
+      "Ich gebe mir selbst die Schuld an allem",
+      "Ich habe alles vermasselt"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ fühle\\ mich\\ ständig\\ schuldig|Ich\\ gebe\\ mir\\ selbst\\ die\\ Schuld\\ an\\ allem|Ich\\ habe\\ alles\\ vermasselt)"
+    },
+    "tags": [
+      "emp",
+      "guilt"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "emp",
+    "cand": [
+      "emp_006",
+      "emp_023"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_040",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich bin völlig erschöpft",
+      "Ich habe keine Energie",
+      "Das ist zu viel für mich"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ bin\\ völlig\\ erschöpft|Ich\\ habe\\ keine\\ Energie|Das\\ ist\\ zu\\ viel\\ für\\ mich)"
+    },
+    "tags": [
+      "emp",
+      "exhaustion"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "emp",
+    "cand": [
+      "emp_008",
+      "emp_024"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_041",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Sie haben mich betrogen",
+      "Ich war von ihnen enttäuscht",
+      "Sie haben mir sehr wehgetan"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Sie\\ haben\\ mich\\ betrogen|Ich\\ war\\ von\\ ihnen\\ enttäuscht|Sie\\ haben\\ mir\\ sehr\\ wehgetan)"
+    },
+    "tags": [
+      "emp",
+      "betrayal"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "emp",
+    "cand": [
+      "emp_013",
+      "emp_025"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_042",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich habe jetzt viel gesagt",
+      "Es ist schwer, darüber zu reden",
+      "Das habe ich niemandem erzählt"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ habe\\ jetzt\\ viel\\ gesagt|Es\\ ist\\ schwer,\\ darüber\\ zu\\ reden|Das\\ habe\\ ich\\ niemandem\\ erzählt)"
+    },
+    "tags": [
+      "emp",
+      "disclosure"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "emp",
+    "cand": [
+      "emp_015",
+      "emp_026"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_043",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich bin mit allem überfordert",
+      "Ich kann diesem Druck nicht standhalten",
+      "Ich werde von so vielen Lasten erdrückt"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ bin\\ mit\\ allem\\ überfordert|Ich\\ kann\\ diesem\\ Druck\\ nicht\\ standhalten|Ich\\ werde\\ von\\ so\\ vielen\\ Lasten\\ erdrückt)"
+    },
+    "tags": [
+      "emp",
+      "overwhelm"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "emp",
+    "cand": [
+      "emp_016",
+      "emp_027"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_044",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

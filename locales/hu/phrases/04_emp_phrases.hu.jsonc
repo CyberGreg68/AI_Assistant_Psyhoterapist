@@ -1,0 +1,2774 @@
+[
+  {
+    "id": "emp_001",
+    "pri": 1,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "w",
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t",
+      "s"
+    ],
+    "tags": [
+      "val",
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "Teljesen érthető, hogy így érzel.",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Érthető, hogy így érzed magad.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Nem meglepő, hogy ilyen érzéseid vannak; ez teljesen jogos.",
+        "t": "w",
+        "l": "l",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_002",
+    "pri": 1,
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t",
+      "s"
+    ],
+    "tags": [
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "Ez nagyon nehéz lehet számodra.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Ez igazán megterhelő lehet neked.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Tudom, hogy ez sokszor nagyon nehéz és kimerítő lehet számodra.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_003",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t",
+      "s"
+    ],
+    "tags": [
+      "grat"
+    ],
+    "pp": [
+      {
+        "txt": "Köszönöm, hogy megosztottad ezt velem.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Köszönöm, hogy elmondtad.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Nagyon értékelem, hogy megosztottad velem ezeket a gondolatokat.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_004",
+    "pri": 1,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Értem, miért lenne ez zavaró.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Látom, miért okoz ez zavart.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Megértem, hogy ez miért tűnik zavarónak számodra.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_005",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t",
+      "s"
+    ],
+    "tags": [
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "Látom, mennyire megterhelő ez most neked.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Látom, hogy ez most nagyon megterhel téged.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Észrevehető, hogy ez a helyzet most sok energiát vesz el tőled.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_006",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val",
+      "fat"
+    ],
+    "pp": [
+      {
+        "txt": "Ez sokszor nagyon kimerítő tud lenni.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Gyakran nagyon fárasztó ez az állapot.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Tudom, hogy ez sokszor kimerítő és lehangoló lehet számodra.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_007",
+    "pri": 1,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "norm"
+    ],
+    "pp": [
+      {
+        "txt": "Nem csoda, hogy így reagálsz.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Nem meglepő ez a reakció.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Teljesen érthető, hogy így reagálsz egy ilyen helyzetben.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_008",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t",
+      "s"
+    ],
+    "tags": [
+      "enc"
+    ],
+    "pp": [
+      {
+        "txt": "Fontos, hogy ezt elmondtad.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Jó, hogy megosztottad ezt velem.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ez fontos volt, hogy elmondtad; köszönöm, hogy megosztottad.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_009",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Érthető, hogy bizonytalan vagy.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Teljesen érthető a bizonytalanságod.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Érthető, hogy most bizonytalanul érzed magad ebben a helyzetben.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_010",
+    "pri": 1,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Ez teljesen jogos érzés.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Jogos, hogy így érzel.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Teljesen jogos ez az érzés a helyzetedben.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_011",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Hallom, hogy ez sokat jelent neked.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Érzem, hogy ez fontos számodra.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Látom, mennyire sokat jelent neked ez a dolog.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_012",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "fear"
+    ],
+    "pp": [
+      {
+        "txt": "Értem, hogy ez félelmetes lehet.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Megértem, hogy ez félelmet kelt benned.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Tudom, hogy ez ijesztő érzés lehet, és ez teljesen érthető.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_013",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "Ez valóban megterhelő helyzetnek tűnik.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ez elég megterhelőnek hangzik.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Úgy tűnik, ez a helyzet most különösen megterhelő számodra.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_014",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "grat"
+    ],
+    "pp": [
+      {
+        "txt": "Köszönöm, hogy megosztottad a részleteket.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Köszönöm, hogy részletesen elmondtad.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Nagyon köszönöm, hogy megosztottad ezeket a részleteket; sokat segít.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_015",
+    "pri": 1,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Értem, hogy ez zavart okoz benned.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Látom, hogy ez zavart kelt benned.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Megértem, hogy ez a helyzet zavart és kényelmetlenséget okoz számodra.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_016",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "Ez nagyon megviselhet téged.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ez igazán megviselhet.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Tudom, hogy ez mélyen megviselhet téged, és ez teljesen érthető.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_017",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "emp",
+      "fat"
+    ],
+    "pp": [
+      {
+        "txt": "Látom, hogy ez sok energiát vesz el tőled.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Észrevehető, hogy ez kimerít téged.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Úgy tűnik, ez a helyzet sok energiát emészt fel benned, és ez érthető.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_018",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Ez érthetően felkavaró lehet.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Érthető, hogy ez felkavaró számodra.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Teljesen érthető, hogy ez a helyzet felkavaró és zavaró érzéseket kelt benned.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_019",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "grat"
+    ],
+    "pp": [
+      {
+        "txt": "Köszönöm, hogy megosztottad a gondolataidat.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Köszönöm, hogy megosztottad velem a gondolataidat.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Nagyon köszönöm, hogy megosztottad ezeket a gondolatokat; ez sokat segít a megértésben.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_020",
+    "pri": 1,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Értem, hogy ez bizonytalanságot okoz.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Megértem, hogy ez bizonytalanságot vált ki benned.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Érthető, hogy ez a helyzet bizonytalanságot és kétségeket okoz számodra.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_021",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "Ez nagyon megterhelő lehetett számodra.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Valóban megterhelő lehetett ez neked.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Tudom, hogy ez a helyzet nagyon megterhelő lehetett számodra, és ez érthető.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_022",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "fat",
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "Hallom, mennyire kimerültnek érzed magad.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Hallom, hogy kimerültnek érzed magad.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Érzem, hogy ez a helyzet mennyire kimerít téged; ez teljesen érthető.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_023",
+    "pri": 1,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "norm"
+    ],
+    "pp": [
+      {
+        "txt": "Ez teljesen érthető reakció egy ilyen helyzetben.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ez egy érthető reakció ilyen körülmények között.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Teljesen normális és érthető, hogy így reagálsz egy ilyen helyzetre.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_024",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "grat",
+      "enc"
+    ],
+    "pp": [
+      {
+        "txt": "Köszönöm, hogy megosztottad a nehéz pillanatot.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Köszönöm, hogy elmondtad ezt a nehéz pillanatot.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Nagyon köszönöm, hogy megosztottad velem ezt a nehéz pillanatot; ez fontos.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_025",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Értem, hogy ez sok bizonytalansággal jár.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Megértem, hogy ez sok bizonytalanságot okoz.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Tudom, hogy ez a helyzet sok bizonytalansággal és kérdéssel jár együtt.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_026",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "Látom, hogy ez mélyen érint téged.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Érzem, hogy ez mélyen érint téged.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Úgy tűnik, ez a dolog nagyon mélyen érint téged; ez fontos megjegyezni.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_027",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Nem könnyű ilyen helyzetben lenni, és ez teljesen érthető.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Nem könnyű ebben a helyzetben lenni.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Valóban nem könnyű ilyen helyzetben lenni; teljesen érthető, hogy így érzel.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_028",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "grat",
+      "fear"
+    ],
+    "pp": [
+      {
+        "txt": "Köszönöm, hogy megosztottad a félelmeidet.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Köszönöm, hogy elmondtad a félelmeidet.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Nagyon köszönöm, hogy megosztottad a félelmeidet; ez fontos lépés volt.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_029",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val",
+      "fat"
+    ],
+    "pp": [
+      {
+        "txt": "Ez valóban megterhelő és fárasztó lehet.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ez tényleg fárasztó lehet.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Érthető, hogy ez a helyzet megterhelő és kimerítő számodra.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_030",
+    "pri": 1,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val",
+      "enc"
+    ],
+    "pp": [
+      {
+        "txt": "Értem, hogy ez sokszor frusztráló lehet.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Megértem, hogy ez frusztrációt okoz.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Tudom, hogy ez a helyzet sokszor frusztráló és idegesítő lehet számodra.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_031",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "emp",
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Hallom, hogy ez sokszor elszigeteltséget okoz.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Érzem, hogy ez elszigeteltséget hoz számodra.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Úgy tűnik, ez a helyzet gyakran magányosságot és elszigeteltséget okoz neked.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_032",
+    "pri": 1,
+    "rec": [
+      "n",
+      "b"
+    ],
+    "use": [
+      "c",
+      "t",
+      "s"
+    ],
+    "tags": [
+      "val",
+      "enc"
+    ],
+    "pp": [
+      {
+        "txt": "Ez teljesen érthető, és jogos, hogy így érzel.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Teljesen jogos, hogy így érzel.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Érthető és jogos, hogy ilyen érzéseid vannak ebben a helyzetben.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_033",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "grat"
+    ],
+    "pp": [
+      {
+        "txt": "Köszönöm, hogy megosztottad a nehézségeidet.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Köszönöm, hogy elmondtad a nehézségeidet.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Nagyon köszönöm, hogy megosztottad ezeket a nehézségeket; ez fontos volt.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_034",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Értem, hogy ez sokszor zavaró és nehéz lehet.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Megértem, hogy ez zavaró és nehéz.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Tudom, hogy ez a helyzet sokszor zavaró és nehéz érzéseket kelt benned.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_035",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "emp",
+      "fat"
+    ],
+    "pp": [
+      {
+        "txt": "Látom, hogy ez sokszor kimerít és leterhel.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Észrevehető, hogy ez kimerít téged.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Úgy tűnik, ez a helyzet gyakran kimerít és leterhel téged; ez érthető.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_036",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "norm"
+    ],
+    "pp": [
+      {
+        "txt": "Nem meglepő, hogy így reagálsz egy ilyen helyzetre.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Nem meglepő ez a reakció ilyen körülmények között.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Teljesen érthető, hogy egy ilyen helyzetben így reagálsz; ez természetes.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_037",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "grat",
+      "enc"
+    ],
+    "pp": [
+      {
+        "txt": "Köszönöm, hogy megosztottad a gondolataidat és érzéseidet.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Köszönöm, hogy megosztottad az érzéseidet.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Nagyon köszönöm, hogy elmondtad a gondolataidat és érzéseidet; ez sokat segít.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_038",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val",
+      "fear"
+    ],
+    "pp": [
+      {
+        "txt": "Értem, hogy ez sokszor bizonytalansággal és aggodalommal jár.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Megértem, hogy ez bizonytalanságot és aggodalmat okoz.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Tudom, hogy ez a helyzet gyakran bizonytalansággal és aggodalommal jár együtt.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_039",
+    "pri": 1,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "Látom, hogy ez mélyen érint téged, és ez fontos információ.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Érzem, hogy ez mélyen érint téged.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ez nyilvánvalóan mélyen érint téged, és fontos, hogy erről beszéltél.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "emp_040",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Nem könnyű ezt átélni; teljesen érthető, hogy így érzel.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Nem könnyű átélni ezt; érthető, hogy így érzel.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Valóban nem könnyű ezt átélni; teljesen érthető, hogy ilyen érzéseid vannak.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

@@ -1,0 +1,1396 @@
+[
+  {
+    "id": "enc_001",
+    "pri": 2,
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "mot"
+    ],
+    "pp": [
+      {
+        "txt": "Ez egy fontos lépés volt, gratulálok, hogy megosztottad.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Jó, hogy megnyíltál; ez már önmagában előrelépés.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Köszönöm, hogy elmondtad; ez egy bátor lépés volt részedről.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_002",
+    "pri": 2,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "small"
+    ],
+    "pp": [
+      {
+        "txt": "Kis lépések is számítanak — ez már haladás.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Még a legkisebb előrelépés is fontos; vedd észre magadban ezt a változást.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Apró lépésekből épül fel a változás; ez a mostani is értékes.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_003",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "praise"
+    ],
+    "pp": [
+      {
+        "txt": "Jól csináltad, hogy megpróbáltad.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Szép volt, hogy megpróbáltad; ez erőt mutat.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Észrevehető a törekvésed; ez dicséretes és fontos a továbblépéshez.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_004",
+    "pri": 2,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "Tudom, hogy nem könnyű, de látom az erőfeszítést benned.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Érzem, hogy sokat tettél eddig; ez számít és látható.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Az erőfeszítéseid fontosak; ne becsüld alá, mennyit jelentenek ezek a lépések.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_005",
+    "pri": 3,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "small"
+    ],
+    "pp": [
+      {
+        "txt": "Mi lenne egy apró, ma megtehető lépés?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Gondolj egy kis lépésre, amit ma megtehetsz; mi lehetne az?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Egy egyszerű, rövid teendő ma is sokat számíthat; mit vállalsz?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_006",
+    "pri": 2,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "mot"
+    ],
+    "pp": [
+      {
+        "txt": "Ez a munka, amit végzel magadon, hosszú távon megtérül.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "A befektetett energia előbb‑utóbb eredményt hoz; érdemes kitartani.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "A változás gyakran lassú, de következetes; amit most teszel, később hasznodra válik.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_007",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "praise"
+    ],
+    "pp": [
+      {
+        "txt": "Látom a fejlődést, még ha te nem is mindig veszed észre.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Néha a változás apró jelekben mutatkozik; én látom ezeket benned.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Előfordul, hogy mi magunk nem vesszük észre a fejlődést; én viszont látom, mennyit haladtál.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_008",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "Megértem, ha néha csalódott vagy; az is része a folyamatnak.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "A csalódás természetes része a változásnak; ez nem jelenti, hogy nem haladsz.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Fontos elfogadni a hullámvölgyeket; ezek után gyakran jön egy jobb időszak is.",
+        "t": "n",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_009",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "small"
+    ],
+    "pp": [
+      {
+        "txt": "Próbálj meg ma egy apró dolgot, ami örömet okoz.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Válassz egy kis tevékenységet, ami feltölt — akár 5 perc is számít.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Egy rövid, kellemes tevékenység ma segíthet jobban érezni magad; mit választanál?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_010",
+    "pri": 2,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "mot"
+    ],
+    "pp": [
+      {
+        "txt": "Bízz a saját erődben; már sok mindent átvészeltél.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Emlékezz rá, mennyi mindenen mentél már keresztül — ez erőt adhat a folytatáshoz.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "A múltbeli túléléseid bizonyítják, hogy képes vagy megküzdeni a mostani nehézségekkel is.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_011",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "praise"
+    ],
+    "pp": [
+      {
+        "txt": "Értékelem, hogy időt szántál erre a beszélgetésre.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Jó döntés volt ma foglalkozni ezzel; ez fontos önmagad számára.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Az, hogy ma itt vagy és beszélsz róla, önmagában is egy fontos lépés a gyógyulás felé.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_012",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "small"
+    ],
+    "pp": [
+      {
+        "txt": "Mi az a kis dolog, amit ma megtehetsz, hogy jobban érezd magad?",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Gondolj egy egyszerű, elérhető lépésre; mit vállalsz ma?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Egy apró cél ma is előrevisz; mi legyen az a mai célod?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_013",
+    "pri": 2,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "Nem kell mindent egyszerre megoldani; lépésről lépésre haladjunk.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "A változás ritkán gyors; türelemmel és következetességgel érheted el a céljaidat.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Fókuszálj az apró, következetes lépésekre — ezek adják az igazi előrelépést idővel.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_014",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "mot"
+    ],
+    "pp": [
+      {
+        "txt": "Emlékezz a korábbi sikereidre; ezek erőt adhatnak most is.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Milyen korábbi eredményre vagy büszke, ami most inspirálhat?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "A múltbeli sikerek emlékeztetnek arra, hogy képes vagy változtatni és fejlődni.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_015",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "praise"
+    ],
+    "pp": [
+      {
+        "txt": "Köszönöm, hogy megosztottad; ez segít a közös munkában.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Értékelem a bizalmadat; ez fontos alap a további lépésekhez.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "A megosztásod értékes; ez lehetővé teszi, hogy célzottan támogassalak tovább.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_016",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "small"
+    ],
+    "pp": [
+      {
+        "txt": "Próbálj meg ma egy rövid, kedves dolgot tenni magadért.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Egy kis önkényeztetés ma is sokat számít — mit tennél meg magadért?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Adj magadnak egy kis figyelmet ma; ez segít feltöltődni és folytatni a munkát.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_017",
+    "pri": 2,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "mot"
+    ],
+    "pp": [
+      {
+        "txt": "Ne feledd: a kitartás gyakran fontosabb, mint a gyors eredmény.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "A következetesség és a türelem hosszú távon meghozza a gyümölcsét.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Maradj kitartó a kis lépésekben; ezek adják majd az igazi változást idővel.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_018",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "Érthető, ha néha elbizonytalanodsz; ez nem von le semmit az erődből.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "A kételyek természetesek; az, hogy tovább próbálkozol, mutatja az elszántságodat.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "A kételyek ellenére folytatni a munkát bátorságot és kitartást jelez; ez értékes.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_019",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "praise"
+    ],
+    "pp": [
+      {
+        "txt": "Ma tettél egy lépést; ez már számít.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "A mai lépésed fontos része a folyamatnak; tartsd meg ezt a lendületet.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Minden nap, amikor teszel valamit a célodért, közelebb kerülsz hozzá — ma is megtetted az első lépést.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_020",
+    "pri": 2,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "mot"
+    ],
+    "pp": [
+      {
+        "txt": "Higgy abban, hogy a változás lehetséges; te is képes vagy rá.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "A hit a saját képességeidben sokszor elindítja a változást; tartsd meg ezt a hitet.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ha hiszel abban, hogy képes vagy változtatni, az motivációt ad a következő lépésekhez.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

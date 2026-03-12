@@ -1,0 +1,1396 @@
+[
+  {
+    "id": "enc_001",
+    "pri": 2,
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "mot"
+    ],
+    "pp": [
+      {
+        "txt": "Das war ein wichtiger Schritt, herzlichen Glückwunsch zum Teilen.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Es ist gut, dass du dich geöffnet hast; Das ist ein Fortschritt an sich.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Danke, dass du es mir erzählt hast; Das war ein mutiger Schachzug von Dir.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_002",
+    "pri": 2,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "small"
+    ],
+    "pp": [
+      {
+        "txt": "Auch kleine Schritte zählen – das ist Fortschritt.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Selbst der kleinste Fortschritt ist wichtig; Beachten Sie diese Veränderung an sich.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Veränderungen entstehen aus kleinen Schritten; Auch dieses Geschenk ist wertvoll.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_003",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "praise"
+    ],
+    "pp": [
+      {
+        "txt": "Du hast gut daran getan, es zu versuchen.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Schön, dass du es versuchst; es zeigt Stärke.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ihr Antrieb ist spürbar; Das ist lobenswert und wichtig für die Zukunft.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_004",
+    "pri": 2,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "Ich weiß, dass es nicht einfach ist, aber ich sehe die Anstrengung in dir.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich habe das Gefühl, dass Sie bisher viel getan haben; es ist wichtig und sichtbar.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ihre Bemühungen sind wichtig; Unterschätzen Sie nicht, wie viel diese Schritte bedeuten.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_005",
+    "pri": 3,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "small"
+    ],
+    "pp": [
+      {
+        "txt": "Was wäre ein kleiner Schritt, den Sie heute machen könnten?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Denken Sie an einen kleinen Schritt, den Sie heute unternehmen können. Was könnte es sein",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Auch heute noch kann eine einfache, kurze Aktion viel bedeuten; was machst du",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_006",
+    "pri": 2,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "mot"
+    ],
+    "pp": [
+      {
+        "txt": "Die Arbeit, die Sie an sich selbst leisten, wird sich auf lange Sicht auszahlen.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Die investierte Energie bringt früher oder später Ergebnisse; es lohnt sich durchzuhalten.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Veränderungen vollziehen sich oft langsam, aber konsequent; Was Sie jetzt tun, wird Ihnen später zugute kommen.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_007",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "praise"
+    ],
+    "pp": [
+      {
+        "txt": "Ich sehe Fortschritte, auch wenn man sie nicht immer bemerkt.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Manchmal geschieht die Veränderung in kleinen Zeichen; Ich sehe diese in dir.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Es kommt vor, dass wir selbst die Entwicklung nicht bemerken; Ich kann sehen, wie weit du gekommen bist.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_008",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "Ich verstehe, wenn Sie manchmal frustriert sind; es ist auch Teil des Prozesses.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Enttäuschung ist ein natürlicher Teil der Veränderung; Das bedeutet nicht, dass Sie keine Fortschritte machen.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Es ist wichtig, die Höhen und Tiefen zu akzeptieren; Danach kommt oft eine bessere Zeit.",
+        "t": "n",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_009",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "small"
+    ],
+    "pp": [
+      {
+        "txt": "Probieren Sie heute eine kleine Sache aus, die Ihnen Freude bereitet.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wählen Sie eine kleine Aktivität, die Sie auflädt – schon 5 Minuten zählen.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Eine kurze, angenehme Aktivität heute kann Ihnen helfen, sich besser zu fühlen; was würdest du wählen",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_010",
+    "pri": 2,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "mot"
+    ],
+    "pp": [
+      {
+        "txt": "Vertraue auf deine eigene Stärke; Du hast viel durchgemacht.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Denken Sie daran, wie viel Sie durchgemacht haben – es kann Ihnen Kraft geben, weiterzumachen.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ihre vergangenen Überlebenserlebnisse beweisen, dass Sie auch mit aktuellen Schwierigkeiten zurechtkommen.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_011",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "praise"
+    ],
+    "pp": [
+      {
+        "txt": "Ich weiß es zu schätzen, dass Sie sich die Zeit genommen haben, dieses Gespräch zu führen.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Es war eine gute Entscheidung, sich heute damit zu befassen; es ist dir selbst wichtig.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Die Tatsache, dass Sie heute hier sind und darüber sprechen, ist an sich schon ein wichtiger Schritt zur Heilung.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_012",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "small"
+    ],
+    "pp": [
+      {
+        "txt": "Was ist eine kleine Sache, die Sie heute tun können, damit es Ihnen besser geht?",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Denken Sie an einen einfachen, erreichbaren Schritt. was machst du heute",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ein kleines Ziel bringt mich auch heute noch voran; Was sollte Ihr Ziel heute sein?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_013",
+    "pri": 2,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "Sie müssen nicht alles auf einmal lösen; Lass uns Schritt für Schritt vorgehen.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Veränderungen vollziehen sich selten schnell; Mit Geduld und Konsequenz können Sie Ihre Ziele erreichen.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Konzentrieren Sie sich auf kleine, konsequente Schritte – das sind diejenigen, die mit der Zeit echte Fortschritte machen.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_014",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "mot"
+    ],
+    "pp": [
+      {
+        "txt": "Erinnern Sie sich an Ihre vergangenen Erfolge; diese können auch jetzt noch Kraft geben.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Auf welchen Erfolg der Vergangenheit sind Sie stolz, der Sie jetzt inspirieren kann?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Vergangene Erfolge erinnern Sie an Ihre Fähigkeit, sich zu verändern und zu wachsen.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_015",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "praise"
+    ],
+    "pp": [
+      {
+        "txt": "Danke fürs Teilen; Das hilft bei der Zusammenarbeit.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich schätze Ihr Vertrauen; Dies ist eine wichtige Grundlage für weitere Schritte.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ihr Teilen ist wertvoll; Dadurch kann ich Sie gezielt weiter unterstützen.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_016",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "small"
+    ],
+    "pp": [
+      {
+        "txt": "Versuchen Sie heute, etwas Kurzes und Freundliches für sich selbst zu tun.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ein wenig Selbstgefälligkeit zählt auch heute noch viel – was würden Sie für sich tun?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Schenken Sie sich heute etwas Aufmerksamkeit; Dies wird Ihnen helfen, neue Energie zu tanken und weiterarbeiten zu können.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_017",
+    "pri": 2,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "mot"
+    ],
+    "pp": [
+      {
+        "txt": "Denken Sie daran: Beharrlichkeit ist oft wichtiger als schnelle Ergebnisse.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Konsequenz und Geduld werden sich auf lange Sicht auszahlen.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Bleiben Sie in kleinen Schritten beharrlich; Diese werden im Laufe der Zeit den wirklichen Unterschied machen.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_018",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "Es ist verständlich, wenn Sie sich manchmal unsicher fühlen; Es nimmt dir nichts von deiner Kraft.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Zweifel sind natürlich; Dass du es immer wieder versuchst, zeigt deine Entschlossenheit.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Trotz Zweifeln weiterzuarbeiten, zeugt von Mut und Ausdauer; es ist wertvoll.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_019",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "praise"
+    ],
+    "pp": [
+      {
+        "txt": "Heute hast du einen Schritt gemacht; es ist schon wichtig.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ihr heutiger Schritt ist ein wichtiger Teil des Prozesses; Halten Sie diesen Schwung aufrecht.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Jeden Tag, wenn Sie etwas für Ihr Ziel tun, kommen Sie ihm näher – Sie haben heute den ersten Schritt getan.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_020",
+    "pri": 2,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "mot"
+    ],
+    "pp": [
+      {
+        "txt": "Glauben Sie, dass Veränderung möglich ist; Du kannst es auch tun.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Der Glaube an die eigenen Fähigkeiten leitet oft Veränderungen ein; Behalte diesen Glauben.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Der Glaube, dass Sie etwas bewirken können, gibt Ihnen die Motivation, die nächsten Schritte zu unternehmen.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

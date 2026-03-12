@@ -1,0 +1,426 @@
+[
+  {
+    "ex": [
+      "Warum kann ich nicht schlafen?",
+      "Gib mir einen Schlaftipp",
+      "Mein Schlaf ist total schlecht"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Warum\\ kann\\ ich\\ nicht\\ schlafen\\?|Gib\\ mir\\ einen\\ Schlaftipp|Mein\\ Schlaf\\ ist\\ total\\ schlecht)"
+    },
+    "tags": [
+      "edu",
+      "sleep"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "edu",
+    "cand": [
+      "edu_004",
+      "edu_005"
+    ],
+    "fb": "call_llm",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_085",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich bin besorgt wegen der Schmerzen",
+      "Was weiß ich über den Zusammenhang zwischen Stress und Schmerz?",
+      "Mein Körper tut auch weh"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ bin\\ besorgt\\ wegen\\ der\\ Schmerzen|Was\\ weiß\\ ich\\ über\\ den\\ Zusammenhang\\ zwischen\\ Stress\\ und\\ Schmerz\\?|Mein\\ Körper\\ tut\\ auch\\ weh)"
+    },
+    "tags": [
+      "edu",
+      "pain"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "edu",
+    "cand": [
+      "edu_001",
+      "edu_010"
+    ],
+    "fb": "call_llm",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_086",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Sag mir, was passiert, wenn du in Panik gerätst",
+      "Was ist der Mechanismus einer Panikattacke?",
+      "Mich interessiert die körperliche Reaktion"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Sag\\ mir,\\ was\\ passiert,\\ wenn\\ du\\ in\\ Panik\\ gerätst|Was\\ ist\\ der\\ Mechanismus\\ einer\\ Panikattacke\\?|Mich\\ interessiert\\ die\\ körperliche\\ Reaktion)"
+    },
+    "tags": [
+      "edu",
+      "panic"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "edu",
+    "cand": [
+      "edu_002",
+      "edu_003"
+    ],
+    "fb": "call_llm",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_087",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Erdung erklären",
+      "Was ist 5 4 3 2 1",
+      "So funktioniert Erdung"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Erdung\\ erklären|Was\\ ist\\ 5\\ 4\\ 3\\ 2\\ 1|So\\ funktioniert\\ Erdung)"
+    },
+    "tags": [
+      "edu",
+      "grounding"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "edu",
+    "cand": [
+      "edu_003",
+      "edu_011"
+    ],
+    "fb": "call_llm",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_088",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Erklären Sie die Atmung",
+      "Warum langsames Atmen hilft",
+      "Du brauchst Atemübungen"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Erklären\\ Sie\\ die\\ Atmung|Warum\\ langsames\\ Atmen\\ hilft|Du\\ brauchst\\ Atemübungen)"
+    },
+    "tags": [
+      "edu",
+      "breathing"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "edu",
+    "cand": [
+      "edu_002",
+      "edu_012"
+    ],
+    "fb": "call_llm",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_089",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Was ist die Essenz der Therapie?",
+      "Was ist der Sinn dieses Gesprächs?",
+      "Erzählen Sie mir kurz, wie die Therapie hilft"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Was\\ ist\\ die\\ Essenz\\ der\\ Therapie\\?|Was\\ ist\\ der\\ Sinn\\ dieses\\ Gesprächs\\?|Erzählen\\ Sie\\ mir\\ kurz,\\ wie\\ die\\ Therapie\\ hilft)"
+    },
+    "tags": [
+      "edu",
+      "therapy"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "edu",
+    "cand": [
+      "edu_001",
+      "edu_013"
+    ],
+    "fb": "call_llm",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_090",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Warum reagiert mein Körper unter Stress so?",
+      "Erzähl mir von Stress",
+      "Warum bin ich so aufgeregt?"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Warum\\ reagiert\\ mein\\ Körper\\ unter\\ Stress\\ so\\?|Erzähl\\ mir\\ von\\ Stress|Warum\\ bin\\ ich\\ so\\ aufgeregt\\?)"
+    },
+    "tags": [
+      "edu",
+      "stress"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "edu",
+    "cand": [
+      "edu_001",
+      "edu_014"
+    ],
+    "fb": "call_llm",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_091",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Geben Sie eine kurze Erklärung zur Selbsthilfe",
+      "Ich brauche Informationen, die ich zu Hause verwenden kann",
+      "Kurz gesagt, ich bitte um Psychoedukation"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Geben\\ Sie\\ eine\\ kurze\\ Erklärung\\ zur\\ Selbsthilfe|Ich\\ brauche\\ Informationen,\\ die\\ ich\\ zu\\ Hause\\ verwenden\\ kann|Kurz\\ gesagt,\\ ich\\ bitte\\ um\\ Psychoedukation)"
+    },
+    "tags": [
+      "edu",
+      "coping"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "edu",
+    "cand": [
+      "edu_001",
+      "edu_015"
+    ],
+    "fb": "call_llm",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_092",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

@@ -1,0 +1,214 @@
+[
+  {
+    "ex": [
+      "Ask him directly",
+      "A yes or no question please",
+      "I need a short question"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ask\\ him\\ directly|A\\ yes\\ or\\ no\\ question\\ please|I\\ need\\ a\\ short\\ question)"
+    },
+    "tags": [
+      "cq",
+      "direct"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "cq",
+    "cand": [
+      "cq_001",
+      "cq_002"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_057",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I drank or used today",
+      "I'm on drugs now",
+      "Yes, you are not asking about the drug"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ drank\\ or\\ used\\ today|I'm\\ on\\ drugs\\ now|Yes,\\ you\\ are\\ not\\ asking\\ about\\ the\\ drug)"
+    },
+    "tags": [
+      "cq",
+      "substance"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "cq",
+    "cand": [
+      "cq_006",
+      "cq_010"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_058",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ask me if I'm alone",
+      "Briefly check the security",
+      "You only need a security yes"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ask\\ me\\ if\\ I'm\\ alone|Briefly\\ check\\ the\\ security|You\\ only\\ need\\ a\\ security\\ yes)"
+    },
+    "tags": [
+      "cq",
+      "safety"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "cq",
+    "cand": [
+      "cq_003",
+      "cq_004"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_059",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ask if there was any self-harm today",
+      "A short check on the damage is required",
+      "Yes, don't ask about the danger"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ask\\ if\\ there\\ was\\ any\\ self\\-harm\\ today|A\\ short\\ check\\ on\\ the\\ damage\\ is\\ required|Yes,\\ don't\\ ask\\ about\\ the\\ danger)"
+    },
+    "tags": [
+      "cq",
+      "risk_check"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "cq",
+    "cand": [
+      "cq_005",
+      "cq_011"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_060",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

@@ -1,0 +1,334 @@
+[
+  {
+    "ex": [
+      "Mein Glaube ist dabei wichtig",
+      "Auch aus religiöser Sicht ist es schwierig",
+      "Es beeinflusst auch meinen Glauben"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Mein\\ Glaube\\ ist\\ dabei\\ wichtig|Auch\\ aus\\ religiöser\\ Sicht\\ ist\\ es\\ schwierig|Es\\ beeinflusst\\ auch\\ meinen\\ Glauben)"
+    },
+    "tags": [
+      "cult",
+      "religion"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "cult",
+    "cand": [
+      "cult_003",
+      "cult_005"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "cult": "Bitten Sie um Erlaubnis, bevor Sie eine glaubensbezogene Sprache verwenden.",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_101",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "In meiner Familie sehen sie das anders",
+      "Es ist hier ein Tabuthema",
+      "Aufgrund der Familiennormen ist es schwierig"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:In\\ meiner\\ Familie\\ sehen\\ sie\\ das\\ anders|Es\\ ist\\ hier\\ ein\\ Tabuthema|Aufgrund\\ der\\ Familiennormen\\ ist\\ es\\ schwierig)"
+    },
+    "tags": [
+      "cult",
+      "family_norms"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "cult",
+    "cand": [
+      "cult_001",
+      "cult_005"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "cult": "Vermeiden Sie universelle Annahmen über Familienrollen.",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_102",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Sie würden dafür stigmatisiert",
+      "Ich habe Angst davor, was die Community sagen wird",
+      "Darüber reden wir hier nicht"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Sie\\ würden\\ dafür\\ stigmatisiert|Ich\\ habe\\ Angst\\ davor,\\ was\\ die\\ Community\\ sagen\\ wird|Darüber\\ reden\\ wir\\ hier\\ nicht)"
+    },
+    "tags": [
+      "cult",
+      "stigma"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "cult",
+    "cand": [
+      "cult_001",
+      "cult_004"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "cult": "Bestätigen Sie die Last der sozialen Stigmatisierung, qualifizieren Sie nicht die Normen.",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_103",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Sagen Sie es in einfacherer Sprache",
+      "Es bedarf einer anderen Formulierung",
+      "Sei nicht so hart"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Sagen\\ Sie\\ es\\ in\\ einfacherer\\ Sprache|Es\\ bedarf\\ einer\\ anderen\\ Formulierung|Sei\\ nicht\\ so\\ hart)"
+    },
+    "tags": [
+      "cult",
+      "language"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "cult",
+    "cand": [
+      "cult_002",
+      "cult_004",
+      "cult_006",
+      "var_021"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "cult": "Bieten Sie eine alternative Formulierung an, erzwingen Sie nicht den ursprünglichen Ausdruck.",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "prefer_text": true
+    },
+    "id": "pt_tr_104",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Als Migrant ist das anders",
+      "Als Minderheit habe ich Angst davor",
+      "Aufgrund meiner Hintergrundkultur ist es schwierig"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Als\\ Migrant\\ ist\\ das\\ anders|Als\\ Minderheit\\ habe\\ ich\\ Angst\\ davor|Aufgrund\\ meiner\\ Hintergrundkultur\\ ist\\ es\\ schwierig)"
+    },
+    "tags": [
+      "cult",
+      "minority"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "cult",
+    "cand": [
+      "cult_003",
+      "cult_005"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "cult": "Gehen Sie nicht von homogenen Erfahrungen innerhalb von Minderheitengruppen aus.",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_105",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Aufgrund der Geschlechterrollen ist das stressig",
+      "In unserem Land sehen das Frauen anders als Männer",
+      "Mein Umfeld erwartet etwas von mir"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Aufgrund\\ der\\ Geschlechterrollen\\ ist\\ das\\ stressig|In\\ unserem\\ Land\\ sehen\\ das\\ Frauen\\ anders\\ als\\ Männer|Mein\\ Umfeld\\ erwartet\\ etwas\\ von\\ mir)"
+    },
+    "tags": [
+      "cult",
+      "gender_norms"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "cult",
+    "cand": [
+      "cult_001",
+      "cult_003"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "cult": "Verwenden Sie offene, nicht normative Fragen zu sozialen Rollen.",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_106",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

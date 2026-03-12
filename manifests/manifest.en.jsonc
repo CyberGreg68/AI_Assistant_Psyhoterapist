@@ -1,0 +1,287 @@
+{
+  "lang": "en",
+  "version": "1.1",
+  "generated_at": "2026-03-11T19:47:03Z",
+  "category_order": [
+    {
+      "prefix": "01",
+      "name": "crisis",
+      "default_priority": 1,
+      "description": "Immediate safety situations and human handoff (hard handoff).",
+      "filename": "phrases/01_cri_phrases.en.jsonc",
+      "typical_tags": [
+        "cri",
+        "saf",
+        "hand",
+        "imm"
+      ],
+      "derivation": "Crisis protocols draw on mental health practice and acute safety guidelines; the aim is rapid, clear instruction and timely human intervention.",
+      "clinical_sensitivity": "critical",
+      "requires_clinical_review": true,
+      "handoff_capable": true,
+      "review_owner": "clinical",
+      "review_sla_hours": 24
+    },
+    {
+      "prefix": "02",
+      "name": "boundary",
+      "default_priority": 1,
+      "description": "Role boundaries, limits of responsibility, confidentiality, and referral guidance.",
+      "filename": "phrases/02_bd_phrases.en.jsonc",
+      "typical_tags": [
+        "bd",
+        "conf",
+        "adv",
+        "ref"
+      ],
+      "derivation": "Grounded in ethical and legal guidance: what the system must not provide (medical or legal advice) and how it should refer to a professional.",
+      "clinical_sensitivity": "high",
+      "requires_clinical_review": true,
+      "handoff_capable": false,
+      "review_owner": "clinical",
+      "review_sla_hours": 48
+    },
+    {
+      "prefix": "03",
+      "name": "structure",
+      "default_priority": 1,
+      "description": "Session flow, consent, time checks, and process guidance.",
+      "filename": "phrases/03_str_phrases.en.jsonc",
+      "typical_tags": [
+        "ag",
+        "cons",
+        "time",
+        "proc"
+      ],
+      "derivation": "Drawn from structured therapy session practice: agenda-setting, consent, and time management support safe and effective work.",
+      "clinical_sensitivity": "medium",
+      "requires_clinical_review": false,
+      "handoff_capable": false,
+      "review_owner": "content",
+      "review_sla_hours": 72
+    },
+    {
+      "prefix": "04",
+      "name": "empathy",
+      "default_priority": 1,
+      "description": "Empathic reflection and validation.",
+      "filename": "phrases/04_emp_phrases.en.jsonc",
+      "typical_tags": [
+        "emp",
+        "val",
+        "grat"
+      ],
+      "derivation": "Based on client-centered therapeutic practice, such as Rogersian empathy: emotional validation can reduce distress and support cooperation.",
+      "clinical_sensitivity": "medium",
+      "requires_clinical_review": false,
+      "handoff_capable": false,
+      "review_owner": "content",
+      "review_sla_hours": 72
+    },
+    {
+      "prefix": "05",
+      "name": "open_questions",
+      "default_priority": 2,
+      "description": "Exploratory open questions to understand context and emotions.",
+      "filename": "phrases/05_oq_phrases.en.jsonc",
+      "typical_tags": [
+        "oq",
+        "inf",
+        "emo",
+        "plan"
+      ],
+      "derivation": "From exploratory interviewing techniques: open questions help gather detailed information and elicit the client's narrative.",
+      "clinical_sensitivity": "medium",
+      "requires_clinical_review": false,
+      "handoff_capable": false,
+      "review_owner": "content",
+      "review_sla_hours": 72
+    },
+    {
+      "prefix": "06",
+      "name": "closed_questions",
+      "default_priority": 2,
+      "description": "Closed factual questions and yes-or-no checks.",
+      "filename": "phrases/06_cq_phrases.en.jsonc",
+      "typical_tags": [
+        "cq",
+        "yn",
+        "inf",
+        "safety"
+      ],
+      "derivation": "For safety and administrative purposes: quick factual checks are needed for risk assessment and appointment coordination.",
+      "clinical_sensitivity": "high",
+      "requires_clinical_review": true,
+      "handoff_capable": false,
+      "review_owner": "clinical",
+      "review_sla_hours": 48
+    },
+    {
+      "prefix": "07",
+      "name": "variants",
+      "default_priority": 2,
+      "description": "Short, frequent variants for acknowledgment and quick replies (token-efficient).",
+      "filename": "phrases/07_var_phrases.en.jsonc",
+      "typical_tags": [
+        "var",
+        "short",
+        "prompt",
+        "grounding"
+      ],
+      "derivation": "This category serves runtime optimization: short fragments reduce token cost and speed up responses while preserving a natural conversational flow.",
+      "clinical_sensitivity": "low",
+      "requires_clinical_review": false,
+      "handoff_capable": false,
+      "review_owner": "content",
+      "review_sla_hours": 72
+    },
+    {
+      "prefix": "08",
+      "name": "cbt_mi_dbt",
+      "default_priority": 2,
+      "description": "Therapeutic tools and prompts (CBT, MI, DBT).",
+      "filename": "phrases/08_cbt_phrases.en.jsonc",
+      "typical_tags": [
+        "cbt",
+        "mi",
+        "dbt",
+        "goal"
+      ],
+      "derivation": "These categories reflect standard tools from psychotherapy approaches: structured questions, scaling, behavioral experiments, and distress tolerance skills.",
+      "clinical_sensitivity": "high",
+      "requires_clinical_review": true,
+      "handoff_capable": false,
+      "review_owner": "clinical",
+      "review_sla_hours": 48
+    },
+    {
+      "prefix": "09",
+      "name": "psychoeducation",
+      "default_priority": 3,
+      "description": "Brief psychoeducational tips and coping exercises.",
+      "filename": "phrases/09_edu_phrases.en.jsonc",
+      "typical_tags": [
+        "edu",
+        "coping",
+        "breathing"
+      ],
+      "derivation": "From psychoeducational practice: brief, evidence-informed tips suitable for use between sessions and at home.",
+      "clinical_sensitivity": "high",
+      "requires_clinical_review": true,
+      "handoff_capable": false,
+      "review_owner": "clinical",
+      "review_sla_hours": 48
+    },
+    {
+      "prefix": "10",
+      "name": "encouragement",
+      "default_priority": 2,
+      "description": "Encouraging, motivating language and support for small steps.",
+      "filename": "phrases/10_enc_phrases.en.jsonc",
+      "typical_tags": [
+        "enc",
+        "mot",
+        "small"
+      ],
+      "derivation": "From motivation and behavior-change principles: reinforcement and support for small goals can strengthen engagement.",
+      "clinical_sensitivity": "medium",
+      "requires_clinical_review": false,
+      "handoff_capable": false,
+      "review_owner": "content",
+      "review_sla_hours": 72
+    },
+    {
+      "prefix": "11",
+      "name": "closing",
+      "default_priority": 2,
+      "description": "Closing, summary, and next steps.",
+      "filename": "phrases/11_clo_phrases.en.jsonc",
+      "typical_tags": [
+        "clo",
+        "sum",
+        "next"
+      ],
+      "derivation": "From session-closing practice: summarizing and clarifying next steps improves continuity and follow-through.",
+      "clinical_sensitivity": "low",
+      "requires_clinical_review": false,
+      "handoff_capable": false,
+      "review_owner": "content",
+      "review_sla_hours": 72
+    },
+    {
+      "prefix": "12",
+      "name": "cultural",
+      "default_priority": 2,
+      "description": "Cultural sensitivity, localization notes, and alternative wording.",
+      "filename": "phrases/12_cult_phrases.en.jsonc",
+      "typical_tags": [
+        "cult",
+        "loc",
+        "sens",
+        "alt"
+      ],
+      "derivation": "From localization and cultural-sensitivity guidance: the goal is to avoid offensive or ambiguous phrasing and stay aware of local context.",
+      "clinical_sensitivity": "medium",
+      "requires_clinical_review": false,
+      "handoff_capable": false,
+      "review_owner": "content",
+      "review_sla_hours": 72
+    }
+  ],
+  "code_keys": {
+    "tone": {
+      "n": "neutral",
+      "w": "warm",
+      "f": "firm"
+    },
+    "length": {
+      "s": "short",
+      "m": "medium",
+      "l": "long"
+    },
+    "use": {
+      "c": "chat",
+      "t": "tts",
+      "s": "style_snippet"
+    },
+    "rec": {
+      "w": "warm",
+      "n": "neutral",
+      "b": "brief",
+      "f": "firm"
+    }
+  },
+  "selection_rules": {
+    "step_1": "If the crisis detector fires or any item with the 'cri' tag is activated, immediately prioritize the crisis category and start the hard handoff protocol.",
+    "step_2": "Filter categories by relevance to the current intent; when in doubt, prefer categories that appear earlier in the manifest.",
+    "step_3": "Within a category, prefer items whose tags best match the current context and desired tone (rec).",
+    "step_4": "If there is a tie, prefer shorter 'variants' items to reduce token cost.",
+    "step_5": "A per-item 'pri' value may override the category default priority, but only when it is explicitly set."
+  },
+  "review_policy": {
+    "required_metadata_version": "1.0",
+    "sensitive_categories": [
+      "crisis",
+      "boundary",
+      "closed_questions",
+      "cbt_mi_dbt",
+      "psychoeducation"
+    ],
+    "mandatory_fields_for_sensitive_changes": [
+      "review_status",
+      "reviewed_by_role",
+      "reviewed_at",
+      "safety_notes"
+    ],
+    "minimum_reviewer_role": "clinical",
+    "legacy_content_policy": "Legacy data/phrases content is mirror-only; locales and manifests are the primary source of truth."
+  },
+  "data_sources": {
+    "primary_manifest_dir": "manifests",
+    "primary_locale_dir": "locales",
+    "legacy_mirror_dir": "data/phrases",
+    "legacy_mode": "mirror_only"
+  },
+  "derivation_notes": "The categories were assembled from clinical practices (CBT, MI, DBT), crisis protocols, and localization guidance. The manifest is an implementation guide; final content should be reviewed by a clinical expert.",
+  "file_comment_template": "/* <filename> — <language>\\nSchema: id, pri, rec, use, tags, pp; pp[0] is canonical; code_keys live in the manifest */"
+}

@@ -1,0 +1,1 @@
+Reserve this folder for English locale-specific mappings such as tag normalization, alias tables, or lookup resources.

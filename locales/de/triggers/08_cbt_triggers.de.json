@@ -1,0 +1,602 @@
+[
+  {
+    "ex": [
+      "Ich fühle mich zum Trinken hingezogen",
+      "Ich möchte etwas Starkes anzünden",
+      "Ich würde wieder Drogen nehmen"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ fühle\\ mich\\ zum\\ Trinken\\ hingezogen|Ich\\ möchte\\ etwas\\ Starkes\\ anzünden|Ich\\ würde\\ wieder\\ Drogen\\ nehmen)"
+    },
+    "tags": [
+      "cbt",
+      "substance"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "cbt",
+    "cand": [
+      "cbt_002",
+      "cbt_010"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "id": "pt_tr_073",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich bin sehr wütend",
+      "Ich explodiere vor Wut",
+      "Ich kann meine Wut nicht ertragen"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ bin\\ sehr\\ wütend|Ich\\ explodiere\\ vor\\ Wut|Ich\\ kann\\ meine\\ Wut\\ nicht\\ ertragen)"
+    },
+    "tags": [
+      "cbt",
+      "anger"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "cbt",
+    "cand": [
+      "cbt_001",
+      "cbt_011"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "id": "pt_tr_074",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Der Drang ist groß",
+      "Ich verspüre einen Drang",
+      "Ich habe einen sehr starken Drang"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Der\\ Drang\\ ist\\ groß|Ich\\ verspüre\\ einen\\ Drang|Ich\\ habe\\ einen\\ sehr\\ starken\\ Drang)"
+    },
+    "tags": [
+      "cbt",
+      "urge"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "cbt",
+    "cand": [
+      "cbt_002",
+      "cbt_012"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "id": "pt_tr_075",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Geben Sie mir eine Bewältigungsidee",
+      "Was soll ich tun, um damit klarzukommen?",
+      "Sie brauchen jetzt ein Werkzeug"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Geben\\ Sie\\ mir\\ eine\\ Bewältigungsidee|Was\\ soll\\ ich\\ tun,\\ um\\ damit\\ klarzukommen\\?|Sie\\ brauchen\\ jetzt\\ ein\\ Werkzeug)"
+    },
+    "tags": [
+      "cbt",
+      "coping"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "cbt",
+    "cand": [
+      "cbt_002",
+      "cbt_014"
+    ],
+    "fb": "call_llm",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "id": "pt_tr_076",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Meine Gedanken drehen sich immer wieder",
+      "Ich habe stundenlang daran gekaut",
+      "Ich kann meine Gedanken nicht stoppen"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Meine\\ Gedanken\\ drehen\\ sich\\ immer\\ wieder|Ich\\ habe\\ stundenlang\\ daran\\ gekaut|Ich\\ kann\\ meine\\ Gedanken\\ nicht\\ stoppen)"
+    },
+    "tags": [
+      "cbt",
+      "rumination"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "cbt",
+    "cand": [
+      "cbt_001",
+      "cbt_015"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "id": "pt_tr_077",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich vermeide alles",
+      "Ich zögere und renne weg",
+      "Ich kann ihm nicht gegenübertreten"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ vermeide\\ alles|Ich\\ zögere\\ und\\ renne\\ weg|Ich\\ kann\\ ihm\\ nicht\\ gegenübertreten)"
+    },
+    "tags": [
+      "cbt",
+      "avoidance"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "cbt",
+    "cand": [
+      "cbt_005",
+      "cbt_016"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "id": "pt_tr_078",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich muss mich jetzt beruhigen",
+      "Stresstoleranz ist erforderlich",
+      "Geben Sie mir eine DBT-Idee"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ muss\\ mich\\ jetzt\\ beruhigen|Stresstoleranz\\ ist\\ erforderlich|Geben\\ Sie\\ mir\\ eine\\ DBT\\-Idee)"
+    },
+    "tags": [
+      "cbt",
+      "dbt"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "cbt",
+    "cand": [
+      "cbt_006",
+      "cbt_017"
+    ],
+    "fb": "call_llm",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "id": "pt_tr_079",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich kann nicht glauben, dass ich es schaffen kann",
+      "Ich komme oft runter",
+      "Ich habe mir die ganze Zeit am Kopf verletzt"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ kann\\ nicht\\ glauben,\\ dass\\ ich\\ es\\ schaffen\\ kann|Ich\\ komme\\ oft\\ runter|Ich\\ habe\\ mir\\ die\\ ganze\\ Zeit\\ am\\ Kopf\\ verletzt)"
+    },
+    "tags": [
+      "cbt",
+      "self_criticism"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "cbt",
+    "cand": [
+      "cbt_001",
+      "cbt_018"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "id": "pt_tr_080",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich suche nach Motivation zur Veränderung",
+      "Ich weiß nicht, warum ich mich ändern sollte",
+      "Hilf mir, mich zu bewegen"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ suche\\ nach\\ Motivation\\ zur\\ Veränderung|Ich\\ weiß\\ nicht,\\ warum\\ ich\\ mich\\ ändern\\ sollte|Hilf\\ mir,\\ mich\\ zu\\ bewegen)"
+    },
+    "tags": [
+      "cbt",
+      "motivation"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "cbt",
+    "cand": [
+      "cbt_003",
+      "cbt_004"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "id": "pt_tr_081",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich habe Angst vor einem Rückfall",
+      "Ich lande wieder am selben Ort",
+      "Ich habe Angst, dass ich es noch einmal vermasseln werde"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ habe\\ Angst\\ vor\\ einem\\ Rückfall|Ich\\ lande\\ wieder\\ am\\ selben\\ Ort|Ich\\ habe\\ Angst,\\ dass\\ ich\\ es\\ noch\\ einmal\\ vermasseln\\ werde)"
+    },
+    "tags": [
+      "cbt",
+      "relapse"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "cbt",
+    "cand": [
+      "cbt_007",
+      "cbt_019"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "id": "pt_tr_082",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Helfen Sie mit, es in ein Ziel herunterzubrechen",
+      "Sie benötigen einen kleinen Schrittplan",
+      "Was sollte das nächste realistische Ziel sein?"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Helfen\\ Sie\\ mit,\\ es\\ in\\ ein\\ Ziel\\ herunterzubrechen|Sie\\ benötigen\\ einen\\ kleinen\\ Schrittplan|Was\\ sollte\\ das\\ nächste\\ realistische\\ Ziel\\ sein\\?)"
+    },
+    "tags": [
+      "cbt",
+      "goal"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "cbt",
+    "cand": [
+      "cbt_008",
+      "cbt_020"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "id": "pt_tr_083",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich brauche etwas, um den Heißhunger zu stillen",
+      "Jetzt ist das Verlangen stark",
+      "Ich möchte den Drang unterdrücken"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ brauche\\ etwas,\\ um\\ den\\ Heißhunger\\ zu\\ stillen|Jetzt\\ ist\\ das\\ Verlangen\\ stark|Ich\\ möchte\\ den\\ Drang\\ unterdrücken)"
+    },
+    "tags": [
+      "cbt",
+      "craving"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "cbt",
+    "cand": [
+      "cbt_009",
+      "cbt_012"
+    ],
+    "fb": "call_llm",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "id": "pt_tr_084",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

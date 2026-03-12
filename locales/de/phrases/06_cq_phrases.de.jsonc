@@ -1,0 +1,1466 @@
+[
+  {
+    "id": "cq_001",
+    "pri": 2,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cq",
+      "yn"
+    ],
+    "pp": [
+      {
+        "txt": "Möchten Sie jetzt darüber sprechen?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wäre es gut, jetzt darüber zu reden?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Möchtest du jetzt darüber reden?",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Sach- und Sicherheitskontrollen.",
+      "evidence_level": "practice_based"
+    },
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cq_002",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cq",
+      "inf"
+    ],
+    "pp": [
+      {
+        "txt": "Hast du deswegen einen Arzt aufgesucht?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Haben Sie schon einmal medizinische Hilfe in Anspruch genommen?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Haben Sie hierzu bereits Rücksprache mit einem Spezialisten gehalten?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Sach- und Sicherheitskontrollen.",
+      "evidence_level": "practice_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cq_003",
+    "pri": 2,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cq",
+      "yn"
+    ],
+    "pp": [
+      {
+        "txt": "Gibt es jemanden in Ihrer Nähe, der Ihnen helfen kann?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Gibt es jemanden, der Sie gerade unterstützt?",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ist derzeit jemand verfügbar, der Ihnen helfen kann?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Sach- und Sicherheitskontrollen.",
+      "evidence_level": "practice_based"
+    },
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cq_004",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cq",
+      "safety"
+    ],
+    "pp": [
+      {
+        "txt": "Haben Sie das Gefühl, dass Sie jetzt in Gefahr sind?",
+        "t": "f",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Fühlen Sie sich jetzt in Gefahr?",
+        "t": "f",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Gibt es Umstände, die Sie gefährden?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Sach- und Sicherheitskontrollen.",
+      "evidence_level": "practice_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cq_005",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cq",
+      "inf"
+    ],
+    "pp": [
+      {
+        "txt": "Nehmen Sie derzeit Medikamente ein?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Nehmen Sie derzeit Medikamente gegen dieses Problem ein?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Nehmen Sie derzeit Medikamente ein?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Sach- und Sicherheitskontrollen.",
+      "evidence_level": "practice_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cq_006",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cq",
+      "yn"
+    ],
+    "pp": [
+      {
+        "txt": "Möchten Sie eine Erinnerung für das nächste Gespräch erhalten?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Möchten Sie, dass ich Sie das nächste Mal daran erinnere?",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Möchten Sie, dass wir eine Erinnerung einrichten?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Sach- und Sicherheitskontrollen.",
+      "evidence_level": "practice_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cq_007",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cq",
+      "inf"
+    ],
+    "pp": [
+      {
+        "txt": "Hatten Sie schon einmal ähnliche Symptome?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ist Ihnen das schon einmal passiert?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Haben Sie dieses Problem schon einmal erlebt?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Sach- und Sicherheitskontrollen.",
+      "evidence_level": "practice_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cq_008",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cq",
+      "yn"
+    ],
+    "pp": [
+      {
+        "txt": "Möchten Sie jetzt eine kurze Übung ausprobieren?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Sollen wir jetzt eine kurze Übung versuchen?",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Möchtest du die Übung jetzt mit mir ausprobieren?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Sach- und Sicherheitskontrollen.",
+      "evidence_level": "practice_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cq_009",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cq",
+      "inf"
+    ],
+    "pp": [
+      {
+        "txt": "Haben Sie Allergien?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Sind Sie gegen irgendetwas allergisch?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Kennen Sie eine Allergie, die es zu erwähnen gilt?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Sach- und Sicherheitskontrollen.",
+      "evidence_level": "practice_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cq_010",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cq",
+      "yn"
+    ],
+    "pp": [
+      {
+        "txt": "Haben Sie in letzter Zeit eine Veränderung in Ihrem Schlaf bemerkt?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Hat sich Ihr Schlafrhythmus in letzter Zeit verändert?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Haben Sie in letzter Zeit mehr oder weniger geschlafen?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Sach- und Sicherheitskontrollen.",
+      "evidence_level": "practice_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cq_011",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cq",
+      "yn"
+    ],
+    "pp": [
+      {
+        "txt": "Möchten Sie, dass ich das heutige Gespräch kurz zusammenfasse?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Möchten Sie, dass ich kurz zusammenfasse, was wir besprochen haben?",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Soll ich jetzt zusammenfassen?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Sach- und Sicherheitskontrollen.",
+      "evidence_level": "practice_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cq_012",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cq",
+      "inf"
+    ],
+    "pp": [
+      {
+        "txt": "Haben Sie gerade Schmerzen oder körperliche Beschwerden?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Spüren Sie jetzt Schmerzen oder Unwohlsein?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Verspüren Sie derzeit körperliche Symptome?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Sach- und Sicherheitskontrollen.",
+      "evidence_level": "practice_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cq_013",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cq",
+      "yn"
+    ],
+    "pp": [
+      {
+        "txt": "Möchten Sie jetzt eine Pause machen?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Lust auf eine kurze Auszeit?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Möchten Sie kurz eine Pause einlegen?",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Sach- und Sicherheitskontrollen.",
+      "evidence_level": "practice_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cq_014",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cq",
+      "inf"
+    ],
+    "pp": [
+      {
+        "txt": "Gibt es irgendetwas, das wir jetzt ansprechen müssen?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ist jetzt ein sofortiges Eingreifen notwendig?",
+        "t": "f",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Gibt es ein Problem, das dringend angegangen werden muss?",
+        "t": "f",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Sach- und Sicherheitskontrollen.",
+      "evidence_level": "practice_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cq_015",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cq",
+      "yn"
+    ],
+    "pp": [
+      {
+        "txt": "Ist es in Ordnung, wenn wir das Gespräch jetzt beenden?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Sollen wir die heutige Sitzung jetzt beenden?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Sind Sie damit einverstanden, jetzt fertig zu werden?",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Sach- und Sicherheitskontrollen.",
+      "evidence_level": "practice_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cq_016",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cq",
+      "inf"
+    ],
+    "pp": [
+      {
+        "txt": "Gibt es etwas, das ich vergessen habe zu fragen?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Habe ich etwas Wichtiges verpasst, das wir besprechen sollten?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Möchten Sie noch etwas hinzufügen, was ich nicht gefragt habe?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Sach- und Sicherheitskontrollen.",
+      "evidence_level": "practice_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cq_017",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cq",
+      "yn"
+    ],
+    "pp": [
+      {
+        "txt": "Möchten Sie einen anderen Ansatz ausprobieren?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Sind Sie bereit, eine andere Methode auszuprobieren?",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Möchten Sie eine andere Lösung ausprobieren?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Sach- und Sicherheitskontrollen.",
+      "evidence_level": "practice_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cq_018",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cq",
+      "inf"
+    ],
+    "pp": [
+      {
+        "txt": "Gibt es ein bestimmtes Datum, an dem Sie fortfahren könnten?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wann wäre das nächste Gespräch für Sie geeignet?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Können Sie mir sagen, welche Tage für Sie in Frage kommen?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Sach- und Sicherheitskontrollen.",
+      "evidence_level": "practice_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cq_019",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cq",
+      "yn"
+    ],
+    "pp": [
+      {
+        "txt": "Möchten Sie, dass ich Ihnen einige Ressourcen zu diesem Thema sende?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Möchten Sie, dass ich Lesematerial oder Materialien empfehle?",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Möchten Sie, dass ich einige nützliche Links teile?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Sach- und Sicherheitskontrollen.",
+      "evidence_level": "practice_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cq_020",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cq",
+      "followup"
+    ],
+    "pp": [
+      {
+        "txt": "Okay, kommen wir das nächste Mal darauf zurück?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ist es eine gute Idee, dies beim nächsten Treffen fortzusetzen?",
+        "t": "w",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Sollen wir das nächste Mal besprechen?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Sach- und Sicherheitskontrollen.",
+      "evidence_level": "practice_based"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

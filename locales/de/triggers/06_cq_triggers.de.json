@@ -1,0 +1,214 @@
+[
+  {
+    "ex": [
+      "Fragen Sie ihn direkt",
+      "Bitte eine Ja- oder Nein-Frage",
+      "Ich brauche eine kurze Frage"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Fragen\\ Sie\\ ihn\\ direkt|Bitte\\ eine\\ Ja\\-\\ oder\\ Nein\\-Frage|Ich\\ brauche\\ eine\\ kurze\\ Frage)"
+    },
+    "tags": [
+      "cq",
+      "direct"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "cq",
+    "cand": [
+      "cq_001",
+      "cq_002"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_057",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich habe es heute getrunken oder verwendet",
+      "Ich nehme jetzt Drogen",
+      "Ja, Sie fragen nicht nach der Droge"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ habe\\ es\\ heute\\ getrunken\\ oder\\ verwendet|Ich\\ nehme\\ jetzt\\ Drogen|Ja,\\ Sie\\ fragen\\ nicht\\ nach\\ der\\ Droge)"
+    },
+    "tags": [
+      "cq",
+      "substance"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "cq",
+    "cand": [
+      "cq_006",
+      "cq_010"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_058",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Frag mich, ob ich alleine bin",
+      "Überprüfen Sie kurz die Sicherheit",
+      "Sie brauchen nur eine Sicherheit, ja"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Frag\\ mich,\\ ob\\ ich\\ alleine\\ bin|Überprüfen\\ Sie\\ kurz\\ die\\ Sicherheit|Sie\\ brauchen\\ nur\\ eine\\ Sicherheit,\\ ja)"
+    },
+    "tags": [
+      "cq",
+      "safety"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "cq",
+    "cand": [
+      "cq_003",
+      "cq_004"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_059",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Fragen Sie, ob es heute zu Selbstverletzungen gekommen ist",
+      "Eine kurze Schadenskontrolle ist erforderlich",
+      "Ja, fragen Sie nicht nach der Gefahr"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Fragen\\ Sie,\\ ob\\ es\\ heute\\ zu\\ Selbstverletzungen\\ gekommen\\ ist|Eine\\ kurze\\ Schadenskontrolle\\ ist\\ erforderlich|Ja,\\ fragen\\ Sie\\ nicht\\ nach\\ der\\ Gefahr)"
+    },
+    "tags": [
+      "cq",
+      "risk_check"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "cq",
+    "cand": [
+      "cq_005",
+      "cq_011"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_060",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

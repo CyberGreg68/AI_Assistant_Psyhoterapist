@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/manifest_schema.json",
+  "title": "Language Manifest",
+  "type": "object",
+  "required": ["lang", "version", "category_order", "code_keys", "selection_rules"],
+  "properties": {
+    "lang": {"type": "string", "minLength": 2},
+    "version": {"type": "string"},
+    "generated_at": {"type": "string"},
+    "category_order": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["prefix", "name", "default_priority", "filename", "typical_tags"],
+        "properties": {
+          "prefix": {"type": "string", "pattern": "^[0-9]{2}$"},
+          "name": {"type": "string"},
+          "default_priority": {"type": "integer"},
+          "description": {"type": "string"},
+          "filename": {"type": "string", "pattern": "^(phrases/)?[0-9]{2}_.+\\.[a-z]{2}\\.jsonc$"},
+          "clinical_sensitivity": {"type": "string", "enum": ["low", "medium", "high", "critical"]},
+          "requires_clinical_review": {"type": "boolean"},
+          "handoff_capable": {"type": "boolean"},
+          "review_owner": {"type": "string", "enum": ["content", "clinical", "localization"]},
+          "review_sla_hours": {"type": "integer", "minimum": 1},
+          "typical_tags": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "derivation": {"type": "string"}
+        },
+        "additionalProperties": true
+      }
+    },
+    "code_keys": {"type": "object"},
+    "selection_rules": {"type": "object"},
+    "review_policy": {
+      "type": "object",
+      "required": [
+        "required_metadata_version",
+        "sensitive_categories",
+        "mandatory_fields_for_sensitive_changes",
+        "minimum_reviewer_role",
+        "legacy_content_policy"
+      ],
+      "properties": {
+        "required_metadata_version": {"type": "string"},
+        "sensitive_categories": {"type": "array", "items": {"type": "string"}},
+        "mandatory_fields_for_sensitive_changes": {"type": "array", "items": {"type": "string"}},
+        "minimum_reviewer_role": {"type": "string", "enum": ["content", "clinical", "lead_clinical"]},
+        "legacy_content_policy": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "data_sources": {
+      "type": "object",
+      "required": ["primary_manifest_dir", "primary_locale_dir", "legacy_mirror_dir", "legacy_mode"],
+      "properties": {
+        "primary_manifest_dir": {"type": "string"},
+        "primary_locale_dir": {"type": "string"},
+        "legacy_mirror_dir": {"type": "string"},
+        "legacy_mode": {"type": "string", "enum": ["mirror_only", "disabled"]}
+      },
+      "additionalProperties": true
+    },
+    "derivation_notes": {"type": "string"},
+    "file_comment_template": {"type": "string"}
+  },
+  "additionalProperties": true
+}

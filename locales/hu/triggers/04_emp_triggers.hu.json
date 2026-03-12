@@ -1,0 +1,650 @@
+[
+  {
+    "ex": [
+      "Nagyon egyedül érzem magam",
+      "Senki sem ért meg",
+      "Teljesen magamra maradtam"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(nagyon egyedül érzem magam|senki sem ért meg|magamra maradtam)\\\\b"
+    },
+    "tags": [
+      "emp",
+      "isolation"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "emp",
+    "cand": [
+      "emp_001",
+      "emp_007"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_033",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Hiányzik aki meghalt",
+      "Nem tudom feldolgozni a veszteséget",
+      "Annyira fáj a gyász"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(hiányzik aki meghalt|nem tudom feldolgozni a veszteséget|fáj a gyász)\\\\b"
+    },
+    "tags": [
+      "emp",
+      "grief"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "emp",
+    "cand": [
+      "emp_004",
+      "emp_012"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_034",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Össze vagyok zavarodva",
+      "Nem értem mi történik bennem",
+      "Kavarognak a fejemben a dolgok"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(össze vagyok zavarodva|nem értem mi történik bennem|kavarognak a fejemben a dolgok)\\\\b"
+    },
+    "tags": [
+      "emp",
+      "confusion"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "emp",
+    "cand": [
+      "emp_002",
+      "emp_009"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_035",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Most sírok",
+      "Nem tudom abbahagyni a sírást",
+      "Elsírtam magam"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(most sírok|nem tudom abbahagyni a sírást|elsírtam magam)\\\\b"
+    },
+    "tags": [
+      "emp",
+      "crying"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "emp",
+    "cand": [
+      "emp_003",
+      "emp_018"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_036",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Annyira szégyellem magam",
+      "Szégyenkezem emiatt",
+      "Undorodom magamtól"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(szégyellem magam|szégyenkezem emiatt|undorodom magamtól)\\\\b"
+    },
+    "tags": [
+      "emp",
+      "shame"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "emp",
+    "cand": [
+      "emp_010",
+      "emp_014"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_037",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Semmit sem érzek",
+      "Teljesen üres vagyok",
+      "Mintha kikapcsoltam volna"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(semmit sem érzek|teljesen üres vagyok|mintha kikapcsoltam volna)\\\\b"
+    },
+    "tags": [
+      "emp",
+      "numb"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "emp",
+    "cand": [
+      "emp_011",
+      "emp_020"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_038",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Nagyon félek most",
+      "Rettenetesen ijedt vagyok",
+      "Pánik közeli vagyok"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(nagyon félek most|rettenetesen ijedt vagyok|pánik közeli vagyok)\\\\b"
+    },
+    "tags": [
+      "emp",
+      "fear"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "emp",
+    "cand": [
+      "emp_005",
+      "emp_022"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_039",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Állandóan bűntudatom van",
+      "Minden miatt hibáztatom magam",
+      "Én rontottam el mindent"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(állandóan bűntudatom van|hibáztatom magam|én rontottam el mindent)\\\\b"
+    },
+    "tags": [
+      "emp",
+      "guilt"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "emp",
+    "cand": [
+      "emp_006",
+      "emp_023"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_040",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Kimerültem teljesen",
+      "Nincs bennem semmi energia",
+      "Már túl sok ez nekem"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(kimerültem teljesen|nincs bennem semmi energia|túl sok ez nekem)\\\\b"
+    },
+    "tags": [
+      "emp",
+      "exhaustion"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "emp",
+    "cand": [
+      "emp_008",
+      "emp_024"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_041",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Elárultak",
+      "Csalódtam bennük",
+      "Nagyon megbántottak"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(elárultak|csalódtam bennük|nagyon megbántottak)\\\\b"
+    },
+    "tags": [
+      "emp",
+      "betrayal"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "emp",
+    "cand": [
+      "emp_013",
+      "emp_025"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_042",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Sokat mondtam most ki",
+      "Nehéz erről beszélni",
+      "Soha nem mondtam ezt el senkinek"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(sokat mondtam most ki|nehéz erről beszélni|soha nem mondtam ezt el senkinek)\\\\b"
+    },
+    "tags": [
+      "emp",
+      "disclosure"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "emp",
+    "cand": [
+      "emp_015",
+      "emp_026"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_043",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Mindentől túlterhelt vagyok",
+      "Nem bírom ezt a nyomást",
+      "Összenyom a sok teher"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(túlterhelt vagyok|nem bírom ezt a nyomást|összenyom a sok teher)\\\\b"
+    },
+    "tags": [
+      "emp",
+      "overwhelm"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "emp",
+    "cand": [
+      "emp_016",
+      "emp_027"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_044",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

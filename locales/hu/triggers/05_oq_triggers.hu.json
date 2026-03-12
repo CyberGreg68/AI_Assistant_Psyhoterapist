@@ -1,0 +1,648 @@
+[
+  {
+    "ex": [
+      "A munkahelyem kikészít",
+      "A főnököm miatt stresszelek",
+      "Nem bírom a melós nyomást"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(munkahelyem kikészít|főnököm miatt stresszelek|melós nyomást)\\\\b"
+    },
+    "tags": [
+      "oq",
+      "work"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_001",
+      "oq_003"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_045",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Kiégtem a munkában",
+      "Már semmi erőm a melóhoz",
+      "Utálok bemenni dolgozni"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(kiégtem a munkában|semmi erőm a melóhoz|utálok bemenni dolgozni)\\\\b"
+    },
+    "tags": [
+      "oq",
+      "burnout"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_006",
+      "oq_008"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_046",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Folyton veszekszünk a párommal",
+      "Romlik a kapcsolatom",
+      "Nem értjük egymást otthon"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(veszekszünk a párommal|romlik a kapcsolatom|nem értjük egymást otthon)\\\\b"
+    },
+    "tags": [
+      "oq",
+      "relationship"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_002",
+      "oq_024"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_047",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Szakítás után vagyok",
+      "Elhagytak és szétestem",
+      "A kapcsolat vége után nem találom magam"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(szakítás után vagyok|elhagytak és szétestem|kapcsolat vége után)\\\\b"
+    },
+    "tags": [
+      "oq",
+      "breakup"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "oq",
+    "cand": [
+      "oq_002",
+      "oq_007"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_048",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "A gyerekem miatt nagyon feszült vagyok",
+      "Nem tudom jól kezelni a gyerekemet",
+      "Kimerít a szülőség"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(gyerekem miatt nagyon feszült vagyok|nem tudom jól kezelni a gyerekemet|kimerít a szülőség)\\\\b"
+    },
+    "tags": [
+      "oq",
+      "parenting"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_005",
+      "oq_009"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_049",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Családi konfliktus van",
+      "Otthon állandó a feszültség",
+      "A rokonaimmal nem bírok"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(családi konfliktus van|otthon állandó a feszültség|rokonaimmal nem bírok)\\\\b"
+    },
+    "tags": [
+      "oq",
+      "family"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_001",
+      "oq_006"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_050",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Pénz miatt szorongok",
+      "Anyagi gondok nyomasztanak",
+      "Nem tudom hogy jövök ki a hónapban"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(pénz miatt szorongok|anyagi gondok nyomasztanak|hogy jövök ki a hónapban)\\\\b"
+    },
+    "tags": [
+      "oq",
+      "finance"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_003",
+      "oq_008"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_051",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "A tanulás teljesen szétszed",
+      "Vizsgák miatt feszült vagyok",
+      "Nem bírom az iskolai nyomást"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(tanulás teljesen szétszed|vizsgák miatt feszült vagyok|iskolai nyomást)\\\\b"
+    },
+    "tags": [
+      "oq",
+      "school"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_004",
+      "oq_006"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen"
+    ],
+    "lit": "medium",
+    "reg": "youth",
+    "persona": [
+      "student"
+    ],
+    "id": "pt_tr_052",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Nem tudom mit akarok",
+      "Elveszettnek érzem magam",
+      "Semmiben sem vagyok biztos"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(nem tudom mit akarok|elveszettnek érzem magam|semmiben sem vagyok biztos)\\\\b"
+    },
+    "tags": [
+      "oq",
+      "direction"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_005",
+      "oq_011"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_053",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Sokat aggódom az egészségem miatt",
+      "Betegségtől félek",
+      "Folyton tüneteket figyelek"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(aggódom az egészségem miatt|betegségtől félek|tüneteket figyelek)\\\\b"
+    },
+    "tags": [
+      "oq",
+      "health_anxiety"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "oq",
+    "cand": [
+      "oq_004",
+      "oq_006"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_054",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Magányos vagyok a hétköznapokban",
+      "Nincs kivel beszélnem",
+      "Kevés kapcsolatom maradt"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(magányos vagyok a hétköznapokban|nincs kivel beszélnem|kevés kapcsolatom maradt)\\\\b"
+    },
+    "tags": [
+      "oq",
+      "loneliness"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_009",
+      "oq_022"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_055",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Nem tudom mi segítene most",
+      "Ötletem sincs mit tegyek",
+      "Elakadtam teljesen"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(nem tudom mi segítene most|ötletem sincs mit tegyek|elakadtam teljesen)\\\\b"
+    },
+    "tags": [
+      "oq",
+      "stuck"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "oq",
+    "cand": [
+      "oq_005",
+      "oq_008"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_056",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

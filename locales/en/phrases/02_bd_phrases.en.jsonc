@@ -1,0 +1,737 @@
+[
+  {
+    "id": "bd_001",
+    "pri": 1,
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "conf"
+    ],
+    "pp": [
+      {
+        "txt": "It is important for you to know that what we discuss here is confidential, unless there is danger.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "The conversation is confidential; I only have to notify others in case of danger — would you like to know more about this?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Everything you share will remain confidential, except for security exceptions; I am happy to talk about this in more detail.",
+        "t": "n",
+        "l": "l",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved for boundary, confidentiality, and referral framing.",
+      "evidence_level": "guideline_based"
+    },
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "bd_002",
+    "pri": 1,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "adv"
+    ],
+    "pp": [
+      {
+        "txt": "I cannot give medical or pharmaceutical advice; if something like this is needed, I will help direct you to a specialist.",
+        "t": "f",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I cannot replace a specialist in medical matters; if you want, I can help you find the right source.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I cannot give you a personalized medication recommendation; if necessary, I recommend visiting a specialist.",
+        "t": "f",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved for boundary, confidentiality, and referral framing.",
+      "evidence_level": "guideline_based"
+    },
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "bd_003",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "sched"
+    ],
+    "pp": [
+      {
+        "txt": "If you want to continue, we can arrange a new date; would you like to book an appointment now?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Would you like to make an appointment for the next conversation now, or will we come back to it later?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Shall we discuss it now, when will we meet next, or should we arrange it later?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved for boundary, confidentiality, and referral framing.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "bd_004",
+    "pri": 1,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "ref"
+    ],
+    "pp": [
+      {
+        "txt": "If you feel you need professional help, I can help recommend available resources.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "If necessary, I can recommend a specialist or service; do you want me to find opportunities for you?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "If you want, I can give you some options where you can turn to for further professional support.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved for boundary, confidentiality, and referral framing.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "bd_005",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "conf"
+    ],
+    "pp": [
+      {
+        "txt": "I may need to share certain information if I see a serious threat — would you like to be notified?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "If I perceive danger, I may have a duty to notify others; let's talk about how this happens in practice.",
+        "t": "w",
+        "l": "l",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "It's important to know that security is a priority, and in some cases information must be shared for protection.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved for boundary, confidentiality, and referral framing.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "bd_006",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "adv"
+    ],
+    "pp": [
+      {
+        "txt": "I don't make decisions for you; I help with information and support, but the final decision is yours.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "My role is to support and inform; decisions and responsibility always remain in your hands.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I help you map out opportunities, but I do not replace your personal decisions or professional advice.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved for boundary, confidentiality, and referral framing.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "bd_007",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "conf"
+    ],
+    "pp": [
+      {
+        "txt": "Notes recorded during the conversation are for internal use; would you like me to brief you on this?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I can make a short note of the important points; do you want me to share it with you at the end?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "The purpose of the notes is to support the process; if it's uncomfortable, let us know and we'll change the recording.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved for boundary, confidentiality, and referral framing.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "bd_008",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "adv"
+    ],
+    "pp": [
+      {
+        "txt": "I cannot give legal advice; if a legal question arises, I will help you find a source or refer you to a specialist.",
+        "t": "f",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I cannot replace a lawyer in legal matters; if necessary, I will help you find a contact.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "If you need legal advice, I recommend that you consult an appropriate professional; I'll help you move on.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved for boundary, confidentiality, and referral framing.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "bd_009",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "ref"
+    ],
+    "pp": [
+      {
+        "txt": "If you feel acute danger, call the local emergency service immediately; would you like me to tell you their number?",
+        "t": "f",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "If you are in danger, call the local emergency services immediately; do you need such information now?",
+        "t": "f",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Immediate intervention is required in case of danger; if you want, I can help you review the steps.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved for boundary, confidentiality, and referral framing.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "bd_010",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "conf"
+    ],
+    "pp": [
+      {
+        "txt": "If you feel uncomfortable with any question, let us know and we'll skip that part.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Feel free to let me know if you don't want to talk about something; I adapt to your limits.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "If a question is too personal, say so and I won't continue that topic.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved for boundary, confidentiality, and referral framing.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

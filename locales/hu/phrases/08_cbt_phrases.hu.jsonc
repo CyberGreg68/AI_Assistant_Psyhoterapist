@@ -1,0 +1,1473 @@
+[
+  {
+    "id": "cbt_001",
+    "pri": 2,
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cbt",
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Milyen gondolatok jártak a fejedben, amikor erősen reagáltál?",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Mit gondoltál pontosan abban a pillanatban, amikor erős érzelem tört rád?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Kérlek, írd le röviden, milyen gondolatok futottak át rajtad akkor.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved as structured therapeutic prompts, not diagnosis or direct treatment advice.",
+      "evidence_level": "evidence_informed"
+    },
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_002",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cbt",
+      "coping"
+    ],
+    "pp": [
+      {
+        "txt": "Mi szokott segíteni neked, amikor hasonló gondolatok felbukkannak?",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Van valami, amit eddig kipróbáltál és működött, amikor ezek a gondolatok jöttek?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Milyen módszerek segítettek korábban megnyugodni ilyen helyzetben?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved as structured therapeutic prompts, not diagnosis or direct treatment advice.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_003",
+    "pri": 2,
+    "reg": "youth",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "mi",
+      "change"
+    ],
+    "pp": [
+      {
+        "txt": "Mennyire fontos számodra most a változás 0‑tól 10‑ig?",
+        "t": "n",
+        "l": "s",
+        "reg": "youth",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Ha 0 a 'nem fontos' és 10 a 'nagyon fontos', hová tennéd a változás igényét?",
+        "t": "w",
+        "l": "m",
+        "reg": "youth",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Skálázzuk: mennyire szeretnél változtatni ezen a területen most, 0–10 között?",
+        "t": "n",
+        "l": "m",
+        "reg": "youth",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved as structured therapeutic prompts, not diagnosis or direct treatment advice.",
+      "evidence_level": "evidence_informed"
+    },
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_004",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "mi",
+      "change"
+    ],
+    "pp": [
+      {
+        "txt": "Mi az, ami miatt most magasabbra tennéd a skálán a változás fontosságát?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Mi az, ami miatt most nem 0‑on van a skála, hanem például 6 vagy 7?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Mit gondolsz, mi motivál téged leginkább a változásra most?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved as structured therapeutic prompts, not diagnosis or direct treatment advice.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_005",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cbt",
+      "goal"
+    ],
+    "pp": [
+      {
+        "txt": "Mi lenne egy kis, konkrét lépés, amit a következő héten megpróbálnál?",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Gondolj egy egyszerű, mérhető célt a következő hétre — mi lehetne az?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Milyen apró lépést vállalsz most, amit reálisan meg tudsz tenni a következő napokban?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved as structured therapeutic prompts, not diagnosis or direct treatment advice.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_006",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cbt",
+      "coping"
+    ],
+    "pp": [
+      {
+        "txt": "Próbáljunk meg egy viselkedéses kísérletet: mi történne, ha ma megtennéd ezt az apró lépést?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Mit gondolsz, mi történne, ha kipróbálnád ezt a kis változtatást a következő napokban?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Kipróbálunk egy kísérletet: te megteszed a kis lépést, és megnézzük az eredményt — vállalod?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved as structured therapeutic prompts, not diagnosis or direct treatment advice.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_007",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "dbt",
+      "dist"
+    ],
+    "pp": [
+      {
+        "txt": "Ha nagyon feszültté válsz, van egy rövid distress tolerance technikád?",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Mit szoktál csinálni, hogy rövid távon elviselhetőbbé tedd a feszültséget?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Van egy gyors módszered, ami segít átvészelni a legintenzívebb pillanatokat?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved as structured therapeutic prompts, not diagnosis or direct treatment advice.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_008",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "dbt",
+      "coping"
+    ],
+    "pp": [
+      {
+        "txt": "Próbáljunk meg egy 1–2 perces grounding gyakorlatot együtt most.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Szeretnél most egy rövid grounding gyakorlatot, ami segít stabilizálni a tested és az elméd?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Kipróbálunk egy gyors 5‑4‑3‑2‑1 gyakorlatot, hogy visszahozzuk a jelenbe?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved as structured therapeutic prompts, not diagnosis or direct treatment advice.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_009",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "mi",
+      "change"
+    ],
+    "pp": [
+      {
+        "txt": "Milyen előnyei lennének számodra annak, ha változtatnál ezen a területen?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Mi lenne jobb az életedben, ha sikerülne változtatni ezen a dolgon?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Sorolj fel egy‑két dolgot, ami javulna, ha változtatnál — mi az első, ami eszedbe jut?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved as structured therapeutic prompts, not diagnosis or direct treatment advice.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_010",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cbt",
+      "cognitive"
+    ],
+    "pp": [
+      {
+        "txt": "Milyen bizonyítékok támasztják alá azt a gondolatot?",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Milyen tények szólnak amellett, hogy ez a gondolat igaz?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Vizsgáljuk meg: mi szól mellette és mi ellene ennek a gondolatnak?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved as structured therapeutic prompts, not diagnosis or direct treatment advice.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_011",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cbt",
+      "cognitive"
+    ],
+    "pp": [
+      {
+        "txt": "Van alternatív, kevésbé káros értelmezés, amit kipróbálhatnánk erre a helyzetre?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Mi lenne egy reálisabb vagy segítőbb gondolat, amit helyette mondhatnál magadnak?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Próbáljunk meg egy másik értelmezést: mi lehetne egy kevésbé végleges magyarázat erre?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved as structured therapeutic prompts, not diagnosis or direct treatment advice.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_012",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "dbt",
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Érthető, hogy így érzel; ez egy nehéz helyzet volt számodra.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Teljesen jogos, hogy ez így hatott rád; nem csoda, hogy így reagáltál.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Látható, hogy ez sokat jelent neked; ez egy nehéz élmény volt.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved as structured therapeutic prompts, not diagnosis or direct treatment advice.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_013",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "mi",
+      "goal"
+    ],
+    "pp": [
+      {
+        "txt": "Mi lenne az első jele annak, hogy a változás elkezdődött?",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Hogyan tudnád felismerni, hogy a kis lépésed hatott?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Milyen konkrét jelet várnál, ami azt mutatja, hogy haladsz előre?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved as structured therapeutic prompts, not diagnosis or direct treatment advice.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_014",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cbt",
+      "behavior"
+    ],
+    "pp": [
+      {
+        "txt": "Milyen akadályok merülhetnek fel, és hogyan készülnél fel rájuk?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Gondold végig: mi állhat a siker útjában, és mit tehetsz előre ezek ellen?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Milyen nehézségekre számítasz, és milyen tervet készítesz rájuk?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved as structured therapeutic prompts, not diagnosis or direct treatment advice.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_015",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "dbt",
+      "dist"
+    ],
+    "pp": [
+      {
+        "txt": "Próbálj meg egy 'urge surfing' technikát: figyeld meg az impulzust, ahogy jön és elmúlik.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Ha erős késztetésed van, figyeld meg, hogyan változik az intenzitása néhány perc alatt — ez segíthet átvészelni.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Képzeld el, hogy az impulzus egy hullám: figyeld, ahogy feljön, tetőzik és lecseng — maradj vele anélkül, hogy cselekednél.",
+        "t": "n",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved as structured therapeutic prompts, not diagnosis or direct treatment advice.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_016",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cbt",
+      "cognitive"
+    ],
+    "pp": [
+      {
+        "txt": "Milyen bizonyítékok vannak arra, hogy a félelmed túlzó vagy torz?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Vizsgáljuk meg együtt, mennyi valós alapja van ennek a félelemnek.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Mi az, ami alátámasztja és mi az, ami cáfolja ezt a félelmet?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved as structured therapeutic prompts, not diagnosis or direct treatment advice.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_017",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "mi",
+      "change"
+    ],
+    "pp": [
+      {
+        "txt": "Milyen értékek vezérelnek téged, amelyek a változás mögött állhatnak?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Mi az, ami igazán fontos neked, és hogyan kapcsolódik ez a változási szándékodhoz?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Gondold át: mely értékeid támogatnák leginkább a változást, amit szeretnél?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved as structured therapeutic prompts, not diagnosis or direct treatment advice.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_018",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cbt",
+      "goal"
+    ],
+    "pp": [
+      {
+        "txt": "Állítsunk fel egy SMART célt: konkrét, mérhető, elérhető, releváns és időhöz kötött — mi legyen az első?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Gondoljunk egy SMART célra a következő hétre; mi az, amit pontosan meg tudsz tenni?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Mi egy kis, konkrét cél, amit a következő héten mérni tudunk és visszajelzést adhatunk róla?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved as structured therapeutic prompts, not diagnosis or direct treatment advice.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_019",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "dbt",
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Érthető, hogy aggódsz emiatt; ez egy nehéz döntés lehet számodra.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Teljesen jogos, hogy bizonytalan vagy; sokan így éreznének a helyedben.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Látható, hogy ez fontos kérdés számodra, és nehéz lehet a döntés — ez rendben van.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved as structured therapeutic prompts, not diagnosis or direct treatment advice.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_020",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cbt",
+      "behavior"
+    ],
+    "pp": [
+      {
+        "txt": "Később visszatérünk erre: jegyezd fel, mi történt és hogyan reagáltál, hogy együtt elemezhessük.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Kérlek, jegyezd fel a helyzetet és a reakcióidat; a következő alkalommal közösen átbeszéljük és tanulunk belőle.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Írd le röviden, mikor és hogyan történt, és mit tettél — ez segít a következő lépés megtervezésében.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved as structured therapeutic prompts, not diagnosis or direct treatment advice.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

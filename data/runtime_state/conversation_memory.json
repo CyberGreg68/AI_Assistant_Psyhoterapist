@@ -1,0 +1,92 @@
+{
+  "subjects": {
+    "conversation:admin-api": {
+      "identity": {
+        "memory_key": "conversation:admin-api",
+        "identity_mode": "conversation_only",
+        "source": "conversation_id",
+        "persistence_enabled": false,
+        "resolved_patient_id": null,
+        "verified_patient": false,
+        "browser_patient_key": null
+      },
+      "turns": [
+        {
+          "role": "user",
+          "text": "",
+          "item_id": null,
+          "category": null,
+          "intent": "support",
+          "trigger_id": null,
+          "tags": [],
+          "risk_flags": [],
+          "knowledge_ids": [],
+          "response_strategy": null,
+          "timestamp": 1773344852.2223296
+        },
+        {
+          "role": "assistant",
+          "text": "",
+          "item_id": "edu_009",
+          "category": "psychoeducation",
+          "intent": "support",
+          "trigger_id": null,
+          "tags": [],
+          "risk_flags": [],
+          "knowledge_ids": [
+            "kb_hu_004",
+            "kb_hu_005",
+            "kb_hu_007",
+            "kb_hu_001"
+          ],
+          "response_strategy": "local_recent_rotation",
+          "timestamp": 1773344852.22333
+        }
+      ]
+    },
+    "conversation:local-dev": {
+      "identity": {
+        "memory_key": "conversation:local-dev",
+        "identity_mode": "conversation_only",
+        "source": "conversation_id",
+        "persistence_enabled": false,
+        "resolved_patient_id": null,
+        "verified_patient": false,
+        "browser_patient_key": null
+      },
+      "turns": [
+        {
+          "role": "user",
+          "text": "",
+          "item_id": null,
+          "category": null,
+          "intent": "guidance",
+          "trigger_id": null,
+          "tags": [],
+          "risk_flags": [],
+          "knowledge_ids": [],
+          "response_strategy": null,
+          "timestamp": 1773345193.9946828
+        },
+        {
+          "role": "assistant",
+          "text": "",
+          "item_id": "edu_001",
+          "category": "psychoeducation",
+          "intent": "guidance",
+          "trigger_id": null,
+          "tags": [],
+          "risk_flags": [],
+          "knowledge_ids": [
+            "kb_hu_004",
+            "kb_hu_005",
+            "kb_hu_007",
+            "kb_hu_001"
+          ],
+          "response_strategy": "local_recent_rotation",
+          "timestamp": 1773345193.9946828
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,737 @@
+[
+  {
+    "id": "bd_001",
+    "pri": 1,
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "conf"
+    ],
+    "pp": [
+      {
+        "txt": "Fontos, hogy tudd: amit itt megbeszélünk, bizalmas, kivéve ha veszély áll fenn.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "A beszélgetés bizalmas; csak veszély esetén kell értesítenem másokat — szeretnél erről többet tudni?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Minden, amit megosztasz, bizalmas marad, kivéve a biztonsági kivételeket; erről szívesen beszélek részletesebben.",
+        "t": "n",
+        "l": "l",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved for boundary, confidentiality, and referral framing.",
+      "evidence_level": "guideline_based"
+    },
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "bd_002",
+    "pri": 1,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "adv"
+    ],
+    "pp": [
+      {
+        "txt": "Nem adhatok orvosi vagy gyógyszeres tanácsot; ha ilyesmi kell, segítek szakemberhez irányítani.",
+        "t": "f",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Orvosi kérdésekben nem helyettesíthetem a szakembert; ha szeretnéd, segítek megtalálni a megfelelő forrást.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Nem adhatok személyre szabott gyógyszeres javaslatot; ha szükséges, javaslom a szakember felkeresését.",
+        "t": "f",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved for boundary, confidentiality, and referral framing.",
+      "evidence_level": "guideline_based"
+    },
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "bd_003",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "sched"
+    ],
+    "pp": [
+      {
+        "txt": "Ha szeretnél folytatást, egyeztethetünk új időpontot; most szeretnél időpontot foglalni?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Szeretnél most időpontot egyeztetni a következő beszélgetésre, vagy később visszatérünk rá?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Megbeszéljük most, mikor találkozunk legközelebb, vagy inkább később egyeztessünk?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved for boundary, confidentiality, and referral framing.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "bd_004",
+    "pri": 1,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "ref"
+    ],
+    "pp": [
+      {
+        "txt": "Ha úgy érzed, szakemberi segítségre van szükséged, segíthetek ajánlani elérhető forrásokat.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Szükség esetén tudok javasolni szakembert vagy szolgáltatást; szeretnéd, hogy keressek neked lehetőségeket?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ha szeretnéd, adhatok néhány lehetőséget, hova fordulhatsz további szakmai támogatásért.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved for boundary, confidentiality, and referral framing.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "bd_005",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "conf"
+    ],
+    "pp": [
+      {
+        "txt": "Előfordulhat, hogy bizonyos információkat meg kell osztanom, ha súlyos veszélyt látok — erről szeretnél tájékoztatást?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ha veszélyt észlelek, kötelességem lehet értesíteni másokat; beszéljünk róla, hogyan történik ez a gyakorlatban.",
+        "t": "w",
+        "l": "l",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Fontos, hogy tudd: a biztonság elsődleges, és bizonyos esetekben meg kell osztani információkat a védelem érdekében.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved for boundary, confidentiality, and referral framing.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "bd_006",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "adv"
+    ],
+    "pp": [
+      {
+        "txt": "Nem vállalok helyetted döntéseket; segítek információval és támogatással, de a végső döntés a tiéd.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "A szerepem támogatni és informálni; a döntések és a felelősség mindig a te kezedben maradnak.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Segítek lehetőségeket feltérképezni, de nem helyettesítem a személyes döntéseidet vagy a szakmai tanácsot.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved for boundary, confidentiality, and referral framing.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "bd_007",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "conf"
+    ],
+    "pp": [
+      {
+        "txt": "A beszélgetés során rögzített jegyzetek belső használatra készülnek; szeretnéd, hogy erről röviden tájékoztassalak?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Készíthetek rövid jegyzetet a fontos pontokról; szeretnéd, hogy megosszam veled a végén?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "A jegyzetek célja a folyamat támogatása; ha kényelmetlen, jelezd, és módosítjuk a rögzítést.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved for boundary, confidentiality, and referral framing.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "bd_008",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "adv"
+    ],
+    "pp": [
+      {
+        "txt": "Nem adhatok jogi tanácsot; ha jogi kérdés merül fel, segítek forrást találni vagy szakemberhez irányítani.",
+        "t": "f",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Jogi ügyekben nem helyettesíthetem az ügyvédet; ha szükséges, segítek kapcsolatot találni.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ha jogi tanács kell, javaslom, hogy fordulj megfelelő szakemberhez; segítek a továbblépésben.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved for boundary, confidentiality, and referral framing.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "bd_009",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "ref"
+    ],
+    "pp": [
+      {
+        "txt": "Ha akut veszélyt érzel, azonnal hívd a helyi segélyszolgálatot; szeretnéd, hogy elmondjam a számukat?",
+        "t": "f",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ha veszélyben vagy, azonnal keresd a helyi segélyhívót; szükséged van most ilyen információra?",
+        "t": "f",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Veszély esetén azonnali beavatkozás szükséges; ha szeretnéd, segítek a lépések áttekintésében.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved for boundary, confidentiality, and referral framing.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "bd_010",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "conf"
+    ],
+    "pp": [
+      {
+        "txt": "Ha kényelmetlenül érzed magad bármelyik kérdésnél, jelezd, és átugorjuk azt a részt.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Nyugodtan jelezd, ha valamiről nem szeretnél beszélni; alkalmazkodom a határaidhoz.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ha egy kérdés túl személyes, mondd, és nem folytatom azt a témát.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Approved for boundary, confidentiality, and referral framing.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

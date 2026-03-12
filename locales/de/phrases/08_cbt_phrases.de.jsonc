@@ -1,0 +1,1473 @@
+[
+  {
+    "id": "cbt_001",
+    "pri": 2,
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cbt",
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Welche Gedanken gingen Ihnen durch den Kopf, als Sie heftig reagierten?",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Was genau haben Sie in dem Moment gedacht, als Sie eine starke Emotion überkam?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Bitte beschreiben Sie kurz, welche Gedanken Ihnen damals durch den Kopf gingen.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen als strukturierte therapeutische Hinweise, nicht als Diagnose oder direkter Behandlungsratschlag.",
+      "evidence_level": "evidence_informed"
+    },
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_002",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cbt",
+      "coping"
+    ],
+    "pp": [
+      {
+        "txt": "Was hilft Ihnen, wenn ähnliche Gedanken aufkommen?",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Gibt es etwas, das Sie ausprobiert haben und das funktioniert hat, als diese Gedanken aufkamen?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Welche Methoden haben Ihnen früher geholfen, in einer solchen Situation zur Ruhe zu kommen?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen als strukturierte therapeutische Hinweise, nicht als Diagnose oder direkter Behandlungsratschlag.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_003",
+    "pri": 2,
+    "reg": "youth",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "mi",
+      "change"
+    ],
+    "pp": [
+      {
+        "txt": "Wie wichtig ist Ihnen jetzt der Wechsel von 0 auf 10?",
+        "t": "n",
+        "l": "s",
+        "reg": "youth",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Wenn 0 „nicht wichtig“ und 10 „sehr wichtig“ bedeutet, wo würden Sie den Änderungsantrag platzieren?",
+        "t": "w",
+        "l": "m",
+        "reg": "youth",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Lassen Sie uns skalieren: Wie stark würden Sie sich in diesem Bereich jetzt gerne verändern, zwischen 0 und 10?",
+        "t": "n",
+        "l": "m",
+        "reg": "youth",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen als strukturierte therapeutische Hinweise, nicht als Diagnose oder direkter Behandlungsratschlag.",
+      "evidence_level": "evidence_informed"
+    },
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_004",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "mi",
+      "change"
+    ],
+    "pp": [
+      {
+        "txt": "Was würde Sie jetzt dazu veranlassen, die Bedeutung von Veränderungen auf der Skala zu erhöhen?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Was ist der Grund dafür, dass die Skala jetzt nicht bei 0, sondern beispielsweise bei 6 oder 7 steht?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Was motiviert Sie Ihrer Meinung nach am meisten, sich jetzt zu ändern?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen als strukturierte therapeutische Hinweise, nicht als Diagnose oder direkter Behandlungsratschlag.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_005",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cbt",
+      "goal"
+    ],
+    "pp": [
+      {
+        "txt": "Welchen kleinen, konkreten Schritt würden Sie in der nächsten Woche versuchen?",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Überlegen Sie sich ein einfaches, messbares Ziel für die nächste Woche – was könnte das sein?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Welchen kleinen Schritt machen Sie jetzt, den Sie in den nächsten Tagen realistischerweise machen können?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen als strukturierte therapeutische Hinweise, nicht als Diagnose oder direkter Behandlungsratschlag.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_006",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cbt",
+      "coping"
+    ],
+    "pp": [
+      {
+        "txt": "Machen wir mal ein Verhaltensexperiment: Was würde passieren, wenn Sie heute diesen kleinen Schritt machen würden?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Was würde Ihrer Meinung nach passieren, wenn Sie diese kleine Änderung in den nächsten Tagen versuchen würden?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Wir machen ein Experiment: Du machst den kleinen Schritt und wir werden das Ergebnis sehen – stimmst du zu?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen als strukturierte therapeutische Hinweise, nicht als Diagnose oder direkter Behandlungsratschlag.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_007",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "dbt",
+      "dist"
+    ],
+    "pp": [
+      {
+        "txt": "Wenn Sie wirklich angespannt sind, verfügen Sie dann über eine Technik zur kurzen Belastungstoleranz?",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Was tun Sie normalerweise, um die Anspannung kurzfristig erträglicher zu machen?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Haben Sie eine schnelle Methode, die Ihnen hilft, die intensivsten Momente zu überstehen?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen als strukturierte therapeutische Hinweise, nicht als Diagnose oder direkter Behandlungsratschlag.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_008",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "dbt",
+      "coping"
+    ],
+    "pp": [
+      {
+        "txt": "Lasst uns jetzt gemeinsam eine 1-2-minütige Erdungsübung ausprobieren.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Möchten Sie eine kurze Erdungsübung, die Ihnen hilft, Ihren Körper und Geist zu stabilisieren?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Sollen wir eine schnelle 5-4-3-2-1-Übung versuchen, um uns zurück in die Gegenwart zu bringen?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen als strukturierte therapeutische Hinweise, nicht als Diagnose oder direkter Behandlungsratschlag.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_009",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "mi",
+      "change"
+    ],
+    "pp": [
+      {
+        "txt": "Welche Vorteile hätte es für Sie, wenn Sie in diesem Bereich eine Veränderung vornehmen würden?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Was wäre in Ihrem Leben besser, wenn Sie dies ändern könnten?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Listen Sie ein oder zwei Dinge auf, die sich verbessern würden, wenn Sie sich ändern würden – was fällt Ihnen als Erstes ein?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen als strukturierte therapeutische Hinweise, nicht als Diagnose oder direkter Behandlungsratschlag.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_010",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cbt",
+      "cognitive"
+    ],
+    "pp": [
+      {
+        "txt": "Welche Beweise stützen diese Idee?",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Welche Fakten belegen, dass diese Idee wahr ist?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Schauen wir uns an: Was spricht für und was spricht gegen diese Idee?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen als strukturierte therapeutische Hinweise, nicht als Diagnose oder direkter Behandlungsratschlag.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_011",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cbt",
+      "cognitive"
+    ],
+    "pp": [
+      {
+        "txt": "Gibt es eine alternative, weniger schädliche Interpretation, die wir für diese Situation versuchen könnten?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Was wäre ein realistischerer oder hilfreicherer Gedanke, den Sie sich stattdessen selbst sagen könnten?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Versuchen wir es mit einer anderen Interpretation: Was könnte eine weniger eindeutige Erklärung dafür sein?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen als strukturierte therapeutische Hinweise, nicht als Diagnose oder direkter Behandlungsratschlag.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_012",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "dbt",
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Es ist verständlich, dass Sie so denken; es war eine schwierige Situation für dich.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Es ist nur fair, dass es Sie so beeinflusst hat; Kein Wunder, dass du so reagiert hast.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Man sieht, dass Ihnen das sehr viel bedeutet; es war eine schwierige Erfahrung.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen als strukturierte therapeutische Hinweise, nicht als Diagnose oder direkter Behandlungsratschlag.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_013",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "mi",
+      "goal"
+    ],
+    "pp": [
+      {
+        "txt": "Was wäre das erste Anzeichen dafür, dass die Veränderung begonnen hat?",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Woran erkennen Sie, dass Ihr kleiner Schritt Wirkung gezeigt hat?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Welches konkrete Zeichen würden Sie erwarten, das zeigt, dass Sie Fortschritte machen?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen als strukturierte therapeutische Hinweise, nicht als Diagnose oder direkter Behandlungsratschlag.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_014",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cbt",
+      "behavior"
+    ],
+    "pp": [
+      {
+        "txt": "Welche Hindernisse könnten auftreten und wie würden Sie sich darauf vorbereiten?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Denken Sie darüber nach: Was kann dem Erfolg im Wege stehen und was können Sie tun, um dies zu verhindern?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Mit welchen Schwierigkeiten rechnen Sie und welchen Plan haben Sie dafür?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen als strukturierte therapeutische Hinweise, nicht als Diagnose oder direkter Behandlungsratschlag.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_015",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "dbt",
+      "dist"
+    ],
+    "pp": [
+      {
+        "txt": "Versuchen Sie es mit einer „Drang-Surfing“-Technik: Beobachten Sie den Impuls, wie er kommt und geht.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Wenn Sie einen starken Drang verspüren, beobachten Sie, wie sich seine Intensität im Laufe einiger Minuten ändert – das kann Ihnen helfen, ihn zu überwinden.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Stellen Sie sich den Impuls als eine Welle vor: Beobachten Sie, wie er ansteigt, seinen Höhepunkt erreicht und abklingt – bleiben Sie dabei, ohne zu handeln.",
+        "t": "n",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen als strukturierte therapeutische Hinweise, nicht als Diagnose oder direkter Behandlungsratschlag.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_016",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cbt",
+      "cognitive"
+    ],
+    "pp": [
+      {
+        "txt": "Welche Beweise gibt es dafür, dass Ihre Angst übertrieben oder verzerrt ist?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Lassen Sie uns gemeinsam untersuchen, wie viel reale Grundlage diese Angst hat.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Was stützt und widerlegt diese Angst?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen als strukturierte therapeutische Hinweise, nicht als Diagnose oder direkter Behandlungsratschlag.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_017",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "mi",
+      "change"
+    ],
+    "pp": [
+      {
+        "txt": "Welche Werte leiten Sie, welche können hinter der Veränderung stehen?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Was ist Ihnen wirklich wichtig und in welchem ​​Zusammenhang steht das mit Ihrem Veränderungsvorhaben?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Denken Sie darüber nach: Welcher Ihrer Werte würde die von Ihnen gewünschte Veränderung am besten unterstützen?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen als strukturierte therapeutische Hinweise, nicht als Diagnose oder direkter Behandlungsratschlag.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_018",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cbt",
+      "goal"
+    ],
+    "pp": [
+      {
+        "txt": "Setzen wir uns ein SMARTes Ziel: spezifisch, messbar, erreichbar, relevant und terminiert – was sollte zuerst kommen?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Überlegen Sie sich ein SMART-Ziel für die nächste Woche. Was genau kann man tun?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Was ist ein kleines, konkretes Ziel, das wir nächste Woche messen und Feedback geben können?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen als strukturierte therapeutische Hinweise, nicht als Diagnose oder direkter Behandlungsratschlag.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_019",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "dbt",
+      "val"
+    ],
+    "pp": [
+      {
+        "txt": "Es ist verständlich, dass Sie sich darüber Sorgen machen; Dies könnte eine schwierige Entscheidung für Sie sein.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Sie haben Recht, unsicher zu sein; Vielen Menschen würde es an Deiner Stelle genauso gehen.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Es ist ersichtlich, dass dies ein wichtiges Thema für Sie ist und die Entscheidung möglicherweise schwierig ist – das ist in Ordnung.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen als strukturierte therapeutische Hinweise, nicht als Diagnose oder direkter Behandlungsratschlag.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "cbt_020",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "cbt",
+      "behavior"
+    ],
+    "pp": [
+      {
+        "txt": "Darauf kommen wir später zurück: Schreiben Sie auf, was passiert ist und wie Sie reagiert haben, damit wir es gemeinsam analysieren können.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Bitte beachten Sie die Situation und Ihre Reaktionen; Das nächste Mal werden wir es gemeinsam besprechen und daraus lernen.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      },
+      {
+        "txt": "Beschreiben Sie kurz, wann und wie es passiert ist und was Sie getan haben – das wird Ihnen bei der Planung Ihres nächsten Schritts helfen.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "medium",
+        "age": [
+          "teen",
+          "adult"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen als strukturierte therapeutische Hinweise, nicht als Diagnose oder direkter Behandlungsratschlag.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "conversational",
+    "lit": "medium",
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

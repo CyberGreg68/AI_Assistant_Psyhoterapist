@@ -1,0 +1,602 @@
+[
+  {
+    "ex": [
+      "I'm drawn to drinking",
+      "I want to light something strong",
+      "I would take drugs again"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I'm\\ drawn\\ to\\ drinking|I\\ want\\ to\\ light\\ something\\ strong|I\\ would\\ take\\ drugs\\ again)"
+    },
+    "tags": [
+      "cbt",
+      "substance"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "cbt",
+    "cand": [
+      "cbt_002",
+      "cbt_010"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "id": "pt_tr_073",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I am very angry",
+      "I explode with anger",
+      "I can't handle my anger"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ am\\ very\\ angry|I\\ explode\\ with\\ anger|I\\ can't\\ handle\\ my\\ anger)"
+    },
+    "tags": [
+      "cbt",
+      "anger"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "cbt",
+    "cand": [
+      "cbt_001",
+      "cbt_011"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "id": "pt_tr_074",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "The urge is great",
+      "I feel an urge",
+      "I have a very strong urge"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:The\\ urge\\ is\\ great|I\\ feel\\ an\\ urge|I\\ have\\ a\\ very\\ strong\\ urge)"
+    },
+    "tags": [
+      "cbt",
+      "urge"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "cbt",
+    "cand": [
+      "cbt_002",
+      "cbt_012"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "id": "pt_tr_075",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Give me a coping idea",
+      "What should I do to cope?",
+      "You need a tool now"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Give\\ me\\ a\\ coping\\ idea|What\\ should\\ I\\ do\\ to\\ cope\\?|You\\ need\\ a\\ tool\\ now)"
+    },
+    "tags": [
+      "cbt",
+      "coping"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "cbt",
+    "cand": [
+      "cbt_002",
+      "cbt_014"
+    ],
+    "fb": "call_llm",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "id": "pt_tr_076",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "My mind goes round and round",
+      "I've been chewing on it for hours",
+      "I can't stop my thoughts"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:My\\ mind\\ goes\\ round\\ and\\ round|I've\\ been\\ chewing\\ on\\ it\\ for\\ hours|I\\ can't\\ stop\\ my\\ thoughts)"
+    },
+    "tags": [
+      "cbt",
+      "rumination"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "cbt",
+    "cand": [
+      "cbt_001",
+      "cbt_015"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "id": "pt_tr_077",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I avoid everything",
+      "I procrastinate and run away",
+      "I can't face him"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ avoid\\ everything|I\\ procrastinate\\ and\\ run\\ away|I\\ can't\\ face\\ him)"
+    },
+    "tags": [
+      "cbt",
+      "avoidance"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "cbt",
+    "cand": [
+      "cbt_005",
+      "cbt_016"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "id": "pt_tr_078",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I need to calm down now",
+      "Distress tolerance is required",
+      "Give me a DBT idea"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ need\\ to\\ calm\\ down\\ now|Distress\\ tolerance\\ is\\ required|Give\\ me\\ a\\ DBT\\ idea)"
+    },
+    "tags": [
+      "cbt",
+      "dbt"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "cbt",
+    "cand": [
+      "cbt_006",
+      "cbt_017"
+    ],
+    "fb": "call_llm",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "id": "pt_tr_079",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I can't believe I can do it",
+      "I'm getting down a lot",
+      "I hurt myself in the head all the time"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ can't\\ believe\\ I\\ can\\ do\\ it|I'm\\ getting\\ down\\ a\\ lot|I\\ hurt\\ myself\\ in\\ the\\ head\\ all\\ the\\ time)"
+    },
+    "tags": [
+      "cbt",
+      "self_criticism"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "cbt",
+    "cand": [
+      "cbt_001",
+      "cbt_018"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "id": "pt_tr_080",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I am looking for motivation to change",
+      "I don't know why I should change",
+      "Help me move"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ am\\ looking\\ for\\ motivation\\ to\\ change|I\\ don't\\ know\\ why\\ I\\ should\\ change|Help\\ me\\ move)"
+    },
+    "tags": [
+      "cbt",
+      "motivation"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "cbt",
+    "cand": [
+      "cbt_003",
+      "cbt_004"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "id": "pt_tr_081",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I'm afraid of a relapse",
+      "I end up in the same place again",
+      "I'm afraid I'll screw it up again"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I'm\\ afraid\\ of\\ a\\ relapse|I\\ end\\ up\\ in\\ the\\ same\\ place\\ again|I'm\\ afraid\\ I'll\\ screw\\ it\\ up\\ again)"
+    },
+    "tags": [
+      "cbt",
+      "relapse"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "cbt",
+    "cand": [
+      "cbt_007",
+      "cbt_019"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "id": "pt_tr_082",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Help break it down into a goal",
+      "You need a small step plan",
+      "What should be the next realistic goal"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Help\\ break\\ it\\ down\\ into\\ a\\ goal|You\\ need\\ a\\ small\\ step\\ plan|What\\ should\\ be\\ the\\ next\\ realistic\\ goal)"
+    },
+    "tags": [
+      "cbt",
+      "goal"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "cbt",
+    "cand": [
+      "cbt_008",
+      "cbt_020"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "id": "pt_tr_083",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I need something to beat the cravings",
+      "Now the craving is strong",
+      "I want to quell the urge"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I\\ need\\ something\\ to\\ beat\\ the\\ cravings|Now\\ the\\ craving\\ is\\ strong|I\\ want\\ to\\ quell\\ the\\ urge)"
+    },
+    "tags": [
+      "cbt",
+      "craving"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "cbt",
+    "cand": [
+      "cbt_009",
+      "cbt_012"
+    ],
+    "fb": "call_llm",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult"
+    ],
+    "lit": "medium",
+    "reg": "conversational",
+    "id": "pt_tr_084",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

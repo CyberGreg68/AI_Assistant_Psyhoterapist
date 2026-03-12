@@ -1,0 +1,218 @@
+[
+  {
+    "ex": [
+      "Tell me it will work",
+      "Give me some encouragement",
+      "I need some hope now"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Tell\\ me\\ it\\ will\\ work|Give\\ me\\ some\\ encouragement|I\\ need\\ some\\ hope\\ now)"
+    },
+    "tags": [
+      "enc",
+      "hope"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "enc",
+    "cand": [
+      "enc_001",
+      "enc_010"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_093",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Help me believe that I can do it",
+      "Give me some encouragement",
+      "I need a confirmation"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Help\\ me\\ believe\\ that\\ I\\ can\\ do\\ it|Give\\ me\\ some\\ encouragement|I\\ need\\ a\\ confirmation)"
+    },
+    "tags": [
+      "enc",
+      "confidence"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "enc",
+    "cand": [
+      "enc_003",
+      "enc_004"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_094",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Say a small step encouragingly",
+      "You need momentum for a small step",
+      "Give me motivation for today"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Say\\ a\\ small\\ step\\ encouragingly|You\\ need\\ momentum\\ for\\ a\\ small\\ step|Give\\ me\\ motivation\\ for\\ today)"
+    },
+    "tags": [
+      "enc",
+      "small_step"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "enc",
+    "cand": [
+      "enc_002",
+      "enc_005"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_095",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "I've struggled a lot",
+      "Remind me that I'm not trying in vain",
+      "Tell me my effort counts"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:I've\\ struggled\\ a\\ lot|Remind\\ me\\ that\\ I'm\\ not\\ trying\\ in\\ vain|Tell\\ me\\ my\\ effort\\ counts)"
+    },
+    "tags": [
+      "enc",
+      "reinforcement"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "enc",
+    "cand": [
+      "enc_006",
+      "enc_007"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_096",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

@@ -1,0 +1,287 @@
+{
+  "lang": "de",
+  "version": "1.1",
+  "generated_at": "2026-03-11T19:47:03Z",
+  "category_order": [
+    {
+      "prefix": "01",
+      "name": "crisis",
+      "default_priority": 1,
+      "description": "Akute Sicherheitssituationen und menschliche Übergabe (Hard Handoff).",
+      "filename": "phrases/01_cri_phrases.de.jsonc",
+      "typical_tags": [
+        "cri",
+        "saf",
+        "hand",
+        "imm"
+      ],
+      "derivation": "Krisenprotokolle stützen sich auf die Praxis der psychischen Gesundheit und auf akute Sicherheitsleitlinien; Ziel sind schnelle, klare Anweisungen und eine rechtzeitige menschliche Intervention.",
+      "clinical_sensitivity": "critical",
+      "requires_clinical_review": true,
+      "handoff_capable": true,
+      "review_owner": "clinical",
+      "review_sla_hours": 24
+    },
+    {
+      "prefix": "02",
+      "name": "boundary",
+      "default_priority": 1,
+      "description": "Rollen, Verantwortungsgrenzen, Vertraulichkeit und Hinweise zur Weitervermittlung.",
+      "filename": "phrases/02_bd_phrases.de.jsonc",
+      "typical_tags": [
+        "bd",
+        "conf",
+        "adv",
+        "ref"
+      ],
+      "derivation": "Grundlage sind ethische und rechtliche Leitlinien: was das System nicht leisten darf (medizinische oder rechtliche Beratung) und wie es an Fachpersonen weiterverweist.",
+      "clinical_sensitivity": "high",
+      "requires_clinical_review": true,
+      "handoff_capable": false,
+      "review_owner": "clinical",
+      "review_sla_hours": 48
+    },
+    {
+      "prefix": "03",
+      "name": "structure",
+      "default_priority": 1,
+      "description": "Sitzungsablauf, Einwilligung, Zeitcheck und Prozessführung.",
+      "filename": "phrases/03_str_phrases.de.jsonc",
+      "typical_tags": [
+        "ag",
+        "cons",
+        "time",
+        "proc"
+      ],
+      "derivation": "Abgeleitet aus der Strukturierung therapeutischer Sitzungen: Agenda, Einwilligung und Zeitmanagement unterstützen sicheres und wirksames Arbeiten.",
+      "clinical_sensitivity": "medium",
+      "requires_clinical_review": false,
+      "handoff_capable": false,
+      "review_owner": "content",
+      "review_sla_hours": 72
+    },
+    {
+      "prefix": "04",
+      "name": "empathy",
+      "default_priority": 1,
+      "description": "Empathisches Spiegeln und Validieren.",
+      "filename": "phrases/04_emp_phrases.de.jsonc",
+      "typical_tags": [
+        "emp",
+        "val",
+        "grat"
+      ],
+      "derivation": "Auf Grundlage klientenzentrierter therapeutischer Praxis, etwa der rogersschen Empathie: emotionale Validierung kann Belastung verringern und Kooperation fördern.",
+      "clinical_sensitivity": "medium",
+      "requires_clinical_review": false,
+      "handoff_capable": false,
+      "review_owner": "content",
+      "review_sla_hours": 72
+    },
+    {
+      "prefix": "05",
+      "name": "open_questions",
+      "default_priority": 2,
+      "description": "Erkundende, offene Fragen zum Verstehen von Kontext und Gefühlen.",
+      "filename": "phrases/05_oq_phrases.de.jsonc",
+      "typical_tags": [
+        "oq",
+        "inf",
+        "emo",
+        "plan"
+      ],
+      "derivation": "Aus explorativen Gesprächstechniken: offene Fragen helfen, detaillierte Informationen zu sammeln und die Erzählung der Klientin oder des Klienten zu erschließen.",
+      "clinical_sensitivity": "medium",
+      "requires_clinical_review": false,
+      "handoff_capable": false,
+      "review_owner": "content",
+      "review_sla_hours": 72
+    },
+    {
+      "prefix": "06",
+      "name": "closed_questions",
+      "default_priority": 2,
+      "description": "Geschlossene Fragen zur Faktenklärung und Ja/Nein-Prüfungen.",
+      "filename": "phrases/06_cq_phrases.de.jsonc",
+      "typical_tags": [
+        "cq",
+        "yn",
+        "inf",
+        "safety"
+      ],
+      "derivation": "Für Sicherheits- und Verwaltungszwecke sind schnelle Faktenabfragen für Risikoabschätzung und Terminabstimmung erforderlich.",
+      "clinical_sensitivity": "high",
+      "requires_clinical_review": true,
+      "handoff_capable": false,
+      "review_owner": "clinical",
+      "review_sla_hours": 48
+    },
+    {
+      "prefix": "07",
+      "name": "variants",
+      "default_priority": 2,
+      "description": "Kurze, häufige Varianten für Bestätigung und schnelle Antworten (tokensparend).",
+      "filename": "phrases/07_var_phrases.de.jsonc",
+      "typical_tags": [
+        "var",
+        "short",
+        "prompt",
+        "grounding"
+      ],
+      "derivation": "Diese Kategorie dient der Laufzeitoptimierung: kurze Fragmente senken die Token-Kosten und beschleunigen Antworten, ohne den natürlichen Gesprächsfluss zu verlieren.",
+      "clinical_sensitivity": "low",
+      "requires_clinical_review": false,
+      "handoff_capable": false,
+      "review_owner": "content",
+      "review_sla_hours": 72
+    },
+    {
+      "prefix": "08",
+      "name": "cbt_mi_dbt",
+      "default_priority": 2,
+      "description": "Therapeutische Werkzeuge und Fragen (CBT, MI, DBT).",
+      "filename": "phrases/08_cbt_phrases.de.jsonc",
+      "typical_tags": [
+        "cbt",
+        "mi",
+        "dbt",
+        "goal"
+      ],
+      "derivation": "Diese Kategorien bilden Standardwerkzeuge psychotherapeutischer Verfahren ab: strukturierte Fragen, Skalierungen, Verhaltensexperimente und Stresstoleranz.",
+      "clinical_sensitivity": "high",
+      "requires_clinical_review": true,
+      "handoff_capable": false,
+      "review_owner": "clinical",
+      "review_sla_hours": 48
+    },
+    {
+      "prefix": "09",
+      "name": "psychoeducation",
+      "default_priority": 3,
+      "description": "Kurze psychoedukative Hinweise und Bewältigungsübungen.",
+      "filename": "phrases/09_edu_phrases.de.jsonc",
+      "typical_tags": [
+        "edu",
+        "coping",
+        "breathing"
+      ],
+      "derivation": "Aus psychoedukativer Praxis: kurze, evidenzinformierte Hinweise, die sich auch zwischen Sitzungen oder zu Hause anwenden lassen.",
+      "clinical_sensitivity": "high",
+      "requires_clinical_review": true,
+      "handoff_capable": false,
+      "review_owner": "clinical",
+      "review_sla_hours": 48
+    },
+    {
+      "prefix": "10",
+      "name": "encouragement",
+      "default_priority": 2,
+      "description": "Ermutigende, motivierende Formulierungen und Unterstützung kleiner Schritte.",
+      "filename": "phrases/10_enc_phrases.de.jsonc",
+      "typical_tags": [
+        "enc",
+        "mot",
+        "small"
+      ],
+      "derivation": "Aus Prinzipien der Motivation und Verhaltensänderung: Bestärkung und die Unterstützung kleiner Ziele können die Mitarbeit fördern.",
+      "clinical_sensitivity": "medium",
+      "requires_clinical_review": false,
+      "handoff_capable": false,
+      "review_owner": "content",
+      "review_sla_hours": 72
+    },
+    {
+      "prefix": "11",
+      "name": "closing",
+      "default_priority": 2,
+      "description": "Abschluss, Zusammenfassung und nächste Schritte.",
+      "filename": "phrases/11_clo_phrases.de.jsonc",
+      "typical_tags": [
+        "clo",
+        "sum",
+        "next"
+      ],
+      "derivation": "Aus der Praxis des Sitzungsabschlusses: Zusammenfassung und Klärung der nächsten Schritte verbessern Kontinuität und Nachvollziehbarkeit.",
+      "clinical_sensitivity": "low",
+      "requires_clinical_review": false,
+      "handoff_capable": false,
+      "review_owner": "content",
+      "review_sla_hours": 72
+    },
+    {
+      "prefix": "12",
+      "name": "cultural",
+      "default_priority": 2,
+      "description": "Kulturelle Sensibilität, Lokalisierungshinweise und alternative Formulierungen.",
+      "filename": "phrases/12_cult_phrases.de.jsonc",
+      "typical_tags": [
+        "cult",
+        "loc",
+        "sens",
+        "alt"
+      ],
+      "derivation": "Aus Leitlinien zu Lokalisierung und kultureller Sensibilität: Ziel ist es, verletzende oder missverständliche Ausdrücke zu vermeiden und den lokalen Kontext mitzudenken.",
+      "clinical_sensitivity": "medium",
+      "requires_clinical_review": false,
+      "handoff_capable": false,
+      "review_owner": "content",
+      "review_sla_hours": 72
+    }
+  ],
+  "code_keys": {
+    "tone": {
+      "n": "neutral",
+      "w": "warm",
+      "f": "bestimmt"
+    },
+    "length": {
+      "s": "kurz",
+      "m": "mittel",
+      "l": "lang"
+    },
+    "use": {
+      "c": "chat",
+      "t": "tts",
+      "s": "stilbaustein"
+    },
+    "rec": {
+      "w": "warm",
+      "n": "neutral",
+      "b": "kurz",
+      "f": "bestimmt"
+    }
+  },
+  "selection_rules": {
+    "step_1": "Wenn der Krisendetektor anschlägt oder ein Element mit dem Tag 'cri' aktiviert wird, hat die Krisenkategorie sofort Vorrang und das Hard-Handoff-Protokoll wird gestartet.",
+    "step_2": "Filtere die Kategorien nach ihrer Relevanz für die aktuelle Intention; im Zweifel sind Kategorien zu bevorzugen, die im Manifest früher erscheinen.",
+    "step_3": "Bevorzuge innerhalb einer Kategorie die Elemente, deren Tags am besten zum aktuellen Kontext und zum gewünschten Ton (rec) passen.",
+    "step_4": "Bei Gleichstand sollten kürzere 'variants'-Elemente bevorzugt werden, um Token-Kosten zu senken.",
+    "step_5": "Ein pro Element gesetzter Wert in 'pri' kann die Standardpriorität der Kategorie überschreiben, aber nur wenn er explizit gesetzt wurde."
+  },
+  "review_policy": {
+    "required_metadata_version": "1.0",
+    "sensitive_categories": [
+      "crisis",
+      "boundary",
+      "closed_questions",
+      "cbt_mi_dbt",
+      "psychoeducation"
+    ],
+    "mandatory_fields_for_sensitive_changes": [
+      "review_status",
+      "reviewed_by_role",
+      "reviewed_at",
+      "safety_notes"
+    ],
+    "minimum_reviewer_role": "clinical",
+    "legacy_content_policy": "Alte Inhalte unter data/phrases dienen nur als Spiegel; locales und manifests sind die maßgebliche Quelle."
+  },
+  "data_sources": {
+    "primary_manifest_dir": "manifests",
+    "primary_locale_dir": "locales",
+    "legacy_mirror_dir": "data/phrases",
+    "legacy_mode": "mirror_only"
+  },
+  "derivation_notes": "Die Kategorien wurden aus klinischen Praktiken (CBT, MI, DBT), Krisenprotokollen und Lokalisierungsleitlinien zusammengestellt. Das Manifest dient als Implementierungsleitfaden; die endgültigen Inhalte sollten von einer klinischen Fachperson geprüft werden.",
+  "file_comment_template": "/* <Dateiname> — <Sprache>\\nSchema: id, pri, rec, use, tags, pp; pp[0] ist kanonisch; code_keys stehen im Manifest */"
+}

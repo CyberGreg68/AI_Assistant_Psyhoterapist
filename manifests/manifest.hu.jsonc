@@ -1,0 +1,47 @@
+{
+  "lang": "hu",
+  "version": "1.1",
+  "generated_at": "2026-03-11T13:17:00",
+  "category_order": [
+    {"prefix":"01","name":"crisis","default_priority":1,"description":"Azonnali biztonsági helyzetek és emberi átadás (hard handoff).","filename":"phrases/01_cri_phrases.hu.jsonc","typical_tags":["cri","saf","hand","imm"],"derivation":"A krízisprotokollok a mentálhigiénés gyakorlatból és akut biztonsági irányelvekből származnak; cél a gyors, egyértelmű utasítás és emberi beavatkozás kezdeményezése.","clinical_sensitivity":"critical","requires_clinical_review":true,"handoff_capable":true,"review_owner":"clinical","review_sla_hours":24},
+    {"prefix":"02","name":"boundary","default_priority":1,"description":"Szerepkörök, felelősségkorlátok, titoktartás és referral útmutatás.","filename":"phrases/02_bd_phrases.hu.jsonc","typical_tags":["bd","conf","adv","ref"],"derivation":"Etikai és jogi irányelvek alapján: mit nem adhat a rendszer (orvosi/jogi tanács), és hogyan irányít szakemberhez.","clinical_sensitivity":"high","requires_clinical_review":true,"handoff_capable":false,"review_owner":"clinical","review_sla_hours":48},
+    {"prefix":"03","name":"structure","default_priority":1,"description":"Ülés menete, hozzájárulás, időellenőrzés és folyamatok.","filename":"phrases/03_str_phrases.hu.jsonc","typical_tags":["ag","cons","time","proc"],"derivation":"Terápiás ülések strukturálásából: agenda, consent és időkezelés segít a biztonságos és hatékony munkában.","clinical_sensitivity":"medium","requires_clinical_review":false,"handoff_capable":false,"review_owner":"content","review_sla_hours":72},
+    {"prefix":"04","name":"empathy","default_priority":1,"description":"Empatikus visszatükrözés és validálás.","filename":"phrases/04_emp_phrases.hu.jsonc","typical_tags":["emp","val","grat"],"derivation":"Kliensközpontú terápiás gyakorlatok (pl. Rogersi empátia) alapján: érzelmi validálás csökkenti a distresszt és növeli a kooperációt.","clinical_sensitivity":"medium","requires_clinical_review":false,"handoff_capable":false,"review_owner":"content","review_sla_hours":72},
+    {"prefix":"05","name":"open_questions","default_priority":2,"description":"Feltáró, nyitott kérdések a kontextus és érzések megismeréséhez.","filename":"phrases/05_oq_phrases.hu.jsonc","typical_tags":["oq","inf","emo","plan"],"derivation":"Kvalitatív feltáró technikákból: nyitott kérdések segítik a részletes információgyűjtést és a kliens narratívájának feltárását.","clinical_sensitivity":"medium","requires_clinical_review":false,"handoff_capable":false,"review_owner":"content","review_sla_hours":72},
+    {"prefix":"06","name":"closed_questions","default_priority":2,"description":"Zárt, tényellenőrző kérdések és igen/nem ellenőrzések.","filename":"phrases/06_cq_phrases.hu.jsonc","typical_tags":["cq","yn","inf","safety"],"derivation":"Biztonsági és adminisztratív célokra: gyors tényellenőrzés szükséges a kockázatfelméréshez és időpont‑egyeztetéshez.","clinical_sensitivity":"high","requires_clinical_review":true,"handoff_capable":false,"review_owner":"clinical","review_sla_hours":48},
+    {"prefix":"07","name":"variants","default_priority":2,"description":"Rövid, gyakori variánsok az elismeréshez és gyors válaszokhoz (tokenkímélő).","filename":"phrases/07_var_phrases.hu.jsonc","typical_tags":["var","short","prompt","grounding"],"derivation":"Runtime optimalizációs igény: rövid fragmensek csökkentik a tokenköltséget és gyorsítják a válaszadást; cél a természetes, folyamatos beszélgetés fenntartása.","clinical_sensitivity":"low","requires_clinical_review":false,"handoff_capable":false,"review_owner":"content","review_sla_hours":72},
+    {"prefix":"08","name":"cbt_mi_dbt","default_priority":2,"description":"Terápiás eszközök és kérdések (CBT, MI, DBT).","filename":"phrases/08_cbt_phrases.hu.jsonc","typical_tags":["cbt","mi","dbt","goal"],"derivation":"Ezek a kategóriák a pszichoterápiás módszerek standard eszközeit tükrözik: strukturált kérdések, skálázás, viselkedéses kísérletek, distress tolerance.","clinical_sensitivity":"high","requires_clinical_review":true,"handoff_capable":false,"review_owner":"clinical","review_sla_hours":48},
+    {"prefix":"09","name":"psychoeducation","default_priority":3,"description":"Rövid oktató jellegű tippek és coping gyakorlatok.","filename":"phrases/09_edu_phrases.hu.jsonc","typical_tags":["edu","coping","breathing"],"derivation":"Pszichoedukációs gyakorlatokból: rövid, bizonyíték‑alapú tippek, amelyek otthoni használatra alkalmasak.","clinical_sensitivity":"high","requires_clinical_review":true,"handoff_capable":false,"review_owner":"clinical","review_sla_hours":48},
+    {"prefix":"10","name":"encouragement","default_priority":2,"description":"Bátorító, motiváló mondatok és kis lépések támogatása.","filename":"phrases/10_enc_phrases.hu.jsonc","typical_tags":["enc","mot","small"],"derivation":"Motivációs és viselkedés‑változtatási elvekből: megerősítés és kis célok támogatása növeli az elköteleződést.","clinical_sensitivity":"medium","requires_clinical_review":false,"handoff_capable":false,"review_owner":"content","review_sla_hours":72},
+    {"prefix":"11","name":"closing","default_priority":2,"description":"Lezárás, összefoglalás és következő lépések.","filename":"phrases/11_clo_phrases.hu.jsonc","typical_tags":["clo","sum","next"],"derivation":"Üléslezárási gyakorlatok: összegzés és következő lépések tisztázása javítja a folyamat követhetőségét.","clinical_sensitivity":"low","requires_clinical_review":false,"handoff_capable":false,"review_owner":"content","review_sla_hours":72},
+    {"prefix":"12","name":"cultural","default_priority":2,"description":"Kulturális érzékenység, lokalizációs megjegyzések és alternatív kifejezések.","filename":"phrases/12_cult_phrases.hu.jsonc","typical_tags":["cult","loc","sens","alt"],"derivation":"Lokalizációs és kulturális érzékenységi irányelvekből: cél a sértő vagy félreérthető kifejezések elkerülése és a helyi kontextus figyelembevétele.","clinical_sensitivity":"medium","requires_clinical_review":false,"handoff_capable":false,"review_owner":"content","review_sla_hours":72}
+  ],
+  "code_keys": {
+    "tone": {"n":"neutral","w":"warm","f":"firm"},
+    "length": {"s":"short","m":"medium","l":"long"},
+    "use": {"c":"chat","t":"tts","s":"style_snippet"},
+    "rec": {"w":"warm","n":"neutral","b":"brief","f":"firm"}
+  },
+  "selection_rules": {
+    "step_1": "Ha a krízisdetektor vagy bármely elem 'cri' tagje aktiválódik, azonnal prioritást kap a crisis kategória és indítandó a hard handoff protokoll.",
+    "step_2": "Szűrd a kategóriákat az aktuális intent relevanciája szerint; előnyben részesítendők a manifestben korábban szereplő kategóriák.",
+    "step_3": "Egy kategórián belül preferáld azokat az elemeket, amelyek tags mezője legjobban illeszkedik az aktuális kontextushoz és a kívánt tónushoz (rec).",
+    "step_4": "Ha tie van, rövidebb 'variants' elemek használata tokenköltség csökkentésére.",
+    "step_5": "Per‑item 'pri' felülírhatja a kategória alapértelmezett prioritását, de csak ha explicit beállították."
+  },
+  "review_policy": {
+    "required_metadata_version": "1.0",
+    "sensitive_categories": ["crisis", "boundary", "closed_questions", "cbt_mi_dbt", "psychoeducation"],
+    "mandatory_fields_for_sensitive_changes": ["review_status", "reviewed_by_role", "reviewed_at", "safety_notes"],
+    "minimum_reviewer_role": "clinical",
+    "legacy_content_policy": "Legacy data/phrases content is mirror-only; locales and manifests are the primary source of truth."
+  },
+  "data_sources": {
+    "primary_manifest_dir": "manifests",
+    "primary_locale_dir": "locales",
+    "legacy_mirror_dir": "data/phrases",
+    "legacy_mode": "mirror_only"
+  },
+  "derivation_notes": "A kategóriák klinikai gyakorlatokból (CBT, MI, DBT), krízisprotokollokból és lokalizációs irányelvekből lettek összeállítva. A manifest célja implementációs útmutató; a végleges tartalmakat klinikai szakértőnek javasolt felülvizsgálni.",
+  "file_comment_template": "/* <fájlnév> — <nyelv>\\nSéma: id, pri, rec, use, tags, pp; pp[0] kanonikus; code_keys a manifestben */"
+}

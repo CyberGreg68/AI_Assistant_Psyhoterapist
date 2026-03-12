@@ -1,0 +1,1092 @@
+[
+  {
+    "ex": [
+      "Ich möchte mich umbringen",
+      "Ich beende mein Leben",
+      "Ich kann es nicht mehr ertragen"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ möchte\\ mich\\ umbringen|Ich\\ beende\\ mein\\ Leben|Ich\\ kann\\ es\\ nicht\\ mehr\\ ertragen)"
+    },
+    "tags": [
+      "cri",
+      "suicide"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_002",
+      "cri_005"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "cult": "Vermeiden Sie Trivialisierungen; Eine direkte und sympathische Sprache ist gefragt.",
+    "note": "Sofortige menschliche Übergabe und lokale Notfallinformationen.",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_001",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich werde es heute tun",
+      "Ich habe einen Plan für heute Abend",
+      "Ich habe beschlossen, es heute zu beenden"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ werde\\ es\\ heute\\ tun|Ich\\ habe\\ einen\\ Plan\\ für\\ heute\\ Abend|Ich\\ habe\\ beschlossen,\\ es\\ heute\\ zu\\ beenden)"
+    },
+    "tags": [
+      "cri",
+      "suicide",
+      "plan"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_002",
+      "cri_003",
+      "cri_005"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "note": "Eine Aussage, die sich auf einen bestimmten Plan bezieht.",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_002",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich möchte mich schneiden",
+      "Ich möchte mich verletzen",
+      "Ich würde mir selbst Schaden zufügen"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ möchte\\ mich\\ schneiden|Ich\\ möchte\\ mich\\ verletzen|Ich\\ würde\\ mir\\ selbst\\ Schaden\\ zufügen)"
+    },
+    "tags": [
+      "cri",
+      "selfharm"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_002",
+      "cri_004"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "note": "Drang zur Selbstverletzung.",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_003",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich habe mich schon geschnitten",
+      "Ich habe etwas gegen mich genommen",
+      "Ich habe mich einfach verletzt"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ habe\\ mich\\ schon\\ geschnitten|Ich\\ habe\\ etwas\\ gegen\\ mich\\ genommen|Ich\\ habe\\ mich\\ einfach\\ verletzt)"
+    },
+    "tags": [
+      "cri",
+      "selfharm",
+      "recent"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_003",
+      "cri_005"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "note": "Eine aktuelle Aussage über Selbstverletzung.",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_004",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich habe eine Panikattacke",
+      "Ich kann nicht atmen",
+      "Jetzt gerate ich total in Panik"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ habe\\ eine\\ Panikattacke|Ich\\ kann\\ nicht\\ atmen|Jetzt\\ gerate\\ ich\\ total\\ in\\ Panik)"
+    },
+    "tags": [
+      "cri",
+      "panic"
+    ],
+    "prio": 1,
+    "safety": "escalate",
+    "cat": "cri",
+    "cand": [
+      "cri_003",
+      "cri_004",
+      "cri_006"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.55,
+      "in_tok": 220,
+      "out_tok": 72,
+      "tts_ch": 230
+    },
+    "audit": true,
+    "note": "Akute Panik und Atemnot.",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_005",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich falle völlig auseinander",
+      "Ich bin nicht in der Realität",
+      "Es ist, als wäre ich nicht hier"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ falle\\ völlig\\ auseinander|Ich\\ bin\\ nicht\\ in\\ der\\ Realität|Es\\ ist,\\ als\\ wäre\\ ich\\ nicht\\ hier)"
+    },
+    "tags": [
+      "cri",
+      "dissociation"
+    ],
+    "prio": 1,
+    "safety": "escalate",
+    "cat": "cri",
+    "cand": [
+      "cri_003",
+      "cri_004",
+      "cri_007"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.55,
+      "in_tok": 220,
+      "out_tok": 72,
+      "tts_ch": 230
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_006",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich werde jemanden schlagen",
+      "Ich möchte jemanden verletzen",
+      "Ich habe Angst, jemand anderen zu verletzen"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ werde\\ jemanden\\ schlagen|Ich\\ möchte\\ jemanden\\ verletzen|Ich\\ habe\\ Angst,\\ jemand\\ anderen\\ zu\\ verletzen)"
+    },
+    "tags": [
+      "cri",
+      "violence"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_002",
+      "cri_005"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "note": "Andere gefährden.",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_007",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Alles ist völlig aussichtslos",
+      "Es hat keinen Sinn, dass ich lebe",
+      "Es ist alles vorbei"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Alles\\ ist\\ völlig\\ aussichtslos|Es\\ hat\\ keinen\\ Sinn,\\ dass\\ ich\\ lebe|Es\\ ist\\ alles\\ vorbei)"
+    },
+    "tags": [
+      "cri",
+      "hopelessness"
+    ],
+    "prio": 1,
+    "safety": "escalate",
+    "cat": "cri",
+    "cand": [
+      "cri_003",
+      "cri_004",
+      "cri_008"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.55,
+      "in_tok": 220,
+      "out_tok": 72,
+      "tts_ch": 230
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_008",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich verabschiedete mich von allen",
+      "Ich verabschiedete mich von allen",
+      "Zum Abschied habe ich einen Brief geschrieben"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ verabschiedete\\ mich\\ von\\ allen|Ich\\ verabschiedete\\ mich\\ von\\ allen|Zum\\ Abschied\\ habe\\ ich\\ einen\\ Brief\\ geschrieben)"
+    },
+    "tags": [
+      "cri",
+      "farewell"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_002",
+      "cri_005",
+      "cri_009"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_009",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich habe Medikamente dagegen",
+      "Ich habe das Seil hier",
+      "Ich habe alles vorbereitet"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ habe\\ Medikamente\\ dagegen|Ich\\ habe\\ das\\ Seil\\ hier|Ich\\ habe\\ alles\\ vorbereitet)"
+    },
+    "tags": [
+      "cri",
+      "means"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_002",
+      "cri_004",
+      "cri_005"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_010",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich würde mir eine Überdosis nehmen",
+      "Ich würde viele Medikamente nehmen",
+      "Ich nehme lieber alles"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ würde\\ mir\\ eine\\ Überdosis\\ nehmen|Ich\\ würde\\ viele\\ Medikamente\\ nehmen|Ich\\ nehme\\ lieber\\ alles)"
+    },
+    "tags": [
+      "cri",
+      "overdose"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_002",
+      "cri_005"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_011",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich würde aus dem Fenster springen",
+      "Ich würde irgendwo abspringen",
+      "Ich möchte einfach abspringen"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ würde\\ aus\\ dem\\ Fenster\\ springen|Ich\\ würde\\ irgendwo\\ abspringen|Ich\\ möchte\\ einfach\\ abspringen)"
+    },
+    "tags": [
+      "cri",
+      "jump"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_002",
+      "cri_005"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_012",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Stimmen sagen mir, ich soll dir wehtun",
+      "Ich höre, es zu tun",
+      "Die Stimmen ermutigen mich dazu"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Stimmen\\ sagen\\ mir,\\ ich\\ soll\\ dir\\ wehtun|Ich\\ höre,\\ es\\ zu\\ tun|Die\\ Stimmen\\ ermutigen\\ mich\\ dazu)"
+    },
+    "tags": [
+      "cri",
+      "psychosis"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_003",
+      "cri_010"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "note": "Verdacht auf Befehlshalluzination.",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_013",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich bin zu Hause nicht sicher",
+      "Ich habe Angst, nach Hause zu gehen",
+      "Jemand tut dir zu Hause weh"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ bin\\ zu\\ Hause\\ nicht\\ sicher|Ich\\ habe\\ Angst,\\ nach\\ Hause\\ zu\\ gehen|Jemand\\ tut\\ dir\\ zu\\ Hause\\ weh)"
+    },
+    "tags": [
+      "cri",
+      "domestic"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_004",
+      "cri_011"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_014",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Jetzt zittere ich und breche zusammen",
+      "Ich bin kurz davor, ohnmächtig zu werden",
+      "Ich kann mich nicht beruhigen"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Jetzt\\ zittere\\ ich\\ und\\ breche\\ zusammen|Ich\\ bin\\ kurz\\ davor,\\ ohnmächtig\\ zu\\ werden|Ich\\ kann\\ mich\\ nicht\\ beruhigen)"
+    },
+    "tags": [
+      "cri",
+      "acute_distress"
+    ],
+    "prio": 1,
+    "safety": "escalate",
+    "cat": "cri",
+    "cand": [
+      "cri_003",
+      "cri_006",
+      "cri_012"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.55,
+      "in_tok": 220,
+      "out_tok": 72,
+      "tts_ch": 230
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_015",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Jetzt ist niemand mehr an meiner Seite",
+      "Ich bin damit ganz allein",
+      "Ich habe im Moment niemanden, den ich anrufen kann"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Jetzt\\ ist\\ niemand\\ mehr\\ an\\ meiner\\ Seite|Ich\\ bin\\ damit\\ ganz\\ allein|Ich\\ habe\\ im\\ Moment\\ niemanden,\\ den\\ ich\\ anrufen\\ kann)"
+    },
+    "tags": [
+      "cri",
+      "isolation"
+    ],
+    "prio": 1,
+    "safety": "escalate",
+    "cat": "cri",
+    "cand": [
+      "cri_004",
+      "cri_005",
+      "cri_013"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.55,
+      "in_tok": 220,
+      "out_tok": 72,
+      "tts_ch": 230
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_016",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich kann nicht versprechen, dass ich in Sicherheit bleibe",
+      "Ich könnte mich heute verletzen",
+      "Ich habe das Gefühl, dass ich nicht bis zum Abend durchhalten kann"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ kann\\ nicht\\ versprechen,\\ dass\\ ich\\ in\\ Sicherheit\\ bleibe|Ich\\ könnte\\ mich\\ heute\\ verletzen|Ich\\ habe\\ das\\ Gefühl,\\ dass\\ ich\\ nicht\\ bis\\ zum\\ Abend\\ durchhalten\\ kann)"
+    },
+    "tags": [
+      "cri",
+      "unsafe"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_002",
+      "cri_005"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_017",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich kann meinem Kind auch schaden",
+      "Ich fürchte, ich gebe meiner Familie die Schuld",
+      "Ich kann mein Temperament nicht kontrollieren"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ kann\\ meinem\\ Kind\\ auch\\ schaden|Ich\\ fürchte,\\ ich\\ gebe\\ meiner\\ Familie\\ die\\ Schuld|Ich\\ kann\\ mein\\ Temperament\\ nicht\\ kontrollieren)"
+    },
+    "tags": [
+      "cri",
+      "family_risk"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_002",
+      "cri_014"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_018",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Sie müssen sofort mit jemandem verbunden sein",
+      "Ich brauche dringend Hilfe",
+      "Verbinde dich jetzt mit einer lebenden Person"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Sie\\ müssen\\ sofort\\ mit\\ jemandem\\ verbunden\\ sein|Ich\\ brauche\\ dringend\\ Hilfe|Verbinde\\ dich\\ jetzt\\ mit\\ einer\\ lebenden\\ Person)"
+    },
+    "tags": [
+      "cri",
+      "handoff_request"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_005",
+      "cri_006",
+      "cri_015"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_019",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich kann nicht aufhören zu weinen und zu zittern",
+      "Ich bin im Moment völlig kaputt",
+      "Jetzt ist alles zu viel"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ kann\\ nicht\\ aufhören\\ zu\\ weinen\\ und\\ zu\\ zittern|Ich\\ bin\\ im\\ Moment\\ völlig\\ kaputt|Jetzt\\ ist\\ alles\\ zu\\ viel)"
+    },
+    "tags": [
+      "cri",
+      "decompensation"
+    ],
+    "prio": 1,
+    "safety": "escalate",
+    "cat": "cri",
+    "cand": [
+      "cri_003",
+      "cri_004",
+      "cri_012"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.55,
+      "in_tok": 220,
+      "out_tok": 72,
+      "tts_ch": 230
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_020",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

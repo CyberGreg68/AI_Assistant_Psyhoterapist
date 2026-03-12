@@ -1,0 +1,2216 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paciens Chat Demo</title>
+  <style>
+    :root {
+      --canvas: #f7f1e8;
+      --panel: rgba(255, 250, 243, 0.9);
+      --panel-soft: rgba(255, 250, 243, 0.7);
+      --ink: #1f2928;
+      --muted: #5e6c6a;
+      --line: rgba(31, 41, 40, 0.12);
+      --accent: #0f766a;
+      --accent-soft: rgba(15, 118, 106, 0.12);
+      --alert: #b4352d;
+      --alert-soft: rgba(180, 53, 45, 0.12);
+      --warn: #d88c29;
+      --patient: #efe2cf;
+      --assistant: #dff1ea;
+      --system: #f8f1e4;
+      --shadow: 0 22px 70px rgba(78, 62, 39, 0.15);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(216, 140, 41, 0.22), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(15, 118, 106, 0.17), transparent 30%),
+        linear-gradient(145deg, #faf6ef 0%, #efe5d5 45%, #f7f1e8 100%);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .shell {
+      width: min(1240px, calc(100vw - 28px));
+      margin: 16px auto 24px;
+      display: grid;
+      grid-template-columns: 320px minmax(0, 1fr);
+      gap: 18px;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      background: var(--panel);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      box-shadow: var(--shadow);
+    }
+
+    .sidebar {
+      display: grid;
+      gap: 16px;
+      position: sticky;
+      top: 16px;
+      height: fit-content;
+    }
+
+    .block {
+      padding: 18px;
+      background: var(--panel-soft);
+      border: 1px solid rgba(31, 41, 40, 0.08);
+      border-radius: 22px;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      font: 700 12px/1.2 "Courier New", monospace;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 34px;
+      line-height: 1.04;
+    }
+
+    .lede,
+    .copy,
+    .microcopy,
+    .footer-note {
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .disclosure {
+      background: linear-gradient(135deg, rgba(15, 118, 106, 0.12), rgba(216, 140, 41, 0.08));
+    }
+
+    .safety-box {
+      border-color: rgba(180, 53, 45, 0.18);
+      background: linear-gradient(135deg, rgba(180, 53, 45, 0.12), rgba(255, 250, 243, 0.78));
+    }
+
+    .field-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .field {
+      display: grid;
+      gap: 7px;
+    }
+
+    .field label,
+    .toggle-label,
+    .small-label {
+      font: 700 11px/1.2 "Courier New", monospace;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    input,
+    textarea,
+    select,
+    button {
+      font: inherit;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px 14px;
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.76);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 96px;
+    }
+
+    .triple {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .toggle-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px 14px;
+      background: rgba(255, 255, 255, 0.65);
+    }
+
+    .toggle-row input {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--accent);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-rows: auto auto 1fr auto;
+      min-height: calc(100vh - 32px);
+      overflow: hidden;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 18px 22px 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .title-wrap {
+      display: grid;
+      gap: 5px;
+    }
+
+    .title {
+      margin: 0;
+      font-size: 26px;
+      line-height: 1.1;
+    }
+
+    .status {
+      font: 700 12px/1.2 "Courier New", monospace;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--warn);
+    }
+
+    .trust-banner,
+    .handoff-banner {
+      margin: 14px 20px 0;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 14px;
+      background: rgba(255, 255, 255, 0.6);
+    }
+
+    .handoff-banner {
+      display: none;
+      border-color: rgba(180, 53, 45, 0.2);
+      background: linear-gradient(135deg, rgba(180, 53, 45, 0.1), rgba(255, 250, 243, 0.86));
+    }
+
+    .trust-banner strong,
+    .handoff-banner strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .quickbar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding: 14px 20px 0;
+    }
+
+    .quick {
+      border-radius: 999px;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--ink);
+      font: 700 12px/1 "Courier New", monospace;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .quick.alert {
+      background: var(--alert);
+      color: #fff7f4;
+      border-color: transparent;
+    }
+
+    .timeline {
+      padding: 18px 20px;
+      overflow: auto;
+      display: grid;
+      gap: 14px;
+      align-content: start;
+      background:
+        linear-gradient(to bottom, rgba(255,255,255,0.12), rgba(255,255,255,0.02)),
+        repeating-linear-gradient(180deg, transparent, transparent 25px, rgba(31,41,40,0.026) 26px);
+    }
+
+    .bubble {
+      max-width: min(760px, 95%);
+      padding: 16px 18px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      box-shadow: 0 12px 28px rgba(31, 41, 40, 0.06);
+      animation: rise 180ms ease-out;
+    }
+
+    .bubble.patient {
+      margin-left: auto;
+      background: var(--patient);
+      border-bottom-right-radius: 8px;
+    }
+
+    .bubble.assistant {
+      background: var(--assistant);
+      border-bottom-left-radius: 8px;
+    }
+
+    .bubble.system {
+      background: var(--system);
+      max-width: 100%;
+    }
+
+    .bubble-head {
+      margin-bottom: 10px;
+      font: 700 11px/1.2 "Courier New", monospace;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .bubble-body {
+      white-space: pre-wrap;
+      line-height: 1.6;
+      word-break: break-word;
+    }
+
+    .meta,
+    .feedback-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .chip,
+    .star {
+      border-radius: 999px;
+      padding: 6px 10px;
+      font: 700 11px/1.2 "Courier New", monospace;
+      color: var(--muted);
+      border: 1px solid rgba(31, 41, 40, 0.08);
+      background: rgba(255, 255, 255, 0.54);
+    }
+
+    .star {
+      cursor: pointer;
+    }
+
+    .composer {
+      border-top: 1px solid var(--line);
+      background: rgba(255, 248, 238, 0.92);
+      padding: 18px 20px 20px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .composer-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: end;
+    }
+
+    .action-stack {
+      display: grid;
+      gap: 10px;
+    }
+
+    .composer-tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .voice-toggle {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 11px 13px;
+      background: rgba(255, 255, 255, 0.68);
+      color: var(--muted);
+      font: 700 11px/1.2 "Courier New", monospace;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .voice-toggle input {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--accent);
+    }
+
+    button {
+      border: 0;
+      border-radius: 16px;
+      padding: 14px 18px;
+      cursor: pointer;
+      font: 700 12px/1.1 "Courier New", monospace;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: transform 120ms ease, opacity 120ms ease;
+    }
+
+    button:hover { transform: translateY(-1px); }
+    button:disabled { opacity: 0.55; cursor: wait; transform: none; }
+
+    .primary { background: var(--accent); color: #fffdf9; }
+    .secondary { background: transparent; color: var(--muted); border: 1px solid var(--line); }
+    .danger { background: var(--alert); color: #fff8f6; }
+
+    .floating-crisis {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 20;
+      box-shadow: 0 20px 40px rgba(180, 53, 45, 0.24);
+    }
+
+    .modal-shell {
+      position: fixed;
+      inset: 0;
+      background: rgba(28, 29, 28, 0.42);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      z-index: 30;
+    }
+
+    .modal {
+      width: min(720px, 100%);
+      padding: 22px;
+      border-radius: 28px;
+      background: #fff9f0;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .checklist {
+      display: grid;
+      gap: 10px;
+      margin: 16px 0 22px;
+      color: var(--muted);
+    }
+
+    .checklist div {
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid var(--line);
+    }
+
+    .hidden { display: none; }
+
+    .debug-console {
+      margin: 0 20px 16px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(31, 41, 40, 0.95);
+      color: #f7f1e8;
+      display: none;
+      overflow: hidden;
+    }
+
+    .debug-head {
+      padding: 14px 16px;
+      border-bottom: 1px solid rgba(247, 241, 232, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .debug-title {
+      font: 700 12px/1.2 "Courier New", monospace;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #9fdccf;
+    }
+
+    .debug-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+    }
+
+    .debug-pane {
+      padding: 16px;
+      border-right: 1px solid rgba(247, 241, 232, 0.08);
+    }
+
+    .debug-pane:last-child {
+      border-right: 0;
+    }
+
+    .debug-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 8px;
+    }
+
+    .debug-list li {
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.06);
+      color: #f7f1e8;
+      line-height: 1.45;
+    }
+
+    .debug-json {
+      margin: 0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font: 12px/1.5 "Courier New", monospace;
+      color: #f4edde;
+    }
+
+    .debug-cards {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .debug-card {
+      border: 1px solid rgba(247, 241, 232, 0.08);
+      border-radius: 16px;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .debug-card strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .identity-note {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .debug-history {
+      display: grid;
+      gap: 8px;
+    }
+
+    .debug-history-row {
+      border-radius: 12px;
+      padding: 9px 10px;
+      background: rgba(255, 255, 255, 0.05);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .debug-subhead {
+      margin-top: 14px;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 980px) {
+      .shell { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+      .hero { min-height: 0; }
+    }
+
+    @media (max-width: 700px) {
+      .shell { width: min(100vw - 16px, 1240px); }
+      .triple,
+      .composer-grid { grid-template-columns: 1fr; }
+      .topbar,
+      .timeline,
+      .composer,
+      .quickbar,
+      .trust-banner,
+      .handoff-banner,
+      .debug-console { padding-left: 16px; padding-right: 16px; }
+      .bubble { max-width: 100%; }
+      .floating-crisis { left: 12px; right: 12px; width: auto; }
+      .debug-grid { grid-template-columns: 1fr; }
+    }
+
+    html[data-skin="aare"] {
+      --canvas: #f7f1e6;
+      --panel: rgba(252, 247, 239, 0.86);
+      --panel-soft: rgba(251, 245, 236, 0.68);
+      --ink: #22322f;
+      --muted: #5d6c67;
+      --line: rgba(34, 50, 47, 0.1);
+      --accent: #2e7c72;
+      --accent-soft: rgba(46, 124, 114, 0.12);
+      --alert: #b85245;
+      --alert-soft: rgba(184, 82, 69, 0.12);
+      --warn: #c78d45;
+      --patient: #f4e6d5;
+      --assistant: #deefe8;
+      --system: #f6efe4;
+      --shadow: 0 26px 80px rgba(104, 85, 57, 0.14);
+      --glow-a: rgba(214, 165, 94, 0.22);
+      --glow-b: rgba(73, 142, 132, 0.18);
+      --glow-c: rgba(255, 255, 255, 0.55);
+      --font-display: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      --font-ui: "Trebuchet MS", "Gill Sans", sans-serif;
+    }
+
+    html[data-skin="river"] {
+      --canvas: #eef4f1;
+      --panel: rgba(247, 251, 249, 0.84);
+      --panel-soft: rgba(242, 248, 246, 0.68);
+      --ink: #193332;
+      --muted: #55706d;
+      --line: rgba(25, 51, 50, 0.1);
+      --accent: #1f7a7a;
+      --accent-soft: rgba(31, 122, 122, 0.13);
+      --alert: #ba5c48;
+      --alert-soft: rgba(186, 92, 72, 0.12);
+      --warn: #cb9152;
+      --patient: #e7efe9;
+      --assistant: #d9eff2;
+      --system: #eff6f3;
+      --shadow: 0 28px 84px rgba(51, 88, 89, 0.14);
+      --glow-a: rgba(109, 170, 157, 0.24);
+      --glow-b: rgba(33, 122, 122, 0.18);
+      --glow-c: rgba(255, 255, 255, 0.52);
+      --font-display: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      --font-ui: "Verdana", "Trebuchet MS", sans-serif;
+    }
+
+    html[data-skin="dusk"] {
+      --canvas: #efe5da;
+      --panel: rgba(251, 244, 239, 0.84);
+      --panel-soft: rgba(248, 239, 234, 0.66);
+      --ink: #2a2f35;
+      --muted: #67646f;
+      --line: rgba(42, 47, 53, 0.1);
+      --accent: #5d7f98;
+      --accent-soft: rgba(93, 127, 152, 0.14);
+      --alert: #b15c55;
+      --alert-soft: rgba(177, 92, 85, 0.14);
+      --warn: #c09159;
+      --patient: #f0dfd7;
+      --assistant: #dde8ef;
+      --system: #f2e9e1;
+      --shadow: 0 30px 90px rgba(77, 67, 75, 0.16);
+      --glow-a: rgba(163, 122, 95, 0.23);
+      --glow-b: rgba(93, 127, 152, 0.18);
+      --glow-c: rgba(255, 255, 255, 0.46);
+      --font-display: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      --font-ui: "Segoe UI", "Trebuchet MS", sans-serif;
+    }
+
+    html[data-tone="grounded"] {
+      --accent: color-mix(in srgb, var(--accent) 62%, #5f6f60 38%);
+      --panel: color-mix(in srgb, var(--panel) 84%, rgba(235, 230, 222, 0.94) 16%);
+    }
+
+    html[data-tone="soft"] {
+      --panel-soft: color-mix(in srgb, var(--panel-soft) 72%, rgba(255, 255, 255, 0.46) 28%);
+      --shadow: 0 24px 72px rgba(96, 83, 63, 0.12);
+    }
+
+    html[data-tone="lifted"] {
+      --accent: color-mix(in srgb, var(--accent) 78%, #5f9d7e 22%);
+      --glow-b: color-mix(in srgb, var(--glow-b) 72%, rgba(255, 221, 179, 0.16) 28%);
+    }
+
+    body {
+      font-family: var(--font-ui);
+      background:
+        radial-gradient(circle at 8% 12%, var(--glow-a), transparent 24%),
+        radial-gradient(circle at 86% 14%, var(--glow-b), transparent 28%),
+        radial-gradient(circle at 50% 100%, var(--glow-c), transparent 40%),
+        linear-gradient(148deg, color-mix(in srgb, var(--canvas) 92%, #fff 8%) 0%, var(--canvas) 56%, color-mix(in srgb, var(--canvas) 88%, #ece5db 12%) 100%);
+      transition: background 420ms ease, color 220ms ease;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      inset: auto;
+      pointer-events: none;
+      z-index: 0;
+      filter: blur(14px);
+      opacity: 0.65;
+    }
+
+    body::before {
+      top: -72px;
+      right: -48px;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, transparent 68%);
+    }
+
+    body::after {
+      left: -40px;
+      bottom: 64px;
+      width: 220px;
+      height: 220px;
+      border-radius: 38% 62% 55% 45%;
+      background: radial-gradient(circle, color-mix(in srgb, var(--accent-soft) 75%, rgba(255,255,255,0.14) 25%) 0%, transparent 70%);
+    }
+
+    .shell,
+    .floating-crisis,
+    .modal-shell {
+      position: relative;
+      z-index: 1;
+    }
+
+    .panel {
+      background: linear-gradient(180deg, rgba(255,255,255,0.16), transparent 34%), var(--panel);
+      border-color: var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .block {
+      background: linear-gradient(180deg, rgba(255,255,255,0.2), transparent 38%), var(--panel-soft);
+    }
+
+    .eyebrow,
+    .field label,
+    .toggle-label,
+    .small-label,
+    .status,
+    .bubble-head,
+    .chip,
+    .star,
+    .quick {
+      font-family: "Aptos Mono", "Courier New", monospace;
+    }
+
+    h1,
+    h2,
+    h3,
+    .title {
+      font-family: var(--font-display);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .hero {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.16), transparent 20%),
+        radial-gradient(circle at top center, rgba(255,255,255,0.22), transparent 38%);
+    }
+
+    .topbar {
+      padding: 24px 26px 18px;
+      border-bottom-color: var(--line);
+    }
+
+    .trust-banner,
+    .handoff-banner,
+    .toggle-row,
+    input,
+    textarea,
+    select,
+    .quick,
+    .chip,
+    .star,
+    .checklist div {
+      background: linear-gradient(180deg, rgba(255,255,255,0.24), rgba(255,255,255,0.08));
+    }
+
+    .trust-banner,
+    .handoff-banner {
+      border-radius: 24px;
+      padding: 16px 18px;
+    }
+
+    .quick {
+      box-shadow: 0 8px 20px rgba(31, 41, 40, 0.06);
+    }
+
+    .timeline {
+      background:
+        radial-gradient(circle at top center, rgba(255,255,255,0.18), transparent 32%),
+        linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.02));
+      padding-top: 22px;
+    }
+
+    .bubble {
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+      border-radius: 24px;
+    }
+
+    .bubble.patient,
+    .bubble.assistant,
+    .bubble.system {
+      background-image: linear-gradient(180deg, rgba(255,255,255,0.16), rgba(255,255,255,0.04));
+    }
+
+    .composer {
+      background: linear-gradient(180deg, rgba(255,255,255,0.24), rgba(255,255,255,0.08)), var(--panel);
+      padding: 20px 22px 24px;
+    }
+
+    .primary {
+      background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 90%, #fff 10%), color-mix(in srgb, var(--accent) 70%, #21433f 30%));
+      box-shadow: 0 16px 34px color-mix(in srgb, var(--accent-soft) 70%, rgba(34,50,47,0.14) 30%);
+    }
+
+    .secondary {
+      background: rgba(255,255,255,0.2);
+    }
+
+    .danger {
+      background: linear-gradient(135deg, color-mix(in srgb, var(--alert) 85%, #fff 15%), color-mix(in srgb, var(--alert) 78%, #6f2c26 22%));
+    }
+
+    .modal {
+      background: linear-gradient(180deg, rgba(255,255,255,0.3), rgba(255,255,255,0.08)), color-mix(in srgb, var(--panel) 90%, #fff 10%);
+    }
+
+    .theme-controls {
+      align-items: end;
+    }
+
+    .theme-note {
+      min-height: 48px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 11px 13px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.24), rgba(255,255,255,0.08));
+      color: var(--muted);
+      line-height: 1.45;
+      font-size: 13px;
+    }
+
+    .theme-note strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .debug-console {
+      background: linear-gradient(180deg, rgba(18, 24, 26, 0.94), rgba(22, 27, 30, 0.97));
+      box-shadow: 0 28px 70px rgba(19, 24, 26, 0.26);
+    }
+  </style>
+</head>
+<body>
+  <div id="onboarding" class="modal-shell">
+    <section class="modal">
+      <div class="eyebrow">Gyors belepes</div>
+      <h1>Rovid ejszakai tamogatas</h1>
+      <p class="lede">Szia - itt az ejszakai asszisztens. Rovid valaszokat adok, segithetek coping lepesekben, es ha kell, jelzem, hogy emberi segitseg szukseges.</p>
+      <div class="checklist">
+        <div><strong>Mi ez?</strong> Egy asszisztenssel beszelsz, nem eloterjesztett terapeuta-dontessel.</div>
+        <div><strong>Hatarok:</strong> Nem adok orvosi diagnosztikat vagy jogi tanacsot.</div>
+        <div><strong>Biztonsag:</strong> Surgos helyzetben hasznald a piros segitseg gombot vagy helyi segelyhivot.</div>
+        <div><strong>Emberi tamogatas:</strong> Kockazatnal handoff uzenet jelenik meg, es lathatoan jelezzuk, ha emberi kovetes kell.</div>
+      </div>
+      <div class="actions">
+        <button id="start-demo" class="primary">Rendben, kezdem</button>
+      </div>
+    </section>
+  </div>
+
+  <div class="shell">
+    <aside class="sidebar">
+      <section class="panel block disclosure">
+        <div class="eyebrow">Transzparencia</div>
+        <h2>Asszisztenssel beszelsz</h2>
+        <p class="copy">Mindig jelezzuk, hogy ez egy asszisztens. Ha a rendszer aggaszto jeleket lat, lathato handoff tajekoztatast ad.</p>
+      </section>
+
+      <section class="panel block safety-box">
+        <div class="eyebrow">Biztonsag elore</div>
+        <h3>Surgos segitseg</h3>
+        <p class="copy">Hasznald a krizis gombot, ha azonnali tamogatas kell. A demo ilyenkor azonnal krizis-uzenetet kuld a runtime-nak.</p>
+        <button id="sidebar-crisis" class="danger">Surgos segitseg</button>
+      </section>
+
+      <section class="panel block">
+        <div class="eyebrow">Szemelyre szabás</div>
+        <div class="field-grid">
+          <div class="field">
+            <label for="ui-language">Nyelv</label>
+            <select id="ui-language"></select>
+          </div>
+          <div class="field">
+            <label for="patient-id">Patient ID</label>
+            <input id="patient-id" type="text" placeholder="pl. p-1 vagy hagyd uresen">
+          </div>
+          <div class="triple">
+            <div class="field">
+              <label for="age-group">Kor</label>
+              <select id="age-group">
+                <option value="">auto</option>
+                <option value="child">child</option>
+                <option value="teen">teen</option>
+                <option value="adult" selected>adult</option>
+                <option value="senior">senior</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="literacy-level">Nyelvezet</label>
+              <select id="literacy-level">
+                <option value="">auto</option>
+                <option value="low" selected>egyszeru</option>
+                <option value="medium">kozepes</option>
+                <option value="high">reszletes</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="preferred-register">Regiszter</label>
+              <select id="preferred-register">
+                <option value="plain" selected>egyszeru</option>
+                <option value="conversational">koznapi</option>
+                <option value="clinical">reszletes</option>
+              </select>
+            </div>
+          </div>
+          <div class="triple">
+            <div class="field">
+              <label for="tts-speed">Hang tempo</label>
+              <select id="tts-speed">
+                <option value="">auto</option>
+                <option value="slow">lassu</option>
+                <option value="normal" selected>normal</option>
+                <option value="fast">gyors</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="latency-context">Latency</label>
+              <select id="latency-context">
+                <option value="">none</option>
+                <option value="acknowledge_then_compute">acknowledge_then_compute</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="history-mode">Adatmod</label>
+              <select id="history-mode">
+                <option value="limited" selected>anonim limited</option>
+                <option value="identified">azonositott</option>
+              </select>
+            </div>
+          </div>
+          <div class="triple theme-controls">
+            <div class="field">
+              <label for="theme-mode">Atmoszfera</label>
+              <select id="theme-mode"></select>
+            </div>
+            <div class="field">
+              <label for="theme-skin">Skin</label>
+              <select id="theme-skin"></select>
+            </div>
+            <div class="field">
+              <label for="theme-note">Aktiv ambience</label>
+              <div id="theme-note" class="theme-note">Auto ambience aktiv.</div>
+            </div>
+          </div>
+          <div class="toggle-row">
+            <span class="toggle-label">Prefer Online</span>
+            <input id="prefer-online" type="checkbox" checked title="Prefer online route">
+          </div>
+          <div class="toggle-row">
+            <span class="toggle-label">Show Routing Details</span>
+            <input id="show-routing" type="checkbox" title="Show routing details">
+          </div>
+          <div class="toggle-row">
+            <span class="toggle-label">Demo Mode</span>
+            <input id="demo-mode" type="checkbox" checked title="Show detailed debug explanation">
+          </div>
+          <div class="toggle-row">
+            <span class="toggle-label">Include Review/Test Content</span>
+            <input id="include-review-items" type="checkbox" title="Allow non-approved content in test mode">
+          </div>
+          <div class="toggle-row">
+            <span class="toggle-label">Rovid excerpt mentese minoseghez</span>
+            <input id="consent-store" type="checkbox" title="Consent to store a short excerpt">
+          </div>
+        </div>
+      </section>
+    </aside>
+
+    <main class="panel hero">
+      <header class="topbar">
+        <div class="title-wrap">
+          <div class="eyebrow">Patient Web Chat</div>
+          <h2 class="title">Gyors belepes, vilagos hatarok</h2>
+          <div class="microcopy">Mi a legfontosabb most? Egy mondat is eleg.</div>
+        </div>
+        <div class="topbar-actions">
+          <div id="status" class="status">Ready</div>
+          <button id="logout-button" class="secondary" type="button">Kilepes</button>
+        </div>
+      </header>
+
+      <section class="trust-banner">
+        <div>
+          <strong>Asszisztens + lathato emberi kovetes</strong>
+          <div class="microcopy">Ha handoff tortenik, itt jelenik meg a tajekoztatas. Krizishelyzetben a rendszer azonnal biztonsagi valtasra all.</div>
+        </div>
+        <div class="chip">web_chat</div>
+      </section>
+
+      <section id="handoff-banner" class="handoff-banner">
+        <div>
+          <strong>Handoff aktiv</strong>
+          <div id="handoff-text" class="microcopy">A kezelo ertesitve. Vard a tovabbi kapcsolatfelvetelt.</div>
+        </div>
+        <div id="handoff-chip" class="chip">urgent</div>
+      </section>
+
+      <section class="quickbar">
+        <button class="quick" data-quick-key="anxiety">Szorongok</button>
+        <button class="quick" data-quick-key="sleep">Alvasproblema</button>
+        <button class="quick" data-quick-key="breathing">Most legzest szeretnek</button>
+        <button class="quick" data-quick-key="pause">Szuenetet kerek</button>
+        <button class="quick alert" id="quick-urgent">Surgos</button>
+        <a id="mobile-link" class="quick" href="/chat/mobile">Mobil demo</a>
+      </section>
+
+      <section id="timeline" class="timeline">
+        <article class="bubble system">
+          <div class="bubble-head">Onboarding</div>
+          <div class="bubble-body">Szia - itt az ejszakai asszisztens. Rovid valaszokkal segitek, es ha szukseges, lathatoan jelzem az emberi beavatkozast.</div>
+          <div class="meta">
+            <span class="chip">assistant_disclosure</span>
+            <span class="chip">safety_active</span>
+          </div>
+        </article>
+      </section>
+
+      <section id="debug-console" class="debug-console">
+        <div class="debug-head">
+          <div>
+            <div class="debug-title">Demo Console</div>
+            <div class="microcopy">Itt latod, milyen trigger, route es phrase alapjan szuletett a valasz.</div>
+          </div>
+          <div id="debug-turn" class="chip">turn: 0</div>
+        </div>
+        <div class="debug-grid">
+          <div class="debug-pane">
+            <div class="small-label">Mi tortent es miert?</div>
+            <div class="debug-cards">
+              <div class="debug-card">
+                <strong>Hybrid selection</strong>
+                <div id="debug-hybrid" class="microcopy">A hybrid dontes allapota itt jelenik meg.</div>
+              </div>
+              <div class="debug-card">
+                <strong>Conversation summary</strong>
+                <div id="debug-summary" class="microcopy">A friss beszelgetes rovid osszefoglaloja itt jelenik meg.</div>
+              </div>
+              <div class="debug-card">
+                <strong>Patient identity</strong>
+                <div id="debug-identity" class="microcopy">A feloldott patient identity itt jelenik meg.</div>
+              </div>
+            </div>
+            <ul id="debug-explanation" class="debug-list">
+              <li>A demo mod minden kuldes utan ide irja a magyarazatot.</li>
+            </ul>
+          </div>
+          <div class="debug-pane">
+            <div class="small-label">Recent history</div>
+            <div id="debug-history" class="debug-history">
+              <div class="debug-history-row">A legutobbi turnok itt jelennek meg.</div>
+            </div>
+            <div class="small-label debug-subhead">Nyers debug</div>
+            <pre id="debug-json" class="debug-json">{}</pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="composer">
+        <div class="composer-grid">
+          <textarea id="message" placeholder="Pelda: Nem tudom, hogyan kezdjem elmondani."></textarea>
+          <div class="action-stack">
+            <button id="record-button" class="secondary" type="button">Mikrofon</button>
+            <button id="send" class="primary">Kuldes</button>
+            <button id="clear" class="secondary" type="button">Urites</button>
+          </div>
+        </div>
+        <div class="composer-tools">
+          <label class="voice-toggle">
+            <input id="auto-speak" type="checkbox" checked>
+            <span id="auto-speak-label">Valasz felolvasasa</span>
+          </label>
+        </div>
+        <div class="footer-note">One-tap opciok: rovid coping kerdesek, gyors support, szunet, krizis-jelzes. A demo jelenleg a helyi runtime vegpontot hasznalja.</div>
+        <div id="voice-note" class="identity-note">Mikrofon capture es helyi felolvasas aktiv, ha a bongeszo tamogatja.</div>
+        <div id="identity-note" class="identity-note">Patient memory key: loading...</div>
+      </section>
+    </main>
+  </div>
+
+  <button id="floating-crisis" class="danger floating-crisis">Surgos segitseg</button>
+
+  <script>
+    const timeline = document.getElementById('timeline');
+    const messageInput = document.getElementById('message');
+    const langSelect = document.getElementById('ui-language');
+    const patientIdInput = document.getElementById('patient-id');
+    const ageGroupInput = document.getElementById('age-group');
+    const literacyLevelInput = document.getElementById('literacy-level');
+    const preferredRegisterInput = document.getElementById('preferred-register');
+    const ttsSpeedInput = document.getElementById('tts-speed');
+    const preferOnlineInput = document.getElementById('prefer-online');
+    const showRoutingInput = document.getElementById('show-routing');
+    const demoModeInput = document.getElementById('demo-mode');
+    const includeReviewItemsInput = document.getElementById('include-review-items');
+    const latencyContextInput = document.getElementById('latency-context');
+    const historyModeInput = document.getElementById('history-mode');
+    const themeModeInput = document.getElementById('theme-mode');
+    const themeSkinInput = document.getElementById('theme-skin');
+    const consentStoreInput = document.getElementById('consent-store');
+    const sendButton = document.getElementById('send');
+    const clearButton = document.getElementById('clear');
+    const statusNode = document.getElementById('status');
+    const onboardingNode = document.getElementById('onboarding');
+    const handoffBanner = document.getElementById('handoff-banner');
+    const handoffText = document.getElementById('handoff-text');
+    const handoffChip = document.getElementById('handoff-chip');
+    const debugConsole = document.getElementById('debug-console');
+    const debugExplanation = document.getElementById('debug-explanation');
+    const debugJson = document.getElementById('debug-json');
+    const debugTurn = document.getElementById('debug-turn');
+    const debugHybrid = document.getElementById('debug-hybrid');
+    const debugSummary = document.getElementById('debug-summary');
+    const debugIdentity = document.getElementById('debug-identity');
+    const debugHistory = document.getElementById('debug-history');
+    const identityNote = document.getElementById('identity-note');
+    const personalizationPanel = document.querySelectorAll('.sidebar .panel.block')[2];
+    const personalizationLabels = personalizationPanel.querySelectorAll('label');
+    const toggleLabels = personalizationPanel.querySelectorAll('.toggle-label');
+    const onboardingEyebrow = document.querySelector('.modal .eyebrow');
+    const onboardingTitle = document.querySelector('.modal h1');
+    const onboardingLede = document.querySelector('.modal .lede');
+    const onboardingChecklist = document.querySelector('.modal .checklist');
+    const startDemoButton = document.getElementById('start-demo');
+    const disclosurePanel = document.querySelectorAll('.sidebar .panel.block')[0];
+    const safetyPanel = document.querySelectorAll('.sidebar .panel.block')[1];
+    const topbarEyebrow = document.querySelector('.title-wrap .eyebrow');
+    const topbarTitle = document.querySelector('.title-wrap .title');
+    const topbarCopy = document.querySelector('.title-wrap .microcopy');
+    const trustBanner = document.querySelector('.trust-banner');
+    const trustTitle = trustBanner.querySelector('strong');
+    const trustCopy = trustBanner.querySelector('.microcopy');
+    const introBubbleHead = timeline.querySelector('.bubble-head');
+    const introBubbleBody = timeline.querySelector('.bubble-body');
+    const quickButtons = Array.from(document.querySelectorAll('[data-quick-key]'));
+    const mobileLink = document.getElementById('mobile-link');
+    const quickUrgentButton = document.getElementById('quick-urgent');
+    const sidebarCrisisButton = document.getElementById('sidebar-crisis');
+    const floatingCrisisButton = document.getElementById('floating-crisis');
+    const debugHeadCopy = document.querySelector('.debug-head .microcopy');
+    const debugPaneLabels = debugConsole.querySelectorAll('.small-label');
+    const debugCardTitles = debugConsole.querySelectorAll('.debug-card strong');
+    const footerNote = document.querySelector('.footer-note');
+    const themeModeLabel = document.querySelector('label[for="theme-mode"]');
+    const themeSkinLabel = document.querySelector('label[for="theme-skin"]');
+    const themeNoteLabel = document.querySelector('label[for="theme-note"]');
+    const themeNoteNode = document.getElementById('theme-note');
+    const logoutButton = document.getElementById('logout-button');
+    const recordButton = document.getElementById('record-button');
+    const autoSpeakInput = document.getElementById('auto-speak');
+    const autoSpeakLabel = document.getElementById('auto-speak-label');
+    const voiceNoteNode = document.getElementById('voice-note');
+
+    const DEFAULT_UI_CONFIG = {
+      supported_languages: ['hu', 'en', 'de'],
+      default_language: 'hu'
+    };
+
+    const THEME_COPY = {
+      hu: {
+        modeLabel: 'Atmoszfera',
+        skinLabel: 'Skin',
+        noteLabel: 'Aktiv ambience',
+        modes: [['auto', 'Auto: profil + napszak + hangulat'], ['manual', 'Kezi skin']],
+        skins: { aare: 'Aare Light', river: 'River Calm', dusk: 'Soft Evening' },
+        reasons: {
+          manual: 'kezi valasztas',
+          morning: 'reggeli ritmus',
+          day: 'napkozbeni egyensuly',
+          evening: 'esti lenyugtatas',
+          night: 'ejszakai puhitas',
+          urgent: 'fokozott biztonsag',
+          heavy: 'nagyobb terheles',
+          rest: 'pihenes-fokusz',
+          calm: 'nyugodtabb hangulat',
+          steady: 'semleges alap'
+        }
+      },
+      en: {
+        modeLabel: 'Ambience',
+        skinLabel: 'Skin',
+        noteLabel: 'Active ambience',
+        modes: [['auto', 'Auto: profile + time + mood'], ['manual', 'Manual skin']],
+        skins: { aare: 'Aare Light', river: 'River Calm', dusk: 'Soft Evening' },
+        reasons: {
+          manual: 'manual choice',
+          morning: 'morning rhythm',
+          day: 'daytime balance',
+          evening: 'evening wind-down',
+          night: 'night support',
+          urgent: 'safety focus',
+          heavy: 'heavier emotional load',
+          rest: 'rest support',
+          calm: 'calmer tone',
+          steady: 'neutral base'
+        }
+      },
+      de: {
+        modeLabel: 'Ambiente',
+        skinLabel: 'Skin',
+        noteLabel: 'Aktives Ambiente',
+        modes: [['auto', 'Auto: Profil + Tageszeit + Stimmung'], ['manual', 'Manueller Skin']],
+        skins: { aare: 'Aare Light', river: 'River Calm', dusk: 'Soft Evening' },
+        reasons: {
+          manual: 'manuelle Wahl',
+          morning: 'Morgenrhythmus',
+          day: 'Tagesbalance',
+          evening: 'Abendliches Runterfahren',
+          night: 'Nachtmodus',
+          urgent: 'Sicherheitsfokus',
+          heavy: 'hoehere Belastung',
+          rest: 'Ruhe-Fokus',
+          calm: 'ruhigere Stimmung',
+          steady: 'neutrale Basis'
+        }
+      }
+    };
+
+    const UI_COPY = {
+      hu: {
+        language: 'Nyelv',
+        onboarding: {
+          eyebrow: 'Gyors belepes',
+          title: 'Rovid ejszakai tamogatas',
+          lede: 'Szia - itt az ejszakai asszisztens. Rovid valaszokat adok, segithetek coping lepesekben, es ha kell, jelzem, hogy emberi segitseg szukseges.',
+          checklist: '<div><strong>Mi ez?</strong> Egy asszisztenssel beszelsz, nem eloterjesztett terapeuta-dontessel.</div><div><strong>Hatarok:</strong> Nem adok orvosi diagnosztikat vagy jogi tanacsot.</div><div><strong>Biztonsag:</strong> Surgos helyzetben hasznald a piros segitseg gombot vagy helyi segelyhivot.</div><div><strong>Emberi tamogatas:</strong> Kockazatnal handoff uzenet jelenik meg, es lathatoan jelezzuk, ha emberi kovetes kell.</div>',
+          start: 'Rendben, kezdem'
+        },
+        sidebar: {
+          disclosureEyebrow: 'Transzparencia',
+          disclosureTitle: 'Asszisztenssel beszelsz',
+          disclosureCopy: 'Mindig jelezzuk, hogy ez egy asszisztens. Ha a rendszer aggaszto jeleket lat, lathato handoff tajekoztatast ad.',
+          safetyEyebrow: 'Biztonsag elore',
+          safetyTitle: 'Surgos segitseg',
+          safetyCopy: 'Hasznald a krizis gombot, ha azonnali tamogatas kell. A demo ilyenkor azonnal krizis-uzenetet kuld a runtime-nak.',
+          personalization: 'Szemelyre szabás',
+          labels: ['Nyelv', 'Patient ID', 'Kor', 'Nyelvezet', 'Regiszter', 'Hang tempo', 'Latency', 'Adatmod'],
+          toggles: ['Prefer Online', 'Show Routing Details', 'Demo Mode', 'Include Review/Test Content', 'Rovid excerpt mentese minoseghez']
+        },
+        hero: {
+          eyebrow: 'Patient Web Chat',
+          title: 'Gyors belepes, vilagos hatarok',
+          copy: 'Mi a legfontosabb most? Egy mondat is eleg.',
+          trustTitle: 'Asszisztens + lathato emberi kovetes',
+          trustCopy: 'Ha handoff tortenik, itt jelenik meg a tajekoztatas. Krizishelyzetben a rendszer azonnal biztonsagi valtasra all.',
+          handoffTitle: 'Handoff aktiv',
+          handoffText: 'Aggaszto jelek miatt emberi kovetes szukseges. A kezelo ertesitese inditva vagy javasolt.',
+          introHead: 'Onboarding',
+          introBody: 'Szia - itt az ejszakai asszisztens. Rovid valaszokkal segitek, es ha szukseges, lathatoan jelzem az emberi beavatkozast.'
+        },
+        quick: {
+          anxiety: { label: 'Szorongok', text: 'Szorongok, szeretnek gyors tamogatast.' },
+          sleep: { label: 'Alvasproblema', text: 'Alvasproblemam van, nem tudok lenyugodni.' },
+          breathing: { label: 'Legzes', text: 'Most legzest szeretnek.' },
+          pause: { label: 'Szuenet', text: 'Szuenetet kerek.' },
+          urgentLabel: 'Surgos',
+          urgentText: 'Surgos segitsegre van szuksegem most.',
+          mobileLink: 'Mobil demo'
+        },
+        debug: {
+          title: 'Demo Console',
+          copy: 'Itt latod, milyen trigger, route es phrase alapjan szuletett a valasz.',
+          labels: ['Mi tortent es miert?', 'Recent history', 'Nyers debug'],
+          cards: ['Hybrid selection', 'Conversation summary', 'Patient identity'],
+          hybridPlaceholder: 'A hybrid dontes allapota itt jelenik meg.',
+          summaryPlaceholder: 'A friss beszelgetes rovid osszefoglaloja itt jelenik meg.',
+          identityPlaceholder: 'A feloldott patient identity itt jelenik meg.',
+          historyPlaceholder: 'A legutobbi turnok itt jelennek meg.',
+          explanationPlaceholder: 'A demo mod minden kuldes utan ide irja a magyarazatot.'
+        },
+        composer: {
+          placeholder: 'Pelda: Nem tudom, hogyan kezdjem elmondani.',
+          send: 'Kuldes',
+          clear: 'Urites',
+          record: 'Mikrofon',
+          stopRecord: 'Stop',
+          logout: 'Kilepes',
+          autoSpeak: 'Valasz felolvasasa',
+          footer: 'One-tap opciok: rovid coping kerdesek, gyors support, szunet, krizis-jelzes. A demo jelenleg a helyi runtime vegpontot hasznalja.',
+          voiceNote: 'Mikrofon capture es helyi felolvasas aktiv, ha a bongeszo tamogatja.',
+          identityPrefix: 'Patient memory key: '
+        },
+        options: {
+          patientPlaceholder: 'pl. p-1 vagy hagyd uresen',
+          age: [['', 'auto'], ['child', 'child'], ['teen', 'teen'], ['adult', 'adult'], ['senior', 'senior']],
+          literacy: [['', 'auto'], ['low', 'egyszeru'], ['medium', 'kozepes'], ['high', 'reszletes']],
+          register: [['plain', 'egyszeru'], ['conversational', 'koznapi'], ['clinical', 'reszletes']],
+          tts: [['', 'auto'], ['slow', 'lassu'], ['normal', 'normal'], ['fast', 'gyors']],
+          latency: [['', 'none'], ['acknowledge_then_compute', 'acknowledge_then_compute']],
+          history: [['limited', 'anonim limited'], ['identified', 'azonositott']]
+        },
+        roles: { patient: 'Patient', assistant: 'Assistant', system: 'System' },
+        statuses: { ready: 'Ready', online: 'Online Ready', local: 'Local Only', offline: 'Offline', thinking: 'Thinking', empty: 'Empty', error: 'Error', paused: 'Paused' },
+        messages: { feedback: 'Feedback rogzitve', latency: 'Varakozasi preamble', noResponse: '(nincs valaszszoveg)', paused: 'A szunet aktiv. Oldd fel a szunetet, ha uj uzenetet szeretnel kuldeni.', pauseApplied: 'Ertem. Szunetet tartunk. Az ertesiteseket most nem kuldom tovabb.', cleared: 'A nezet torolve lett. A beszelgetesi elozmeny jelenleg csak ebben a helyi demo nezetben latszik.', unknownError: 'ismeretlen hiba', networkError: 'network_error', historyLimited: 'anonim_limited', historyIdentified: 'identified', noHybrid: 'Nincs hybrid dontesi adat.', noSummary: 'Nincs conversation summary.', noIdentity: 'Nincs identity adat.', noHistory: 'Nincs recent history.', speechUnavailable: 'A bongeszo nem tamogat helyi mikrofonfelismerest.', speechCaptureStart: 'Mikrofon figyeles indult.', speechCaptureError: 'Mikrofon hiba', speechCaptured: 'Felismert szoveg', authRequired: 'Session lejart, uj belepes kell.' }
+      },
+      en: {
+        language: 'Language',
+        onboarding: {
+          eyebrow: 'Fast entry',
+          title: 'Brief overnight support',
+          lede: 'You are chatting with the overnight assistant. Responses stay short, coping steps are possible, and human follow-up is made visible when needed.',
+          checklist: '<div><strong>What is this?</strong> You are speaking with an assistant, not a therapist making decisions for you.</div><div><strong>Limits:</strong> No medical diagnoses and no legal advice.</div><div><strong>Safety:</strong> In urgent situations use the red help button or your local emergency support.</div><div><strong>Human support:</strong> When risk is detected, a handoff notice appears and human follow-up is clearly signaled.</div>',
+          start: 'Start demo'
+        },
+        sidebar: {
+          disclosureEyebrow: 'Transparency', disclosureTitle: 'You are talking to an assistant', disclosureCopy: 'This is always made explicit. If the system detects concerning signals, it shows a visible handoff notice.', safetyEyebrow: 'Safety first', safetyTitle: 'Urgent help', safetyCopy: 'Use the crisis button if you need immediate support. In the demo this sends an urgent message directly to the runtime.', personalization: 'Personalization', labels: ['Language', 'Patient ID', 'Age group', 'Language level', 'Register', 'Voice speed', 'Latency', 'Memory mode'], toggles: ['Prefer Online', 'Show Routing Details', 'Demo Mode', 'Include Review/Test Content', 'Store short excerpt for QA']
+        },
+        hero: { eyebrow: 'Patient Web Chat', title: 'Fast entry, clear boundaries', copy: 'What matters most right now? One sentence is enough.', trustTitle: 'Assistant with visible human follow-up', trustCopy: 'If a handoff happens, the notice appears here. In crisis mode the system switches to safety-first behavior immediately.', handoffTitle: 'Handoff active', handoffText: 'Concerning signals require human follow-up. Clinician notification has started or is recommended.', introHead: 'Onboarding', introBody: 'You are with the overnight assistant. Replies stay short and human intervention is clearly marked when needed.' },
+        quick: { anxiety: { label: 'Anxiety', text: 'I am anxious and need quick support.' }, sleep: { label: 'Sleep', text: 'I have sleep trouble and cannot settle down.' }, breathing: { label: 'Breathing', text: 'I want a short breathing exercise now.' }, pause: { label: 'Pause', text: 'I need a short pause.' }, urgentLabel: 'Urgent', urgentText: 'I need urgent help right now.', mobileLink: 'Mobile demo' },
+        debug: { title: 'Demo Console', copy: 'This shows which trigger, route, and phrase produced the response.', labels: ['What happened and why?', 'Recent history', 'Raw debug'], cards: ['Hybrid selection', 'Conversation summary', 'Patient identity'], hybridPlaceholder: 'Hybrid routing state appears here.', summaryPlaceholder: 'A short conversation summary appears here.', identityPlaceholder: 'Resolved patient identity appears here.', historyPlaceholder: 'Recent turns appear here.', explanationPlaceholder: 'Demo mode writes the explanation here after each send.' },
+        composer: { placeholder: 'Example: I do not know how to start saying this.', send: 'Send', clear: 'Clear', record: 'Microphone', stopRecord: 'Stop', logout: 'Logout', autoSpeak: 'Read replies aloud', footer: 'One-tap options include coping prompts, quick support, pause, and crisis escalation. The demo currently uses the local runtime endpoint.', voiceNote: 'Microphone capture and local speech playback are used when the browser supports them.', identityPrefix: 'Patient memory key: ' },
+        options: { patientPlaceholder: 'e.g. p-1 or leave empty', age: [['', 'auto'], ['child', 'child'], ['teen', 'teen'], ['adult', 'adult'], ['senior', 'senior']], literacy: [['', 'auto'], ['low', 'simple'], ['medium', 'medium'], ['high', 'detailed']], register: [['plain', 'plain'], ['conversational', 'conversational'], ['clinical', 'clinical']], tts: [['', 'auto'], ['slow', 'slow'], ['normal', 'normal'], ['fast', 'fast']], latency: [['', 'none'], ['acknowledge_then_compute', 'acknowledge_then_compute']], history: [['limited', 'anonymous limited'], ['identified', 'identified']] },
+        roles: { patient: 'Patient', assistant: 'Assistant', system: 'System' },
+        statuses: { ready: 'Ready', online: 'Online Ready', local: 'Local Only', offline: 'Offline', thinking: 'Thinking', empty: 'Empty', error: 'Error', paused: 'Paused' },
+        messages: { feedback: 'Feedback saved', latency: 'Latency preamble', noResponse: '(no response text)', paused: 'Pause mode is active. Resume before sending a new message.', pauseApplied: 'Pause acknowledged. Notifications are not escalated while paused.', cleared: 'The view was cleared. Conversation history is currently visible only in this local demo.', unknownError: 'unknown error', networkError: 'network_error', historyLimited: 'anonymous_limited', historyIdentified: 'identified', noHybrid: 'No hybrid routing data.', noSummary: 'No conversation summary.', noIdentity: 'No identity data.', noHistory: 'No recent history.', speechUnavailable: 'This browser does not support local microphone recognition.', speechCaptureStart: 'Microphone capture started.', speechCaptureError: 'Microphone error', speechCaptured: 'Recognized text', authRequired: 'Session expired, please log in again.' }
+      },
+      de: {
+        language: 'Sprache',
+        onboarding: {
+          eyebrow: 'Schneller Einstieg',
+          title: 'Kurze Unterstuetzung ueber Nacht',
+          lede: 'Du schreibst mit dem Nachtassistenten. Antworten bleiben kurz, Coping-Schritte sind moeglich, und menschliche Nachverfolgung wird sichtbar markiert.',
+          checklist: '<div><strong>Was ist das?</strong> Du sprichst mit einem Assistenten, nicht mit einer therapeutischen Entscheidungsperson.</div><div><strong>Grenzen:</strong> Keine medizinischen Diagnosen und keine Rechtsberatung.</div><div><strong>Sicherheit:</strong> In dringenden Situationen nutze den roten Hilfeknopf oder lokale Notfallhilfe.</div><div><strong>Menschliche Hilfe:</strong> Wenn Risiko erkannt wird, erscheint ein Handoff-Hinweis und menschliche Nachverfolgung wird klar signalisiert.</div>',
+          start: 'Demo starten'
+        },
+        sidebar: {
+          disclosureEyebrow: 'Transparenz', disclosureTitle: 'Du sprichst mit einem Assistenten', disclosureCopy: 'Das wird immer klar angezeigt. Wenn das System bedenkliche Signale erkennt, erscheint ein sichtbarer Handoff-Hinweis.', safetyEyebrow: 'Sicherheit zuerst', safetyTitle: 'Dringende Hilfe', safetyCopy: 'Nutze den Krisenknopf, wenn du sofortige Unterstuetzung brauchst. In der Demo wird direkt eine dringende Nachricht an die Runtime gesendet.', personalization: 'Personalisierung', labels: ['Sprache', 'Patienten-ID', 'Altersgruppe', 'Sprachniveau', 'Register', 'Sprechtempo', 'Latenz', 'Speichermodus'], toggles: ['Online bevorzugen', 'Routing-Details zeigen', 'Demo-Modus', 'Review/Test-Inhalte einschliessen', 'Kurzen Auszug fuer QA speichern']
+        },
+        hero: { eyebrow: 'Patient Web Chat', title: 'Schneller Einstieg, klare Grenzen', copy: 'Was ist gerade am wichtigsten? Ein Satz reicht.', trustTitle: 'Assistent mit sichtbarer menschlicher Nachverfolgung', trustCopy: 'Wenn ein Handoff passiert, erscheint der Hinweis hier. Im Krisenmodus schaltet das System sofort auf Sicherheit zuerst.', handoffTitle: 'Handoff aktiv', handoffText: 'Bedenkliche Signale erfordern menschliche Nachverfolgung. Die Benachrichtigung an die Fachperson wurde gestartet oder wird empfohlen.', introHead: 'Einweisung', introBody: 'Du bist beim Nachtassistenten. Antworten bleiben kurz und menschliches Eingreifen wird klar markiert.' },
+        quick: { anxiety: { label: 'Angst', text: 'Ich bin aengstlich und brauche schnelle Unterstuetzung.' }, sleep: { label: 'Schlaf', text: 'Ich habe Schlafprobleme und komme nicht zur Ruhe.' }, breathing: { label: 'Atmung', text: 'Ich moechte jetzt eine kurze Atemuebung.' }, pause: { label: 'Pause', text: 'Ich brauche eine kurze Pause.' }, urgentLabel: 'Dringend', urgentText: 'Ich brauche jetzt dringend Hilfe.', mobileLink: 'Mobile Demo' },
+        debug: { title: 'Demo-Konsole', copy: 'Hier siehst du, welcher Trigger, welches Routing und welche Phrase die Antwort erzeugt haben.', labels: ['Was ist passiert und warum?', 'Letzte Historie', 'Roh-Debug'], cards: ['Hybride Auswahl', 'Gespraechszusammenfassung', 'Patientenidentitaet'], hybridPlaceholder: 'Der Status der hybriden Entscheidung erscheint hier.', summaryPlaceholder: 'Eine kurze Gespraechszusammenfassung erscheint hier.', identityPlaceholder: 'Die aufgeloeste Patientenidentitaet erscheint hier.', historyPlaceholder: 'Die letzten Turns erscheinen hier.', explanationPlaceholder: 'Der Demo-Modus schreibt nach jedem Senden die Erklaerung hierhin.' },
+        composer: { placeholder: 'Beispiel: Ich weiss nicht, wie ich anfangen soll.', send: 'Senden', clear: 'Leeren', record: 'Mikrofon', stopRecord: 'Stop', logout: 'Abmelden', autoSpeak: 'Antworten vorlesen', footer: 'One-Tap-Optionen umfassen Coping-Impulse, schnelle Unterstuetzung, Pause und Kriseneskalation. Die Demo nutzt aktuell den lokalen Runtime-Endpunkt.', voiceNote: 'Mikrofon-Capture und lokale Sprachausgabe werden genutzt, wenn der Browser sie unterstuetzt.', identityPrefix: 'Patienten-Speicherschluessel: ' },
+        options: { patientPlaceholder: 'z. B. p-1 oder leer lassen', age: [['', 'auto'], ['child', 'Kind'], ['teen', 'Jugendlich'], ['adult', 'Erwachsen'], ['senior', 'Senior']], literacy: [['', 'auto'], ['low', 'einfach'], ['medium', 'mittel'], ['high', 'detailliert']], register: [['plain', 'einfach'], ['conversational', 'alltaeglich'], ['clinical', 'klinisch']], tts: [['', 'auto'], ['slow', 'langsam'], ['normal', 'normal'], ['fast', 'schnell']], latency: [['', 'keine'], ['acknowledge_then_compute', 'acknowledge_then_compute']], history: [['limited', 'anonym begrenzt'], ['identified', 'identifiziert']] },
+        roles: { patient: 'Patient', assistant: 'Assistent', system: 'System' },
+        statuses: { ready: 'Bereit', online: 'Online bereit', local: 'Nur lokal', offline: 'Offline', thinking: 'Denkt nach', empty: 'Leer', error: 'Fehler', paused: 'Pausiert' },
+        messages: { feedback: 'Feedback gespeichert', latency: 'Latenz-Preamble', noResponse: '(kein Antworttext)', paused: 'Der Pausenmodus ist aktiv. Setze fort, bevor du eine neue Nachricht sendest.', pauseApplied: 'Pause bestaetigt. Benachrichtigungen werden waehrend der Pause nicht weitergeleitet.', cleared: 'Die Ansicht wurde geleert. Der Gespraechsverlauf ist derzeit nur in dieser lokalen Demo sichtbar.', unknownError: 'unbekannter Fehler', networkError: 'network_error', historyLimited: 'anonym_begrenzt', historyIdentified: 'identifiziert', noHybrid: 'Keine hybriden Routing-Daten.', noSummary: 'Keine Gespraechszusammenfassung.', noIdentity: 'Keine Identitaetsdaten.', noHistory: 'Keine letzte Historie.', speechUnavailable: 'Dieser Browser unterstuetzt keine lokale Mikrofonerkennung.', speechCaptureStart: 'Mikrofonaufnahme gestartet.', speechCaptureError: 'Mikrofonfehler', speechCaptured: 'Erkannter Text', authRequired: 'Session abgelaufen, bitte erneut anmelden.' }
+      }
+    };
+
+    const conversationId = `browser-demo-${Date.now()}`;
+    const browserPatientKey = getOrCreateBrowserPatientKey();
+    const languageLocale = { hu: 'hu-HU', en: 'en-US', de: 'de-DE' };
+    let paused = false;
+    let turnCounter = 0;
+    let currentLang = DEFAULT_UI_CONFIG.default_language;
+    let currentStatusKey = 'ready';
+    let themeMode = 'auto';
+    let manualSkin = 'aare';
+    let activeThemeState = null;
+    let mediaRecorder = null;
+    let mediaChunks = [];
+    let mediaStream = null;
+    let pendingVoiceTranscript = '';
+    let speechRecognition = null;
+    let isRecording = false;
+
+    function getOrCreateBrowserPatientKey() {
+      const storageKey = 'patient-chat-browser-key';
+      const existing = window.localStorage.getItem(storageKey);
+      if (existing) {
+        return existing;
+      }
+      const generated = `anon-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
+      window.localStorage.setItem(storageKey, generated);
+      return generated;
+    }
+
+    function copyFor(lang = currentLang) {
+      return UI_COPY[lang] || UI_COPY.en;
+    }
+
+    function themeCopyFor(lang = currentLang) {
+      return THEME_COPY[lang] || THEME_COPY.en;
+    }
+
+    function languageName(code) {
+      const names = { hu: 'Magyar', en: 'English', de: 'Deutsch' };
+      return names[code] || code.toUpperCase();
+    }
+
+    function loadThemePrefs() {
+      try {
+        const raw = window.localStorage.getItem('patient-chat-desktop-theme');
+        if (!raw) {
+          return;
+        }
+        const parsed = JSON.parse(raw);
+        if (parsed.mode === 'auto' || parsed.mode === 'manual') {
+          themeMode = parsed.mode;
+        }
+        if (parsed.skin && ['aare', 'river', 'dusk'].includes(parsed.skin)) {
+          manualSkin = parsed.skin;
+        }
+      } catch {
+        themeMode = 'auto';
+        manualSkin = 'aare';
+      }
+    }
+
+    function saveThemePrefs() {
+      window.localStorage.setItem('patient-chat-desktop-theme', JSON.stringify({ mode: themeMode, skin: manualSkin }));
+    }
+
+    function getDayPeriod() {
+      const hour = new Date().getHours();
+      if (hour < 6) return 'night';
+      if (hour < 11) return 'morning';
+      if (hour < 17) return 'day';
+      if (hour < 22) return 'evening';
+      return 'night';
+    }
+
+    function detectMood(text = '', handoff = false) {
+      const value = text.toLowerCase();
+      if (handoff || /(surg|urgent|panic|kriz|can't go on|cannot go on|dringend)/.test(value)) {
+        return 'urgent';
+      }
+      if (/(szorong|anx|worry|stress|angst|overwhelm)/.test(value)) {
+        return 'heavy';
+      }
+      if (/(alv|sleep|rest|ruhe|pihen|faradt|tired)/.test(value)) {
+        return 'rest';
+      }
+      if (/(legz|breath|calm|nyugod|ruhig|jobb|better|lighter)/.test(value)) {
+        return 'calm';
+      }
+      return 'steady';
+    }
+
+    function resolveThemeState({ text = '', handoff = false } = {}) {
+      const period = getDayPeriod();
+      const mood = detectMood(text, handoff);
+      let skin = manualSkin;
+      if (themeMode === 'auto') {
+        if (mood === 'urgent' || mood === 'heavy') {
+          skin = 'dusk';
+        } else if (period === 'night' || period === 'evening') {
+          skin = 'dusk';
+        } else if (ageGroupInput.value === 'teen') {
+          skin = 'river';
+        } else if (literacyLevelInput.value === 'low' || preferredRegisterInput.value === 'plain') {
+          skin = 'aare';
+        } else {
+          skin = 'river';
+        }
+      }
+
+      let tone = 'soft';
+      if (mood === 'urgent' || mood === 'heavy') {
+        tone = 'grounded';
+      } else if (mood === 'calm') {
+        tone = 'lifted';
+      }
+
+      return {
+        skin,
+        tone,
+        period,
+        mood,
+        primaryReason: themeMode === 'manual' ? 'manual' : period,
+        secondaryReason: themeMode === 'manual' ? 'manual' : mood
+      };
+    }
+
+    function buildThemeNote(state) {
+      const themeCopy = themeCopyFor();
+      const skinName = themeCopy.skins[state.skin] || state.skin;
+      const primary = themeCopy.reasons[state.primaryReason] || state.primaryReason;
+      const secondary = themeCopy.reasons[state.secondaryReason] || state.secondaryReason;
+      return `<strong>${skinName}</strong> · ${primary} · ${secondary}`;
+    }
+
+    function applyThemeState(options = {}) {
+      activeThemeState = resolveThemeState(options);
+      document.documentElement.dataset.skin = activeThemeState.skin;
+      document.documentElement.dataset.tone = activeThemeState.tone;
+      document.documentElement.dataset.period = activeThemeState.period;
+      themeModeInput.value = themeMode;
+      themeSkinInput.value = manualSkin;
+      themeSkinInput.disabled = themeMode !== 'manual';
+      themeNoteNode.innerHTML = buildThemeNote(activeThemeState);
+    }
+
+    function browserLocale() {
+      return languageLocale[currentLang] || 'en-US';
+    }
+
+    function supportsSpeechRecognition() {
+      return Boolean(window.SpeechRecognition || window.webkitSpeechRecognition);
+    }
+
+    function supportsAudioCapture() {
+      return Boolean(navigator.mediaDevices && navigator.mediaDevices.getUserMedia && window.MediaRecorder);
+    }
+
+    function updateVoiceUi() {
+      const copy = copyFor();
+      recordButton.textContent = isRecording ? copy.composer.stopRecord : copy.composer.record;
+      autoSpeakLabel.textContent = copy.composer.autoSpeak;
+      logoutButton.textContent = copy.composer.logout;
+      voiceNoteNode.textContent = (supportsAudioCapture() || supportsSpeechRecognition()) ? copy.composer.voiceNote : copy.messages.speechUnavailable;
+    }
+
+    function ensureSpeechRecognition() {
+      const RecognitionCtor = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!RecognitionCtor) {
+        return null;
+      }
+      if (!speechRecognition) {
+        speechRecognition = new RecognitionCtor();
+        speechRecognition.continuous = false;
+        speechRecognition.interimResults = false;
+        speechRecognition.maxAlternatives = 1;
+        speechRecognition.onstart = () => {
+          if (!isRecording) {
+            isRecording = true;
+            updateVoiceUi();
+            addBubble('system', copyFor().messages.speechCaptureStart, ['voice']);
+          }
+        };
+        speechRecognition.onend = () => {
+          if (!mediaRecorder || mediaRecorder.state !== 'recording') {
+            isRecording = false;
+            updateVoiceUi();
+          }
+        };
+        speechRecognition.onerror = (event) => {
+          isRecording = false;
+          updateVoiceUi();
+          addBubble('system', `${copyFor().messages.speechCaptureError}: ${event.error || copyFor().messages.unknownError}`, ['voice']);
+        };
+        speechRecognition.onresult = (event) => {
+          const transcript = Array.from(event.results || [])
+            .map((result) => result[0] && result[0].transcript ? result[0].transcript : '')
+            .join(' ')
+            .trim();
+          if (!transcript) {
+            return;
+          }
+          pendingVoiceTranscript = transcript;
+          addBubble('system', `${copyFor().messages.speechCaptured}: ${transcript}`, ['voice']);
+          if (!supportsAudioCapture()) {
+            sendMessage(transcript, { source: 'voice' });
+          }
+        };
+      }
+      speechRecognition.lang = browserLocale();
+      return speechRecognition;
+    }
+
+    function playAssistantAudio(tts) {
+      if (!autoSpeakInput.checked || !tts || !tts.audio_url) {
+        return false;
+      }
+      const audio = new Audio(tts.audio_url);
+      audio.play().catch(() => {
+        speakAssistantText(tts.text || '', { tts_speed: tts.speed || ttsSpeedInput.value || 'normal' });
+      });
+      return true;
+    }
+
+    function speakAssistantText(text, deliveryPreferences = {}) {
+      if (!autoSpeakInput.checked || !('speechSynthesis' in window) || !text) {
+        return;
+      }
+      const utterance = new SpeechSynthesisUtterance(String(text).slice(0, 280));
+      const ttsSpeed = deliveryPreferences.tts_speed || ttsSpeedInput.value || 'normal';
+      utterance.lang = browserLocale();
+      utterance.rate = ttsSpeed === 'slow' ? 0.9 : ttsSpeed === 'fast' ? 1.1 : 1.0;
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(utterance);
+    }
+
+    async function handleLogout() {
+      try {
+        await fetch('/auth/logout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ reason: 'user_logout' })
+        });
+      } finally {
+        window.location.href = '/login';
+      }
+    }
+
+    function startVoiceCapture() {
+      if (supportsAudioCapture()) {
+        toggleAudioRecording();
+        return;
+      }
+      const recognition = ensureSpeechRecognition();
+      if (!recognition) {
+        addBubble('system', copyFor().messages.speechUnavailable, ['voice']);
+        return;
+      }
+      if (isRecording) {
+        recognition.stop();
+        return;
+      }
+      recognition.lang = browserLocale();
+      recognition.start();
+    }
+
+    async function toggleAudioRecording() {
+      if (mediaRecorder && mediaRecorder.state === 'recording') {
+        mediaRecorder.stop();
+        if (speechRecognition) {
+          speechRecognition.stop();
+        }
+        return;
+      }
+      if (!supportsAudioCapture()) {
+        startVoiceCapture();
+        return;
+      }
+      pendingVoiceTranscript = '';
+      mediaStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      mediaChunks = [];
+      mediaRecorder = new MediaRecorder(mediaStream);
+      mediaRecorder.addEventListener('dataavailable', (event) => {
+        if (event.data && event.data.size > 0) {
+          mediaChunks.push(event.data);
+        }
+      });
+      mediaRecorder.addEventListener('start', () => {
+        isRecording = true;
+        updateVoiceUi();
+        addBubble('system', copyFor().messages.speechCaptureStart, ['voice', 'upload']);
+        const recognition = ensureSpeechRecognition();
+        if (recognition) {
+          try {
+            recognition.lang = browserLocale();
+            recognition.start();
+          } catch {
+            return;
+          }
+        }
+      });
+      mediaRecorder.addEventListener('stop', async () => {
+        isRecording = false;
+        updateVoiceUi();
+        if (speechRecognition) {
+          try {
+            speechRecognition.stop();
+          } catch {
+            return;
+          }
+        }
+        mediaStream.getTracks().forEach((track) => track.stop());
+        const audioBlob = new Blob(mediaChunks, { type: mediaRecorder.mimeType || 'audio/webm' });
+        await sendAudioMessage(audioBlob, pendingVoiceTranscript);
+      });
+      mediaRecorder.start();
+    }
+
+    async function sendAudioMessage(audioBlob, transcriptText = '') {
+      const patientMeta = ['voice', 'upload'];
+      addBubble('patient', transcriptText || '[voice note uploaded]', patientMeta);
+      turnCounter += 1;
+      sendButton.disabled = true;
+      setStatusFromKey('thinking');
+      const formData = new FormData();
+      formData.append('audio', audioBlob, `patient-note-${Date.now()}.webm`);
+      formData.append('lang', currentLang);
+      formData.append('conversation_id', conversationId);
+      formData.append('patient_identity', JSON.stringify({
+        browser_patient_key: browserPatientKey,
+        history_mode: historyModeInput.value,
+        consent_to_store_excerpt: consentStoreInput.checked
+      }));
+      formData.append('profile_overrides', JSON.stringify(buildProfileOverrides()));
+      formData.append('prefer_online', String(preferOnlineInput.checked));
+      formData.append('debug', String(demoModeInput.checked));
+      formData.append('synthesize_speech', String(autoSpeakInput.checked));
+      if (transcriptText) {
+        formData.append('transcript_text', transcriptText);
+      }
+      if (patientIdInput.value.trim()) {
+        formData.append('patient_id', patientIdInput.value.trim());
+      }
+      try {
+        const response = await fetch('/runtime/audio-upload', {
+          method: 'POST',
+          body: formData
+        });
+        const data = await response.json();
+        if (response.status === 401 && data.error === 'auth_required') {
+          addBubble('system', copyFor().messages.authRequired, ['auth']);
+          window.location.href = data.login_url || '/login';
+          return;
+        }
+        if (!response.ok) {
+          addBubble('system', `${data.error || 'request_failed'}: ${data.message || copyFor().messages.unknownError}`, ['error']);
+          setStatusFromKey('error');
+          return;
+        }
+        renderAssistantPayload(data);
+        setStatusFromKey('ready');
+      } catch (error) {
+        addBubble('system', `${copyFor().messages.networkError}: ${error.message}`, ['offline']);
+        setStatusFromKey('offline');
+      } finally {
+        sendButton.disabled = false;
+        pendingVoiceTranscript = '';
+      }
+    }
+
+    function applyOptions(selectNode, options) {
+      const currentValue = selectNode.value;
+      selectNode.innerHTML = options.map(([value, label]) => `<option value="${value}">${label}</option>`).join('');
+      const fallbackValue = options[0][0];
+      selectNode.value = options.some(([value]) => value === currentValue) ? currentValue : fallbackValue;
+    }
+
+    function populateLanguageOptions(config) {
+      const supported = config.supported_languages || DEFAULT_UI_CONFIG.supported_languages;
+      langSelect.innerHTML = supported.map((lang) => `<option value="${lang}">${languageName(lang)}</option>`).join('');
+      currentLang = supported.includes(currentLang)
+        ? currentLang
+        : (supported.includes(config.default_language) ? config.default_language : supported[0]);
+      langSelect.value = currentLang;
+    }
+
+    function setStatusFromKey(key) {
+      currentStatusKey = key;
+      statusNode.textContent = copyFor().statuses[key] || key;
+    }
+
+    function updateIdentityNote(patientId = '') {
+      const trimmedPatientId = patientId.trim();
+      const prefix = copyFor().composer.identityPrefix;
+      identityNote.textContent = trimmedPatientId
+        ? `${prefix}patient:${trimmedPatientId}`
+        : `${prefix}browser:${browserPatientKey}`;
+    }
+
+    function applyStaticUi() {
+      const copy = copyFor();
+      const themeCopy = themeCopyFor();
+      document.documentElement.lang = currentLang;
+      personalizationLabels[0].textContent = copy.language;
+      personalizationLabels[1].textContent = copy.sidebar.labels[1];
+      personalizationLabels[2].textContent = copy.sidebar.labels[2];
+      personalizationLabels[3].textContent = copy.sidebar.labels[3];
+      personalizationLabels[4].textContent = copy.sidebar.labels[4];
+      personalizationLabels[5].textContent = copy.sidebar.labels[5];
+      personalizationLabels[6].textContent = copy.sidebar.labels[6];
+      personalizationLabels[7].textContent = copy.sidebar.labels[7];
+      toggleLabels.forEach((node, index) => {
+        node.textContent = copy.sidebar.toggles[index];
+      });
+      onboardingEyebrow.textContent = copy.onboarding.eyebrow;
+      onboardingTitle.textContent = copy.onboarding.title;
+      onboardingLede.textContent = copy.onboarding.lede;
+      onboardingChecklist.innerHTML = copy.onboarding.checklist;
+      startDemoButton.textContent = copy.onboarding.start;
+      disclosurePanel.querySelector('.eyebrow').textContent = copy.sidebar.disclosureEyebrow;
+      disclosurePanel.querySelector('h2').textContent = copy.sidebar.disclosureTitle;
+      disclosurePanel.querySelector('.copy').textContent = copy.sidebar.disclosureCopy;
+      safetyPanel.querySelector('.eyebrow').textContent = copy.sidebar.safetyEyebrow;
+      safetyPanel.querySelector('h3').textContent = copy.sidebar.safetyTitle;
+      safetyPanel.querySelector('.copy').textContent = copy.sidebar.safetyCopy;
+      sidebarCrisisButton.textContent = copy.sidebar.safetyTitle;
+      floatingCrisisButton.textContent = copy.sidebar.safetyTitle;
+      personalizationPanel.querySelector('.eyebrow').textContent = copy.sidebar.personalization;
+      patientIdInput.placeholder = copy.options.patientPlaceholder;
+      applyOptions(ageGroupInput, copy.options.age);
+      applyOptions(literacyLevelInput, copy.options.literacy);
+      applyOptions(preferredRegisterInput, copy.options.register);
+      applyOptions(ttsSpeedInput, copy.options.tts);
+      applyOptions(latencyContextInput, copy.options.latency);
+      applyOptions(historyModeInput, copy.options.history);
+      themeModeLabel.textContent = themeCopy.modeLabel;
+      themeSkinLabel.textContent = themeCopy.skinLabel;
+      themeNoteLabel.textContent = themeCopy.noteLabel;
+      applyOptions(themeModeInput, themeCopy.modes);
+      applyOptions(themeSkinInput, Object.entries(themeCopy.skins));
+      themeModeInput.value = themeMode;
+      themeSkinInput.value = manualSkin;
+      topbarEyebrow.textContent = copy.hero.eyebrow;
+      topbarTitle.textContent = copy.hero.title;
+      topbarCopy.textContent = copy.hero.copy;
+      trustTitle.textContent = copy.hero.trustTitle;
+      trustCopy.textContent = copy.hero.trustCopy;
+      handoffBanner.querySelector('strong').textContent = copy.hero.handoffTitle;
+      if (handoffBanner.style.display !== 'flex') {
+        handoffText.textContent = copy.hero.handoffText;
+      }
+      introBubbleHead.textContent = copy.hero.introHead;
+      introBubbleBody.textContent = copy.hero.introBody;
+      quickButtons.forEach((button) => {
+        const quick = copy.quick[button.dataset.quickKey];
+        button.textContent = quick.label;
+        button.dataset.quick = quick.text;
+      });
+      quickUrgentButton.textContent = copy.quick.urgentLabel;
+      mobileLink.textContent = copy.quick.mobileLink;
+      debugConsole.querySelector('.debug-title').textContent = copy.debug.title;
+      debugHeadCopy.textContent = copy.debug.copy;
+      debugPaneLabels[0].textContent = copy.debug.labels[0];
+      debugPaneLabels[1].textContent = copy.debug.labels[1];
+      debugPaneLabels[2].textContent = copy.debug.labels[2];
+      debugCardTitles[0].textContent = copy.debug.cards[0];
+      debugCardTitles[1].textContent = copy.debug.cards[1];
+      debugCardTitles[2].textContent = copy.debug.cards[2];
+      if (debugHybrid.textContent === UI_COPY.hu.debug.hybridPlaceholder || debugHybrid.textContent === UI_COPY.en.debug.hybridPlaceholder || debugHybrid.textContent === UI_COPY.de.debug.hybridPlaceholder) {
+        debugHybrid.textContent = copy.debug.hybridPlaceholder;
+      }
+      if (debugSummary.textContent === UI_COPY.hu.debug.summaryPlaceholder || debugSummary.textContent === UI_COPY.en.debug.summaryPlaceholder || debugSummary.textContent === UI_COPY.de.debug.summaryPlaceholder) {
+        debugSummary.textContent = copy.debug.summaryPlaceholder;
+      }
+      if (debugIdentity.textContent === UI_COPY.hu.debug.identityPlaceholder || debugIdentity.textContent === UI_COPY.en.debug.identityPlaceholder || debugIdentity.textContent === UI_COPY.de.debug.identityPlaceholder) {
+        debugIdentity.textContent = copy.debug.identityPlaceholder;
+      }
+      if (debugHistory.textContent.trim() === UI_COPY.hu.debug.historyPlaceholder || debugHistory.textContent.trim() === UI_COPY.en.debug.historyPlaceholder || debugHistory.textContent.trim() === UI_COPY.de.debug.historyPlaceholder) {
+        debugHistory.innerHTML = `<div class="debug-history-row">${copy.debug.historyPlaceholder}</div>`;
+      }
+      if (debugExplanation.textContent.trim() === UI_COPY.hu.debug.explanationPlaceholder || debugExplanation.textContent.trim() === UI_COPY.en.debug.explanationPlaceholder || debugExplanation.textContent.trim() === UI_COPY.de.debug.explanationPlaceholder) {
+        debugExplanation.innerHTML = `<li>${copy.debug.explanationPlaceholder}</li>`;
+      }
+      messageInput.placeholder = copy.composer.placeholder;
+      recordButton.textContent = copy.composer.record;
+      sendButton.textContent = copy.composer.send;
+      clearButton.textContent = copy.composer.clear;
+      footerNote.textContent = copy.composer.footer;
+      updateVoiceUi();
+      updateIdentityNote(patientIdInput.value);
+      setStatusFromKey(currentStatusKey);
+      applyThemeState();
+    }
+
+    async function loadUiConfig() {
+      try {
+        const response = await fetch('/ui-config');
+        if (!response.ok) {
+          throw new Error('ui_config_failed');
+        }
+        const payload = await response.json();
+        populateLanguageOptions(payload);
+      } catch {
+        populateLanguageOptions(DEFAULT_UI_CONFIG);
+      }
+      applyStaticUi();
+    }
+
+    async function refreshHealthStatus() {
+      try {
+        const response = await fetch('/health');
+        const payload = await response.json();
+        const llm = payload.llm || {};
+        setStatusFromKey(llm.auth_configured ? 'online' : 'local');
+      } catch {
+        setStatusFromKey('offline');
+      }
+    }
+
+    function addBubble(role, text, meta = [], withFeedback = false) {
+      const copy = copyFor();
+      const article = document.createElement('article');
+      article.className = `bubble ${role}`;
+
+      const head = document.createElement('div');
+      head.className = 'bubble-head';
+      head.textContent = role === 'patient' ? copy.roles.patient : role === 'assistant' ? copy.roles.assistant : copy.roles.system;
+
+      const body = document.createElement('div');
+      body.className = 'bubble-body';
+      body.textContent = text;
+
+      article.append(head, body);
+
+      if (meta.length) {
+        const metaWrap = document.createElement('div');
+        metaWrap.className = 'meta';
+        meta.forEach((item) => {
+          const chip = document.createElement('span');
+          chip.className = 'chip';
+          chip.textContent = item;
+          metaWrap.appendChild(chip);
+        });
+        article.appendChild(metaWrap);
+      }
+
+      if (withFeedback) {
+        const feedback = document.createElement('div');
+        feedback.className = 'feedback-row';
+        ['1', '2', '3', '4', '5'].forEach((value) => {
+          const star = document.createElement('button');
+          star.className = 'star';
+          star.type = 'button';
+          star.textContent = `${value} / 5`;
+          star.addEventListener('click', () => {
+            addBubble('system', `${copyFor().messages.feedback}: ${value}/5`, ['feedback']);
+          });
+          feedback.appendChild(star);
+        });
+        article.appendChild(feedback);
+      }
+
+      timeline.appendChild(article);
+      timeline.scrollTop = timeline.scrollHeight;
+    }
+
+    function buildProfileOverrides() {
+      const preferences = {};
+      if (ttsSpeedInput.value) {
+        preferences.tts_speed = ttsSpeedInput.value;
+      }
+      if (historyModeInput.value === 'limited') {
+        preferences.prefer_text = true;
+      }
+
+      return {
+        age_group: ageGroupInput.value || null,
+        literacy_level: literacyLevelInput.value || null,
+        preferred_register: preferredRegisterInput.value || null,
+        preferences,
+        ...(includeReviewItemsInput.checked ? {
+          content_statuses: ['appr', 'rev', 'sugg', 'test'],
+          content_channel: 'tst'
+        } : {})
+      };
+    }
+
+    function updateHandoff(payload) {
+      if (payload.handoff_triggered) {
+        handoffBanner.style.display = 'flex';
+        handoffText.textContent = copyFor().hero.handoffText;
+        handoffChip.textContent = payload.contact_plan ? 'contact_plan' : 'safety';
+        applyThemeState({ handoff: true });
+      } else {
+        handoffBanner.style.display = 'none';
+        applyThemeState();
+      }
+    }
+
+    function updateDebugConsole(debug) {
+      const copy = copyFor();
+      if (!demoModeInput.checked || !debug) {
+        debugConsole.style.display = 'none';
+        return;
+      }
+
+      debugConsole.style.display = 'block';
+      debugTurn.textContent = `turn: ${turnCounter}`;
+      debugExplanation.innerHTML = '';
+
+      (debug.explanation || []).forEach((line) => {
+        const item = document.createElement('li');
+        item.textContent = line;
+        debugExplanation.appendChild(item);
+      });
+
+      const hybrid = debug.hybrid_selection || {};
+      const knowledge = debug.knowledge_context || [];
+      const hybridParts = [];
+      if (hybrid.status) hybridParts.push(`status: ${hybrid.status}`);
+      if (hybrid.strategy) hybridParts.push(`strategy: ${hybrid.strategy}`);
+      if (hybrid.selected_candidate_id) hybridParts.push(`selected: ${hybrid.selected_candidate_id}`);
+      if (hybrid.response_model) hybridParts.push(`response_model: ${hybrid.response_model}`);
+      if (hybrid.reason) hybridParts.push(`reason: ${hybrid.reason}`);
+      if (knowledge.length) hybridParts.push(`kb: ${knowledge.map((item) => item.id).join(', ')}`);
+      if (((debug.selected_phrase || {}).content_meta || {}).status) {
+        hybridParts.push(`content: ${(debug.selected_phrase || {}).content_meta.src}/${(debug.selected_phrase || {}).content_meta.status}`);
+      }
+      debugHybrid.textContent = hybridParts.length ? hybridParts.join(' | ') : copy.messages.noHybrid;
+
+      const summary = debug.conversation_summary || {};
+      const activeSummary = summary.active_summary || {};
+      const summaryParts = [];
+      if (summary.summary_text) summaryParts.push(summary.summary_text);
+      if ((activeSummary.recent_categories || []).length) summaryParts.push(`categories: ${activeSummary.recent_categories.join(', ')}`);
+      if ((activeSummary.recent_trigger_ids || []).length) summaryParts.push(`triggers: ${activeSummary.recent_trigger_ids.join(', ')}`);
+      debugSummary.textContent = summaryParts.join(' | ') || copy.messages.noSummary;
+
+      const identity = debug.patient_identity || {};
+      const identityParts = [];
+      if (identity.identity_mode) identityParts.push(`mode: ${identity.identity_mode}`);
+      if (identity.source) identityParts.push(`source: ${identity.source}`);
+      if (identity.memory_key) identityParts.push(`key: ${identity.memory_key}`);
+      if (identity.resolved_patient_id) identityParts.push(`patient_id: ${identity.resolved_patient_id}`);
+      if (typeof identity.verified_patient === 'boolean') identityParts.push(`verified: ${identity.verified_patient}`);
+      debugIdentity.textContent = identityParts.length ? identityParts.join(' | ') : copy.messages.noIdentity;
+
+      debugHistory.innerHTML = '';
+      const history = debug.conversation_history || [];
+      if (!history.length) {
+        const row = document.createElement('div');
+        row.className = 'debug-history-row';
+        row.textContent = copy.messages.noHistory;
+        debugHistory.appendChild(row);
+      } else {
+        history.slice(-6).forEach((turn) => {
+          const row = document.createElement('div');
+          row.className = 'debug-history-row';
+          const suffix = turn.item_id ? ` [${turn.item_id}]` : '';
+          row.textContent = `${turn.role}: ${turn.text}${suffix}`;
+          debugHistory.appendChild(row);
+        });
+      }
+
+      debugJson.textContent = JSON.stringify(debug, null, 2);
+    }
+
+    function renderAssistantPayload(payload) {
+      const selection = payload.selection || {};
+      const routing = payload.route_decisions || {};
+      const meta = [];
+
+      if (selection.category) meta.push(`category:${selection.category}`);
+      if (selection.item_id) meta.push(`item:${selection.item_id}`);
+      if (payload.matched_trigger_id) meta.push(`trigger:${payload.matched_trigger_id}`);
+      if (payload.hybrid_selection && payload.hybrid_selection.strategy) {
+        meta.push(`hybrid:${payload.hybrid_selection.strategy}`);
+      }
+      if ((selection.content_meta || {}).status) {
+        meta.push(`src:${selection.content_meta.src}`);
+        meta.push(`status:${selection.content_meta.status}`);
+      }
+      if (selection.delivery_preferences && selection.delivery_preferences.tts_speed) {
+        meta.push(`tts:${selection.delivery_preferences.tts_speed}`);
+      }
+
+      addBubble('assistant', selection.text || copyFor().messages.noResponse, meta, true);
+      if (!playAssistantAudio(payload.tts)) {
+        speakAssistantText(selection.text || '', selection.delivery_preferences || {});
+      }
+
+      if (payload.latency_preamble) {
+        addBubble('system', `${copyFor().messages.latency}: ${payload.latency_preamble}`, ['latency']);
+      }
+
+      if (showRoutingInput.checked && Object.keys(routing).length) {
+        addBubble('system', JSON.stringify(routing, null, 2), ['routing']);
+      }
+
+      updateHandoff(payload);
+      updateDebugConsole(payload.debug);
+    }
+
+    async function sendMessage(textOverride = '', options = {}) {
+      if (paused) {
+        addBubble('system', copyFor().messages.paused, ['paused']);
+        return;
+      }
+
+      const text = (textOverride || messageInput.value).trim();
+      const source = options.source || 'text';
+      if (!text) {
+        setStatusFromKey('empty');
+        return;
+      }
+
+      applyThemeState({ text });
+
+      const payload = {
+        text,
+        lang: currentLang,
+        conversation_id: conversationId,
+        patient_identity: {
+          browser_patient_key: browserPatientKey,
+          history_mode: historyModeInput.value,
+          consent_to_store_excerpt: consentStoreInput.checked
+        },
+        prefer_online: preferOnlineInput.checked,
+        latency_channel: 'chat',
+        profile_overrides: buildProfileOverrides(),
+        consent_to_store_excerpt: consentStoreInput.checked,
+        synthesize_speech: autoSpeakInput.checked,
+        debug: demoModeInput.checked
+      };
+
+      if (patientIdInput.value.trim()) {
+        payload.patient_id = patientIdInput.value.trim();
+      }
+      updateIdentityNote(patientIdInput.value);
+      if (latencyContextInput.value) {
+        payload.latency_context = latencyContextInput.value;
+        payload.latency_elapsed_ms = 200;
+      }
+
+      const patientMeta = historyModeInput.value === 'limited' ? [copyFor().messages.historyLimited] : [copyFor().messages.historyIdentified];
+      if (source === 'voice') {
+        patientMeta.unshift('voice');
+      }
+      addBubble('patient', text, patientMeta);
+      turnCounter += 1;
+      messageInput.value = '';
+      sendButton.disabled = true;
+      setStatusFromKey('thinking');
+
+      try {
+        const response = await fetch('/runtime/text', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await response.json();
+        if (response.status === 401 && data.error === 'auth_required') {
+          addBubble('system', copyFor().messages.authRequired, ['auth']);
+          window.location.href = data.login_url || '/login';
+          return;
+        }
+        if (!response.ok) {
+          addBubble('system', `${data.error || 'request_failed'}: ${data.message || copyFor().messages.unknownError}`, ['error']);
+          setStatusFromKey('error');
+          return;
+        }
+        renderAssistantPayload(data);
+        setStatusFromKey('ready');
+      } catch (error) {
+        addBubble('system', `${copyFor().messages.networkError}: ${error.message}`, ['offline']);
+        setStatusFromKey('offline');
+      } finally {
+        sendButton.disabled = false;
+      }
+    }
+
+    function triggerQuickAction(text) {
+      if (text === copyFor().quick.pause.text) {
+        paused = true;
+        setStatusFromKey('paused');
+        addBubble('system', copyFor().messages.pauseApplied, ['pause']);
+        return;
+      }
+      sendMessage(text);
+    }
+
+    startDemoButton.addEventListener('click', () => {
+      onboardingNode.classList.add('hidden');
+      messageInput.focus();
+    });
+
+    quickButtons.forEach((button) => {
+      button.addEventListener('click', () => triggerQuickAction(button.dataset.quick));
+    });
+
+    function sendUrgentMessage() {
+      paused = false;
+      sendMessage(copyFor().quick.urgentText);
+    }
+
+    quickUrgentButton.addEventListener('click', sendUrgentMessage);
+    sidebarCrisisButton.addEventListener('click', sendUrgentMessage);
+    floatingCrisisButton.addEventListener('click', sendUrgentMessage);
+
+    sendButton.addEventListener('click', () => sendMessage());
+    recordButton.addEventListener('click', startVoiceCapture);
+    clearButton.addEventListener('click', () => {
+      paused = false;
+      turnCounter = 0;
+      handoffBanner.style.display = 'none';
+      debugTurn.textContent = 'turn: 0';
+      debugHybrid.textContent = copyFor().debug.hybridPlaceholder;
+      debugSummary.textContent = copyFor().debug.summaryPlaceholder;
+      debugIdentity.textContent = copyFor().debug.identityPlaceholder;
+      debugHistory.innerHTML = `<div class="debug-history-row">${copyFor().debug.historyPlaceholder}</div>`;
+      debugExplanation.innerHTML = `<li>${copyFor().debug.explanationPlaceholder}</li>`;
+      debugJson.textContent = '{}';
+      timeline.innerHTML = '';
+      addBubble('system', copyFor().messages.cleared, ['history']);
+      setStatusFromKey('ready');
+      updateIdentityNote(patientIdInput.value);
+      applyThemeState();
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+    });
+    logoutButton.addEventListener('click', handleLogout);
+
+    demoModeInput.addEventListener('change', () => {
+      debugConsole.style.display = demoModeInput.checked ? 'block' : 'none';
+    });
+
+    langSelect.addEventListener('change', async () => {
+      currentLang = langSelect.value;
+      applyStaticUi();
+      await refreshHealthStatus();
+    });
+
+    themeModeInput.addEventListener('change', () => {
+      themeMode = themeModeInput.value;
+      saveThemePrefs();
+      applyThemeState();
+    });
+
+    themeSkinInput.addEventListener('change', () => {
+      manualSkin = themeSkinInput.value;
+      saveThemePrefs();
+      applyThemeState();
+    });
+
+    [ageGroupInput, literacyLevelInput, preferredRegisterInput].forEach((input) => {
+      input.addEventListener('change', () => {
+        if (themeMode === 'auto') {
+          applyThemeState();
+        }
+      });
+    });
+
+    messageInput.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' && !event.shiftKey) {
+        event.preventDefault();
+        sendMessage();
+      }
+    });
+
+    debugConsole.style.display = demoModeInput.checked ? 'block' : 'none';
+    loadThemePrefs();
+    loadUiConfig().then(() => refreshHealthStatus());
+    updateVoiceUi();
+  </script>
+</body>
+</html>

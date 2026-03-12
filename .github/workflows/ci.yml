@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .[dev]
+      - name: Schema validation
+        run: python scripts/validate_schema.py
+      - name: Manifest consistency
+        run: |
+          python scripts/check_manifest_consistency.py --lang hu
+          python scripts/check_manifest_consistency.py --lang en
+          python scripts/check_manifest_consistency.py --lang de
+      - name: Locale alignment
+        run: python scripts/check_locale_alignment.py --langs hu en de
+      - name: Legacy data guard
+        run: python scripts/check_legacy_data_empty.py
+      - name: Sensitive diff review check
+        run: python scripts/check_sensitive_diff.py --langs hu en de
+      - name: Clinical review hook
+        run: python scripts/clinical_review_hook.py locales/hu/phrases/01_cri_phrases.hu.jsonc locales/hu/phrases/02_bd_phrases.hu.jsonc
+      - name: Tests
+        run: pytest

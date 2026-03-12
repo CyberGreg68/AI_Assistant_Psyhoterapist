@@ -1,0 +1,214 @@
+[
+  {
+    "ex": [
+      "Kérdezz rá egyenesen",
+      "Igen vagy nem kérdést kérek",
+      "Rövid kérdés kell"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(kérdezz rá egyenesen|igen vagy nem kérdést kérek|rövid kérdés kell)\\\\b"
+    },
+    "tags": [
+      "cq",
+      "direct"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "cq",
+    "cand": [
+      "cq_001",
+      "cq_002"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_057",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ma ittam vagy használtam",
+      "Most szer hatása alatt vagyok",
+      "Igen nem alapon kérdezz a szerről"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(ma ittam vagy használtam|most szer hatása alatt vagyok|kérdezz a szerről)\\\\b"
+    },
+    "tags": [
+      "cq",
+      "substance"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "cq",
+    "cand": [
+      "cq_006",
+      "cq_010"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_058",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Kérdezd meg, egyedül vagyok-e",
+      "Röviden ellenőrizd a biztonságot",
+      "Csak egy biztonsági igen nem kell"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(kérdezd meg, egyedül vagyok-e|ellenőrizd a biztonságot|biztonsági igen nem kell)\\\\b"
+    },
+    "tags": [
+      "cq",
+      "safety"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "cq",
+    "cand": [
+      "cq_003",
+      "cq_004"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_059",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Kérdezd meg volt-e önsértés ma",
+      "Rövid check kell a károkozásról",
+      "Igen nem alapon kérdezz a veszélyről"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(kérdezd meg volt-e önsértés ma|rövid check kell a károkozásról|kérdezz a veszélyről)\\\\b"
+    },
+    "tags": [
+      "cq",
+      "risk_check"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "cq",
+    "cand": [
+      "cq_005",
+      "cq_011"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_060",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

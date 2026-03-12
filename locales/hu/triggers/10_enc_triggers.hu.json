@@ -1,0 +1,218 @@
+[
+  {
+    "ex": [
+      "Mondd hogy menni fog",
+      "Adj egy kis biztatást",
+      "Kell valami remény most"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(mondd hogy menni fog|adj egy kis biztatást|kell valami remény most)\\\\b"
+    },
+    "tags": [
+      "enc",
+      "hope"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "enc",
+    "cand": [
+      "enc_001",
+      "enc_010"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_093",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Segíts elhinni hogy képes vagyok rá",
+      "Bátoríts egy kicsit",
+      "Kell egy megerősítés"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(segíts elhinni hogy képes vagyok rá|bátoríts egy kicsit|kell egy megerősítés)\\\\b"
+    },
+    "tags": [
+      "enc",
+      "confidence"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "enc",
+    "cand": [
+      "enc_003",
+      "enc_004"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_094",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Mondj egy kis lépést bátorítóan",
+      "Kell egy apró lépéshez lendület",
+      "Adj motivációt a mai napra"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(kis lépést bátorítóan|apró lépéshez lendület|motivációt a mai napra)\\\\b"
+    },
+    "tags": [
+      "enc",
+      "small_step"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "enc",
+    "cand": [
+      "enc_002",
+      "enc_005"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_095",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Sokat küzdöttem már",
+      "Emlékeztess hogy nem hiába próbálkozom",
+      "Mondd hogy számít az erőfeszítésem"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(sokat küzdöttem már|nem hiába próbálkozom|számít az erőfeszítésem)\\\\b"
+    },
+    "tags": [
+      "enc",
+      "reinforcement"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "enc",
+    "cand": [
+      "enc_006",
+      "enc_007"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_096",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

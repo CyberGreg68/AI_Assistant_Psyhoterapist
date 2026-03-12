@@ -1,0 +1,1396 @@
+[
+  {
+    "id": "enc_001",
+    "pri": 2,
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "mot"
+    ],
+    "pp": [
+      {
+        "txt": "This was an important step, congratulations for sharing.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "It's good that you opened up; this is progress in itself.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Thanks for telling me; that was a brave move on your part.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_002",
+    "pri": 2,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "small"
+    ],
+    "pp": [
+      {
+        "txt": "Even small steps count — that's progress.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Even the smallest progress is important; notice this change in yourself.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Change is built from small steps; this present is also valuable.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_003",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "praise"
+    ],
+    "pp": [
+      {
+        "txt": "You did well to try.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Nice of you to try; it shows strength.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Your drive is noticeable; this is commendable and important for moving forward.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_004",
+    "pri": 2,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "I know it's not easy, but I see the effort in you.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I feel that you have done a lot so far; it matters and is visible.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Your efforts are important; don't underestimate how much these steps mean.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_005",
+    "pri": 3,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "small"
+    ],
+    "pp": [
+      {
+        "txt": "What would be a small step you could take today?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Think of one small step you can take today; what could it be",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Even today, a simple, short action can mean a lot; what do you do",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_006",
+    "pri": 2,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "mot"
+    ],
+    "pp": [
+      {
+        "txt": "The work you do on yourself will pay off in the long run.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "The invested energy sooner or later brings results; worth persevering.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Change is often slow but consistent; what you do now will benefit you later.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_007",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "praise"
+    ],
+    "pp": [
+      {
+        "txt": "I see progress, even if you don't always notice it.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Sometimes change comes in small signs; I see these in you.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "It happens that we ourselves do not notice the development; I can see how far you've come.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_008",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "I understand if you are frustrated sometimes; it is also part of the process.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Disappointment is a natural part of change; it doesn't mean you're not making progress.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "It is important to accept the ups and downs; a better period often comes after that.",
+        "t": "n",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_009",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "small"
+    ],
+    "pp": [
+      {
+        "txt": "Try one small thing today that brings you joy.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Choose a small activity that recharges you — even 5 minutes counts.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "A short, pleasant activity today can help you feel better; what would you choose",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_010",
+    "pri": 2,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "mot"
+    ],
+    "pp": [
+      {
+        "txt": "Trust in your own strength; you've been through a lot.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Remember how much you've been through — it can give you strength to continue.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Your past survivals prove that you are capable of dealing with current difficulties as well.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_011",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "praise"
+    ],
+    "pp": [
+      {
+        "txt": "I appreciate you taking the time to have this conversation.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "It was a good decision to deal with this today; it is important to yourself.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "The fact that you are here today and talking about it is in itself an important step towards healing.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_012",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "small"
+    ],
+    "pp": [
+      {
+        "txt": "What is one small thing you can do today to make yourself feel better?",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Think of a simple, achievable step; what are you doing today",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "A small goal takes me forward even today; what should your goal be today?",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_013",
+    "pri": 2,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "You don't have to solve everything at once; let's go step by step.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Change is rarely rapid; you can achieve your goals with patience and consistency.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Focus on small, consistent steps — these are the ones that make real progress over time.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_014",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "mot"
+    ],
+    "pp": [
+      {
+        "txt": "Remember your past successes; these can give strength even now.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "What past achievement are you proud of that can inspire you now?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Past successes remind you of your ability to change and grow.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_015",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "praise"
+    ],
+    "pp": [
+      {
+        "txt": "Thanks for sharing; this helps in working together.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "I appreciate your trust; this is an important basis for further steps.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Your sharing is valuable; this allows me to further support you in a targeted manner.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_016",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "small"
+    ],
+    "pp": [
+      {
+        "txt": "Try to do a short, kind thing for yourself today.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "A little self-indulgence still counts for a lot today — what would you do for yourself?",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Give yourself some attention today; this will help you recharge and continue working.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_017",
+    "pri": 2,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "mot"
+    ],
+    "pp": [
+      {
+        "txt": "Remember: persistence is often more important than quick results.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Consistency and patience will pay off in the long run.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Stay persistent in small steps; these will make the real difference over time.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_018",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "emp"
+    ],
+    "pp": [
+      {
+        "txt": "It's understandable if you feel insecure sometimes; it doesn't take anything away from your strength.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Doubts are natural; that you keep trying shows your determination.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Continuing to work despite doubts shows courage and perseverance; it is valuable.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_019",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "praise"
+    ],
+    "pp": [
+      {
+        "txt": "Today you took a step; it already matters.",
+        "t": "n",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Your step today is an important part of the process; keep this momentum going.",
+        "t": "w",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Every day when you do something for your goal, you get closer to it — you took the first step today.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "enc_020",
+    "pri": 2,
+    "rec": [
+      "w",
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "enc",
+      "mot"
+    ],
+    "pp": [
+      {
+        "txt": "Believe that change is possible; you can do it too.",
+        "t": "w",
+        "l": "s",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Belief in your own abilities often initiates change; keep that faith.",
+        "t": "n",
+        "l": "m",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Believing that you can make a difference gives you the motivation to take the next steps.",
+        "t": "w",
+        "l": "l",
+        "reg": "conversational",
+        "lit": "low",
+        "age": [
+          "teen",
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "reg": "conversational",
+    "lit": "low",
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

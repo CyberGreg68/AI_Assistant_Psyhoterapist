@@ -1,0 +1,440 @@
+{
+  "acute_distress": [
+    "pt_tr_015"
+  ],
+  "agenda": [
+    "pt_tr_031"
+  ],
+  "anger": [
+    "pt_tr_074"
+  ],
+  "avoidance": [
+    "pt_tr_078"
+  ],
+  "bd": [
+    "pt_tr_021",
+    "pt_tr_022",
+    "pt_tr_023",
+    "pt_tr_024",
+    "pt_tr_025",
+    "pt_tr_026",
+    "pt_tr_027",
+    "pt_tr_028"
+  ],
+  "betrayal": [
+    "pt_tr_042"
+  ],
+  "breakup": [
+    "pt_tr_048"
+  ],
+  "breathing": [
+    "pt_tr_089"
+  ],
+  "burnout": [
+    "pt_tr_046"
+  ],
+  "cbt": [
+    "pt_tr_073",
+    "pt_tr_074",
+    "pt_tr_075",
+    "pt_tr_076",
+    "pt_tr_077",
+    "pt_tr_078",
+    "pt_tr_079",
+    "pt_tr_080",
+    "pt_tr_081",
+    "pt_tr_082",
+    "pt_tr_083",
+    "pt_tr_084"
+  ],
+  "checkin": [
+    "pt_tr_070"
+  ],
+  "clarify": [
+    "pt_tr_065"
+  ],
+  "clo": [
+    "pt_tr_097",
+    "pt_tr_098",
+    "pt_tr_099",
+    "pt_tr_100"
+  ],
+  "confidence": [
+    "pt_tr_094"
+  ],
+  "confidentiality": [
+    "pt_tr_028"
+  ],
+  "confusion": [
+    "pt_tr_035"
+  ],
+  "consent": [
+    "pt_tr_026"
+  ],
+  "continue": [
+    "pt_tr_069"
+  ],
+  "coping": [
+    "pt_tr_076",
+    "pt_tr_092"
+  ],
+  "cq": [
+    "pt_tr_057",
+    "pt_tr_058",
+    "pt_tr_059",
+    "pt_tr_060"
+  ],
+  "craving": [
+    "pt_tr_084"
+  ],
+  "cri": [
+    "pt_tr_001",
+    "pt_tr_002",
+    "pt_tr_003",
+    "pt_tr_004",
+    "pt_tr_005",
+    "pt_tr_006",
+    "pt_tr_007",
+    "pt_tr_008",
+    "pt_tr_009",
+    "pt_tr_010",
+    "pt_tr_011",
+    "pt_tr_012",
+    "pt_tr_013",
+    "pt_tr_014",
+    "pt_tr_015",
+    "pt_tr_016",
+    "pt_tr_017",
+    "pt_tr_018",
+    "pt_tr_019",
+    "pt_tr_020"
+  ],
+  "crying": [
+    "pt_tr_036"
+  ],
+  "cult": [
+    "pt_tr_101",
+    "pt_tr_102",
+    "pt_tr_103",
+    "pt_tr_104",
+    "pt_tr_105",
+    "pt_tr_106"
+  ],
+  "dbt": [
+    "pt_tr_079"
+  ],
+  "decompensation": [
+    "pt_tr_020"
+  ],
+  "diagnosis": [
+    "pt_tr_027"
+  ],
+  "direct": [
+    "pt_tr_057"
+  ],
+  "direction": [
+    "pt_tr_053"
+  ],
+  "disclosure": [
+    "pt_tr_043"
+  ],
+  "dissociation": [
+    "pt_tr_006"
+  ],
+  "documentation": [
+    "pt_tr_025"
+  ],
+  "domestic": [
+    "pt_tr_014"
+  ],
+  "edu": [
+    "pt_tr_085",
+    "pt_tr_086",
+    "pt_tr_087",
+    "pt_tr_088",
+    "pt_tr_089",
+    "pt_tr_090",
+    "pt_tr_091",
+    "pt_tr_092"
+  ],
+  "emp": [
+    "pt_tr_033",
+    "pt_tr_034",
+    "pt_tr_035",
+    "pt_tr_036",
+    "pt_tr_037",
+    "pt_tr_038",
+    "pt_tr_039",
+    "pt_tr_040",
+    "pt_tr_041",
+    "pt_tr_042",
+    "pt_tr_043",
+    "pt_tr_044"
+  ],
+  "enc": [
+    "pt_tr_093",
+    "pt_tr_094",
+    "pt_tr_095",
+    "pt_tr_096"
+  ],
+  "exhaustion": [
+    "pt_tr_041"
+  ],
+  "family": [
+    "pt_tr_050"
+  ],
+  "family_norms": [
+    "pt_tr_102"
+  ],
+  "family_risk": [
+    "pt_tr_018"
+  ],
+  "farewell": [
+    "pt_tr_009"
+  ],
+  "fear": [
+    "pt_tr_039"
+  ],
+  "finance": [
+    "pt_tr_051"
+  ],
+  "gender_norms": [
+    "pt_tr_106"
+  ],
+  "goal": [
+    "pt_tr_083"
+  ],
+  "grief": [
+    "pt_tr_034"
+  ],
+  "ground": [
+    "pt_tr_072"
+  ],
+  "grounding": [
+    "pt_tr_088"
+  ],
+  "guilt": [
+    "pt_tr_040"
+  ],
+  "handoff_request": [
+    "pt_tr_019"
+  ],
+  "health_anxiety": [
+    "pt_tr_054"
+  ],
+  "hope": [
+    "pt_tr_093"
+  ],
+  "hopelessness": [
+    "pt_tr_008"
+  ],
+  "isolation": [
+    "pt_tr_016",
+    "pt_tr_033"
+  ],
+  "jump": [
+    "pt_tr_012"
+  ],
+  "language": [
+    "pt_tr_104"
+  ],
+  "legal": [
+    "pt_tr_024"
+  ],
+  "listen": [
+    "pt_tr_071"
+  ],
+  "loneliness": [
+    "pt_tr_055"
+  ],
+  "means": [
+    "pt_tr_010"
+  ],
+  "medical": [
+    "pt_tr_021"
+  ],
+  "minority": [
+    "pt_tr_105"
+  ],
+  "motivation": [
+    "pt_tr_081"
+  ],
+  "next_step": [
+    "pt_tr_098"
+  ],
+  "numb": [
+    "pt_tr_038"
+  ],
+  "oq": [
+    "pt_tr_045",
+    "pt_tr_046",
+    "pt_tr_047",
+    "pt_tr_048",
+    "pt_tr_049",
+    "pt_tr_050",
+    "pt_tr_051",
+    "pt_tr_052",
+    "pt_tr_053",
+    "pt_tr_054",
+    "pt_tr_055",
+    "pt_tr_056"
+  ],
+  "overdose": [
+    "pt_tr_011"
+  ],
+  "overwhelm": [
+    "pt_tr_044"
+  ],
+  "pace": [
+    "pt_tr_062"
+  ],
+  "pain": [
+    "pt_tr_086"
+  ],
+  "panic": [
+    "pt_tr_005",
+    "pt_tr_087"
+  ],
+  "parenting": [
+    "pt_tr_049"
+  ],
+  "pause": [
+    "pt_tr_064"
+  ],
+  "plan": [
+    "pt_tr_002"
+  ],
+  "prescription": [
+    "pt_tr_022"
+  ],
+  "process": [
+    "pt_tr_029"
+  ],
+  "prompt": [
+    "pt_tr_068"
+  ],
+  "psychosis": [
+    "pt_tr_013"
+  ],
+  "recap": [
+    "pt_tr_066"
+  ],
+  "recent": [
+    "pt_tr_004"
+  ],
+  "reinforcement": [
+    "pt_tr_096"
+  ],
+  "relapse": [
+    "pt_tr_082"
+  ],
+  "relationship": [
+    "pt_tr_047"
+  ],
+  "religion": [
+    "pt_tr_101"
+  ],
+  "repeat": [
+    "pt_tr_061"
+  ],
+  "resource": [
+    "pt_tr_099"
+  ],
+  "risk_check": [
+    "pt_tr_060"
+  ],
+  "rumination": [
+    "pt_tr_077"
+  ],
+  "rx": [
+    "pt_tr_023"
+  ],
+  "safety": [
+    "pt_tr_059",
+    "pt_tr_100"
+  ],
+  "school": [
+    "pt_tr_052"
+  ],
+  "self_criticism": [
+    "pt_tr_080"
+  ],
+  "selfharm": [
+    "pt_tr_003",
+    "pt_tr_004"
+  ],
+  "shame": [
+    "pt_tr_037"
+  ],
+  "sleep": [
+    "pt_tr_085"
+  ],
+  "small_step": [
+    "pt_tr_095"
+  ],
+  "stigma": [
+    "pt_tr_103"
+  ],
+  "str": [
+    "pt_tr_029",
+    "pt_tr_030",
+    "pt_tr_031",
+    "pt_tr_032"
+  ],
+  "stress": [
+    "pt_tr_091"
+  ],
+  "stuck": [
+    "pt_tr_056"
+  ],
+  "substance": [
+    "pt_tr_058",
+    "pt_tr_073"
+  ],
+  "suicide": [
+    "pt_tr_001",
+    "pt_tr_002"
+  ],
+  "summary": [
+    "pt_tr_032",
+    "pt_tr_097"
+  ],
+  "thanks": [
+    "pt_tr_063"
+  ],
+  "therapy": [
+    "pt_tr_090"
+  ],
+  "time": [
+    "pt_tr_030"
+  ],
+  "unsafe": [
+    "pt_tr_017"
+  ],
+  "urge": [
+    "pt_tr_075"
+  ],
+  "var": [
+    "pt_tr_061",
+    "pt_tr_062",
+    "pt_tr_063",
+    "pt_tr_064",
+    "pt_tr_065",
+    "pt_tr_066",
+    "pt_tr_067",
+    "pt_tr_068",
+    "pt_tr_069",
+    "pt_tr_070",
+    "pt_tr_071",
+    "pt_tr_072"
+  ],
+  "violence": [
+    "pt_tr_007"
+  ],
+  "wait": [
+    "pt_tr_067"
+  ],
+  "work": [
+    "pt_tr_045"
+  ]
+}

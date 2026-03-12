@@ -1,0 +1,427 @@
+[
+  {
+    "ex": [
+      "Milyen gyógyszert vegyek erre",
+      "Mit szedjek a szorongásra",
+      "Adj gyógyszer tanácsot"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(milyen gyógyszert vegyek|mit szedjek a szorongásra|adj gyógyszer tanácsot)\\\\b"
+    },
+    "tags": [
+      "bd",
+      "medical"
+    ],
+    "prio": 2,
+    "safety": "escalate",
+    "cat": "bd",
+    "cand": [
+      "bd_002",
+      "bd_006"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.7,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.55,
+      "in_tok": 220,
+      "out_tok": 72,
+      "tts_ch": 230
+    },
+    "audit": false,
+    "note": "Orvosi tanács határainak jelzése.",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_021",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Emeljem az adagomat",
+      "Abbahagyhatom a gyógyszert",
+      "Csökkentsem a dózist"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(emeljem az adagomat|abbahagyhatom a gyógyszert|csökkentsem a dózist)\\\\b"
+    },
+    "tags": [
+      "bd",
+      "prescription"
+    ],
+    "prio": 2,
+    "safety": "escalate",
+    "cat": "bd",
+    "cand": [
+      "bd_002",
+      "bd_007"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.7,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.55,
+      "in_tok": 220,
+      "out_tok": 72,
+      "tts_ch": 230
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_022",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Írj fel nekem valamit",
+      "Adj receptet",
+      "Tudsz gyógyszert felírni"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(írj fel nekem valamit|adj receptet|tudsz gyógyszert felírni)\\\\b"
+    },
+    "tags": [
+      "bd",
+      "rx"
+    ],
+    "prio": 2,
+    "safety": "escalate",
+    "cat": "bd",
+    "cand": [
+      "bd_002",
+      "bd_010"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.7,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.55,
+      "in_tok": 220,
+      "out_tok": 72,
+      "tts_ch": 230
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_023",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Jogilag mit tehetek",
+      "Bíróságon ezt mondjam",
+      "Adj jogi tanácsot"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(jogilag mit tehetek|bíróságon ezt mondjam|adj jogi tanácsot)\\\\b"
+    },
+    "tags": [
+      "bd",
+      "legal"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "bd",
+    "cand": [
+      "bd_004",
+      "bd_009"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_024",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Írj hivatalos igazolást",
+      "Adj szakvéleményt",
+      "Kell egy papír tőled"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(írj hivatalos igazolást|adj szakvéleményt|kell egy papír tőled)\\\\b"
+    },
+    "tags": [
+      "bd",
+      "documentation"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "bd",
+    "cand": [
+      "bd_004",
+      "bd_008"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_025",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ne rögzíts semmit",
+      "Nem egyezem bele a jegyzetelésbe",
+      "Ne tárold ezt el"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(ne rögzíts semmit|nem egyezem bele a jegyzetelésbe|ne tárold ezt el)\\\\b"
+    },
+    "tags": [
+      "bd",
+      "consent"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "bd",
+    "cand": [
+      "bd_001",
+      "bd_005"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_026",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Mondd meg, hogy beteg vagyok-e",
+      "Diagnózist kérek most",
+      "Szerinted milyen zavarom van"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(mondd meg, hogy beteg vagyok-e|diagnózist kérek most|milyen zavarom van)\\\\b"
+    },
+    "tags": [
+      "bd",
+      "diagnosis"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "bd",
+    "cand": [
+      "bd_002",
+      "bd_006"
+    ],
+    "fb": "call_llm",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_027",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Titokban tartod ezt ugye",
+      "Senki nem tudhat róla",
+      "Garantáld, hogy sose mondod el"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(titokban tartod ezt|senki nem tudhat róla|garantáld, hogy sose mondod el)\\\\b"
+    },
+    "tags": [
+      "bd",
+      "confidentiality"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "bd",
+    "cand": [
+      "bd_001",
+      "bd_005"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_028",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

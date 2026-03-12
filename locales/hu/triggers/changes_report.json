@@ -1,0 +1,69 @@
+{
+  "created_files": [
+    "locales/hu/triggers/01_cri_triggers.hu.json",
+    "locales/hu/triggers/02_bd_triggers.hu.json",
+    "locales/hu/triggers/03_str_triggers.hu.json",
+    "locales/hu/triggers/04_emp_triggers.hu.json",
+    "locales/hu/triggers/05_oq_triggers.hu.json",
+    "locales/hu/triggers/06_cq_triggers.hu.json",
+    "locales/hu/triggers/07_var_triggers.hu.json",
+    "locales/hu/triggers/08_cbt_triggers.hu.json",
+    "locales/hu/triggers/09_edu_triggers.hu.json",
+    "locales/hu/triggers/10_enc_triggers.hu.json",
+    "locales/hu/triggers/11_clo_triggers.hu.json",
+    "locales/hu/triggers/12_cult_triggers.hu.json",
+    "locales/hu/triggers/README.txt",
+    "locales/hu/triggers/changes_report.json",
+    "locales/hu/triggers/sample_index.json",
+    "locales/hu/triggers/schema.triggers.json"
+  ],
+  "modified_files": [
+    {
+      "path": "locales/hu/phrases/07_var_phrases.hu.jsonc",
+      "diff_snippet": "--- locales/hu/phrases/07_var_phrases.hu.jsonc\n+++ locales/hu/phrases/07_var_phrases.hu.jsonc\n@@\n-  {\"id\":\"hu_var_001\"\n+  {\"id\":\"var_001\"\n@@\n-  {\"id\":\"hu_var_020\"\n+  {\"id\":\"var_020\""
+    },
+    {
+      "path": "locales/hu/phrases/11_clo_phrases.hu.jsonc",
+      "diff_snippet": "--- locales/hu/phrases/11_clo_phrases.hu.jsonc\n+++ locales/hu/phrases/11_clo_phrases.hu.jsonc\n@@\n-    tags: close = closing\n+    tags: clo = closing\n@@\n-    \"id\":\"cl_001\",\n+    \"id\":\"clo_001\",\n@@\n-    \"tags\":[\"close\",\"sum\"],\n+    \"tags\":[\"clo\",\"sum\"],"
+    },
+    {
+      "path": "locales/hu/phrases/03_str_phrases.hu.jsonc",
+      "diff_snippet": "--- locales/hu/phrases/03_str_phrases.hu.jsonc\n+++ locales/hu/phrases/03_str_phrases.hu.jsonc\n@@\n-    tags: ag = agenda, cons = consent, time = timecheck, proc = process, expect = expectation, sched = scheduling, close = closing\n+    tags: ag = agenda, cons = consent, time = timecheck, proc = process, expect = expectation, sched = scheduling, clo = closing\n@@\n-    \"tags\":[\"close\",\"expect\"],\n+    \"tags\":[\"clo\",\"expect\"],"
+    },
+    {
+      "path": "manifests/manifest.hu.jsonc",
+      "diff_snippet": "--- manifests/manifest.hu.jsonc\n+++ manifests/manifest.hu.jsonc\n@@\n-\"typical_tags\":[\"close\",\"sum\",\"next\"]\n+\"typical_tags\":[\"clo\",\"sum\",\"next\"]"
+    },
+    {
+      "path": "manifests/manifest.en.jsonc",
+      "diff_snippet": "--- manifests/manifest.en.jsonc\n+++ manifests/manifest.en.jsonc\n@@\n-        \"close\",\n+        \"clo\","
+    },
+    {
+      "path": "manifests/manifest.de.jsonc",
+      "diff_snippet": "--- manifests/manifest.de.jsonc\n+++ manifests/manifest.de.jsonc\n@@\n-        \"close\",\n+        \"clo\","
+    }
+  ],
+  "missing_candidates": [],
+  "validation_errors": {},
+  "merged_duplicates": [],
+  "summary": {
+    "triggers_created": 106,
+    "triggers_per_category": {
+      "cri": 20,
+      "bd": 8,
+      "str": 4,
+      "emp": 12,
+      "oq": 12,
+      "cq": 4,
+      "var": 12,
+      "cbt": 12,
+      "edu": 8,
+      "enc": 4,
+      "clo": 4,
+      "cult": 6
+    },
+    "missing_candidate_count": 0,
+    "validation_error_count": 0,
+    "merged_duplicate_count": 0
+  }
+}

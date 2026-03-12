@@ -1,0 +1,37 @@
+{
+  "crisis_handoff": {
+    "url": "https://example.invalid/handoff",
+    "timeout_ms": 2500,
+    "auth_env_var": "CRISIS_HANDOFF_TOKEN"
+  },
+  "stt": {
+    "url": "https://example.invalid/stt",
+    "timeout_ms": 10000,
+    "auth_env_var": "STT_API_TOKEN",
+    "language": "hu"
+  },
+  "tts": {
+    "provider": "openai_compatible",
+    "url": "mock",
+    "timeout_ms": 15000,
+    "auth_env_var": "TTS_API_TOKEN",
+    "api_format": "json_audio_base64",
+    "voice": "hu-HU-NoemiNeural"
+  },
+  "llm": {
+    "provider": "github_models",
+    "url": "https://models.github.ai/inference/chat/completions",
+    "timeout_ms": 20000,
+    "auth_env_var": "LLM_API_TOKEN",
+    "api_format": "openai_chat_completions",
+    "system_prompt": "Adj rovid, biztonsagos, magyar nyelvu tamogato valaszt. Keruld a klinikai tulvallalasokat, ne allits diagnoszt, krizisjelzesnel priorizald a biztonsagot.",
+    "default_model": "openai/gpt-4o-mini",
+    "model_aliases": {
+      "gpt-4o-mini": "openai/gpt-4o-mini",
+      "gpt-5-mini": "openai/gpt-5-mini",
+      "gpt-5-nano": "openai/gpt-5-nano",
+      "gpt_response_safe": "openai/gpt-4o-mini",
+      "gpt_triage_mini": "openai/gpt-4o-mini"
+    }
+  }
+}

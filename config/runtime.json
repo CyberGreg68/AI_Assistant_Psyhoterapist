@@ -1,0 +1,12 @@
+{
+  "active_lang": "hu",
+  "default_use_case": "chat",
+  "generative_fallback_enabled": false,
+  "cache_profile": "default",
+  "handoff_on_crisis": true,
+  "stt_provider": "http",
+  "tts_provider": "powershell",
+  "published_bundle_path": null,
+  "content_statuses_default": ["appr", "rev"],
+  "content_channel_default": "tst"
+}

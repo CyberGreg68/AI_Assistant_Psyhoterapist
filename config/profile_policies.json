@@ -1,0 +1,22 @@
+{
+  "active_languages": ["hu", "en", "de"],
+  "patient_context": {
+    "default_history_scope": "summary",
+    "allow_history_by_default": false,
+    "auto_prefill_demographics": true
+  },
+  "communication_profile": {
+    "store_without_consent": false,
+    "allow_inference_without_consent": false,
+    "allow_runtime_adaptation_without_consent": false
+  },
+  "after_hours_routing": {
+    "assistant_first": true,
+    "clinician_notify_on": ["high", "critical"],
+    "max_assistant_wait_minutes": 10
+  },
+  "clinician_assignment": {
+    "mode": "explicit_assignment",
+    "fallback": "practice_pool"
+  }
+}

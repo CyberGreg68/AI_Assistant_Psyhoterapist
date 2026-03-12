@@ -1,0 +1,737 @@
+[
+  {
+    "id": "bd_001",
+    "pri": 1,
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "conf"
+    ],
+    "pp": [
+      {
+        "txt": "Es ist wichtig für Sie zu wissen, dass das, was wir hier besprechen, vertraulich ist, sofern keine Gefahr besteht.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Das Gespräch ist vertraulich; Ich muss nur im Gefahrenfall andere benachrichtigen – möchten Sie mehr darüber erfahren?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Alles, was Sie teilen, bleibt vertraulich, mit Ausnahme von Sicherheitsausnahmen; Ich freue mich, ausführlicher darüber sprechen zu können.",
+        "t": "n",
+        "l": "l",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Grenz-, Vertraulichkeits- und Empfehlungsrahmen.",
+      "evidence_level": "guideline_based"
+    },
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "bd_002",
+    "pri": 1,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "adv"
+    ],
+    "pp": [
+      {
+        "txt": "Ich kann keine medizinische oder pharmazeutische Beratung geben; Wenn so etwas nötig ist, helfe ich Ihnen, Sie an einen Spezialisten weiterzuleiten.",
+        "t": "f",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich kann einen Facharzt für medizinische Angelegenheiten nicht ersetzen; Wenn Sie möchten, kann ich Ihnen helfen, die richtige Quelle zu finden.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich kann Ihnen keine individuelle Medikamentenempfehlung geben; Bei Bedarf empfehle ich den Besuch eines Spezialisten.",
+        "t": "f",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Grenz-, Vertraulichkeits- und Empfehlungsrahmen.",
+      "evidence_level": "guideline_based"
+    },
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "bd_003",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "sched"
+    ],
+    "pp": [
+      {
+        "txt": "Wenn Sie fortfahren möchten, können wir gerne einen neuen Termin vereinbaren; Möchten Sie jetzt einen Termin vereinbaren?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Möchten Sie jetzt einen Termin für das nächste Gespräch vereinbaren, oder kommen wir später darauf zurück?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Sollen wir es jetzt besprechen, wann treffen wir uns das nächste Mal oder sollten wir es später vereinbaren?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Grenz-, Vertraulichkeits- und Empfehlungsrahmen.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "bd_004",
+    "pri": 1,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "ref"
+    ],
+    "pp": [
+      {
+        "txt": "Wenn Sie das Gefühl haben, professionelle Hilfe zu benötigen, kann ich Ihnen die verfügbaren Ressourcen empfehlen.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Bei Bedarf kann ich Ihnen einen Spezialisten oder Service empfehlen; Möchten Sie, dass ich Möglichkeiten für Sie finde?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wenn Sie möchten, kann ich Ihnen einige Optionen nennen, an die Sie sich für weitere professionelle Unterstützung wenden können.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Grenz-, Vertraulichkeits- und Empfehlungsrahmen.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "bd_005",
+    "pri": 1,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "conf"
+    ],
+    "pp": [
+      {
+        "txt": "Wenn ich eine ernsthafte Bedrohung sehe, muss ich möglicherweise bestimmte Informationen weitergeben. Möchten Sie benachrichtigt werden?",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wenn ich eine Gefahr wahrnehme, habe ich möglicherweise die Pflicht, andere zu benachrichtigen. Lassen Sie uns darüber sprechen, wie dies in der Praxis geschieht.",
+        "t": "w",
+        "l": "l",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Es ist wichtig zu wissen, dass Sicherheit Priorität hat und in manchen Fällen Informationen zum Schutz weitergegeben werden müssen.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Grenz-, Vertraulichkeits- und Empfehlungsrahmen.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "bd_006",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "adv"
+    ],
+    "pp": [
+      {
+        "txt": "Ich treffe keine Entscheidungen für Sie; Ich helfe mit Informationen und Unterstützung, aber die endgültige Entscheidung liegt bei Ihnen.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Meine Aufgabe ist es, zu unterstützen und zu informieren. Entscheidungen und Verantwortung bleiben immer in Ihren Händen.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich helfe Ihnen dabei, Chancen zu erkennen, ersetze jedoch nicht Ihre persönlichen Entscheidungen oder professionellen Rat.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Grenz-, Vertraulichkeits- und Empfehlungsrahmen.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "bd_007",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "conf"
+    ],
+    "pp": [
+      {
+        "txt": "Während des Gesprächs aufgezeichnete Notizen sind für den internen Gebrauch bestimmt; Möchten Sie, dass ich Sie darüber informiere?",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich kann die wichtigen Punkte kurz notieren; Soll ich es am Ende mit dir teilen?",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Der Zweck der Notizen besteht darin, den Prozess zu unterstützen; Wenn es unangenehm ist, lassen Sie es uns wissen und wir werden die Aufnahme ändern.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Grenz-, Vertraulichkeits- und Empfehlungsrahmen.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "bd_008",
+    "pri": 2,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "adv"
+    ],
+    "pp": [
+      {
+        "txt": "Ich kann keine Rechtsberatung geben; Sollte eine rechtliche Frage auftauchen, helfe ich Ihnen bei der Quellensuche oder verweise Sie an einen Spezialisten.",
+        "t": "f",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich kann in rechtlichen Angelegenheiten keinen Anwalt ersetzen; Bei Bedarf helfe ich Ihnen bei der Kontaktsuche.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wenn Sie Rechtsberatung benötigen, empfehle ich Ihnen, einen entsprechenden Fachmann zu konsultieren; Ich helfe dir weiterzumachen.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Grenz-, Vertraulichkeits- und Empfehlungsrahmen.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "bd_009",
+    "pri": 2,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "ref"
+    ],
+    "pp": [
+      {
+        "txt": "Wenn Sie eine akute Gefahr verspüren, rufen Sie sofort den örtlichen Rettungsdienst an; Möchten Sie, dass ich Ihnen ihre Nummer sage?",
+        "t": "f",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wenn Sie in Gefahr sind, rufen Sie sofort den örtlichen Rettungsdienst an; Brauchen Sie solche Informationen jetzt?",
+        "t": "f",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Bei Gefahr ist sofortiges Eingreifen erforderlich; Wenn Sie möchten, kann ich Ihnen helfen, die Schritte zu überprüfen.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Grenz-, Vertraulichkeits- und Empfehlungsrahmen.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "bd_010",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "bd",
+      "conf"
+    ],
+    "pp": [
+      {
+        "txt": "Wenn Sie sich bei einer Frage unwohl fühlen, lassen Sie es uns wissen. Wir überspringen diesen Teil.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Sagen Sie mir gerne Bescheid, wenn Sie über etwas nicht reden möchten; Ich passe mich deinen Grenzen an.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wenn eine Frage zu persönlich ist, sagen Sie es und ich werde dieses Thema nicht weiterführen.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "medium",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Zugelassen für Grenz-, Vertraulichkeits- und Empfehlungsrahmen.",
+      "evidence_level": "guideline_based"
+    },
+    "reg": "plain",
+    "lit": "medium",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

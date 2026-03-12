@@ -1,0 +1,1840 @@
+[
+  {
+    "id": "edu_001",
+    "pri": 3,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "edu",
+      "coping"
+    ],
+    "pp": [
+      {
+        "txt": "Kurz gesagt: Reaktionen auf Stress sind völlig normal und Sie können etwas dagegen tun.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Es ist wichtig zu wissen, dass Reaktionen auf Stress natürlich sind; Es gibt wirksame Bewältigungsmethoden.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Zusammenfassend lässt sich sagen, dass Stress normal ist und es praktische Maßnahmen gibt, die Sie ergreifen können, um ihn zu reduzieren.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Anerkannt als allgemeine Psychoedukation und Bewältigungsberatung.",
+      "evidence_level": "evidence_informed"
+    },
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "edu_002",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "edu",
+      "breathing"
+    ],
+    "pp": [
+      {
+        "txt": "Langsames, tiefes Atmen kann helfen, akute Angstzustände zu reduzieren.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Versuchen Sie es mit der 4-4-4-Atmung: 4 Sekunden lang einatmen, 4 Sekunden lang anhalten, 4 Sekunden lang ausatmen.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Eine langsamere Atmung kann Ihre Herzfrequenz und Ihren Blutdruck schnell senken; Es lohnt sich, mehrmals täglich zu üben.",
+        "t": "w",
+        "l": "l",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Anerkannt als allgemeine Psychoedukation und Bewältigungsberatung.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "edu_003",
+    "pri": 3,
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "edu",
+      "grounding"
+    ],
+    "pp": [
+      {
+        "txt": "Eine einfache Erdungstechnik: Listen Sie 5 Dinge auf, die Sie sehen, 4 Dinge, die Sie fühlen, 3 Dinge, die Sie hören.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wenn Sie die Situation aus der Fassung bringt, versuchen Sie es mit der Erdungsübung 5-4-3-2-1: Die Konzentration auf die Sinne hilft Ihnen, in die Gegenwart zurückzukehren.",
+        "t": "w",
+        "l": "l",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Erdungsübungen verringern schnell die Überaktivierung; Sie sind nützlich bei Panik oder schwerer Angst.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Anerkannt als allgemeine Psychoedukation und Bewältigungsberatung.",
+      "evidence_level": "evidence_informed"
+    },
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "edu_004",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "edu",
+      "sleep"
+    ],
+    "pp": [
+      {
+        "txt": "Schlaf ist wichtig für die Stimmung und die Stressbewältigung. Eine regelmäßige Schlafroutine hilft.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Versuchen Sie, jeden Tag zur gleichen Zeit ins Bett zu gehen und aufzustehen. Dies verbessert die Schlafqualität.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Vermeiden Sie den Bildschirm eine Stunde vor dem Schlafengehen und schaffen Sie eine ruhige Schlafumgebung.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Anerkannt als allgemeine Psychoedukation und Bewältigungsberatung.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "edu_005",
+    "pri": 3,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "edu",
+      "coping"
+    ],
+    "pp": [
+      {
+        "txt": "Kleine Schritte: Kleine, erreichbare Tagesziele helfen Ihnen, die Kontrolle zurückzugewinnen.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Setzen Sie sich kleine, erreichbare Ziele; Diese steigern nach und nach das Selbstvertrauen und verringern das Gefühl der Hilflosigkeit.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Kleine, konsequente Schritte sind oft effektiver als große, einmalige Änderungen.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Anerkannt als allgemeine Psychoedukation und Bewältigungsberatung.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "edu_006",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "edu",
+      "stress"
+    ],
+    "pp": [
+      {
+        "txt": "Stress kann auch körperliche Symptome hervorrufen; Muskelverspannungen, Kopfschmerzen oder Verdauungsprobleme sind häufig.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Es ist wichtig zu wissen, dass Stress nicht nur im Kopf entsteht, sondern auch der Körper reagiert, und dies kann mit praktischen Methoden behandelt werden.",
+        "t": "w",
+        "l": "l",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wenn bei Ihnen körperliche Symptome auftreten, lohnt es sich, bei der Bewältigung gleichzeitig auf Ihren Körper und Ihre Gedanken zu achten.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Anerkannt als allgemeine Psychoedukation und Bewältigungsberatung.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "edu_007",
+    "pri": 3,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "edu",
+      "cbt"
+    ],
+    "pp": [
+      {
+        "txt": "Gedanken und Gefühle interagieren; Das Umformulieren von Gedanken kann das Leiden lindern.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ein einfaches CBT-Tool: Identifizieren Sie den negativen Gedanken, fragen Sie, wie viele Beweise ihn stützen, und versuchen Sie, eine alternative Interpretation zu finden.",
+        "t": "w",
+        "l": "l",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wenn Sie Ihre Gedanken in Frage stellen, können negative Reaktionen mit etwas Übung weniger automatisch auftreten.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Anerkannt als allgemeine Psychoedukation und Bewältigungsberatung.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "edu_008",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "edu",
+      "coping"
+    ],
+    "pp": [
+      {
+        "txt": "Regelmäßige Bewegung verbessert die Stimmung und reduziert Ängste.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Schon 20-30 Minuten Spazierengehen am Tag können Ihr Wohlbefinden und Ihre Stresstoleranz deutlich verbessern.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Durch körperliche Betätigung werden Endorphine freigesetzt, die natürliche Stimmungsaufheller sind.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Anerkannt als allgemeine Psychoedukation und Bewältigungsberatung.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "edu_009",
+    "pri": 3,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "edu",
+      "coping"
+    ],
+    "pp": [
+      {
+        "txt": "Soziale Unterstützung ist wichtig: Das Teilen von Schwierigkeiten verringert die Belastung.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Das Gespräch mit einem Freund oder Familienmitglied hilft oft, eine neue Perspektive zu gewinnen und die Einsamkeit zu lindern.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wenn Sie jemanden haben, dem Sie vertrauen, lohnt es sich, ihm mitzuteilen, wie Sie sich fühlen. Dies bringt oft Erleichterung.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Anerkannt als allgemeine Psychoedukation und Bewältigungsberatung.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "edu_010",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "edu",
+      "sleep"
+    ],
+    "pp": [
+      {
+        "txt": "Schlaf und Stimmung interagieren; Schlechter Schlaf verschlechtert die Stimmung und umgekehrt.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wer unter Schlafproblemen leidet, sollte zunächst den Tagesablauf und die Umgebung ändern, bevor er zu komplizierten Eingriffen greift.",
+        "t": "w",
+        "l": "l",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Bei Schlafproblemen kann es hilfreich sein, ein Schlaftagebuch zu führen, um Muster zu erkennen.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Anerkannt als allgemeine Psychoedukation und Bewältigungsberatung.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "edu_011",
+    "pri": 3,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "edu",
+      "stress"
+    ],
+    "pp": [
+      {
+        "txt": "Zeitmanagementtechniken wie das Aufteilen von Aufgaben können das Gefühl der Überforderung reduzieren.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Versuchen Sie, die Aufgaben in kleinere Teile aufzuteilen und sie zu priorisieren. Dies reduziert Ängste und erhöht die Effizienz.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Anstelle einer „To-Do“-Liste kann eine „Erledigt“-Liste nützlich sein, um zu sehen, wie viel Sie bereits erledigt haben.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Anerkannt als allgemeine Psychoedukation und Bewältigungsberatung.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "edu_012",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "edu",
+      "coping"
+    ],
+    "pp": [
+      {
+        "txt": "Selbstmitgefühl kann Schuld- und Schamgefühle reduzieren.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Versuchen Sie, mit sich selbst wie mit einem Freund zu sprechen: Dies wird dazu beitragen, Selbstkritik zu reduzieren und die Bewältigung zu verbessern.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Das Praktizieren von Selbstmitgefühl verbessert langfristig die mentale Belastbarkeit.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Anerkannt als allgemeine Psychoedukation und Bewältigungsberatung.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "edu_013",
+    "pri": 3,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "edu",
+      "breathing"
+    ],
+    "pp": [
+      {
+        "txt": "Kurze Übung: 4 Sekunden einatmen, 4 Sekunden halten, 6 Sekunden ausatmen – das hilft Ihnen, sich zu beruhigen.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ein längeres Ausatemverhältnis (z. B. 4-4-6) hilft, den Parasympathikus zu aktivieren und Verspannungen abzubauen.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Üben Sie dies einige Minuten lang, wenn Sie sich angespannter fühlen; Durch häufige Anwendung wird die Wirksamkeit erhöht.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Anerkannt als allgemeine Psychoedukation und Bewältigungsberatung.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "edu_014",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "edu",
+      "cbt"
+    ],
+    "pp": [
+      {
+        "txt": "Verhaltensexperimente helfen, die Realität von Ängsten zu testen; Probieren Sie neue Verhaltensweisen in kleinen Schritten aus.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wenn Sie aufgrund eines Gedankens etwas meiden, versuchen Sie ein kleines Zwangsexperiment: Was passiert, wenn Sie es trotzdem tun?",
+        "t": "w",
+        "l": "l",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Verhaltensexperimente verändern oft schnell Überzeugungen und reduzieren Ängste.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Anerkannt als allgemeine Psychoedukation und Bewältigungsberatung.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "edu_015",
+    "pri": 3,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "edu",
+      "coping"
+    ],
+    "pp": [
+      {
+        "txt": "Eine Routine und ein strukturierter Tagesablauf sorgen für Stabilität in stressigen Zeiten.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Planen Sie Ihren Tag in einfache Blöcke: Arbeit, Ruhe, Bewegung; Dies verringert die Unsicherheit.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ein strukturierter Tag hilft Ihnen, ständig weniger Entscheidungen zu treffen, was die Erschöpfung verringert.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Anerkannt als allgemeine Psychoedukation und Bewältigungsberatung.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "edu_016",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "edu",
+      "coping"
+    ],
+    "pp": [
+      {
+        "txt": "Journaling kann Ihnen dabei helfen, Ihre Gedanken zu ordnen und wiederkehrende Muster zu erkennen.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Versuchen Sie, sich täglich 5–10 Minuten Zeit zu nehmen, um aufzuschreiben, was Sie interessiert. Dies kann zu einem klareren Denken führen.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Journaling kann besonders hilfreich sein, wenn es schwierig ist, die Zusammenhänge zwischen Gedanken und Gefühlen zu erkennen.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Anerkannt als allgemeine Psychoedukation und Bewältigungsberatung.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "edu_017",
+    "pri": 3,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "edu",
+      "stress"
+    ],
+    "pp": [
+      {
+        "txt": "Koffein und Alkohol können Ängste und Schlaf beeinträchtigen; Der Verbrauch sollte überwacht werden.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wenn Sie häufig Angst verspüren, versuchen Sie, Ihren Koffeinkonsum zu reduzieren, insbesondere nachmittags und abends.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Kurzfristig mag Alkohol wie ein Beruhigungsmittel wirken, auf lange Sicht kann er jedoch den Schlaf und die Stimmung beeinträchtigen.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Anerkannt als allgemeine Psychoedukation und Bewältigungsberatung.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "edu_018",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "edu",
+      "coping"
+    ],
+    "pp": [
+      {
+        "txt": "Routinen und Rituale können in stressigen Zeiten ein Gefühl der Sicherheit geben.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Kleine, sich wiederholende Aktivitäten – wie der Morgentee oder ein kurzer Spaziergang – können helfen, Stabilität zu schaffen.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Tägliche Rituale helfen dabei, das Gefühl der Kontrolle zurückzugewinnen, wenn die Umstände unvorhersehbar sind.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Anerkannt als allgemeine Psychoedukation und Bewältigungsberatung.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "edu_019",
+    "pri": 3,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "edu",
+      "coping"
+    ],
+    "pp": [
+      {
+        "txt": "Wenn die Gedanken überwältigend sind, kann eine kurze „Stopp“-Technik sinnvoll sein: Halten Sie inne, atmen Sie und konzentrieren Sie sich auf den nächsten Schritt.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Die „Stopp“-Technik hilft dabei, automatische negative Gedankenprozesse zu unterbrechen und bringt Sie zurück in die Gegenwart.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Sie können diese Technik anwenden, wenn Sie spüren, wie sich Ihre Gedanken drehen.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Anerkannt als allgemeine Psychoedukation und Bewältigungsberatung.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "edu_020",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "edu",
+      "resources"
+    ],
+    "pp": [
+      {
+        "txt": "Wenn Sie möchten, kann ich Ihnen einige allgemeine Ressourcen und Übungen zur Verfügung stellen, die Sie zu Hause ausprobieren können.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ich kann Ihnen einfache Übungen und Lektüren empfehlen, die Ihnen bei der Bewältigung helfen.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wenn Sie möchten, sende ich Ihnen einige kurze, praktische Schritte, mit denen Sie noch heute mit der Bewerbung beginnen können.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Anerkannt als allgemeine Psychoedukation und Bewältigungsberatung.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "edu_021",
+    "pri": 3,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "edu",
+      "coping"
+    ],
+    "pp": [
+      {
+        "txt": "Eine regelmäßige Selbstkontrolle (Check-in) hilft Ihnen, Veränderungen frühzeitig zu erkennen.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Ein kurzer wöchentlicher Selbstcheck: Wie Sie geschlafen haben, wie gestresst Sie waren, wie Ihre Stimmung war – so erkennen Sie Trends.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Durch die Selbstüberwachung können Sie rechtzeitig eingreifen, bevor sich die Probleme verschlimmern.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Anerkannt als allgemeine Psychoedukation und Bewältigungsberatung.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "edu_022",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "edu",
+      "coping"
+    ],
+    "pp": [
+      {
+        "txt": "Auch Humor und kreative Aktivitäten können ein wirksamer Stressabbau sein.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Versuchen Sie, leichte, kreative Aktivitäten – Malen, Musik, kurze lustige Videos – einzubauen, um sich zu erfrischen.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Kreative Aktivitäten helfen, die Aufmerksamkeit abzulenken und emotionale Reserven wieder aufzufüllen.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Anerkannt als allgemeine Psychoedukation und Bewältigungsberatung.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "edu_023",
+    "pri": 3,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "edu",
+      "coping"
+    ],
+    "pp": [
+      {
+        "txt": "Sollten die Beschwerden anhalten oder sich verschlimmern, sollten Sie einen Facharzt aufsuchen.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Es ist wichtig zu wissen, dass professionelle Hilfe wirksam und gerechtfertigt sein kann, wenn sich die Schwierigkeiten nicht bessern.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Mit anhaltenden Problemen müssen Sie nicht allein sein; Professionelle Unterstützung bringt oft schnelle Besserung.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Anerkannt als allgemeine Psychoedukation und Bewältigungsberatung.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "edu_024",
+    "pri": 3,
+    "rec": [
+      "n"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "edu",
+      "coping"
+    ],
+    "pp": [
+      {
+        "txt": "Die regelmäßige, bewusste Suche nach kleinen Freuden steigert das Wohlbefinden nachhaltig.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Versuchen Sie, jeden Tag mindestens eine kleine Sache einzubeziehen, die Ihnen Freude bereitet – dies führt zu einem kumulativen positiven Effekt.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Das bewusste Sammeln kleiner Freuden hilft, die Auswirkungen von Stress auszugleichen und die Resilienz zu steigern.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Anerkannt als allgemeine Psychoedukation und Bewältigungsberatung.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "id": "edu_025",
+    "pri": 3,
+    "rec": [
+      "n",
+      "w"
+    ],
+    "use": [
+      "c",
+      "t"
+    ],
+    "tags": [
+      "edu",
+      "coping"
+    ],
+    "pp": [
+      {
+        "txt": "Wenn Sie möchten, helfe ich Ihnen bei der Zusammenstellung eines einfachen, individuellen Tagesablaufs.",
+        "t": "n",
+        "l": "s",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Gerne helfe ich Ihnen dabei, einen kurzen, praktischen Plan zu erstellen, mit dem Sie noch heute beginnen können.",
+        "t": "w",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      },
+      {
+        "txt": "Wir können gemeinsam einen kleinen Tagesplan erstellen, der Ihnen hilft, Ihre Tage zu stabilisieren und Stress abzubauen.",
+        "t": "n",
+        "l": "m",
+        "reg": "plain",
+        "lit": "low",
+        "age": [
+          "adult",
+          "senior"
+        ]
+      }
+    ],
+    "review_required": true,
+    "review": {
+      "review_status": "approved",
+      "reviewed_by_role": "clinical",
+      "reviewed_at": "2026-03-11",
+      "safety_notes": "Anerkannt als allgemeine Psychoedukation und Bewältigungsberatung.",
+      "evidence_level": "evidence_informed"
+    },
+    "reg": "plain",
+    "lit": "low",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

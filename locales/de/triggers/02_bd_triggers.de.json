@@ -1,0 +1,427 @@
+[
+  {
+    "ex": [
+      "Welche Medikamente soll ich dagegen einnehmen?",
+      "Was soll ich gegen Angst nehmen?",
+      "Geben Sie Ratschläge zu Medikamenten"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Welche\\ Medikamente\\ soll\\ ich\\ dagegen\\ einnehmen\\?|Was\\ soll\\ ich\\ gegen\\ Angst\\ nehmen\\?|Geben\\ Sie\\ Ratschläge\\ zu\\ Medikamenten)"
+    },
+    "tags": [
+      "bd",
+      "medical"
+    ],
+    "prio": 2,
+    "safety": "escalate",
+    "cat": "bd",
+    "cand": [
+      "bd_002",
+      "bd_006"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.7,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.55,
+      "in_tok": 220,
+      "out_tok": 72,
+      "tts_ch": 230
+    },
+    "audit": false,
+    "note": "Hinweis auf die Grenzen ärztlicher Beratung.",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_021",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich sollte meine Dosis erhöhen",
+      "Ich kann das Medikament absetzen",
+      "Ich sollte die Dosis senken"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ sollte\\ meine\\ Dosis\\ erhöhen|Ich\\ kann\\ das\\ Medikament\\ absetzen|Ich\\ sollte\\ die\\ Dosis\\ senken)"
+    },
+    "tags": [
+      "bd",
+      "prescription"
+    ],
+    "prio": 2,
+    "safety": "escalate",
+    "cat": "bd",
+    "cand": [
+      "bd_002",
+      "bd_007"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.7,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.55,
+      "in_tok": 220,
+      "out_tok": 72,
+      "tts_ch": 230
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_022",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Schreib mir etwas",
+      "Gib mir ein Rezept",
+      "Sie können Medikamente verschreiben"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Schreib\\ mir\\ etwas|Gib\\ mir\\ ein\\ Rezept|Sie\\ können\\ Medikamente\\ verschreiben)"
+    },
+    "tags": [
+      "bd",
+      "rx"
+    ],
+    "prio": 2,
+    "safety": "escalate",
+    "cat": "bd",
+    "cand": [
+      "bd_002",
+      "bd_010"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.7,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.55,
+      "in_tok": 220,
+      "out_tok": 72,
+      "tts_ch": 230
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_023",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Was kann ich rechtlich tun?",
+      "Lassen Sie mich das vor Gericht sagen",
+      "Geben Sie Rechtsberatung"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Was\\ kann\\ ich\\ rechtlich\\ tun\\?|Lassen\\ Sie\\ mich\\ das\\ vor\\ Gericht\\ sagen|Geben\\ Sie\\ Rechtsberatung)"
+    },
+    "tags": [
+      "bd",
+      "legal"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "bd",
+    "cand": [
+      "bd_004",
+      "bd_009"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_024",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Schreiben Sie ein offizielles Zertifikat",
+      "Geben Sie eine professionelle Meinung ab",
+      "Ich brauche ein Papier von Ihnen"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Schreiben\\ Sie\\ ein\\ offizielles\\ Zertifikat|Geben\\ Sie\\ eine\\ professionelle\\ Meinung\\ ab|Ich\\ brauche\\ ein\\ Papier\\ von\\ Ihnen)"
+    },
+    "tags": [
+      "bd",
+      "documentation"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "bd",
+    "cand": [
+      "bd_004",
+      "bd_008"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_025",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Nehmen Sie nichts auf",
+      "Ich bin nicht damit einverstanden, Notizen zu machen",
+      "Bewahren Sie dies nicht auf"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Nehmen\\ Sie\\ nichts\\ auf|Ich\\ bin\\ nicht\\ damit\\ einverstanden,\\ Notizen\\ zu\\ machen|Bewahren\\ Sie\\ dies\\ nicht\\ auf)"
+    },
+    "tags": [
+      "bd",
+      "consent"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "bd",
+    "cand": [
+      "bd_001",
+      "bd_005"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_026",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Sag es mir, wenn ich krank bin",
+      "Ich bitte jetzt um eine Diagnose",
+      "Welche Probleme habe ich Ihrer Meinung nach?"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Sag\\ es\\ mir,\\ wenn\\ ich\\ krank\\ bin|Ich\\ bitte\\ jetzt\\ um\\ eine\\ Diagnose|Welche\\ Probleme\\ habe\\ ich\\ Ihrer\\ Meinung\\ nach\\?)"
+    },
+    "tags": [
+      "bd",
+      "diagnosis"
+    ],
+    "prio": 2,
+    "safety": "monitor",
+    "cat": "bd",
+    "cand": [
+      "bd_002",
+      "bd_006"
+    ],
+    "fb": "call_llm",
+    "ct": {
+      "m": 0.68,
+      "r": 0.5
+    },
+    "cost": {
+      "stt_min": 0.48,
+      "in_tok": 190,
+      "out_tok": 64,
+      "tts_ch": 220
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_027",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Du hältst das geheim, nicht wahr?",
+      "Niemand darf davon erfahren",
+      "Garantiert, dass Sie es nie verraten"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Du\\ hältst\\ das\\ geheim,\\ nicht\\ wahr\\?|Niemand\\ darf\\ davon\\ erfahren|Garantiert,\\ dass\\ Sie\\ es\\ nie\\ verraten)"
+    },
+    "tags": [
+      "bd",
+      "confidentiality"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "bd",
+    "cand": [
+      "bd_001",
+      "bd_005"
+    ],
+    "fb": "ask_clarifying",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "medium",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_028",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

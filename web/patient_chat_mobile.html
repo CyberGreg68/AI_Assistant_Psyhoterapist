@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Paciens Mobil Demo</title>
+  <style>
+    :root {
+      --bg-top: #f1e3cf;
+      --bg-bottom: #f8f4ee;
+      --panel: rgba(255, 250, 244, 0.9);
+      --panel-strong: rgba(255, 250, 244, 0.96);
+      --ink: #19302d;
+      --muted: #60706d;
+      --line: rgba(25, 48, 45, 0.1);
+      --accent: #0d7a66;
+      --accent-strong: #095546;
+      --patient: #f1dfc7;
+      --assistant: #d9efe7;
+      --warning: #c64d38;
+      --shadow: 0 18px 42px rgba(79, 61, 34, 0.18);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top right, rgba(13, 122, 102, 0.16), transparent 26%),
+        radial-gradient(circle at top left, rgba(198, 77, 56, 0.12), transparent 22%),
+        linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 58%, #f7f4ef 100%);
+      color: var(--ink);
+      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+    }
+
+    .app {
+      width: min(100%, 460px);
+      min-height: 100vh;
+      margin: 0 auto;
+      display: grid;
+      grid-template-rows: auto auto 1fr auto;
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), transparent 25%);
+    }
+
+    .hero {
+      padding: calc(18px + env(safe-area-inset-top, 0px)) 16px 12px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .hero-card,
+    .panel,
+    .composer,
+    .message,
+    details {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+    }
+
+    .hero-card {
+      border-radius: 24px;
+      padding: 16px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .eyebrow,
+    .tiny {
+      font: 700 11px/1.2 "Courier New", monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 0;
+    }
+
+    h1, h2, p { margin: 0; }
+
+    h1 {
+      font-size: 30px;
+      line-height: 1.02;
+      font-family: Georgia, serif;
+    }
+
+    .status-row,
+    .identity-row,
+    .chip-row,
+    .composer-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .pill,
+    .chip {
+      border-radius: 999px;
+      padding: 7px 11px;
+      font: 700 11px/1.1 "Courier New", monospace;
+      letter-spacing: 0.05em;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.74);
+      color: var(--muted);
+    }
+
+    .pill.live {
+      color: #fff;
+      background: var(--accent);
+      border-color: transparent;
+    }
+
+    .timeline {
+      padding: 8px 14px 18px;
+      display: grid;
+      gap: 12px;
+      overflow: auto;
+      align-content: start;
+    }
+
+    .snapshot {
+      margin: 0 14px;
+      border-radius: 22px;
+      padding: 14px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .snapshot-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .snapshot-cell {
+      border-radius: 18px;
+      padding: 12px;
+      background: rgba(255,255,255,0.62);
+      border: 1px solid var(--line);
+      display: grid;
+      gap: 6px;
+      min-height: 92px;
+    }
+
+    .snapshot-value {
+      font-size: 14px;
+      line-height: 1.45;
+      color: var(--ink);
+    }
+
+    .message {
+      border-radius: 24px;
+      padding: 14px 15px;
+    }
+
+    .message.patient {
+      background: var(--patient);
+      margin-left: 34px;
+      border-bottom-right-radius: 8px;
+    }
+
+    .message.assistant {
+      background: var(--assistant);
+      margin-right: 34px;
+      border-bottom-left-radius: 8px;
+    }
+
+    .message.system {
+      background: rgba(255,255,255,0.72);
+    }
+
+    .message-head {
+      margin-bottom: 8px;
+      font: 700 10px/1.2 "Courier New", monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    .message-body {
+      white-space: pre-wrap;
+      line-height: 1.55;
+      word-break: break-word;
+    }
+
+    details {
+      margin: 0 14px;
+      border-radius: 22px;
+      overflow: hidden;
+    }
+
+    summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      font-weight: 700;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    .panel-body {
+      padding: 0 16px 16px;
+      display: grid;
+      gap: 12px;
+    }
+
+    textarea,
+    input,
+    select,
+    button {
+      font: inherit;
+    }
+
+    textarea,
+    input,
+    select {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px 13px;
+      background: rgba(255,255,255,0.82);
+      color: var(--ink);
+    }
+
+    .composer {
+      position: sticky;
+      bottom: 0;
+      margin: 0;
+      padding: 14px 14px calc(14px + env(safe-area-inset-bottom, 0px));
+      border-radius: 24px 24px 0 0;
+      background: var(--panel-strong);
+      display: grid;
+      gap: 10px;
+    }
+
+    .composer textarea {
+      min-height: 88px;
+      resize: none;
+    }
+
+    button {
+      border: 0;
+      border-radius: 16px;
+      padding: 13px 15px;
+      font: 700 12px/1 "Courier New", monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+    }
+
+    .primary { background: var(--accent); color: #fff; }
+    .secondary { background: transparent; color: var(--muted); border: 1px solid var(--line); }
+    .danger { background: var(--warning); color: #fff; }
+
+    .field-grid {
+      display: grid;
+      gap: 10px;
+    }
+
+    .debug {
+      font-size: 13px;
+      line-height: 1.45;
+      color: var(--muted);
+      display: grid;
+      gap: 6px;
+    }
+
+    html[data-skin="aare"] {
+      --bg-top: #f1e3cf;
+      --bg-bottom: #f8f4ee;
+      --panel: rgba(255, 250, 244, 0.9);
+      --panel-strong: rgba(255, 250, 244, 0.96);
+      --ink: #19302d;
+      --muted: #60706d;
+      --line: rgba(25, 48, 45, 0.1);
+      --accent: #0d7a66;
+      --accent-strong: #095546;
+      --patient: #f1dfc7;
+      --assistant: #d9efe7;
+      --warning: #c64d38;
+      --shadow: 0 18px 42px rgba(79, 61, 34, 0.18);
+      --glow-a: rgba(13, 122, 102, 0.16);
+      --glow-b: rgba(198, 77, 56, 0.12);
+      --glow-c: rgba(255,255,255,0.42);
+      --font-display: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      --font-ui: "Trebuchet MS", "Segoe UI", sans-serif;
+    }
+
+    html[data-skin="river"] {
+      --bg-top: #dfefea;
+      --bg-bottom: #f1f7f4;
+      --panel: rgba(244, 251, 248, 0.9);
+      --panel-strong: rgba(244, 251, 248, 0.97);
+      --ink: #183432;
+      --muted: #56716d;
+      --line: rgba(24, 52, 50, 0.1);
+      --accent: #1c7b78;
+      --accent-strong: #135b5a;
+      --patient: #e2efe6;
+      --assistant: #d6edf1;
+      --warning: #c45e48;
+      --shadow: 0 18px 44px rgba(54, 91, 88, 0.16);
+      --glow-a: rgba(28, 123, 120, 0.16);
+      --glow-b: rgba(109, 170, 157, 0.18);
+      --glow-c: rgba(255,255,255,0.38);
+      --font-display: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      --font-ui: "Verdana", "Trebuchet MS", sans-serif;
+    }
+
+    html[data-skin="dusk"] {
+      --bg-top: #e8ddd7;
+      --bg-bottom: #f4f0ed;
+      --panel: rgba(248, 242, 239, 0.9);
+      --panel-strong: rgba(248, 242, 239, 0.97);
+      --ink: #262f35;
+      --muted: #6b666f;
+      --line: rgba(38, 47, 53, 0.1);
+      --accent: #5f8298;
+      --accent-strong: #496577;
+      --patient: #ecdcd6;
+      --assistant: #dde7ef;
+      --warning: #ba6257;
+      --shadow: 0 18px 46px rgba(69, 66, 76, 0.18);
+      --glow-a: rgba(95, 130, 152, 0.16);
+      --glow-b: rgba(186, 98, 87, 0.12);
+      --glow-c: rgba(255,255,255,0.34);
+      --font-display: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      --font-ui: "Segoe UI", "Trebuchet MS", sans-serif;
+    }
+
+    html[data-tone="grounded"] {
+      --accent: color-mix(in srgb, var(--accent) 62%, #677565 38%);
+      --shadow: 0 16px 36px rgba(64, 63, 58, 0.16);
+    }
+
+    html[data-tone="soft"] {
+      --panel: color-mix(in srgb, var(--panel) 78%, rgba(255,255,255,0.26) 22%);
+    }
+
+    html[data-tone="lifted"] {
+      --accent: color-mix(in srgb, var(--accent) 78%, #7fa68a 22%);
+    }
+
+    body {
+      font-family: var(--font-ui);
+      background:
+        radial-gradient(circle at top right, var(--glow-a), transparent 26%),
+        radial-gradient(circle at top left, var(--glow-b), transparent 22%),
+        radial-gradient(circle at bottom center, var(--glow-c), transparent 40%),
+        linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 58%, color-mix(in srgb, var(--bg-bottom) 82%, #fff 18%) 100%);
+      transition: background 420ms ease, color 220ms ease;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      pointer-events: none;
+      z-index: 0;
+      filter: blur(14px);
+      opacity: 0.6;
+    }
+
+    body::before {
+      top: -40px;
+      right: -30px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.44) 0%, transparent 72%);
+    }
+
+    body::after {
+      left: -36px;
+      bottom: 80px;
+      width: 150px;
+      height: 150px;
+      border-radius: 42% 58% 50% 50%;
+      background: radial-gradient(circle, color-mix(in srgb, var(--accent) 18%, rgba(255,255,255,0.1) 82%) 0%, transparent 70%);
+    }
+
+    .app {
+      position: relative;
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(255,255,255,0.1), transparent 25%);
+    }
+
+    .hero-card,
+    .panel,
+    .composer,
+    .message,
+    details {
+      background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06)), var(--panel);
+      border-color: var(--line);
+    }
+
+    .eyebrow,
+    .tiny,
+    .pill,
+    .chip,
+    button {
+      font-family: "Aptos Mono", "Courier New", monospace;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-card {
+      padding: 18px;
+      border-radius: 26px;
+    }
+
+    .snapshot,
+    details,
+    .composer {
+      border-radius: 24px;
+    }
+
+    .snapshot-cell,
+    textarea,
+    input,
+    select,
+    .pill,
+    .chip,
+    .message,
+    .theme-note {
+      background: linear-gradient(180deg, rgba(255,255,255,0.22), rgba(255,255,255,0.08));
+    }
+
+    .primary {
+      background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 88%, #fff 12%), color-mix(in srgb, var(--accent-strong) 82%, #203b39 18%));
+      box-shadow: 0 14px 28px rgba(13, 122, 102, 0.22);
+    }
+
+    .danger {
+      background: linear-gradient(135deg, color-mix(in srgb, var(--warning) 82%, #fff 18%), color-mix(in srgb, var(--warning) 78%, #6d3027 22%));
+    }
+
+    .theme-note {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 12px 13px;
+      color: var(--muted);
+      line-height: 1.4;
+      font-size: 13px;
+    }
+
+    .theme-note strong {
+      color: var(--ink);
+    }
+
+    .voice-toggle {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font: 700 11px/1.2 "Courier New", monospace;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .voice-toggle input {
+      accent-color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <div class="hero-card">
+        <p class="eyebrow">Mobile Walkthrough</p>
+        <h1>Patient support on a phone-sized surface.</h1>
+        <div class="status-row">
+          <span id="status-pill" class="pill">Checking</span>
+          <span id="identity-pill" class="pill">browser identity</span>
+        </div>
+        <p id="identity-note" class="tiny">Identity will resolve to a browser-scoped memory key until a patient id is supplied.</p>
+        <div class="field-grid">
+          <label for="ui-language">Language</label>
+          <select id="ui-language"></select>
+        </div>
+      </div>
+      <div class="chip-row">
+        <button class="chip" data-quick-key="sleep">Alvas</button>
+        <button class="chip" data-quick-key="breakup">Szakitas</button>
+        <button class="chip" data-quick-key="simplify">Egyszerubben</button>
+        <button class="chip danger" id="quick-urgent" type="button">Surgos</button>
+        <button class="chip" id="logout-button" type="button">Kilepes</button>
+      </div>
+    </section>
+
+    <details>
+      <summary>Demo settings</summary>
+      <div class="panel-body field-grid">
+        <input id="patient-id" type="text" placeholder="Optional patient id">
+        <select id="age-group">
+          <option value="">Age group</option>
+          <option value="teen">Teen</option>
+          <option value="adult">Adult</option>
+          <option value="senior">Senior</option>
+        </select>
+        <select id="literacy-level">
+          <option value="">Literacy</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <select id="preferred-register">
+          <option value="">Register</option>
+          <option value="plain">Plain</option>
+          <option value="conversational">Conversational</option>
+          <option value="clinical">Clinical</option>
+        </select>
+        <select id="theme-mode"></select>
+        <select id="theme-skin"></select>
+        <div id="theme-note" class="theme-note">Auto ambience active.</div>
+        <label><input id="prefer-online" type="checkbox"> Prefer online rerank when available</label>
+        <label><input id="include-review-items" type="checkbox"> Include review and test content</label>
+        <label><input id="debug-mode" type="checkbox" checked> Show compact debug block</label>
+        <label class="voice-toggle"><input id="auto-speak" type="checkbox" checked> <span id="auto-speak-label">Read replies aloud</span></label>
+      </div>
+    </details>
+
+    <section class="snapshot panel">
+      <div class="status-row">
+        <p class="eyebrow">Runtime Snapshot</p>
+        <span id="snapshot-mode" class="pill">local_only</span>
+      </div>
+      <div class="snapshot-grid">
+        <div class="snapshot-cell">
+          <p class="tiny">Recent Theme</p>
+          <div id="snapshot-summary" class="snapshot-value">Nincs meg aktiv beszelgetesi osszefoglalo.</div>
+        </div>
+        <div class="snapshot-cell">
+          <p class="tiny">Knowledge</p>
+          <div id="snapshot-knowledge" class="snapshot-value">Nincs kivalasztott snippet.</div>
+        </div>
+        <div class="snapshot-cell">
+          <p class="tiny">Routing</p>
+          <div id="snapshot-routing" class="snapshot-value">A routing a valasz utan jelenik meg.</div>
+        </div>
+        <div class="snapshot-cell">
+          <p class="tiny">Memory</p>
+          <div id="snapshot-memory" class="snapshot-value">Browser-scoped memoria aktiv.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline" class="timeline"></section>
+
+    <section class="composer">
+      <textarea id="message" placeholder="Ird le roviden, mire lenne most a legnagyobb szukseged."></textarea>
+      <div class="composer-actions">
+        <button id="record-button" class="secondary" type="button">Mikrofon</button>
+        <button id="send" class="primary" type="button">Kuld</button>
+        <button id="clear" class="secondary" type="button">Torol</button>
+      </div>
+      <p id="voice-note" class="tiny">Mikrofon capture es helyi felolvasas aktiv, ha a bongeszo tamogatja.</p>
+    </section>
+  </main>
+
+  <script>
+    const timeline = document.getElementById('timeline');
+    const messageInput = document.getElementById('message');
+    const langSelect = document.getElementById('ui-language');
+    const sendButton = document.getElementById('send');
+    const clearButton = document.getElementById('clear');
+    const statusPill = document.getElementById('status-pill');
+    const identityPill = document.getElementById('identity-pill');
+    const identityNote = document.getElementById('identity-note');
+    const patientIdInput = document.getElementById('patient-id');
+    const ageGroupInput = document.getElementById('age-group');
+    const literacyLevelInput = document.getElementById('literacy-level');
+    const preferredRegisterInput = document.getElementById('preferred-register');
+    const themeModeInput = document.getElementById('theme-mode');
+    const themeSkinInput = document.getElementById('theme-skin');
+    const themeNoteNode = document.getElementById('theme-note');
+    const preferOnlineInput = document.getElementById('prefer-online');
+    const includeReviewItemsInput = document.getElementById('include-review-items');
+    const debugModeInput = document.getElementById('debug-mode');
+    const snapshotMode = document.getElementById('snapshot-mode');
+    const snapshotSummary = document.getElementById('snapshot-summary');
+    const snapshotKnowledge = document.getElementById('snapshot-knowledge');
+    const snapshotRouting = document.getElementById('snapshot-routing');
+    const snapshotMemory = document.getElementById('snapshot-memory');
+    const quickButtons = Array.from(document.querySelectorAll('[data-quick-key]'));
+    const heroCard = document.querySelector('.hero-card');
+    const heroEyebrow = heroCard.querySelector('.eyebrow');
+    const heroTitle = heroCard.querySelector('h1');
+    const languageLabel = heroCard.querySelector('label[for="ui-language"]');
+    const settingsSummary = document.querySelector('details summary');
+    const settingsLabels = document.querySelectorAll('details label');
+    const snapshotLabels = document.querySelectorAll('.snapshot-cell .tiny');
+    const quickUrgentButton = document.getElementById('quick-urgent');
+    const logoutButton = document.getElementById('logout-button');
+    const recordButton = document.getElementById('record-button');
+    const autoSpeakInput = document.getElementById('auto-speak');
+    const autoSpeakLabel = document.getElementById('auto-speak-label');
+    const voiceNoteNode = document.getElementById('voice-note');
+
+    const DEFAULT_UI_CONFIG = {
+      supported_languages: ['hu', 'en', 'de'],
+      default_language: 'hu'
+    };
+
+    const THEME_COPY = {
+      hu: {
+        modes: [['auto', 'Atmoszfera: auto'], ['manual', 'Atmoszfera: kezi']],
+        skins: { aare: 'Skin: Aare Light', river: 'Skin: River Calm', dusk: 'Skin: Soft Evening' },
+        reasons: { manual: 'kezi valasztas', morning: 'reggeli ritmus', day: 'napkozbeni egyensuly', evening: 'esti lenyugtatas', night: 'ejszakai puhitas', urgent: 'fokozott biztonsag', heavy: 'nagyobb terheles', rest: 'pihenes-fokusz', calm: 'nyugodtabb hangulat', steady: 'semleges alap' }
+      },
+      en: {
+        modes: [['auto', 'Ambience: auto'], ['manual', 'Ambience: manual']],
+        skins: { aare: 'Skin: Aare Light', river: 'Skin: River Calm', dusk: 'Skin: Soft Evening' },
+        reasons: { manual: 'manual choice', morning: 'morning rhythm', day: 'daytime balance', evening: 'evening wind-down', night: 'night support', urgent: 'safety focus', heavy: 'heavier emotional load', rest: 'rest support', calm: 'calmer tone', steady: 'neutral base' }
+      },
+      de: {
+        modes: [['auto', 'Ambiente: auto'], ['manual', 'Ambiente: manuell']],
+        skins: { aare: 'Skin: Aare Light', river: 'Skin: River Calm', dusk: 'Skin: Soft Evening' },
+        reasons: { manual: 'manuelle Wahl', morning: 'Morgenrhythmus', day: 'Tagesbalance', evening: 'Abendliches Runterfahren', night: 'Nachtmodus', urgent: 'Sicherheitsfokus', heavy: 'hoehere Belastung', rest: 'Ruhe-Fokus', calm: 'ruhigere Stimmung', steady: 'neutrale Basis' }
+      }
+    };
+
+    const UI_COPY = {
+      hu: {
+        heroEyebrow: 'Mobile Walkthrough',
+        heroTitle: 'Telefonos meretu paciens-tamogatas.',
+        language: 'Nyelv',
+        identityWaiting: 'A browser-alapu memoria kulcs latszik, amig nincs patient id.',
+        identityPrefix: 'Feloldott memoria kulcs: ',
+        quick: { sleep: { label: 'Alvas', text: 'Nehezen alszom mostanaban.' }, breakup: { label: 'Szakitas', text: 'Szakitas utan vagyok.' }, simplify: { label: 'Egyszerubben', text: 'Egyszerubben mondd el.' }, urgentLabel: 'Surgos', urgentText: 'Surgos segitsegre van szuksegem most.' },
+        settings: { summary: 'Demo beallitasok', patientPlaceholder: 'Optional patient id', age: [['', 'Kor'], ['teen', 'Teen'], ['adult', 'Adult'], ['senior', 'Senior']], literacy: [['', 'Nyelvezet'], ['low', 'Alacsony'], ['medium', 'Kozepes'], ['high', 'Magas']], register: [['', 'Regiszter'], ['plain', 'Egyszeru'], ['conversational', 'Koznapi'], ['clinical', 'Klinikai']], labels: ['Prefer online rerank when available', 'Include review and test content', 'Show compact debug block'] },
+        snapshot: { labels: ['Recent Theme', 'Knowledge', 'Routing', 'Memory'], summaryEmpty: 'Nincs meg aktiv beszelgetesi osszefoglalo.', knowledgeEmpty: 'Nincs kivalasztott snippet.', routingEmpty: 'A routing a valasz utan jelenik meg.', memoryEmpty: 'Browser-scoped memoria aktiv.' },
+        composer: { placeholder: 'Ird le roviden, mire lenne most a legnagyobb szukseged.', send: 'Kuld', clear: 'Torol', record: 'Mikrofon', stopRecord: 'Stop', logout: 'Kilepes', autoSpeak: 'Valasz felolvasasa', voiceNote: 'Mikrofon capture es helyi felolvasas aktiv, ha a bongeszo tamogatja.' },
+        statuses: { online: 'Online Ready', local: 'Local Only', offline: 'Offline' },
+        roles: { patient: 'Patient', assistant: 'Assistant', system: 'Demo' },
+        messages: { debug: 'debug', noResponse: '(nincs valasz)', unknownError: 'ismeretlen hiba', networkError: 'network_error', cleared: 'A mobil demo nezet torolve lett.', intro: 'Ez egy mobilra optimalizalt paciens-demo. A valaszok ugyanazt a runtime API-t hasznaljak, mint az asztali nezet.', speechUnavailable: 'A bongeszo nem tamogat helyi mikrofonfelismerest.', speechCaptureStart: 'Mikrofon figyeles indult.', speechCaptureError: 'Mikrofon hiba', speechCaptured: 'Felismert szoveg', authRequired: 'Session lejart, uj belepes kell.' }
+      },
+      en: {
+        heroEyebrow: 'Mobile Walkthrough',
+        heroTitle: 'Patient support on a phone-sized surface.',
+        language: 'Language',
+        identityWaiting: 'Identity resolves to a browser-scoped memory key until a patient id is supplied.',
+        identityPrefix: 'Resolved memory key: ',
+        quick: { sleep: { label: 'Sleep', text: 'I have had trouble sleeping lately.' }, breakup: { label: 'Breakup', text: 'I am going through a breakup.' }, simplify: { label: 'Simplify', text: 'Say it in simpler language.' }, urgentLabel: 'Urgent', urgentText: 'I need urgent help right now.' },
+        settings: { summary: 'Demo settings', patientPlaceholder: 'Optional patient id', age: [['', 'Age group'], ['teen', 'Teen'], ['adult', 'Adult'], ['senior', 'Senior']], literacy: [['', 'Literacy'], ['low', 'Low'], ['medium', 'Medium'], ['high', 'High']], register: [['', 'Register'], ['plain', 'Plain'], ['conversational', 'Conversational'], ['clinical', 'Clinical']], labels: ['Prefer online rerank when available', 'Include review and test content', 'Show compact debug block'] },
+        snapshot: { labels: ['Recent Theme', 'Knowledge', 'Routing', 'Memory'], summaryEmpty: 'No active conversation summary yet.', knowledgeEmpty: 'No snippet selected.', routingEmpty: 'Routing details appear after a response.', memoryEmpty: 'Browser-scoped memory is active.' },
+        composer: { placeholder: 'Briefly describe what would help most right now.', send: 'Send', clear: 'Clear', record: 'Microphone', stopRecord: 'Stop', logout: 'Logout', autoSpeak: 'Read replies aloud', voiceNote: 'Microphone capture and local speech playback are used when the browser supports them.' },
+        statuses: { online: 'Online Ready', local: 'Local Only', offline: 'Offline' },
+        roles: { patient: 'Patient', assistant: 'Assistant', system: 'Demo' },
+        messages: { debug: 'debug', noResponse: '(no response)', unknownError: 'unknown error', networkError: 'network_error', cleared: 'The mobile demo view was cleared.', intro: 'This is a mobile-optimized patient demo. Responses use the same runtime API as the desktop view.', speechUnavailable: 'This browser does not support local microphone recognition.', speechCaptureStart: 'Microphone capture started.', speechCaptureError: 'Microphone error', speechCaptured: 'Recognized text', authRequired: 'Session expired, please log in again.' }
+      },
+      de: {
+        heroEyebrow: 'Mobile Walkthrough',
+        heroTitle: 'Patientenunterstuetzung auf einer telefon-grossen Flaeche.',
+        language: 'Sprache',
+        identityWaiting: 'Die Identitaet wird auf einen browserbasierten Speicherschluessel aufgeloest, bis eine Patienten-ID gesetzt ist.',
+        identityPrefix: 'Aufgeloester Speicherschluessel: ',
+        quick: { sleep: { label: 'Schlaf', text: 'Ich habe in letzter Zeit Schlafprobleme.' }, breakup: { label: 'Trennung', text: 'Ich gehe gerade durch eine Trennung.' }, simplify: { label: 'Einfacher', text: 'Sag es einfacher.' }, urgentLabel: 'Dringend', urgentText: 'Ich brauche jetzt dringend Hilfe.' },
+        settings: { summary: 'Demo-Einstellungen', patientPlaceholder: 'Optionale Patienten-ID', age: [['', 'Altersgruppe'], ['teen', 'Jugendlich'], ['adult', 'Erwachsen'], ['senior', 'Senior']], literacy: [['', 'Sprachniveau'], ['low', 'Niedrig'], ['medium', 'Mittel'], ['high', 'Hoch']], register: [['', 'Register'], ['plain', 'Einfach'], ['conversational', 'Alltaeglich'], ['clinical', 'Klinisch']], labels: ['Online-Rerank bevorzugen, wenn verfuegbar', 'Review- und Testinhalte einschliessen', 'Kompakten Debug-Block zeigen'] },
+        snapshot: { labels: ['Letztes Thema', 'Wissen', 'Routing', 'Speicher'], summaryEmpty: 'Noch keine aktive Gespraechszusammenfassung.', knowledgeEmpty: 'Kein Snippet ausgewaehlt.', routingEmpty: 'Routing-Details erscheinen nach einer Antwort.', memoryEmpty: 'Browserbasierter Speicher ist aktiv.' },
+        composer: { placeholder: 'Beschreibe kurz, was dir jetzt am meisten helfen wuerde.', send: 'Senden', clear: 'Leeren', record: 'Mikrofon', stopRecord: 'Stop', logout: 'Abmelden', autoSpeak: 'Antworten vorlesen', voiceNote: 'Mikrofon-Capture und lokale Sprachausgabe werden genutzt, wenn der Browser sie unterstuetzt.' },
+        statuses: { online: 'Online bereit', local: 'Nur lokal', offline: 'Offline' },
+        roles: { patient: 'Patient', assistant: 'Assistent', system: 'Demo' },
+        messages: { debug: 'debug', noResponse: '(keine Antwort)', unknownError: 'unbekannter Fehler', networkError: 'network_error', cleared: 'Die mobile Demo-Ansicht wurde geleert.', intro: 'Dies ist eine mobil optimierte Patientendemo. Antworten nutzen dieselbe Runtime-API wie die Desktop-Ansicht.', speechUnavailable: 'Dieser Browser unterstuetzt keine lokale Mikrofonerkennung.', speechCaptureStart: 'Mikrofonaufnahme gestartet.', speechCaptureError: 'Mikrofonfehler', speechCaptured: 'Erkannter Text', authRequired: 'Session abgelaufen, bitte erneut anmelden.' }
+      }
+    };
+
+    const conversationId = `mobile-demo-${Date.now()}`;
+    const storageKey = 'patient-chat-mobile-browser-key';
+    const browserPatientKey = window.localStorage.getItem(storageKey) || `anon-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
+    window.localStorage.setItem(storageKey, browserPatientKey);
+    const languageLocale = { hu: 'hu-HU', en: 'en-US', de: 'de-DE' };
+    let currentLang = DEFAULT_UI_CONFIG.default_language;
+    let themeMode = 'auto';
+    let manualSkin = 'aare';
+    let activeThemeState = null;
+    let mediaRecorder = null;
+    let mediaChunks = [];
+    let mediaStream = null;
+    let pendingVoiceTranscript = '';
+    let speechRecognition = null;
+    let isRecording = false;
+
+    function copyFor(lang = currentLang) {
+      return UI_COPY[lang] || UI_COPY.en;
+    }
+
+    function themeCopyFor(lang = currentLang) {
+      return THEME_COPY[lang] || THEME_COPY.en;
+    }
+
+    function languageName(code) {
+      const names = { hu: 'Magyar', en: 'English', de: 'Deutsch' };
+      return names[code] || code.toUpperCase();
+    }
+
+    function loadThemePrefs() {
+      try {
+        const raw = window.localStorage.getItem('patient-chat-mobile-theme');
+        if (!raw) {
+          return;
+        }
+        const parsed = JSON.parse(raw);
+        if (parsed.mode === 'auto' || parsed.mode === 'manual') {
+          themeMode = parsed.mode;
+        }
+        if (parsed.skin && ['aare', 'river', 'dusk'].includes(parsed.skin)) {
+          manualSkin = parsed.skin;
+        }
+      } catch {
+        themeMode = 'auto';
+        manualSkin = 'aare';
+      }
+    }
+
+    function saveThemePrefs() {
+      window.localStorage.setItem('patient-chat-mobile-theme', JSON.stringify({ mode: themeMode, skin: manualSkin }));
+    }
+
+    function getDayPeriod() {
+      const hour = new Date().getHours();
+      if (hour < 6) return 'night';
+      if (hour < 11) return 'morning';
+      if (hour < 17) return 'day';
+      if (hour < 22) return 'evening';
+      return 'night';
+    }
+
+    function detectMood(text = '', handoff = false) {
+      const value = text.toLowerCase();
+      if (handoff || /(surg|urgent|panic|kriz|can't go on|cannot go on|dringend)/.test(value)) return 'urgent';
+      if (/(szorong|anx|worry|stress|angst|overwhelm)/.test(value)) return 'heavy';
+      if (/(alv|sleep|rest|ruhe|pihen|faradt|tired)/.test(value)) return 'rest';
+      if (/(legz|breath|calm|nyugod|ruhig|jobb|better|lighter)/.test(value)) return 'calm';
+      return 'steady';
+    }
+
+    function resolveThemeState({ text = '', handoff = false } = {}) {
+      const period = getDayPeriod();
+      const mood = detectMood(text, handoff);
+      let skin = manualSkin;
+      if (themeMode === 'auto') {
+        if (mood === 'urgent' || mood === 'heavy') {
+          skin = 'dusk';
+        } else if (period === 'night' || period === 'evening') {
+          skin = 'dusk';
+        } else if (ageGroupInput.value === 'teen') {
+          skin = 'river';
+        } else if (literacyLevelInput.value === 'low' || preferredRegisterInput.value === 'plain') {
+          skin = 'aare';
+        } else {
+          skin = 'river';
+        }
+      }
+      let tone = 'soft';
+      if (mood === 'urgent' || mood === 'heavy') tone = 'grounded';
+      if (mood === 'calm') tone = 'lifted';
+      return {
+        skin,
+        tone,
+        period,
+        mood,
+        primaryReason: themeMode === 'manual' ? 'manual' : period,
+        secondaryReason: themeMode === 'manual' ? 'manual' : mood
+      };
+    }
+
+    function buildThemeNote(state) {
+      const themeCopy = themeCopyFor();
+      const skinName = (themeCopy.skins[state.skin] || state.skin).replace(/^Skin:\s*/, '');
+      const primary = themeCopy.reasons[state.primaryReason] || state.primaryReason;
+      const secondary = themeCopy.reasons[state.secondaryReason] || state.secondaryReason;
+      return `<strong>${skinName}</strong> · ${primary} · ${secondary}`;
+    }
+
+    function applyThemeState(options = {}) {
+      activeThemeState = resolveThemeState(options);
+      document.documentElement.dataset.skin = activeThemeState.skin;
+      document.documentElement.dataset.tone = activeThemeState.tone;
+      document.documentElement.dataset.period = activeThemeState.period;
+      themeModeInput.value = themeMode;
+      themeSkinInput.value = manualSkin;
+      themeSkinInput.disabled = themeMode !== 'manual';
+      themeNoteNode.innerHTML = buildThemeNote(activeThemeState);
+    }
+
+    function browserLocale() {
+      return languageLocale[currentLang] || 'en-US';
+    }
+
+    function supportsSpeechRecognition() {
+      return Boolean(window.SpeechRecognition || window.webkitSpeechRecognition);
+    }
+
+    function supportsAudioCapture() {
+      return Boolean(navigator.mediaDevices && navigator.mediaDevices.getUserMedia && window.MediaRecorder);
+    }
+
+    function updateVoiceUi() {
+      const copy = copyFor();
+      recordButton.textContent = isRecording ? copy.composer.stopRecord : copy.composer.record;
+      logoutButton.textContent = copy.composer.logout;
+      autoSpeakLabel.textContent = copy.composer.autoSpeak;
+      voiceNoteNode.textContent = (supportsAudioCapture() || supportsSpeechRecognition()) ? copy.composer.voiceNote : copy.messages.speechUnavailable;
+    }
+
+    function ensureSpeechRecognition() {
+      const RecognitionCtor = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!RecognitionCtor) {
+        return null;
+      }
+      if (!speechRecognition) {
+        speechRecognition = new RecognitionCtor();
+        speechRecognition.continuous = false;
+        speechRecognition.interimResults = false;
+        speechRecognition.maxAlternatives = 1;
+        speechRecognition.onstart = () => {
+          if (!isRecording) {
+            isRecording = true;
+            updateVoiceUi();
+            addMessage('system', copyFor().messages.speechCaptureStart, ['voice']);
+          }
+        };
+        speechRecognition.onend = () => {
+          if (!mediaRecorder || mediaRecorder.state !== 'recording') {
+            isRecording = false;
+            updateVoiceUi();
+          }
+        };
+        speechRecognition.onerror = (event) => {
+          isRecording = false;
+          updateVoiceUi();
+          addMessage('system', `${copyFor().messages.speechCaptureError}: ${event.error || copyFor().messages.unknownError}`, ['voice']);
+        };
+        speechRecognition.onresult = (event) => {
+          const transcript = Array.from(event.results || [])
+            .map((result) => result[0] && result[0].transcript ? result[0].transcript : '')
+            .join(' ')
+            .trim();
+          if (!transcript) {
+            return;
+          }
+          pendingVoiceTranscript = transcript;
+          addMessage('system', `${copyFor().messages.speechCaptured}: ${transcript}`, ['voice']);
+          if (!supportsAudioCapture()) {
+            sendMessage(transcript, { source: 'voice' });
+          }
+        };
+      }
+      speechRecognition.lang = browserLocale();
+      return speechRecognition;
+    }
+
+    function playAssistantAudio(tts) {
+      if (!autoSpeakInput.checked || !tts || !tts.audio_url) {
+        return false;
+      }
+      const audio = new Audio(tts.audio_url);
+      audio.play().catch(() => {
+        speakAssistantText(tts.text || '');
+      });
+      return true;
+    }
+
+    function speakAssistantText(text) {
+      if (!autoSpeakInput.checked || !('speechSynthesis' in window) || !text) {
+        return;
+      }
+      const utterance = new SpeechSynthesisUtterance(String(text).slice(0, 280));
+      utterance.lang = browserLocale();
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(utterance);
+    }
+
+    async function handleLogout() {
+      try {
+        await fetch('/auth/logout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ reason: 'user_logout' })
+        });
+      } finally {
+        window.location.href = '/login';
+      }
+    }
+
+    function startVoiceCapture() {
+      if (supportsAudioCapture()) {
+        toggleAudioRecording();
+        return;
+      }
+      const recognition = ensureSpeechRecognition();
+      if (!recognition) {
+        addMessage('system', copyFor().messages.speechUnavailable, ['voice']);
+        return;
+      }
+      if (isRecording) {
+        recognition.stop();
+        return;
+      }
+      recognition.lang = browserLocale();
+      recognition.start();
+    }
+
+    async function toggleAudioRecording() {
+      if (mediaRecorder && mediaRecorder.state === 'recording') {
+        mediaRecorder.stop();
+        if (speechRecognition) {
+          speechRecognition.stop();
+        }
+        return;
+      }
+      if (!supportsAudioCapture()) {
+        startVoiceCapture();
+        return;
+      }
+      pendingVoiceTranscript = '';
+      mediaStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      mediaChunks = [];
+      mediaRecorder = new MediaRecorder(mediaStream);
+      mediaRecorder.addEventListener('dataavailable', (event) => {
+        if (event.data && event.data.size > 0) {
+          mediaChunks.push(event.data);
+        }
+      });
+      mediaRecorder.addEventListener('start', () => {
+        isRecording = true;
+        updateVoiceUi();
+        addMessage('system', copyFor().messages.speechCaptureStart, ['voice', 'upload']);
+        const recognition = ensureSpeechRecognition();
+        if (recognition) {
+          try {
+            recognition.lang = browserLocale();
+            recognition.start();
+          } catch {
+            return;
+          }
+        }
+      });
+      mediaRecorder.addEventListener('stop', async () => {
+        isRecording = false;
+        updateVoiceUi();
+        if (speechRecognition) {
+          try {
+            speechRecognition.stop();
+          } catch {
+            return;
+          }
+        }
+        mediaStream.getTracks().forEach((track) => track.stop());
+        const audioBlob = new Blob(mediaChunks, { type: mediaRecorder.mimeType || 'audio/webm' });
+        await sendAudioMessage(audioBlob, pendingVoiceTranscript);
+      });
+      mediaRecorder.start();
+    }
+
+    async function sendAudioMessage(audioBlob, transcriptText = '') {
+      addMessage('patient', transcriptText || '[voice note uploaded]', ['voice', 'upload', 'mobile']);
+      sendButton.disabled = true;
+      const formData = new FormData();
+      formData.append('audio', audioBlob, `patient-note-${Date.now()}.webm`);
+      formData.append('lang', currentLang);
+      formData.append('conversation_id', conversationId);
+      formData.append('patient_identity', JSON.stringify({
+        browser_patient_key: browserPatientKey,
+        consent_to_store_excerpt: true
+      }));
+      formData.append('profile_overrides', JSON.stringify(buildProfileOverrides()));
+      formData.append('prefer_online', String(preferOnlineInput.checked));
+      formData.append('debug', String(debugModeInput.checked));
+      formData.append('synthesize_speech', String(autoSpeakInput.checked));
+      if (transcriptText) {
+        formData.append('transcript_text', transcriptText);
+      }
+      if (patientIdInput.value.trim()) {
+        formData.append('patient_id', patientIdInput.value.trim());
+      }
+      try {
+        const response = await fetch('/runtime/audio-upload', {
+          method: 'POST',
+          body: formData
+        });
+        const data = await response.json();
+        if (response.status === 401 && data.error === 'auth_required') {
+          addMessage('system', copyFor().messages.authRequired, ['auth']);
+          window.location.href = data.login_url || '/login';
+          return;
+        }
+        if (!response.ok) {
+          addMessage('system', `${data.error || 'request_failed'}: ${data.message || copyFor().messages.unknownError}`, ['error']);
+          return;
+        }
+        const meta = [];
+        if ((data.selection || {}).category) meta.push(`cat:${data.selection.category}`);
+        if ((data.selection || {}).item_id) meta.push(`item:${data.selection.item_id}`);
+        if (data.matched_trigger_id) meta.push(`trigger:${data.matched_trigger_id}`);
+        if ((data.hybrid_selection || {}).status) meta.push(`hybrid:${data.hybrid_selection.status}`);
+        if (((data.selection || {}).content_meta || {}).status) {
+          meta.push(`src:${data.selection.content_meta.src}`);
+          meta.push(`status:${data.selection.content_meta.status}`);
+        }
+        addMessage('assistant', (data.selection || {}).text || copyFor().messages.noResponse, meta);
+        if (!playAssistantAudio(data.tts)) {
+          speakAssistantText((data.selection || {}).text || '');
+        }
+        updateSnapshot(data);
+        if (data.handoff_triggered) {
+          applyThemeState({ handoff: true });
+        }
+        renderDebug(data.debug);
+      } catch (error) {
+        addMessage('system', `${copyFor().messages.networkError}: ${error.message}`, ['offline']);
+      } finally {
+        sendButton.disabled = false;
+        pendingVoiceTranscript = '';
+      }
+    }
+
+    function applyOptions(selectNode, options) {
+      const currentValue = selectNode.value;
+      selectNode.innerHTML = options.map(([value, label]) => `<option value="${value}">${label}</option>`).join('');
+      selectNode.value = options.some(([value]) => value === currentValue) ? currentValue : options[0][0];
+    }
+
+    function populateLanguageOptions(config) {
+      const supported = config.supported_languages || DEFAULT_UI_CONFIG.supported_languages;
+      langSelect.innerHTML = supported.map((lang) => `<option value="${lang}">${languageName(lang)}</option>`).join('');
+      currentLang = supported.includes(currentLang)
+        ? currentLang
+        : (supported.includes(config.default_language) ? config.default_language : supported[0]);
+      langSelect.value = currentLang;
+    }
+
+    function applyStaticUi() {
+      const copy = copyFor();
+      const themeCopy = themeCopyFor();
+      document.documentElement.lang = currentLang;
+      heroEyebrow.textContent = copy.heroEyebrow;
+      heroTitle.textContent = copy.heroTitle;
+      languageLabel.textContent = copy.language;
+      settingsSummary.textContent = copy.settings.summary;
+      patientIdInput.placeholder = copy.settings.patientPlaceholder;
+      applyOptions(ageGroupInput, copy.settings.age);
+      applyOptions(literacyLevelInput, copy.settings.literacy);
+      applyOptions(preferredRegisterInput, copy.settings.register);
+      applyOptions(themeModeInput, themeCopy.modes);
+      applyOptions(themeSkinInput, Object.entries(themeCopy.skins));
+      themeModeInput.value = themeMode;
+      themeSkinInput.value = manualSkin;
+      settingsLabels[0].lastChild.textContent = ` ${copy.settings.labels[0]}`;
+      settingsLabels[1].lastChild.textContent = ` ${copy.settings.labels[1]}`;
+      settingsLabels[2].lastChild.textContent = ` ${copy.settings.labels[2]}`;
+      quickButtons.forEach((button) => {
+        const quick = copy.quick[button.dataset.quickKey];
+        button.textContent = quick.label;
+        button.dataset.quick = quick.text;
+      });
+      quickUrgentButton.textContent = copy.quick.urgentLabel;
+      snapshotLabels.forEach((node, index) => {
+        node.textContent = copy.snapshot.labels[index];
+      });
+      if (!snapshotSummary.dataset.live) snapshotSummary.textContent = copy.snapshot.summaryEmpty;
+      if (!snapshotKnowledge.dataset.live) snapshotKnowledge.textContent = copy.snapshot.knowledgeEmpty;
+      if (!snapshotRouting.dataset.live) snapshotRouting.textContent = copy.snapshot.routingEmpty;
+      if (!snapshotMemory.dataset.live) snapshotMemory.textContent = copy.snapshot.memoryEmpty;
+      messageInput.placeholder = copy.composer.placeholder;
+      recordButton.textContent = copy.composer.record;
+      sendButton.textContent = copy.composer.send;
+      clearButton.textContent = copy.composer.clear;
+      if (!patientIdInput.value.trim()) {
+        identityNote.textContent = copy.identityWaiting;
+      }
+      updateIdentityNote();
+      updateVoiceUi();
+      applyThemeState();
+    }
+
+    async function loadUiConfig() {
+      try {
+        const response = await fetch('/ui-config');
+        if (!response.ok) {
+          throw new Error('ui_config_failed');
+        }
+        const payload = await response.json();
+        populateLanguageOptions(payload);
+      } catch {
+        populateLanguageOptions(DEFAULT_UI_CONFIG);
+      }
+      applyStaticUi();
+    }
+
+    function updateIdentityNote() {
+      const patientId = patientIdInput.value.trim();
+      const label = patientId ? `patient:${patientId}` : `browser:${browserPatientKey}`;
+      identityPill.textContent = label;
+      identityNote.textContent = `${copyFor().identityPrefix}${label}`;
+    }
+
+    function addMessage(role, text, meta = []) {
+      const article = document.createElement('article');
+      article.className = `message ${role}`;
+
+      const head = document.createElement('div');
+      head.className = 'message-head';
+      head.textContent = role === 'patient' ? copyFor().roles.patient : role === 'assistant' ? copyFor().roles.assistant : copyFor().roles.system;
+
+      const body = document.createElement('div');
+      body.className = 'message-body';
+      body.textContent = text;
+
+      article.append(head, body);
+
+      if (meta.length) {
+        const row = document.createElement('div');
+        row.className = 'chip-row';
+        meta.forEach((value) => {
+          const chip = document.createElement('span');
+          chip.className = 'chip';
+          chip.textContent = value;
+          row.appendChild(chip);
+        });
+        article.appendChild(row);
+      }
+
+      timeline.appendChild(article);
+      timeline.scrollTop = timeline.scrollHeight;
+    }
+
+    function renderDebug(debug) {
+      if (!debugModeInput.checked || !debug) {
+        return;
+      }
+      const summary = (debug.conversation_summary || {}).active_summary || {};
+      const knowledge = debug.knowledge_context || [];
+      const lines = [
+        `hybrid: ${(debug.hybrid_selection || {}).status || 'n/a'}`,
+        `themes: ${(summary.patient_themes || []).join(' | ') || 'n/a'}`,
+        `assistant_items: ${(summary.assistant_items || []).join(', ') || 'n/a'}`,
+        `kb: ${knowledge.map((item) => item.id).join(', ') || 'n/a'}`
+      ];
+      addMessage('system', lines.join('\n'), [copyFor().messages.debug]);
+    }
+
+    function updateSnapshot(data) {
+      const debug = data.debug || {};
+      const summary = (debug.conversation_summary || {}).active_summary || {};
+      const knowledge = debug.knowledge_context || [];
+      const routing = data.route_decisions || {};
+      const patientIdentity = data.patient_identity || {};
+      const hybrid = data.hybrid_selection || {};
+      const selectionMeta = (data.selection || {}).content_meta || {};
+      const copy = copyFor();
+
+      snapshotMode.textContent = hybrid.status || 'local_only';
+      snapshotSummary.textContent = summary.last_user_message || (debug.conversation_summary || {}).summary_text || copy.snapshot.summaryEmpty;
+      snapshotSummary.dataset.live = summary.last_user_message || (debug.conversation_summary || {}).summary_text ? 'true' : '';
+      snapshotKnowledge.textContent = knowledge.length ? knowledge.slice(0, 3).map((item) => item.id).join(', ') : copy.snapshot.knowledgeEmpty;
+      snapshotKnowledge.dataset.live = knowledge.length ? 'true' : '';
+      snapshotRouting.textContent = Object.entries(routing).map(([stage, config]) => `${stage}:${config.selected_mode || 'n/a'}`).join(' | ') || copy.snapshot.routingEmpty;
+      snapshotRouting.dataset.live = Object.keys(routing).length ? 'true' : '';
+      snapshotMemory.textContent = `${patientIdentity.memory_key || `browser:${browserPatientKey}`} | ${(selectionMeta.src || 'dev')}/${(selectionMeta.status || 'appr')}`;
+      snapshotMemory.dataset.live = 'true';
+    }
+
+    async function refreshHealth() {
+      try {
+        const response = await fetch('/health');
+        const payload = await response.json();
+        if ((payload.llm || {}).auth_configured) {
+          statusPill.textContent = copyFor().statuses.online;
+          statusPill.className = 'pill live';
+        } else {
+          statusPill.textContent = copyFor().statuses.local;
+          statusPill.className = 'pill';
+        }
+      } catch {
+        statusPill.textContent = copyFor().statuses.offline;
+        statusPill.className = 'pill';
+      }
+    }
+
+    function buildProfileOverrides() {
+      const payload = {
+        age_group: ageGroupInput.value || null,
+        literacy_level: literacyLevelInput.value || null,
+        preferred_register: preferredRegisterInput.value || null,
+        preferences: {}
+      };
+      if (includeReviewItemsInput.checked) {
+        payload.content_statuses = ['appr', 'rev', 'sugg', 'test'];
+        payload.content_channel = 'tst';
+      }
+      return payload;
+    }
+
+    async function sendMessage(textOverride = '', options = {}) {
+      const text = (textOverride || messageInput.value).trim();
+      const source = options.source || 'text';
+      if (!text) {
+        return;
+      }
+
+      applyThemeState({ text });
+
+      const meta = ['mobile'];
+      if (source === 'voice') {
+        meta.unshift('voice');
+      }
+      addMessage('patient', text, meta);
+      sendButton.disabled = true;
+      messageInput.value = '';
+
+      const payload = {
+        text,
+        lang: currentLang,
+        conversation_id: conversationId,
+        patient_identity: {
+          browser_patient_key: browserPatientKey,
+          consent_to_store_excerpt: true
+        },
+        profile_overrides: buildProfileOverrides(),
+        prefer_online: preferOnlineInput.checked,
+        synthesize_speech: autoSpeakInput.checked,
+        debug: debugModeInput.checked
+      };
+      if (patientIdInput.value.trim()) {
+        payload.patient_id = patientIdInput.value.trim();
+      }
+
+      try {
+        const response = await fetch('/runtime/text', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await response.json();
+        if (response.status === 401 && data.error === 'auth_required') {
+          addMessage('system', copyFor().messages.authRequired, ['auth']);
+          window.location.href = data.login_url || '/login';
+          return;
+        }
+        if (!response.ok) {
+          addMessage('system', `${data.error || 'request_failed'}: ${data.message || copyFor().messages.unknownError}`, ['error']);
+          return;
+        }
+        const meta = [];
+        if ((data.selection || {}).category) meta.push(`cat:${data.selection.category}`);
+        if ((data.selection || {}).item_id) meta.push(`item:${data.selection.item_id}`);
+        if (data.matched_trigger_id) meta.push(`trigger:${data.matched_trigger_id}`);
+        if ((data.hybrid_selection || {}).status) meta.push(`hybrid:${data.hybrid_selection.status}`);
+        if (((data.selection || {}).content_meta || {}).status) {
+          meta.push(`src:${data.selection.content_meta.src}`);
+          meta.push(`status:${data.selection.content_meta.status}`);
+        }
+        addMessage('assistant', (data.selection || {}).text || copyFor().messages.noResponse, meta);
+        if (!playAssistantAudio(data.tts)) {
+          speakAssistantText((data.selection || {}).text || '');
+        }
+        updateSnapshot(data);
+        if (data.handoff_triggered) {
+          applyThemeState({ handoff: true });
+        }
+        renderDebug(data.debug);
+      } catch (error) {
+        addMessage('system', `${copyFor().messages.networkError}: ${error.message}`, ['offline']);
+      } finally {
+        sendButton.disabled = false;
+      }
+    }
+
+    quickButtons.forEach((button) => {
+      button.addEventListener('click', () => sendMessage(button.dataset.quick));
+    });
+    quickUrgentButton.addEventListener('click', () => sendMessage(copyFor().quick.urgentText));
+    recordButton.addEventListener('click', startVoiceCapture);
+    logoutButton.addEventListener('click', handleLogout);
+    sendButton.addEventListener('click', () => sendMessage());
+    clearButton.addEventListener('click', () => {
+      timeline.innerHTML = '';
+      snapshotSummary.dataset.live = '';
+      snapshotKnowledge.dataset.live = '';
+      snapshotRouting.dataset.live = '';
+      snapshotMemory.dataset.live = '';
+      updateSnapshot({ patient_identity: { memory_key: `browser:${browserPatientKey}` } });
+      addMessage('system', copyFor().messages.cleared, ['reset']);
+      applyThemeState();
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+    });
+    patientIdInput.addEventListener('input', updateIdentityNote);
+    langSelect.addEventListener('change', async () => {
+      currentLang = langSelect.value;
+      applyStaticUi();
+      await refreshHealth();
+    });
+    themeModeInput.addEventListener('change', () => {
+      themeMode = themeModeInput.value;
+      saveThemePrefs();
+      applyThemeState();
+    });
+    themeSkinInput.addEventListener('change', () => {
+      manualSkin = themeSkinInput.value;
+      saveThemePrefs();
+      applyThemeState();
+    });
+    [ageGroupInput, literacyLevelInput, preferredRegisterInput].forEach((input) => {
+      input.addEventListener('change', () => {
+        if (themeMode === 'auto') {
+          applyThemeState();
+        }
+      });
+    });
+    messageInput.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' && !event.shiftKey) {
+        event.preventDefault();
+        sendMessage();
+      }
+    });
+
+    loadThemePrefs();
+    loadUiConfig().then(() => refreshHealth());
+    updateSnapshot({ patient_identity: { memory_key: `browser:${browserPatientKey}` } });
+    updateVoiceUi();
+    addMessage('system', copyFor().messages.intro, ['intro']);
+  </script>
+</body>
+</html>

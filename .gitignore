@@ -1,0 +1,11 @@
+.venv/
+.pytest_cache/
+.ruff_cache/
+**/__pycache__/
+*.pyc
+.env
+.env.local
+data/runtime_state/generated_audio/
+data/runtime_state/uploaded_audio/
+data/runtime_state/downloads/
+data/runtime_state/audit/

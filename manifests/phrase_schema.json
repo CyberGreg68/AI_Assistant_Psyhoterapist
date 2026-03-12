@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/phrase_schema.json",
+  "title": "Phrase Category File",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "pri", "rec", "use", "tags", "pp"],
+    "properties": {
+      "id": {"type": "string"},
+      "pri": {"type": "integer"},
+      "reg": {
+        "type": "string",
+        "enum": ["plain", "conversational", "clinical", "youth"]
+      },
+      "lit": {
+        "type": "string",
+        "enum": ["low", "medium", "high"]
+      },
+      "age": {
+        "oneOf": [
+          {
+            "type": "string",
+            "enum": ["child", "teen", "adult", "senior"]
+          },
+          {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["child", "teen", "adult", "senior"]
+            },
+            "minItems": 1
+          }
+        ]
+      },
+      "persona": {
+        "type": "array",
+        "items": {"type": "string"}
+      },
+      "audit": {"type": "boolean"},
+      "review_required": {"type": "boolean"},
+      "review": {
+        "type": "object",
+        "properties": {
+          "review_status": {"type": "string", "enum": ["draft", "approved", "needs_revision"]},
+          "reviewed_by_role": {"type": "string", "enum": ["content", "clinical", "lead_clinical"]},
+          "reviewed_at": {"type": "string"},
+          "safety_notes": {"type": "string"},
+          "evidence_level": {"type": "string", "enum": ["practice_based", "guideline_based", "evidence_informed"]}
+        },
+        "additionalProperties": true
+      },
+      "meta": {
+        "type": "object",
+        "properties": {
+          "src": {
+            "type": "string",
+            "enum": ["dev", "sum", "trn", "aud", "llm", "lit", "mix"]
+          },
+          "status": {
+            "type": "string",
+            "enum": ["appr", "rev", "sugg", "test", "hold"]
+          },
+          "enabled_in": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["rt", "rv", "tst"]
+            },
+            "minItems": 1
+          },
+          "profile_id": {"type": "string"},
+          "origin_ref": {"type": "string"}
+        },
+        "additionalProperties": true
+      },
+      "rec": {"type": "array", "items": {"type": "string"}},
+      "use": {"type": "array", "items": {"type": "string"}},
+      "tags": {"type": "array", "items": {"type": "string"}},
+      "pp": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "required": ["txt", "t", "l"],
+          "properties": {
+            "txt": {"type": "string"},
+            "t": {"type": "string"},
+            "l": {"type": "string"},
+            "reg": {
+              "type": "string",
+              "enum": ["plain", "conversational", "clinical", "youth"]
+            },
+            "lit": {
+              "type": "string",
+              "enum": ["low", "medium", "high"]
+            },
+            "age": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": ["child", "teen", "adult", "senior"]
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": ["child", "teen", "adult", "senior"]
+                  },
+                  "minItems": 1
+                }
+              ]
+            },
+            "persona": {
+              "type": "array",
+              "items": {"type": "string"}
+            }
+          },
+          "additionalProperties": true
+        }
+      }
+    },
+    "allOf": [
+      {
+        "if": {
+          "required": ["review_required"],
+          "properties": {
+            "review_required": {"const": true}
+          }
+        },
+        "then": {
+          "required": ["review"]
+        }
+      }
+    ],
+    "additionalProperties": true
+  }
+}

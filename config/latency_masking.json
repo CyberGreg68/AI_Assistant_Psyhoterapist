@@ -1,0 +1,43 @@
+{
+  "enabled": true,
+  "locale": "hu",
+  "contexts": {
+    "acknowledge_then_compute": {
+      "max_delay_ms": 1200,
+      "ssml_break_ms": 220,
+      "fillers": [
+        "Egy pillanat.",
+        "Nézem.",
+        "Rendben, átgondolom.",
+        "Maradj velem egy pillanatra."
+      ]
+    },
+    "safety_check_pause": {
+      "max_delay_ms": 900,
+      "ssml_break_ms": 160,
+      "fillers": [
+        "Fontos, hogy pontosan értselek.",
+        "Egy rövid pillanat, ellenőrzöm a legbiztonságosabb választ.",
+        "Maradjunk egy pillanatra ennél."
+      ]
+    },
+    "slow_device_bridge": {
+      "max_delay_ms": 2200,
+      "ssml_break_ms": 260,
+      "fillers": [
+        "Közben itt vagyok veled.",
+        "Mindjárt folytatom.",
+        "Egy rövid pillanat, röviden összerakom a választ."
+      ]
+    },
+    "network_delay_bridge": {
+      "max_delay_ms": 3200,
+      "ssml_break_ms": 300,
+      "fillers": [
+        "Várok egy pillanatot a pontosabb válaszra.",
+        "Mindjárt mondom tovább.",
+        "Köszönöm a türelmed, már nézem a következő lépést."
+      ]
+    }
+  }
+}

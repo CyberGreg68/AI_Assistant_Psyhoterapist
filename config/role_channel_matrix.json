@@ -1,0 +1,26 @@
+{
+  "patient": {
+    "ingress": ["web_chat", "voice", "secure_messaging"],
+    "primary": ["web_chat", "voice"],
+    "fallback": ["secure_messaging", "phone"],
+    "constraints": ["minimal_auth_for_triage", "secure_channel_for_sensitive_followup"]
+  },
+  "operator": {
+    "ingress": ["admin_console", "secure_email", "ops_phone"],
+    "primary": ["admin_console", "secure_email"],
+    "fallback": ["ops_phone"],
+    "constraints": ["mfa_required", "audit_logging_required"]
+  },
+  "clinical_lead": {
+    "ingress": ["clinical_console", "secure_chat", "secure_email"],
+    "primary": ["clinical_console", "secure_chat"],
+    "fallback": ["secure_email", "phone"],
+    "constraints": ["clinical_context_only_on_secure_channels", "named_account_required"]
+  },
+  "emergency": {
+    "ingress": ["phone", "local_emergency_service"],
+    "primary": ["phone", "local_emergency_service"],
+    "fallback": [],
+    "constraints": ["human_handoff_only", "no_async_delay"]
+  }
+}

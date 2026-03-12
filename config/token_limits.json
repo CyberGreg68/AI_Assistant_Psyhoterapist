@@ -1,0 +1,12 @@
+{
+  "chat": {
+    "max_input_tokens": 1200,
+    "max_output_tokens": 120
+  },
+  "tts": {
+    "max_chars": 280
+  },
+  "generative_fallback": {
+    "max_tokens": 180
+  }
+}

@@ -1,0 +1,218 @@
+[
+  {
+    "ex": [
+      "Sag mir, dass es funktionieren wird",
+      "Gib mir etwas Ermutigung",
+      "Ich brauche jetzt etwas Hoffnung"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Sag\\ mir,\\ dass\\ es\\ funktionieren\\ wird|Gib\\ mir\\ etwas\\ Ermutigung|Ich\\ brauche\\ jetzt\\ etwas\\ Hoffnung)"
+    },
+    "tags": [
+      "enc",
+      "hope"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "enc",
+    "cand": [
+      "enc_001",
+      "enc_010"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_093",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Hilf mir zu glauben, dass ich es schaffen kann",
+      "Gib mir etwas Ermutigung",
+      "Ich brauche eine Bestätigung"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Hilf\\ mir\\ zu\\ glauben,\\ dass\\ ich\\ es\\ schaffen\\ kann|Gib\\ mir\\ etwas\\ Ermutigung|Ich\\ brauche\\ eine\\ Bestätigung)"
+    },
+    "tags": [
+      "enc",
+      "confidence"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "enc",
+    "cand": [
+      "enc_003",
+      "enc_004"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_094",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Sagen Sie aufmunternd einen kleinen Schritt",
+      "Für einen kleinen Schritt braucht man Schwung",
+      "Gib mir Motivation für heute"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Sagen\\ Sie\\ aufmunternd\\ einen\\ kleinen\\ Schritt|Für\\ einen\\ kleinen\\ Schritt\\ braucht\\ man\\ Schwung|Gib\\ mir\\ Motivation\\ für\\ heute)"
+    },
+    "tags": [
+      "enc",
+      "small_step"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "enc",
+    "cand": [
+      "enc_002",
+      "enc_005"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_095",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ich habe viel gekämpft",
+      "Erinnern Sie mich daran, dass ich es nicht umsonst versuche",
+      "Sag mir, dass meine Anstrengung zählt"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "(?:Ich\\ habe\\ viel\\ gekämpft|Erinnern\\ Sie\\ mich\\ daran,\\ dass\\ ich\\ es\\ nicht\\ umsonst\\ versuche|Sag\\ mir,\\ dass\\ meine\\ Anstrengung\\ zählt)"
+    },
+    "tags": [
+      "enc",
+      "reinforcement"
+    ],
+    "prio": 2,
+    "safety": "none",
+    "cat": "enc",
+    "cand": [
+      "enc_006",
+      "enc_007"
+    ],
+    "fb": "use_variant",
+    "ct": {
+      "m": 0.65,
+      "r": 0.45
+    },
+    "cost": {
+      "stt_min": 0.42,
+      "in_tok": 170,
+      "out_tok": 58,
+      "tts_ch": 205
+    },
+    "audit": false,
+    "age": [
+      "teen",
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "conversational",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_096",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

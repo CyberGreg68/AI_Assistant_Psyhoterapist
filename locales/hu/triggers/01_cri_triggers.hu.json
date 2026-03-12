@@ -1,0 +1,1092 @@
+[
+  {
+    "ex": [
+      "Meg akarom ölni magam",
+      "Véget vetek az életemnek",
+      "Nem bírom tovább így"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(meg akarom ölni magam|véget vetek az életemnek|nem bírom tovább így)\\\\b"
+    },
+    "tags": [
+      "cri",
+      "suicide"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_002",
+      "cri_005"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "cult": "Kerüld a bagatellizálást; közvetlen és együttérző nyelv kell.",
+    "note": "Azonnali humán átadás és helyi sürgősségi információ.",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_001",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Ma megteszem",
+      "Van tervem estére",
+      "Elhatároztam, hogy ma vége"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(ma megteszem|van tervem estére|elhatároztam.*vége)\\\\b"
+    },
+    "tags": [
+      "cri",
+      "suicide",
+      "plan"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_002",
+      "cri_003",
+      "cri_005"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "note": "Konkrét tervre utaló kijelentés.",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_002",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Meg akarom vágni magam",
+      "Bántani akarom magam",
+      "Kárt tennék magamban"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(meg akarom vágni magam|bántani akarom magam|kárt tennék magamban)\\\\b"
+    },
+    "tags": [
+      "cri",
+      "selfharm"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_002",
+      "cri_004"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "note": "Önsértési urge.",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_003",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Már megvágtam magam",
+      "Bevettem valamit magam ellen",
+      "Most sértettem meg magam"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(már megvágtam magam|bevettem valamit magam ellen|most sértettem meg magam)\\\\b"
+    },
+    "tags": [
+      "cri",
+      "selfharm",
+      "recent"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_003",
+      "cri_005"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "note": "Friss önsértésre utaló kijelentés.",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_004",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Pánikrohamom van",
+      "Nem kapok levegőt",
+      "Most teljesen bepánikoltam"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(pánikrohamom van|nem kapok levegőt|teljesen bepánikoltam)\\\\b"
+    },
+    "tags": [
+      "cri",
+      "panic"
+    ],
+    "prio": 1,
+    "safety": "escalate",
+    "cat": "cri",
+    "cand": [
+      "cri_003",
+      "cri_004",
+      "cri_006"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.55,
+      "in_tok": 220,
+      "out_tok": 72,
+      "tts_ch": 230
+    },
+    "audit": true,
+    "note": "Akut pánik és légzési distressz.",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_005",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Szétcsúszom teljesen",
+      "Nem vagyok a valóságban",
+      "Mintha nem lennék itt"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(szétcsúszom teljesen|nem vagyok a valóságban|mintha nem lennék itt)\\\\b"
+    },
+    "tags": [
+      "cri",
+      "dissociation"
+    ],
+    "prio": 1,
+    "safety": "escalate",
+    "cat": "cri",
+    "cand": [
+      "cri_003",
+      "cri_004",
+      "cri_007"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.55,
+      "in_tok": 220,
+      "out_tok": 72,
+      "tts_ch": 230
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_006",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Valakit meg fogok ütni",
+      "Bántani akarok valakit",
+      "Félek, hogy ártok másnak"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(meg fogok ütni valakit|bántani akarok valakit|ártok másnak)\\\\b"
+    },
+    "tags": [
+      "cri",
+      "violence"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_002",
+      "cri_005"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "note": "Mások veszélyeztetése.",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_007",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Teljesen reménytelen minden",
+      "Nincs értelme élnem",
+      "Mindennek vége"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(reménytelen minden|nincs értelme élnem|mindennek vége)\\\\b"
+    },
+    "tags": [
+      "cri",
+      "hopelessness"
+    ],
+    "prio": 1,
+    "safety": "escalate",
+    "cat": "cri",
+    "cand": [
+      "cri_003",
+      "cri_004",
+      "cri_008"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.55,
+      "in_tok": 220,
+      "out_tok": 72,
+      "tts_ch": 230
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_008",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Elbúcsúztam mindenkitől",
+      "Mindenkinek elköszöntem",
+      "Levelet írtam búcsúként"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(elbúcsúztam mindenkitől|mindenkinek elköszöntem|búcsúként)\\\\b"
+    },
+    "tags": [
+      "cri",
+      "farewell"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_002",
+      "cri_005",
+      "cri_009"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_009",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Van nálam gyógyszer hozzá",
+      "Itt van nálam a kötél",
+      "Előkészítettem mindent"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(van nálam gyógyszer|itt van nálam a kötél|előkészítettem mindent)\\\\b"
+    },
+    "tags": [
+      "cri",
+      "means"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_002",
+      "cri_004",
+      "cri_005"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_010",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Túladagolnám magam",
+      "Bevennék egy csomó gyógyszert",
+      "Inkább beveszek mindent"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(túladagolnám magam|bevennék egy csomó gyógyszert|beveszek mindent)\\\\b"
+    },
+    "tags": [
+      "cri",
+      "overdose"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_002",
+      "cri_005"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_011",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Kiugranék az ablakon",
+      "Leugranék valahonnan",
+      "Csak le akarok ugrani"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(kiugranék az ablakon|leugranék valahonnan|le akarok ugrani)\\\\b"
+    },
+    "tags": [
+      "cri",
+      "jump"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_002",
+      "cri_005"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_012",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Hangok mondják, hogy ártsak",
+      "Azt hallom, hogy tegyem meg",
+      "A hangok erre biztatnak"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(hangok mondják|azt hallom, hogy tegyem meg|hangok erre biztatnak)\\\\b"
+    },
+    "tags": [
+      "cri",
+      "psychosis"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_003",
+      "cri_010"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "note": "Parancsoló hallucináció gyanúja.",
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_013",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Nem vagyok biztonságban otthon",
+      "Félek hazamenni",
+      "Valaki bánt otthon"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(nem vagyok biztonságban otthon|félek hazamenni|valaki bánt otthon)\\\\b"
+    },
+    "tags": [
+      "cri",
+      "domestic"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_004",
+      "cri_011"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_014",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Most remegek és összeesem",
+      "Ájulásközeli vagyok",
+      "Nem tudok megnyugodni sehogy"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(remegek és összeesem|ájulásközeli vagyok|nem tudok megnyugodni sehogy)\\\\b"
+    },
+    "tags": [
+      "cri",
+      "acute_distress"
+    ],
+    "prio": 1,
+    "safety": "escalate",
+    "cat": "cri",
+    "cand": [
+      "cri_003",
+      "cri_006",
+      "cri_012"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.55,
+      "in_tok": 220,
+      "out_tok": 72,
+      "tts_ch": 230
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_015",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Senki nincs mellettem most",
+      "Teljesen egyedül vagyok ezzel",
+      "Nincs kit hívnom most"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(senki nincs mellettem most|teljesen egyedül vagyok|nincs kit hívnom most)\\\\b"
+    },
+    "tags": [
+      "cri",
+      "isolation"
+    ],
+    "prio": 1,
+    "safety": "escalate",
+    "cat": "cri",
+    "cand": [
+      "cri_004",
+      "cri_005",
+      "cri_013"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.55,
+      "in_tok": 220,
+      "out_tok": 72,
+      "tts_ch": 230
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_016",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Nem tudom megígérni, hogy biztonságban maradok",
+      "Lehet, hogy ma kárt teszek magamban",
+      "Nem érzem, hogy kibírnám estig"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(nem tudom megígérni|kárt teszek magamban|nem érzem, hogy kibírnám estig)\\\\b"
+    },
+    "tags": [
+      "cri",
+      "unsafe"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_002",
+      "cri_005"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_017",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "A gyerekemnek is árthatok",
+      "Félek, hogy a családomra borítom",
+      "Nem tudom kontrollálni az indulataimat"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(gyerekemnek is árthatok|családomra borítom|nem tudom kontrollálni az indulataimat)\\\\b"
+    },
+    "tags": [
+      "cri",
+      "family_risk"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_001",
+      "cri_002",
+      "cri_014"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_018",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Azonnal valakihez kell kapcsolni",
+      "Kérek sürgős segítséget",
+      "Kapcsolj élő emberhez most"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(azonnal valakihez kell kapcsolni|kérek sürgős segítséget|kapcsolj élő emberhez most)\\\\b"
+    },
+    "tags": [
+      "cri",
+      "handoff_request"
+    ],
+    "prio": 1,
+    "safety": "hard_handoff",
+    "cat": "cri",
+    "cand": [
+      "cri_005",
+      "cri_006",
+      "cri_015"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.6,
+      "in_tok": 240,
+      "out_tok": 80,
+      "tts_ch": 240
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_019",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  },
+  {
+    "ex": [
+      "Nem tudom abbahagyni a sírást és reszketést",
+      "Teljesen szétesek most",
+      "Minden túl sok most"
+    ],
+    "m": {
+      "t": "regex",
+      "p": "\\\\b(nem tudom abbahagyni a sírást|teljesen szétesek most|minden túl sok most)\\\\b"
+    },
+    "tags": [
+      "cri",
+      "decompensation"
+    ],
+    "prio": 1,
+    "safety": "escalate",
+    "cat": "cri",
+    "cand": [
+      "cri_003",
+      "cri_004",
+      "cri_012"
+    ],
+    "fb": "escalate",
+    "ct": {
+      "m": 0.72,
+      "r": 0.55
+    },
+    "cost": {
+      "stt_min": 0.55,
+      "in_tok": 220,
+      "out_tok": 72,
+      "tts_ch": 230
+    },
+    "audit": true,
+    "age": [
+      "adult",
+      "senior"
+    ],
+    "lit": "low",
+    "reg": "plain",
+    "pref": {
+      "tts_speed": "slow"
+    },
+    "id": "pt_tr_020",
+    "meta": {
+      "src": "dev",
+      "status": "rev",
+      "enabled_in": [
+        "rt",
+        "rv",
+        "tst"
+      ]
+    }
+  }
+]

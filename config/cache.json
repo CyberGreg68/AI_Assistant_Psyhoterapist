@@ -1,0 +1,9 @@
+{
+  "variants_cache": {
+    "ttl_seconds": 900,
+    "max_entries": 256
+  },
+  "session_cache": {
+    "ttl_seconds": 1800
+  }
+}

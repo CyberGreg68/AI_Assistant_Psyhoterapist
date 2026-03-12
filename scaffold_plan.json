@@ -1,0 +1,81 @@
+{
+  "scaffold_version": "0.1.0",
+  "summary": "Initial scaffold for a manifest-driven therapeutic phrase runtime.",
+  "epics": [
+    {
+      "name": "Foundation and Data Layout",
+      "tasks": [
+        "Migrate Hungarian manifest into manifests/manifest.hu.jsonc",
+        "Store locale phrase files under locales/hu using NN_category.lang.jsonc names",
+        "Define manifest and phrase JSON schemas",
+        "Document runtime config surfaces"
+      ]
+    },
+    {
+      "name": "Runtime Core",
+      "tasks": [
+        "Implement manifest loader",
+        "Implement selection engine with crisis-first behavior",
+        "Add variants cache with TTL",
+        "Provide a minimal STT adapter interface"
+      ]
+    },
+    {
+      "name": "Quality and Governance",
+      "tasks": [
+        "Add schema validation script",
+        "Add manifest consistency checker",
+        "Add clinical review hook for sensitive categories",
+        "Wire tests and CI"
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "week": 1,
+      "focus": "Data model and structure",
+      "deliverables": [
+        "Directory scaffold",
+        "Manifest migration",
+        "Schema files",
+        "Config files"
+      ]
+    },
+    {
+      "week": 2,
+      "focus": "Runtime core",
+      "deliverables": [
+        "Manifest loader",
+        "Selection engine",
+        "Variants cache"
+      ]
+    },
+    {
+      "week": 3,
+      "focus": "Pipeline and safety",
+      "deliverables": [
+        "STT adapter",
+        "Intent sentiment risk pipeline",
+        "Crisis handoff rules"
+      ]
+    },
+    {
+      "week": 4,
+      "focus": "Validation and CI",
+      "deliverables": [
+        "Unit and integration tests",
+        "CI workflow",
+        "Clinical review hook"
+      ]
+    }
+  ],
+  "commands": [
+    "python -m venv .venv",
+    ".venv\\Scripts\\Activate.ps1",
+    "python -m pip install --upgrade pip",
+    "pip install -e .[dev]",
+    "python scripts\\validate_schema.py",
+    "python scripts\\check_manifest_consistency.py --lang hu",
+    "pytest"
+  ]
+}

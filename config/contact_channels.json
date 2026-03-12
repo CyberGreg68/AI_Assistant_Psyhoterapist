@@ -1,0 +1,11 @@
+{
+  "patient_access_channels": ["web_chat", "voice", "secure_messaging"],
+  "assistant_channels": ["secure_chat", "sms", "phone"],
+  "clinician_channels": ["secure_chat", "sms", "phone"],
+  "emergency_channels": ["phone", "local_emergency_service"],
+  "channel_policy": {
+    "prefer_automated_acknowledgement": true,
+    "assistant_before_clinician": true,
+    "require_secure_channel_for_clinical_context": true
+  }
+}
