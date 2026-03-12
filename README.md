@@ -231,6 +231,59 @@ python scripts\serve_admin_api.py --host 127.0.0.1 --port 8787
 
 The patient portal now enforces the `session_token` access policy from `config/access_governance.json`.
 
+## Offline Review Pack Builder
+
+The repo now includes a built-in offline review-pack builder for clinician-provided source folders.
+
+Use it when a therapist or reviewer uploads:
+
+- local text notes,
+- transcript exports,
+- HTML or JSON guidance material,
+- or audio recordings that should be transcribed through the configured STT adapter.
+
+The builder does not write directly into the live locale phrase or trigger files. Instead, it creates a review pack with:
+
+- resolved source documents,
+- indexed chunks,
+- review-gated knowledge snippets,
+- phrase candidates,
+- trigger candidates,
+- aggregated rule hints for later clinical approval.
+
+Example:
+
+```powershell
+python scripts\build_review_candidate_pack.py --pack-id clinician_batch_001 --source .\incoming_materials --output .\data\runtime_state\review_packs\clinician_batch_001.json
+```
+
+The output is intended for review and later controlled import into the developer phrase, trigger, and knowledge kits.
+
+Import an approved review pack into the developer kits:
+
+```powershell
+python scripts\import_review_candidate_pack.py --pack .\data\runtime_state\review_packs\clinician_batch_001.json --content-status rev
+```
+
+Process a clinician upload inbox into review packs once:
+
+```powershell
+python scripts\process_review_inbox.py --inbox .\incoming_materials --output-dir .\data\runtime_state\review_packs
+```
+
+Or run it as a simple folder watcher:
+
+```powershell
+python scripts\process_review_inbox.py --inbox .\incoming_materials --output-dir .\data\runtime_state\review_packs --watch-seconds 30
+```
+
+This gives you a built-in offline pipeline:
+
+- clinician drops text or audio into a source folder,
+- the inbox processor builds a review candidate pack,
+- a reviewer approves the pack,
+- the importer promotes approved items into the developer phrase, trigger, and knowledge kits.
+
 ## Published Runtime Bundle
 
 You can now publish a versioned runtime bundle artifact from the current source tree:

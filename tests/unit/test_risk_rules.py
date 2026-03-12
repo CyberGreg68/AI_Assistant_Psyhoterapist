@@ -6,3 +6,9 @@ def test_detect_risk_flags_triggers_handoff() -> None:
     flags = detect_risk_flags("Nem akarok elni, veszelyben vagyok.")
     assert "crisis" in flags
     assert requires_handoff(flags) is True
+
+
+def test_detect_risk_flags_is_accent_insensitive() -> None:
+    flags = detect_risk_flags("Nem akarok élni, veszélyben vagyok.")
+    assert "crisis" in flags
+    assert requires_handoff(flags) is True

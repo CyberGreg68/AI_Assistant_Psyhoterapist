@@ -107,7 +107,7 @@ def collect_local_document_paths(
     return unique_paths
 
 
-def _read_document_text(file_path: Path) -> str:
+def read_document_text(file_path: Path) -> str:
     suffix = file_path.suffix.lower()
     if suffix in {".txt", ".md"}:
         return file_path.read_text(encoding="utf-8", errors="ignore")
@@ -128,15 +128,15 @@ def _read_document_text(file_path: Path) -> str:
     return file_path.read_text(encoding="utf-8", errors="ignore")
 
 
-def _normalize_text(text: str) -> str:
+def normalize_ingest_text(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
-def _split_into_chunks(text: str, *, min_chars: int = 140, max_chars: int = 480) -> list[str]:
+def split_text_into_chunks(text: str, *, min_chars: int = 140, max_chars: int = 480) -> list[str]:
     paragraphs = [
-        _normalize_text(paragraph)
+        normalize_ingest_text(paragraph)
         for paragraph in re.split(r"\n\s*\n", text)
-        if _normalize_text(paragraph)
+        if normalize_ingest_text(paragraph)
     ]
     chunks: list[str] = []
     current = ""
@@ -163,7 +163,7 @@ def _split_into_chunks(text: str, *, min_chars: int = 140, max_chars: int = 480)
     return [chunk for chunk in chunks if len(chunk) >= min_chars]
 
 
-def _extract_topics(texts: list[str], limit: int = 10) -> list[str]:
+def extract_topic_hints(texts: list[str], limit: int = 10) -> list[str]:
     counter: Counter[str] = Counter()
     for text in texts:
         for token in re.findall(r"[a-zA-ZáéíóöőúüűÁÉÍÓÖŐÚÜŰ]{4,}", text.casefold()):
@@ -182,9 +182,11 @@ def build_external_knowledge_pack(
     source_documents: list[dict[str, object]] = []
     raw_chunks: list[tuple[str, Path]] = []
     for document_path in document_paths:
-        text = _read_document_text(document_path)
-        normalized_text = _normalize_text(text)
-        chunks = _split_into_chunks(text)
+        text = read_document_text(document_path)
+        normalized_text = normalize_ingest_text(text)
+        chunks = split_text_into_chunks(text)
+        if not chunks and normalized_text:
+            chunks = [normalized_text]
         source_documents.append(
             {
                 "path": str(document_path),
@@ -200,7 +202,7 @@ def build_external_knowledge_pack(
         if len(raw_chunks) >= max_snippets:
             break
 
-    topics = _extract_topics([chunk for chunk, _ in raw_chunks])
+    topics = extract_topic_hints([chunk for chunk, _ in raw_chunks])
     knowledge_snippets = []
     for index, (chunk, source_path) in enumerate(raw_chunks, start=1):
         knowledge_snippets.append(
