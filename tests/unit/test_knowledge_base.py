@@ -14,6 +14,7 @@ def test_retrieve_knowledge_snippets_prefers_matching_category_and_tags() -> Non
         tags={"emp", "oq"},
         categories={"open_questions"},
         stage="phrase_selection",
+        allowed_statuses={"appr", "rev"},
     )
 
     assert result

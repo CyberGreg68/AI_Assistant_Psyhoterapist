@@ -19,7 +19,7 @@ from assistant_runtime.config.loader import load_model_routing_settings
 from assistant_runtime.config.loader import load_runtime_settings
 from assistant_runtime.config.loader import load_stt_endpoint
 from assistant_runtime.config.loader import load_tts_endpoint
-from assistant_runtime.model_router import choose_stage_route
+from assistant_runtime.core.model_router import choose_stage_route
 
 
 def build_stt_adapter(

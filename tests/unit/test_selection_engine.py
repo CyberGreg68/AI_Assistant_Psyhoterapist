@@ -8,7 +8,11 @@ from assistant_runtime.selection_engine import select_phrase
 
 def test_crisis_tag_prioritizes_crisis_category() -> None:
     bundle = load_bundle(Path.cwd(), "hu")
-    request = SelectionRequest(tags={"cri", "saf"}, risk_flags={"crisis"})
+    request = SelectionRequest(
+        tags={"cri", "saf"},
+        risk_flags={"crisis"},
+        allowed_content_statuses={"appr", "rev"},
+    )
     result = select_phrase(bundle, request)
     assert result["category"] == "crisis"
 

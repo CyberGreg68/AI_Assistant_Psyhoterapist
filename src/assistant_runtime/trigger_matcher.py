@@ -7,7 +7,7 @@ from typing import Any
 
 from assistant_runtime.content_metadata import is_content_enabled
 from assistant_runtime.pipeline.analysis_pipeline import AnalysisResult
-from assistant_runtime.selection_engine import SelectionRequest
+from assistant_runtime.core.selection_engine import SelectionRequest
 
 
 CATEGORY_NAME_BY_SHORT = {
