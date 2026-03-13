@@ -191,8 +191,26 @@ def _resolve_patient_identity(
 ) -> ConversationIdentity:
     normalized_patient_id = _normalize_identity_value(patient_id)
     browser_patient_key = None
+    anonymous_subject_key = None
+    clinician_id = None
+    identity_confidence = None
     if isinstance(patient_identity, dict):
         browser_patient_key = _normalize_identity_value(patient_identity.get("browser_patient_key"))
+        anonymous_subject_key = _normalize_identity_value(patient_identity.get("anonymous_subject_key"))
+        clinician_id = _normalize_identity_value(patient_identity.get("clinician_id"))
+        identity_confidence = _normalize_identity_value(patient_identity.get("identity_confidence"))
+
+    if anonymous_subject_key:
+        return ConversationIdentity(
+            memory_key=f"anon:{anonymous_subject_key}",
+            identity_mode="anonymous_subject",
+            source="anonymous_subject_key",
+            persistence_enabled=True,
+            browser_patient_key=browser_patient_key,
+            anonymous_subject_key=anonymous_subject_key,
+            clinician_id=clinician_id,
+            identity_confidence=identity_confidence or "clinician_issued_token",
+        )
 
     if normalized_patient_id:
         verified_patient = bool(registry and registry.get_patient(normalized_patient_id))
@@ -205,6 +223,8 @@ def _resolve_patient_identity(
             resolved_patient_id=normalized_patient_id,
             verified_patient=verified_patient,
             browser_patient_key=browser_patient_key,
+            clinician_id=clinician_id,
+            identity_confidence=identity_confidence or ("registered_patient" if verified_patient else "external_patient"),
         )
 
     if browser_patient_key:
@@ -214,6 +234,8 @@ def _resolve_patient_identity(
             source="browser_patient_key",
             persistence_enabled=True,
             browser_patient_key=browser_patient_key,
+            clinician_id=clinician_id,
+            identity_confidence=identity_confidence or "browser_patient_key",
         )
 
     return ConversationIdentity(
@@ -221,6 +243,8 @@ def _resolve_patient_identity(
         identity_mode="conversation_only",
         source="conversation_id",
         persistence_enabled=False,
+        clinician_id=clinician_id,
+        identity_confidence=identity_confidence or "conversation_only",
     )
 
 

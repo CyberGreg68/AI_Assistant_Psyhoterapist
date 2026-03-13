@@ -276,6 +276,48 @@ def test_runtime_service_reuses_patient_memory_across_conversations(tmp_path: Pa
     assert (tmp_path / "conversation_memory.json").exists()
 
 
+def test_runtime_service_reuses_anonymous_subject_memory_across_conversations(tmp_path: Path) -> None:
+    memory_store = ConversationMemoryStore(
+        ttl_seconds=3600,
+        persistence_path=tmp_path / "conversation_memory.json",
+    )
+    service = RuntimeService(
+        Path.cwd(),
+        "hu",
+        conversation_memory=memory_store,
+    )
+
+    first = service.process_text(
+        "Nehezen alszom mostanában.",
+        conversation_id="anon-a",
+        patient_identity={
+            "anonymous_subject_key": "anonpt_shared_1",
+            "clinician_id": "dr-kovacs",
+            "identity_confidence": "clinician_issued_token",
+            "consent_to_store_excerpt": True,
+        },
+    )
+    second = service.process_text(
+        "Még mindig zaklatott vagyok este.",
+        conversation_id="anon-b",
+        patient_identity={
+            "anonymous_subject_key": "anonpt_shared_1",
+            "clinician_id": "dr-kovacs",
+            "identity_confidence": "clinician_issued_token",
+            "consent_to_store_excerpt": True,
+        },
+    )
+
+    assert first.patient_identity is not None
+    assert first.patient_identity["memory_key"] == "anon:anonpt_shared_1"
+    assert second.patient_identity is not None
+    assert second.patient_identity["memory_key"] == "anon:anonpt_shared_1"
+    assert second.patient_identity["identity_mode"] == "anonymous_subject"
+    assert second.patient_identity["clinician_id"] == "dr-kovacs"
+    assert second.conversation_summary is not None
+    assert second.conversation_summary["turn_count"] >= 4
+
+
 def test_runtime_service_returns_route_decisions_and_latency_preamble() -> None:
     service = RuntimeService(Path.cwd(), "hu")
     result = service.process_text(

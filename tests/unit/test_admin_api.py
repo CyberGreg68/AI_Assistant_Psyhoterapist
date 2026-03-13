@@ -44,6 +44,30 @@ def test_process_text_payload_returns_serializable_result() -> None:
     assert payload["latency_preamble"]
 
 
+def test_process_text_payload_uses_selection_text_contract() -> None:
+    service = RuntimeService(Path.cwd(), "hu")
+
+    payload = process_text_payload(
+        service,
+        {
+            "text": "Nehezen alszom mostanában.",
+            "patient_identity": {
+                "anonymous_subject_key": "anonpt_contract_1",
+                "clinician_id": "dr-kovacs",
+                "identity_confidence": "clinician_issued_token",
+                "consent_to_store_excerpt": True,
+            },
+            "synthesize_speech": True,
+        },
+    )
+
+    assert payload["selection"]["text"]
+    assert "reply" not in payload
+    assert payload["patient_identity"]["identity_mode"] == "anonymous_subject"
+    assert payload["tts"]["audio_path"]
+    assert payload["tts"]["source"]
+
+
 def test_process_text_payload_applies_profile_overrides() -> None:
     service = RuntimeService(Path.cwd(), "hu")
 

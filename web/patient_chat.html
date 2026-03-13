@@ -1,28 +1,121 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="de">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Páciens Chat Demo</title>
+  <title>Psychotherapie-Portal</title>
   <style>
     :root {
-      --canvas: #f7f1e8;
-      --panel: rgba(255, 250, 243, 0.9);
-      --panel-soft: rgba(255, 250, 243, 0.7);
-      --ink: #1f2928;
-      --muted: #5e6c6a;
-      --line: rgba(31, 41, 40, 0.12);
-      --accent: #0f766a;
-      --accent-soft: rgba(15, 118, 106, 0.12);
-      --alert: #b4352d;
-      --alert-soft: rgba(180, 53, 45, 0.12);
-      --warn: #d88c29;
-      --patient: #efe2cf;
-      --assistant: #dff1ea;
-      --system: #f8f1e4;
-      --shadow: 0 22px 70px rgba(78, 62, 39, 0.15);
-      --font-display: Georgia, "Times New Roman", serif;
+      --bg: #f4ede3;
+      --panel: rgba(255, 255, 255, 0.84);
+      --panel-strong: #ffffff;
+      --line: rgba(18, 45, 41, 0.12);
+      --ink: #173632;
+      --muted: #66726f;
+      --accent: #4fc3d7;
+      --accent-soft: rgba(79, 195, 215, 0.14);
+      --danger: #b4543b;
+      --danger-soft: rgba(180, 84, 59, 0.14);
+      --patient: #f6e8d5;
+      --assistant: #dff2ea;
+      --system: #f6f2eb;
+      --dev: #15211f;
+      --shadow: 0 24px 60px rgba(72, 55, 28, 0.12);
+      --glow-a: rgba(255, 255, 255, 0.55);
+      --glow-b: rgba(11, 121, 103, 0.12);
       --font-ui: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+      --font-display: Georgia, "Times New Roman", serif;
+    }
+
+    html[data-skin="aare"] {
+      --bg: #f3efe7;
+      --panel: rgba(255, 255, 255, 0.88);
+      --panel-strong: #ffffff;
+      --line: rgba(92, 112, 111, 0.16);
+      --ink: #46514f;
+      --muted: #7b8482;
+      --accent: #4fc3d7;
+      --accent-soft: rgba(79, 195, 215, 0.14);
+      --danger: #c16a61;
+      --danger-soft: rgba(193, 106, 97, 0.14);
+      --patient: #f7f6f3;
+      --assistant: #f3fbfc;
+      --system: #f6f6f6;
+      --shadow: 0 20px 42px rgba(58, 58, 58, 0.08);
+      --glow-a: rgba(255, 255, 255, 0.68);
+      --glow-b: rgba(79, 195, 215, 0.12);
+    }
+
+    html[data-skin="river"] {
+      --bg: #edf5f2;
+      --panel: rgba(247, 251, 249, 0.86);
+      --panel-strong: #fbfefd;
+      --line: rgba(27, 68, 67, 0.12);
+      --ink: #173a39;
+      --muted: #58716f;
+      --accent: #1f7a7a;
+      --accent-soft: rgba(31, 122, 122, 0.14);
+      --danger: #ba5c48;
+      --danger-soft: rgba(186, 92, 72, 0.14);
+      --patient: #e8f0ea;
+      --assistant: #daf0f2;
+      --system: #eff6f3;
+      --shadow: 0 28px 76px rgba(45, 89, 84, 0.14);
+      --glow-a: rgba(136, 190, 179, 0.26);
+      --glow-b: rgba(31, 122, 122, 0.16);
+    }
+
+    html[data-skin="dusk"] {
+      --bg: #efe4da;
+      --panel: rgba(251, 244, 239, 0.86);
+      --panel-strong: #fffaf6;
+      --line: rgba(54, 58, 67, 0.12);
+      --ink: #2b3138;
+      --muted: #6b6972;
+      --accent: #5d7f98;
+      --accent-soft: rgba(93, 127, 152, 0.16);
+      --danger: #b15c55;
+      --danger-soft: rgba(177, 92, 85, 0.14);
+      --patient: #f0dfd7;
+      --assistant: #dde8ef;
+      --system: #f3eae3;
+      --shadow: 0 28px 84px rgba(78, 68, 77, 0.16);
+      --glow-a: rgba(174, 139, 113, 0.22);
+      --glow-b: rgba(93, 127, 152, 0.18);
+    }
+
+    html[data-skin="azure"] {
+      --bg: #0b1f38;
+      --panel: rgba(14, 36, 65, 0.84);
+      --panel-strong: rgba(12, 31, 56, 0.96);
+      --line: rgba(132, 190, 255, 0.16);
+      --ink: #e3f0ff;
+      --muted: #9fb8d8;
+      --accent: #58a6ff;
+      --accent-soft: rgba(88, 166, 255, 0.18);
+      --danger: #ff8370;
+      --danger-soft: rgba(255, 131, 112, 0.18);
+      --patient: rgba(22, 57, 98, 0.86);
+      --assistant: rgba(17, 80, 123, 0.78);
+      --system: rgba(18, 41, 72, 0.88);
+      --dev: #081321;
+      --shadow: 0 30px 96px rgba(3, 10, 24, 0.44);
+      --glow-a: rgba(41, 104, 176, 0.34);
+      --glow-b: rgba(88, 166, 255, 0.22);
+    }
+
+    html[data-tone="grounded"] {
+      --accent: color-mix(in srgb, var(--accent) 70%, #5d6b5d 30%);
+      --panel: color-mix(in srgb, var(--panel) 92%, rgba(232, 227, 220, 0.3) 8%);
+    }
+
+    html[data-tone="lifted"] {
+      --accent: color-mix(in srgb, var(--accent) 80%, #86c8a6 20%);
+      --glow-b: color-mix(in srgb, var(--glow-b) 72%, rgba(255, 236, 204, 0.18) 28%);
+    }
+
+    html[data-tone="soft"] {
+      --shadow: 0 22px 54px rgba(72, 55, 28, 0.1);
     }
 
     * { box-sizing: border-box; }
@@ -30,26 +123,27 @@
     body {
       margin: 0;
       min-height: 100vh;
+      font-family: var(--font-ui);
       color: var(--ink);
       background:
-        radial-gradient(circle at top left, rgba(216, 140, 41, 0.22), transparent 28%),
-        radial-gradient(circle at bottom right, rgba(15, 118, 106, 0.17), transparent 30%),
-        linear-gradient(145deg, #faf6ef 0%, #efe5d5 45%, #f7f1e8 100%);
-      font-family: Georgia, "Times New Roman", serif;
+        radial-gradient(circle at 8% 10%, var(--glow-a), transparent 24%),
+        radial-gradient(circle at 88% 16%, var(--glow-b), transparent 28%),
+        linear-gradient(145deg, color-mix(in srgb, var(--bg) 82%, #ffffff 18%) 0%, var(--bg) 44%, color-mix(in srgb, var(--bg) 88%, #0d1828 12%) 100%);
+      transition: background 320ms ease, color 180ms ease;
     }
 
     .shell {
-      width: min(1240px, calc(100vw - 28px));
-      margin: 16px auto 24px;
+      width: min(1380px, calc(100vw - 28px));
+      margin: 14px auto;
       display: grid;
-      grid-template-columns: 320px minmax(0, 1fr);
+      grid-template-columns: 340px minmax(0, 1fr);
       gap: 18px;
     }
 
     .panel {
       border: 1px solid var(--line);
-      border-radius: 26px;
-      background: var(--panel);
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.12), transparent 24%), var(--panel);
       -webkit-backdrop-filter: blur(14px);
       backdrop-filter: blur(14px);
       box-shadow: var(--shadow);
@@ -58,1390 +152,686 @@
     .sidebar {
       display: grid;
       gap: 16px;
+      align-content: start;
       position: sticky;
-      top: 16px;
-      height: fit-content;
+      top: 14px;
+      max-height: calc(100vh - 28px);
+      overflow: auto;
+      padding-right: 2px;
     }
 
-    .block {
-      padding: 18px;
-      background: var(--panel-soft);
-      border: 1px solid rgba(31, 41, 40, 0.08);
-      border-radius: 22px;
-    }
-
-    .eyebrow {
-      margin: 0 0 12px;
-      font: 700 12px/1.2 "Courier New", monospace;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-
-    h1, h2, h3, p { margin-top: 0; }
-
-    h1 {
-      margin-bottom: 10px;
-      font-size: 34px;
-      line-height: 1.04;
-    }
-
-    .lede,
-    .copy,
-    .microcopy,
-    .footer-note {
-      color: var(--muted);
-      line-height: 1.55;
-    }
-
-    .disclosure {
-      background: linear-gradient(135deg, rgba(15, 118, 106, 0.12), rgba(216, 140, 41, 0.08));
-    }
-
-    .safety-box {
-      border-color: rgba(180, 53, 45, 0.18);
-      background: linear-gradient(135deg, rgba(180, 53, 45, 0.12), rgba(255, 250, 243, 0.78));
-    }
-
-    .field-grid {
-      display: grid;
-      gap: 12px;
-    }
-
-    .field {
-      display: grid;
-      gap: 7px;
-    }
-
-    .field label,
-    .toggle-label,
-    .small-label {
-      font: 700 11px/1.2 "Courier New", monospace;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    input,
-    textarea,
-    select,
-    button {
-      font: inherit;
-    }
-
-    input,
-    textarea,
-    select {
-      width: 100%;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 12px 14px;
-      color: var(--ink);
-      background: rgba(255, 255, 255, 0.76);
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 96px;
-    }
-
-    .triple {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-    }
-
-    .profile-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-    }
-
-    .toggle-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 12px 14px;
-      background: rgba(255, 255, 255, 0.65);
-    }
-
-    .toggle-row input {
-      width: 18px;
-      height: 18px;
-      accent-color: var(--accent);
-    }
-
-    .hero {
-      display: grid;
-      grid-template-rows: auto auto 1fr auto;
-      min-height: calc(100vh - 32px);
-      overflow: hidden;
-    }
-
-    .topbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      padding: 18px 22px 14px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .topbar-brand {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      min-width: 0;
-    }
-
-    .topbar-logo {
-      width: 136px;
-      height: auto;
-      display: block;
-      flex: 0 0 auto;
-    }
-
-    .topbar-actions {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .title-wrap {
-      display: grid;
-      gap: 5px;
-    }
-
-    .title {
-      margin: 0;
-      font-size: 26px;
-      line-height: 1.1;
-    }
-
-    .status {
-      font: 700 12px/1.2 "Courier New", monospace;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--warn);
-    }
-
-    .trust-banner,
-    .handoff-banner {
-      margin: 14px 20px 0;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 14px 16px;
-      display: flex;
-      align-items: start;
-      justify-content: space-between;
-      gap: 14px;
-      background: rgba(255, 255, 255, 0.6);
-    }
-
-    .handoff-banner {
-      display: none;
-      border-color: rgba(180, 53, 45, 0.2);
-      background: linear-gradient(135deg, rgba(180, 53, 45, 0.1), rgba(255, 250, 243, 0.86));
-    }
-
-    .trust-banner strong,
-    .handoff-banner strong {
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    .quickbar {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      padding: 14px 20px 0;
-    }
-
-    .quick {
+    .card { padding: 18px; }
+    .stack { display: grid; gap: 12px; }
+    .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .spread { display: flex; gap: 10px; align-items: center; justify-content: space-between; }
+    .pill,
+    .chip,
+    .view-button,
+    .tab-button {
       border-radius: 999px;
-      padding: 10px 14px;
+      padding: 8px 12px;
       border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.72);
-      color: var(--ink);
-      font: 700 12px/1 "Courier New", monospace;
-      letter-spacing: 0.05em;
+      background: rgba(255, 255, 255, 0.14);
+      font: 700 11px/1.15 "Courier New", monospace;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
     }
 
-    .quick.alert {
-      background: var(--alert);
-      color: #fff7f4;
+    .pill.live,
+    .view-button.active,
+    .tab-button.active {
+      background: var(--accent);
+      color: #fff;
       border-color: transparent;
     }
 
+    .pill.warn { background: var(--danger-soft); color: var(--danger); border-color: rgba(180, 84, 59, 0.22); }
+    .icon-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+    .button-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 1.1em;
+      line-height: 1;
+      font-size: 13px;
+      flex: 0 0 auto;
+    }
+    .button-label {
+      min-width: 0;
+    }
+    h1, h2, h3, p { margin: 0; }
+    h1, h2 { font-family: var(--font-display); font-weight: 400; }
+    h1 { font-size: 38px; line-height: 1.02; }
+    h2 { font-size: 28px; line-height: 1.08; }
+    h3 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+    .eyebrow { font: 700 11px/1.2 "Courier New", monospace; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); }
+    .copy, .note, .tiny { color: var(--muted); line-height: 1.55; }
+    .tiny { font-size: 13px; }
+    .hero { display: grid; grid-template-rows: auto auto 1fr auto; min-height: calc(100vh - 28px); overflow: hidden; }
+    .hero-head { padding: 22px 24px 16px; border-bottom: 1px solid var(--line); display: grid; gap: 14px; }
+    .hero-top { display: flex; align-items: start; justify-content: space-between; gap: 18px; }
+    .brand { display: grid; gap: 10px; }
+    .logo-pill {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid color-mix(in srgb, var(--line) 72%, transparent 28%);
+      background: linear-gradient(180deg, rgba(255,255,255,0.26), rgba(255,255,255,0.06)), color-mix(in srgb, var(--panel) 86%, var(--bg) 14%);
+      box-shadow: 0 16px 36px rgba(27, 38, 35, 0.08);
+      isolation: isolate;
+      overflow: visible;
+    }
+    .logo-pill::before {
+      content: "";
+      position: absolute;
+      inset: -18px -26px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(255,255,255,0.34) 0%, rgba(255,255,255,0.08) 52%, transparent 76%);
+      filter: blur(12px);
+      opacity: 0.9;
+      z-index: -1;
+      pointer-events: none;
+    }
+    .brand img { width: 164px; height: auto; display: block; }
+    .top-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+    .toolbar { padding: 14px 24px 0; display: flex; gap: 10px; flex-wrap: wrap; }
+    .banner {
+      margin: 14px 24px 0;
+      padding: 14px 16px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.12);
+    }
+    .banner.alert {
+      display: none;
+      border-color: rgba(180, 84, 59, 0.22);
+      background: linear-gradient(135deg, rgba(180, 84, 59, 0.16), rgba(255, 255, 255, 0.1));
+    }
     .timeline {
-      padding: 18px 20px;
+      padding: 18px 24px;
       overflow: auto;
       display: grid;
       gap: 14px;
       align-content: start;
-      background:
-        linear-gradient(to bottom, rgba(255,255,255,0.12), rgba(255,255,255,0.02)),
-        repeating-linear-gradient(180deg, transparent, transparent 25px, rgba(31,41,40,0.026) 26px);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
     }
-
     .bubble {
-      max-width: min(760px, 95%);
+      max-width: min(860px, 96%);
       padding: 16px 18px;
-      border-radius: 22px;
-      border: 1px solid var(--line);
-      box-shadow: 0 12px 28px rgba(31, 41, 40, 0.06);
-      animation: rise 180ms ease-out;
-    }
-
-    .bubble.patient {
-      margin-left: auto;
-      background: var(--patient);
-      border-bottom-right-radius: 8px;
-    }
-
-    .bubble.assistant {
-      background: var(--assistant);
-      border-bottom-left-radius: 8px;
-    }
-
-    .bubble.system {
-      background: var(--system);
-      max-width: 100%;
-    }
-
-    .bubble-head {
-      margin-bottom: 10px;
-      font: 700 11px/1.2 "Courier New", monospace;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .bubble-body {
-      white-space: pre-wrap;
-      line-height: 1.6;
-      word-break: break-word;
-    }
-
-    .meta,
-    .feedback-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 12px;
-    }
-
-    .chip,
-    .star {
-      border-radius: 999px;
-      padding: 6px 10px;
-      font: 700 11px/1.2 "Courier New", monospace;
-      color: var(--muted);
-      border: 1px solid rgba(31, 41, 40, 0.08);
-      background: rgba(255, 255, 255, 0.54);
-    }
-
-    .star {
-      cursor: pointer;
-    }
-
-    .composer {
-      border-top: 1px solid var(--line);
-      background: rgba(255, 248, 238, 0.92);
-      padding: 18px 20px 20px;
-      display: grid;
-      gap: 12px;
-    }
-
-    .composer-grid {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 12px;
-      align-items: end;
-    }
-
-    .action-stack {
-      display: grid;
-      gap: 10px;
-    }
-
-    .composer-tools {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .voice-toggle {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 11px 13px;
-      background: rgba(255, 255, 255, 0.68);
-      color: var(--muted);
-      font: 700 11px/1.2 "Courier New", monospace;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    .voice-toggle input {
-      width: 16px;
-      height: 16px;
-      accent-color: var(--accent);
-    }
-
-    button {
-      border: 0;
-      border-radius: 16px;
-      padding: 14px 18px;
-      cursor: pointer;
-      font: 700 12px/1.1 "Courier New", monospace;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      transition: transform 120ms ease, opacity 120ms ease;
-    }
-
-    button:hover { transform: translateY(-1px); }
-    button:disabled { opacity: 0.55; cursor: wait; transform: none; }
-
-    .primary { background: var(--accent); color: #fffdf9; }
-    .secondary { background: transparent; color: var(--muted); border: 1px solid var(--line); }
-    .danger { background: var(--alert); color: #fff8f6; }
-
-    .floating-crisis {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 20;
-      box-shadow: 0 20px 40px rgba(180, 53, 45, 0.24);
-    }
-
-    .modal-shell {
-      position: fixed;
-      inset: 0;
-      background: rgba(28, 29, 28, 0.42);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 16px;
-      z-index: 30;
-    }
-
-    .modal {
-      width: min(720px, 100%);
-      padding: 22px;
-      border-radius: 28px;
-      background: #fff9f0;
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-    }
-
-    .checklist {
-      display: grid;
-      gap: 10px;
-      margin: 16px 0 22px;
-      color: var(--muted);
-    }
-
-    .checklist div {
-      padding: 12px 14px;
-      border-radius: 16px;
-      background: rgba(255,255,255,0.72);
-      border: 1px solid var(--line);
-    }
-
-    .hidden { display: none; }
-
-    .debug-console {
-      margin: 0 20px 16px;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      background: rgba(31, 41, 40, 0.95);
-      color: #f7f1e8;
-      display: none;
-      overflow: hidden;
-    }
-
-    .debug-head {
-      padding: 14px 16px;
-      border-bottom: 1px solid rgba(247, 241, 232, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
-
-    .debug-title {
-      font: 700 12px/1.2 "Courier New", monospace;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #9fdccf;
-    }
-
-    .debug-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-    }
-
-    .debug-pane {
-      padding: 16px;
-      border-right: 1px solid rgba(247, 241, 232, 0.08);
-    }
-
-    .debug-pane:last-child {
-      border-right: 0;
-    }
-
-    .debug-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: grid;
-      gap: 8px;
-    }
-
-    .debug-list li {
-      padding: 10px 12px;
-      border-radius: 14px;
-      background: rgba(255, 255, 255, 0.06);
-      color: #f7f1e8;
-      line-height: 1.45;
-    }
-
-    .debug-json {
-      margin: 0;
-      white-space: pre-wrap;
-      word-break: break-word;
-      font: 12px/1.5 "Courier New", monospace;
-      color: #f4edde;
-    }
-
-    .debug-cards {
-      display: grid;
-      gap: 10px;
-      margin-bottom: 14px;
-    }
-
-    .debug-card {
-      border: 1px solid rgba(247, 241, 232, 0.08);
-      border-radius: 16px;
-      padding: 12px;
-      background: rgba(255, 255, 255, 0.04);
-    }
-
-    .debug-card strong {
-      display: block;
-      margin-bottom: 6px;
-    }
-
-    .identity-note {
-      margin-top: 10px;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.45;
-    }
-
-    .debug-history {
-      display: grid;
-      gap: 8px;
-    }
-
-    .debug-history-row {
-      border-radius: 12px;
-      padding: 9px 10px;
-      background: rgba(255, 255, 255, 0.05);
-      font-size: 13px;
-      line-height: 1.45;
-    }
-
-    .debug-subhead {
-      margin-top: 14px;
-    }
-
-    @keyframes rise {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 980px) {
-      .shell { grid-template-columns: 1fr; }
-      .sidebar { position: static; }
-      .hero { min-height: 0; }
-    }
-
-    @media (max-width: 700px) {
-      .shell { width: min(100vw - 16px, 1240px); }
-      .triple,
-      .profile-grid,
-      .theme-controls,
-      .composer-grid { grid-template-columns: 1fr; }
-      .topbar,
-      .timeline,
-      .composer,
-      .quickbar,
-      .trust-banner,
-      .handoff-banner,
-      .debug-console { padding-left: 16px; padding-right: 16px; }
-      .bubble { max-width: 100%; }
-      .floating-crisis { left: 12px; right: 12px; width: auto; }
-      .debug-grid { grid-template-columns: 1fr; }
-      .topbar-brand { flex-direction: column; align-items: flex-start; gap: 10px; }
-      .topbar-logo { width: 118px; }
-    }
-
-    html[data-skin="aare"] {
-      --canvas: #ededed;
-      --panel: rgba(255, 255, 255, 0.92);
-      --panel-soft: rgba(255, 255, 255, 0.78);
-      --ink: #676767;
-      --ink-strong: #4f4f4f;
-      --muted: #8b8b8b;
-      --line: #e3e3e3;
-      --accent: #4fc3d7;
-      --accent-soft: rgba(79, 195, 215, 0.12);
-      --alert: #c16a61;
-      --alert-soft: rgba(193, 106, 97, 0.12);
-      --warn: #6dbdcb;
-      --patient: #f5f5f5;
-      --assistant: #f9fdfd;
-      --system: #f6f6f6;
-      --shadow: 0 18px 34px rgba(0, 0, 0, 0.05);
-      --glow-a: rgba(255, 255, 255, 0.6);
-      --glow-b: rgba(79, 195, 215, 0.08);
-      --glow-c: rgba(255, 255, 255, 0.7);
-      --font-display: Georgia, "Times New Roman", serif;
-      --font-ui: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
-    }
-
-    html[data-skin="river"] {
-      --canvas: #eef4f1;
-      --panel: rgba(247, 251, 249, 0.84);
-      --panel-soft: rgba(242, 248, 246, 0.68);
-      --ink: #193332;
-      --muted: #55706d;
-      --line: rgba(25, 51, 50, 0.1);
-      --accent: #1f7a7a;
-      --accent-soft: rgba(31, 122, 122, 0.13);
-      --alert: #ba5c48;
-      --alert-soft: rgba(186, 92, 72, 0.12);
-      --warn: #cb9152;
-      --patient: #e7efe9;
-      --assistant: #d9eff2;
-      --system: #eff6f3;
-      --shadow: 0 28px 84px rgba(51, 88, 89, 0.14);
-      --glow-a: rgba(109, 170, 157, 0.24);
-      --glow-b: rgba(33, 122, 122, 0.18);
-      --glow-c: rgba(255, 255, 255, 0.52);
-      --font-display: "Palatino Linotype", "Book Antiqua", Georgia, serif;
-      --font-ui: "Verdana", "Trebuchet MS", sans-serif;
-    }
-
-    html[data-skin="dusk"] {
-      --canvas: #efe5da;
-      --panel: rgba(251, 244, 239, 0.84);
-      --panel-soft: rgba(248, 239, 234, 0.66);
-      --ink: #2a2f35;
-      --muted: #67646f;
-      --line: rgba(42, 47, 53, 0.1);
-      --accent: #5d7f98;
-      --accent-soft: rgba(93, 127, 152, 0.14);
-      --alert: #b15c55;
-      --alert-soft: rgba(177, 92, 85, 0.14);
-      --warn: #c09159;
-      --patient: #f0dfd7;
-      --assistant: #dde8ef;
-      --system: #f2e9e1;
-      --shadow: 0 30px 90px rgba(77, 67, 75, 0.16);
-      --glow-a: rgba(163, 122, 95, 0.23);
-      --glow-b: rgba(93, 127, 152, 0.18);
-      --glow-c: rgba(255, 255, 255, 0.46);
-      --font-display: "Palatino Linotype", "Book Antiqua", Georgia, serif;
-      --font-ui: "Segoe UI", "Trebuchet MS", sans-serif;
-    }
-
-    html[data-tone="grounded"] {
-      --accent: color-mix(in srgb, var(--accent) 62%, #5f6f60 38%);
-      --panel: color-mix(in srgb, var(--panel) 84%, rgba(235, 230, 222, 0.94) 16%);
-    }
-
-    html[data-tone="soft"] {
-      --panel-soft: color-mix(in srgb, var(--panel-soft) 72%, rgba(255, 255, 255, 0.46) 28%);
-      --shadow: 0 24px 72px rgba(96, 83, 63, 0.12);
-    }
-
-    html[data-tone="lifted"] {
-      --accent: color-mix(in srgb, var(--accent) 78%, #5f9d7e 22%);
-      --glow-b: color-mix(in srgb, var(--glow-b) 72%, rgba(255, 221, 179, 0.16) 28%);
-    }
-
-    body {
-      font-family: var(--font-ui);
-      background:
-        radial-gradient(circle at 8% 12%, var(--glow-a), transparent 24%),
-        radial-gradient(circle at 86% 14%, var(--glow-b), transparent 28%),
-        linear-gradient(180deg, #f3f3f3 0%, var(--canvas) 100%);
-      transition: background 420ms ease, color 220ms ease;
-      position: relative;
-      overflow-x: hidden;
-    }
-
-    body::before,
-    body::after {
-      content: "";
-      position: fixed;
-      inset: auto;
-      pointer-events: none;
-      z-index: 0;
-      filter: blur(14px);
-      opacity: 0.65;
-    }
-
-    body::before {
-      top: -72px;
-      right: -48px;
-      width: 280px;
-      height: 280px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, transparent 68%);
-    }
-
-    body::after {
-      left: -40px;
-      bottom: 64px;
-      width: 220px;
-      height: 220px;
-      border-radius: 38% 62% 55% 45%;
-      background: radial-gradient(circle, color-mix(in srgb, var(--accent-soft) 75%, rgba(255,255,255,0.14) 25%) 0%, transparent 70%);
-    }
-
-    .shell,
-    .floating-crisis,
-    .modal-shell {
-      position: relative;
-      z-index: 1;
-    }
-
-    .panel {
-      background: linear-gradient(180deg, rgba(255,255,255,0.16), transparent 34%), var(--panel);
-      border-color: var(--line);
-      box-shadow: var(--shadow);
-    }
-
-    .block {
-      background: linear-gradient(180deg, rgba(255,255,255,0.2), transparent 38%), var(--panel-soft);
-    }
-
-    .eyebrow,
-    .field label,
-    .toggle-label,
-    .small-label,
-    .status,
-    .bubble-head,
-    .chip,
-    .star,
-    .quick {
-      font-family: var(--font-ui);
-    }
-
-    h1,
-    h2,
-    h3,
-    .title {
-      font-family: var(--font-display);
-      font-weight: 400;
-      letter-spacing: 0;
-    }
-
-    .hero {
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.16), transparent 20%),
-        radial-gradient(circle at top center, rgba(255,255,255,0.22), transparent 38%);
-    }
-
-    .topbar {
-      padding: 24px 26px 18px;
-      border-bottom-color: var(--line);
-      background: rgba(255,255,255,0.94);
-    }
-
-    .topbar-logo {
-      width: 148px;
-    }
-
-    .trust-banner,
-    .handoff-banner,
-    .toggle-row,
-    input,
-    textarea,
-    select,
-    .quick,
-    .chip,
-    .star,
-    .checklist div {
-      background: linear-gradient(180deg, rgba(255,255,255,0.24), rgba(255,255,255,0.08));
-    }
-
-    .trust-banner,
-    .handoff-banner {
       border-radius: 24px;
-      padding: 16px 18px;
-    }
-
-    .quick {
-      box-shadow: 0 8px 20px rgba(31, 41, 40, 0.06);
-    }
-
-    .timeline {
-      background:
-        radial-gradient(circle at top center, rgba(255,255,255,0.18), transparent 32%),
-        linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.02));
-      padding-top: 22px;
-    }
-
-    .bubble {
+      border: 1px solid var(--line);
+      box-shadow: 0 12px 28px rgba(31, 41, 40, 0.05);
       -webkit-backdrop-filter: blur(8px);
       backdrop-filter: blur(8px);
-      border-radius: 24px;
     }
-
-    .bubble.patient,
-    .bubble.assistant,
-    .bubble.system {
-      background-image: linear-gradient(180deg, rgba(255,255,255,0.16), rgba(255,255,255,0.04));
-    }
-
+    .bubble.patient { margin-left: auto; background: var(--patient); border-bottom-right-radius: 8px; }
+    .bubble.assistant { background: var(--assistant); border-bottom-left-radius: 8px; }
+    .bubble.system { background: var(--system); }
+    .bubble-head { margin-bottom: 10px; font: 700 11px/1.2 "Courier New", monospace; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+    .bubble-body { white-space: pre-wrap; line-height: 1.6; word-break: break-word; }
+    .meta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
     .composer {
-      background: linear-gradient(180deg, rgba(255,255,255,0.24), rgba(255,255,255,0.08)), var(--panel);
-      padding: 20px 22px 24px;
-    }
-
-    .primary {
-      background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 90%, #fff 10%), color-mix(in srgb, var(--accent) 70%, #21433f 30%));
-      box-shadow: 0 16px 34px color-mix(in srgb, var(--accent-soft) 70%, rgba(34,50,47,0.14) 30%);
-    }
-
-    .secondary {
-      background: rgba(255,255,255,0.2);
-    }
-
-    .danger {
-      background: linear-gradient(135deg, color-mix(in srgb, var(--alert) 85%, #fff 15%), color-mix(in srgb, var(--alert) 78%, #6f2c26 22%));
-    }
-
-    .modal {
-      background: linear-gradient(180deg, rgba(255,255,255,0.3), rgba(255,255,255,0.08)), color-mix(in srgb, var(--panel) 90%, #fff 10%);
-    }
-
-    .theme-controls {
+      border-top: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.08)), var(--panel);
+      padding: 18px 24px 22px;
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-      align-items: end;
+      gap: 12px;
     }
-
-    .theme-controls .field.theme-note-field {
-      grid-column: 1 / -1;
-    }
-
-    .theme-note {
-      min-height: 48px;
+    .composer-grid { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: end; }
+    textarea,
+    input,
+    select,
+    button { font: inherit; }
+    textarea,
+    input,
+    select {
+      width: 100%;
       border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 11px 13px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.24), rgba(255,255,255,0.08));
-      color: var(--muted);
-      line-height: 1.45;
-      font-size: 13px;
-    }
-
-    .theme-note strong {
+      border-radius: 18px;
+      padding: 12px 13px;
+      background: rgba(255,255,255,0.16);
       color: var(--ink);
-      font-weight: 600;
+    }
+    textarea { resize: vertical; min-height: 92px; }
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px var(--accent-soft);
+    }
+    button {
+      border: 0;
+      border-radius: 18px;
+      padding: 13px 15px;
+      cursor: pointer;
+      font: 700 12px/1 "Courier New", monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    button.primary { background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 90%, #fff 10%), color-mix(in srgb, var(--accent) 70%, #213d39 30%)); color: white; }
+    button.secondary { background: rgba(255,255,255,0.12); border: 1px solid var(--line); color: var(--muted); }
+    button.danger { background: linear-gradient(135deg, color-mix(in srgb, var(--danger) 85%, #fff 15%), color-mix(in srgb, var(--danger) 78%, #722d26 22%)); color: white; }
+    button:disabled { opacity: 0.6; cursor: wait; }
+    .button-column { display: grid; gap: 10px; }
+    .fields { display: grid; gap: 10px; }
+    .field-grid { display: grid; gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .field { display: grid; gap: 6px; }
+    label { font: 700 11px/1.2 "Courier New", monospace; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+    .token-list, .alias-list, .debug-list { display: grid; gap: 10px; }
+    .token-item, .alias-item, .debug-card, .theme-note {
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 12px;
+      background: rgba(255,255,255,0.12);
+    }
+    .theme-controls { display: grid; gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .theme-controls .theme-note-wrap { grid-column: 1 / -1; }
+    .theme-note { min-height: 50px; }
+    .theme-note strong { color: var(--ink); }
+    .debug-shell {
+      display: none;
+      gap: 12px;
+      padding: 0 24px 18px;
+    }
+    .debug-shell.visible { display: grid; }
+    .debug-grid { display: grid; gap: 12px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .debug-card {
+      background: rgba(20, 33, 31, 0.96);
+      border-color: rgba(255,255,255,0.08);
+      color: #eff8f5;
+    }
+    html[data-skin="azure"] .debug-card {
+      background: rgba(5, 16, 30, 0.96);
+      color: #e3f0ff;
+    }
+    .debug-card .tiny { color: #b9d6cf; }
+    pre {
+      margin: 0;
+      font: 12px/1.5 "Courier New", monospace;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .hidden { display: none !important; }
+
+    @media (max-width: 1100px) {
+      .shell { grid-template-columns: 1fr; }
+      .sidebar { position: static; max-height: none; }
+      .hero { min-height: 0; }
+      .debug-grid { grid-template-columns: 1fr; }
     }
 
-    .debug-console {
-      background: linear-gradient(180deg, rgba(18, 24, 26, 0.94), rgba(22, 27, 30, 0.97));
-      box-shadow: 0 28px 70px rgba(19, 24, 26, 0.26);
+    @media (max-width: 720px) {
+      .shell { width: min(100vw - 14px, 1380px); }
+      .hero-head, .toolbar, .timeline, .composer, .debug-shell { padding-left: 16px; padding-right: 16px; }
+      .banner { margin-left: 16px; margin-right: 16px; }
+      .composer-grid, .field-grid, .theme-controls { grid-template-columns: 1fr; }
+      .hero-top { flex-direction: column; }
+      .brand img { width: 136px; }
+      h1 { font-size: 32px; }
+    }
+
+    @media (max-width: 1220px) {
+      .icon-action.compact-collapse .button-label {
+        display: none;
+      }
+
+      .icon-action.compact-collapse {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
     }
   </style>
 </head>
 <body>
-  <div id="onboarding" class="modal-shell">
-    <section class="modal">
-      <div class="eyebrow">Gyors belépés</div>
-      <h1>Rövid éjszakai támogatás</h1>
-      <p class="lede">Szia, itt az éjszakai asszisztens. Rövid válaszokat adok, segíthetek coping lépésekben, és ha kell, jelzem, hogy emberi segítség szükséges.</p>
-      <div class="checklist">
-        <div><strong>Mi ez?</strong> Egy asszisztenssel beszelsz, nem eloterjesztett terapeuta-dontessel.</div>
-        <div><strong>Hatarok:</strong> Nem adok orvosi diagnosztikat vagy jogi tanacsot.</div>
-        <div><strong>Biztonság:</strong> Sürgős helyzetben használd a piros segítség gombot vagy a helyi segélyhívót.</div>
-        <div><strong>Emberi tamogatas:</strong> Kockazatnal handoff uzenet jelenik meg, es lathatoan jelezzuk, ha emberi kovetes kell.</div>
-      </div>
-      <div class="actions">
-        <button id="start-demo" class="primary">Rendben, kezdem</button>
-      </div>
-    </section>
-  </div>
-
   <div class="shell">
     <aside class="sidebar">
-      <section class="panel block disclosure">
-        <div class="eyebrow">Transzparencia</div>
-        <h2>Asszisztenssel beszelsz</h2>
-        <p class="copy">Mindig jelezzuk, hogy ez egy asszisztens. Ha a rendszer aggaszto jeleket lat, lathato handoff tajekoztatast ad.</p>
+      <section class="panel card stack">
+        <div class="row">
+          <span class="pill live">Rollenportal</span>
+          <span id="session-role" class="pill">Laden</span>
+          <span id="session-view" class="pill">Ansicht</span>
+        </div>
+        <div>
+          <p class="eyebrow">Sitzung</p>
+          <h2 id="session-title">Portal-Kontext</h2>
+        </div>
+        <p id="session-copy" class="copy">Sitzung wird geladen.</p>
+        <div class="fields">
+          <div class="field">
+            <label for="language-select">Sprache</label>
+            <select id="language-select"></select>
+          </div>
+          <div id="alias-field" class="field hidden">
+            <label for="alias-select">Anonymer Alias</label>
+            <select id="alias-select"></select>
+          </div>
+          <div class="field">
+            <label for="consent-store">Einwilligung für kurze Auszüge</label>
+            <select id="consent-store">
+              <option value="true">Aktiv</option>
+              <option value="false">Deaktiviert</option>
+            </select>
+          </div>
+        </div>
+        <div id="view-switcher" class="row"></div>
+        <div class="tiny" id="identity-note">Anonyme Sitzungsnotiz</div>
       </section>
 
-      <section class="panel block safety-box">
-        <div class="eyebrow">Biztonsag elore</div>
-        <h3>Sürgős segítség</h3>
-        <p class="copy">Használd a krízis gombot, ha azonnali támogatás kell. A demó ilyenkor azonnal krízisüzenetet küld a runtime-nak.</p>
-        <button id="sidebar-crisis" class="danger">Sürgős segítség</button>
+      <section class="panel card stack">
+        <div>
+          <p class="eyebrow">Portal-Skin</p>
+          <h3>Automatisch und manuell</h3>
+        </div>
+        <div class="theme-controls">
+          <div class="field">
+            <label for="theme-mode">Atmosphäre</label>
+            <select id="theme-mode"></select>
+          </div>
+          <div class="field">
+            <label for="theme-skin">Erscheinungsbild</label>
+            <select id="theme-skin"></select>
+          </div>
+          <div class="theme-note-wrap">
+            <div id="theme-note" class="theme-note">Automatische Stimmung ist aktiv.</div>
+          </div>
+        </div>
       </section>
 
-      <section class="panel block">
-        <div class="eyebrow">Szemelyre szabás</div>
+      <section class="panel card stack">
+        <div>
+          <p class="eyebrow">Zugriffslogik</p>
+          <h3>Wer darf wohin wechseln?</h3>
+        </div>
+        <div class="alias-list">
+          <div class="alias-item"><strong>Patient</strong><p class="tiny">Nur Patientenansicht. Keine Entwickler- oder Kliniksteuerung.</p></div>
+          <div class="alias-item"><strong>Klinik</strong><p class="tiny">Kann zwischen Klinik- und Patientenansicht wechseln und Patiententoken ausgeben oder widerrufen.</p></div>
+          <div class="alias-item"><strong>Entwickler</strong><p class="tiny">Kann alle Ansichten wechseln und für Demo-Zwecke Debug- und Runtime-Zustand einsehen.</p></div>
+        </div>
+      </section>
+
+      <section id="token-panel" class="panel card stack hidden">
+        <div class="spread">
+          <div>
+            <p class="eyebrow">Patiententoken</p>
+            <h3>Anonymer Zugang durch Kliniker</h3>
+          </div>
+          <button id="refresh-tokens" class="secondary" type="button">Aktualisieren</button>
+        </div>
         <div class="field-grid">
           <div class="field">
-            <label for="ui-language">Nyelv</label>
-            <select id="ui-language"></select>
+            <label for="token-label">Private Notiz</label>
+            <input id="token-label" type="text" placeholder="Nur intern sichtbar">
           </div>
           <div class="field">
-            <label for="patient-id">Páciens azonosító</label>
-            <input id="patient-id" type="text" placeholder="pl. p-1 vagy hagyd uresen">
+            <label for="token-alias">Alias-Schlüssel</label>
+            <input id="token-alias" type="text" placeholder="auto oder vorhandener Alias">
           </div>
-          <div class="profile-grid">
-            <div class="field">
-              <label for="age-group">Kor</label>
-              <select id="age-group">
-                <option value="">auto</option>
-                <option value="child">child</option>
-                <option value="teen">teen</option>
-                <option value="adult" selected>adult</option>
-                <option value="senior">senior</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="literacy-level">Nyelvezet</label>
-              <select id="literacy-level">
-                <option value="">auto</option>
-                <option value="low" selected>egyszeru</option>
-                <option value="medium">kozepes</option>
-                <option value="high">reszletes</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="preferred-register">Regiszter</label>
-              <select id="preferred-register">
-                <option value="plain" selected>egyszeru</option>
-                <option value="conversational">koznapi</option>
-                <option value="clinical">reszletes</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="tts-speed">Hang tempo</label>
-              <select id="tts-speed">
-                <option value="">auto</option>
-                <option value="slow">lassu</option>
-                <option value="normal" selected>normal</option>
-                <option value="fast">gyors</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="latency-context">Késleltetés</label>
-              <select id="latency-context">
-                <option value="">none</option>
-                <option value="acknowledge_then_compute">acknowledge_then_compute</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="history-mode">Adatmod</label>
-              <select id="history-mode">
-                <option value="limited" selected>anonim limited</option>
-                <option value="identified">azonositott</option>
-              </select>
-            </div>
+          <div class="field">
+            <label for="token-expiry">Gültig für Tage</label>
+            <input id="token-expiry" type="number" min="1" value="30">
           </div>
-          <div class="theme-controls">
-            <div class="field">
-              <label for="theme-mode">Atmoszféra</label>
-              <select id="theme-mode"></select>
-            </div>
-            <div class="field">
-              <label for="theme-skin">Skinválasztó</label>
-              <select id="theme-skin"></select>
-            </div>
-            <div class="field theme-note-field">
-              <label for="theme-note">Aktív megjelenés</label>
-              <div id="theme-note" class="theme-note">Az automatikus megjelenés aktív.</div>
-            </div>
+          <div class="field">
+            <label>&nbsp;</label>
+            <button id="issue-token" class="primary" type="button">Token erzeugen</button>
           </div>
-          <div class="toggle-row">
-            <span class="toggle-label">Online előnyben</span>
-            <input id="prefer-online" type="checkbox" checked title="Az online útvonal előnyben részesítése">
+        </div>
+        <div id="raw-token-box" class="token-item hidden"></div>
+        <div id="token-list" class="token-list"></div>
+      </section>
+
+      <section id="ops-panel" class="panel card stack hidden">
+        <div>
+          <p class="eyebrow">Klinik / Betrieb</p>
+          <h3>Systemstatus</h3>
+        </div>
+        <div class="debug-list">
+          <div class="token-item">
+            <strong>Systemstatus</strong>
+            <div id="health-summary" class="tiny">Keine Daten</div>
           </div>
-          <div class="toggle-row">
-            <span class="toggle-label">Routing részletei</span>
-            <input id="show-routing" type="checkbox" title="Routing részleteinek megjelenítése">
-          </div>
-          <div class="toggle-row">
-            <span class="toggle-label">Demó mód</span>
-            <input id="demo-mode" type="checkbox" checked title="Részletes debug magyarázat megjelenítése">
-          </div>
-          <div class="toggle-row">
-            <span class="toggle-label">Review és teszt tartalom</span>
-            <input id="include-review-items" type="checkbox" title="Nem jóváhagyott tartalom engedélyezése teszt módban">
-          </div>
-          <div class="toggle-row">
-            <span class="toggle-label">Rövid excerpt mentése minőséghez</span>
-            <input id="consent-store" type="checkbox" title="Consent to store a short excerpt">
+          <div class="token-item">
+            <strong>Betrieb</strong>
+            <div id="operations-summary" class="tiny">Keine Daten</div>
           </div>
         </div>
       </section>
     </aside>
 
     <main class="panel hero">
-      <header class="topbar">
-        <div class="topbar-brand">
-          <img class="topbar-logo" src="/assets/patient_portal_logo.svg" alt="AARE inspired therapy portal logo">
-          <div class="title-wrap">
-            <div class="eyebrow">Páciens webchat</div>
-            <h2 class="title">Gyors belépés, világos határok</h2>
-            <div class="microcopy">Mi a legfontosabb most? Egy mondat is elég.</div>
+      <header class="hero-head">
+        <div class="hero-top">
+          <div class="brand">
+            <div class="logo-pill"><img id="portal-logo" src="/assets/logo_light.png" alt="Patient portal logo"></div>
+            <div>
+              <p class="eyebrow">Psychotherapie-Assistent</p>
+              <h1 id="hero-title">Anonymer Therapie-Arbeitsbereich</h1>
+            </div>
+          </div>
+          <div class="top-actions">
+            <span id="status-pill" class="pill">Bereit</span>
+            <button id="record-button" class="secondary" type="button">Aufnehmen</button>
+            <button id="logout-button" class="secondary" type="button">Abmelden</button>
           </div>
         </div>
-        <div class="topbar-actions">
-          <div id="status" class="status">Kész</div>
-          <button id="logout-button" class="secondary" type="button">Kilépés</button>
-        </div>
+        <p id="hero-copy" class="copy">Die Runtime sieht nur pseudonyme Subject-Keys. Die Zuordnung bleibt beim Kliniker oder in einem externen Register.</p>
       </header>
 
-      <section class="trust-banner">
-        <div>
-          <strong>Asszisztens + lathato emberi kovetes</strong>
-          <div class="microcopy">Ha handoff tortenik, itt jelenik meg a tajekoztatas. Krizishelyzetben a rendszer azonnal biztonsagi valtasra all.</div>
-        </div>
-        <div class="chip">web_chat</div>
+      <section class="toolbar">
+        <button class="tab-button" data-quick="Ich schlafe in letzter Zeit schlecht." type="button">Schlaf</button>
+        <button class="tab-button" data-quick="Ich bin ängstlich und brauche eine kurze Stabilisierung." type="button">Stabilisierung</button>
+        <button class="tab-button" data-quick="Ich bin nach einer Trennung sehr aufgelöst." type="button">Trennung</button>
+        <button class="tab-button" data-quick="Ich brauche jetzt dringend Hilfe." type="button">Dringend</button>
+        <a class="chip" href="/chat/mobile">Mobile Ansicht</a>
       </section>
 
-      <section id="handoff-banner" class="handoff-banner">
-        <div>
-          <strong>Handoff aktiv</strong>
-          <div id="handoff-text" class="microcopy">A kezelo ertesitve. Vard a tovabbi kapcsolatfelvetelt.</div>
-        </div>
-        <div id="handoff-chip" class="chip">urgent</div>
+      <section id="handoff-banner" class="banner alert">
+        <strong>Sicherheitseskalation aktiv</strong>
+        <p id="handoff-copy" class="tiny">Diese Nachricht wurde für sichtbare Eskalation oder Nachverfolgung markiert.</p>
       </section>
 
-      <section class="quickbar">
-        <button class="quick" data-quick-key="anxiety">Szorongok</button>
-        <button class="quick" data-quick-key="sleep">Alvásprobléma</button>
-        <button class="quick" data-quick-key="breathing">Most legzest szeretnek</button>
-        <button class="quick" data-quick-key="pause">Szuenetet kerek</button>
-        <button class="quick alert" id="quick-urgent">Sürgős</button>
-        <a id="mobile-link" class="quick" href="/chat/mobile">Mobil demo</a>
+      <section id="info-banner" class="banner">
+        <strong>Datenschutzmodell</strong>
+        <p id="privacy-copy" class="tiny">Patientensitzungen nutzen klinikerseitig ausgegebene Token. Die Runtime erhält nur den pseudonymen Alias-Schlüssel.</p>
       </section>
 
-      <section id="timeline" class="timeline">
-        <article class="bubble system">
-          <div class="bubble-head">Onboarding</div>
-          <div class="bubble-body">Szia, itt az éjszakai asszisztens. Rövid válaszokkal segítek, és ha szükséges, láthatóan jelzem az emberi beavatkozást.</div>
-          <div class="meta">
-            <span class="chip">assistant_disclosure</span>
-            <span class="chip">safety_active</span>
-          </div>
-        </article>
-      </section>
+      <section id="timeline" class="timeline"></section>
 
-      <section id="debug-console" class="debug-console">
-        <div class="debug-head">
-          <div>
-            <div class="debug-title">Demó konzol</div>
-            <div class="microcopy">Itt latod, milyen trigger, route es phrase alapjan szuletett a valasz.</div>
-          </div>
-          <div id="debug-turn" class="chip">turn: 0</div>
-        </div>
+      <section id="debug-shell" class="debug-shell">
         <div class="debug-grid">
-          <div class="debug-pane">
-            <div class="small-label">Mi tortent es miert?</div>
-            <div class="debug-cards">
-              <div class="debug-card">
-                <strong>Hibrid kiválasztás</strong>
-                <div id="debug-hybrid" class="microcopy">A hybrid dontes allapota itt jelenik meg.</div>
-              </div>
-              <div class="debug-card">
-                <strong>Beszélgetés-összegzés</strong>
-                <div id="debug-summary" class="microcopy">A friss beszélgetés rövid összefoglalója itt jelenik meg.</div>
-              </div>
-              <div class="debug-card">
-                <strong>Páciensazonosság</strong>
-                <div id="debug-identity" class="microcopy">A feloldott páciensazonosság itt jelenik meg.</div>
-              </div>
-            </div>
-            <ul id="debug-explanation" class="debug-list">
-              <li>A demó mód minden küldés után ide írja a magyarázatot.</li>
-            </ul>
-          </div>
-          <div class="debug-pane">
-            <div class="small-label">Friss előzmények</div>
-            <div id="debug-history" class="debug-history">
-              <div class="debug-history-row">A legutobbi turnok itt jelennek meg.</div>
-            </div>
-            <div class="small-label debug-subhead">Nyers debug</div>
-            <pre id="debug-json" class="debug-json">{}</pre>
-          </div>
+          <article class="debug-card">
+            <strong>Gesprächszusammenfassung</strong>
+            <div id="summary-card" class="tiny">Noch keine Zusammenfassung.</div>
+          </article>
+          <article class="debug-card">
+            <strong>Patientenidentität</strong>
+            <div id="identity-card" class="tiny">Noch keine Identitätsdetails.</div>
+          </article>
+          <article class="debug-card">
+            <strong>Route / Hybrid</strong>
+            <div id="route-card" class="tiny">Noch keine Routendetails.</div>
+          </article>
         </div>
+        <article class="debug-card">
+          <strong>Entwickler-Debug-Ausgabe</strong>
+          <pre id="debug-json">{}</pre>
+        </article>
       </section>
 
       <section class="composer">
         <div class="composer-grid">
-          <textarea id="message" placeholder="Pelda: Nem tudom, hogyan kezdjem elmondani."></textarea>
-          <div class="action-stack">
-            <button id="record-button" class="secondary" type="button">Mikrofon</button>
-            <button id="send" class="primary">Küldés</button>
-            <button id="clear" class="secondary" type="button">Urites</button>
+          <textarea id="message-input" placeholder="Beschreibe kurz, was du gerade am dringendsten brauchst."></textarea>
+          <div class="button-column">
+            <button id="send-button" class="primary" type="button">Senden</button>
+            <button id="clear-button" class="secondary" type="button">Leeren</button>
           </div>
         </div>
-        <div class="composer-tools">
-          <label class="voice-toggle">
-            <input id="auto-speak" type="checkbox" checked>
-            <span id="auto-speak-label">Valasz felolvasasa</span>
-          </label>
+        <div class="row">
+          <span id="voice-note" class="tiny">Browser-Audio-Upload ist verfügbar, wenn MediaRecorder unterstützt wird.</span>
         </div>
-        <div class="footer-note">One-tap opciók: rövid coping kérdések, gyors support, szünet, krízisjelzés. A demó jelenleg a helyi runtime végpontot használja.</div>
-        <div id="voice-note" class="identity-note">Mikrofon capture es helyi felolvasas aktiv, ha a bongeszo tamogatja.</div>
-        <div id="identity-note" class="identity-note">Patient memory key: loading...</div>
       </section>
     </main>
   </div>
 
-  <button id="floating-crisis" class="danger floating-crisis">Sürgős segítség</button>
-
   <script>
-    const timeline = document.getElementById('timeline');
-    const messageInput = document.getElementById('message');
-    const langSelect = document.getElementById('ui-language');
-    const patientIdInput = document.getElementById('patient-id');
-    const ageGroupInput = document.getElementById('age-group');
-    const literacyLevelInput = document.getElementById('literacy-level');
-    const preferredRegisterInput = document.getElementById('preferred-register');
-    const ttsSpeedInput = document.getElementById('tts-speed');
-    const preferOnlineInput = document.getElementById('prefer-online');
-    const showRoutingInput = document.getElementById('show-routing');
-    const demoModeInput = document.getElementById('demo-mode');
-    const includeReviewItemsInput = document.getElementById('include-review-items');
-    const latencyContextInput = document.getElementById('latency-context');
-    const historyModeInput = document.getElementById('history-mode');
-    const themeModeInput = document.getElementById('theme-mode');
-    const themeSkinInput = document.getElementById('theme-skin');
-    const consentStoreInput = document.getElementById('consent-store');
-    const sendButton = document.getElementById('send');
-    const clearButton = document.getElementById('clear');
-    const statusNode = document.getElementById('status');
-    const onboardingNode = document.getElementById('onboarding');
-    const handoffBanner = document.getElementById('handoff-banner');
-    const handoffText = document.getElementById('handoff-text');
-    const handoffChip = document.getElementById('handoff-chip');
-    const debugConsole = document.getElementById('debug-console');
-    const debugExplanation = document.getElementById('debug-explanation');
-    const debugJson = document.getElementById('debug-json');
-    const debugTurn = document.getElementById('debug-turn');
-    const debugHybrid = document.getElementById('debug-hybrid');
-    const debugSummary = document.getElementById('debug-summary');
-    const debugIdentity = document.getElementById('debug-identity');
-    const debugHistory = document.getElementById('debug-history');
-    const identityNote = document.getElementById('identity-note');
-    const personalizationPanel = document.querySelectorAll('.sidebar .panel.block')[2];
-    const personalizationLabels = personalizationPanel.querySelectorAll('label');
-    const toggleLabels = personalizationPanel.querySelectorAll('.toggle-label');
-    const onboardingEyebrow = document.querySelector('.modal .eyebrow');
-    const onboardingTitle = document.querySelector('.modal h1');
-    const onboardingLede = document.querySelector('.modal .lede');
-    const onboardingChecklist = document.querySelector('.modal .checklist');
-    const startDemoButton = document.getElementById('start-demo');
-    const disclosurePanel = document.querySelectorAll('.sidebar .panel.block')[0];
-    const safetyPanel = document.querySelectorAll('.sidebar .panel.block')[1];
-    const topbarEyebrow = document.querySelector('.title-wrap .eyebrow');
-    const topbarTitle = document.querySelector('.title-wrap .title');
-    const topbarCopy = document.querySelector('.title-wrap .microcopy');
-    const trustBanner = document.querySelector('.trust-banner');
-    const trustTitle = trustBanner.querySelector('strong');
-    const trustCopy = trustBanner.querySelector('.microcopy');
-    const introBubbleHead = timeline.querySelector('.bubble-head');
-    const introBubbleBody = timeline.querySelector('.bubble-body');
-    const quickButtons = Array.from(document.querySelectorAll('[data-quick-key]'));
-    const mobileLink = document.getElementById('mobile-link');
-    const quickUrgentButton = document.getElementById('quick-urgent');
-    const sidebarCrisisButton = document.getElementById('sidebar-crisis');
-    const floatingCrisisButton = document.getElementById('floating-crisis');
-    const debugHeadCopy = document.querySelector('.debug-head .microcopy');
-    const debugPaneLabels = debugConsole.querySelectorAll('.small-label');
-    const debugCardTitles = debugConsole.querySelectorAll('.debug-card strong');
-    const footerNote = document.querySelector('.footer-note');
-    const themeModeLabel = document.querySelector('label[for="theme-mode"]');
-    const themeSkinLabel = document.querySelector('label[for="theme-skin"]');
-    const themeNoteLabel = document.querySelector('label[for="theme-note"]');
-    const themeNoteNode = document.getElementById('theme-note');
-    const logoutButton = document.getElementById('logout-button');
-    const recordButton = document.getElementById('record-button');
-    const autoSpeakInput = document.getElementById('auto-speak');
-    const autoSpeakLabel = document.getElementById('auto-speak-label');
-    const voiceNoteNode = document.getElementById('voice-note');
+    const LANGUAGE_STORAGE_KEY = 'patient-portal-language';
+    const LANGUAGE_COOKIE_NAME = 'portal_lang';
+    const LANGUAGE_NAMES = { de: 'Deutsch', hu: 'Magyar', en: 'English' };
 
-    const DEFAULT_UI_CONFIG = {
-      supported_languages: ['hu', 'en', 'de'],
-      default_language: 'hu'
+    const state = {
+      session: null,
+      supportedLanguages: ['hu', 'en', 'de'],
+      currentLang: 'de',
+      patientAliases: [],
+      selectedAlias: '',
+      tokens: [],
+      lastPayload: null,
+      mediaRecorder: null,
+      mediaStream: null,
+      mediaChunks: [],
+      isRecording: false,
+      themeMode: 'auto',
+      manualSkin: 'aare',
+      activeThemeState: null,
     };
 
     const THEME_COPY = {
       hu: {
-        modeLabel: 'Atmoszféra',
-        skinLabel: 'Skinválasztó',
-        noteLabel: 'Aktív megjelenés',
         modes: [['auto', 'Auto: profil + napszak + hangulat'], ['manual', 'Kézi skin']],
-        skins: { aare: 'Aare Light', river: 'River Calm', dusk: 'Soft Evening' },
-        reasons: {
-          manual: 'kézi választás',
-          morning: 'reggeli ritmus',
-          day: 'napközbeni egyensúly',
-          evening: 'esti lenyugtatás',
-          night: 'éjszakai puhítás',
-          urgent: 'fokozott biztonság',
-          heavy: 'nagyobb terhelés',
-          rest: 'pihenés-fókusz',
-          calm: 'nyugodtabb hangulat',
-          steady: 'semleges alap'
-        }
+        skins: { aare: 'Aare világos', river: 'Nyugodt folyó', dusk: 'Lágy este', azure: 'Azure inverz' },
+        reasons: { manual: 'kézi választás', morning: 'reggeli ritmus', day: 'napközbeni egyensúly', evening: 'esti lenyugtatás', night: 'éjszakai puhítás', urgent: 'biztonsági fókusz', heavy: 'nagyobb terhelés', rest: 'pihenés-fókusz', calm: 'nyugodtabb hangulat', steady: 'semleges alap', developer: 'fejlesztői nézet' }
       },
       en: {
-        modeLabel: 'Ambience',
-        skinLabel: 'Skin',
-        noteLabel: 'Active ambience',
         modes: [['auto', 'Auto: profile + time + mood'], ['manual', 'Manual skin']],
-        skins: { aare: 'Aare Light', river: 'River Calm', dusk: 'Soft Evening' },
-        reasons: {
-          manual: 'manual choice',
-          morning: 'morning rhythm',
-          day: 'daytime balance',
-          evening: 'evening wind-down',
-          night: 'night support',
-          urgent: 'safety focus',
-          heavy: 'heavier emotional load',
-          rest: 'rest support',
-          calm: 'calmer tone',
-          steady: 'neutral base'
-        }
+        skins: { aare: 'Aare light', river: 'River calm', dusk: 'Soft evening', azure: 'Azure inverse' },
+        reasons: { manual: 'manual choice', morning: 'morning rhythm', day: 'daytime balance', evening: 'evening wind-down', night: 'night support', urgent: 'safety focus', heavy: 'heavier emotional load', rest: 'rest support', calm: 'calmer tone', steady: 'neutral base', developer: 'developer view' }
       },
       de: {
-        modeLabel: 'Ambiente',
-        skinLabel: 'Skin',
-        noteLabel: 'Aktives Ambiente',
         modes: [['auto', 'Auto: Profil + Tageszeit + Stimmung'], ['manual', 'Manueller Skin']],
-        skins: { aare: 'Aare Light', river: 'River Calm', dusk: 'Soft Evening' },
-        reasons: {
-          manual: 'manuelle Wahl',
-          morning: 'Morgenrhythmus',
-          day: 'Tagesbalance',
-          evening: 'Abendliches Runterfahren',
-          night: 'Nachtmodus',
-          urgent: 'Sicherheitsfokus',
-          heavy: 'hoehere Belastung',
-          rest: 'Ruhe-Fokus',
-          calm: 'ruhigere Stimmung',
-          steady: 'neutrale Basis'
-        }
+        skins: { aare: 'Aare hell', river: 'Ruhiger Fluss', dusk: 'Sanfter Abend', azure: 'Azure invers' },
+        reasons: { manual: 'manuelle Wahl', morning: 'Morgenrhythmus', day: 'Tagesbalance', evening: 'Abendliches Runterfahren', night: 'Nachtmodus', urgent: 'Sicherheitsfokus', heavy: 'höhere Belastung', rest: 'Ruhe-Fokus', calm: 'ruhigere Stimmung', steady: 'neutrale Basis', developer: 'Entwickleransicht' }
       }
     };
 
     const UI_COPY = {
+      de: {
+        pageTitle: 'Psychotherapie-Portal',
+        loading: 'Laden',
+        roleAwareDemo: 'Rollenportal',
+        sessionLoading: 'Sitzung wird geladen.',
+        language: 'Sprache',
+        alias: 'Anonymer Alias',
+        consent: 'Einwilligung zum Speichern kurzer Auszüge',
+        enabled: 'Aktiv',
+        disabled: 'Deaktiviert',
+        identityPlaceholder: 'Anonyme Sitzungsnotiz',
+        themeEyebrow: 'Portal-Skin',
+        themeTitle: 'Automatisch und manuell',
+        atmosphere: 'Atmosphäre',
+        skin: 'Erscheinungsbild',
+        themeAuto: 'Automatische Stimmung ist aktiv.',
+        policyEyebrow: 'Zugriffslogik',
+        policyTitle: 'Wer darf wohin wechseln?',
+        policy: [
+          ['Patient', 'Nur Patientenansicht. Keine Entwickler- oder Kliniksteuerung.'],
+          ['Klinik', 'Kann zwischen Klinik- und Patientenansicht wechseln und Patiententoken ausgeben.'],
+          ['Entwickler', 'Kann alle Ansichten wechseln und Demo-Debug einsehen.'],
+        ],
+        tokenEyebrow: 'Patiententoken',
+        tokenTitle: 'Anonymer Zugang durch Kliniker',
+        refresh: 'Aktualisieren',
+        privateLabel: 'Private Notiz',
+        aliasKey: 'Alias-Schlüssel',
+        expiresInDays: 'Gültig für Tage',
+        issueToken: 'Token erzeugen',
+        opsEyebrow: 'Klinik / Betrieb',
+        opsTitle: 'Systemstatus',
+        health: 'Systemstatus',
+        operations: 'Betrieb',
+        noData: 'Keine Daten',
+        heroEyebrow: 'Psychotherapie-Assistent',
+        heroDefaultTitle: 'Anonymer Therapie-Arbeitsbereich',
+        heroDefaultCopy: 'Die Runtime sieht nur pseudonyme Subject-Keys. Die Zuordnung bleibt beim Kliniker oder in einem externen Register.',
+        quicks: [
+          ['Schlaf', 'Ich schlafe in letzter Zeit schlecht.'],
+          ['Stabilisierung', 'Ich bin ängstlich und brauche eine kurze Stabilisierung.'],
+          ['Trennung', 'Ich bin nach einer Trennung sehr aufgelöst.'],
+          ['Dringend', 'Ich brauche jetzt dringend Hilfe.'],
+        ],
+        mobileUi: 'Mobile Ansicht',
+        safetyTitle: 'Sicherheitseskalation aktiv',
+        safetyCopy: 'Diese Nachricht wurde für sichtbare Eskalation oder Nachverfolgung markiert.',
+        privacyTitle: 'Datenschutzmodell',
+        privacyCopy: 'Patientensitzungen nutzen klinikerseitig ausgegebene Token. Die Runtime erhält nur den pseudonymen Alias-Schlüssel.',
+        debugTitles: ['Gesprächszusammenfassung', 'Patientenidentität', 'Route / Hybrid', 'Entwickler-Debug-Ausgabe'],
+        messagePlaceholder: 'Beschreibe kurz, was du gerade am dringendsten brauchst.',
+        send: 'Senden',
+        clear: 'Leeren',
+        record: 'Aufnehmen',
+        stop: 'Stoppen',
+        logout: 'Abmelden',
+        voiceAvailable: 'Browser-Audio-Upload ist verfügbar, wenn MediaRecorder unterstützt wird.',
+        voiceUnavailable: 'Audio-Upload ist in diesem Browser nicht verfügbar. Textchat bleibt nutzbar.',
+        status: { ready: 'Bereit', switching: 'Wechseln', thinking: 'Denkt nach', uploading: 'Lädt hoch', recording: 'Aufnahme', error: 'Fehler' },
+        roles: { developer: 'Entwickler', clinician: 'Klinik', patient: 'Patient' },
+        views: { developer: 'Entwickleransicht', clinician: 'Klinikansicht', patient: 'Patientenansicht' },
+        assistant: 'Assistent',
+        system: 'System',
+        sessionTitle: (role) => `${role} Arbeitsbereich`,
+        sessionCopy: {
+          patient: 'Patienten nutzen nur ihre eigene Ansicht und den anonym zugeordneten Subject-Key.',
+          clinician: 'Kliniker können zwischen Klinik- und Patientenansicht wechseln und anonyme Token ausgeben.',
+          developer: 'Entwickler sehen in der Demo alle Ansichten und die komplette Debug-Ausgabe.'
+        },
+        identityActive: (alias) => `Aktiver Alias: ${alias}`,
+        identitySelected: (alias) => `Gewählter Alias: ${alias}`,
+        identityClinician: (clinicianId) => `Klinik-Sitzung: ${clinicianId}`,
+        identityNone: 'Kein Patientenalias an diese Sitzung gebunden.',
+        heroCopy: {
+          patient: 'Die Patientenansicht blendet Entwicklerdiagnostik aus und zeigt niemals rohe Zuordnungen.',
+          clinician: 'Die Klinikansicht behält den Zugang pseudonym und erlaubt gleichzeitig Betriebssicht und Tokenverwaltung.',
+          developer: 'Die Entwickleransicht zeigt Demo-Diagnostik, Routing und Systemzusammenfassungen, ohne rohe Patientenidentität in die Runtime zu geben.'
+        },
+        noAlias: 'Kein Alias verfügbar',
+        activeCount: (count) => `${count} aktiv`,
+        noTokens: 'Noch keine Patiententoken ausgegeben.',
+        tokenPreview: 'Vorschau',
+        tokenLabel: 'Label',
+        tokenClinician: 'Klinik',
+        tokenExpires: 'Gültig bis',
+        tokenStatus: 'Status',
+        tokenActive: 'aktiv',
+        tokenInactive: 'inaktiv',
+        revoke: 'Widerrufen',
+        copyNow: 'Jetzt kopieren',
+        rawTokenNote: 'Der rohe Token wird nur einmal angezeigt. Falls eine Zuordnung nötig ist, außerhalb der Runtime speichern.',
+        none: 'keins',
+        notAvailable: 'k. A.',
+        summaryEmpty: 'Noch keine Zusammenfassung.',
+        identityEmpty: 'Noch keine Identitätsdetails.',
+        routeEmpty: 'Noch keine Routendetails.',
+        noResponse: '(keine Antwort)',
+        voiceUploaded: '[Sprachnachricht hochgeladen]',
+        introSystem: 'Dieser Arbeitsbereich erzwingt rollenbasierten Ansichtswechsel und pseudonymen Patientenzugang. Die Runtime bekommt nur den Alias-Subject-Key.',
+        healthSummary: (llm, tts) => `LLM: ${llm.provider || 'k. A.'} (${llm.auth_configured ? 'Auth ok' : 'keine Auth'}) | TTS: ${tts.provider || 'k. A.'} (${tts.auth_configured ? 'Auth ok' : 'keine Auth'})`,
+        operationsSummary: 'Keine Betriebsdaten.',
+      },
       hu: {
-        language: 'Nyelv',
-        onboarding: {
-          eyebrow: 'Gyors belépés',
-          title: 'Rövid éjszakai támogatás',
-          lede: 'Szia, itt az éjszakai asszisztens. Rövid válaszokat adok, segíthetek coping lépésekben, és ha kell, jelzem, hogy emberi segítség szükséges.',
-          checklist: '<div><strong>Mi ez?</strong> Egy asszisztenssel beszélsz, nem előterjesztett terapeuta-döntéssel.</div><div><strong>Határok:</strong> Nem adok orvosi diagnózist vagy jogi tanácsot.</div><div><strong>Biztonság:</strong> Sürgős helyzetben használd a piros segítség gombot vagy a helyi segélyhívót.</div><div><strong>Emberi támogatás:</strong> Kockázatnál handoff üzenet jelenik meg, és láthatóan jelezzük, ha emberi követés kell.</div>',
-          start: 'Rendben, kezdem'
-        },
-        sidebar: {
-          disclosureEyebrow: 'Transzparencia',
-          disclosureTitle: 'Asszisztenssel beszelsz',
-          disclosureCopy: 'Mindig jelezzuk, hogy ez egy asszisztens. Ha a rendszer aggaszto jeleket lat, lathato handoff tajekoztatast ad.',
-          safetyEyebrow: 'Biztonság előre',
-          safetyTitle: 'Sürgős segítség',
-          safetyCopy: 'Használd a krízis gombot, ha azonnali támogatás kell. A demó ilyenkor azonnal krízisüzenetet küld a runtime-nak.',
-          personalization: 'Szemelyre szabás',
-          labels: ['Nyelv', 'Páciens azonosító', 'Kor', 'Nyelvezet', 'Regiszter', 'Hangtempó', 'Késleltetés', 'Adatmód'],
-          toggles: ['Online előnyben', 'Routing részletei', 'Demó mód', 'Review és teszt tartalom', 'Rövid excerpt mentése minőséghez']
-        },
-        hero: {
-          eyebrow: 'Páciens webchat',
-          title: 'Gyors belépés, világos határok',
-          copy: 'Mi a legfontosabb most? Egy mondat is elég.',
-          trustTitle: 'Asszisztens + látható emberi követés',
-          trustCopy: 'Ha handoff történik, itt jelenik meg a tájékoztatás. Krízishelyzetben a rendszer azonnal biztonsági váltásra áll.',
-          handoffTitle: 'Handoff aktív',
-          handoffText: 'Aggasztó jelek miatt emberi követés szükséges. A kezelő értesítése indítva vagy javasolt.',
-          introHead: 'Onboarding',
-          introBody: 'Szia, itt az éjszakai asszisztens. Rövid válaszokkal segítek, és ha szükséges, láthatóan jelzem az emberi beavatkozást.'
-        },
-        quick: {
-          anxiety: { label: 'Szorongok', text: 'Szorongok, szeretnek gyors tamogatast.' },
-          sleep: { label: 'Alvásprobléma', text: 'Alvásproblémám van, nem tudok lenyugodni.' },
-          breathing: { label: 'Légzés', text: 'Most légzést szeretnék.' },
-          pause: { label: 'Szünet', text: 'Szünetet kérek.' },
-          urgentLabel: 'Sürgős',
-          urgentText: 'Sürgős segítségre van szükségem most.',
-          mobileLink: 'Mobil demo'
-        },
-        debug: {
-          title: 'Demó konzol',
-          copy: 'Itt latod, milyen trigger, route es phrase alapjan szuletett a valasz.',
-          labels: ['Mi tortent es miert?', 'Friss előzmények', 'Nyers debug'],
-          cards: ['Hibrid kiválasztás', 'Beszélgetés-összegzés', 'Páciensazonosság'],
-          hybridPlaceholder: 'A hybrid dontes allapota itt jelenik meg.',
-          summaryPlaceholder: 'A friss beszélgetés rövid összefoglalója itt jelenik meg.',
-          identityPlaceholder: 'A feloldott páciensazonosság itt jelenik meg.',
-          historyPlaceholder: 'A legutobbi turnok itt jelennek meg.',
-          explanationPlaceholder: 'A demó mód minden küldés után ide írja a magyarázatot.'
-        },
-        composer: {
-          placeholder: 'Pelda: Nem tudom, hogyan kezdjem elmondani.',
-          send: 'Küldés',
-          clear: 'Ürítés',
-          record: 'Mikrofon',
-          stopRecord: 'Stop',
-          logout: 'Kilépés',
-          autoSpeak: 'Válasz felolvasása',
-          footer: 'Egynyomásos opciók: rövid coping kérdések, gyors támogatás, szünet, krízisjelzés. A demó jelenleg a helyi runtime végpontot használja.',
-          voiceNote: 'A mikrofonfigyelés és a helyi felolvasás aktív, ha a böngésző támogatja.',
-          identityPrefix: 'Páciens memóriakulcs: '
-        },
-        options: {
-          patientPlaceholder: 'pl. p-1 vagy hagyd uresen',
-          age: [['', 'auto'], ['child', 'child'], ['teen', 'teen'], ['adult', 'adult'], ['senior', 'senior']],
-          literacy: [['', 'auto'], ['low', 'egyszeru'], ['medium', 'kozepes'], ['high', 'reszletes']],
-          register: [['plain', 'egyszeru'], ['conversational', 'koznapi'], ['clinical', 'reszletes']],
-          tts: [['', 'auto'], ['slow', 'lassu'], ['normal', 'normal'], ['fast', 'gyors']],
-          latency: [['', 'none'], ['acknowledge_then_compute', 'acknowledge_then_compute']],
-          history: [['limited', 'anonim limited'], ['identified', 'azonositott']]
-        },
-        roles: { patient: 'Páciens', assistant: 'Asszisztens', system: 'Rendszer' },
-        statuses: { ready: 'Kész', online: 'Online kész', local: 'Csak helyi', offline: 'Offline', thinking: 'Gondolkodik', empty: 'Üres', error: 'Hiba', paused: 'Szünetel' },
-        messages: { feedback: 'Visszajelzés rögzítve', latency: 'Várakozási előszöveg', noResponse: '(nincs válaszszöveg)', paused: 'A szünet aktív. Oldd fel a szünetet, ha új üzenetet szeretnél küldeni.', pauseApplied: 'Értem. Szünetet tartunk. Az értesítéseket most nem küldöm tovább.', cleared: 'A nézet törölve lett. A beszélgetési előzmény jelenleg csak ebben a helyi demó nézetben látszik.', unknownError: 'ismeretlen hiba', networkError: 'hálózati_hiba', historyLimited: 'anonim_korlátozott', historyIdentified: 'azonosított', noHybrid: 'Nincs hibrid döntési adat.', noSummary: 'Nincs beszélgetés-összegzés.', noIdentity: 'Nincs azonosítási adat.', noHistory: 'Nincs friss előzmény.', speechUnavailable: 'A böngésző nem támogat helyi mikrofonfelismerést.', speechCaptureStart: 'Mikrofon figyelés indult.', speechCaptureError: 'Mikrofon hiba', speechCaptured: 'Felismert szöveg', authRequired: 'Session lejárt, új belépés kell.' }
+        pageTitle: 'Pszichoterápiás portál', loading: 'Betöltés', roleAwareDemo: 'Szerepkörös portál', sessionLoading: 'Betöltés folyamatban.', language: 'Nyelv', alias: 'Anonim alias', consent: 'Hozzájárulás rövid részlet tárolásához', enabled: 'Engedélyezve', disabled: 'Tiltva', identityPlaceholder: 'Anonim azonosítási megjegyzés', themeEyebrow: 'Portál-skin', themeTitle: 'Automatikus és kézi témák', atmosphere: 'Hangulat', skin: 'Megjelenés', themeAuto: 'Az automatikus hangulat aktív.', policyEyebrow: 'Hozzáférési szabály', policyTitle: 'Ki hova válthat?', policy: [['Páciens', 'Csak páciens nézet. Nincs fejlesztői vagy klinikai vezérlés.'], ['Klinika', 'Válthat klinikai és páciens nézet között, valamint páciens tokeneket adhat ki.'], ['Fejlesztő', 'Minden nézetre válthat és láthatja a demó-debugot.']], tokenEyebrow: 'Páciens tokenek', tokenTitle: 'Klinikus által kiadott anonim hozzáférés', refresh: 'Frissítés', privateLabel: 'Privát címke', aliasKey: 'Alias kulcs', expiresInDays: 'Lejárat napokban', issueToken: 'Token kiadása', opsEyebrow: 'Klinika / üzemeltetés', opsTitle: 'Rendszerállapot', health: 'Állapot', operations: 'Műveletek', noData: 'Nincs adat', heroEyebrow: 'Pszichoterápiás asszisztens', heroDefaultTitle: 'Anonim terápiás munkatér', heroDefaultCopy: 'A runtime csak pszeudonim subject kulcsokat lát. A páciens és a token közti megfeleltetés a klinikusnál vagy külső nyilvántartásban marad.', quicks: [['Alvás', 'Nehezen alszom mostanában.'], ['Stabilizálás', 'Szorongok, szeretnék egy rövid stabilizáló gyakorlatot.'], ['Szakítás', 'Szakítás után vagyok, és most nagyon szétesettnek érzem magam.'], ['Sürgős', 'Szükségem van sürgős segítségre most.']], mobileUi: 'Mobil nézet', safetyTitle: 'Biztonsági eszkaláció aktív', safetyCopy: 'Ez a váltás látható eszkalációt vagy követést igényel.', privacyTitle: 'Adatvédelmi modell', privacyCopy: 'A páciens ülések klinikus által kiadott tokeneket váltanak be. A runtime csak a pszeudonim alias kulcsot kapja meg.', debugTitles: ['Beszélgetés összefoglaló', 'Páciensazonosság', 'Útvonal / hibrid', 'Fejlesztői debug kimenet'], messagePlaceholder: 'Írd le röviden, mire lenne most a legnagyobb szükséged.', send: 'Küldés', clear: 'Törlés', record: 'Felvétel', stop: 'Leállítás', logout: 'Kilépés', voiceAvailable: 'A böngészős hangfeltöltés elérhető, ha a MediaRecorder támogatott.', voiceUnavailable: 'Ebben a böngészőben nincs hangfeltöltés. A szöveges chat továbbra is használható.', status: { ready: 'Kész', switching: 'Váltás', thinking: 'Gondolkodik', uploading: 'Feltöltés', recording: 'Felvétel', error: 'Hiba' }, roles: { developer: 'Fejlesztő', clinician: 'Klinika', patient: 'Páciens' }, views: { developer: 'Fejlesztői nézet', clinician: 'Klinikai nézet', patient: 'Páciens nézet' }, assistant: 'Asszisztens', system: 'Rendszer', sessionTitle: (role) => `${role} munkatér`, sessionCopy: { patient: 'A páciens csak a saját nézetét és a tokennel hozzárendelt anonim subjectet használja.', clinician: 'A klinikus válthat klinikai és páciens nézet között, valamint anonim tokeneket adhat ki.', developer: 'A fejlesztő minden nézetet és teljes debug kimenetet elér a demóban.' }, identityActive: (alias) => `Aktív alias: ${alias}`, identitySelected: (alias) => `Kiválasztott alias: ${alias}`, identityClinician: (clinicianId) => `Klinikai munkamenet: ${clinicianId}`, identityNone: 'Nincs páciens alias ehhez a munkamenethez kötve.', heroCopy: { patient: 'A páciens nézet elrejti a fejlesztői diagnosztikát, és soha nem mutat nyers subject-hozzárendelést.', clinician: 'A klinikai nézet pszeudonimen tartja a hozzáférést, miközben engedi az üzemeltetési rálátást és a tokenkezelést.', developer: 'A fejlesztői nézet megmutatja a demó diagnosztikát, routingot és rendszerösszegzéseket, miközben a nyers páciensidentitás továbbra is a runtime-on kívül marad.' }, noAlias: 'Nincs elérhető alias', activeCount: (count) => `${count} aktív`, noTokens: 'Még nincs kiadott páciens token.', tokenPreview: 'Előnézet', tokenLabel: 'Címke', tokenClinician: 'Klinikus', tokenExpires: 'Lejárat', tokenStatus: 'Állapot', tokenActive: 'aktív', tokenInactive: 'inaktív', revoke: 'Visszavonás', copyNow: 'Másold most', rawTokenNote: 'A nyers token csak egyszer jelenik meg. Ha kell a páciens-hozzárendelés, a runtime-on kívül tárold.', none: 'nincs', notAvailable: 'n.a.', summaryEmpty: 'Még nincs összefoglaló.', identityEmpty: 'Még nincs identitás-részlet.', routeEmpty: 'Még nincs útvonal részlet.', noResponse: '(nincs válasz)', voiceUploaded: '[hangüzenet feltöltve]', introSystem: 'Ez a munkatér szerepkör-alapú nézetváltást és pszeudonim pácienshozzáférést kényszerít ki. A runtime csak az alias subject kulcsot kapja meg.', healthSummary: (llm, tts) => `LLM: ${llm.provider || 'n.a.'} (${llm.auth_configured ? 'auth ok' : 'nincs auth'}) | TTS: ${tts.provider || 'n.a.'} (${tts.auth_configured ? 'auth ok' : 'nincs auth'})`, operationsSummary: 'Nincs műveleti adat.'
       },
       en: {
-        language: 'Language',
-        onboarding: {
-          eyebrow: 'Fast entry',
-          title: 'Brief overnight support',
-          lede: 'You are chatting with the overnight assistant. Responses stay short, coping steps are possible, and human follow-up is made visible when needed.',
-          checklist: '<div><strong>What is this?</strong> You are speaking with an assistant, not a therapist making decisions for you.</div><div><strong>Limits:</strong> No medical diagnoses and no legal advice.</div><div><strong>Safety:</strong> In urgent situations use the red help button or your local emergency support.</div><div><strong>Human support:</strong> When risk is detected, a handoff notice appears and human follow-up is clearly signaled.</div>',
-          start: 'Start demo'
-        },
-        sidebar: {
-          disclosureEyebrow: 'Transparency', disclosureTitle: 'You are talking to an assistant', disclosureCopy: 'This is always made explicit. If the system detects concerning signals, it shows a visible handoff notice.', safetyEyebrow: 'Safety first', safetyTitle: 'Urgent help', safetyCopy: 'Use the crisis button if you need immediate support. In the demo this sends an urgent message directly to the runtime.', personalization: 'Personalization', labels: ['Language', 'Patient ID', 'Age group', 'Language level', 'Register', 'Voice speed', 'Latency', 'Memory mode'], toggles: ['Prefer Online', 'Show Routing Details', 'Demo Mode', 'Include Review/Test Content', 'Store short excerpt for QA']
-        },
-        hero: { eyebrow: 'Patient Web Chat', title: 'Fast entry, clear boundaries', copy: 'What matters most right now? One sentence is enough.', trustTitle: 'Assistant with visible human follow-up', trustCopy: 'If a handoff happens, the notice appears here. In crisis mode the system switches to safety-first behavior immediately.', handoffTitle: 'Handoff active', handoffText: 'Concerning signals require human follow-up. Clinician notification has started or is recommended.', introHead: 'Onboarding', introBody: 'You are with the overnight assistant. Replies stay short and human intervention is clearly marked when needed.' },
-        quick: { anxiety: { label: 'Anxiety', text: 'I am anxious and need quick support.' }, sleep: { label: 'Sleep', text: 'I have sleep trouble and cannot settle down.' }, breathing: { label: 'Breathing', text: 'I want a short breathing exercise now.' }, pause: { label: 'Pause', text: 'I need a short pause.' }, urgentLabel: 'Urgent', urgentText: 'I need urgent help right now.', mobileLink: 'Mobile demo' },
-        debug: { title: 'Demo Console', copy: 'This shows which trigger, route, and phrase produced the response.', labels: ['What happened and why?', 'Recent history', 'Raw debug'], cards: ['Hybrid selection', 'Conversation summary', 'Patient identity'], hybridPlaceholder: 'Hybrid routing state appears here.', summaryPlaceholder: 'A short conversation summary appears here.', identityPlaceholder: 'Resolved patient identity appears here.', historyPlaceholder: 'Recent turns appear here.', explanationPlaceholder: 'Demo mode writes the explanation here after each send.' },
-        composer: { placeholder: 'Example: I do not know how to start saying this.', send: 'Send', clear: 'Clear', record: 'Microphone', stopRecord: 'Stop', logout: 'Logout', autoSpeak: 'Read replies aloud', footer: 'One-tap options include coping prompts, quick support, pause, and crisis escalation. The demo currently uses the local runtime endpoint.', voiceNote: 'Microphone capture and local speech playback are used when the browser supports them.', identityPrefix: 'Patient memory key: ' },
-        options: { patientPlaceholder: 'e.g. p-1 or leave empty', age: [['', 'auto'], ['child', 'child'], ['teen', 'teen'], ['adult', 'adult'], ['senior', 'senior']], literacy: [['', 'auto'], ['low', 'simple'], ['medium', 'medium'], ['high', 'detailed']], register: [['plain', 'plain'], ['conversational', 'conversational'], ['clinical', 'clinical']], tts: [['', 'auto'], ['slow', 'slow'], ['normal', 'normal'], ['fast', 'fast']], latency: [['', 'none'], ['acknowledge_then_compute', 'acknowledge_then_compute']], history: [['limited', 'anonymous limited'], ['identified', 'identified']] },
-        roles: { patient: 'Patient', assistant: 'Assistant', system: 'System' },
-        statuses: { ready: 'Ready', online: 'Online Ready', local: 'Local Only', offline: 'Offline', thinking: 'Thinking', empty: 'Empty', error: 'Error', paused: 'Paused' },
-        messages: { feedback: 'Feedback saved', latency: 'Latency preamble', noResponse: '(no response text)', paused: 'Pause mode is active. Resume before sending a new message.', pauseApplied: 'Pause acknowledged. Notifications are not escalated while paused.', cleared: 'The view was cleared. Conversation history is currently visible only in this local demo.', unknownError: 'unknown error', networkError: 'network_error', historyLimited: 'anonymous_limited', historyIdentified: 'identified', noHybrid: 'No hybrid routing data.', noSummary: 'No conversation summary.', noIdentity: 'No identity data.', noHistory: 'No recent history.', speechUnavailable: 'This browser does not support local microphone recognition.', speechCaptureStart: 'Microphone capture started.', speechCaptureError: 'Microphone error', speechCaptured: 'Recognized text', authRequired: 'Session expired, please log in again.' }
-      },
-      de: {
-        language: 'Sprache',
-        onboarding: {
-          eyebrow: 'Schneller Einstieg',
-          title: 'Kurze Unterstuetzung ueber Nacht',
-          lede: 'Du schreibst mit dem Nachtassistenten. Antworten bleiben kurz, Coping-Schritte sind moeglich, und menschliche Nachverfolgung wird sichtbar markiert.',
-          checklist: '<div><strong>Was ist das?</strong> Du sprichst mit einem Assistenten, nicht mit einer therapeutischen Entscheidungsperson.</div><div><strong>Grenzen:</strong> Keine medizinischen Diagnosen und keine Rechtsberatung.</div><div><strong>Sicherheit:</strong> In dringenden Situationen nutze den roten Hilfeknopf oder lokale Notfallhilfe.</div><div><strong>Menschliche Hilfe:</strong> Wenn Risiko erkannt wird, erscheint ein Handoff-Hinweis und menschliche Nachverfolgung wird klar signalisiert.</div>',
-          start: 'Demo starten'
-        },
-        sidebar: {
-          disclosureEyebrow: 'Transparenz', disclosureTitle: 'Du sprichst mit einem Assistenten', disclosureCopy: 'Das wird immer klar angezeigt. Wenn das System bedenkliche Signale erkennt, erscheint ein sichtbarer Handoff-Hinweis.', safetyEyebrow: 'Sicherheit zuerst', safetyTitle: 'Dringende Hilfe', safetyCopy: 'Nutze den Krisenknopf, wenn du sofortige Unterstuetzung brauchst. In der Demo wird direkt eine dringende Nachricht an die Runtime gesendet.', personalization: 'Personalisierung', labels: ['Sprache', 'Patienten-ID', 'Altersgruppe', 'Sprachniveau', 'Register', 'Sprechtempo', 'Latenz', 'Speichermodus'], toggles: ['Online bevorzugen', 'Routing-Details zeigen', 'Demo-Modus', 'Review/Test-Inhalte einschliessen', 'Kurzen Auszug fuer QA speichern']
-        },
-        hero: { eyebrow: 'Patient Web Chat', title: 'Schneller Einstieg, klare Grenzen', copy: 'Was ist gerade am wichtigsten? Ein Satz reicht.', trustTitle: 'Assistent mit sichtbarer menschlicher Nachverfolgung', trustCopy: 'Wenn ein Handoff passiert, erscheint der Hinweis hier. Im Krisenmodus schaltet das System sofort auf Sicherheit zuerst.', handoffTitle: 'Handoff aktiv', handoffText: 'Bedenkliche Signale erfordern menschliche Nachverfolgung. Die Benachrichtigung an die Fachperson wurde gestartet oder wird empfohlen.', introHead: 'Einweisung', introBody: 'Du bist beim Nachtassistenten. Antworten bleiben kurz und menschliches Eingreifen wird klar markiert.' },
-        quick: { anxiety: { label: 'Angst', text: 'Ich bin aengstlich und brauche schnelle Unterstuetzung.' }, sleep: { label: 'Schlaf', text: 'Ich habe Schlafprobleme und komme nicht zur Ruhe.' }, breathing: { label: 'Atmung', text: 'Ich moechte jetzt eine kurze Atemuebung.' }, pause: { label: 'Pause', text: 'Ich brauche eine kurze Pause.' }, urgentLabel: 'Dringend', urgentText: 'Ich brauche jetzt dringend Hilfe.', mobileLink: 'Mobile Demo' },
-        debug: { title: 'Demo-Konsole', copy: 'Hier siehst du, welcher Trigger, welches Routing und welche Phrase die Antwort erzeugt haben.', labels: ['Was ist passiert und warum?', 'Letzte Historie', 'Roh-Debug'], cards: ['Hybride Auswahl', 'Gespraechszusammenfassung', 'Patientenidentitaet'], hybridPlaceholder: 'Der Status der hybriden Entscheidung erscheint hier.', summaryPlaceholder: 'Eine kurze Gespraechszusammenfassung erscheint hier.', identityPlaceholder: 'Die aufgeloeste Patientenidentitaet erscheint hier.', historyPlaceholder: 'Die letzten Turns erscheinen hier.', explanationPlaceholder: 'Der Demo-Modus schreibt nach jedem Senden die Erklaerung hierhin.' },
-        composer: { placeholder: 'Beispiel: Ich weiss nicht, wie ich anfangen soll.', send: 'Senden', clear: 'Leeren', record: 'Mikrofon', stopRecord: 'Stop', logout: 'Abmelden', autoSpeak: 'Antworten vorlesen', footer: 'One-Tap-Optionen umfassen Coping-Impulse, schnelle Unterstuetzung, Pause und Kriseneskalation. Die Demo nutzt aktuell den lokalen Runtime-Endpunkt.', voiceNote: 'Mikrofon-Capture und lokale Sprachausgabe werden genutzt, wenn der Browser sie unterstuetzt.', identityPrefix: 'Patienten-Speicherschluessel: ' },
-        options: { patientPlaceholder: 'z. B. p-1 oder leer lassen', age: [['', 'auto'], ['child', 'Kind'], ['teen', 'Jugendlich'], ['adult', 'Erwachsen'], ['senior', 'Senior']], literacy: [['', 'auto'], ['low', 'einfach'], ['medium', 'mittel'], ['high', 'detailliert']], register: [['plain', 'einfach'], ['conversational', 'alltaeglich'], ['clinical', 'klinisch']], tts: [['', 'auto'], ['slow', 'langsam'], ['normal', 'normal'], ['fast', 'schnell']], latency: [['', 'keine'], ['acknowledge_then_compute', 'acknowledge_then_compute']], history: [['limited', 'anonym begrenzt'], ['identified', 'identifiziert']] },
-        roles: { patient: 'Patient', assistant: 'Assistent', system: 'System' },
-        statuses: { ready: 'Bereit', online: 'Online bereit', local: 'Nur lokal', offline: 'Offline', thinking: 'Denkt nach', empty: 'Leer', error: 'Fehler', paused: 'Pausiert' },
-        messages: { feedback: 'Feedback gespeichert', latency: 'Latenz-Preamble', noResponse: '(kein Antworttext)', paused: 'Der Pausenmodus ist aktiv. Setze fort, bevor du eine neue Nachricht sendest.', pauseApplied: 'Pause bestaetigt. Benachrichtigungen werden waehrend der Pause nicht weitergeleitet.', cleared: 'Die Ansicht wurde geleert. Der Gespraechsverlauf ist derzeit nur in dieser lokalen Demo sichtbar.', unknownError: 'unbekannter Fehler', networkError: 'network_error', historyLimited: 'anonym_begrenzt', historyIdentified: 'identifiziert', noHybrid: 'Keine hybriden Routing-Daten.', noSummary: 'Keine Gespraechszusammenfassung.', noIdentity: 'Keine Identitaetsdaten.', noHistory: 'Keine letzte Historie.', speechUnavailable: 'Dieser Browser unterstuetzt keine lokale Mikrofonerkennung.', speechCaptureStart: 'Mikrofonaufnahme gestartet.', speechCaptureError: 'Mikrofonfehler', speechCaptured: 'Erkannter Text', authRequired: 'Session abgelaufen, bitte erneut anmelden.' }
+        pageTitle: 'Psychotherapy portal', loading: 'Loading', roleAwareDemo: 'Role-aware portal', sessionLoading: 'Loading session.', language: 'Language', alias: 'Anonymous alias', consent: 'Consent to store short excerpt', enabled: 'Enabled', disabled: 'Disabled', identityPlaceholder: 'Anonymous identity note', themeEyebrow: 'Portal skin', themeTitle: 'Automatic and manual themes', atmosphere: 'Atmosphere', skin: 'Skin', themeAuto: 'Automatic ambience is active.', policyEyebrow: 'Access policy', policyTitle: 'Who can switch where?', policy: [['Patient', 'Only patient view. No developer or clinical controls.'], ['Clinician', 'Can switch between clinician and patient view and issue patient tokens.'], ['Developer', 'Can switch between all views and inspect demo debug output.']], tokenEyebrow: 'Patient tokens', tokenTitle: 'Clinician-issued anonymous access', refresh: 'Refresh', privateLabel: 'Private label', aliasKey: 'Alias key', expiresInDays: 'Expires in days', issueToken: 'Issue token', opsEyebrow: 'Clinical / ops', opsTitle: 'System snapshot', health: 'Health', operations: 'Operations', noData: 'No data', heroEyebrow: 'Psychotherapy assistant', heroDefaultTitle: 'Anonymous therapy workspace', heroDefaultCopy: 'The runtime only sees pseudonymous subject keys. Mapping from patient to token stays with the clinician or an external registry.', quicks: [['Sleep', 'I have been sleeping badly lately.'], ['Grounding', 'I am anxious and want a short grounding exercise.'], ['Breakup', 'I am after a breakup and I feel very scattered.'], ['Urgent', 'I need urgent help right now.']], mobileUi: 'Mobile UI', safetyTitle: 'Safety escalation active', safetyCopy: 'This exchange was flagged for visible escalation or follow-up.', privacyTitle: 'Privacy model', privacyCopy: 'Patient sessions redeem clinician-issued tokens. Only HMAC hashes and pseudonymous alias keys remain stored server-side.', debugTitles: ['Conversation summary', 'Patient identity', 'Route / hybrid', 'Developer debug payload'], messagePlaceholder: 'Briefly describe what you need most right now.', send: 'Send', clear: 'Clear', record: 'Record', stop: 'Stop', logout: 'Logout', voiceAvailable: 'Browser audio upload is available when MediaRecorder is supported.', voiceUnavailable: 'Audio upload is not available in this browser. Text chat remains available.', status: { ready: 'Ready', switching: 'Switching', thinking: 'Thinking', uploading: 'Uploading', recording: 'Recording', error: 'Error' }, roles: { developer: 'Developer', clinician: 'Clinician', patient: 'Patient' }, views: { developer: 'Developer view', clinician: 'Clinician view', patient: 'Patient view' }, assistant: 'Assistant', system: 'System', sessionTitle: (role) => `${role} workspace`, sessionCopy: { patient: 'Patients only use their own view and the anonymous subject bound to the token.', clinician: 'Clinicians can switch between clinician and patient views and issue anonymous tokens.', developer: 'Developers can access every view and the full debug output in the demo.' }, identityActive: (alias) => `Active alias: ${alias}`, identitySelected: (alias) => `Selected alias: ${alias}`, identityClinician: (clinicianId) => `Clinician session: ${clinicianId}`, identityNone: 'No patient alias is bound to this session.', heroCopy: { patient: 'Patient view hides developer diagnostics and never exposes raw subject mapping.', clinician: 'Clinician view keeps access pseudonymous while allowing ops oversight and token management.', developer: 'Developer view exposes demo diagnostics, routing, and system summaries while keeping raw patient identity outside the runtime.' }, noAlias: 'No alias available', activeCount: (count) => `${count} active`, noTokens: 'No issued patient tokens yet.', tokenPreview: 'Preview', tokenLabel: 'Label', tokenClinician: 'Clinician', tokenExpires: 'Expires', tokenStatus: 'Status', tokenActive: 'active', tokenInactive: 'inactive', revoke: 'Revoke', copyNow: 'Copy now', rawTokenNote: 'This raw token is shown only once. Store it outside the runtime if mapping is needed.', none: 'none', notAvailable: 'n/a', summaryEmpty: 'No summary yet.', identityEmpty: 'No identity details yet.', routeEmpty: 'No route details yet.', noResponse: '(no response)', voiceUploaded: '[voice message uploaded]', introSystem: 'This workspace enforces role-based view switching and pseudonymous patient access. The runtime receives only the alias subject key.', healthSummary: (llm, tts) => `LLM: ${llm.provider || 'n/a'} (${llm.auth_configured ? 'auth ok' : 'no auth'}) | TTS: ${tts.provider || 'n/a'} (${tts.auth_configured ? 'auth ok' : 'no auth'})`, operationsSummary: 'No operations data.'
       }
     };
 
-    const conversationId = `browser-demo-${Date.now()}`;
-    const browserPatientKey = getOrCreateBrowserPatientKey();
-    const languageLocale = { hu: 'hu-HU', en: 'en-US', de: 'de-DE' };
-    let paused = false;
-    let turnCounter = 0;
-    let currentLang = DEFAULT_UI_CONFIG.default_language;
-    let currentStatusKey = 'ready';
-    let themeMode = 'manual';
-    let manualSkin = 'aare';
-    let activeThemeState = null;
-    let mediaRecorder = null;
-    let mediaChunks = [];
-    let mediaStream = null;
-    let pendingVoiceTranscript = '';
-    let speechRecognition = null;
-    let isRecording = false;
+    const SKIN_LOGOS = { aare: '/assets/logo_light.png', river: '/assets/logo_light.png', dusk: '/assets/logo_light.png', azure: '/assets/logo_dark.png' };
 
-    function getOrCreateBrowserPatientKey() {
-      const storageKey = 'patient-chat-browser-key';
-      const existing = window.localStorage.getItem(storageKey);
-      if (existing) {
-        return existing;
-      }
-      const generated = `anon-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
-      window.localStorage.setItem(storageKey, generated);
-      return generated;
+    const languageSelect = document.getElementById('language-select');
+    const aliasField = document.getElementById('alias-field');
+    const aliasSelect = document.getElementById('alias-select');
+    const consentSelect = document.getElementById('consent-store');
+    const viewSwitcher = document.getElementById('view-switcher');
+    const tokenPanel = document.getElementById('token-panel');
+    const opsPanel = document.getElementById('ops-panel');
+    const sessionRole = document.getElementById('session-role');
+    const sessionView = document.getElementById('session-view');
+    const sessionTitle = document.getElementById('session-title');
+    const sessionCopy = document.getElementById('session-copy');
+    const identityNote = document.getElementById('identity-note');
+    const heroTitle = document.getElementById('hero-title');
+    const heroCopy = document.getElementById('hero-copy');
+    const portalLogo = document.getElementById('portal-logo');
+    const statusPill = document.getElementById('status-pill');
+    const timeline = document.getElementById('timeline');
+    const handoffBanner = document.getElementById('handoff-banner');
+    const handoffCopy = document.getElementById('handoff-copy');
+    const debugShell = document.getElementById('debug-shell');
+    const summaryCard = document.getElementById('summary-card');
+    const identityCard = document.getElementById('identity-card');
+    const routeCard = document.getElementById('route-card');
+    const debugJson = document.getElementById('debug-json');
+    const messageInput = document.getElementById('message-input');
+    const sendButton = document.getElementById('send-button');
+    const clearButton = document.getElementById('clear-button');
+    const logoutButton = document.getElementById('logout-button');
+    const recordButton = document.getElementById('record-button');
+    const voiceNote = document.getElementById('voice-note');
+    const healthSummary = document.getElementById('health-summary');
+    const operationsSummary = document.getElementById('operations-summary');
+    const tokenLabelInput = document.getElementById('token-label');
+    const tokenAliasInput = document.getElementById('token-alias');
+    const tokenExpiryInput = document.getElementById('token-expiry');
+    const issueTokenButton = document.getElementById('issue-token');
+    const refreshTokensButton = document.getElementById('refresh-tokens');
+    const rawTokenBox = document.getElementById('raw-token-box');
+    const tokenList = document.getElementById('token-list');
+    const themeModeInput = document.getElementById('theme-mode');
+    const themeSkinInput = document.getElementById('theme-skin');
+    const themeNoteNode = document.getElementById('theme-note');
+    const sidebarSections = Array.from(document.querySelectorAll('.sidebar > section.panel.card.stack'));
+    const toolbarQuickButtons = Array.from(document.querySelectorAll('.toolbar .tab-button'));
+    const mobileLink = document.querySelector('.toolbar .chip');
+    const handoffTitle = handoffBanner.querySelector('strong');
+    const privacyTitle = document.querySelector('#info-banner strong');
+    const debugTitleNodes = Array.from(document.querySelectorAll('#debug-shell strong'));
+    const DESKTOP_BUTTON_ICONS = {
+      record: '◉',
+      stop: '■',
+      logout: '↗',
+      send: '➜',
+      clear: '✕',
+      refresh: '↻',
+      issueToken: '＋',
+      revoke: '−',
+      mobileUi: '▣',
+      quicks: ['☾', '◎', '≈', '!'],
+      views: { developer: '⌘', clinician: '✚', patient: '◌' },
+    };
+
+    function copyFor(lang = state.currentLang) { return UI_COPY[lang] || UI_COPY.de; }
+    function themeCopyFor(lang = state.currentLang) { return THEME_COPY[lang] || THEME_COPY.de; }
+    function escapeHtml(value) {
+      return String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#39;');
     }
-
-    function copyFor(lang = currentLang) {
-      return UI_COPY[lang] || UI_COPY.en;
+    function setIconButton(button, { icon, label, tooltip = label, collapse = false } = {}) {
+      button.classList.add('icon-action');
+      button.classList.toggle('compact-collapse', collapse);
+      button.setAttribute('title', tooltip);
+      button.setAttribute('aria-label', tooltip);
+      button.innerHTML = `<span class="button-icon" aria-hidden="true">${escapeHtml(icon || '•')}</span><span class="button-label">${escapeHtml(label || '')}</span>`;
     }
-
-    function themeCopyFor(lang = currentLang) {
-      return THEME_COPY[lang] || THEME_COPY.en;
+    function readLanguageCookie() {
+      const match = document.cookie.match(new RegExp(`(?:^|; )${LANGUAGE_COOKIE_NAME}=([^;]+)`));
+      return match ? decodeURIComponent(match[1]) : '';
     }
-
-    function languageName(code) {
-      const names = { hu: 'Magyar', en: 'English', de: 'Deutsch' };
-      return names[code] || code.toUpperCase();
+    function saveLanguagePreference(lang) {
+      window.localStorage.setItem(LANGUAGE_STORAGE_KEY, lang);
+      document.cookie = `${LANGUAGE_COOKIE_NAME}=${encodeURIComponent(lang)}; path=/; max-age=31536000; SameSite=Lax`;
     }
-
-    function loadThemePrefs() {
-      try {
-        const raw = window.localStorage.getItem('patient-chat-desktop-theme');
-        if (!raw) {
-          return;
-        }
-        const parsed = JSON.parse(raw);
-        if (parsed.mode === 'manual') {
-          themeMode = parsed.mode;
-        }
-        if (parsed.skin && ['aare', 'river', 'dusk'].includes(parsed.skin)) {
-          manualSkin = parsed.skin;
-        }
-      } catch {
-        themeMode = 'manual';
-        manualSkin = 'aare';
-      }
+    function resolvePreferredLanguage(supported = state.supportedLanguages, fallback = 'de') {
+      const saved = window.localStorage.getItem(LANGUAGE_STORAGE_KEY) || readLanguageCookie();
+      if (saved && supported.includes(saved)) return saved;
+      if (supported.includes(fallback)) return fallback;
+      if (supported.includes('de')) return 'de';
+      return supported[0] || 'de';
     }
-
-    function saveThemePrefs() {
-      window.localStorage.setItem('patient-chat-desktop-theme', JSON.stringify({ mode: themeMode, skin: manualSkin }));
+    function roleLabel(role) { return copyFor().roles[role] || role; }
+    function viewLabel(view) { return copyFor().views[view] || view; }
+    function setStatus(key, type = '') {
+      statusPill.textContent = (copyFor().status[key] || key);
+      statusPill.className = type === 'warn' ? 'pill warn' : 'pill';
     }
-
     function getDayPeriod() {
       const hour = new Date().getHours();
       if (hour < 6) return 'night';
@@ -1450,806 +840,496 @@
       if (hour < 22) return 'evening';
       return 'night';
     }
-
     function detectMood(text = '', handoff = false) {
       const value = text.toLowerCase();
-      if (handoff || /(surg|urgent|panic|kriz|can't go on|cannot go on|dringend)/.test(value)) {
-        return 'urgent';
-      }
-      if (/(szorong|anx|worry|stress|angst|overwhelm)/.test(value)) {
-        return 'heavy';
-      }
-      if (/(alv|sleep|rest|ruhe|pihen|faradt|tired)/.test(value)) {
-        return 'rest';
-      }
-      if (/(legz|breath|calm|nyugod|ruhig|jobb|better|lighter)/.test(value)) {
-        return 'calm';
-      }
+      if (handoff || /(sürg|urgent|panic|kriz|can't go on|cannot go on|dringend)/.test(value)) return 'urgent';
+      if (/(szorong|anx|worry|stress|angst|overwhelm)/.test(value)) return 'heavy';
+      if (/(alv|sleep|rest|ruhe|pihen|faradt|tired)/.test(value)) return 'rest';
+      if (/(legz|breath|calm|nyugod|ruhig|jobb|better|lighter)/.test(value)) return 'calm';
       return 'steady';
     }
-
+    function loadThemePrefs() {
+      try {
+        const raw = window.localStorage.getItem('patient-chat-desktop-theme');
+        if (!raw) return;
+        const parsed = JSON.parse(raw);
+        if (parsed.mode === 'auto' || parsed.mode === 'manual') state.themeMode = parsed.mode;
+        if (parsed.skin && ['aare', 'river', 'dusk', 'azure'].includes(parsed.skin)) state.manualSkin = parsed.skin;
+      } catch {
+        state.themeMode = 'auto';
+        state.manualSkin = 'aare';
+      }
+    }
+    function saveThemePrefs() {
+      window.localStorage.setItem('patient-chat-desktop-theme', JSON.stringify({ mode: state.themeMode, skin: state.manualSkin }));
+    }
     function resolveThemeState({ text = '', handoff = false } = {}) {
       const period = getDayPeriod();
       const mood = detectMood(text, handoff);
-      let skin = manualSkin;
-      if (themeMode === 'auto') {
-        if (mood === 'urgent' || mood === 'heavy') {
+      let skin = state.manualSkin;
+      let primaryReason = 'manual';
+      let secondaryReason = 'manual';
+      if (state.themeMode === 'auto') {
+        if (state.session && (state.session.role === 'developer' || state.session.active_view === 'developer')) {
+          skin = 'azure';
+          primaryReason = 'developer';
+          secondaryReason = mood;
+        } else if (mood === 'urgent' || mood === 'heavy') {
           skin = 'dusk';
+          primaryReason = mood;
+          secondaryReason = period;
         } else if (period === 'night' || period === 'evening') {
           skin = 'dusk';
-        } else if (ageGroupInput.value === 'teen') {
-          skin = 'river';
-        } else if (literacyLevelInput.value === 'low' || preferredRegisterInput.value === 'plain') {
+          primaryReason = period;
+          secondaryReason = mood;
+        } else if (state.session && state.session.role === 'patient') {
           skin = 'aare';
+          primaryReason = period;
+          secondaryReason = mood;
         } else {
           skin = 'river';
+          primaryReason = period;
+          secondaryReason = mood;
         }
       }
-
       let tone = 'soft';
-      if (mood === 'urgent' || mood === 'heavy') {
-        tone = 'grounded';
-      } else if (mood === 'calm') {
-        tone = 'lifted';
-      }
-
-      return {
-        skin,
-        tone,
-        period,
-        mood,
-        primaryReason: themeMode === 'manual' ? 'manual' : period,
-        secondaryReason: themeMode === 'manual' ? 'manual' : mood
-      };
+      if (mood === 'urgent' || mood === 'heavy') tone = 'grounded';
+      else if (mood === 'calm') tone = 'lifted';
+      return { skin, tone, period, mood, primaryReason, secondaryReason };
     }
-
-    function buildThemeNote(state) {
+    function buildThemeNote(themeState) {
       const themeCopy = themeCopyFor();
-      const skinName = themeCopy.skins[state.skin] || state.skin;
-      const primary = themeCopy.reasons[state.primaryReason] || state.primaryReason;
-      const secondary = themeCopy.reasons[state.secondaryReason] || state.secondaryReason;
+      const skinName = themeCopy.skins[themeState.skin] || themeState.skin;
+      const primary = themeCopy.reasons[themeState.primaryReason] || themeState.primaryReason;
+      const secondary = themeCopy.reasons[themeState.secondaryReason] || themeState.secondaryReason;
       return `<strong>${skinName}</strong> · ${primary} · ${secondary}`;
     }
-
-    function applyThemeState(options = {}) {
-      activeThemeState = resolveThemeState(options);
-      document.documentElement.dataset.skin = activeThemeState.skin;
-      document.documentElement.dataset.tone = activeThemeState.tone;
-      document.documentElement.dataset.period = activeThemeState.period;
-      themeModeInput.value = themeMode;
-      themeSkinInput.value = manualSkin;
-      themeSkinInput.disabled = themeMode !== 'manual';
-      themeNoteNode.innerHTML = buildThemeNote(activeThemeState);
-    }
-
-    function browserLocale() {
-      return languageLocale[currentLang] || 'en-US';
-    }
-
-    function supportsSpeechRecognition() {
-      return Boolean(window.SpeechRecognition || window.webkitSpeechRecognition);
-    }
-
-    function supportsAudioCapture() {
-      return Boolean(navigator.mediaDevices && navigator.mediaDevices.getUserMedia && window.MediaRecorder);
-    }
-
-    function updateVoiceUi() {
-      const copy = copyFor();
-      recordButton.textContent = isRecording ? copy.composer.stopRecord : copy.composer.record;
-      autoSpeakLabel.textContent = copy.composer.autoSpeak;
-      logoutButton.textContent = copy.composer.logout;
-      voiceNoteNode.textContent = (supportsAudioCapture() || supportsSpeechRecognition()) ? copy.composer.voiceNote : copy.messages.speechUnavailable;
-    }
-
-    function ensureSpeechRecognition() {
-      const RecognitionCtor = window.SpeechRecognition || window.webkitSpeechRecognition;
-      if (!RecognitionCtor) {
-        return null;
-      }
-      if (!speechRecognition) {
-        speechRecognition = new RecognitionCtor();
-        speechRecognition.continuous = false;
-        speechRecognition.interimResults = false;
-        speechRecognition.maxAlternatives = 1;
-        speechRecognition.onstart = () => {
-          if (!isRecording) {
-            isRecording = true;
-            updateVoiceUi();
-            addBubble('system', copyFor().messages.speechCaptureStart, ['voice']);
-          }
-        };
-        speechRecognition.onend = () => {
-          if (!mediaRecorder || mediaRecorder.state !== 'recording') {
-            isRecording = false;
-            updateVoiceUi();
-          }
-        };
-        speechRecognition.onerror = (event) => {
-          isRecording = false;
-          updateVoiceUi();
-          addBubble('system', `${copyFor().messages.speechCaptureError}: ${event.error || copyFor().messages.unknownError}`, ['voice']);
-        };
-        speechRecognition.onresult = (event) => {
-          const transcript = Array.from(event.results || [])
-            .map((result) => result[0] && result[0].transcript ? result[0].transcript : '')
-            .join(' ')
-            .trim();
-          if (!transcript) {
-            return;
-          }
-          pendingVoiceTranscript = transcript;
-          addBubble('system', `${copyFor().messages.speechCaptured}: ${transcript}`, ['voice']);
-          if (!supportsAudioCapture()) {
-            sendMessage(transcript, { source: 'voice' });
-          }
-        };
-      }
-      speechRecognition.lang = browserLocale();
-      return speechRecognition;
-    }
-
-    function playAssistantAudio(tts) {
-      if (!autoSpeakInput.checked || !tts || !tts.audio_url) {
-        return false;
-      }
-      const audio = new Audio(tts.audio_url);
-      audio.play().catch(() => {
-        speakAssistantText(tts.text || '', { tts_speed: tts.speed || ttsSpeedInput.value || 'normal' });
-      });
-      return true;
-    }
-
-    function speakAssistantText(text, deliveryPreferences = {}) {
-      if (!autoSpeakInput.checked || !('speechSynthesis' in window) || !text) {
-        return;
-      }
-      const utterance = new SpeechSynthesisUtterance(String(text).slice(0, 280));
-      const ttsSpeed = deliveryPreferences.tts_speed || ttsSpeedInput.value || 'normal';
-      utterance.lang = browserLocale();
-      utterance.rate = ttsSpeed === 'slow' ? 0.9 : ttsSpeed === 'fast' ? 1.1 : 1.0;
-      window.speechSynthesis.cancel();
-      window.speechSynthesis.speak(utterance);
-    }
-
-    async function handleLogout() {
-      try {
-        await fetch('/auth/logout', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ reason: 'user_logout' })
-        });
-      } finally {
-        window.location.href = '/login';
-      }
-    }
-
-    function startVoiceCapture() {
-      if (supportsAudioCapture()) {
-        toggleAudioRecording();
-        return;
-      }
-      const recognition = ensureSpeechRecognition();
-      if (!recognition) {
-        addBubble('system', copyFor().messages.speechUnavailable, ['voice']);
-        return;
-      }
-      if (isRecording) {
-        recognition.stop();
-        return;
-      }
-      recognition.lang = browserLocale();
-      recognition.start();
-    }
-
-    async function toggleAudioRecording() {
-      if (mediaRecorder && mediaRecorder.state === 'recording') {
-        mediaRecorder.stop();
-        if (speechRecognition) {
-          speechRecognition.stop();
-        }
-        return;
-      }
-      if (!supportsAudioCapture()) {
-        startVoiceCapture();
-        return;
-      }
-      pendingVoiceTranscript = '';
-      mediaStream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      mediaChunks = [];
-      mediaRecorder = new MediaRecorder(mediaStream);
-      mediaRecorder.addEventListener('dataavailable', (event) => {
-        if (event.data && event.data.size > 0) {
-          mediaChunks.push(event.data);
-        }
-      });
-      mediaRecorder.addEventListener('start', () => {
-        isRecording = true;
-        updateVoiceUi();
-        addBubble('system', copyFor().messages.speechCaptureStart, ['voice', 'upload']);
-        const recognition = ensureSpeechRecognition();
-        if (recognition) {
-          try {
-            recognition.lang = browserLocale();
-            recognition.start();
-          } catch {
-            return;
-          }
-        }
-      });
-      mediaRecorder.addEventListener('stop', async () => {
-        isRecording = false;
-        updateVoiceUi();
-        if (speechRecognition) {
-          try {
-            speechRecognition.stop();
-          } catch {
-            return;
-          }
-        }
-        mediaStream.getTracks().forEach((track) => track.stop());
-        const audioBlob = new Blob(mediaChunks, { type: mediaRecorder.mimeType || 'audio/webm' });
-        await sendAudioMessage(audioBlob, pendingVoiceTranscript);
-      });
-      mediaRecorder.start();
-    }
-
-    async function sendAudioMessage(audioBlob, transcriptText = '') {
-      const patientMeta = ['voice', 'upload'];
-      addBubble('patient', transcriptText || '[voice note uploaded]', patientMeta);
-      turnCounter += 1;
-      sendButton.disabled = true;
-      setStatusFromKey('thinking');
-      const formData = new FormData();
-      formData.append('audio', audioBlob, `patient-note-${Date.now()}.webm`);
-      formData.append('lang', currentLang);
-      formData.append('conversation_id', conversationId);
-      formData.append('patient_identity', JSON.stringify({
-        browser_patient_key: browserPatientKey,
-        history_mode: historyModeInput.value,
-        consent_to_store_excerpt: consentStoreInput.checked
-      }));
-      formData.append('profile_overrides', JSON.stringify(buildProfileOverrides()));
-      formData.append('prefer_online', String(preferOnlineInput.checked));
-      formData.append('debug', String(demoModeInput.checked));
-      formData.append('synthesize_speech', String(autoSpeakInput.checked));
-      if (transcriptText) {
-        formData.append('transcript_text', transcriptText);
-      }
-      if (patientIdInput.value.trim()) {
-        formData.append('patient_id', patientIdInput.value.trim());
-      }
-      try {
-        const response = await fetch('/runtime/audio-upload', {
-          method: 'POST',
-          body: formData
-        });
-        const data = await response.json();
-        if (response.status === 401 && data.error === 'auth_required') {
-          addBubble('system', copyFor().messages.authRequired, ['auth']);
-          window.location.href = data.login_url || '/login';
-          return;
-        }
-        if (!response.ok) {
-          addBubble('system', `${data.error || 'request_failed'}: ${data.message || copyFor().messages.unknownError}`, ['error']);
-          setStatusFromKey('error');
-          return;
-        }
-        renderAssistantPayload(data);
-        setStatusFromKey('ready');
-      } catch (error) {
-        addBubble('system', `${copyFor().messages.networkError}: ${error.message}`, ['offline']);
-        setStatusFromKey('offline');
-      } finally {
-        sendButton.disabled = false;
-        pendingVoiceTranscript = '';
-      }
-    }
-
-    function applyOptions(selectNode, options) {
-      const currentValue = selectNode.value;
-      selectNode.innerHTML = options.map(([value, label]) => `<option value="${value}">${label}</option>`).join('');
-      const fallbackValue = options[0][0];
-      selectNode.value = options.some(([value]) => value === currentValue) ? currentValue : fallbackValue;
-    }
-
-    function populateLanguageOptions(config) {
-      const supported = config.supported_languages || DEFAULT_UI_CONFIG.supported_languages;
-      langSelect.innerHTML = supported.map((lang) => `<option value="${lang}">${languageName(lang)}</option>`).join('');
-      currentLang = supported.includes(currentLang)
-        ? currentLang
-        : (supported.includes(config.default_language) ? config.default_language : supported[0]);
-      langSelect.value = currentLang;
-    }
-
-    function setStatusFromKey(key) {
-      currentStatusKey = key;
-      statusNode.textContent = copyFor().statuses[key] || key;
-    }
-
-    function updateIdentityNote(patientId = '') {
-      const trimmedPatientId = patientId.trim();
-      const prefix = copyFor().composer.identityPrefix;
-      identityNote.textContent = trimmedPatientId
-        ? `${prefix}patient:${trimmedPatientId}`
-        : `${prefix}browser:${browserPatientKey}`;
-    }
-
-    function applyStaticUi() {
-      const copy = copyFor();
+    function applyThemeOptions() {
       const themeCopy = themeCopyFor();
-      document.documentElement.lang = currentLang;
-      personalizationLabels[0].textContent = copy.language;
-      personalizationLabels[1].textContent = copy.sidebar.labels[1];
-      personalizationLabels[2].textContent = copy.sidebar.labels[2];
-      personalizationLabels[3].textContent = copy.sidebar.labels[3];
-      personalizationLabels[4].textContent = copy.sidebar.labels[4];
-      personalizationLabels[5].textContent = copy.sidebar.labels[5];
-      personalizationLabels[6].textContent = copy.sidebar.labels[6];
-      personalizationLabels[7].textContent = copy.sidebar.labels[7];
-      toggleLabels.forEach((node, index) => {
-        node.textContent = copy.sidebar.toggles[index];
+      themeModeInput.innerHTML = themeCopy.modes.map(([value, label]) => `<option value="${value}">${label}</option>`).join('');
+      themeSkinInput.innerHTML = Object.entries(themeCopy.skins).map(([value, label]) => `<option value="${value}">${label}</option>`).join('');
+      themeModeInput.value = state.themeMode;
+      themeSkinInput.value = state.manualSkin;
+    }
+    function applyThemeState(options = {}) {
+      state.activeThemeState = resolveThemeState(options);
+      document.documentElement.dataset.skin = state.activeThemeState.skin;
+      document.documentElement.dataset.tone = state.activeThemeState.tone;
+      document.documentElement.dataset.period = state.activeThemeState.period;
+      portalLogo.src = SKIN_LOGOS[state.activeThemeState.skin] || SKIN_LOGOS.aare;
+      themeModeInput.value = state.themeMode;
+      themeSkinInput.value = state.manualSkin;
+      themeSkinInput.disabled = state.themeMode !== 'manual';
+      themeNoteNode.innerHTML = buildThemeNote(state.activeThemeState);
+    }
+    function updateStaticCopy() {
+      const copy = copyFor();
+      document.documentElement.lang = state.currentLang;
+      document.title = copy.pageTitle;
+      document.querySelector('.sidebar .pill.live').textContent = copy.roleAwareDemo;
+      if (!state.session) {
+        sessionRole.textContent = copy.loading;
+        sessionView.textContent = copy.views.patient;
+        sessionTitle.textContent = copy.heroDefaultTitle;
+        sessionCopy.textContent = copy.sessionLoading;
+        identityNote.textContent = copy.identityPlaceholder;
+        heroTitle.textContent = copy.heroDefaultTitle;
+        heroCopy.textContent = copy.heroDefaultCopy;
+      }
+      const consentValue = consentSelect.value || 'true';
+      consentSelect.innerHTML = `<option value="true">${copy.enabled}</option><option value="false">${copy.disabled}</option>`;
+      consentSelect.value = consentValue;
+      document.querySelector('label[for="language-select"]').textContent = copy.language;
+      document.querySelector('label[for="alias-select"]').textContent = copy.alias;
+      document.querySelector('label[for="consent-store"]').textContent = copy.consent;
+      sidebarSections[1].querySelector('.eyebrow').textContent = copy.themeEyebrow;
+      sidebarSections[1].querySelector('h3').textContent = copy.themeTitle;
+      document.querySelector('label[for="theme-mode"]').textContent = copy.atmosphere;
+      document.querySelector('label[for="theme-skin"]').textContent = copy.skin;
+      if (!state.activeThemeState) themeNoteNode.textContent = copy.themeAuto;
+      sidebarSections[2].querySelector('.eyebrow').textContent = copy.policyEyebrow;
+      sidebarSections[2].querySelector('h3').textContent = copy.policyTitle;
+      Array.from(sidebarSections[2].querySelectorAll('.alias-item')).forEach((item, index) => {
+        const [title, body] = copy.policy[index];
+        item.querySelector('strong').textContent = title;
+        item.querySelector('p').textContent = body;
       });
-      onboardingEyebrow.textContent = copy.onboarding.eyebrow;
-      onboardingTitle.textContent = copy.onboarding.title;
-      onboardingLede.textContent = copy.onboarding.lede;
-      onboardingChecklist.innerHTML = copy.onboarding.checklist;
-      startDemoButton.textContent = copy.onboarding.start;
-      disclosurePanel.querySelector('.eyebrow').textContent = copy.sidebar.disclosureEyebrow;
-      disclosurePanel.querySelector('h2').textContent = copy.sidebar.disclosureTitle;
-      disclosurePanel.querySelector('.copy').textContent = copy.sidebar.disclosureCopy;
-      safetyPanel.querySelector('.eyebrow').textContent = copy.sidebar.safetyEyebrow;
-      safetyPanel.querySelector('h3').textContent = copy.sidebar.safetyTitle;
-      safetyPanel.querySelector('.copy').textContent = copy.sidebar.safetyCopy;
-      sidebarCrisisButton.textContent = copy.sidebar.safetyTitle;
-      floatingCrisisButton.textContent = copy.sidebar.safetyTitle;
-      personalizationPanel.querySelector('.eyebrow').textContent = copy.sidebar.personalization;
-      patientIdInput.placeholder = copy.options.patientPlaceholder;
-      applyOptions(ageGroupInput, copy.options.age);
-      applyOptions(literacyLevelInput, copy.options.literacy);
-      applyOptions(preferredRegisterInput, copy.options.register);
-      applyOptions(ttsSpeedInput, copy.options.tts);
-      applyOptions(latencyContextInput, copy.options.latency);
-      applyOptions(historyModeInput, copy.options.history);
-      themeModeLabel.textContent = themeCopy.modeLabel;
-      themeSkinLabel.textContent = themeCopy.skinLabel;
-      themeNoteLabel.textContent = themeCopy.noteLabel;
-      applyOptions(themeModeInput, themeCopy.modes);
-      applyOptions(themeSkinInput, Object.entries(themeCopy.skins));
-      themeModeInput.value = themeMode;
-      themeSkinInput.value = manualSkin;
-      topbarEyebrow.textContent = copy.hero.eyebrow;
-      topbarTitle.textContent = copy.hero.title;
-      topbarCopy.textContent = copy.hero.copy;
-      trustTitle.textContent = copy.hero.trustTitle;
-      trustCopy.textContent = copy.hero.trustCopy;
-      handoffBanner.querySelector('strong').textContent = copy.hero.handoffTitle;
-      if (handoffBanner.style.display !== 'flex') {
-        handoffText.textContent = copy.hero.handoffText;
-      }
-      introBubbleHead.textContent = copy.hero.introHead;
-      introBubbleBody.textContent = copy.hero.introBody;
-      quickButtons.forEach((button) => {
-        const quick = copy.quick[button.dataset.quickKey];
-        button.textContent = quick.label;
-        button.dataset.quick = quick.text;
+      tokenPanel.querySelector('.eyebrow').textContent = copy.tokenEyebrow;
+      tokenPanel.querySelector('h3').textContent = copy.tokenTitle;
+      refreshTokensButton.textContent = copy.refresh;
+      document.querySelector('label[for="token-label"]').textContent = copy.privateLabel;
+      document.querySelector('label[for="token-alias"]').textContent = copy.aliasKey;
+      document.querySelector('label[for="token-expiry"]').textContent = copy.expiresInDays;
+      tokenLabelInput.placeholder = copy.privateLabel;
+      tokenAliasInput.placeholder = copy.aliasKey;
+      issueTokenButton.textContent = copy.issueToken;
+      opsPanel.querySelector('.eyebrow').textContent = copy.opsEyebrow;
+      opsPanel.querySelector('h3').textContent = copy.opsTitle;
+      opsPanel.querySelectorAll('strong')[0].textContent = copy.health;
+      opsPanel.querySelectorAll('strong')[1].textContent = copy.operations;
+      if (healthSummary.textContent === 'No data') healthSummary.textContent = copy.noData;
+      if (operationsSummary.textContent === 'No data') operationsSummary.textContent = copy.noData;
+      document.querySelector('.brand .eyebrow').textContent = copy.heroEyebrow;
+      setIconButton(recordButton, { icon: state.isRecording ? DESKTOP_BUTTON_ICONS.stop : DESKTOP_BUTTON_ICONS.record, label: state.isRecording ? copy.stop : copy.record, collapse: true });
+      setIconButton(logoutButton, { icon: DESKTOP_BUTTON_ICONS.logout, label: copy.logout, collapse: true });
+      setIconButton(sendButton, { icon: DESKTOP_BUTTON_ICONS.send, label: copy.send, collapse: true });
+      setIconButton(clearButton, { icon: DESKTOP_BUTTON_ICONS.clear, label: copy.clear, collapse: true });
+      setIconButton(refreshTokensButton, { icon: DESKTOP_BUTTON_ICONS.refresh, label: copy.refresh, collapse: true });
+      setIconButton(issueTokenButton, { icon: DESKTOP_BUTTON_ICONS.issueToken, label: copy.issueToken, collapse: true });
+      toolbarQuickButtons.forEach((button, index) => {
+        const [label, prompt] = copy.quicks[index];
+        setIconButton(button, { icon: DESKTOP_BUTTON_ICONS.quicks[index] || '•', label, collapse: true });
+        button.dataset.quick = prompt;
       });
-      quickUrgentButton.textContent = copy.quick.urgentLabel;
-      mobileLink.textContent = copy.quick.mobileLink;
-      debugConsole.querySelector('.debug-title').textContent = copy.debug.title;
-      debugHeadCopy.textContent = copy.debug.copy;
-      debugPaneLabels[0].textContent = copy.debug.labels[0];
-      debugPaneLabels[1].textContent = copy.debug.labels[1];
-      debugPaneLabels[2].textContent = copy.debug.labels[2];
-      debugCardTitles[0].textContent = copy.debug.cards[0];
-      debugCardTitles[1].textContent = copy.debug.cards[1];
-      debugCardTitles[2].textContent = copy.debug.cards[2];
-      if (debugHybrid.textContent === UI_COPY.hu.debug.hybridPlaceholder || debugHybrid.textContent === UI_COPY.en.debug.hybridPlaceholder || debugHybrid.textContent === UI_COPY.de.debug.hybridPlaceholder) {
-        debugHybrid.textContent = copy.debug.hybridPlaceholder;
-      }
-      if (debugSummary.textContent === UI_COPY.hu.debug.summaryPlaceholder || debugSummary.textContent === UI_COPY.en.debug.summaryPlaceholder || debugSummary.textContent === UI_COPY.de.debug.summaryPlaceholder) {
-        debugSummary.textContent = copy.debug.summaryPlaceholder;
-      }
-      if (debugIdentity.textContent === UI_COPY.hu.debug.identityPlaceholder || debugIdentity.textContent === UI_COPY.en.debug.identityPlaceholder || debugIdentity.textContent === UI_COPY.de.debug.identityPlaceholder) {
-        debugIdentity.textContent = copy.debug.identityPlaceholder;
-      }
-      if (debugHistory.textContent.trim() === UI_COPY.hu.debug.historyPlaceholder || debugHistory.textContent.trim() === UI_COPY.en.debug.historyPlaceholder || debugHistory.textContent.trim() === UI_COPY.de.debug.historyPlaceholder) {
-        debugHistory.innerHTML = `<div class="debug-history-row">${copy.debug.historyPlaceholder}</div>`;
-      }
-      if (debugExplanation.textContent.trim() === UI_COPY.hu.debug.explanationPlaceholder || debugExplanation.textContent.trim() === UI_COPY.en.debug.explanationPlaceholder || debugExplanation.textContent.trim() === UI_COPY.de.debug.explanationPlaceholder) {
-        debugExplanation.innerHTML = `<li>${copy.debug.explanationPlaceholder}</li>`;
-      }
-      messageInput.placeholder = copy.composer.placeholder;
-      recordButton.textContent = copy.composer.record;
-      sendButton.textContent = copy.composer.send;
-      clearButton.textContent = copy.composer.clear;
-      footerNote.textContent = copy.composer.footer;
-      updateVoiceUi();
-      updateIdentityNote(patientIdInput.value);
-      setStatusFromKey(currentStatusKey);
-      applyThemeState();
+      setIconButton(mobileLink, { icon: DESKTOP_BUTTON_ICONS.mobileUi, label: copy.mobileUi, collapse: true });
+      handoffTitle.textContent = copy.safetyTitle;
+      if (!handoffBanner.style.display || handoffBanner.style.display === 'none') handoffCopy.textContent = copy.safetyCopy;
+      privacyTitle.textContent = copy.privacyTitle;
+      document.getElementById('privacy-copy').textContent = copy.privacyCopy;
+      debugTitleNodes.forEach((node, index) => { node.textContent = copy.debugTitles[index]; });
+      messageInput.placeholder = copy.messagePlaceholder;
+      updateAudioUi();
+      renderLanguages();
+      applyThemeOptions();
+      applyThemeState({ text: messageInput.value, handoff: Boolean(state.lastPayload && state.lastPayload.handoff_triggered) });
     }
-
-    async function loadUiConfig() {
-      try {
-        const response = await fetch('/ui-config');
-        if (!response.ok) {
-          throw new Error('ui_config_failed');
-        }
-        const payload = await response.json();
-        populateLanguageOptions(payload);
-      } catch {
-        populateLanguageOptions(DEFAULT_UI_CONFIG);
-      }
-      applyStaticUi();
-    }
-
-    async function refreshHealthStatus() {
-      try {
-        const response = await fetch('/health');
-        const payload = await response.json();
-        const llm = payload.llm || {};
-        setStatusFromKey(llm.auth_configured ? 'online' : 'local');
-      } catch {
-        setStatusFromKey('offline');
-      }
-    }
-
-    function addBubble(role, text, meta = [], withFeedback = false) {
+    function addBubble(role, text, meta = []) {
       const copy = copyFor();
       const article = document.createElement('article');
       article.className = `bubble ${role}`;
-
       const head = document.createElement('div');
       head.className = 'bubble-head';
-      head.textContent = role === 'patient' ? copy.roles.patient : role === 'assistant' ? copy.roles.assistant : copy.roles.system;
-
+      head.textContent = role === 'assistant' ? copy.assistant : role === 'system' ? copy.system : roleLabel(role);
       const body = document.createElement('div');
       body.className = 'bubble-body';
       body.textContent = text;
-
       article.append(head, body);
-
       if (meta.length) {
-        const metaWrap = document.createElement('div');
-        metaWrap.className = 'meta';
+        const metaRow = document.createElement('div');
+        metaRow.className = 'meta';
         meta.forEach((item) => {
           const chip = document.createElement('span');
           chip.className = 'chip';
           chip.textContent = item;
-          metaWrap.appendChild(chip);
+          metaRow.appendChild(chip);
         });
-        article.appendChild(metaWrap);
+        article.appendChild(metaRow);
       }
-
-      if (withFeedback) {
-        const feedback = document.createElement('div');
-        feedback.className = 'feedback-row';
-        ['1', '2', '3', '4', '5'].forEach((value) => {
-          const star = document.createElement('button');
-          star.className = 'star';
-          star.type = 'button';
-          star.textContent = `${value} / 5`;
-          star.addEventListener('click', () => {
-            addBubble('system', `${copyFor().messages.feedback}: ${value}/5`, ['feedback']);
-          });
-          feedback.appendChild(star);
-        });
-        article.appendChild(feedback);
-      }
-
       timeline.appendChild(article);
       timeline.scrollTop = timeline.scrollHeight;
     }
-
-    function buildProfileOverrides() {
-      const preferences = {};
-      if (ttsSpeedInput.value) {
-        preferences.tts_speed = ttsSpeedInput.value;
-      }
-      if (historyModeInput.value === 'limited') {
-        preferences.prefer_text = true;
-      }
-
-      return {
-        age_group: ageGroupInput.value || null,
-        literacy_level: literacyLevelInput.value || null,
-        preferred_register: preferredRegisterInput.value || null,
-        preferences,
-        ...(includeReviewItemsInput.checked ? {
-          content_statuses: ['appr', 'rev', 'sugg', 'test'],
-          content_channel: 'tst'
-        } : {})
-      };
-    }
-
-    function updateHandoff(payload) {
-      if (payload.handoff_triggered) {
-        handoffBanner.style.display = 'flex';
-        handoffText.textContent = copyFor().hero.handoffText;
-        handoffChip.textContent = payload.contact_plan ? 'contact_plan' : 'safety';
-        applyThemeState({ handoff: true });
-      } else {
-        handoffBanner.style.display = 'none';
-        applyThemeState();
-      }
-    }
-
-    function updateDebugConsole(debug) {
+    function supportsAudio() { return Boolean(navigator.mediaDevices && navigator.mediaDevices.getUserMedia && window.MediaRecorder); }
+    function updateAudioUi() {
       const copy = copyFor();
-      if (!demoModeInput.checked || !debug) {
-        debugConsole.style.display = 'none';
-        return;
-      }
-
-      debugConsole.style.display = 'block';
-      debugTurn.textContent = `turn: ${turnCounter}`;
-      debugExplanation.innerHTML = '';
-
-      (debug.explanation || []).forEach((line) => {
-        const item = document.createElement('li');
-        item.textContent = line;
-        debugExplanation.appendChild(item);
+      voiceNote.textContent = supportsAudio() ? copy.voiceAvailable : copy.voiceUnavailable;
+      recordButton.disabled = !supportsAudio();
+      setIconButton(recordButton, { icon: state.isRecording ? DESKTOP_BUTTON_ICONS.stop : DESKTOP_BUTTON_ICONS.record, label: state.isRecording ? copy.stop : copy.record, collapse: true });
+    }
+    function renderSession() {
+      if (!state.session) return;
+      const copy = copyFor();
+      sessionRole.textContent = roleLabel(state.session.role);
+      sessionView.textContent = viewLabel(state.session.active_view);
+      sessionTitle.textContent = copy.sessionTitle(roleLabel(state.session.role));
+      sessionCopy.textContent = copy.sessionCopy[state.session.role] || copy.sessionLoading;
+      identityNote.textContent = state.session.patient_alias_key ? copy.identityActive(state.session.patient_alias_key) : state.session.clinician_id ? copy.identityClinician(state.session.clinician_id) : copy.identityNone;
+      heroTitle.textContent = copy.sessionTitle(viewLabel(state.session.active_view));
+      heroCopy.textContent = copy.heroCopy[state.session.active_view] || copy.heroDefaultCopy;
+      viewSwitcher.innerHTML = '';
+      state.session.allowed_views.forEach((view) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = `view-button${view === state.session.active_view ? ' active' : ''}`;
+        setIconButton(button, { icon: DESKTOP_BUTTON_ICONS.views[view] || '•', label: viewLabel(view), collapse: true });
+        button.addEventListener('click', () => switchView(view));
+        viewSwitcher.appendChild(button);
       });
-
-      const hybrid = debug.hybrid_selection || {};
-      const knowledge = debug.knowledge_context || [];
-      const hybridParts = [];
-      if (hybrid.status) hybridParts.push(`status: ${hybrid.status}`);
-      if (hybrid.strategy) hybridParts.push(`strategy: ${hybrid.strategy}`);
-      if (hybrid.selected_candidate_id) hybridParts.push(`selected: ${hybrid.selected_candidate_id}`);
-      if (hybrid.response_model) hybridParts.push(`response_model: ${hybrid.response_model}`);
-      if (hybrid.reason) hybridParts.push(`reason: ${hybrid.reason}`);
-      if (knowledge.length) hybridParts.push(`kb: ${knowledge.map((item) => item.id).join(', ')}`);
-      if (((debug.selected_phrase || {}).content_meta || {}).status) {
-        hybridParts.push(`content: ${(debug.selected_phrase || {}).content_meta.src}/${(debug.selected_phrase || {}).content_meta.status}`);
+      const staff = state.session.role === 'clinician' || state.session.role === 'developer';
+      tokenPanel.classList.toggle('hidden', !staff);
+      opsPanel.classList.toggle('hidden', !staff);
+      aliasField.classList.toggle('hidden', !staff);
+      debugShell.classList.toggle('visible', state.session.role === 'developer' && state.session.active_view === 'developer');
+      applyThemeState({ text: messageInput.value, handoff: Boolean(state.lastPayload && state.lastPayload.handoff_triggered) });
+    }
+    function renderLanguages() {
+      languageSelect.innerHTML = state.supportedLanguages.map((lang) => `<option value="${lang}">${LANGUAGE_NAMES[lang] || lang.toUpperCase()}</option>`).join('');
+      languageSelect.value = state.currentLang;
+    }
+    function renderAliases() {
+      const copy = copyFor();
+      if (!state.patientAliases.length) {
+        aliasSelect.innerHTML = `<option value="">${copy.noAlias}</option>`;
+        state.selectedAlias = '';
+        return;
       }
-      debugHybrid.textContent = hybridParts.length ? hybridParts.join(' | ') : copy.messages.noHybrid;
-
-      const summary = debug.conversation_summary || {};
-      const activeSummary = summary.active_summary || {};
-      const summaryParts = [];
-      if (summary.summary_text) summaryParts.push(summary.summary_text);
-      if ((activeSummary.recent_categories || []).length) summaryParts.push(`categories: ${activeSummary.recent_categories.join(', ')}`);
-      if ((activeSummary.recent_trigger_ids || []).length) summaryParts.push(`triggers: ${activeSummary.recent_trigger_ids.join(', ')}`);
-      debugSummary.textContent = summaryParts.join(' | ') || copy.messages.noSummary;
-
-      const identity = debug.patient_identity || {};
-      const identityParts = [];
-      if (identity.identity_mode) identityParts.push(`mode: ${identity.identity_mode}`);
-      if (identity.source) identityParts.push(`source: ${identity.source}`);
-      if (identity.memory_key) identityParts.push(`key: ${identity.memory_key}`);
-      if (identity.resolved_patient_id) identityParts.push(`patient_id: ${identity.resolved_patient_id}`);
-      if (typeof identity.verified_patient === 'boolean') identityParts.push(`verified: ${identity.verified_patient}`);
-      debugIdentity.textContent = identityParts.length ? identityParts.join(' | ') : copy.messages.noIdentity;
-
-      debugHistory.innerHTML = '';
-      const history = debug.conversation_history || [];
-      if (!history.length) {
-        const row = document.createElement('div');
-        row.className = 'debug-history-row';
-        row.textContent = copy.messages.noHistory;
-        debugHistory.appendChild(row);
-      } else {
-        history.slice(-6).forEach((turn) => {
-          const row = document.createElement('div');
-          row.className = 'debug-history-row';
-          const suffix = turn.item_id ? ` [${turn.item_id}]` : '';
-          row.textContent = `${turn.role}: ${turn.text}${suffix}`;
-          debugHistory.appendChild(row);
+      if (!state.selectedAlias || !state.patientAliases.some((item) => item.patient_alias_key === state.selectedAlias)) state.selectedAlias = state.patientAliases[0].patient_alias_key;
+      aliasSelect.innerHTML = state.patientAliases.map((item) => `<option value="${escapeHtml(item.patient_alias_key)}">${escapeHtml(item.patient_alias_key)} · ${copy.activeCount(Number(item.active_token_count || 0))}</option>`).join('');
+      aliasSelect.value = state.selectedAlias;
+    }
+    function summarizeHealth(payload) {
+      const copy = copyFor();
+      return copy.healthSummary(payload.llm || {}, payload.tts || {});
+    }
+    function summarizeOperations(payload) {
+      const copy = copyFor();
+      const entries = Object.entries(payload || {});
+      if (!entries.length) return copy.operationsSummary;
+      return entries.slice(0, 4).map(([key, value]) => `${key}: ${typeof value === 'object' ? copy.enabled.toLowerCase() : value}`).join(' | ');
+    }
+    async function fetchJson(url, options = {}) {
+      const response = await fetch(url, options);
+      const payload = await response.json().catch(() => ({}));
+      if (response.status === 401 && payload.error === 'auth_required') {
+        window.location.href = payload.login_url || '/login';
+        throw new Error('auth_required');
+      }
+      if (!response.ok) throw new Error(payload.message || payload.error || 'request_failed');
+      return payload;
+    }
+    async function loadContext() {
+      const payload = await fetchJson('/auth/session/context');
+      state.session = payload.session;
+      state.supportedLanguages = payload.supported_languages || state.supportedLanguages;
+      state.currentLang = resolvePreferredLanguage(state.supportedLanguages, payload.default_language || 'de');
+      saveLanguagePreference(state.currentLang);
+      state.patientAliases = payload.patient_aliases || [];
+      updateStaticCopy();
+      renderAliases();
+      renderSession();
+      if (state.session.role !== 'patient') await Promise.allSettled([loadTokens(), loadOps()]);
+    }
+    async function switchView(view) {
+      if (!state.session || state.session.active_view === view) return;
+      setStatus('switching');
+      try {
+        const payload = await fetchJson('/auth/switch-view', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ view }) });
+        state.session = payload.session;
+        renderSession();
+        setStatus('ready');
+      } catch (error) {
+        setStatus('error', 'warn');
+        addBubble('system', error.message, ['switch']);
+      }
+    }
+    async function loadOps() {
+      const [health, operations] = await Promise.all([fetchJson('/health'), fetchJson('/operations')]);
+      healthSummary.textContent = summarizeHealth(health);
+      operationsSummary.textContent = summarizeOperations(operations);
+    }
+    function renderTokens() {
+      const copy = copyFor();
+      tokenList.innerHTML = '';
+      if (!state.tokens.length) {
+        tokenList.innerHTML = `<div class="token-item"><p class="tiny">${copy.noTokens}</p></div>`;
+        return;
+      }
+      state.tokens.forEach((record) => {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'token-item';
+        const details = document.createElement('div');
+        details.className = 'stack';
+        details.innerHTML = `
+          <strong>${escapeHtml(record.patient_alias_key)}</strong>
+          <div class="tiny">${copy.tokenPreview}: ${escapeHtml(record.token_preview || copy.notAvailable)}</div>
+          <div class="tiny">${copy.tokenLabel}: ${escapeHtml(record.label || copy.none)}</div>
+          <div class="tiny">${copy.tokenClinician}: ${escapeHtml(record.clinician_id || copy.notAvailable)}</div>
+          <div class="tiny">${copy.tokenExpires}: ${record.expires_at ? new Date(record.expires_at * 1000).toLocaleString() : copy.none}</div>
+          <div class="tiny">${copy.tokenStatus}: ${record.is_active ? copy.tokenActive : copy.tokenInactive}</div>
+        `;
+        wrapper.appendChild(details);
+        if (record.is_active) {
+          const revoke = document.createElement('button');
+          revoke.type = 'button';
+          revoke.className = 'secondary';
+          setIconButton(revoke, { icon: DESKTOP_BUTTON_ICONS.revoke, label: copy.revoke, collapse: true });
+          revoke.addEventListener('click', () => revokeToken(record.token_id));
+          wrapper.appendChild(revoke);
+        }
+        tokenList.appendChild(wrapper);
+      });
+    }
+    async function loadTokens() {
+      const payload = await fetchJson('/clinical/patient-tokens');
+      state.tokens = payload.tokens || [];
+      state.patientAliases = payload.patient_aliases || state.patientAliases;
+      renderAliases();
+      renderTokens();
+    }
+    async function issueToken() {
+      issueTokenButton.disabled = true;
+      rawTokenBox.classList.add('hidden');
+      try {
+        const payload = await fetchJson('/clinical/patient-tokens', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'issue', label: tokenLabelInput.value.trim(), patient_alias_key: tokenAliasInput.value.trim(), expires_in_days: Number(tokenExpiryInput.value || 30) })
         });
+        const copy = copyFor();
+        rawTokenBox.classList.remove('hidden');
+        rawTokenBox.innerHTML = `<strong>${copy.copyNow}:</strong><div class="tiny">${escapeHtml(payload.raw_token)}</div><div class="tiny">${copy.rawTokenNote}</div>`;
+        tokenLabelInput.value = '';
+        tokenAliasInput.value = '';
+        await loadTokens();
+      } catch (error) {
+        addBubble('system', error.message, ['token']);
+      } finally {
+        issueTokenButton.disabled = false;
       }
-
-      debugJson.textContent = JSON.stringify(debug, null, 2);
     }
-
-    function renderAssistantPayload(payload) {
-      const selection = payload.selection || {};
-      const routing = payload.route_decisions || {};
-      const meta = [];
-
-      if (selection.category) meta.push(`category:${selection.category}`);
-      if (selection.item_id) meta.push(`item:${selection.item_id}`);
-      if (payload.matched_trigger_id) meta.push(`trigger:${payload.matched_trigger_id}`);
-      if (payload.hybrid_selection && payload.hybrid_selection.strategy) {
-        meta.push(`hybrid:${payload.hybrid_selection.strategy}`);
+    async function revokeToken(tokenId) {
+      try {
+        await fetchJson('/clinical/patient-tokens', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'revoke', token_id: tokenId }) });
+        await loadTokens();
+      } catch (error) {
+        addBubble('system', error.message, ['token']);
       }
-      if ((selection.content_meta || {}).status) {
-        meta.push(`src:${selection.content_meta.src}`);
-        meta.push(`status:${selection.content_meta.status}`);
-      }
-      if (selection.delivery_preferences && selection.delivery_preferences.tts_speed) {
-        meta.push(`tts:${selection.delivery_preferences.tts_speed}`);
-      }
-
-      addBubble('assistant', selection.text || copyFor().messages.noResponse, meta, true);
-      if (!playAssistantAudio(payload.tts)) {
-        speakAssistantText(selection.text || '', selection.delivery_preferences || {});
-      }
-
-      if (payload.latency_preamble) {
-        addBubble('system', `${copyFor().messages.latency}: ${payload.latency_preamble}`, ['latency']);
-      }
-
-      if (showRoutingInput.checked && Object.keys(routing).length) {
-        addBubble('system', JSON.stringify(routing, null, 2), ['routing']);
-      }
-
-      updateHandoff(payload);
-      updateDebugConsole(payload.debug);
     }
-
-    async function sendMessage(textOverride = '', options = {}) {
-      if (paused) {
-        addBubble('system', copyFor().messages.paused, ['paused']);
-        return;
-      }
-
-      const text = (textOverride || messageInput.value).trim();
-      const source = options.source || 'text';
-      if (!text) {
-        setStatusFromKey('empty');
-        return;
-      }
-
+    function activePatientIdentityPayload() {
+      const consent = consentSelect.value === 'true';
+      if (!state.session || state.session.role === 'patient') return { consent_to_store_excerpt: consent };
+      const payload = { consent_to_store_excerpt: consent };
+      if (state.selectedAlias) payload.anonymous_subject_key = state.selectedAlias;
+      return payload;
+    }
+    function updateCards(payload) {
+      const copy = copyFor();
+      const summary = payload.conversation_summary || {};
+      const patientIdentity = payload.patient_identity || {};
+      const hybrid = payload.hybrid_selection || {};
+      const routeDecisions = payload.route_decisions || {};
+      summaryCard.textContent = summary.summary_text || `turn_count: ${summary.turn_count || 0}` || copy.summaryEmpty;
+      identityCard.textContent = Object.entries(patientIdentity).map(([key, value]) => `${key}: ${value}`).join(' | ') || copy.identityEmpty;
+      routeCard.textContent = hybrid.status ? `hybrid=${hybrid.status}${hybrid.strategy ? ` via ${hybrid.strategy}` : ''}` : Object.keys(routeDecisions).length ? Object.entries(routeDecisions).map(([key, value]) => `${key}:${value.selected_mode || copy.notAvailable}`).join(' | ') : copy.routeEmpty;
+      debugJson.textContent = JSON.stringify(payload.debug || {}, null, 2);
+    }
+    function updateHandoff(payload) {
+      handoffBanner.style.display = payload.handoff_triggered ? 'block' : 'none';
+      handoffCopy.textContent = copyFor().safetyCopy;
+      applyThemeState({ text: messageInput.value, handoff: Boolean(payload.handoff_triggered) });
+    }
+    async function sendTextMessage(text) {
+      if (!text.trim()) return;
       applyThemeState({ text });
-
-      const payload = {
-        text,
-        lang: currentLang,
-        conversation_id: conversationId,
-        patient_identity: {
-          browser_patient_key: browserPatientKey,
-          history_mode: historyModeInput.value,
-          consent_to_store_excerpt: consentStoreInput.checked
-        },
-        prefer_online: preferOnlineInput.checked,
-        latency_channel: 'chat',
-        profile_overrides: buildProfileOverrides(),
-        consent_to_store_excerpt: consentStoreInput.checked,
-        synthesize_speech: autoSpeakInput.checked,
-        debug: demoModeInput.checked
-      };
-
-      if (patientIdInput.value.trim()) {
-        payload.patient_id = patientIdInput.value.trim();
-      }
-      updateIdentityNote(patientIdInput.value);
-      if (latencyContextInput.value) {
-        payload.latency_context = latencyContextInput.value;
-        payload.latency_elapsed_ms = 200;
-      }
-
-      const patientMeta = historyModeInput.value === 'limited' ? [copyFor().messages.historyLimited] : [copyFor().messages.historyIdentified];
-      if (source === 'voice') {
-        patientMeta.unshift('voice');
-      }
-      addBubble('patient', text, patientMeta);
-      turnCounter += 1;
+      addBubble('patient', text, state.selectedAlias ? [state.selectedAlias] : []);
       messageInput.value = '';
       sendButton.disabled = true;
-      setStatusFromKey('thinking');
-
+      setStatus('thinking');
       try {
-        const response = await fetch('/runtime/text', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
+        const payload = await fetchJson('/runtime/text', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text, lang: state.currentLang, patient_identity: activePatientIdentityPayload(), synthesize_speech: true, debug: Boolean(state.session && state.session.role === 'developer' && state.session.active_view === 'developer') })
         });
-        const data = await response.json();
-        if (response.status === 401 && data.error === 'auth_required') {
-          addBubble('system', copyFor().messages.authRequired, ['auth']);
-          window.location.href = data.login_url || '/login';
-          return;
-        }
-        if (!response.ok) {
-          addBubble('system', `${data.error || 'request_failed'}: ${data.message || copyFor().messages.unknownError}`, ['error']);
-          setStatusFromKey('error');
-          return;
-        }
-        renderAssistantPayload(data);
-        setStatusFromKey('ready');
+        state.lastPayload = payload;
+        const selection = payload.selection || {};
+        const meta = [];
+        if (selection.category) meta.push(`cat:${selection.category}`);
+        if (selection.item_id) meta.push(`item:${selection.item_id}`);
+        if (payload.matched_trigger_id) meta.push(`trigger:${payload.matched_trigger_id}`);
+        if (payload.hybrid_selection && payload.hybrid_selection.status) meta.push(`hybrid:${payload.hybrid_selection.status}`);
+        addBubble('assistant', selection.text || copyFor().noResponse, meta);
+        if (payload.tts && payload.tts.audio_url) new Audio(payload.tts.audio_url).play().catch(() => undefined);
+        updateCards(payload);
+        updateHandoff(payload);
+        setStatus('ready');
       } catch (error) {
-        addBubble('system', `${copyFor().messages.networkError}: ${error.message}`, ['offline']);
-        setStatusFromKey('offline');
+        addBubble('system', error.message, ['error']);
+        setStatus('error', 'warn');
       } finally {
         sendButton.disabled = false;
       }
     }
-
-    function triggerQuickAction(text) {
-      if (text === copyFor().quick.pause.text) {
-        paused = true;
-        setStatusFromKey('paused');
-        addBubble('system', copyFor().messages.pauseApplied, ['pause']);
-        return;
+    async function sendAudioMessage(blob) {
+      addBubble('patient', copyFor().voiceUploaded, ['audio']);
+      sendButton.disabled = true;
+      setStatus('uploading');
+      const formData = new FormData();
+      formData.append('audio', blob, `patient-note-${Date.now()}.webm`);
+      formData.append('lang', state.currentLang);
+      formData.append('patient_identity', JSON.stringify(activePatientIdentityPayload()));
+      formData.append('synthesize_speech', 'true');
+      formData.append('debug', String(Boolean(state.session && state.session.role === 'developer' && state.session.active_view === 'developer')));
+      try {
+        const response = await fetch('/runtime/audio-upload', { method: 'POST', body: formData });
+        const payload = await response.json();
+        if (response.status === 401 && payload.error === 'auth_required') { window.location.href = payload.login_url || '/login'; return; }
+        if (!response.ok) throw new Error(payload.message || payload.error || 'audio_failed');
+        state.lastPayload = payload;
+        addBubble('assistant', (payload.selection || {}).text || copyFor().noResponse, ['audio']);
+        if (payload.tts && payload.tts.audio_url) new Audio(payload.tts.audio_url).play().catch(() => undefined);
+        updateCards(payload);
+        updateHandoff(payload);
+        setStatus('ready');
+      } catch (error) {
+        addBubble('system', error.message, ['audio']);
+        setStatus('error', 'warn');
+      } finally {
+        sendButton.disabled = false;
       }
-      sendMessage(text);
     }
-
-    startDemoButton.addEventListener('click', () => {
-      onboardingNode.classList.add('hidden');
-      messageInput.focus();
-    });
-
-    quickButtons.forEach((button) => {
-      button.addEventListener('click', () => triggerQuickAction(button.dataset.quick));
-    });
-
-    function sendUrgentMessage() {
-      paused = false;
-      sendMessage(copyFor().quick.urgentText);
-    }
-
-    quickUrgentButton.addEventListener('click', sendUrgentMessage);
-    sidebarCrisisButton.addEventListener('click', sendUrgentMessage);
-    floatingCrisisButton.addEventListener('click', sendUrgentMessage);
-
-    sendButton.addEventListener('click', () => sendMessage());
-    recordButton.addEventListener('click', startVoiceCapture);
-    clearButton.addEventListener('click', () => {
-      paused = false;
-      turnCounter = 0;
-      handoffBanner.style.display = 'none';
-      debugTurn.textContent = 'turn: 0';
-      debugHybrid.textContent = copyFor().debug.hybridPlaceholder;
-      debugSummary.textContent = copyFor().debug.summaryPlaceholder;
-      debugIdentity.textContent = copyFor().debug.identityPlaceholder;
-      debugHistory.innerHTML = `<div class="debug-history-row">${copyFor().debug.historyPlaceholder}</div>`;
-      debugExplanation.innerHTML = `<li>${copyFor().debug.explanationPlaceholder}</li>`;
-      debugJson.textContent = '{}';
-      timeline.innerHTML = '';
-      addBubble('system', copyFor().messages.cleared, ['history']);
-      setStatusFromKey('ready');
-      updateIdentityNote(patientIdInput.value);
-      applyThemeState();
-      if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-      }
-    });
-    logoutButton.addEventListener('click', handleLogout);
-
-    demoModeInput.addEventListener('change', () => {
-      debugConsole.style.display = demoModeInput.checked ? 'block' : 'none';
-    });
-
-    langSelect.addEventListener('change', async () => {
-      currentLang = langSelect.value;
-      applyStaticUi();
-      await refreshHealthStatus();
-    });
-
-    themeModeInput.addEventListener('change', () => {
-      themeMode = themeModeInput.value;
-      saveThemePrefs();
-      applyThemeState();
-    });
-
-    themeSkinInput.addEventListener('change', () => {
-      manualSkin = themeSkinInput.value;
-      saveThemePrefs();
-      applyThemeState();
-    });
-
-    [ageGroupInput, literacyLevelInput, preferredRegisterInput].forEach((input) => {
-      input.addEventListener('change', () => {
-        if (themeMode === 'auto') {
-          applyThemeState();
-        }
+    async function toggleRecording() {
+      if (!supportsAudio()) return;
+      if (state.isRecording && state.mediaRecorder) { state.mediaRecorder.stop(); return; }
+      state.mediaStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      state.mediaChunks = [];
+      state.mediaRecorder = new MediaRecorder(state.mediaStream);
+      state.mediaRecorder.addEventListener('dataavailable', (event) => { if (event.data && event.data.size > 0) state.mediaChunks.push(event.data); });
+      state.mediaRecorder.addEventListener('start', () => { state.isRecording = true; updateAudioUi(); setStatus('recording'); });
+      state.mediaRecorder.addEventListener('stop', async () => {
+        const blob = new Blob(state.mediaChunks, { type: state.mediaRecorder.mimeType || 'audio/webm' });
+        state.isRecording = false;
+        updateAudioUi();
+        if (state.mediaStream) state.mediaStream.getTracks().forEach((track) => track.stop());
+        await sendAudioMessage(blob);
       });
+      state.mediaRecorder.start();
+    }
+    async function logout() {
+      try {
+        await fetch('/auth/logout', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ reason: 'user_logout' }) });
+      } finally {
+        window.location.href = '/login';
+      }
+    }
+    function seedIntro() {
+      timeline.innerHTML = '';
+      addBubble('system', copyFor().introSystem, ['privacy', 'session']);
+      applyThemeState();
+    }
+    function applyLanguage(lang) {
+      state.currentLang = state.supportedLanguages.includes(lang) ? lang : resolvePreferredLanguage();
+      saveLanguagePreference(state.currentLang);
+      updateStaticCopy();
+      renderAliases();
+      renderTokens();
+      renderSession();
+      updateCards(state.lastPayload || {});
+    }
+    toolbarQuickButtons.forEach((button) => button.addEventListener('click', () => sendTextMessage(button.dataset.quick || '')));
+    aliasSelect.addEventListener('change', () => {
+      state.selectedAlias = aliasSelect.value;
+      identityNote.textContent = state.selectedAlias ? copyFor().identitySelected(state.selectedAlias) : identityNote.textContent;
     });
-
+    languageSelect.addEventListener('change', () => applyLanguage(languageSelect.value));
+    sendButton.addEventListener('click', () => sendTextMessage(messageInput.value));
+    clearButton.addEventListener('click', seedIntro);
+    logoutButton.addEventListener('click', logout);
+    recordButton.addEventListener('click', toggleRecording);
+    refreshTokensButton.addEventListener('click', () => loadTokens().catch((error) => addBubble('system', error.message, ['token'])));
+    issueTokenButton.addEventListener('click', issueToken);
     messageInput.addEventListener('keydown', (event) => {
-      if (event.key === 'Enter' && !event.shiftKey) {
-        event.preventDefault();
-        sendMessage();
+      if (event.key === 'Enter' && !event.shiftKey) { event.preventDefault(); sendTextMessage(messageInput.value); }
+    });
+    themeModeInput.addEventListener('change', () => { state.themeMode = themeModeInput.value; saveThemePrefs(); applyThemeState(); });
+    themeSkinInput.addEventListener('change', () => { state.manualSkin = themeSkinInput.value; saveThemePrefs(); applyThemeState(); });
+    loadThemePrefs();
+    updateStaticCopy();
+    seedIntro();
+    loadContext().then(() => {
+      setStatus('ready');
+      applyThemeState();
+    }).catch((error) => {
+      if (error.message !== 'auth_required') {
+        addBubble('system', error.message, ['startup']);
+        setStatus('error', 'warn');
       }
     });
-
-    debugConsole.style.display = demoModeInput.checked ? 'block' : 'none';
-    loadThemePrefs();
-    loadUiConfig().then(() => refreshHealthStatus());
-    updateVoiceUi();
   </script>
 </body>
 </html>

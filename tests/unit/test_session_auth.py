@@ -14,7 +14,29 @@ def test_session_auth_validates_access_code_and_parses_token() -> None:
 
     assert identity is not None
     assert identity.subject == "patient"
+    assert identity.role == "patient"
+    assert identity.allowed_views == ("patient",)
+    assert identity.active_view == "patient"
     assert identity.expires_at > identity.issued_at
+
+
+def test_session_auth_can_issue_role_aware_token() -> None:
+    auth = PortalSessionAuth(access_code="demo-code", secret="fixed-secret", session_ttl_seconds=3600)
+
+    token = auth.issue_session_token(
+        subject="clinician-session",
+        role="clinician",
+        allowed_views=("clinician", "patient"),
+        active_view="clinician",
+        clinician_id="dr-kovacs",
+    )
+    identity = auth.parse_session_token(token)
+
+    assert identity is not None
+    assert identity.role == "clinician"
+    assert identity.allowed_views == ("clinician", "patient")
+    assert identity.active_view == "clinician"
+    assert identity.clinician_id == "dr-kovacs"
 
 
 def test_session_auth_rejects_tampered_token() -> None:

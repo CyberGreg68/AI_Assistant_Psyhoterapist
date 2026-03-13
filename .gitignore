@@ -9,3 +9,5 @@ data/runtime_state/generated_audio/
 data/runtime_state/uploaded_audio/
 data/runtime_state/downloads/
 data/runtime_state/audit/
+data/runtime_state/patient_tokens.json
+data/runtime_state/patient_tokens.secret

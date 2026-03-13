@@ -1,0 +1,52 @@
+{
+  "rule_hints": [
+    {
+      "hint_type": "dominant_categories",
+      "items": [
+        {
+          "category": "variants",
+          "count": 60
+        }
+      ]
+    },
+    {
+      "hint_type": "risk_flags",
+      "items": []
+    },
+    {
+      "hint_type": "topic_hints",
+      "items": [
+        {
+          "topic": "nimh"
+        },
+        {
+          "topic": "research"
+        },
+        {
+          "topic": "anxiety"
+        },
+        {
+          "topic": "health"
+        },
+        {
+          "topic": "mental"
+        },
+        {
+          "topic": "disorders"
+        },
+        {
+          "topic": "information"
+        },
+        {
+          "topic": "more"
+        },
+        {
+          "topic": "your"
+        },
+        {
+          "topic": "learn"
+        }
+      ]
+    }
+  ]
+}

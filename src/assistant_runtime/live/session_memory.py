@@ -33,6 +33,9 @@ class ConversationIdentity:
     resolved_patient_id: str | None = None
     verified_patient: bool = False
     browser_patient_key: str | None = None
+    anonymous_subject_key: str | None = None
+    clinician_id: str | None = None
+    identity_confidence: str | None = None
 
 
 class ConversationMemoryStore:

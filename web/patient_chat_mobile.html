@@ -1,26 +1,97 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="de">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Páciens Mobil Demo</title>
+  <title>Psychotherapie-Portal mobil</title>
   <style>
     :root {
-      --bg-top: #f1e3cf;
-      --bg-bottom: #f8f4ee;
-      --panel: rgba(255, 250, 244, 0.9);
-      --panel-strong: rgba(255, 250, 244, 0.96);
-      --ink: #19302d;
-      --muted: #60706d;
-      --line: rgba(25, 48, 45, 0.1);
-      --accent: #0d7a66;
-      --accent-strong: #095546;
-      --patient: #f1dfc7;
-      --assistant: #d9efe7;
-      --warning: #c64d38;
-      --shadow: 0 18px 42px rgba(79, 61, 34, 0.18);
-      --font-display: Georgia, "Times New Roman", serif;
+      --bg: #f3e7d8;
+      --panel: rgba(255, 255, 255, 0.9);
+      --line: rgba(23, 52, 49, 0.12);
+      --ink: #173632;
+      --muted: #66726f;
+      --accent: #0b7967;
+      --accent-soft: rgba(11, 121, 103, 0.12);
+      --danger: #b4543b;
+      --patient: #f6e7d4;
+      --assistant: #ddf0e8;
+      --system: #f5f1ea;
+      --shadow: 0 18px 44px rgba(81, 62, 34, 0.14);
+      --glow-a: rgba(255,255,255,0.46);
+      --glow-b: rgba(11,121,103,0.14);
       --font-ui: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+      --font-display: Georgia, "Times New Roman", serif;
+    }
+
+    html[data-skin="aare"] {
+      --bg: #f3efe7;
+      --panel: rgba(255,255,255,0.92);
+      --line: rgba(92,112,111,0.16);
+      --ink: #46514f;
+      --muted: #7b8482;
+      --accent: #4fc3d7;
+      --accent-soft: rgba(79,195,215,0.14);
+      --danger: #c16a61;
+      --patient: #f7f6f3;
+      --assistant: #f3fbfc;
+      --system: #f6f6f6;
+      --shadow: 0 16px 34px rgba(58,58,58,0.08);
+    }
+
+    html[data-skin="river"] {
+      --bg: #edf5f2;
+      --panel: rgba(247,251,249,0.88);
+      --line: rgba(27,68,67,0.12);
+      --ink: #173a39;
+      --muted: #58716f;
+      --accent: #1f7a7a;
+      --accent-soft: rgba(31,122,122,0.14);
+      --danger: #ba5c48;
+      --patient: #e8f0ea;
+      --assistant: #daf0f2;
+      --system: #eff6f3;
+      --shadow: 0 20px 48px rgba(45,89,84,0.16);
+    }
+
+    html[data-skin="dusk"] {
+      --bg: #efe4da;
+      --panel: rgba(251,244,239,0.88);
+      --line: rgba(54,58,67,0.12);
+      --ink: #2b3138;
+      --muted: #6b6972;
+      --accent: #5d7f98;
+      --accent-soft: rgba(93,127,152,0.16);
+      --danger: #b15c55;
+      --patient: #f0dfd7;
+      --assistant: #dde8ef;
+      --system: #f3eae3;
+      --shadow: 0 20px 52px rgba(78,68,77,0.18);
+    }
+
+    html[data-skin="azure"] {
+      --bg: #0b1f38;
+      --panel: rgba(14,36,65,0.9);
+      --line: rgba(132,190,255,0.18);
+      --ink: #e3f0ff;
+      --muted: #9fb8d8;
+      --accent: #58a6ff;
+      --accent-soft: rgba(88,166,255,0.18);
+      --danger: #ff8370;
+      --patient: rgba(22,57,98,0.9);
+      --assistant: rgba(17,80,123,0.82);
+      --system: rgba(18,41,72,0.9);
+      --shadow: 0 24px 60px rgba(3,10,24,0.42);
+      --glow-a: rgba(41,104,176,0.34);
+      --glow-b: rgba(88,166,255,0.22);
+    }
+
+    html[data-tone="grounded"] {
+      --accent: color-mix(in srgb, var(--accent) 70%, #5d6b5d 30%);
+    }
+
+    html[data-tone="lifted"] {
+      --accent: color-mix(in srgb, var(--accent) 80%, #86c8a6 20%);
     }
 
     * { box-sizing: border-box; }
@@ -28,174 +99,207 @@
     body {
       margin: 0;
       min-height: 100vh;
-      background:
-        radial-gradient(circle at top right, rgba(13, 122, 102, 0.16), transparent 26%),
-        radial-gradient(circle at top left, rgba(198, 77, 56, 0.12), transparent 22%),
-        linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 58%, #f7f4ef 100%);
       color: var(--ink);
       font-family: var(--font-ui);
+      background:
+        radial-gradient(circle at top left, var(--glow-a), transparent 24%),
+        radial-gradient(circle at bottom right, var(--glow-b), transparent 20%),
+        linear-gradient(180deg, color-mix(in srgb, var(--bg) 82%, #fff 18%) 0%, var(--bg) 52%, color-mix(in srgb, var(--bg) 88%, #08111f 12%) 100%);
     }
 
     .app {
-      width: min(100%, 460px);
+      width: min(100%, 480px);
       min-height: 100vh;
       margin: 0 auto;
       display: grid;
-      grid-template-rows: auto auto 1fr auto;
-      background: linear-gradient(180deg, rgba(255,255,255,0.08), transparent 25%);
+      grid-template-rows: auto auto auto auto 1fr auto;
+      gap: 10px;
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    .hero,
+    .panel,
+    .message,
+    .composer {
+      margin: 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.12), transparent 24%), var(--panel);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      box-shadow: var(--shadow);
     }
 
     .hero {
-      padding: calc(18px + env(safe-area-inset-top, 0px)) 16px 12px;
-      display: grid;
-      gap: 12px;
-    }
-
-    .hero-card,
-    .panel,
-    .composer,
-    .message,
-    details {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      -webkit-backdrop-filter: blur(14px);
-      backdrop-filter: blur(14px);
-    }
-
-    .hero-card {
-      border-radius: 24px;
+      margin-top: calc(12px + env(safe-area-inset-top, 0px));
       padding: 16px;
       display: grid;
-      gap: 10px;
-    }
-
-    .hero-brand {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
       gap: 12px;
-      margin-bottom: 2px;
     }
 
-    .hero-logo {
-      width: 128px;
-      height: auto;
-      display: block;
-    }
-
-    .eyebrow,
-    .tiny {
-      font: 700 11px/1.2 "Courier New", monospace;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--accent);
-      margin: 0;
-    }
-
-    h1, h2, p { margin: 0; }
-
-    h1 {
-      font-size: 30px;
-      line-height: 1.02;
-      font-family: Georgia, serif;
-    }
-
-    .status-row,
-    .identity-row,
+    .hero-top,
+    .row,
     .chip-row,
-    .composer-actions {
+    .composer-actions,
+    .token-actions {
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
       align-items: center;
     }
 
-    .pill,
-    .chip {
-      border-radius: 999px;
-      padding: 7px 11px;
-      font: 700 11px/1.1 "Courier New", monospace;
-      letter-spacing: 0.05em;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.74);
-      color: var(--muted);
-    }
-
-    a.chip {
-      text-decoration: none;
+    .hero-top { justify-content: space-between; }
+    .logo-pill {
+      position: relative;
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid color-mix(in srgb, var(--line) 72%, transparent 28%);
+      background: linear-gradient(180deg, rgba(255,255,255,0.24), rgba(255,255,255,0.06)), color-mix(in srgb, var(--panel) 88%, var(--bg) 12%);
+      box-shadow: 0 12px 28px rgba(27, 38, 35, 0.08);
+      isolation: isolate;
+    }
+    .logo-pill::before {
+      content: "";
+      position: absolute;
+      inset: -14px -20px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(255,255,255,0.32) 0%, rgba(255,255,255,0.06) 54%, transparent 78%);
+      filter: blur(10px);
+      opacity: 0.88;
+      z-index: -1;
+      pointer-events: none;
+    }
+    .hero img { width: 132px; height: auto; display: block; }
+
+    .eyebrow,
+    .tiny,
+    label {
+      font: 700 11px/1.2 "Courier New", monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
-    .pill.live {
-      color: #fff;
+    .eyebrow { color: var(--accent); }
+    .tiny, label { color: var(--muted); }
+    h1, h2, p { margin: 0; }
+    h1, h2 { font-family: var(--font-display); font-weight: 400; }
+    h1 { font-size: 30px; line-height: 1.04; }
+    h2 { font-size: 22px; line-height: 1.08; }
+    .copy, .tiny { line-height: 1.5; }
+
+    .pill,
+    .chip,
+    .view-button {
+      border-radius: 999px;
+      padding: 8px 11px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.14);
+      color: var(--muted);
+      font: 700 11px/1.1 "Courier New", monospace;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .pill.live,
+    .view-button.active {
       background: var(--accent);
+      color: white;
       border-color: transparent;
     }
 
-    .timeline {
-      padding: 8px 14px 18px;
-      display: grid;
-      gap: 12px;
-      overflow: auto;
-      align-content: start;
+    .icon-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      white-space: nowrap;
     }
 
-    .snapshot {
-      margin: 0 14px;
-      border-radius: 22px;
+    .button-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 1.1em;
+      line-height: 1;
+      font-size: 13px;
+      flex: 0 0 auto;
+    }
+
+    .button-label {
+      min-width: 0;
+    }
+
+    .panel {
       padding: 14px;
       display: grid;
-      gap: 10px;
+      gap: 12px;
     }
 
-    .snapshot-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-    }
-
-    .snapshot-cell {
-      border-radius: 18px;
-      padding: 12px;
-      background: rgba(255,255,255,0.62);
+    .fields { display: grid; gap: 10px; }
+    .theme-note,
+    .token-card {
       border: 1px solid var(--line);
-      display: grid;
-      gap: 6px;
-      min-height: 92px;
+      border-radius: 16px;
+      padding: 12px;
+      background: rgba(255,255,255,0.12);
     }
+    .theme-note strong { color: var(--ink); }
 
-    .snapshot-value {
-      font-size: 14px;
-      line-height: 1.45;
+    input,
+    select,
+    textarea,
+    button { font: inherit; }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px 13px;
+      background: rgba(255,255,255,0.16);
       color: var(--ink);
     }
 
+    textarea { min-height: 92px; resize: none; }
+
+    button {
+      border: 0;
+      border-radius: 16px;
+      padding: 13px 14px;
+      cursor: pointer;
+      font: 700 12px/1 "Courier New", monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .primary { background: var(--accent); color: white; }
+    .secondary { background: rgba(255,255,255,0.12); color: var(--muted); border: 1px solid var(--line); }
+    .danger { background: var(--danger); color: white; }
+
+    .timeline {
+      padding: 0 12px 12px;
+      display: grid;
+      gap: 12px;
+      align-content: start;
+      overflow: auto;
+    }
+
     .message {
-      border-radius: 24px;
       padding: 14px 15px;
+      display: grid;
+      gap: 8px;
     }
 
-    .message.patient {
-      background: var(--patient);
-      margin-left: 34px;
-      border-bottom-right-radius: 8px;
-    }
-
-    .message.assistant {
-      background: var(--assistant);
-      margin-right: 34px;
-      border-bottom-left-radius: 8px;
-    }
-
-    .message.system {
-      background: rgba(255,255,255,0.72);
-    }
+    .message.patient { background: var(--patient); margin-left: 36px; border-bottom-right-radius: 8px; }
+    .message.assistant { background: var(--assistant); margin-right: 36px; border-bottom-left-radius: 8px; }
+    .message.system { background: var(--system); }
 
     .message-head {
-      margin-bottom: 8px;
       font: 700 10px/1.2 "Courier New", monospace;
       text-transform: uppercase;
       letter-spacing: 0.08em;
@@ -208,556 +312,421 @@
       word-break: break-word;
     }
 
-    details {
-      margin: 0 14px;
-      border-radius: 22px;
-      overflow: hidden;
-    }
-
-    summary {
-      list-style: none;
-      cursor: pointer;
-      padding: 14px 16px;
-      font-weight: 700;
-    }
-
-    summary::-webkit-details-marker { display: none; }
-
-    .panel-body {
-      padding: 0 16px 16px;
-      display: grid;
-      gap: 12px;
-    }
-
-    textarea,
-    input,
-    select,
-    button {
-      font: inherit;
-    }
-
-    textarea,
-    input,
-    select {
-      width: 100%;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 12px 13px;
-      background: rgba(255,255,255,0.82);
-      color: var(--ink);
-    }
+    .meta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
 
     .composer {
+      margin-bottom: 0;
+      padding: 14px 12px calc(14px + env(safe-area-inset-bottom, 0px));
+      border-radius: 24px 24px 0 0;
+      display: grid;
+      gap: 10px;
       position: sticky;
       bottom: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.08)), var(--panel);
+    }
+
+    pre {
       margin: 0;
-      padding: 14px 14px calc(14px + env(safe-area-inset-bottom, 0px));
-      border-radius: 24px 24px 0 0;
-      background: var(--panel-strong);
-      display: grid;
-      gap: 10px;
+      font: 12px/1.5 "Courier New", monospace;
+      white-space: pre-wrap;
+      word-break: break-word;
     }
 
-    .composer textarea {
-      min-height: 88px;
-      resize: none;
-    }
+    .hidden { display: none !important; }
 
-    button {
-      border: 0;
-      border-radius: 16px;
-      padding: 13px 15px;
-      font: 700 12px/1 "Courier New", monospace;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      cursor: pointer;
-    }
+    @media (max-width: 430px) {
+      .icon-action.compact-collapse .button-label {
+        display: none;
+      }
 
-    .primary { background: var(--accent); color: #fff; }
-    .secondary { background: transparent; color: var(--muted); border: 1px solid var(--line); }
-    .danger { background: var(--warning); color: #fff; }
-
-    .field-grid {
-      display: grid;
-      gap: 10px;
-    }
-
-    .debug {
-      font-size: 13px;
-      line-height: 1.45;
-      color: var(--muted);
-      display: grid;
-      gap: 6px;
-    }
-
-    html[data-skin="aare"] {
-      --bg-top: #f1f1f1;
-      --bg-bottom: #ececec;
-      --panel: rgba(255, 255, 255, 0.92);
-      --panel-strong: rgba(255, 255, 255, 0.98);
-      --ink: #676767;
-      --muted: #8b8b8b;
-      --line: #e2e2e2;
-      --accent: #4fc3d7;
-      --accent-strong: #36b2c7;
-      --patient: #f5f5f5;
-      --assistant: #fafdfe;
-      --warning: #c56d63;
-      --shadow: 0 16px 28px rgba(0, 0, 0, 0.05);
-      --glow-a: rgba(255,255,255,0.5);
-      --glow-b: rgba(79,195,215,0.1);
-      --glow-c: rgba(255,255,255,0.5);
-      --font-display: Georgia, "Times New Roman", serif;
-      --font-ui: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
-    }
-
-    html[data-skin="river"] {
-      --bg-top: #dfefea;
-      --bg-bottom: #f1f7f4;
-      --panel: rgba(244, 251, 248, 0.9);
-      --panel-strong: rgba(244, 251, 248, 0.97);
-      --ink: #183432;
-      --muted: #56716d;
-      --line: rgba(24, 52, 50, 0.1);
-      --accent: #1c7b78;
-      --accent-strong: #135b5a;
-      --patient: #e2efe6;
-      --assistant: #d6edf1;
-      --warning: #c45e48;
-      --shadow: 0 18px 44px rgba(54, 91, 88, 0.16);
-      --glow-a: rgba(28, 123, 120, 0.16);
-      --glow-b: rgba(109, 170, 157, 0.18);
-      --glow-c: rgba(255,255,255,0.38);
-      --font-display: "Palatino Linotype", "Book Antiqua", Georgia, serif;
-      --font-ui: "Verdana", "Trebuchet MS", sans-serif;
-    }
-
-    html[data-skin="dusk"] {
-      --bg-top: #e8ddd7;
-      --bg-bottom: #f4f0ed;
-      --panel: rgba(248, 242, 239, 0.9);
-      --panel-strong: rgba(248, 242, 239, 0.97);
-      --ink: #262f35;
-      --muted: #6b666f;
-      --line: rgba(38, 47, 53, 0.1);
-      --accent: #5f8298;
-      --accent-strong: #496577;
-      --patient: #ecdcd6;
-      --assistant: #dde7ef;
-      --warning: #ba6257;
-      --shadow: 0 18px 46px rgba(69, 66, 76, 0.18);
-      --glow-a: rgba(95, 130, 152, 0.16);
-      --glow-b: rgba(186, 98, 87, 0.12);
-      --glow-c: rgba(255,255,255,0.34);
-      --font-display: "Palatino Linotype", "Book Antiqua", Georgia, serif;
-      --font-ui: "Segoe UI", "Trebuchet MS", sans-serif;
-    }
-
-    html[data-tone="grounded"] {
-      --accent: color-mix(in srgb, var(--accent) 62%, #677565 38%);
-      --shadow: 0 16px 36px rgba(64, 63, 58, 0.16);
-    }
-
-    html[data-tone="soft"] {
-      --panel: color-mix(in srgb, var(--panel) 78%, rgba(255,255,255,0.26) 22%);
-    }
-
-    html[data-tone="lifted"] {
-      --accent: color-mix(in srgb, var(--accent) 78%, #7fa68a 22%);
-    }
-
-    body {
-      font-family: var(--font-ui);
-      background:
-        radial-gradient(circle at top right, var(--glow-a), transparent 26%),
-        radial-gradient(circle at top left, var(--glow-b), transparent 22%),
-        radial-gradient(circle at bottom center, var(--glow-c), transparent 40%),
-        linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 58%, color-mix(in srgb, var(--bg-bottom) 82%, #fff 18%) 100%);
-      transition: background 420ms ease, color 220ms ease;
-      position: relative;
-      overflow-x: hidden;
-    }
-
-    body::before,
-    body::after {
-      content: "";
-      position: fixed;
-      pointer-events: none;
-      z-index: 0;
-      filter: blur(14px);
-      opacity: 0.6;
-    }
-
-    body::before {
-      top: -40px;
-      right: -30px;
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,255,255,0.44) 0%, transparent 72%);
-    }
-
-    body::after {
-      left: -36px;
-      bottom: 80px;
-      width: 150px;
-      height: 150px;
-      border-radius: 42% 58% 50% 50%;
-      background: radial-gradient(circle, color-mix(in srgb, var(--accent) 18%, rgba(255,255,255,0.1) 82%) 0%, transparent 70%);
-    }
-
-    .app {
-      position: relative;
-      z-index: 1;
-      background: linear-gradient(180deg, rgba(255,255,255,0.1), transparent 25%);
-    }
-
-    .hero-card,
-    .panel,
-    .composer,
-    .message,
-    details {
-      background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06)), var(--panel);
-      border-color: var(--line);
-    }
-
-    .eyebrow,
-    .tiny,
-    .pill,
-    .chip,
-    button {
-      font-family: var(--font-ui);
-    }
-
-    h1 {
-      font-family: var(--font-display);
-      font-weight: 400;
-      letter-spacing: 0;
-    }
-
-    .hero-card {
-      padding: 18px;
-      border-radius: 26px;
-    }
-
-    .snapshot,
-    details,
-    .composer {
-      border-radius: 24px;
-    }
-
-    .snapshot-cell,
-    textarea,
-    input,
-    select,
-    .pill,
-    .chip,
-    .message,
-    .theme-note {
-      background: linear-gradient(180deg, rgba(255,255,255,0.22), rgba(255,255,255,0.08));
-    }
-
-    .primary {
-      background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 88%, #fff 12%), color-mix(in srgb, var(--accent-strong) 82%, #203b39 18%));
-      box-shadow: 0 14px 28px rgba(13, 122, 102, 0.22);
-    }
-
-    .danger {
-      background: linear-gradient(135deg, color-mix(in srgb, var(--warning) 82%, #fff 18%), color-mix(in srgb, var(--warning) 78%, #6d3027 22%));
-    }
-
-    .theme-note {
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 12px 13px;
-      color: var(--muted);
-      line-height: 1.4;
-      font-size: 13px;
-    }
-
-    .theme-note strong {
-      color: var(--ink);
-    }
-
-    .voice-toggle {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font: 700 11px/1.2 "Courier New", monospace;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-
-    .voice-toggle input {
-      accent-color: var(--accent);
+      .icon-action.compact-collapse {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
     }
   </style>
 </head>
 <body>
   <main class="app">
     <section class="hero">
-      <div class="hero-card">
-        <div class="hero-brand">
-          <img class="hero-logo" src="/assets/patient_portal_logo.svg" alt="AARE inspired therapy portal logo">
-          <span class="pill live">Portal</span>
-        </div>
-        <p class="eyebrow">Mobile Walkthrough</p>
-        <h1>Patient support on a phone-sized surface.</h1>
-        <div class="status-row">
-          <span id="status-pill" class="pill">Checking</span>
-          <span id="identity-pill" class="pill">browser identity</span>
-        </div>
-        <p id="identity-note" class="tiny">Identity will resolve to a browser-scoped memory key until a patient id is supplied.</p>
-        <div class="field-grid">
-          <label for="ui-language">Language</label>
-          <select id="ui-language"></select>
-        </div>
+      <div class="hero-top">
+        <div class="logo-pill"><img id="mobile-portal-logo" src="/assets/logo_light.png" alt="Patientenportal-Logo"></div>
+        <span id="mobile-status-pill" class="pill live">Bereit</span>
       </div>
+      <p class="eyebrow">Mobiles Rollenportal</p>
+      <h1 id="mobile-hero-title">Anonyme Patientensitzung mobil</h1>
+      <p id="mobile-hero-copy" class="copy">Pseudonyme Token-Sitzungen halten die Patientenidentität außerhalb der Runtime.</p>
+      <div class="row">
+        <span id="mobile-role-pill" class="pill">Rolle</span>
+        <span id="mobile-view-pill" class="pill">Ansicht</span>
+      </div>
+      <div id="mobile-view-switcher" class="chip-row"></div>
       <div class="chip-row">
-        <button class="chip" data-quick-key="sleep">Alvás</button>
-        <button class="chip" data-quick-key="breakup">Szakítás</button>
-        <button class="chip" data-quick-key="simplify">Egyszerűbben</button>
-        <button class="chip danger" id="quick-urgent" type="button">Sürgős</button>
-        <a id="desktop-link" class="chip" href="/chat">Asztali nézet</a>
-        <button class="chip" id="logout-button" type="button">Kilépés</button>
+        <button class="chip" data-quick="Ich schlafe in letzter Zeit schlecht." type="button">Schlaf</button>
+        <button class="chip" data-quick="Ich bin angespannt und brauche eine kurze Stabilisierungsübung." type="button">Stabilisierung</button>
+        <button class="chip" data-quick="Ich brauche jetzt dringend Hilfe." type="button">Dringend</button>
+        <a class="chip" href="/chat">Desktop</a>
       </div>
     </section>
 
-    <details>
-      <summary>Demo settings</summary>
-      <div class="panel-body field-grid">
-        <input id="patient-id" type="text" placeholder="Optional patient id">
-        <select id="age-group">
-          <option value="">Age group</option>
-          <option value="teen">Teen</option>
-          <option value="adult">Adult</option>
-          <option value="senior">Senior</option>
-        </select>
-        <select id="literacy-level">
-          <option value="">Literacy</option>
-          <option value="low">Low</option>
-          <option value="medium">Medium</option>
-          <option value="high">High</option>
-        </select>
-        <select id="preferred-register">
-          <option value="">Register</option>
-          <option value="plain">Plain</option>
-          <option value="conversational">Conversational</option>
-          <option value="clinical">Clinical</option>
-        </select>
-        <select id="theme-mode"></select>
-        <select id="theme-skin"></select>
-        <div id="theme-note" class="theme-note">Auto ambience active.</div>
-        <label><input id="prefer-online" type="checkbox"> Prefer online rerank when available</label>
-        <label><input id="include-review-items" type="checkbox"> Include review and test content</label>
-        <label><input id="debug-mode" type="checkbox" checked> Show compact debug block</label>
-        <label class="voice-toggle"><input id="auto-speak" type="checkbox" checked> <span id="auto-speak-label">Read replies aloud</span></label>
-      </div>
-    </details>
-
-    <section class="snapshot panel">
-      <div class="status-row">
-        <p class="eyebrow">Runtime Snapshot</p>
-        <span id="snapshot-mode" class="pill">local_only</span>
-      </div>
-      <div class="snapshot-grid">
-        <div class="snapshot-cell">
-          <p class="tiny">Recent Theme</p>
-          <div id="snapshot-summary" class="snapshot-value">Nincs meg aktiv beszelgetesi osszefoglalo.</div>
+    <section class="panel">
+      <div class="fields">
+        <div>
+          <label for="mobile-theme-mode">Atmosphäre</label>
+          <select id="mobile-theme-mode"></select>
         </div>
-        <div class="snapshot-cell">
-          <p class="tiny">Knowledge</p>
-          <div id="snapshot-knowledge" class="snapshot-value">Nincs kivalasztott snippet.</div>
+        <div>
+          <label for="mobile-theme-skin">Erscheinungsbild</label>
+          <select id="mobile-theme-skin"></select>
         </div>
-        <div class="snapshot-cell">
-          <p class="tiny">Routing</p>
-          <div id="snapshot-routing" class="snapshot-value">A routing a valasz utan jelenik meg.</div>
-        </div>
-        <div class="snapshot-cell">
-          <p class="tiny">Memory</p>
-          <div id="snapshot-memory" class="snapshot-value">Browser-scoped memoria aktiv.</div>
-        </div>
+        <div id="mobile-theme-note" class="theme-note">Automatische Stimmung ist aktiv.</div>
       </div>
     </section>
 
-    <section id="timeline" class="timeline"></section>
+    <section class="panel">
+      <div class="fields">
+        <div>
+          <label for="mobile-language-select">Sprache</label>
+          <select id="mobile-language-select"></select>
+        </div>
+        <div id="mobile-alias-field" class="hidden">
+          <label for="mobile-alias-select">Anonymer Alias</label>
+          <select id="mobile-alias-select"></select>
+        </div>
+        <div>
+          <label for="mobile-consent-select">Einwilligung für kurze Auszüge</label>
+          <select id="mobile-consent-select">
+            <option value="true">Aktiv</option>
+            <option value="false">Deaktiviert</option>
+          </select>
+        </div>
+        <div id="mobile-identity-note" class="tiny">Sitzungsdaten werden geladen.</div>
+      </div>
+    </section>
+
+    <section id="mobile-token-panel" class="panel hidden">
+      <p class="eyebrow">Patiententoken</p>
+      <h2>Anonymen Zugang erzeugen</h2>
+      <div class="fields">
+        <input id="mobile-token-label" type="text" placeholder="Private Notiz">
+        <input id="mobile-token-alias" type="text" placeholder="Alias oder leer für auto">
+        <input id="mobile-token-expiry" type="number" min="1" value="30" placeholder="Tage">
+        <button id="mobile-issue-token" class="primary" type="button">Token erzeugen</button>
+        <div id="mobile-raw-token-box" class="tiny hidden"></div>
+        <div id="mobile-token-list" class="fields"></div>
+      </div>
+    </section>
+
+    <section id="mobile-timeline" class="timeline"></section>
+
+    <section id="mobile-debug-panel" class="panel hidden">
+      <p class="eyebrow">Entwickler-Debug</p>
+      <pre id="mobile-debug-json">{}</pre>
+    </section>
 
     <section class="composer">
-      <textarea id="message" placeholder="Írd le röviden, mire lenne most a legnagyobb szükséged."></textarea>
+      <textarea id="mobile-message-input" placeholder="Beschreibe kurz, was du gerade am dringendsten brauchst."></textarea>
       <div class="composer-actions">
-        <button id="record-button" class="secondary" type="button">Mikrofon</button>
-        <button id="send" class="primary" type="button">Küld</button>
-        <button id="clear" class="secondary" type="button">Töröl</button>
+        <button id="mobile-record-button" class="secondary" type="button">Aufnehmen</button>
+        <button id="mobile-send-button" class="primary" type="button">Senden</button>
+        <button id="mobile-logout-button" class="secondary" type="button">Abmelden</button>
       </div>
-      <p id="voice-note" class="tiny">Mikrofon capture es helyi felolvasas aktiv, ha a bongeszo tamogatja.</p>
+      <p id="mobile-voice-note" class="tiny">Audio-Upload ist verfügbar, wenn der Browser MediaRecorder unterstützt.</p>
     </section>
   </main>
 
   <script>
-    const timeline = document.getElementById('timeline');
-    const messageInput = document.getElementById('message');
-    const langSelect = document.getElementById('ui-language');
-    const sendButton = document.getElementById('send');
-    const clearButton = document.getElementById('clear');
-    const statusPill = document.getElementById('status-pill');
-    const identityPill = document.getElementById('identity-pill');
-    const identityNote = document.getElementById('identity-note');
-    const patientIdInput = document.getElementById('patient-id');
-    const ageGroupInput = document.getElementById('age-group');
-    const literacyLevelInput = document.getElementById('literacy-level');
-    const preferredRegisterInput = document.getElementById('preferred-register');
-    const themeModeInput = document.getElementById('theme-mode');
-    const themeSkinInput = document.getElementById('theme-skin');
-    const themeNoteNode = document.getElementById('theme-note');
-    const preferOnlineInput = document.getElementById('prefer-online');
-    const includeReviewItemsInput = document.getElementById('include-review-items');
-    const debugModeInput = document.getElementById('debug-mode');
-    const snapshotMode = document.getElementById('snapshot-mode');
-    const snapshotSummary = document.getElementById('snapshot-summary');
-    const snapshotKnowledge = document.getElementById('snapshot-knowledge');
-    const snapshotRouting = document.getElementById('snapshot-routing');
-    const snapshotMemory = document.getElementById('snapshot-memory');
-    const quickButtons = Array.from(document.querySelectorAll('[data-quick-key]'));
-    const heroCard = document.querySelector('.hero-card');
-    const heroEyebrow = heroCard.querySelector('.eyebrow');
-    const heroTitle = heroCard.querySelector('h1');
-    const languageLabel = heroCard.querySelector('label[for="ui-language"]');
-    const settingsSummary = document.querySelector('details summary');
-    const settingsLabels = document.querySelectorAll('details label');
-    const snapshotLabels = document.querySelectorAll('.snapshot-cell .tiny');
-    const quickUrgentButton = document.getElementById('quick-urgent');
-    const desktopLink = document.getElementById('desktop-link');
-    const logoutButton = document.getElementById('logout-button');
-    const recordButton = document.getElementById('record-button');
-    const autoSpeakInput = document.getElementById('auto-speak');
-    const autoSpeakLabel = document.getElementById('auto-speak-label');
-    const voiceNoteNode = document.getElementById('voice-note');
+    const MOBILE_LANGUAGE_STORAGE_KEY = 'patient-portal-language';
+    const MOBILE_LANGUAGE_COOKIE_NAME = 'portal_lang';
+    const MOBILE_LANGUAGE_NAMES = { de: 'Deutsch', hu: 'Magyar', en: 'English' };
 
-    const DEFAULT_UI_CONFIG = {
-      supported_languages: ['hu', 'en', 'de'],
-      default_language: 'hu'
+    const mobileState = {
+      session: null,
+      supportedLanguages: ['hu', 'en', 'de'],
+      currentLang: 'de',
+      patientAliases: [],
+      selectedAlias: '',
+      tokens: [],
+      mediaRecorder: null,
+      mediaStream: null,
+      mediaChunks: [],
+      isRecording: false,
+      themeMode: 'auto',
+      manualSkin: 'aare',
+      activeThemeState: null,
     };
 
-    const THEME_COPY = {
+    const MOBILE_THEME_COPY = {
       hu: {
-        modes: [['auto', 'Atmoszfera: auto'], ['manual', 'Atmoszfera: kezi']],
-        skins: { aare: 'Skin: Aare Light', river: 'Skin: River Calm', dusk: 'Skin: Soft Evening' },
-        reasons: { manual: 'kezi valasztas', morning: 'reggeli ritmus', day: 'napkozbeni egyensuly', evening: 'esti lenyugtatas', night: 'ejszakai puhitas', urgent: 'fokozott biztonsag', heavy: 'nagyobb terheles', rest: 'pihenes-fokusz', calm: 'nyugodtabb hangulat', steady: 'semleges alap' }
+        modes: [['auto', 'Auto: profil + napszak + hangulat'], ['manual', 'Kézi skin']],
+        skins: { aare: 'Aare Light', river: 'River Calm', dusk: 'Soft Evening', azure: 'Azure Inverse' },
+        reasons: { manual: 'kézi választás', morning: 'reggeli ritmus', day: 'napközbeni egyensúly', evening: 'esti lenyugtatás', night: 'éjszakai puhítás', urgent: 'biztonsági fókusz', heavy: 'nagyobb terhelés', rest: 'pihenés-fókusz', calm: 'nyugodtabb hangulat', steady: 'semleges alap', developer: 'fejlesztői nézet' }
       },
       en: {
-        modes: [['auto', 'Ambience: auto'], ['manual', 'Ambience: manual']],
-        skins: { aare: 'Skin: Aare Light', river: 'Skin: River Calm', dusk: 'Skin: Soft Evening' },
-        reasons: { manual: 'manual choice', morning: 'morning rhythm', day: 'daytime balance', evening: 'evening wind-down', night: 'night support', urgent: 'safety focus', heavy: 'heavier emotional load', rest: 'rest support', calm: 'calmer tone', steady: 'neutral base' }
+        modes: [['auto', 'Auto: profile + time + mood'], ['manual', 'Manual skin']],
+        skins: { aare: 'Aare Light', river: 'River Calm', dusk: 'Soft Evening', azure: 'Azure Inverse' },
+        reasons: { manual: 'manual choice', morning: 'morning rhythm', day: 'daytime balance', evening: 'evening wind-down', night: 'night support', urgent: 'safety focus', heavy: 'heavier emotional load', rest: 'rest support', calm: 'calmer tone', steady: 'neutral base', developer: 'developer view' }
       },
       de: {
-        modes: [['auto', 'Ambiente: auto'], ['manual', 'Ambiente: manuell']],
-        skins: { aare: 'Skin: Aare Light', river: 'Skin: River Calm', dusk: 'Skin: Soft Evening' },
-        reasons: { manual: 'manuelle Wahl', morning: 'Morgenrhythmus', day: 'Tagesbalance', evening: 'Abendliches Runterfahren', night: 'Nachtmodus', urgent: 'Sicherheitsfokus', heavy: 'hoehere Belastung', rest: 'Ruhe-Fokus', calm: 'ruhigere Stimmung', steady: 'neutrale Basis' }
+        modes: [['auto', 'Auto: Profil + Tageszeit + Stimmung'], ['manual', 'Manueller Skin']],
+        skins: { aare: 'Aare Light', river: 'River Calm', dusk: 'Soft Evening', azure: 'Azure Inverse' },
+        reasons: { manual: 'manuelle Wahl', morning: 'Morgenrhythmus', day: 'Tagesbalance', evening: 'Abendliches Runterfahren', night: 'Nachtmodus', urgent: 'Sicherheitsfokus', heavy: 'höhere Belastung', rest: 'Ruhe-Fokus', calm: 'ruhigere Stimmung', steady: 'neutrale Basis', developer: 'Entwickleransicht' }
       }
     };
 
-    const UI_COPY = {
-      hu: {
-        heroEyebrow: 'Mobile Walkthrough',
-        heroTitle: 'Telefonos méretű páciens-támogatás.',
-        language: 'Nyelv',
-        identityWaiting: 'A browser-alapú memória kulcs látszik, amíg nincs patient id.',
-        identityPrefix: 'Feloldott memória kulcs: ',
-        quick: { sleep: { label: 'Alvás', text: 'Nehezen alszom mostanában.' }, breakup: { label: 'Szakítás', text: 'Szakítás után vagyok.' }, simplify: { label: 'Egyszerűbben', text: 'Egyszerűbben mondd el.' }, urgentLabel: 'Sürgős', urgentText: 'Sürgős segítségre van szükségem most.' },
-        links: { desktop: 'Asztali nézet' },
-        settings: { summary: 'Demó beállítások', patientPlaceholder: 'Optional patient id', age: [['', 'Kor'], ['teen', 'Teen'], ['adult', 'Adult'], ['senior', 'Senior']], literacy: [['', 'Nyelvezet'], ['low', 'Alacsony'], ['medium', 'Közepes'], ['high', 'Magas']], register: [['', 'Regiszter'], ['plain', 'Egyszerű'], ['conversational', 'Köznapi'], ['clinical', 'Klinikai']], labels: ['Prefer online rerank when available', 'Include review and test content', 'Show compact debug block'] },
-        snapshot: { labels: ['Recent Theme', 'Knowledge', 'Routing', 'Memory'], summaryEmpty: 'Nincs még aktív beszélgetési összefoglaló.', knowledgeEmpty: 'Nincs kiválasztott snippet.', routingEmpty: 'A routing a válasz után jelenik meg.', memoryEmpty: 'Browser-scoped memória aktív.' },
-        composer: { placeholder: 'Írd le röviden, mire lenne most a legnagyobb szükséged.', send: 'Küld', clear: 'Töröl', record: 'Mikrofon', stopRecord: 'Stop', logout: 'Kilépés', autoSpeak: 'Válasz felolvasása', voiceNote: 'Mikrofon capture és helyi felolvasás aktív, ha a böngésző támogatja.' },
-        statuses: { online: 'Online Ready', local: 'Local Only', offline: 'Offline' },
-        roles: { patient: 'Patient', assistant: 'Assistant', system: 'Demo' },
-        messages: { debug: 'debug', noResponse: '(nincs válasz)', unknownError: 'ismeretlen hiba', networkError: 'network_error', cleared: 'A mobil demó nézet törölve lett.', intro: 'Ez egy mobilra optimalizált páciens-demó. A válaszok ugyanazt a runtime API-t használják, mint az asztali nézet.', speechUnavailable: 'A böngésző nem támogat helyi mikrofonfelismerést.', speechCaptureStart: 'Mikrofon figyelés indult.', speechCaptureError: 'Mikrofon hiba', speechCaptured: 'Felismert szöveg', authRequired: 'Session lejárt, új belépés kell.' }
-      },
-      en: {
-        heroEyebrow: 'Mobile Walkthrough',
-        heroTitle: 'Patient support on a phone-sized surface.',
-        language: 'Language',
-        identityWaiting: 'Identity resolves to a browser-scoped memory key until a patient id is supplied.',
-        identityPrefix: 'Resolved memory key: ',
-        quick: { sleep: { label: 'Sleep', text: 'I have had trouble sleeping lately.' }, breakup: { label: 'Breakup', text: 'I am going through a breakup.' }, simplify: { label: 'Simplify', text: 'Say it in simpler language.' }, urgentLabel: 'Urgent', urgentText: 'I need urgent help right now.' },
-        links: { desktop: 'Desktop view' },
-        settings: { summary: 'Demo settings', patientPlaceholder: 'Optional patient id', age: [['', 'Age group'], ['teen', 'Teen'], ['adult', 'Adult'], ['senior', 'Senior']], literacy: [['', 'Literacy'], ['low', 'Low'], ['medium', 'Medium'], ['high', 'High']], register: [['', 'Register'], ['plain', 'Plain'], ['conversational', 'Conversational'], ['clinical', 'Clinical']], labels: ['Prefer online rerank when available', 'Include review and test content', 'Show compact debug block'] },
-        snapshot: { labels: ['Recent Theme', 'Knowledge', 'Routing', 'Memory'], summaryEmpty: 'No active conversation summary yet.', knowledgeEmpty: 'No snippet selected.', routingEmpty: 'Routing details appear after a response.', memoryEmpty: 'Browser-scoped memory is active.' },
-        composer: { placeholder: 'Briefly describe what would help most right now.', send: 'Send', clear: 'Clear', record: 'Microphone', stopRecord: 'Stop', logout: 'Logout', autoSpeak: 'Read replies aloud', voiceNote: 'Microphone capture and local speech playback are used when the browser supports them.' },
-        statuses: { online: 'Online Ready', local: 'Local Only', offline: 'Offline' },
-        roles: { patient: 'Patient', assistant: 'Assistant', system: 'Demo' },
-        messages: { debug: 'debug', noResponse: '(no response)', unknownError: 'unknown error', networkError: 'network_error', cleared: 'The mobile demo view was cleared.', intro: 'This is a mobile-optimized patient demo. Responses use the same runtime API as the desktop view.', speechUnavailable: 'This browser does not support local microphone recognition.', speechCaptureStart: 'Microphone capture started.', speechCaptureError: 'Microphone error', speechCaptured: 'Recognized text', authRequired: 'Session expired, please log in again.' }
-      },
+    const MOBILE_UI_COPY = {
       de: {
-        heroEyebrow: 'Mobile Walkthrough',
-        heroTitle: 'Patientenunterstuetzung auf einer telefon-grossen Flaeche.',
+        pageTitle: 'Psychotherapie-Portal mobil',
+        heroEyebrow: 'Mobiles Rollenportal',
+        heroDefaultTitle: 'Anonyme Patientensitzung mobil',
+        heroDefaultCopy: 'Pseudonyme Token-Sitzungen halten die Patientenidentität außerhalb der Runtime.',
+        roleLabel: 'Rolle',
+        viewLabel: 'Ansicht',
+        quicks: [['Schlaf', 'Ich schlafe in letzter Zeit schlecht.'], ['Stabilisierung', 'Ich bin angespannt und brauche eine kurze Stabilisierungsübung.'], ['Dringend', 'Ich brauche jetzt dringend Hilfe.']],
+        desktop: 'Desktop',
+        themeMode: 'Atmosphäre',
+        themeSkin: 'Erscheinungsbild',
+        themeAuto: 'Automatische Stimmung ist aktiv.',
         language: 'Sprache',
-        identityWaiting: 'Die Identitaet wird auf einen browserbasierten Speicherschluessel aufgeloest, bis eine Patienten-ID gesetzt ist.',
-        identityPrefix: 'Aufgeloester Speicherschluessel: ',
-        quick: { sleep: { label: 'Schlaf', text: 'Ich habe in letzter Zeit Schlafprobleme.' }, breakup: { label: 'Trennung', text: 'Ich gehe gerade durch eine Trennung.' }, simplify: { label: 'Einfacher', text: 'Sag es einfacher.' }, urgentLabel: 'Dringend', urgentText: 'Ich brauche jetzt dringend Hilfe.' },
-        links: { desktop: 'Desktop-Ansicht' },
-        settings: { summary: 'Demo-Einstellungen', patientPlaceholder: 'Optionale Patienten-ID', age: [['', 'Altersgruppe'], ['teen', 'Jugendlich'], ['adult', 'Erwachsen'], ['senior', 'Senior']], literacy: [['', 'Sprachniveau'], ['low', 'Niedrig'], ['medium', 'Mittel'], ['high', 'Hoch']], register: [['', 'Register'], ['plain', 'Einfach'], ['conversational', 'Alltaeglich'], ['clinical', 'Klinisch']], labels: ['Online-Rerank bevorzugen, wenn verfuegbar', 'Review- und Testinhalte einschliessen', 'Kompakten Debug-Block zeigen'] },
-        snapshot: { labels: ['Letztes Thema', 'Wissen', 'Routing', 'Speicher'], summaryEmpty: 'Noch keine aktive Gespraechszusammenfassung.', knowledgeEmpty: 'Kein Snippet ausgewaehlt.', routingEmpty: 'Routing-Details erscheinen nach einer Antwort.', memoryEmpty: 'Browserbasierter Speicher ist aktiv.' },
-        composer: { placeholder: 'Beschreibe kurz, was dir jetzt am meisten helfen wuerde.', send: 'Senden', clear: 'Leeren', record: 'Mikrofon', stopRecord: 'Stop', logout: 'Abmelden', autoSpeak: 'Antworten vorlesen', voiceNote: 'Mikrofon-Capture und lokale Sprachausgabe werden genutzt, wenn der Browser sie unterstuetzt.' },
-        statuses: { online: 'Online bereit', local: 'Nur lokal', offline: 'Offline' },
-        roles: { patient: 'Patient', assistant: 'Assistent', system: 'Demo' },
-        messages: { debug: 'debug', noResponse: '(keine Antwort)', unknownError: 'unbekannter Fehler', networkError: 'network_error', cleared: 'Die mobile Demo-Ansicht wurde geleert.', intro: 'Dies ist eine mobil optimierte Patientendemo. Antworten nutzen dieselbe Runtime-API wie die Desktop-Ansicht.', speechUnavailable: 'Dieser Browser unterstuetzt keine lokale Mikrofonerkennung.', speechCaptureStart: 'Mikrofonaufnahme gestartet.', speechCaptureError: 'Mikrofonfehler', speechCaptured: 'Erkannter Text', authRequired: 'Session abgelaufen, bitte erneut anmelden.' }
-      }
+        messagePlaceholder: 'Beschreibe kurz, was du gerade am dringendsten brauchst.',
+        alias: 'Anonymer Alias',
+        consent: 'Einwilligung für kurze Auszüge',
+        enabled: 'Aktiv',
+        disabled: 'Deaktiviert',
+        sessionLoading: 'Sitzungsdaten werden geladen.',
+        tokenEyebrow: 'Patiententoken',
+        tokenTitle: 'Anonymen Zugang erzeugen',
+        tokenLabelPlaceholder: 'Private Notiz',
+        tokenAliasPlaceholder: 'Alias oder leer für auto',
+        tokenExpiryPlaceholder: 'Tage',
+        issueToken: 'Token erzeugen',
+        noTokens: 'Noch keine Patiententoken ausgegeben.',
+        record: 'Aufnehmen',
+        stop: 'Stoppen',
+        send: 'Senden',
+        logout: 'Abmelden',
+        voiceAvailable: 'Audio-Upload ist verfügbar, wenn der Browser MediaRecorder unterstützt.',
+        voiceUnavailable: 'Audio-Upload ist in diesem Browser nicht verfügbar. Textchat bleibt nutzbar.',
+        roles: { developer: 'Entwickler', clinician: 'Klinik', patient: 'Patient', assistant: 'Assistent', system: 'System' },
+        views: { developer: 'Entwickleransicht', clinician: 'Klinikansicht', patient: 'Patientenansicht' },
+        patientCopy: 'Nur Patientenansicht ist in dieser Sitzung verfügbar.',
+        staffCopy: 'Mitarbeiter-Sitzungen können Ansichten wechseln und den Zugang pseudonym halten.',
+        activeAlias: (alias) => `Aktiver Alias: ${alias}`,
+        clinicianSession: (clinicianId) => `Klinik-Sitzung: ${clinicianId}`,
+        noAliasBound: 'Kein Alias an diese Sitzung gebunden.',
+        copyNow: 'Jetzt kopieren',
+        revoke: 'Widerrufen',
+        noAlias: 'Kein Alias',
+        intro: 'Diese mobile Ansicht nutzt dasselbe rollenbasierte, anonyme Token-Modell wie die Desktop-UI.',
+        statuses: { ready: 'Bereit', thinking: 'Denkt nach', uploading: 'Lädt hoch', recording: 'Aufnahme', error: 'Fehler' },
+        noResponse: '(keine Antwort)',
+        voiceUploaded: '[Sprachnachricht hochgeladen]',
+      },
+      hu: {
+        pageTitle: 'Pszichoterápiás portál mobil',
+        heroEyebrow: 'Mobil szerepkörös portál',
+        heroDefaultTitle: 'Anonim páciens munkamenet mobilon',
+        heroDefaultCopy: 'A pszeudonim tokenes munkamenet a páciensazonosságot a runtime-on kívül tartja.',
+        roleLabel: 'Szerep',
+        viewLabel: 'Nézet',
+        quicks: [['Alvás', 'Nehezen alszom mostanában.'], ['Stabilizálás', 'Szorongok és szeretnék egy rövid stabilizáló gyakorlatot.'], ['Sürgős', 'Sürgős segítségre van szükségem most.']],
+        desktop: 'Asztali',
+        themeMode: 'Hangulat',
+        themeSkin: 'Megjelenés',
+        themeAuto: 'Az automatikus hangulat aktív.',
+        language: 'Nyelv',
+        messagePlaceholder: 'Írd le röviden, mire lenne most a legnagyobb szükséged.',
+        alias: 'Anonim alias',
+        consent: 'Hozzájárulás rövid részlet tárolásához',
+        enabled: 'Engedélyezve',
+        disabled: 'Tiltva',
+        sessionLoading: 'A munkamenet betöltése folyamatban.',
+        tokenEyebrow: 'Páciens tokenek',
+        tokenTitle: 'Anonim hozzáférés kiadása',
+        tokenLabelPlaceholder: 'Privát címke',
+        tokenAliasPlaceholder: 'Alias vagy üresen az autohoz',
+        tokenExpiryPlaceholder: 'Napok',
+        issueToken: 'Token kiadása',
+        noTokens: 'Még nincs kiadott páciens token.',
+        record: 'Felvétel',
+        stop: 'Leállítás',
+        send: 'Küldés',
+        logout: 'Kilépés',
+        voiceAvailable: 'A hangfeltöltés elérhető, ha a böngésző támogatja a MediaRecorder-t.',
+        voiceUnavailable: 'Ebben a böngészőben nincs hangfeltöltés. A szöveges chat továbbra is használható.',
+        roles: { developer: 'Fejlesztő', clinician: 'Klinika', patient: 'Páciens', assistant: 'Asszisztens', system: 'Rendszer' },
+        views: { developer: 'Fejlesztői nézet', clinician: 'Klinikai nézet', patient: 'Páciens nézet' },
+        patientCopy: 'Ebben a munkamenetben csak páciens nézet érhető el.',
+        staffCopy: 'A személyzeti munkamenetek válthatnak nézetet, miközben a hozzáférés pszeudonim marad.',
+        activeAlias: (alias) => `Aktív alias: ${alias}`,
+        clinicianSession: (clinicianId) => `Klinikai munkamenet: ${clinicianId}`,
+        noAliasBound: 'Nincs alias ehhez a munkamenethez kötve.',
+        copyNow: 'Másold most',
+        revoke: 'Visszavonás',
+        noAlias: 'Nincs alias',
+        intro: 'Ez a mobil nézet ugyanazt a szerepkörös, anonim token modellt használja, mint az asztali felület.',
+        statuses: { ready: 'Kész', thinking: 'Gondolkodik', uploading: 'Feltöltés', recording: 'Felvétel', error: 'Hiba' },
+        noResponse: '(nincs válasz)',
+        voiceUploaded: '[hangüzenet feltöltve]',
+      },
+      en: {
+        pageTitle: 'Psychotherapy portal mobile',
+        heroEyebrow: 'Mobile role-aware portal',
+        heroDefaultTitle: 'Anonymous patient session on mobile',
+        heroDefaultCopy: 'Pseudonymous token sessions keep patient identity outside the runtime.',
+        roleLabel: 'Role',
+        viewLabel: 'View',
+        quicks: [['Sleep', 'I have been sleeping badly lately.'], ['Grounding', 'I feel anxious and need a short grounding exercise.'], ['Urgent', 'I need urgent help right now.']],
+        desktop: 'Desktop',
+        themeMode: 'Atmosphere',
+        themeSkin: 'Appearance',
+        themeAuto: 'Automatic ambience is active.',
+        language: 'Language',
+        messagePlaceholder: 'Briefly describe what you need most right now.',
+        alias: 'Anonymous alias',
+        consent: 'Consent to store short excerpt',
+        enabled: 'Enabled',
+        disabled: 'Disabled',
+        sessionLoading: 'Session identity loading.',
+        tokenEyebrow: 'Patient tokens',
+        tokenTitle: 'Issue anonymous access',
+        tokenLabelPlaceholder: 'Private label',
+        tokenAliasPlaceholder: 'Alias or leave empty for auto',
+        tokenExpiryPlaceholder: 'Days',
+        issueToken: 'Issue token',
+        noTokens: 'No issued patient tokens yet.',
+        record: 'Record',
+        stop: 'Stop',
+        send: 'Send',
+        logout: 'Logout',
+        voiceAvailable: 'Audio upload is available when the browser supports MediaRecorder.',
+        voiceUnavailable: 'Audio upload is not available in this browser. Text chat remains available.',
+        roles: { developer: 'Developer', clinician: 'Clinician', patient: 'Patient', assistant: 'Assistant', system: 'System' },
+        views: { developer: 'Developer view', clinician: 'Clinician view', patient: 'Patient view' },
+        patientCopy: 'Only patient view is available in this session.',
+        staffCopy: 'Staff sessions can switch views while keeping patient identity pseudonymous.',
+        activeAlias: (alias) => `Active alias: ${alias}`,
+        clinicianSession: (clinicianId) => `Clinician session: ${clinicianId}`,
+        noAliasBound: 'No alias is bound to this session.',
+        copyNow: 'Copy now',
+        revoke: 'Revoke',
+        noAlias: 'No alias',
+        intro: 'This mobile view uses the same role-aware, anonymous token model as the desktop UI.',
+        statuses: { ready: 'Ready', thinking: 'Thinking', uploading: 'Uploading', recording: 'Recording', error: 'Error' },
+        noResponse: '(no response)',
+        voiceUploaded: '[voice message uploaded]',
+      },
     };
 
-    const conversationId = `mobile-demo-${Date.now()}`;
-    const storageKey = 'patient-chat-mobile-browser-key';
-    const browserPatientKey = window.localStorage.getItem(storageKey) || `anon-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
-    window.localStorage.setItem(storageKey, browserPatientKey);
-    const languageLocale = { hu: 'hu-HU', en: 'en-US', de: 'de-DE' };
-    let currentLang = DEFAULT_UI_CONFIG.default_language;
-    let themeMode = 'manual';
-    let manualSkin = 'aare';
-    let activeThemeState = null;
-    let mediaRecorder = null;
-    let mediaChunks = [];
-    let mediaStream = null;
-    let pendingVoiceTranscript = '';
-    let speechRecognition = null;
-    let isRecording = false;
-
-    function copyFor(lang = currentLang) {
-      return UI_COPY[lang] || UI_COPY.en;
+    function mobileCopyFor(lang = mobileState.currentLang) {
+      return MOBILE_UI_COPY[lang] || MOBILE_UI_COPY.de;
     }
 
-    function themeCopyFor(lang = currentLang) {
-      return THEME_COPY[lang] || THEME_COPY.en;
+    function mobileReadLanguageCookie() {
+      const match = document.cookie.match(new RegExp(`(?:^|; )${MOBILE_LANGUAGE_COOKIE_NAME}=([^;]+)`));
+      return match ? decodeURIComponent(match[1]) : '';
     }
 
-    function languageName(code) {
-      const names = { hu: 'Magyar', en: 'English', de: 'Deutsch' };
-      return names[code] || code.toUpperCase();
+    function mobileSaveLanguagePreference(lang) {
+      window.localStorage.setItem(MOBILE_LANGUAGE_STORAGE_KEY, lang);
+      document.cookie = `${MOBILE_LANGUAGE_COOKIE_NAME}=${encodeURIComponent(lang)}; path=/; max-age=31536000; SameSite=Lax`;
     }
 
-    function loadThemePrefs() {
-      try {
-        const raw = window.localStorage.getItem('patient-chat-mobile-theme');
-        if (!raw) {
-          return;
-        }
-        const parsed = JSON.parse(raw);
-        if (parsed.mode === 'manual') {
-          themeMode = parsed.mode;
-        }
-        if (parsed.skin && ['aare', 'river', 'dusk'].includes(parsed.skin)) {
-          manualSkin = parsed.skin;
-        }
-      } catch {
-        themeMode = 'manual';
-        manualSkin = 'aare';
-      }
+    function mobileResolvePreferredLanguage(supported = mobileState.supportedLanguages, fallback = 'de') {
+      const saved = window.localStorage.getItem(MOBILE_LANGUAGE_STORAGE_KEY) || mobileReadLanguageCookie();
+      if (saved && supported.includes(saved)) return saved;
+      if (supported.includes(fallback)) return fallback;
+      if (supported.includes('de')) return 'de';
+      return supported[0] || 'de';
     }
 
-    function saveThemePrefs() {
-      window.localStorage.setItem('patient-chat-mobile-theme', JSON.stringify({ mode: themeMode, skin: manualSkin }));
+    const SKIN_LOGOS = {
+      aare: '/assets/logo_light.png',
+      river: '/assets/logo_light.png',
+      dusk: '/assets/logo_light.png',
+      azure: '/assets/logo_dark.png',
+    };
+
+    const mobilePortalLogo = document.getElementById('mobile-portal-logo');
+    const mobileStatusPill = document.getElementById('mobile-status-pill');
+    const mobileRolePill = document.getElementById('mobile-role-pill');
+    const mobileViewPill = document.getElementById('mobile-view-pill');
+    const mobileViewSwitcher = document.getElementById('mobile-view-switcher');
+    const mobileThemeModeInput = document.getElementById('mobile-theme-mode');
+    const mobileThemeSkinInput = document.getElementById('mobile-theme-skin');
+    const mobileThemeNote = document.getElementById('mobile-theme-note');
+    const mobileLanguageSelect = document.getElementById('mobile-language-select');
+    const mobileAliasField = document.getElementById('mobile-alias-field');
+    const mobileAliasSelect = document.getElementById('mobile-alias-select');
+    const mobileConsentSelect = document.getElementById('mobile-consent-select');
+    const mobileIdentityNote = document.getElementById('mobile-identity-note');
+    const mobileTokenPanel = document.getElementById('mobile-token-panel');
+    const mobileTokenLabel = document.getElementById('mobile-token-label');
+    const mobileTokenAlias = document.getElementById('mobile-token-alias');
+    const mobileTokenExpiry = document.getElementById('mobile-token-expiry');
+    const mobileIssueToken = document.getElementById('mobile-issue-token');
+    const mobileRawTokenBox = document.getElementById('mobile-raw-token-box');
+    const mobileTokenList = document.getElementById('mobile-token-list');
+    const mobileTimeline = document.getElementById('mobile-timeline');
+    const mobileDebugPanel = document.getElementById('mobile-debug-panel');
+    const mobileDebugJson = document.getElementById('mobile-debug-json');
+    const mobileMessageInput = document.getElementById('mobile-message-input');
+    const mobileSendButton = document.getElementById('mobile-send-button');
+    const mobileLogoutButton = document.getElementById('mobile-logout-button');
+    const mobileRecordButton = document.getElementById('mobile-record-button');
+    const mobileVoiceNote = document.getElementById('mobile-voice-note');
+    const mobileHeroTitle = document.getElementById('mobile-hero-title');
+    const mobileHeroCopy = document.getElementById('mobile-hero-copy');
+    const MOBILE_BUTTON_ICONS = {
+      record: '◉',
+      stop: '■',
+      logout: '↗',
+      send: '➜',
+      issueToken: '＋',
+      revoke: '−',
+      desktop: '▥',
+      quicks: ['☾', '◎', '!'],
+      views: { developer: '⌘', clinician: '✚', patient: '◌' },
+    };
+
+    function mobileThemeCopyFor(lang = mobileState.currentLang) {
+      return MOBILE_THEME_COPY[lang] || MOBILE_THEME_COPY.en;
     }
 
-    function getDayPeriod() {
+    function mobileSetIconButton(button, { icon, label, tooltip = label, collapse = false } = {}) {
+      button.classList.add('icon-action');
+      button.classList.toggle('compact-collapse', collapse);
+      button.setAttribute('title', tooltip);
+      button.setAttribute('aria-label', tooltip);
+      button.innerHTML = `<span class="button-icon" aria-hidden="true">${mobileEscapeHtml(icon || '•')}</span><span class="button-label">${mobileEscapeHtml(label || '')}</span>`;
+    }
+
+    function mobileSetStatus(key) {
+      const copy = mobileCopyFor();
+      const normalizedKey = String(key || '').toLowerCase();
+      mobileStatusPill.textContent = copy.statuses[normalizedKey] || key;
+    }
+
+    function mobileRoleLabel(role) {
+      const copy = mobileCopyFor();
+      return copy.roles[role] || role;
+    }
+
+    function mobileViewLabel(view) {
+      const copy = mobileCopyFor();
+      return copy.views[view] || view;
+    }
+
+    function mobileEscapeHtml(value) {
+      return String(value)
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#39;');
+    }
+
+    function mobileGetDayPeriod() {
       const hour = new Date().getHours();
       if (hour < 6) return 'night';
       if (hour < 11) return 'morning';
@@ -766,604 +735,483 @@
       return 'night';
     }
 
-    function detectMood(text = '', handoff = false) {
+    function mobileDetectMood(text = '', handoff = false) {
       const value = text.toLowerCase();
-      if (handoff || /(surg|urgent|panic|kriz|can't go on|cannot go on|dringend)/.test(value)) return 'urgent';
+      if (handoff || /(sürg|urgent|panic|kriz|can't go on|cannot go on|dringend)/.test(value)) return 'urgent';
       if (/(szorong|anx|worry|stress|angst|overwhelm)/.test(value)) return 'heavy';
       if (/(alv|sleep|rest|ruhe|pihen|faradt|tired)/.test(value)) return 'rest';
       if (/(legz|breath|calm|nyugod|ruhig|jobb|better|lighter)/.test(value)) return 'calm';
       return 'steady';
     }
 
-    function resolveThemeState({ text = '', handoff = false } = {}) {
-      const period = getDayPeriod();
-      const mood = detectMood(text, handoff);
-      let skin = manualSkin;
-      if (themeMode === 'auto') {
-        if (mood === 'urgent' || mood === 'heavy') {
+    function mobileLoadThemePrefs() {
+      try {
+        const raw = window.localStorage.getItem('patient-chat-mobile-theme');
+        if (!raw) return;
+        const parsed = JSON.parse(raw);
+        if (parsed.mode === 'auto' || parsed.mode === 'manual') mobileState.themeMode = parsed.mode;
+        if (parsed.skin && ['aare', 'river', 'dusk', 'azure'].includes(parsed.skin)) mobileState.manualSkin = parsed.skin;
+      } catch {
+        mobileState.themeMode = 'auto';
+        mobileState.manualSkin = 'aare';
+      }
+    }
+
+    function mobileSaveThemePrefs() {
+      window.localStorage.setItem('patient-chat-mobile-theme', JSON.stringify({ mode: mobileState.themeMode, skin: mobileState.manualSkin }));
+    }
+
+    function mobileResolveThemeState({ text = '', handoff = false } = {}) {
+      const period = mobileGetDayPeriod();
+      const mood = mobileDetectMood(text, handoff);
+      let skin = mobileState.manualSkin;
+      let primaryReason = 'manual';
+      let secondaryReason = 'manual';
+      if (mobileState.themeMode === 'auto') {
+        if (mobileState.session && (mobileState.session.role === 'developer' || mobileState.session.active_view === 'developer')) {
+          skin = 'azure';
+          primaryReason = 'developer';
+          secondaryReason = mood;
+        } else if (mood === 'urgent' || mood === 'heavy') {
           skin = 'dusk';
+          primaryReason = mood;
+          secondaryReason = period;
         } else if (period === 'night' || period === 'evening') {
           skin = 'dusk';
-        } else if (ageGroupInput.value === 'teen') {
-          skin = 'river';
-        } else if (literacyLevelInput.value === 'low' || preferredRegisterInput.value === 'plain') {
+          primaryReason = period;
+          secondaryReason = mood;
+        } else if (mobileState.session && mobileState.session.role === 'patient') {
           skin = 'aare';
+          primaryReason = period;
+          secondaryReason = mood;
         } else {
           skin = 'river';
+          primaryReason = period;
+          secondaryReason = mood;
         }
       }
       let tone = 'soft';
       if (mood === 'urgent' || mood === 'heavy') tone = 'grounded';
-      if (mood === 'calm') tone = 'lifted';
-      return {
-        skin,
-        tone,
-        period,
-        mood,
-        primaryReason: themeMode === 'manual' ? 'manual' : period,
-        secondaryReason: themeMode === 'manual' ? 'manual' : mood
-      };
+      else if (mood === 'calm') tone = 'lifted';
+      return { skin, tone, period, mood, primaryReason, secondaryReason };
     }
 
-    function buildThemeNote(state) {
-      const themeCopy = themeCopyFor();
-      const skinName = (themeCopy.skins[state.skin] || state.skin).replace(/^Skin:\s*/, '');
-      const primary = themeCopy.reasons[state.primaryReason] || state.primaryReason;
-      const secondary = themeCopy.reasons[state.secondaryReason] || state.secondaryReason;
+    function mobileBuildThemeNote(themeState) {
+      const copy = mobileThemeCopyFor();
+      const skinName = copy.skins[themeState.skin] || themeState.skin;
+      const primary = copy.reasons[themeState.primaryReason] || themeState.primaryReason;
+      const secondary = copy.reasons[themeState.secondaryReason] || themeState.secondaryReason;
       return `<strong>${skinName}</strong> · ${primary} · ${secondary}`;
     }
 
-    function applyThemeState(options = {}) {
-      activeThemeState = resolveThemeState(options);
-      document.documentElement.dataset.skin = activeThemeState.skin;
-      document.documentElement.dataset.tone = activeThemeState.tone;
-      document.documentElement.dataset.period = activeThemeState.period;
-      themeModeInput.value = themeMode;
-      themeSkinInput.value = manualSkin;
-      themeSkinInput.disabled = themeMode !== 'manual';
-      themeNoteNode.innerHTML = buildThemeNote(activeThemeState);
+    function mobileApplyThemeOptions() {
+      const copy = mobileThemeCopyFor();
+      mobileThemeModeInput.innerHTML = copy.modes.map(([value, label]) => `<option value="${value}">${label}</option>`).join('');
+      mobileThemeSkinInput.innerHTML = Object.entries(copy.skins).map(([value, label]) => `<option value="${value}">${label}</option>`).join('');
+      mobileThemeModeInput.value = mobileState.themeMode;
+      mobileThemeSkinInput.value = mobileState.manualSkin;
     }
 
-    function browserLocale() {
-      return languageLocale[currentLang] || 'en-US';
+    function mobileApplyThemeState(options = {}) {
+      mobileState.activeThemeState = mobileResolveThemeState(options);
+      document.documentElement.dataset.skin = mobileState.activeThemeState.skin;
+      document.documentElement.dataset.tone = mobileState.activeThemeState.tone;
+      document.documentElement.dataset.period = mobileState.activeThemeState.period;
+      mobilePortalLogo.src = SKIN_LOGOS[mobileState.activeThemeState.skin] || SKIN_LOGOS.aare;
+      mobileThemeModeInput.value = mobileState.themeMode;
+      mobileThemeSkinInput.value = mobileState.manualSkin;
+      mobileThemeSkinInput.disabled = mobileState.themeMode !== 'manual';
+      mobileThemeNote.innerHTML = mobileBuildThemeNote(mobileState.activeThemeState);
     }
 
-    function supportsSpeechRecognition() {
-      return Boolean(window.SpeechRecognition || window.webkitSpeechRecognition);
+    function mobileApplyStaticCopy() {
+      const copy = mobileCopyFor();
+      document.documentElement.lang = mobileState.currentLang;
+      document.title = copy.pageTitle;
+      document.querySelector('.hero .eyebrow').textContent = copy.heroEyebrow;
+      if (!mobileState.session) {
+        mobileHeroTitle.textContent = copy.heroDefaultTitle;
+        mobileHeroCopy.textContent = copy.heroDefaultCopy;
+        mobileIdentityNote.textContent = copy.sessionLoading;
+      }
+      document.querySelectorAll('.chip[data-quick]').forEach((button, index) => {
+        const [label, prompt] = copy.quicks[index];
+        mobileSetIconButton(button, { icon: MOBILE_BUTTON_ICONS.quicks[index] || '•', label, collapse: true });
+        button.dataset.quick = prompt;
+      });
+      mobileSetIconButton(document.querySelector('.chip[href="/chat"]'), { icon: MOBILE_BUTTON_ICONS.desktop, label: copy.desktop, collapse: true });
+      document.querySelector('label[for="mobile-theme-mode"]').textContent = copy.themeMode;
+      document.querySelector('label[for="mobile-theme-skin"]').textContent = copy.themeSkin;
+      if (!mobileState.activeThemeState) mobileThemeNote.textContent = copy.themeAuto;
+      document.querySelector('label[for="mobile-language-select"]').textContent = copy.language;
+      document.querySelector('label[for="mobile-alias-select"]').textContent = copy.alias;
+      document.querySelector('label[for="mobile-consent-select"]').textContent = copy.consent;
+      const consentValue = mobileConsentSelect.value || 'true';
+      mobileConsentSelect.innerHTML = `<option value="true">${copy.enabled}</option><option value="false">${copy.disabled}</option>`;
+      mobileConsentSelect.value = consentValue;
+      mobileTokenPanel.querySelector('.eyebrow').textContent = copy.tokenEyebrow;
+      mobileTokenPanel.querySelector('h2').textContent = copy.tokenTitle;
+      mobileTokenLabel.placeholder = copy.tokenLabelPlaceholder;
+      mobileTokenAlias.placeholder = copy.tokenAliasPlaceholder;
+      mobileTokenExpiry.placeholder = copy.tokenExpiryPlaceholder;
+      mobileSetIconButton(mobileIssueToken, { icon: MOBILE_BUTTON_ICONS.issueToken, label: copy.issueToken, collapse: true });
+      mobileMessageInput.placeholder = copy.messagePlaceholder;
+      mobileSetIconButton(mobileRecordButton, { icon: mobileState.isRecording ? MOBILE_BUTTON_ICONS.stop : MOBILE_BUTTON_ICONS.record, label: mobileState.isRecording ? copy.stop : copy.record, collapse: true });
+      mobileSetIconButton(mobileSendButton, { icon: MOBILE_BUTTON_ICONS.send, label: copy.send, collapse: true });
+      mobileSetIconButton(mobileLogoutButton, { icon: MOBILE_BUTTON_ICONS.logout, label: copy.logout, collapse: true });
+      mobileUpdateAudioUi();
+      mobileRenderLanguages();
     }
 
-    function supportsAudioCapture() {
+    function mobileAddMessage(role, text, meta = []) {
+      const article = document.createElement('article');
+      article.className = `message ${role}`;
+      article.innerHTML = `<div class="message-head">${role === 'assistant' ? mobileCopyFor().roles.assistant : role === 'system' ? mobileCopyFor().roles.system : mobileRoleLabel(role)}</div><div class="message-body">${mobileEscapeHtml(text)}</div>`;
+      if (meta.length) {
+        const row = document.createElement('div');
+        row.className = 'meta';
+        meta.forEach((item) => {
+          const span = document.createElement('span');
+          span.className = 'chip';
+          span.textContent = item;
+          row.appendChild(span);
+        });
+        article.appendChild(row);
+      }
+      mobileTimeline.appendChild(article);
+      mobileTimeline.scrollTop = mobileTimeline.scrollHeight;
+    }
+
+    function mobileSupportsAudio() {
       return Boolean(navigator.mediaDevices && navigator.mediaDevices.getUserMedia && window.MediaRecorder);
     }
 
-    function updateVoiceUi() {
-      const copy = copyFor();
-      recordButton.textContent = isRecording ? copy.composer.stopRecord : copy.composer.record;
-      logoutButton.textContent = copy.composer.logout;
-      autoSpeakLabel.textContent = copy.composer.autoSpeak;
-      voiceNoteNode.textContent = (supportsAudioCapture() || supportsSpeechRecognition()) ? copy.composer.voiceNote : copy.messages.speechUnavailable;
+    function mobileUpdateAudioUi() {
+      const copy = mobileCopyFor();
+      mobileVoiceNote.textContent = mobileSupportsAudio() ? copy.voiceAvailable : copy.voiceUnavailable;
+      mobileRecordButton.disabled = !mobileSupportsAudio();
+      mobileSetIconButton(mobileRecordButton, { icon: mobileState.isRecording ? MOBILE_BUTTON_ICONS.stop : MOBILE_BUTTON_ICONS.record, label: mobileState.isRecording ? copy.stop : copy.record, collapse: true });
     }
 
-    function ensureSpeechRecognition() {
-      const RecognitionCtor = window.SpeechRecognition || window.webkitSpeechRecognition;
-      if (!RecognitionCtor) {
-        return null;
+    async function mobileFetchJson(url, options = {}) {
+      const response = await fetch(url, options);
+      const payload = await response.json().catch(() => ({}));
+      if (response.status === 401 && payload.error === 'auth_required') {
+        window.location.href = payload.login_url || '/login';
+        throw new Error('auth_required');
       }
-      if (!speechRecognition) {
-        speechRecognition = new RecognitionCtor();
-        speechRecognition.continuous = false;
-        speechRecognition.interimResults = false;
-        speechRecognition.maxAlternatives = 1;
-        speechRecognition.onstart = () => {
-          if (!isRecording) {
-            isRecording = true;
-            updateVoiceUi();
-            addMessage('system', copyFor().messages.speechCaptureStart, ['voice']);
-          }
-        };
-        speechRecognition.onend = () => {
-          if (!mediaRecorder || mediaRecorder.state !== 'recording') {
-            isRecording = false;
-            updateVoiceUi();
-          }
-        };
-        speechRecognition.onerror = (event) => {
-          isRecording = false;
-          updateVoiceUi();
-          addMessage('system', `${copyFor().messages.speechCaptureError}: ${event.error || copyFor().messages.unknownError}`, ['voice']);
-        };
-        speechRecognition.onresult = (event) => {
-          const transcript = Array.from(event.results || [])
-            .map((result) => result[0] && result[0].transcript ? result[0].transcript : '')
-            .join(' ')
-            .trim();
-          if (!transcript) {
-            return;
-          }
-          pendingVoiceTranscript = transcript;
-          addMessage('system', `${copyFor().messages.speechCaptured}: ${transcript}`, ['voice']);
-          if (!supportsAudioCapture()) {
-            sendMessage(transcript, { source: 'voice' });
-          }
-        };
-      }
-      speechRecognition.lang = browserLocale();
-      return speechRecognition;
+      if (!response.ok) throw new Error(payload.message || payload.error || 'request_failed');
+      return payload;
     }
 
-    function playAssistantAudio(tts) {
-      if (!autoSpeakInput.checked || !tts || !tts.audio_url) {
-        return false;
-      }
-      const audio = new Audio(tts.audio_url);
-      audio.play().catch(() => {
-        speakAssistantText(tts.text || '');
-      });
-      return true;
+    function mobileRenderLanguages() {
+      mobileLanguageSelect.innerHTML = mobileState.supportedLanguages.map((lang) => `<option value="${lang}">${MOBILE_LANGUAGE_NAMES[lang] || lang.toUpperCase()}</option>`).join('');
+      mobileLanguageSelect.value = mobileState.currentLang;
+      mobileSaveLanguagePreference(mobileState.currentLang);
+      mobileApplyThemeOptions();
     }
 
-    function speakAssistantText(text) {
-      if (!autoSpeakInput.checked || !('speechSynthesis' in window) || !text) {
+    function mobileRenderAliases() {
+      if (!mobileState.patientAliases.length) {
+        mobileAliasSelect.innerHTML = `<option value="">${mobileCopyFor().noAlias}</option>`;
+        mobileState.selectedAlias = '';
         return;
       }
-      const utterance = new SpeechSynthesisUtterance(String(text).slice(0, 280));
-      utterance.lang = browserLocale();
-      window.speechSynthesis.cancel();
-      window.speechSynthesis.speak(utterance);
+      if (!mobileState.selectedAlias || !mobileState.patientAliases.some((item) => item.patient_alias_key === mobileState.selectedAlias)) {
+        mobileState.selectedAlias = mobileState.patientAliases[0].patient_alias_key;
+      }
+      mobileAliasSelect.innerHTML = mobileState.patientAliases.map((item) => `<option value="${mobileEscapeHtml(item.patient_alias_key)}">${mobileEscapeHtml(item.patient_alias_key)}</option>`).join('');
+      mobileAliasSelect.value = mobileState.selectedAlias;
     }
 
-    async function handleLogout() {
+    function mobileRenderSession() {
+      const session = mobileState.session;
+      mobileRolePill.textContent = mobileRoleLabel(session.role);
+      mobileViewPill.textContent = mobileViewLabel(session.active_view);
+      mobileHeroTitle.textContent = `${mobileViewLabel(session.active_view)} mobile`;
+      mobileHeroCopy.textContent = session.role === 'patient'
+        ? mobileCopyFor().patientCopy
+        : mobileCopyFor().staffCopy;
+      mobileIdentityNote.textContent = session.patient_alias_key
+        ? mobileCopyFor().activeAlias(session.patient_alias_key)
+        : session.clinician_id
+          ? mobileCopyFor().clinicianSession(session.clinician_id)
+          : mobileCopyFor().noAliasBound;
+      mobileAliasField.classList.toggle('hidden', !(session.role === 'clinician' || session.role === 'developer'));
+      mobileTokenPanel.classList.toggle('hidden', !(session.role === 'clinician' || session.role === 'developer'));
+      mobileDebugPanel.classList.toggle('hidden', !(session.role === 'developer' && session.active_view === 'developer'));
+      mobileViewSwitcher.innerHTML = '';
+      session.allowed_views.forEach((view) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = `view-button${view === session.active_view ? ' active' : ''}`;
+        mobileSetIconButton(button, { icon: MOBILE_BUTTON_ICONS.views[view] || '•', label: mobileViewLabel(view), collapse: true });
+        button.addEventListener('click', () => mobileSwitchView(view));
+        mobileViewSwitcher.appendChild(button);
+      });
+      mobileApplyThemeState();
+    }
+
+    function mobileRenderTokens() {
+      mobileTokenList.innerHTML = '';
+      if (!mobileState.tokens.length) {
+        mobileTokenList.innerHTML = `<div class="tiny">${mobileCopyFor().noTokens}</div>`;
+        return;
+      }
+      mobileState.tokens.forEach((record) => {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'token-card';
+        wrapper.innerHTML = `<div class="tiny"><strong>${mobileEscapeHtml(record.patient_alias_key)}</strong></div><div class="tiny">${mobileEscapeHtml(record.token_preview || 'n/a')} · ${record.is_active ? mobileCopyFor().enabled.toLowerCase() : mobileCopyFor().disabled.toLowerCase()}</div>`;
+        if (record.is_active) {
+          const revoke = document.createElement('button');
+          revoke.type = 'button';
+          revoke.className = 'secondary';
+          mobileSetIconButton(revoke, { icon: MOBILE_BUTTON_ICONS.revoke, label: mobileCopyFor().revoke, collapse: true });
+          revoke.addEventListener('click', () => mobileRevokeToken(record.token_id));
+          wrapper.appendChild(revoke);
+        }
+        mobileTokenList.appendChild(wrapper);
+      });
+    }
+
+    async function mobileLoadTokens() {
+      const payload = await mobileFetchJson('/clinical/patient-tokens');
+      mobileState.tokens = payload.tokens || [];
+      mobileState.patientAliases = payload.patient_aliases || [];
+      mobileRenderAliases();
+      mobileRenderTokens();
+    }
+
+    async function mobileIssueTokenAction() {
+      mobileIssueToken.disabled = true;
+      try {
+        const payload = await mobileFetchJson('/clinical/patient-tokens', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            action: 'issue',
+            label: mobileTokenLabel.value.trim(),
+            patient_alias_key: mobileTokenAlias.value.trim(),
+            expires_in_days: Number(mobileTokenExpiry.value || 30),
+          }),
+        });
+        mobileRawTokenBox.classList.remove('hidden');
+        mobileRawTokenBox.textContent = `${mobileCopyFor().copyNow}: ${payload.raw_token}`;
+        mobileTokenLabel.value = '';
+        mobileTokenAlias.value = '';
+        await mobileLoadTokens();
+      } catch (error) {
+        mobileAddMessage('system', error.message, ['token']);
+      } finally {
+        mobileIssueToken.disabled = false;
+      }
+    }
+
+    async function mobileRevokeToken(tokenId) {
+      try {
+        await mobileFetchJson('/clinical/patient-tokens', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ action: 'revoke', token_id: tokenId }),
+        });
+        await mobileLoadTokens();
+      } catch (error) {
+        mobileAddMessage('system', error.message, ['token']);
+      }
+    }
+
+    function mobilePatientIdentityPayload() {
+      const payload = { consent_to_store_excerpt: mobileConsentSelect.value === 'true' };
+      if (mobileState.session && mobileState.session.role !== 'patient' && mobileState.selectedAlias) {
+        payload.anonymous_subject_key = mobileState.selectedAlias;
+      }
+      return payload;
+    }
+
+    async function mobileSwitchView(view) {
+      if (!mobileState.session || mobileState.session.active_view === view) return;
+      try {
+        const payload = await mobileFetchJson('/auth/switch-view', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ view }),
+        });
+        mobileState.session = payload.session;
+        mobileRenderSession();
+      } catch (error) {
+        mobileAddMessage('system', error.message, ['switch']);
+      }
+    }
+
+    async function mobileSendText(text) {
+      if (!text.trim()) return;
+      mobileApplyThemeState({ text });
+      mobileAddMessage('patient', text, mobileState.selectedAlias ? [mobileState.selectedAlias] : []);
+      mobileMessageInput.value = '';
+      mobileSendButton.disabled = true;
+      mobileSetStatus('thinking');
+      try {
+        const payload = await mobileFetchJson('/runtime/text', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            text,
+            lang: mobileState.currentLang,
+            patient_identity: mobilePatientIdentityPayload(),
+            synthesize_speech: true,
+            debug: Boolean(mobileState.session && mobileState.session.role === 'developer' && mobileState.session.active_view === 'developer'),
+          }),
+        });
+        const selection = payload.selection || {};
+        mobileAddMessage('assistant', selection.text || '(no response)', selection.category ? [`cat:${selection.category}`] : []);
+        mobileDebugJson.textContent = JSON.stringify(payload.debug || {}, null, 2);
+        if (payload.tts && payload.tts.audio_url) {
+          const audio = new Audio(payload.tts.audio_url);
+          audio.play().catch(() => undefined);
+        }
+        mobileApplyThemeState({ text, handoff: Boolean(payload.handoff_triggered) });
+        mobileSetStatus('ready');
+      } catch (error) {
+        mobileAddMessage('system', error.message, ['error']);
+        mobileSetStatus('error');
+      } finally {
+        mobileSendButton.disabled = false;
+      }
+    }
+
+    async function mobileSendAudio(blob) {
+      mobileAddMessage('patient', mobileCopyFor().voiceUploaded, ['audio']);
+      mobileSendButton.disabled = true;
+      mobileSetStatus('uploading');
+      const formData = new FormData();
+      formData.append('audio', blob, `mobile-note-${Date.now()}.webm`);
+      formData.append('lang', mobileState.currentLang);
+      formData.append('patient_identity', JSON.stringify(mobilePatientIdentityPayload()));
+      formData.append('synthesize_speech', 'true');
+      formData.append('debug', String(Boolean(mobileState.session && mobileState.session.role === 'developer' && mobileState.session.active_view === 'developer')));
+      try {
+        const response = await fetch('/runtime/audio-upload', { method: 'POST', body: formData });
+        const payload = await response.json();
+        if (response.status === 401 && payload.error === 'auth_required') {
+          window.location.href = payload.login_url || '/login';
+          return;
+        }
+        if (!response.ok) throw new Error(payload.message || payload.error || 'audio_failed');
+        mobileAddMessage('assistant', (payload.selection || {}).text || mobileCopyFor().noResponse, ['audio']);
+        mobileDebugJson.textContent = JSON.stringify(payload.debug || {}, null, 2);
+        if (payload.tts && payload.tts.audio_url) {
+          const audio = new Audio(payload.tts.audio_url);
+          audio.play().catch(() => undefined);
+        }
+        mobileSetStatus('ready');
+      } catch (error) {
+        mobileAddMessage('system', error.message, ['audio']);
+        mobileSetStatus('error');
+      } finally {
+        mobileSendButton.disabled = false;
+      }
+    }
+
+    async function mobileToggleRecording() {
+      if (!mobileSupportsAudio()) return;
+      if (mobileState.isRecording && mobileState.mediaRecorder) {
+        mobileState.mediaRecorder.stop();
+        return;
+      }
+      mobileState.mediaStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      mobileState.mediaChunks = [];
+      mobileState.mediaRecorder = new MediaRecorder(mobileState.mediaStream);
+      mobileState.mediaRecorder.addEventListener('dataavailable', (event) => {
+        if (event.data && event.data.size > 0) mobileState.mediaChunks.push(event.data);
+      });
+      mobileState.mediaRecorder.addEventListener('start', () => {
+        mobileState.isRecording = true;
+        mobileUpdateAudioUi();
+        mobileSetStatus('recording');
+      });
+      mobileState.mediaRecorder.addEventListener('stop', async () => {
+        const blob = new Blob(mobileState.mediaChunks, { type: mobileState.mediaRecorder.mimeType || 'audio/webm' });
+        mobileState.isRecording = false;
+        mobileUpdateAudioUi();
+        if (mobileState.mediaStream) mobileState.mediaStream.getTracks().forEach((track) => track.stop());
+        await mobileSendAudio(blob);
+      });
+      mobileState.mediaRecorder.start();
+    }
+
+    async function mobileLogout() {
       try {
         await fetch('/auth/logout', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ reason: 'user_logout' })
+          body: JSON.stringify({ reason: 'user_logout' }),
         });
       } finally {
         window.location.href = '/login';
       }
     }
 
-    function startVoiceCapture() {
-      if (supportsAudioCapture()) {
-        toggleAudioRecording();
-        return;
-      }
-      const recognition = ensureSpeechRecognition();
-      if (!recognition) {
-        addMessage('system', copyFor().messages.speechUnavailable, ['voice']);
-        return;
-      }
-      if (isRecording) {
-        recognition.stop();
-        return;
-      }
-      recognition.lang = browserLocale();
-      recognition.start();
+    async function mobileLoadContext() {
+      const payload = await mobileFetchJson('/auth/session/context');
+      mobileState.session = payload.session;
+      mobileState.supportedLanguages = payload.supported_languages || mobileState.supportedLanguages;
+      mobileState.currentLang = mobileResolvePreferredLanguage(mobileState.supportedLanguages, payload.default_language || 'de');
+      mobileState.patientAliases = payload.patient_aliases || [];
+      mobileApplyStaticCopy();
+      mobileRenderLanguages();
+      mobileRenderAliases();
+      mobileRenderSession();
+      if (mobileState.session.role !== 'patient') await mobileLoadTokens();
     }
 
-    async function toggleAudioRecording() {
-      if (mediaRecorder && mediaRecorder.state === 'recording') {
-        mediaRecorder.stop();
-        if (speechRecognition) {
-          speechRecognition.stop();
-        }
-        return;
-      }
-      if (!supportsAudioCapture()) {
-        startVoiceCapture();
-        return;
-      }
-      pendingVoiceTranscript = '';
-      mediaStream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      mediaChunks = [];
-      mediaRecorder = new MediaRecorder(mediaStream);
-      mediaRecorder.addEventListener('dataavailable', (event) => {
-        if (event.data && event.data.size > 0) {
-          mediaChunks.push(event.data);
-        }
-      });
-      mediaRecorder.addEventListener('start', () => {
-        isRecording = true;
-        updateVoiceUi();
-        addMessage('system', copyFor().messages.speechCaptureStart, ['voice', 'upload']);
-        const recognition = ensureSpeechRecognition();
-        if (recognition) {
-          try {
-            recognition.lang = browserLocale();
-            recognition.start();
-          } catch {
-            return;
-          }
-        }
-      });
-      mediaRecorder.addEventListener('stop', async () => {
-        isRecording = false;
-        updateVoiceUi();
-        if (speechRecognition) {
-          try {
-            speechRecognition.stop();
-          } catch {
-            return;
-          }
-        }
-        mediaStream.getTracks().forEach((track) => track.stop());
-        const audioBlob = new Blob(mediaChunks, { type: mediaRecorder.mimeType || 'audio/webm' });
-        await sendAudioMessage(audioBlob, pendingVoiceTranscript);
-      });
-      mediaRecorder.start();
-    }
-
-    async function sendAudioMessage(audioBlob, transcriptText = '') {
-      addMessage('patient', transcriptText || '[voice note uploaded]', ['voice', 'upload', 'mobile']);
-      sendButton.disabled = true;
-      const formData = new FormData();
-      formData.append('audio', audioBlob, `patient-note-${Date.now()}.webm`);
-      formData.append('lang', currentLang);
-      formData.append('conversation_id', conversationId);
-      formData.append('patient_identity', JSON.stringify({
-        browser_patient_key: browserPatientKey,
-        consent_to_store_excerpt: true
-      }));
-      formData.append('profile_overrides', JSON.stringify(buildProfileOverrides()));
-      formData.append('prefer_online', String(preferOnlineInput.checked));
-      formData.append('debug', String(debugModeInput.checked));
-      formData.append('synthesize_speech', String(autoSpeakInput.checked));
-      if (transcriptText) {
-        formData.append('transcript_text', transcriptText);
-      }
-      if (patientIdInput.value.trim()) {
-        formData.append('patient_id', patientIdInput.value.trim());
-      }
-      try {
-        const response = await fetch('/runtime/audio-upload', {
-          method: 'POST',
-          body: formData
-        });
-        const data = await response.json();
-        if (response.status === 401 && data.error === 'auth_required') {
-          addMessage('system', copyFor().messages.authRequired, ['auth']);
-          window.location.href = data.login_url || '/login';
-          return;
-        }
-        if (!response.ok) {
-          addMessage('system', `${data.error || 'request_failed'}: ${data.message || copyFor().messages.unknownError}`, ['error']);
-          return;
-        }
-        const meta = [];
-        if ((data.selection || {}).category) meta.push(`cat:${data.selection.category}`);
-        if ((data.selection || {}).item_id) meta.push(`item:${data.selection.item_id}`);
-        if (data.matched_trigger_id) meta.push(`trigger:${data.matched_trigger_id}`);
-        if ((data.hybrid_selection || {}).status) meta.push(`hybrid:${data.hybrid_selection.status}`);
-        if (((data.selection || {}).content_meta || {}).status) {
-          meta.push(`src:${data.selection.content_meta.src}`);
-          meta.push(`status:${data.selection.content_meta.status}`);
-        }
-        addMessage('assistant', (data.selection || {}).text || copyFor().messages.noResponse, meta);
-        if (!playAssistantAudio(data.tts)) {
-          speakAssistantText((data.selection || {}).text || '');
-        }
-        updateSnapshot(data);
-        if (data.handoff_triggered) {
-          applyThemeState({ handoff: true });
-        }
-        renderDebug(data.debug);
-      } catch (error) {
-        addMessage('system', `${copyFor().messages.networkError}: ${error.message}`, ['offline']);
-      } finally {
-        sendButton.disabled = false;
-        pendingVoiceTranscript = '';
-      }
-    }
-
-    function applyOptions(selectNode, options) {
-      const currentValue = selectNode.value;
-      selectNode.innerHTML = options.map(([value, label]) => `<option value="${value}">${label}</option>`).join('');
-      selectNode.value = options.some(([value]) => value === currentValue) ? currentValue : options[0][0];
-    }
-
-    function populateLanguageOptions(config) {
-      const supported = config.supported_languages || DEFAULT_UI_CONFIG.supported_languages;
-      langSelect.innerHTML = supported.map((lang) => `<option value="${lang}">${languageName(lang)}</option>`).join('');
-      currentLang = supported.includes(currentLang)
-        ? currentLang
-        : (supported.includes(config.default_language) ? config.default_language : supported[0]);
-      langSelect.value = currentLang;
-    }
-
-    function applyStaticUi() {
-      const copy = copyFor();
-      const themeCopy = themeCopyFor();
-      document.documentElement.lang = currentLang;
-      heroEyebrow.textContent = copy.heroEyebrow;
-      heroTitle.textContent = copy.heroTitle;
-      languageLabel.textContent = copy.language;
-      settingsSummary.textContent = copy.settings.summary;
-      patientIdInput.placeholder = copy.settings.patientPlaceholder;
-      applyOptions(ageGroupInput, copy.settings.age);
-      applyOptions(literacyLevelInput, copy.settings.literacy);
-      applyOptions(preferredRegisterInput, copy.settings.register);
-      applyOptions(themeModeInput, themeCopy.modes);
-      applyOptions(themeSkinInput, Object.entries(themeCopy.skins));
-      themeModeInput.value = themeMode;
-      themeSkinInput.value = manualSkin;
-      settingsLabels[0].lastChild.textContent = ` ${copy.settings.labels[0]}`;
-      settingsLabels[1].lastChild.textContent = ` ${copy.settings.labels[1]}`;
-      settingsLabels[2].lastChild.textContent = ` ${copy.settings.labels[2]}`;
-      quickButtons.forEach((button) => {
-        const quick = copy.quick[button.dataset.quickKey];
-        button.textContent = quick.label;
-        button.dataset.quick = quick.text;
-      });
-      quickUrgentButton.textContent = copy.quick.urgentLabel;
-      desktopLink.textContent = copy.links.desktop;
-      snapshotLabels.forEach((node, index) => {
-        node.textContent = copy.snapshot.labels[index];
-      });
-      if (!snapshotSummary.dataset.live) snapshotSummary.textContent = copy.snapshot.summaryEmpty;
-      if (!snapshotKnowledge.dataset.live) snapshotKnowledge.textContent = copy.snapshot.knowledgeEmpty;
-      if (!snapshotRouting.dataset.live) snapshotRouting.textContent = copy.snapshot.routingEmpty;
-      if (!snapshotMemory.dataset.live) snapshotMemory.textContent = copy.snapshot.memoryEmpty;
-      messageInput.placeholder = copy.composer.placeholder;
-      recordButton.textContent = copy.composer.record;
-      sendButton.textContent = copy.composer.send;
-      clearButton.textContent = copy.composer.clear;
-      if (!patientIdInput.value.trim()) {
-        identityNote.textContent = copy.identityWaiting;
-      }
-      updateIdentityNote();
-      updateVoiceUi();
-      applyThemeState();
-    }
-
-    async function loadUiConfig() {
-      try {
-        const response = await fetch('/ui-config');
-        if (!response.ok) {
-          throw new Error('ui_config_failed');
-        }
-        const payload = await response.json();
-        populateLanguageOptions(payload);
-      } catch {
-        populateLanguageOptions(DEFAULT_UI_CONFIG);
-      }
-      applyStaticUi();
-    }
-
-    function updateIdentityNote() {
-      const patientId = patientIdInput.value.trim();
-      const label = patientId ? `patient:${patientId}` : `browser:${browserPatientKey}`;
-      identityPill.textContent = label;
-      identityNote.textContent = `${copyFor().identityPrefix}${label}`;
-    }
-
-    function addMessage(role, text, meta = []) {
-      const article = document.createElement('article');
-      article.className = `message ${role}`;
-
-      const head = document.createElement('div');
-      head.className = 'message-head';
-      head.textContent = role === 'patient' ? copyFor().roles.patient : role === 'assistant' ? copyFor().roles.assistant : copyFor().roles.system;
-
-      const body = document.createElement('div');
-      body.className = 'message-body';
-      body.textContent = text;
-
-      article.append(head, body);
-
-      if (meta.length) {
-        const row = document.createElement('div');
-        row.className = 'chip-row';
-        meta.forEach((value) => {
-          const chip = document.createElement('span');
-          chip.className = 'chip';
-          chip.textContent = value;
-          row.appendChild(chip);
-        });
-        article.appendChild(row);
-      }
-
-      timeline.appendChild(article);
-      timeline.scrollTop = timeline.scrollHeight;
-    }
-
-    function renderDebug(debug) {
-      if (!debugModeInput.checked || !debug) {
-        return;
-      }
-      const summary = (debug.conversation_summary || {}).active_summary || {};
-      const knowledge = debug.knowledge_context || [];
-      const lines = [
-        `hybrid: ${(debug.hybrid_selection || {}).status || 'n/a'}`,
-        `themes: ${(summary.patient_themes || []).join(' | ') || 'n/a'}`,
-        `assistant_items: ${(summary.assistant_items || []).join(', ') || 'n/a'}`,
-        `kb: ${knowledge.map((item) => item.id).join(', ') || 'n/a'}`
-      ];
-      addMessage('system', lines.join('\n'), [copyFor().messages.debug]);
-    }
-
-    function updateSnapshot(data) {
-      const debug = data.debug || {};
-      const summary = (debug.conversation_summary || {}).active_summary || {};
-      const knowledge = debug.knowledge_context || [];
-      const routing = data.route_decisions || {};
-      const patientIdentity = data.patient_identity || {};
-      const hybrid = data.hybrid_selection || {};
-      const selectionMeta = (data.selection || {}).content_meta || {};
-      const copy = copyFor();
-
-      snapshotMode.textContent = hybrid.status || 'local_only';
-      snapshotSummary.textContent = summary.last_user_message || (debug.conversation_summary || {}).summary_text || copy.snapshot.summaryEmpty;
-      snapshotSummary.dataset.live = summary.last_user_message || (debug.conversation_summary || {}).summary_text ? 'true' : '';
-      snapshotKnowledge.textContent = knowledge.length ? knowledge.slice(0, 3).map((item) => item.id).join(', ') : copy.snapshot.knowledgeEmpty;
-      snapshotKnowledge.dataset.live = knowledge.length ? 'true' : '';
-      snapshotRouting.textContent = Object.entries(routing).map(([stage, config]) => `${stage}:${config.selected_mode || 'n/a'}`).join(' | ') || copy.snapshot.routingEmpty;
-      snapshotRouting.dataset.live = Object.keys(routing).length ? 'true' : '';
-      snapshotMemory.textContent = `${patientIdentity.memory_key || `browser:${browserPatientKey}`} | ${(selectionMeta.src || 'dev')}/${(selectionMeta.status || 'appr')}`;
-      snapshotMemory.dataset.live = 'true';
-    }
-
-    async function refreshHealth() {
-      try {
-        const response = await fetch('/health');
-        const payload = await response.json();
-        if ((payload.llm || {}).auth_configured) {
-          statusPill.textContent = copyFor().statuses.online;
-          statusPill.className = 'pill live';
-        } else {
-          statusPill.textContent = copyFor().statuses.local;
-          statusPill.className = 'pill';
-        }
-      } catch {
-        statusPill.textContent = copyFor().statuses.offline;
-        statusPill.className = 'pill';
-      }
-    }
-
-    function buildProfileOverrides() {
-      const payload = {
-        age_group: ageGroupInput.value || null,
-        literacy_level: literacyLevelInput.value || null,
-        preferred_register: preferredRegisterInput.value || null,
-        preferences: {}
-      };
-      if (includeReviewItemsInput.checked) {
-        payload.content_statuses = ['appr', 'rev', 'sugg', 'test'];
-        payload.content_channel = 'tst';
-      }
-      return payload;
-    }
-
-    async function sendMessage(textOverride = '', options = {}) {
-      const text = (textOverride || messageInput.value).trim();
-      const source = options.source || 'text';
-      if (!text) {
-        return;
-      }
-
-      applyThemeState({ text });
-
-      const meta = ['mobile'];
-      if (source === 'voice') {
-        meta.unshift('voice');
-      }
-      addMessage('patient', text, meta);
-      sendButton.disabled = true;
-      messageInput.value = '';
-
-      const payload = {
-        text,
-        lang: currentLang,
-        conversation_id: conversationId,
-        patient_identity: {
-          browser_patient_key: browserPatientKey,
-          consent_to_store_excerpt: true
-        },
-        profile_overrides: buildProfileOverrides(),
-        prefer_online: preferOnlineInput.checked,
-        synthesize_speech: autoSpeakInput.checked,
-        debug: debugModeInput.checked
-      };
-      if (patientIdInput.value.trim()) {
-        payload.patient_id = patientIdInput.value.trim();
-      }
-
-      try {
-        const response = await fetch('/runtime/text', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        });
-        const data = await response.json();
-        if (response.status === 401 && data.error === 'auth_required') {
-          addMessage('system', copyFor().messages.authRequired, ['auth']);
-          window.location.href = data.login_url || '/login';
-          return;
-        }
-        if (!response.ok) {
-          addMessage('system', `${data.error || 'request_failed'}: ${data.message || copyFor().messages.unknownError}`, ['error']);
-          return;
-        }
-        const meta = [];
-        if ((data.selection || {}).category) meta.push(`cat:${data.selection.category}`);
-        if ((data.selection || {}).item_id) meta.push(`item:${data.selection.item_id}`);
-        if (data.matched_trigger_id) meta.push(`trigger:${data.matched_trigger_id}`);
-        if ((data.hybrid_selection || {}).status) meta.push(`hybrid:${data.hybrid_selection.status}`);
-        if (((data.selection || {}).content_meta || {}).status) {
-          meta.push(`src:${data.selection.content_meta.src}`);
-          meta.push(`status:${data.selection.content_meta.status}`);
-        }
-        addMessage('assistant', (data.selection || {}).text || copyFor().messages.noResponse, meta);
-        if (!playAssistantAudio(data.tts)) {
-          speakAssistantText((data.selection || {}).text || '');
-        }
-        updateSnapshot(data);
-        if (data.handoff_triggered) {
-          applyThemeState({ handoff: true });
-        }
-        renderDebug(data.debug);
-      } catch (error) {
-        addMessage('system', `${copyFor().messages.networkError}: ${error.message}`, ['offline']);
-      } finally {
-        sendButton.disabled = false;
-      }
-    }
-
-    quickButtons.forEach((button) => {
-      button.addEventListener('click', () => sendMessage(button.dataset.quick));
+    document.querySelectorAll('[data-quick]').forEach((button) => {
+      button.addEventListener('click', () => mobileSendText(button.dataset.quick || ''));
     });
-    quickUrgentButton.addEventListener('click', () => sendMessage(copyFor().quick.urgentText));
-    recordButton.addEventListener('click', startVoiceCapture);
-    logoutButton.addEventListener('click', handleLogout);
-    sendButton.addEventListener('click', () => sendMessage());
-    clearButton.addEventListener('click', () => {
-      timeline.innerHTML = '';
-      snapshotSummary.dataset.live = '';
-      snapshotKnowledge.dataset.live = '';
-      snapshotRouting.dataset.live = '';
-      snapshotMemory.dataset.live = '';
-      updateSnapshot({ patient_identity: { memory_key: `browser:${browserPatientKey}` } });
-      addMessage('system', copyFor().messages.cleared, ['reset']);
-      applyThemeState();
-      if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-      }
+    mobileLanguageSelect.addEventListener('change', () => {
+      mobileState.currentLang = mobileLanguageSelect.value;
+      mobileSaveLanguagePreference(mobileState.currentLang);
+      mobileApplyStaticCopy();
+      mobileApplyThemeOptions();
+      mobileApplyThemeState();
     });
-    patientIdInput.addEventListener('input', updateIdentityNote);
-    langSelect.addEventListener('change', async () => {
-      currentLang = langSelect.value;
-      applyStaticUi();
-      await refreshHealth();
+    mobileAliasSelect.addEventListener('change', () => {
+      mobileState.selectedAlias = mobileAliasSelect.value;
+      mobileIdentityNote.textContent = mobileState.selectedAlias ? mobileCopyFor().activeAlias(mobileState.selectedAlias) : mobileIdentityNote.textContent;
     });
-    themeModeInput.addEventListener('change', () => {
-      themeMode = themeModeInput.value;
-      saveThemePrefs();
-      applyThemeState();
+    mobileThemeModeInput.addEventListener('change', () => {
+      mobileState.themeMode = mobileThemeModeInput.value;
+      mobileSaveThemePrefs();
+      mobileApplyThemeState();
     });
-    themeSkinInput.addEventListener('change', () => {
-      manualSkin = themeSkinInput.value;
-      saveThemePrefs();
-      applyThemeState();
+    mobileThemeSkinInput.addEventListener('change', () => {
+      mobileState.manualSkin = mobileThemeSkinInput.value;
+      mobileSaveThemePrefs();
+      mobileApplyThemeState();
     });
-    [ageGroupInput, literacyLevelInput, preferredRegisterInput].forEach((input) => {
-      input.addEventListener('change', () => {
-        if (themeMode === 'auto') {
-          applyThemeState();
-        }
-      });
-    });
-    messageInput.addEventListener('keydown', (event) => {
+    mobileIssueToken.addEventListener('click', mobileIssueTokenAction);
+    mobileSendButton.addEventListener('click', () => mobileSendText(mobileMessageInput.value));
+    mobileRecordButton.addEventListener('click', mobileToggleRecording);
+    mobileLogoutButton.addEventListener('click', mobileLogout);
+    mobileMessageInput.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' && !event.shiftKey) {
         event.preventDefault();
-        sendMessage();
+        mobileSendText(mobileMessageInput.value);
       }
     });
 
-    loadThemePrefs();
-    loadUiConfig().then(() => refreshHealth());
-    updateSnapshot({ patient_identity: { memory_key: `browser:${browserPatientKey}` } });
-    updateVoiceUi();
-    addMessage('system', copyFor().messages.intro, ['intro']);
+    mobileLoadThemePrefs();
+    mobileApplyStaticCopy();
+    mobileAddMessage('system', mobileCopyFor().intro, ['privacy']);
+    mobileUpdateAudioUi();
+    mobileLoadContext().then(() => {
+      mobileSetStatus('ready');
+      mobileApplyThemeState();
+    }).catch((error) => {
+      if (error.message !== 'auth_required') {
+        mobileAddMessage('system', error.message, ['startup']);
+        mobileSetStatus('error');
+      }
+    });
   </script>
 </body>
 </html>

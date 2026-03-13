@@ -7,6 +7,10 @@ from html.parser import HTMLParser
 import json
 from pathlib import Path
 import re
+from xml.etree import ElementTree as ET
+from zipfile import ZipFile
+
+from pypdf import PdfReader
 
 
 SUPPORTED_DOCUMENT_EXTENSIONS = {
@@ -18,6 +22,9 @@ SUPPORTED_DOCUMENT_EXTENSIONS = {
     ".htm",
     ".csv",
     ".tsv",
+    ".xml",
+    ".docx",
+    ".pdf",
 }
 
 STOPWORDS = {
@@ -67,14 +74,59 @@ class _HTMLTextExtractor(HTMLParser):
     def __init__(self) -> None:
         super().__init__()
         self.parts: list[str] = []
+        self._ignored_depth = 0
+
+    def handle_starttag(self, tag: str, attrs) -> None:
+        if tag in {"script", "style", "noscript"}:
+            self._ignored_depth += 1
+            return
+        if tag in {"p", "div", "section", "article", "br", "li", "h1", "h2", "h3", "h4", "h5", "h6"}:
+            self.parts.append("\n")
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag in {"script", "style", "noscript"} and self._ignored_depth:
+            self._ignored_depth -= 1
+            return
+        if tag in {"p", "div", "section", "article", "li"}:
+            self.parts.append("\n")
 
     def handle_data(self, data: str) -> None:
+        if self._ignored_depth:
+            return
         stripped = data.strip()
         if stripped:
             self.parts.append(stripped)
 
     def get_text(self) -> str:
-        return "\n".join(self.parts)
+        return re.sub(r"\n{2,}", "\n", "\n".join(self.parts)).strip()
+
+
+def _read_xml_text(file_path: Path) -> str:
+    try:
+        root = ET.fromstring(file_path.read_text(encoding="utf-8", errors="ignore"))
+    except ET.ParseError:
+        return file_path.read_text(encoding="utf-8", errors="ignore")
+    values = [text.strip() for text in root.itertext() if text and text.strip()]
+    return "\n".join(values)
+
+
+def _read_docx_text(file_path: Path) -> str:
+    with ZipFile(file_path) as archive:
+        document_xml = archive.read("word/document.xml")
+    root = ET.fromstring(document_xml)
+    values = [text.strip() for text in root.itertext() if text and text.strip()]
+    return "\n".join(values)
+
+
+def _read_pdf_text(file_path: Path) -> str:
+    reader = PdfReader(str(file_path))
+    values: list[str] = []
+    for page in reader.pages:
+        extracted = page.extract_text() or ""
+        stripped = extracted.strip()
+        if stripped:
+            values.append(stripped)
+    return "\n\n".join(values)
 
 
 def collect_local_document_paths(
@@ -121,6 +173,12 @@ def read_document_text(file_path: Path) -> str:
         parser = _HTMLTextExtractor()
         parser.feed(file_path.read_text(encoding="utf-8", errors="ignore"))
         return parser.get_text()
+    if suffix == ".xml":
+        return _read_xml_text(file_path)
+    if suffix == ".docx":
+        return _read_docx_text(file_path)
+    if suffix == ".pdf":
+        return _read_pdf_text(file_path)
     if suffix in {".csv", ".tsv"}:
         delimiter = "\t" if suffix == ".tsv" else ","
         lines = file_path.read_text(encoding="utf-8", errors="ignore").splitlines()

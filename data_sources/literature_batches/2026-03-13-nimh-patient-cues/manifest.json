@@ -1,0 +1,35 @@
+{
+  "batch_id": "2026-03-13-nimh-patient-cues",
+  "generated_at": "2026-03-13T17:31:13.675315+00:00",
+  "sources": {
+    "local_paths": [
+      "data_sources\\literature_working"
+    ],
+    "urls": [],
+    "resolved_paths": [
+      "D:\\WORK\\VS_Code\\Python_projects\\AI_assistant_psyhoterapist\\data_sources\\literature_working\\2026-03-13-nimh-patient-cues.en.md"
+    ],
+    "downloaded_files": []
+  },
+  "counts": {
+    "documents": 1,
+    "chunks": 2,
+    "knowledge_snippets": 2,
+    "phrase_candidates": 3,
+    "trigger_candidates": 7,
+    "rule_hints": 3
+  },
+  "lang": "en",
+  "topic_hints": [
+    "child",
+    "cannot",
+    "need",
+    "help",
+    "patient",
+    "cues",
+    "nimh",
+    "anxiety",
+    "feel",
+    "worried"
+  ]
+}

@@ -30,8 +30,13 @@ def _now_epoch() -> int:
 @dataclass(slots=True)
 class SessionIdentity:
     subject: str
+    role: str
+    allowed_views: tuple[str, ...]
+    active_view: str
     issued_at: int
     expires_at: int
+    clinician_id: str | None = None
+    patient_alias_key: str | None = None
 
 
 class PortalSessionAuth:
@@ -57,14 +62,32 @@ class PortalSessionAuth:
             return False
         return hmac.compare_digest(candidate.encode("utf-8"), self.access_code.encode("utf-8"))
 
-    def issue_session_token(self, subject: str = "patient") -> str:
+    def issue_session_token(
+        self,
+        subject: str = "patient",
+        *,
+        role: str = "patient",
+        allowed_views: tuple[str, ...] | list[str] | None = None,
+        active_view: str | None = None,
+        clinician_id: str | None = None,
+        patient_alias_key: str | None = None,
+    ) -> str:
         issued_at = _now_epoch()
+        normalized_allowed_views = tuple(dict.fromkeys(allowed_views or ("patient",)))
+        normalized_active_view = active_view or normalized_allowed_views[0]
         payload = {
             "sub": subject,
+            "role": role,
+            "views": list(normalized_allowed_views),
+            "view": normalized_active_view,
             "iat": issued_at,
             "exp": issued_at + self.session_ttl_seconds,
             "nonce": secrets.token_hex(8),
         }
+        if clinician_id:
+            payload["clinician_id"] = clinician_id
+        if patient_alias_key:
+            payload["patient_alias_key"] = patient_alias_key
         encoded_payload = _b64url_encode(
             json.dumps(payload, ensure_ascii=True, separators=(",", ":"), sort_keys=True).encode("utf-8")
         )
@@ -91,7 +114,26 @@ class PortalSessionAuth:
             return None
         issued_at = int(payload.get("iat", 0))
         subject = str(payload.get("sub") or "patient")
-        return SessionIdentity(subject=subject, issued_at=issued_at, expires_at=expires_at)
+        role = str(payload.get("role") or "patient")
+        allowed_views_payload = payload.get("views") or ["patient"]
+        if not isinstance(allowed_views_payload, list):
+            allowed_views_payload = ["patient"]
+        allowed_views = tuple(str(item) for item in allowed_views_payload if str(item).strip()) or ("patient",)
+        active_view = str(payload.get("view") or allowed_views[0])
+        if active_view not in allowed_views:
+            active_view = allowed_views[0]
+        clinician_id = payload.get("clinician_id")
+        patient_alias_key = payload.get("patient_alias_key")
+        return SessionIdentity(
+            subject=subject,
+            role=role,
+            allowed_views=allowed_views,
+            active_view=active_view,
+            issued_at=issued_at,
+            expires_at=expires_at,
+            clinician_id=str(clinician_id) if clinician_id else None,
+            patient_alias_key=str(patient_alias_key) if patient_alias_key else None,
+        )
 
     def build_set_cookie_header(self, token: str, *, max_age: int | None = None, clear: bool = False) -> str:
         if clear:

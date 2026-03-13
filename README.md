@@ -231,6 +231,15 @@ python scripts\serve_admin_api.py --host 127.0.0.1 --port 8787
 
 The patient portal now enforces the `session_token` access policy from `config/access_governance.json`.
 
+The live portal also now includes:
+
+- role-aware views for patient, clinician, and developer sessions,
+- clinician-issued pseudonymous patient tokens where the runtime only receives an anonymous alias key,
+- desktop and mobile theme switching with automatic skin selection,
+- a light logo for the standard light skins and a dark blue logo for the inverse blue skin.
+
+Automatic skin selection currently considers the active role/view, time of day, and a light mood heuristic from the current message. Manual override remains available in the UI.
+
 ## Offline Review Pack Builder
 
 The repo now includes a built-in offline review-pack builder for clinician-provided source folders.
