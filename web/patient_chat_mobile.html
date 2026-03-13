@@ -120,7 +120,8 @@
     .hero,
     .panel,
     .message,
-    .composer {
+    .composer,
+    .conversation-shell {
       margin: 0 12px;
       border: 1px solid var(--line);
       border-radius: 24px;
@@ -135,6 +136,24 @@
       padding: 16px;
       display: grid;
       gap: 12px;
+    }
+
+    .header-language {
+      display: grid;
+      gap: 6px;
+      min-width: 108px;
+      margin-left: auto;
+    }
+
+    .header-language label {
+      text-align: right;
+    }
+
+    .conversation-shell {
+      display: grid;
+      gap: 12px;
+      padding: 12px 0 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06)), var(--panel);
     }
 
     .hero-top,
@@ -315,7 +334,7 @@
     .meta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
 
     .composer {
-      margin-bottom: 0;
+      margin: 0;
       padding: 14px 12px calc(14px + env(safe-area-inset-bottom, 0px));
       border-radius: 24px 24px 0 0;
       display: grid;
@@ -323,6 +342,40 @@
       position: sticky;
       bottom: 0;
       background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.08)), var(--panel);
+    }
+
+    .composer-meta {
+      display: grid;
+      gap: 10px;
+    }
+
+    .voice-controls {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .voice-status {
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      padding: 8px 11px;
+      background: rgba(255,255,255,0.14);
+      color: var(--muted);
+      font: 700 11px/1.1 "Courier New", monospace;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .voice-status.listening {
+      background: color-mix(in srgb, var(--accent) 18%, rgba(255,255,255,0.16));
+      color: var(--ink);
+      border-color: color-mix(in srgb, var(--accent) 35%, var(--line) 65%);
+    }
+
+    .assistant-voice-box {
+      display: grid;
+      gap: 6px;
     }
 
     pre {
@@ -353,13 +406,19 @@
         <div class="logo-pill"><img id="mobile-portal-logo" src="/assets/logo_light.png" alt="Patientenportal-Logo"></div>
         <span id="mobile-status-pill" class="pill live">Bereit</span>
       </div>
+      <div class="hero-top">
+        <div class="row">
+          <span id="mobile-role-pill" class="pill">Rolle</span>
+          <span id="mobile-view-pill" class="pill">Ansicht</span>
+        </div>
+        <div class="header-language">
+          <label id="mobile-language-select-label" for="mobile-language-select">Sprache</label>
+          <select id="mobile-language-select"></select>
+        </div>
+      </div>
       <p class="eyebrow">Mobiles Rollenportal</p>
       <h1 id="mobile-hero-title">Anonyme Patientensitzung mobil</h1>
       <p id="mobile-hero-copy" class="copy">Pseudonyme Token-Sitzungen halten die Patientenidentität außerhalb der Runtime.</p>
-      <div class="row">
-        <span id="mobile-role-pill" class="pill">Rolle</span>
-        <span id="mobile-view-pill" class="pill">Ansicht</span>
-      </div>
       <div id="mobile-view-switcher" class="chip-row"></div>
       <div class="chip-row">
         <button class="chip" data-quick="Ich schlafe in letzter Zeit schlecht." type="button">Schlaf</button>
@@ -385,10 +444,6 @@
 
     <section class="panel">
       <div class="fields">
-        <div>
-          <label for="mobile-language-select">Sprache</label>
-          <select id="mobile-language-select"></select>
-        </div>
         <div id="mobile-alias-field" class="hidden">
           <label for="mobile-alias-select">Anonymer Alias</label>
           <select id="mobile-alias-select"></select>
@@ -417,21 +472,35 @@
       </div>
     </section>
 
-    <section id="mobile-timeline" class="timeline"></section>
+    <section class="conversation-shell">
+      <section id="mobile-timeline" class="timeline"></section>
 
-    <section id="mobile-debug-panel" class="panel hidden">
-      <p class="eyebrow">Entwickler-Debug</p>
-      <pre id="mobile-debug-json">{}</pre>
-    </section>
+      <section id="mobile-debug-panel" class="panel hidden">
+        <p class="eyebrow">Entwickler-Debug</p>
+        <pre id="mobile-debug-json">{}</pre>
+      </section>
 
-    <section class="composer">
-      <textarea id="mobile-message-input" placeholder="Beschreibe kurz, was du gerade am dringendsten brauchst."></textarea>
-      <div class="composer-actions">
-        <button id="mobile-record-button" class="secondary" type="button">Aufnehmen</button>
-        <button id="mobile-send-button" class="primary" type="button">Senden</button>
-        <button id="mobile-logout-button" class="secondary" type="button">Abmelden</button>
-      </div>
-      <p id="mobile-voice-note" class="tiny">Audio-Upload ist verfügbar, wenn der Browser MediaRecorder unterstützt.</p>
+      <section class="composer">
+        <textarea id="mobile-message-input" placeholder="Beschreibe kurz, was du gerade am dringendsten brauchst."></textarea>
+        <div class="composer-meta">
+          <div class="voice-controls">
+            <button id="mobile-record-button" class="secondary" type="button">Aufnehmen</button>
+            <span id="mobile-voice-status" class="voice-status">Mikrofon bereit</span>
+          </div>
+          <div class="assistant-voice-box">
+            <label id="mobile-assistant-voice-label" for="mobile-assistant-voice-mode">Antwortmodus</label>
+            <select id="mobile-assistant-voice-mode">
+              <option value="speak">Antwort vorlesen</option>
+              <option value="read">Nur lesen</option>
+            </select>
+          </div>
+        </div>
+        <div class="composer-actions">
+          <button id="mobile-send-button" class="primary" type="button">Senden</button>
+          <button id="mobile-logout-button" class="secondary" type="button">Abmelden</button>
+        </div>
+        <p id="mobile-voice-note" class="tiny">Audio-Upload ist verfügbar, wenn der Browser MediaRecorder unterstützt.</p>
+      </section>
     </section>
   </main>
 
@@ -444,6 +513,7 @@
       session: null,
       supportedLanguages: ['hu', 'en', 'de'],
       currentLang: 'de',
+      assistantVoiceMode: 'speak',
       patientAliases: [],
       selectedAlias: '',
       tokens: [],
@@ -618,8 +688,18 @@
       },
     };
 
+    const MOBILE_VOICE_CONTROL_COPY = {
+      de: { label: 'Antwortmodus', speak: 'Antwort vorlesen', read: 'Nur lesen', ready: 'Mikrofon bereit', listening: 'Mikrofon hört zu' },
+      hu: { label: 'Válasz módja', speak: 'Válasz felolvasása', read: 'Csak olvasás', ready: 'Mikrofon készen áll', listening: 'A mikrofon figyel' },
+      en: { label: 'Reply mode', speak: 'Read reply aloud', read: 'Read silently', ready: 'Microphone ready', listening: 'Microphone listening' },
+    };
+
     function mobileCopyFor(lang = mobileState.currentLang) {
       return MOBILE_UI_COPY[lang] || MOBILE_UI_COPY.de;
+    }
+
+    function mobileVoiceCopyFor(lang = mobileState.currentLang) {
+      return MOBILE_VOICE_CONTROL_COPY[lang] || MOBILE_VOICE_CONTROL_COPY.de;
     }
 
     function mobileReadLanguageCookie() {
@@ -655,6 +735,7 @@
     const mobileThemeModeInput = document.getElementById('mobile-theme-mode');
     const mobileThemeSkinInput = document.getElementById('mobile-theme-skin');
     const mobileThemeNote = document.getElementById('mobile-theme-note');
+    const mobileLanguageSelectLabel = document.getElementById('mobile-language-select-label');
     const mobileLanguageSelect = document.getElementById('mobile-language-select');
     const mobileAliasField = document.getElementById('mobile-alias-field');
     const mobileAliasSelect = document.getElementById('mobile-alias-select');
@@ -674,6 +755,9 @@
     const mobileSendButton = document.getElementById('mobile-send-button');
     const mobileLogoutButton = document.getElementById('mobile-logout-button');
     const mobileRecordButton = document.getElementById('mobile-record-button');
+    const mobileVoiceStatus = document.getElementById('mobile-voice-status');
+    const mobileAssistantVoiceLabel = document.getElementById('mobile-assistant-voice-label');
+    const mobileAssistantVoiceMode = document.getElementById('mobile-assistant-voice-mode');
     const mobileVoiceNote = document.getElementById('mobile-voice-note');
     const mobileHeroTitle = document.getElementById('mobile-hero-title');
     const mobileHeroCopy = document.getElementById('mobile-hero-copy');
@@ -705,6 +789,12 @@
       const copy = mobileCopyFor();
       const normalizedKey = String(key || '').toLowerCase();
       mobileStatusPill.textContent = copy.statuses[normalizedKey] || key;
+    }
+
+    function mobileUpdateVoiceStatusUi() {
+      const copy = mobileVoiceCopyFor();
+      mobileVoiceStatus.textContent = mobileState.isRecording ? copy.listening : copy.ready;
+      mobileVoiceStatus.classList.toggle('listening', mobileState.isRecording);
     }
 
     function mobileRoleLabel(role) {
@@ -826,6 +916,7 @@
 
     function mobileApplyStaticCopy() {
       const copy = mobileCopyFor();
+      const voiceCopy = mobileVoiceCopyFor();
       document.documentElement.lang = mobileState.currentLang;
       document.title = copy.pageTitle;
       document.querySelector('.hero .eyebrow').textContent = copy.heroEyebrow;
@@ -843,7 +934,7 @@
       document.querySelector('label[for="mobile-theme-mode"]').textContent = copy.themeMode;
       document.querySelector('label[for="mobile-theme-skin"]').textContent = copy.themeSkin;
       if (!mobileState.activeThemeState) mobileThemeNote.textContent = copy.themeAuto;
-      document.querySelector('label[for="mobile-language-select"]').textContent = copy.language;
+      mobileLanguageSelectLabel.textContent = copy.language;
       document.querySelector('label[for="mobile-alias-select"]').textContent = copy.alias;
       document.querySelector('label[for="mobile-consent-select"]').textContent = copy.consent;
       const consentValue = mobileConsentSelect.value || 'true';
@@ -856,6 +947,9 @@
       mobileTokenExpiry.placeholder = copy.tokenExpiryPlaceholder;
       mobileSetIconButton(mobileIssueToken, { icon: MOBILE_BUTTON_ICONS.issueToken, label: copy.issueToken, collapse: true });
       mobileMessageInput.placeholder = copy.messagePlaceholder;
+      mobileAssistantVoiceLabel.textContent = voiceCopy.label;
+      mobileAssistantVoiceMode.innerHTML = `<option value="speak">${voiceCopy.speak}</option><option value="read">${voiceCopy.read}</option>`;
+      mobileAssistantVoiceMode.value = mobileState.assistantVoiceMode;
       mobileSetIconButton(mobileRecordButton, { icon: mobileState.isRecording ? MOBILE_BUTTON_ICONS.stop : MOBILE_BUTTON_ICONS.record, label: mobileState.isRecording ? copy.stop : copy.record, collapse: true });
       mobileSetIconButton(mobileSendButton, { icon: MOBILE_BUTTON_ICONS.send, label: copy.send, collapse: true });
       mobileSetIconButton(mobileLogoutButton, { icon: MOBILE_BUTTON_ICONS.logout, label: copy.logout, collapse: true });
@@ -891,6 +985,7 @@
       mobileVoiceNote.textContent = mobileSupportsAudio() ? copy.voiceAvailable : copy.voiceUnavailable;
       mobileRecordButton.disabled = !mobileSupportsAudio();
       mobileSetIconButton(mobileRecordButton, { icon: mobileState.isRecording ? MOBILE_BUTTON_ICONS.stop : MOBILE_BUTTON_ICONS.record, label: mobileState.isRecording ? copy.stop : copy.record, collapse: true });
+      mobileUpdateVoiceStatusUi();
     }
 
     async function mobileFetchJson(url, options = {}) {
@@ -1058,14 +1153,14 @@
             text,
             lang: mobileState.currentLang,
             patient_identity: mobilePatientIdentityPayload(),
-            synthesize_speech: true,
+            synthesize_speech: mobileState.assistantVoiceMode === 'speak',
             debug: Boolean(mobileState.session && mobileState.session.role === 'developer' && mobileState.session.active_view === 'developer'),
           }),
         });
         const selection = payload.selection || {};
         mobileAddMessage('assistant', selection.text || '(no response)', selection.category ? [`cat:${selection.category}`] : []);
         mobileDebugJson.textContent = JSON.stringify(payload.debug || {}, null, 2);
-        if (payload.tts && payload.tts.audio_url) {
+        if (mobileState.assistantVoiceMode === 'speak' && payload.tts && payload.tts.audio_url) {
           const audio = new Audio(payload.tts.audio_url);
           audio.play().catch(() => undefined);
         }
@@ -1087,7 +1182,7 @@
       formData.append('audio', blob, `mobile-note-${Date.now()}.webm`);
       formData.append('lang', mobileState.currentLang);
       formData.append('patient_identity', JSON.stringify(mobilePatientIdentityPayload()));
-      formData.append('synthesize_speech', 'true');
+      formData.append('synthesize_speech', String(mobileState.assistantVoiceMode === 'speak'));
       formData.append('debug', String(Boolean(mobileState.session && mobileState.session.role === 'developer' && mobileState.session.active_view === 'developer')));
       try {
         const response = await fetch('/runtime/audio-upload', { method: 'POST', body: formData });
@@ -1099,7 +1194,7 @@
         if (!response.ok) throw new Error(payload.message || payload.error || 'audio_failed');
         mobileAddMessage('assistant', (payload.selection || {}).text || mobileCopyFor().noResponse, ['audio']);
         mobileDebugJson.textContent = JSON.stringify(payload.debug || {}, null, 2);
-        if (payload.tts && payload.tts.audio_url) {
+        if (mobileState.assistantVoiceMode === 'speak' && payload.tts && payload.tts.audio_url) {
           const audio = new Audio(payload.tts.audio_url);
           audio.play().catch(() => undefined);
         }
@@ -1173,6 +1268,10 @@
       mobileApplyStaticCopy();
       mobileApplyThemeOptions();
       mobileApplyThemeState();
+    });
+    mobileAssistantVoiceMode.addEventListener('change', () => {
+      mobileState.assistantVoiceMode = mobileAssistantVoiceMode.value === 'read' ? 'read' : 'speak';
+      mobileApplyStaticCopy();
     });
     mobileAliasSelect.addEventListener('change', () => {
       mobileState.selectedAlias = mobileAliasSelect.value;

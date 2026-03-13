@@ -215,8 +215,27 @@
     .eyebrow { font: 700 11px/1.2 "Courier New", monospace; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); }
     .copy, .note, .tiny { color: var(--muted); line-height: 1.55; }
     .tiny { font-size: 13px; }
-    .hero { display: grid; grid-template-rows: auto auto 1fr auto; min-height: calc(100vh - 28px); overflow: hidden; }
-    .hero-head { padding: 22px 24px 16px; border-bottom: 1px solid var(--line); display: grid; gap: 14px; }
+    .hero {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      min-height: calc(100vh - 28px);
+      overflow: visible;
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+      gap: 14px;
+    }
+    .hero-head {
+      padding: 22px 24px 16px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.16), rgba(255,255,255,0.06)), var(--panel);
+      display: grid;
+      gap: 14px;
+      box-shadow: var(--shadow);
+    }
     .hero-top { display: flex; align-items: start; justify-content: space-between; gap: 18px; }
     .brand { display: grid; gap: 10px; }
     .logo-pill {
@@ -245,7 +264,25 @@
     }
     .brand img { width: 164px; height: auto; display: block; }
     .top-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
-    .toolbar { padding: 14px 24px 0; display: flex; gap: 10px; flex-wrap: wrap; }
+    .header-language {
+      display: grid;
+      gap: 4px;
+      min-width: 132px;
+    }
+    .header-language select {
+      min-width: 132px;
+    }
+    .conversation-shell {
+      display: grid;
+      grid-template-rows: auto auto auto 1fr auto auto;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.06)), var(--panel);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      min-height: 0;
+    }
+    .toolbar { padding: 16px 24px 0; display: flex; gap: 10px; flex-wrap: wrap; }
     .banner {
       margin: 14px 24px 0;
       padding: 14px 16px;
@@ -289,6 +326,45 @@
       gap: 12px;
     }
     .composer-grid { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: end; }
+    .composer-meta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .voice-controls {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .voice-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.14);
+      padding: 8px 12px;
+      color: var(--muted);
+      font: 700 11px/1.15 "Courier New", monospace;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .voice-status.listening {
+      border-color: rgba(180, 84, 59, 0.24);
+      background: var(--danger-soft);
+      color: var(--danger);
+    }
+    .assistant-voice-box {
+      display: grid;
+      gap: 4px;
+      min-width: 180px;
+    }
+    .assistant-voice-box select {
+      min-width: 180px;
+    }
     textarea,
     input,
     select,
@@ -380,6 +456,7 @@
       .hero-top { flex-direction: column; }
       .brand img { width: 136px; }
       h1 { font-size: 32px; }
+      .composer-meta { align-items: start; }
     }
 
     @media (max-width: 1220px) {
@@ -409,10 +486,6 @@
         </div>
         <p id="session-copy" class="copy">Sitzung wird geladen.</p>
         <div class="fields">
-          <div class="field">
-            <label for="language-select">Sprache</label>
-            <select id="language-select"></select>
-          </div>
           <div id="alias-field" class="field hidden">
             <label for="alias-select">Anonymer Alias</label>
             <select id="alias-select"></select>
@@ -521,65 +594,82 @@
           </div>
           <div class="top-actions">
             <span id="status-pill" class="pill">Bereit</span>
-            <button id="record-button" class="secondary" type="button">Aufnehmen</button>
+            <div class="header-language">
+              <label id="language-select-label" for="language-select">Sprache</label>
+              <select id="language-select"></select>
+            </div>
             <button id="logout-button" class="secondary" type="button">Abmelden</button>
           </div>
         </div>
         <p id="hero-copy" class="copy">Die Runtime sieht nur pseudonyme Subject-Keys. Die Zuordnung bleibt beim Kliniker oder in einem externen Register.</p>
       </header>
+      <section class="conversation-shell">
+        <section class="toolbar">
+          <button class="tab-button" data-quick="Ich schlafe in letzter Zeit schlecht." type="button">Schlaf</button>
+          <button class="tab-button" data-quick="Ich bin ängstlich und brauche eine kurze Stabilisierung." type="button">Stabilisierung</button>
+          <button class="tab-button" data-quick="Ich bin nach einer Trennung sehr aufgelöst." type="button">Trennung</button>
+          <button class="tab-button" data-quick="Ich brauche jetzt dringend Hilfe." type="button">Dringend</button>
+          <a class="chip" href="/chat/mobile">Mobile Ansicht</a>
+        </section>
 
-      <section class="toolbar">
-        <button class="tab-button" data-quick="Ich schlafe in letzter Zeit schlecht." type="button">Schlaf</button>
-        <button class="tab-button" data-quick="Ich bin ängstlich und brauche eine kurze Stabilisierung." type="button">Stabilisierung</button>
-        <button class="tab-button" data-quick="Ich bin nach einer Trennung sehr aufgelöst." type="button">Trennung</button>
-        <button class="tab-button" data-quick="Ich brauche jetzt dringend Hilfe." type="button">Dringend</button>
-        <a class="chip" href="/chat/mobile">Mobile Ansicht</a>
-      </section>
+        <section id="handoff-banner" class="banner alert">
+          <strong>Sicherheitseskalation aktiv</strong>
+          <p id="handoff-copy" class="tiny">Diese Nachricht wurde für sichtbare Eskalation oder Nachverfolgung markiert.</p>
+        </section>
 
-      <section id="handoff-banner" class="banner alert">
-        <strong>Sicherheitseskalation aktiv</strong>
-        <p id="handoff-copy" class="tiny">Diese Nachricht wurde für sichtbare Eskalation oder Nachverfolgung markiert.</p>
-      </section>
+        <section id="info-banner" class="banner">
+          <strong>Datenschutzmodell</strong>
+          <p id="privacy-copy" class="tiny">Patientensitzungen nutzen klinikerseitig ausgegebene Token. Die Runtime erhält nur den pseudonymen Alias-Schlüssel.</p>
+        </section>
 
-      <section id="info-banner" class="banner">
-        <strong>Datenschutzmodell</strong>
-        <p id="privacy-copy" class="tiny">Patientensitzungen nutzen klinikerseitig ausgegebene Token. Die Runtime erhält nur den pseudonymen Alias-Schlüssel.</p>
-      </section>
+        <section id="timeline" class="timeline"></section>
 
-      <section id="timeline" class="timeline"></section>
-
-      <section id="debug-shell" class="debug-shell">
-        <div class="debug-grid">
-          <article class="debug-card">
-            <strong>Gesprächszusammenfassung</strong>
-            <div id="summary-card" class="tiny">Noch keine Zusammenfassung.</div>
-          </article>
-          <article class="debug-card">
-            <strong>Patientenidentität</strong>
-            <div id="identity-card" class="tiny">Noch keine Identitätsdetails.</div>
-          </article>
-          <article class="debug-card">
-            <strong>Route / Hybrid</strong>
-            <div id="route-card" class="tiny">Noch keine Routendetails.</div>
-          </article>
-        </div>
-        <article class="debug-card">
-          <strong>Entwickler-Debug-Ausgabe</strong>
-          <pre id="debug-json">{}</pre>
-        </article>
-      </section>
-
-      <section class="composer">
-        <div class="composer-grid">
-          <textarea id="message-input" placeholder="Beschreibe kurz, was du gerade am dringendsten brauchst."></textarea>
-          <div class="button-column">
-            <button id="send-button" class="primary" type="button">Senden</button>
-            <button id="clear-button" class="secondary" type="button">Leeren</button>
+        <section id="debug-shell" class="debug-shell">
+          <div class="debug-grid">
+            <article class="debug-card">
+              <strong>Gesprächszusammenfassung</strong>
+              <div id="summary-card" class="tiny">Noch keine Zusammenfassung.</div>
+            </article>
+            <article class="debug-card">
+              <strong>Patientenidentität</strong>
+              <div id="identity-card" class="tiny">Noch keine Identitätsdetails.</div>
+            </article>
+            <article class="debug-card">
+              <strong>Route / Hybrid</strong>
+              <div id="route-card" class="tiny">Noch keine Routendetails.</div>
+            </article>
           </div>
-        </div>
-        <div class="row">
-          <span id="voice-note" class="tiny">Browser-Audio-Upload ist verfügbar, wenn MediaRecorder unterstützt wird.</span>
-        </div>
+          <article class="debug-card">
+            <strong>Entwickler-Debug-Ausgabe</strong>
+            <pre id="debug-json">{}</pre>
+          </article>
+        </section>
+
+        <section class="composer">
+          <div class="composer-grid">
+            <textarea id="message-input" placeholder="Beschreibe kurz, was du gerade am dringendsten brauchst."></textarea>
+            <div class="button-column">
+              <button id="send-button" class="primary" type="button">Senden</button>
+              <button id="clear-button" class="secondary" type="button">Leeren</button>
+            </div>
+          </div>
+          <div class="composer-meta">
+            <div class="voice-controls">
+              <button id="record-button" class="secondary" type="button">Aufnehmen</button>
+              <span id="voice-status" class="voice-status">Mikrofon bereit</span>
+            </div>
+            <div class="assistant-voice-box">
+              <label id="assistant-voice-label" for="assistant-voice-mode">Antwortmodus</label>
+              <select id="assistant-voice-mode">
+                <option value="speak">Antwort vorlesen</option>
+                <option value="read">Nur lesen</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <span id="voice-note" class="tiny">Browser-Audio-Upload ist verfügbar, wenn MediaRecorder unterstützt wird.</span>
+          </div>
+        </section>
       </section>
     </main>
   </div>
@@ -593,6 +683,7 @@
       session: null,
       supportedLanguages: ['hu', 'en', 'de'],
       currentLang: 'de',
+      assistantVoiceMode: 'speak',
       patientAliases: [],
       selectedAlias: '',
       tokens: [],
@@ -736,8 +827,14 @@
     };
 
     const SKIN_LOGOS = { aare: '/assets/logo_light.png', river: '/assets/logo_light.png', dusk: '/assets/logo_light.png', azure: '/assets/logo_dark.png' };
+    const VOICE_CONTROL_COPY = {
+      de: { label: 'Antwortmodus', speak: 'Antwort vorlesen', read: 'Nur lesen', ready: 'Mikrofon bereit', listening: 'Mikrofon hört zu' },
+      hu: { label: 'Válasz módja', speak: 'Válasz felolvasása', read: 'Csak olvasás', ready: 'Mikrofon készen áll', listening: 'A mikrofon figyel' },
+      en: { label: 'Reply mode', speak: 'Read reply aloud', read: 'Read silently', ready: 'Microphone ready', listening: 'Microphone listening' },
+    };
 
     const languageSelect = document.getElementById('language-select');
+    const languageSelectLabel = document.getElementById('language-select-label');
     const aliasField = document.getElementById('alias-field');
     const aliasSelect = document.getElementById('alias-select');
     const consentSelect = document.getElementById('consent-store');
@@ -766,6 +863,9 @@
     const clearButton = document.getElementById('clear-button');
     const logoutButton = document.getElementById('logout-button');
     const recordButton = document.getElementById('record-button');
+    const voiceStatusPill = document.getElementById('voice-status');
+    const assistantVoiceLabel = document.getElementById('assistant-voice-label');
+    const assistantVoiceModeSelect = document.getElementById('assistant-voice-mode');
     const voiceNote = document.getElementById('voice-note');
     const healthSummary = document.getElementById('health-summary');
     const operationsSummary = document.getElementById('operations-summary');
@@ -801,6 +901,7 @@
 
     function copyFor(lang = state.currentLang) { return UI_COPY[lang] || UI_COPY.de; }
     function themeCopyFor(lang = state.currentLang) { return THEME_COPY[lang] || THEME_COPY.de; }
+    function voiceCopyFor(lang = state.currentLang) { return VOICE_CONTROL_COPY[lang] || VOICE_CONTROL_COPY.de; }
     function escapeHtml(value) {
       return String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#39;');
     }
@@ -831,6 +932,11 @@
     function setStatus(key, type = '') {
       statusPill.textContent = (copyFor().status[key] || key);
       statusPill.className = type === 'warn' ? 'pill warn' : 'pill';
+    }
+    function updateVoiceStatusUi() {
+      const voiceCopy = voiceCopyFor();
+      voiceStatusPill.textContent = state.isRecording ? voiceCopy.listening : voiceCopy.ready;
+      voiceStatusPill.classList.toggle('listening', state.isRecording);
     }
     function getDayPeriod() {
       const hour = new Date().getHours();
@@ -924,6 +1030,7 @@
     }
     function updateStaticCopy() {
       const copy = copyFor();
+      const voiceCopy = voiceCopyFor();
       document.documentElement.lang = state.currentLang;
       document.title = copy.pageTitle;
       document.querySelector('.sidebar .pill.live').textContent = copy.roleAwareDemo;
@@ -939,7 +1046,7 @@
       const consentValue = consentSelect.value || 'true';
       consentSelect.innerHTML = `<option value="true">${copy.enabled}</option><option value="false">${copy.disabled}</option>`;
       consentSelect.value = consentValue;
-      document.querySelector('label[for="language-select"]').textContent = copy.language;
+      languageSelectLabel.textContent = copy.language;
       document.querySelector('label[for="alias-select"]').textContent = copy.alias;
       document.querySelector('label[for="consent-store"]').textContent = copy.consent;
       sidebarSections[1].querySelector('.eyebrow').textContent = copy.themeEyebrow;
@@ -988,6 +1095,9 @@
       document.getElementById('privacy-copy').textContent = copy.privacyCopy;
       debugTitleNodes.forEach((node, index) => { node.textContent = copy.debugTitles[index]; });
       messageInput.placeholder = copy.messagePlaceholder;
+      assistantVoiceLabel.textContent = voiceCopy.label;
+      assistantVoiceModeSelect.innerHTML = `<option value="speak">${voiceCopy.speak}</option><option value="read">${voiceCopy.read}</option>`;
+      assistantVoiceModeSelect.value = state.assistantVoiceMode;
       updateAudioUi();
       renderLanguages();
       applyThemeOptions();
@@ -1024,6 +1134,7 @@
       voiceNote.textContent = supportsAudio() ? copy.voiceAvailable : copy.voiceUnavailable;
       recordButton.disabled = !supportsAudio();
       setIconButton(recordButton, { icon: state.isRecording ? DESKTOP_BUTTON_ICONS.stop : DESKTOP_BUTTON_ICONS.record, label: state.isRecording ? copy.stop : copy.record, collapse: true });
+      updateVoiceStatusUi();
     }
     function renderSession() {
       if (!state.session) return;
@@ -1214,7 +1325,7 @@
       setStatus('thinking');
       try {
         const payload = await fetchJson('/runtime/text', {
-          method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text, lang: state.currentLang, patient_identity: activePatientIdentityPayload(), synthesize_speech: true, debug: Boolean(state.session && state.session.role === 'developer' && state.session.active_view === 'developer') })
+          method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text, lang: state.currentLang, patient_identity: activePatientIdentityPayload(), synthesize_speech: state.assistantVoiceMode === 'speak', debug: Boolean(state.session && state.session.role === 'developer' && state.session.active_view === 'developer') })
         });
         state.lastPayload = payload;
         const selection = payload.selection || {};
@@ -1224,7 +1335,7 @@
         if (payload.matched_trigger_id) meta.push(`trigger:${payload.matched_trigger_id}`);
         if (payload.hybrid_selection && payload.hybrid_selection.status) meta.push(`hybrid:${payload.hybrid_selection.status}`);
         addBubble('assistant', selection.text || copyFor().noResponse, meta);
-        if (payload.tts && payload.tts.audio_url) new Audio(payload.tts.audio_url).play().catch(() => undefined);
+        if (state.assistantVoiceMode === 'speak' && payload.tts && payload.tts.audio_url) new Audio(payload.tts.audio_url).play().catch(() => undefined);
         updateCards(payload);
         updateHandoff(payload);
         setStatus('ready');
@@ -1243,7 +1354,7 @@
       formData.append('audio', blob, `patient-note-${Date.now()}.webm`);
       formData.append('lang', state.currentLang);
       formData.append('patient_identity', JSON.stringify(activePatientIdentityPayload()));
-      formData.append('synthesize_speech', 'true');
+      formData.append('synthesize_speech', String(state.assistantVoiceMode === 'speak'));
       formData.append('debug', String(Boolean(state.session && state.session.role === 'developer' && state.session.active_view === 'developer')));
       try {
         const response = await fetch('/runtime/audio-upload', { method: 'POST', body: formData });
@@ -1252,7 +1363,7 @@
         if (!response.ok) throw new Error(payload.message || payload.error || 'audio_failed');
         state.lastPayload = payload;
         addBubble('assistant', (payload.selection || {}).text || copyFor().noResponse, ['audio']);
-        if (payload.tts && payload.tts.audio_url) new Audio(payload.tts.audio_url).play().catch(() => undefined);
+        if (state.assistantVoiceMode === 'speak' && payload.tts && payload.tts.audio_url) new Audio(payload.tts.audio_url).play().catch(() => undefined);
         updateCards(payload);
         updateHandoff(payload);
         setStatus('ready');
@@ -1307,6 +1418,10 @@
       identityNote.textContent = state.selectedAlias ? copyFor().identitySelected(state.selectedAlias) : identityNote.textContent;
     });
     languageSelect.addEventListener('change', () => applyLanguage(languageSelect.value));
+    assistantVoiceModeSelect.addEventListener('change', () => {
+      state.assistantVoiceMode = assistantVoiceModeSelect.value === 'read' ? 'read' : 'speak';
+      updateStaticCopy();
+    });
     sendButton.addEventListener('click', () => sendTextMessage(messageInput.value));
     clearButton.addEventListener('click', seedIntro);
     logoutButton.addEventListener('click', logout);
