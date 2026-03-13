@@ -1,0 +1,55 @@
+{
+  "batch_id": "2026-03-14-nimh-suicide-prevention-support",
+  "generated_at": "2026-03-13T23:45:26.703996+00:00",
+  "sources": {
+    "local_paths": [],
+    "urls": [
+      "https://www.nimh.nih.gov/health/topics/suicide-prevention",
+      "https://www.nimh.nih.gov/health/publications/warning-signs-of-suicide",
+      "https://www.nimh.nih.gov/health/publications/5-action-steps-to-help-someone-having-thoughts-of-suicide"
+    ],
+    "resolved_paths": [
+      "D:\\WORK\\VS_Code\\Python_projects\\AI_assistant_psyhoterapist\\data_sources\\literature_batches\\2026-03-14-nimh-suicide-prevention-support\\downloads\\remote_5-action-steps-to-help-someone-having-thoughts-o_369a51eea49b.html",
+      "D:\\WORK\\VS_Code\\Python_projects\\AI_assistant_psyhoterapist\\data_sources\\literature_batches\\2026-03-14-nimh-suicide-prevention-support\\downloads\\remote_suicide-prevention_e036d09a0239.html",
+      "D:\\WORK\\VS_Code\\Python_projects\\AI_assistant_psyhoterapist\\data_sources\\literature_batches\\2026-03-14-nimh-suicide-prevention-support\\downloads\\remote_warning-signs-of-suicide_2728f7884db5.html"
+    ],
+    "downloaded_files": [
+      {
+        "url": "https://www.nimh.nih.gov/health/topics/suicide-prevention",
+        "download_path": "data_sources\\literature_batches\\2026-03-14-nimh-suicide-prevention-support\\downloads\\remote_suicide-prevention_e036d09a0239.html",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://www.nimh.nih.gov/health/publications/warning-signs-of-suicide",
+        "download_path": "data_sources\\literature_batches\\2026-03-14-nimh-suicide-prevention-support\\downloads\\remote_warning-signs-of-suicide_2728f7884db5.html",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://www.nimh.nih.gov/health/publications/5-action-steps-to-help-someone-having-thoughts-of-suicide",
+        "download_path": "data_sources\\literature_batches\\2026-03-14-nimh-suicide-prevention-support\\downloads\\remote_5-action-steps-to-help-someone-having-thoughts-o_369a51eea49b.html",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  "counts": {
+    "documents": 3,
+    "chunks": 20,
+    "knowledge_snippets": 20,
+    "phrase_candidates": 20,
+    "trigger_candidates": 0,
+    "rule_hints": 3
+  },
+  "lang": "en",
+  "topic_hints": [
+    "suicide",
+    "prevention",
+    "help",
+    "that",
+    "health",
+    "research",
+    "nimh",
+    "thoughts",
+    "they",
+    "more"
+  ]
+}

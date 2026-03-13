@@ -1,0 +1,52 @@
+{
+  "rule_hints": [
+    {
+      "hint_type": "dominant_categories",
+      "items": [
+        {
+          "category": "variants",
+          "count": 20
+        }
+      ]
+    },
+    {
+      "hint_type": "risk_flags",
+      "items": []
+    },
+    {
+      "hint_type": "topic_hints",
+      "items": [
+        {
+          "topic": "suicide"
+        },
+        {
+          "topic": "prevention"
+        },
+        {
+          "topic": "help"
+        },
+        {
+          "topic": "that"
+        },
+        {
+          "topic": "health"
+        },
+        {
+          "topic": "research"
+        },
+        {
+          "topic": "nimh"
+        },
+        {
+          "topic": "thoughts"
+        },
+        {
+          "topic": "they"
+        },
+        {
+          "topic": "more"
+        }
+      ]
+    }
+  ]
+}

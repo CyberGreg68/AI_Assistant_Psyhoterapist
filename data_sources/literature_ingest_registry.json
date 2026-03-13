@@ -1,0 +1,251 @@
+{
+  "updated_at": "2026-03-14T00:00:00Z",
+  "purpose": "Persistent ledger for downloaded literature sources, batch provenance, review state, and dedupe tracking.",
+  "batches": [
+    {
+      "batch_id": "2026-03-13-nimh-patient-cues",
+      "lang": "en",
+      "source_profile": "local_seed_note",
+      "built_with_html_cleaning": true,
+      "review_status": "seed_review_pending",
+      "import_status": "not_started",
+      "reprocess_recommended": false,
+      "processing_actions": [
+        "Loaded a local markdown working note from data_sources/literature_working.",
+        "Generated initial knowledge, phrase, and trigger candidates as a compact seed batch.",
+        "Used as a seed source in the broader anxiety-stress-child batch."
+      ],
+      "counts": {
+        "documents": 1,
+        "chunks": 2,
+        "knowledge_snippets": 2,
+        "phrase_candidates": 3,
+        "trigger_candidates": 7,
+        "rule_hints": 3
+      },
+      "documents": [
+        {
+          "source_key": "data_sources/literature_working/2026-03-13-nimh-patient-cues.en.md",
+          "origin": "local_markdown",
+          "title_hint": "NIMH patient cues seed note",
+          "content_summary": "Compact working note about anxiety-linked child/patient cue language and help-seeking phrasing.",
+          "status": "batched",
+          "review_state": "pending_manual_review"
+        }
+      ],
+      "next_actions": [
+        "Review the 7 trigger candidates for false positives before any import.",
+        "Keep as a seed/reference batch rather than a primary remote-source handoff."
+      ]
+    },
+    {
+      "batch_id": "2026-03-13-nimh-anxiety-stress-child",
+      "lang": "en",
+      "source_profile": "mixed_local_and_remote_html",
+      "built_with_html_cleaning": false,
+      "review_status": "legacy_remote_batch_pending",
+      "import_status": "not_started",
+      "reprocess_recommended": true,
+      "processing_actions": [
+        "Downloaded three public NIMH HTML pages and combined them with the local patient-cues seed note.",
+        "Generated a large mixed batch before the improved HTML main-content filtering was added.",
+        "Left batch in review-only state because remote HTML boilerplate was still noisier at that time."
+      ],
+      "counts": {
+        "documents": 4,
+        "chunks": 120,
+        "knowledge_snippets": 40,
+        "phrase_candidates": 48,
+        "trigger_candidates": 7,
+        "rule_hints": 3
+      },
+      "documents": [
+        {
+          "source_key": "https://www.nimh.nih.gov/health/topics/anxiety-disorders",
+          "origin": "remote_html",
+          "title_hint": "Anxiety Disorders",
+          "content_summary": "General NIMH overview of anxiety disorders, symptoms, treatment references, and help resources.",
+          "status": "downloaded_and_batched",
+          "review_state": "pending_reprocess_or_manual_triage"
+        },
+        {
+          "source_key": "https://www.nimh.nih.gov/health/publications/so-stressed-out-fact-sheet",
+          "origin": "remote_html",
+          "title_hint": "So Stressed Out Fact Sheet",
+          "content_summary": "Public stress-oriented psychoeducation and coping guidance from NIMH.",
+          "status": "downloaded_and_batched",
+          "review_state": "pending_reprocess_or_manual_triage"
+        },
+        {
+          "source_key": "https://www.nimh.nih.gov/health/publications/children-and-mental-health",
+          "origin": "remote_html",
+          "title_hint": "Children and Mental Health",
+          "content_summary": "Child and adolescent mental health overview, support guidance, and provider-facing advice.",
+          "status": "downloaded_and_batched",
+          "review_state": "pending_reprocess_or_manual_triage"
+        },
+        {
+          "source_key": "data_sources/literature_working/2026-03-13-nimh-patient-cues.en.md",
+          "origin": "local_markdown",
+          "title_hint": "NIMH patient cues seed note",
+          "content_summary": "Local seed text merged into the larger anxiety/stress/child review pack.",
+          "status": "batched",
+          "review_state": "pending_manual_review"
+        }
+      ],
+      "next_actions": [
+        "If this batch becomes a serious import candidate, rebuild it with the improved HTML extractor.",
+        "Use it mainly as a broad source inventory until the cleaner rerun exists."
+      ]
+    },
+    {
+      "batch_id": "2026-03-13-nimh-stress-anxiety",
+      "lang": "en",
+      "source_profile": "remote_html",
+      "built_with_html_cleaning": false,
+      "review_status": "legacy_remote_batch_pending",
+      "import_status": "not_started",
+      "reprocess_recommended": true,
+      "processing_actions": [
+        "Downloaded two public NIMH HTML sources on anxiety and stress.",
+        "Generated a review-only batch before the improved HTML boilerplate filtering was added.",
+        "Kept in staging because trigger output was empty and phrase candidates required manual filtering."
+      ],
+      "counts": {
+        "documents": 2,
+        "chunks": 60,
+        "knowledge_snippets": 40,
+        "phrase_candidates": 34,
+        "trigger_candidates": 0,
+        "rule_hints": 3
+      },
+      "documents": [
+        {
+          "source_key": "https://www.nimh.nih.gov/health/topics/anxiety-disorders",
+          "origin": "remote_html",
+          "title_hint": "Anxiety Disorders",
+          "content_summary": "NIMH overview of anxiety symptoms, research, and treatment pointers.",
+          "status": "downloaded_and_batched",
+          "review_state": "pending_reprocess_or_manual_triage"
+        },
+        {
+          "source_key": "https://www.nimh.nih.gov/health/publications/so-stressed-out-fact-sheet",
+          "origin": "remote_html",
+          "title_hint": "So Stressed Out Fact Sheet",
+          "content_summary": "Stress-management and self-care educational material from NIMH.",
+          "status": "downloaded_and_batched",
+          "review_state": "pending_reprocess_or_manual_triage"
+        }
+      ],
+      "next_actions": [
+        "Prefer the newer cleaned batches for future import work.",
+        "Only revisit this batch if its exact source pairing is needed again."
+      ]
+    },
+    {
+      "batch_id": "2026-03-14-nimh-depression-selfcare",
+      "lang": "en",
+      "source_profile": "remote_html",
+      "built_with_html_cleaning": true,
+      "review_status": "partial_manual_review_complete",
+      "import_status": "not_started",
+      "reprocess_recommended": false,
+      "processing_actions": [
+        "Downloaded three public NIMH HTML sources on depression, self-care, and provider communication.",
+        "Rebuilt the batch after improving HTML extraction to focus on main content and strip boilerplate.",
+        "Reduced the batch from noisy 95 chunks to a cleaner 32 chunks / 43 phrase candidates.",
+        "Started manual triage in review_decisions.md to separate shortlist, rewrite-needed, and reject items."
+      ],
+      "counts": {
+        "documents": 3,
+        "chunks": 32,
+        "knowledge_snippets": 32,
+        "phrase_candidates": 43,
+        "trigger_candidates": 0,
+        "rule_hints": 3
+      },
+      "documents": [
+        {
+          "source_key": "https://www.nimh.nih.gov/health/topics/caring-for-your-mental-health",
+          "origin": "remote_html",
+          "title_hint": "Caring for Your Mental Health",
+          "content_summary": "Self-care basics, symptom thresholds for seeking help, support contact suggestions, and 988 references.",
+          "status": "downloaded_cleaned_batched",
+          "review_state": "partial_manual_review_complete"
+        },
+        {
+          "source_key": "https://www.nimh.nih.gov/health/topics/depression",
+          "origin": "remote_html",
+          "title_hint": "Depression",
+          "content_summary": "Depression definition, symptom impact, treatment/research context, and help/support routing.",
+          "status": "downloaded_cleaned_batched",
+          "review_state": "partial_manual_review_complete"
+        },
+        {
+          "source_key": "https://www.nimh.nih.gov/health/publications/tips-for-talking-with-your-health-care-provider",
+          "origin": "remote_html",
+          "title_hint": "Tips for Talking With a Health Care Provider About Your Mental Health",
+          "content_summary": "Practical help-seeking guidance: prepare questions, involve support people, be honest, ask about options.",
+          "status": "downloaded_cleaned_batched",
+          "review_state": "partial_manual_review_complete"
+        }
+      ],
+      "next_actions": [
+        "Continue candidate-level triage and identify import-ready phrases versus rewrite-needed phrasing.",
+        "Optionally derive a smaller help-seeking shortlist for locale import after manual wording adjustment."
+      ]
+    },
+    {
+      "batch_id": "2026-03-14-nimh-suicide-prevention-support",
+      "lang": "en",
+      "source_profile": "remote_html",
+      "built_with_html_cleaning": true,
+      "review_status": "initial_manual_review_complete",
+      "import_status": "not_started",
+      "reprocess_recommended": false,
+      "processing_actions": [
+        "Downloaded three public NIMH HTML sources on suicide prevention, warning signs, and action steps for supporting someone with suicidal thoughts.",
+        "Built the batch with the newer main-content HTML extraction logic.",
+        "Performed an initial manual triage to separate support-worthy crisis content from heading noise and research-only language."
+      ],
+      "counts": {
+        "documents": 3,
+        "chunks": 20,
+        "knowledge_snippets": 20,
+        "phrase_candidates": 20,
+        "trigger_candidates": 0,
+        "rule_hints": 3
+      },
+      "documents": [
+        {
+          "source_key": "https://www.nimh.nih.gov/health/topics/suicide-prevention",
+          "origin": "remote_html",
+          "title_hint": "Suicide Prevention",
+          "content_summary": "NIMH overview of suicide prevention, evidence-based programs, help routing, and research directions.",
+          "status": "downloaded_cleaned_batched",
+          "review_state": "initial_manual_review_complete"
+        },
+        {
+          "source_key": "https://www.nimh.nih.gov/health/publications/warning-signs-of-suicide",
+          "origin": "remote_html",
+          "title_hint": "Warning Signs of Suicide",
+          "content_summary": "Public warning-sign and help-seeking guidance for recognizing suicide risk.",
+          "status": "downloaded_cleaned_batched",
+          "review_state": "initial_manual_review_complete"
+        },
+        {
+          "source_key": "https://www.nimh.nih.gov/health/publications/5-action-steps-to-help-someone-having-thoughts-of-suicide",
+          "origin": "remote_html",
+          "title_hint": "5 Action Steps to Help Someone Having Thoughts of Suicide",
+          "content_summary": "Action-oriented support guidance: ask directly, reduce lethal means, connect to 988, involve supports, and follow up.",
+          "status": "downloaded_cleaned_batched",
+          "review_state": "initial_manual_review_complete"
+        }
+      ],
+      "next_actions": [
+        "Split import-eligible supportive wording from tightly governed crisis or caregiver-only phrasing.",
+        "Consider adding a dedicated crisis review pass before any runtime promotion because several retained items describe suicide-specific intervention steps."
+      ]
+    }
+  ]
+}

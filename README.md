@@ -293,6 +293,10 @@ python scripts\build_literature_batch.py --batch-id 2026-03-13-nimh-stress-anxie
 
 The output stays review-gated. It does not write directly into the live locale phrase or trigger files.
 
+Use `data_sources/literature_ingest_registry.json` as the running ledger for what has already been downloaded, how each source was processed, whether a batch predates newer cleanup logic, and what still needs review or reprocessing.
+
+For batch-specific manual triage notes, keep a `review_decisions.md` file next to the generated batch artifacts when you start curating candidate quality.
+
 Import an approved review pack into the developer kits:
 
 ```powershell
