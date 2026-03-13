@@ -259,6 +259,31 @@ python scripts\build_review_candidate_pack.py --pack-id clinician_batch_001 --so
 
 The output is intended for review and later controlled import into the developer phrase, trigger, and knowledge kits.
 
+## Literature Batch Builder
+
+For staged literature work, use the dedicated batch builder when you want a handoff-style folder instead of one monolithic review-pack JSON.
+
+It writes a dated batch directory with:
+
+- `manifest.json`
+- `documents.jsonl`
+- `chunks.jsonl`
+- `knowledge_snippets.jsonl`
+- `phrase_candidates.jsonl`
+- `trigger_candidates.jsonl`
+- `rule_hints.json`
+- `review_notes.md`
+
+It can work from local source folders, public URLs, or both.
+
+Example:
+
+```powershell
+python scripts\build_literature_batch.py --batch-id 2026-03-13-nimh-stress-anxiety --output-dir .\data_sources\literature_batches\2026-03-13-nimh-stress-anxiety --url https://www.nimh.nih.gov/health/topics/anxiety-disorders --url https://www.nimh.nih.gov/health/publications/so-stressed-out-fact-sheet
+```
+
+The output stays review-gated. It does not write directly into the live locale phrase or trigger files.
+
 Import an approved review pack into the developer kits:
 
 ```powershell

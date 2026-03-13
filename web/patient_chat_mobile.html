@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Paciens Mobil Demo</title>
+  <title>Páciens Mobil Demo</title>
   <style>
     :root {
       --bg-top: #f1e3cf;
@@ -120,6 +120,13 @@
       border: 1px solid var(--line);
       background: rgba(255,255,255,0.74);
       color: var(--muted);
+    }
+
+    a.chip {
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .pill.live {
@@ -508,11 +515,12 @@
         </div>
       </div>
       <div class="chip-row">
-        <button class="chip" data-quick-key="sleep">Alvas</button>
-        <button class="chip" data-quick-key="breakup">Szakitas</button>
-        <button class="chip" data-quick-key="simplify">Egyszerubben</button>
-        <button class="chip danger" id="quick-urgent" type="button">Surgos</button>
-        <button class="chip" id="logout-button" type="button">Kilepes</button>
+        <button class="chip" data-quick-key="sleep">Alvás</button>
+        <button class="chip" data-quick-key="breakup">Szakítás</button>
+        <button class="chip" data-quick-key="simplify">Egyszerűbben</button>
+        <button class="chip danger" id="quick-urgent" type="button">Sürgős</button>
+        <a id="desktop-link" class="chip" href="/chat">Asztali nézet</a>
+        <button class="chip" id="logout-button" type="button">Kilépés</button>
       </div>
     </section>
 
@@ -576,11 +584,11 @@
     <section id="timeline" class="timeline"></section>
 
     <section class="composer">
-      <textarea id="message" placeholder="Ird le roviden, mire lenne most a legnagyobb szukseged."></textarea>
+      <textarea id="message" placeholder="Írd le röviden, mire lenne most a legnagyobb szükséged."></textarea>
       <div class="composer-actions">
         <button id="record-button" class="secondary" type="button">Mikrofon</button>
-        <button id="send" class="primary" type="button">Kuld</button>
-        <button id="clear" class="secondary" type="button">Torol</button>
+        <button id="send" class="primary" type="button">Küld</button>
+        <button id="clear" class="secondary" type="button">Töröl</button>
       </div>
       <p id="voice-note" class="tiny">Mikrofon capture es helyi felolvasas aktiv, ha a bongeszo tamogatja.</p>
     </section>
@@ -619,6 +627,7 @@
     const settingsLabels = document.querySelectorAll('details label');
     const snapshotLabels = document.querySelectorAll('.snapshot-cell .tiny');
     const quickUrgentButton = document.getElementById('quick-urgent');
+    const desktopLink = document.getElementById('desktop-link');
     const logoutButton = document.getElementById('logout-button');
     const recordButton = document.getElementById('record-button');
     const autoSpeakInput = document.getElementById('auto-speak');
@@ -651,17 +660,18 @@
     const UI_COPY = {
       hu: {
         heroEyebrow: 'Mobile Walkthrough',
-        heroTitle: 'Telefonos meretu paciens-tamogatas.',
+        heroTitle: 'Telefonos méretű páciens-támogatás.',
         language: 'Nyelv',
-        identityWaiting: 'A browser-alapu memoria kulcs latszik, amig nincs patient id.',
-        identityPrefix: 'Feloldott memoria kulcs: ',
-        quick: { sleep: { label: 'Alvas', text: 'Nehezen alszom mostanaban.' }, breakup: { label: 'Szakitas', text: 'Szakitas utan vagyok.' }, simplify: { label: 'Egyszerubben', text: 'Egyszerubben mondd el.' }, urgentLabel: 'Surgos', urgentText: 'Surgos segitsegre van szuksegem most.' },
-        settings: { summary: 'Demo beallitasok', patientPlaceholder: 'Optional patient id', age: [['', 'Kor'], ['teen', 'Teen'], ['adult', 'Adult'], ['senior', 'Senior']], literacy: [['', 'Nyelvezet'], ['low', 'Alacsony'], ['medium', 'Kozepes'], ['high', 'Magas']], register: [['', 'Regiszter'], ['plain', 'Egyszeru'], ['conversational', 'Koznapi'], ['clinical', 'Klinikai']], labels: ['Prefer online rerank when available', 'Include review and test content', 'Show compact debug block'] },
-        snapshot: { labels: ['Recent Theme', 'Knowledge', 'Routing', 'Memory'], summaryEmpty: 'Nincs meg aktiv beszelgetesi osszefoglalo.', knowledgeEmpty: 'Nincs kivalasztott snippet.', routingEmpty: 'A routing a valasz utan jelenik meg.', memoryEmpty: 'Browser-scoped memoria aktiv.' },
-        composer: { placeholder: 'Ird le roviden, mire lenne most a legnagyobb szukseged.', send: 'Kuld', clear: 'Torol', record: 'Mikrofon', stopRecord: 'Stop', logout: 'Kilepes', autoSpeak: 'Valasz felolvasasa', voiceNote: 'Mikrofon capture es helyi felolvasas aktiv, ha a bongeszo tamogatja.' },
+        identityWaiting: 'A browser-alapú memória kulcs látszik, amíg nincs patient id.',
+        identityPrefix: 'Feloldott memória kulcs: ',
+        quick: { sleep: { label: 'Alvás', text: 'Nehezen alszom mostanában.' }, breakup: { label: 'Szakítás', text: 'Szakítás után vagyok.' }, simplify: { label: 'Egyszerűbben', text: 'Egyszerűbben mondd el.' }, urgentLabel: 'Sürgős', urgentText: 'Sürgős segítségre van szükségem most.' },
+        links: { desktop: 'Asztali nézet' },
+        settings: { summary: 'Demó beállítások', patientPlaceholder: 'Optional patient id', age: [['', 'Kor'], ['teen', 'Teen'], ['adult', 'Adult'], ['senior', 'Senior']], literacy: [['', 'Nyelvezet'], ['low', 'Alacsony'], ['medium', 'Közepes'], ['high', 'Magas']], register: [['', 'Regiszter'], ['plain', 'Egyszerű'], ['conversational', 'Köznapi'], ['clinical', 'Klinikai']], labels: ['Prefer online rerank when available', 'Include review and test content', 'Show compact debug block'] },
+        snapshot: { labels: ['Recent Theme', 'Knowledge', 'Routing', 'Memory'], summaryEmpty: 'Nincs még aktív beszélgetési összefoglaló.', knowledgeEmpty: 'Nincs kiválasztott snippet.', routingEmpty: 'A routing a válasz után jelenik meg.', memoryEmpty: 'Browser-scoped memória aktív.' },
+        composer: { placeholder: 'Írd le röviden, mire lenne most a legnagyobb szükséged.', send: 'Küld', clear: 'Töröl', record: 'Mikrofon', stopRecord: 'Stop', logout: 'Kilépés', autoSpeak: 'Válasz felolvasása', voiceNote: 'Mikrofon capture és helyi felolvasás aktív, ha a böngésző támogatja.' },
         statuses: { online: 'Online Ready', local: 'Local Only', offline: 'Offline' },
         roles: { patient: 'Patient', assistant: 'Assistant', system: 'Demo' },
-        messages: { debug: 'debug', noResponse: '(nincs valasz)', unknownError: 'ismeretlen hiba', networkError: 'network_error', cleared: 'A mobil demo nezet torolve lett.', intro: 'Ez egy mobilra optimalizalt paciens-demo. A valaszok ugyanazt a runtime API-t hasznaljak, mint az asztali nezet.', speechUnavailable: 'A bongeszo nem tamogat helyi mikrofonfelismerest.', speechCaptureStart: 'Mikrofon figyeles indult.', speechCaptureError: 'Mikrofon hiba', speechCaptured: 'Felismert szoveg', authRequired: 'Session lejart, uj belepes kell.' }
+        messages: { debug: 'debug', noResponse: '(nincs válasz)', unknownError: 'ismeretlen hiba', networkError: 'network_error', cleared: 'A mobil demó nézet törölve lett.', intro: 'Ez egy mobilra optimalizált páciens-demó. A válaszok ugyanazt a runtime API-t használják, mint az asztali nézet.', speechUnavailable: 'A böngésző nem támogat helyi mikrofonfelismerést.', speechCaptureStart: 'Mikrofon figyelés indult.', speechCaptureError: 'Mikrofon hiba', speechCaptured: 'Felismert szöveg', authRequired: 'Session lejárt, új belépés kell.' }
       },
       en: {
         heroEyebrow: 'Mobile Walkthrough',
@@ -670,6 +680,7 @@
         identityWaiting: 'Identity resolves to a browser-scoped memory key until a patient id is supplied.',
         identityPrefix: 'Resolved memory key: ',
         quick: { sleep: { label: 'Sleep', text: 'I have had trouble sleeping lately.' }, breakup: { label: 'Breakup', text: 'I am going through a breakup.' }, simplify: { label: 'Simplify', text: 'Say it in simpler language.' }, urgentLabel: 'Urgent', urgentText: 'I need urgent help right now.' },
+        links: { desktop: 'Desktop view' },
         settings: { summary: 'Demo settings', patientPlaceholder: 'Optional patient id', age: [['', 'Age group'], ['teen', 'Teen'], ['adult', 'Adult'], ['senior', 'Senior']], literacy: [['', 'Literacy'], ['low', 'Low'], ['medium', 'Medium'], ['high', 'High']], register: [['', 'Register'], ['plain', 'Plain'], ['conversational', 'Conversational'], ['clinical', 'Clinical']], labels: ['Prefer online rerank when available', 'Include review and test content', 'Show compact debug block'] },
         snapshot: { labels: ['Recent Theme', 'Knowledge', 'Routing', 'Memory'], summaryEmpty: 'No active conversation summary yet.', knowledgeEmpty: 'No snippet selected.', routingEmpty: 'Routing details appear after a response.', memoryEmpty: 'Browser-scoped memory is active.' },
         composer: { placeholder: 'Briefly describe what would help most right now.', send: 'Send', clear: 'Clear', record: 'Microphone', stopRecord: 'Stop', logout: 'Logout', autoSpeak: 'Read replies aloud', voiceNote: 'Microphone capture and local speech playback are used when the browser supports them.' },
@@ -684,6 +695,7 @@
         identityWaiting: 'Die Identitaet wird auf einen browserbasierten Speicherschluessel aufgeloest, bis eine Patienten-ID gesetzt ist.',
         identityPrefix: 'Aufgeloester Speicherschluessel: ',
         quick: { sleep: { label: 'Schlaf', text: 'Ich habe in letzter Zeit Schlafprobleme.' }, breakup: { label: 'Trennung', text: 'Ich gehe gerade durch eine Trennung.' }, simplify: { label: 'Einfacher', text: 'Sag es einfacher.' }, urgentLabel: 'Dringend', urgentText: 'Ich brauche jetzt dringend Hilfe.' },
+        links: { desktop: 'Desktop-Ansicht' },
         settings: { summary: 'Demo-Einstellungen', patientPlaceholder: 'Optionale Patienten-ID', age: [['', 'Altersgruppe'], ['teen', 'Jugendlich'], ['adult', 'Erwachsen'], ['senior', 'Senior']], literacy: [['', 'Sprachniveau'], ['low', 'Niedrig'], ['medium', 'Mittel'], ['high', 'Hoch']], register: [['', 'Register'], ['plain', 'Einfach'], ['conversational', 'Alltaeglich'], ['clinical', 'Klinisch']], labels: ['Online-Rerank bevorzugen, wenn verfuegbar', 'Review- und Testinhalte einschliessen', 'Kompakten Debug-Block zeigen'] },
         snapshot: { labels: ['Letztes Thema', 'Wissen', 'Routing', 'Speicher'], summaryEmpty: 'Noch keine aktive Gespraechszusammenfassung.', knowledgeEmpty: 'Kein Snippet ausgewaehlt.', routingEmpty: 'Routing-Details erscheinen nach einer Antwort.', memoryEmpty: 'Browserbasierter Speicher ist aktiv.' },
         composer: { placeholder: 'Beschreibe kurz, was dir jetzt am meisten helfen wuerde.', send: 'Senden', clear: 'Leeren', record: 'Mikrofon', stopRecord: 'Stop', logout: 'Abmelden', autoSpeak: 'Antworten vorlesen', voiceNote: 'Mikrofon-Capture und lokale Sprachausgabe werden genutzt, wenn der Browser sie unterstuetzt.' },
@@ -1084,6 +1096,7 @@
         button.dataset.quick = quick.text;
       });
       quickUrgentButton.textContent = copy.quick.urgentLabel;
+      desktopLink.textContent = copy.links.desktop;
       snapshotLabels.forEach((node, index) => {
         node.textContent = copy.snapshot.labels[index];
       });

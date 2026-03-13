@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Paciens Chat Demo</title>
+  <title>Páciens Chat Demo</title>
   <style>
     :root {
       --canvas: #f7f1e8;
@@ -148,6 +148,12 @@
     .triple {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 10px;
     }
 
@@ -572,6 +578,8 @@
     @media (max-width: 700px) {
       .shell { width: min(100vw - 16px, 1240px); }
       .triple,
+      .profile-grid,
+      .theme-controls,
       .composer-grid { grid-template-columns: 1fr; }
       .topbar,
       .timeline,
@@ -831,7 +839,14 @@
     }
 
     .theme-controls {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
       align-items: end;
+    }
+
+    .theme-controls .field.theme-note-field {
+      grid-column: 1 / -1;
     }
 
     .theme-note {
@@ -859,13 +874,13 @@
 <body>
   <div id="onboarding" class="modal-shell">
     <section class="modal">
-      <div class="eyebrow">Gyors belepes</div>
-      <h1>Rovid ejszakai tamogatas</h1>
-      <p class="lede">Szia - itt az ejszakai asszisztens. Rovid valaszokat adok, segithetek coping lepesekben, es ha kell, jelzem, hogy emberi segitseg szukseges.</p>
+      <div class="eyebrow">Gyors belépés</div>
+      <h1>Rövid éjszakai támogatás</h1>
+      <p class="lede">Szia, itt az éjszakai asszisztens. Rövid válaszokat adok, segíthetek coping lépésekben, és ha kell, jelzem, hogy emberi segítség szükséges.</p>
       <div class="checklist">
         <div><strong>Mi ez?</strong> Egy asszisztenssel beszelsz, nem eloterjesztett terapeuta-dontessel.</div>
         <div><strong>Hatarok:</strong> Nem adok orvosi diagnosztikat vagy jogi tanacsot.</div>
-        <div><strong>Biztonsag:</strong> Surgos helyzetben hasznald a piros segitseg gombot vagy helyi segelyhivot.</div>
+        <div><strong>Biztonság:</strong> Sürgős helyzetben használd a piros segítség gombot vagy a helyi segélyhívót.</div>
         <div><strong>Emberi tamogatas:</strong> Kockazatnal handoff uzenet jelenik meg, es lathatoan jelezzuk, ha emberi kovetes kell.</div>
       </div>
       <div class="actions">
@@ -884,9 +899,9 @@
 
       <section class="panel block safety-box">
         <div class="eyebrow">Biztonsag elore</div>
-        <h3>Surgos segitseg</h3>
-        <p class="copy">Hasznald a krizis gombot, ha azonnali tamogatas kell. A demo ilyenkor azonnal krizis-uzenetet kuld a runtime-nak.</p>
-        <button id="sidebar-crisis" class="danger">Surgos segitseg</button>
+        <h3>Sürgős segítség</h3>
+        <p class="copy">Használd a krízis gombot, ha azonnali támogatás kell. A demó ilyenkor azonnal krízisüzenetet küld a runtime-nak.</p>
+        <button id="sidebar-crisis" class="danger">Sürgős segítség</button>
       </section>
 
       <section class="panel block">
@@ -897,10 +912,10 @@
             <select id="ui-language"></select>
           </div>
           <div class="field">
-            <label for="patient-id">Patient ID</label>
+            <label for="patient-id">Páciens azonosító</label>
             <input id="patient-id" type="text" placeholder="pl. p-1 vagy hagyd uresen">
           </div>
-          <div class="triple">
+          <div class="profile-grid">
             <div class="field">
               <label for="age-group">Kor</label>
               <select id="age-group">
@@ -928,8 +943,6 @@
                 <option value="clinical">reszletes</option>
               </select>
             </div>
-          </div>
-          <div class="triple">
             <div class="field">
               <label for="tts-speed">Hang tempo</label>
               <select id="tts-speed">
@@ -940,7 +953,7 @@
               </select>
             </div>
             <div class="field">
-              <label for="latency-context">Latency</label>
+              <label for="latency-context">Késleltetés</label>
               <select id="latency-context">
                 <option value="">none</option>
                 <option value="acknowledge_then_compute">acknowledge_then_compute</option>
@@ -954,38 +967,38 @@
               </select>
             </div>
           </div>
-          <div class="triple theme-controls">
+          <div class="theme-controls">
             <div class="field">
-              <label for="theme-mode">Atmoszfera</label>
+              <label for="theme-mode">Atmoszféra</label>
               <select id="theme-mode"></select>
             </div>
             <div class="field">
-              <label for="theme-skin">Skin</label>
+              <label for="theme-skin">Skinválasztó</label>
               <select id="theme-skin"></select>
             </div>
-            <div class="field">
-              <label for="theme-note">Aktiv ambience</label>
-              <div id="theme-note" class="theme-note">Auto ambience aktiv.</div>
+            <div class="field theme-note-field">
+              <label for="theme-note">Aktív megjelenés</label>
+              <div id="theme-note" class="theme-note">Az automatikus megjelenés aktív.</div>
             </div>
           </div>
           <div class="toggle-row">
-            <span class="toggle-label">Prefer Online</span>
-            <input id="prefer-online" type="checkbox" checked title="Prefer online route">
+            <span class="toggle-label">Online előnyben</span>
+            <input id="prefer-online" type="checkbox" checked title="Az online útvonal előnyben részesítése">
           </div>
           <div class="toggle-row">
-            <span class="toggle-label">Show Routing Details</span>
-            <input id="show-routing" type="checkbox" title="Show routing details">
+            <span class="toggle-label">Routing részletei</span>
+            <input id="show-routing" type="checkbox" title="Routing részleteinek megjelenítése">
           </div>
           <div class="toggle-row">
-            <span class="toggle-label">Demo Mode</span>
-            <input id="demo-mode" type="checkbox" checked title="Show detailed debug explanation">
+            <span class="toggle-label">Demó mód</span>
+            <input id="demo-mode" type="checkbox" checked title="Részletes debug magyarázat megjelenítése">
           </div>
           <div class="toggle-row">
-            <span class="toggle-label">Include Review/Test Content</span>
-            <input id="include-review-items" type="checkbox" title="Allow non-approved content in test mode">
+            <span class="toggle-label">Review és teszt tartalom</span>
+            <input id="include-review-items" type="checkbox" title="Nem jóváhagyott tartalom engedélyezése teszt módban">
           </div>
           <div class="toggle-row">
-            <span class="toggle-label">Rovid excerpt mentese minoseghez</span>
+            <span class="toggle-label">Rövid excerpt mentése minőséghez</span>
             <input id="consent-store" type="checkbox" title="Consent to store a short excerpt">
           </div>
         </div>
@@ -997,14 +1010,14 @@
         <div class="topbar-brand">
           <img class="topbar-logo" src="/assets/patient_portal_logo.svg" alt="AARE inspired therapy portal logo">
           <div class="title-wrap">
-            <div class="eyebrow">Patient Web Chat</div>
-            <h2 class="title">Gyors belepes, vilagos hatarok</h2>
-            <div class="microcopy">Mi a legfontosabb most? Egy mondat is eleg.</div>
+            <div class="eyebrow">Páciens webchat</div>
+            <h2 class="title">Gyors belépés, világos határok</h2>
+            <div class="microcopy">Mi a legfontosabb most? Egy mondat is elég.</div>
           </div>
         </div>
         <div class="topbar-actions">
-          <div id="status" class="status">Ready</div>
-          <button id="logout-button" class="secondary" type="button">Kilepes</button>
+          <div id="status" class="status">Kész</div>
+          <button id="logout-button" class="secondary" type="button">Kilépés</button>
         </div>
       </header>
 
@@ -1026,17 +1039,17 @@
 
       <section class="quickbar">
         <button class="quick" data-quick-key="anxiety">Szorongok</button>
-        <button class="quick" data-quick-key="sleep">Alvasproblema</button>
+        <button class="quick" data-quick-key="sleep">Alvásprobléma</button>
         <button class="quick" data-quick-key="breathing">Most legzest szeretnek</button>
         <button class="quick" data-quick-key="pause">Szuenetet kerek</button>
-        <button class="quick alert" id="quick-urgent">Surgos</button>
+        <button class="quick alert" id="quick-urgent">Sürgős</button>
         <a id="mobile-link" class="quick" href="/chat/mobile">Mobil demo</a>
       </section>
 
       <section id="timeline" class="timeline">
         <article class="bubble system">
           <div class="bubble-head">Onboarding</div>
-          <div class="bubble-body">Szia - itt az ejszakai asszisztens. Rovid valaszokkal segitek, es ha szukseges, lathatoan jelzem az emberi beavatkozast.</div>
+          <div class="bubble-body">Szia, itt az éjszakai asszisztens. Rövid válaszokkal segítek, és ha szükséges, láthatóan jelzem az emberi beavatkozást.</div>
           <div class="meta">
             <span class="chip">assistant_disclosure</span>
             <span class="chip">safety_active</span>
@@ -1047,7 +1060,7 @@
       <section id="debug-console" class="debug-console">
         <div class="debug-head">
           <div>
-            <div class="debug-title">Demo Console</div>
+            <div class="debug-title">Demó konzol</div>
             <div class="microcopy">Itt latod, milyen trigger, route es phrase alapjan szuletett a valasz.</div>
           </div>
           <div id="debug-turn" class="chip">turn: 0</div>
@@ -1057,24 +1070,24 @@
             <div class="small-label">Mi tortent es miert?</div>
             <div class="debug-cards">
               <div class="debug-card">
-                <strong>Hybrid selection</strong>
+                <strong>Hibrid kiválasztás</strong>
                 <div id="debug-hybrid" class="microcopy">A hybrid dontes allapota itt jelenik meg.</div>
               </div>
               <div class="debug-card">
-                <strong>Conversation summary</strong>
-                <div id="debug-summary" class="microcopy">A friss beszelgetes rovid osszefoglaloja itt jelenik meg.</div>
+                <strong>Beszélgetés-összegzés</strong>
+                <div id="debug-summary" class="microcopy">A friss beszélgetés rövid összefoglalója itt jelenik meg.</div>
               </div>
               <div class="debug-card">
-                <strong>Patient identity</strong>
-                <div id="debug-identity" class="microcopy">A feloldott patient identity itt jelenik meg.</div>
+                <strong>Páciensazonosság</strong>
+                <div id="debug-identity" class="microcopy">A feloldott páciensazonosság itt jelenik meg.</div>
               </div>
             </div>
             <ul id="debug-explanation" class="debug-list">
-              <li>A demo mod minden kuldes utan ide irja a magyarazatot.</li>
+              <li>A demó mód minden küldés után ide írja a magyarázatot.</li>
             </ul>
           </div>
           <div class="debug-pane">
-            <div class="small-label">Recent history</div>
+            <div class="small-label">Friss előzmények</div>
             <div id="debug-history" class="debug-history">
               <div class="debug-history-row">A legutobbi turnok itt jelennek meg.</div>
             </div>
@@ -1089,7 +1102,7 @@
           <textarea id="message" placeholder="Pelda: Nem tudom, hogyan kezdjem elmondani."></textarea>
           <div class="action-stack">
             <button id="record-button" class="secondary" type="button">Mikrofon</button>
-            <button id="send" class="primary">Kuldes</button>
+            <button id="send" class="primary">Küldés</button>
             <button id="clear" class="secondary" type="button">Urites</button>
           </div>
         </div>
@@ -1099,14 +1112,14 @@
             <span id="auto-speak-label">Valasz felolvasasa</span>
           </label>
         </div>
-        <div class="footer-note">One-tap opciok: rovid coping kerdesek, gyors support, szunet, krizis-jelzes. A demo jelenleg a helyi runtime vegpontot hasznalja.</div>
+        <div class="footer-note">One-tap opciók: rövid coping kérdések, gyors support, szünet, krízisjelzés. A demó jelenleg a helyi runtime végpontot használja.</div>
         <div id="voice-note" class="identity-note">Mikrofon capture es helyi felolvasas aktiv, ha a bongeszo tamogatja.</div>
         <div id="identity-note" class="identity-note">Patient memory key: loading...</div>
       </section>
     </main>
   </div>
 
-  <button id="floating-crisis" class="danger floating-crisis">Surgos segitseg</button>
+  <button id="floating-crisis" class="danger floating-crisis">Sürgős segítség</button>
 
   <script>
     const timeline = document.getElementById('timeline');
@@ -1186,20 +1199,20 @@
 
     const THEME_COPY = {
       hu: {
-        modeLabel: 'Atmoszfera',
-        skinLabel: 'Skin',
-        noteLabel: 'Aktiv ambience',
-        modes: [['auto', 'Auto: profil + napszak + hangulat'], ['manual', 'Kezi skin']],
+        modeLabel: 'Atmoszféra',
+        skinLabel: 'Skinválasztó',
+        noteLabel: 'Aktív megjelenés',
+        modes: [['auto', 'Auto: profil + napszak + hangulat'], ['manual', 'Kézi skin']],
         skins: { aare: 'Aare Light', river: 'River Calm', dusk: 'Soft Evening' },
         reasons: {
-          manual: 'kezi valasztas',
+          manual: 'kézi választás',
           morning: 'reggeli ritmus',
-          day: 'napkozbeni egyensuly',
-          evening: 'esti lenyugtatas',
-          night: 'ejszakai puhitas',
-          urgent: 'fokozott biztonsag',
-          heavy: 'nagyobb terheles',
-          rest: 'pihenes-fokusz',
+          day: 'napközbeni egyensúly',
+          evening: 'esti lenyugtatás',
+          night: 'éjszakai puhítás',
+          urgent: 'fokozott biztonság',
+          heavy: 'nagyobb terhelés',
+          rest: 'pihenés-fókusz',
           calm: 'nyugodtabb hangulat',
           steady: 'semleges alap'
         }
@@ -1248,65 +1261,65 @@
       hu: {
         language: 'Nyelv',
         onboarding: {
-          eyebrow: 'Gyors belepes',
-          title: 'Rovid ejszakai tamogatas',
-          lede: 'Szia - itt az ejszakai asszisztens. Rovid valaszokat adok, segithetek coping lepesekben, es ha kell, jelzem, hogy emberi segitseg szukseges.',
-          checklist: '<div><strong>Mi ez?</strong> Egy asszisztenssel beszelsz, nem eloterjesztett terapeuta-dontessel.</div><div><strong>Hatarok:</strong> Nem adok orvosi diagnosztikat vagy jogi tanacsot.</div><div><strong>Biztonsag:</strong> Surgos helyzetben hasznald a piros segitseg gombot vagy helyi segelyhivot.</div><div><strong>Emberi tamogatas:</strong> Kockazatnal handoff uzenet jelenik meg, es lathatoan jelezzuk, ha emberi kovetes kell.</div>',
+          eyebrow: 'Gyors belépés',
+          title: 'Rövid éjszakai támogatás',
+          lede: 'Szia, itt az éjszakai asszisztens. Rövid válaszokat adok, segíthetek coping lépésekben, és ha kell, jelzem, hogy emberi segítség szükséges.',
+          checklist: '<div><strong>Mi ez?</strong> Egy asszisztenssel beszélsz, nem előterjesztett terapeuta-döntéssel.</div><div><strong>Határok:</strong> Nem adok orvosi diagnózist vagy jogi tanácsot.</div><div><strong>Biztonság:</strong> Sürgős helyzetben használd a piros segítség gombot vagy a helyi segélyhívót.</div><div><strong>Emberi támogatás:</strong> Kockázatnál handoff üzenet jelenik meg, és láthatóan jelezzük, ha emberi követés kell.</div>',
           start: 'Rendben, kezdem'
         },
         sidebar: {
           disclosureEyebrow: 'Transzparencia',
           disclosureTitle: 'Asszisztenssel beszelsz',
           disclosureCopy: 'Mindig jelezzuk, hogy ez egy asszisztens. Ha a rendszer aggaszto jeleket lat, lathato handoff tajekoztatast ad.',
-          safetyEyebrow: 'Biztonsag elore',
-          safetyTitle: 'Surgos segitseg',
-          safetyCopy: 'Hasznald a krizis gombot, ha azonnali tamogatas kell. A demo ilyenkor azonnal krizis-uzenetet kuld a runtime-nak.',
+          safetyEyebrow: 'Biztonság előre',
+          safetyTitle: 'Sürgős segítség',
+          safetyCopy: 'Használd a krízis gombot, ha azonnali támogatás kell. A demó ilyenkor azonnal krízisüzenetet küld a runtime-nak.',
           personalization: 'Szemelyre szabás',
-          labels: ['Nyelv', 'Patient ID', 'Kor', 'Nyelvezet', 'Regiszter', 'Hang tempo', 'Latency', 'Adatmod'],
-          toggles: ['Prefer Online', 'Show Routing Details', 'Demo Mode', 'Include Review/Test Content', 'Rovid excerpt mentese minoseghez']
+          labels: ['Nyelv', 'Páciens azonosító', 'Kor', 'Nyelvezet', 'Regiszter', 'Hangtempó', 'Késleltetés', 'Adatmód'],
+          toggles: ['Online előnyben', 'Routing részletei', 'Demó mód', 'Review és teszt tartalom', 'Rövid excerpt mentése minőséghez']
         },
         hero: {
-          eyebrow: 'Patient Web Chat',
-          title: 'Gyors belepes, vilagos hatarok',
-          copy: 'Mi a legfontosabb most? Egy mondat is eleg.',
-          trustTitle: 'Asszisztens + lathato emberi kovetes',
-          trustCopy: 'Ha handoff tortenik, itt jelenik meg a tajekoztatas. Krizishelyzetben a rendszer azonnal biztonsagi valtasra all.',
-          handoffTitle: 'Handoff aktiv',
-          handoffText: 'Aggaszto jelek miatt emberi kovetes szukseges. A kezelo ertesitese inditva vagy javasolt.',
+          eyebrow: 'Páciens webchat',
+          title: 'Gyors belépés, világos határok',
+          copy: 'Mi a legfontosabb most? Egy mondat is elég.',
+          trustTitle: 'Asszisztens + látható emberi követés',
+          trustCopy: 'Ha handoff történik, itt jelenik meg a tájékoztatás. Krízishelyzetben a rendszer azonnal biztonsági váltásra áll.',
+          handoffTitle: 'Handoff aktív',
+          handoffText: 'Aggasztó jelek miatt emberi követés szükséges. A kezelő értesítése indítva vagy javasolt.',
           introHead: 'Onboarding',
-          introBody: 'Szia - itt az ejszakai asszisztens. Rovid valaszokkal segitek, es ha szukseges, lathatoan jelzem az emberi beavatkozast.'
+          introBody: 'Szia, itt az éjszakai asszisztens. Rövid válaszokkal segítek, és ha szükséges, láthatóan jelzem az emberi beavatkozást.'
         },
         quick: {
           anxiety: { label: 'Szorongok', text: 'Szorongok, szeretnek gyors tamogatast.' },
-          sleep: { label: 'Alvasproblema', text: 'Alvasproblemam van, nem tudok lenyugodni.' },
-          breathing: { label: 'Legzes', text: 'Most legzest szeretnek.' },
-          pause: { label: 'Szuenet', text: 'Szuenetet kerek.' },
-          urgentLabel: 'Surgos',
-          urgentText: 'Surgos segitsegre van szuksegem most.',
+          sleep: { label: 'Alvásprobléma', text: 'Alvásproblémám van, nem tudok lenyugodni.' },
+          breathing: { label: 'Légzés', text: 'Most légzést szeretnék.' },
+          pause: { label: 'Szünet', text: 'Szünetet kérek.' },
+          urgentLabel: 'Sürgős',
+          urgentText: 'Sürgős segítségre van szükségem most.',
           mobileLink: 'Mobil demo'
         },
         debug: {
-          title: 'Demo Console',
+          title: 'Demó konzol',
           copy: 'Itt latod, milyen trigger, route es phrase alapjan szuletett a valasz.',
-          labels: ['Mi tortent es miert?', 'Recent history', 'Nyers debug'],
-          cards: ['Hybrid selection', 'Conversation summary', 'Patient identity'],
+          labels: ['Mi tortent es miert?', 'Friss előzmények', 'Nyers debug'],
+          cards: ['Hibrid kiválasztás', 'Beszélgetés-összegzés', 'Páciensazonosság'],
           hybridPlaceholder: 'A hybrid dontes allapota itt jelenik meg.',
-          summaryPlaceholder: 'A friss beszelgetes rovid osszefoglaloja itt jelenik meg.',
-          identityPlaceholder: 'A feloldott patient identity itt jelenik meg.',
+          summaryPlaceholder: 'A friss beszélgetés rövid összefoglalója itt jelenik meg.',
+          identityPlaceholder: 'A feloldott páciensazonosság itt jelenik meg.',
           historyPlaceholder: 'A legutobbi turnok itt jelennek meg.',
-          explanationPlaceholder: 'A demo mod minden kuldes utan ide irja a magyarazatot.'
+          explanationPlaceholder: 'A demó mód minden küldés után ide írja a magyarázatot.'
         },
         composer: {
           placeholder: 'Pelda: Nem tudom, hogyan kezdjem elmondani.',
-          send: 'Kuldes',
-          clear: 'Urites',
+          send: 'Küldés',
+          clear: 'Ürítés',
           record: 'Mikrofon',
           stopRecord: 'Stop',
-          logout: 'Kilepes',
-          autoSpeak: 'Valasz felolvasasa',
-          footer: 'One-tap opciok: rovid coping kerdesek, gyors support, szunet, krizis-jelzes. A demo jelenleg a helyi runtime vegpontot hasznalja.',
-          voiceNote: 'Mikrofon capture es helyi felolvasas aktiv, ha a bongeszo tamogatja.',
-          identityPrefix: 'Patient memory key: '
+          logout: 'Kilépés',
+          autoSpeak: 'Válasz felolvasása',
+          footer: 'Egynyomásos opciók: rövid coping kérdések, gyors támogatás, szünet, krízisjelzés. A demó jelenleg a helyi runtime végpontot használja.',
+          voiceNote: 'A mikrofonfigyelés és a helyi felolvasás aktív, ha a böngésző támogatja.',
+          identityPrefix: 'Páciens memóriakulcs: '
         },
         options: {
           patientPlaceholder: 'pl. p-1 vagy hagyd uresen',
@@ -1317,9 +1330,9 @@
           latency: [['', 'none'], ['acknowledge_then_compute', 'acknowledge_then_compute']],
           history: [['limited', 'anonim limited'], ['identified', 'azonositott']]
         },
-        roles: { patient: 'Patient', assistant: 'Assistant', system: 'System' },
-        statuses: { ready: 'Ready', online: 'Online Ready', local: 'Local Only', offline: 'Offline', thinking: 'Thinking', empty: 'Empty', error: 'Error', paused: 'Paused' },
-        messages: { feedback: 'Feedback rogzitve', latency: 'Varakozasi preamble', noResponse: '(nincs valaszszoveg)', paused: 'A szunet aktiv. Oldd fel a szunetet, ha uj uzenetet szeretnel kuldeni.', pauseApplied: 'Ertem. Szunetet tartunk. Az ertesiteseket most nem kuldom tovabb.', cleared: 'A nezet torolve lett. A beszelgetesi elozmeny jelenleg csak ebben a helyi demo nezetben latszik.', unknownError: 'ismeretlen hiba', networkError: 'network_error', historyLimited: 'anonim_limited', historyIdentified: 'identified', noHybrid: 'Nincs hybrid dontesi adat.', noSummary: 'Nincs conversation summary.', noIdentity: 'Nincs identity adat.', noHistory: 'Nincs recent history.', speechUnavailable: 'A bongeszo nem tamogat helyi mikrofonfelismerest.', speechCaptureStart: 'Mikrofon figyeles indult.', speechCaptureError: 'Mikrofon hiba', speechCaptured: 'Felismert szoveg', authRequired: 'Session lejart, uj belepes kell.' }
+        roles: { patient: 'Páciens', assistant: 'Asszisztens', system: 'Rendszer' },
+        statuses: { ready: 'Kész', online: 'Online kész', local: 'Csak helyi', offline: 'Offline', thinking: 'Gondolkodik', empty: 'Üres', error: 'Hiba', paused: 'Szünetel' },
+        messages: { feedback: 'Visszajelzés rögzítve', latency: 'Várakozási előszöveg', noResponse: '(nincs válaszszöveg)', paused: 'A szünet aktív. Oldd fel a szünetet, ha új üzenetet szeretnél küldeni.', pauseApplied: 'Értem. Szünetet tartunk. Az értesítéseket most nem küldöm tovább.', cleared: 'A nézet törölve lett. A beszélgetési előzmény jelenleg csak ebben a helyi demó nézetben látszik.', unknownError: 'ismeretlen hiba', networkError: 'hálózati_hiba', historyLimited: 'anonim_korlátozott', historyIdentified: 'azonosított', noHybrid: 'Nincs hibrid döntési adat.', noSummary: 'Nincs beszélgetés-összegzés.', noIdentity: 'Nincs azonosítási adat.', noHistory: 'Nincs friss előzmény.', speechUnavailable: 'A böngésző nem támogat helyi mikrofonfelismerést.', speechCaptureStart: 'Mikrofon figyelés indult.', speechCaptureError: 'Mikrofon hiba', speechCaptured: 'Felismert szöveg', authRequired: 'Session lejárt, új belépés kell.' }
       },
       en: {
         language: 'Language',

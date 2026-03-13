@@ -567,7 +567,7 @@ def _render_login_page(auth_manager: PortalSessionAuth, next_path: str) -> str:
                 <p class=\"signature\">Psychotherapist Assistant</p>
             </article>
             <aside class=\"login-card\">
-                <p class=\"eyebrow\">Protected Access</p>
+                <p class=\"eyebrow\">Védett hozzáférés</p>
                 <h2>Belépés a betegportálra</h2>
                 <div class=\"support-box\">
                     <strong>Az eredeti oldal vizuális logikájára hangolva</strong>
@@ -575,14 +575,14 @@ def _render_login_page(auth_manager: PortalSessionAuth, next_path: str) -> str:
                 </div>
                 {demo_hint}
                 <div class=\"field-grid\">
-                    <label for=\"access-code\">Access Code</label>
-                    <input id=\"access-code\" type=\"password\" autocomplete=\"current-password\" placeholder=\"Portal access code\">
+                    <label for=\"access-code\">Belépési kód</label>
+                    <input id=\"access-code\" type=\"password\" autocomplete=\"current-password\" placeholder=\"Portál-hozzáférési kód\">
                 </div>
                 <button id=\"login-button\" type=\"button\">Belépés</button>
                 <p id=\"login-error\" class=\"error\"></p>
                 <div class=\"mini-links\">
-                    <a href=\"/chat\">Desktop chat preview</a>
-                    <a href=\"/chat/mobile\">Mobile preview</a>
+                    <a href=\"/chat\">Asztali chat előnézet</a>
+                    <a href=\"/chat/mobile\">Mobil előnézet</a>
                 </div>
                 <p class=\"footer-note\">A mostani állapot már a feltöltött referencia betűhangulatát, logóirányát és színvilágát használja, nem a korábbi saját márkajelzést.</p>
             </aside>
@@ -603,12 +603,12 @@ def _render_login_page(auth_manager: PortalSessionAuth, next_path: str) -> str:
         }});
         const payload = await response.json();
         if (!response.ok) {{
-          errorNode.textContent = payload.message || 'Login failed';
+          errorNode.textContent = payload.message || 'A belépés nem sikerült';
           return;
         }}
         window.location.href = payload.next_path || '/chat';
       }} catch (error) {{
-        errorNode.textContent = error.message || 'Network error';
+        errorNode.textContent = error.message || 'Hálózati hiba';
       }} finally {{
         loginButton.disabled = false;
       }}

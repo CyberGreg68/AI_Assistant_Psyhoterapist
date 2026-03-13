@@ -35,35 +35,84 @@ _CATEGORY_BY_TAG_PRIORITY = (
     ("enc", "encouragement"),
 )
 
-_PHRASE_MARKERS = {
-    "kérdezd",
-    "kerdezd",
-    "érthető",
-    "ertheto",
-    "hasznos",
-    "segít",
-    "segit",
-    "mondhatod",
-    "kérlek",
-    "kerlek",
-    "fontos",
+_PHRASE_MARKERS_BY_LANG = {
+    "hu": {
+        "kérdezd",
+        "kerdezd",
+        "érthető",
+        "ertheto",
+        "hasznos",
+        "segít",
+        "segit",
+        "mondhatod",
+        "kérlek",
+        "kerlek",
+        "fontos",
+    },
+    "en": {
+        "help",
+        "coping",
+        "support",
+        "important",
+        "you can",
+        "it may help",
+        "try",
+        "consider",
+        "ask",
+    },
+    "de": {
+        "hilft",
+        "wichtig",
+        "frage",
+        "bitte",
+        "unterstützung",
+        "unterstuetzung",
+        "versuche",
+        "kann helfen",
+    },
 }
 
-_TRIGGER_MARKERS = {
-    "érzem",
-    "erzem",
-    "vagyok",
-    "akarok",
-    "félek",
-    "felek",
-    "nem bírom",
-    "nem birom",
-    "szeretnék",
-    "szeretnek",
-    "szégyellem",
-    "szegyellem",
-    "hiányzik",
-    "hianyzik",
+_TRIGGER_MARKERS_BY_LANG = {
+    "hu": {
+        "érzem",
+        "erzem",
+        "vagyok",
+        "akarok",
+        "félek",
+        "felek",
+        "nem bírom",
+        "nem birom",
+        "szeretnék",
+        "szeretnek",
+        "szégyellem",
+        "szegyellem",
+        "hiányzik",
+        "hianyzik",
+    },
+    "en": {
+        "i feel",
+        "i am",
+        "i'm",
+        "i cannot",
+        "i can't",
+        "i want",
+        "i need",
+        "i fear",
+        "i'm afraid",
+        "i am afraid",
+        "i am overwhelmed",
+        "i can't cope",
+    },
+    "de": {
+        "ich fühle",
+        "ich fuehle",
+        "ich bin",
+        "ich kann nicht",
+        "ich will",
+        "ich brauche",
+        "ich habe angst",
+        "ich schaffe es nicht",
+    },
 }
 
 
@@ -101,7 +150,7 @@ def _fold_text(value: str) -> str:
 
 def _sentence_candidates(text: str) -> list[str]:
     parts = [
-        normalize_ingest_text(piece)
+        re.sub(r"^[-*•]\s+", "", normalize_ingest_text(piece))
         for piece in re.split(r"(?<=[.!?])\s+", text)
         if normalize_ingest_text(piece)
     ]
@@ -119,7 +168,7 @@ def _infer_category(tags: set[str], intent: str, risk_flags: set[str]) -> str:
     return "variants"
 
 
-def _looks_like_phrase_candidate(text: str, tags: set[str], risk_flags: set[str]) -> bool:
+def _looks_like_phrase_candidate(text: str, tags: set[str], risk_flags: set[str], lang: str) -> bool:
     lowered = text.casefold()
     if re.search(r"https?://|www\.", lowered):
         return False
@@ -129,14 +178,16 @@ def _looks_like_phrase_candidate(text: str, tags: set[str], risk_flags: set[str]
         return True
     if tags or risk_flags:
         return True
-    return any(marker in lowered for marker in _PHRASE_MARKERS)
+    markers = _PHRASE_MARKERS_BY_LANG.get(lang, _PHRASE_MARKERS_BY_LANG["hu"])
+    return any(marker in lowered for marker in markers)
 
 
-def _looks_like_trigger_candidate(text: str, risk_flags: set[str]) -> bool:
+def _looks_like_trigger_candidate(text: str, risk_flags: set[str], lang: str) -> bool:
     lowered = text.casefold()
     if risk_flags:
         return True
-    return any(marker in lowered for marker in _TRIGGER_MARKERS)
+    markers = _TRIGGER_MARKERS_BY_LANG.get(lang, _TRIGGER_MARKERS_BY_LANG["hu"])
+    return any(marker in lowered for marker in markers)
 
 
 def _normalized_trigger_forms(text: str) -> list[str]:
@@ -176,6 +227,7 @@ def build_review_candidate_pack(
     pack_id: str,
     *,
     source_paths: list[Path],
+    lang: str = "hu",
     config_dir: Path | None = None,
     stt_adapter: STTAdapter | None = None,
     recursive: bool = True,
@@ -276,13 +328,13 @@ def build_review_candidate_pack(
             if (
                 len(phrase_candidates) < max_phrase_candidates
                 and sentence_key not in seen_phrase_texts
-                and _looks_like_phrase_candidate(sentence, sentence_analysis.tags, sentence_analysis.risk_flags)
+                and _looks_like_phrase_candidate(sentence, sentence_analysis.tags, sentence_analysis.risk_flags, lang)
             ):
                 seen_phrase_texts.add(sentence_key)
                 phrase_candidates.append(
                     {
                         "candidate_id": f"phr_cand_{pack_id}_{len(phrase_candidates) + 1:03d}",
-                        "lang": "hu",
+                        "lang": lang,
                         "category": category,
                         "intent": sentence_analysis.intent,
                         "tags": sorted(sentence_analysis.tags),
@@ -301,7 +353,7 @@ def build_review_candidate_pack(
             if (
                 len(trigger_candidates) < max_trigger_candidates
                 and sentence_key not in seen_trigger_texts
-                and _looks_like_trigger_candidate(sentence, sentence_analysis.risk_flags)
+                and _looks_like_trigger_candidate(sentence, sentence_analysis.risk_flags, lang)
             ):
                 seen_trigger_texts.add(sentence_key)
                 trigger_tags = set(sentence_analysis.tags)
@@ -310,7 +362,7 @@ def build_review_candidate_pack(
                 trigger_candidates.append(
                     {
                         "candidate_id": f"trg_cand_{pack_id}_{len(trigger_candidates) + 1:03d}",
-                        "lang": "hu",
+                        "lang": lang,
                         "category": category,
                         "trigger_text": sentence,
                         "normalized_forms": _normalized_trigger_forms(sentence),

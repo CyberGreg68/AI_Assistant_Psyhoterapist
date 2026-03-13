@@ -21,6 +21,7 @@ def _parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--pack-id", required=True)
     parser.add_argument("--source", action="append", required=True)
+    parser.add_argument("--lang", default="hu")
     parser.add_argument("--glob", action="append", default=[])
     parser.add_argument("--no-recursive", action="store_true")
     parser.add_argument("--output", required=True)
@@ -38,6 +39,7 @@ def main() -> int:
     payload = build_review_candidate_pack(
         args.pack_id,
         source_paths=[Path(item) for item in args.source],
+        lang=args.lang,
         config_dir=Path(args.config_dir),
         recursive=not args.no_recursive,
         include_globs=args.glob or None,

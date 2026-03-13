@@ -1,0 +1,58 @@
+{
+  "batch_id": "2026-03-13-nimh-anxiety-stress-child",
+  "generated_at": "2026-03-13T08:19:19.697633+00:00",
+  "sources": {
+    "local_paths": [
+      "data_sources\\literature_working\\2026-03-13-nimh-patient-cues.en.md"
+    ],
+    "urls": [
+      "https://www.nimh.nih.gov/health/topics/anxiety-disorders",
+      "https://www.nimh.nih.gov/health/publications/so-stressed-out-fact-sheet",
+      "https://www.nimh.nih.gov/health/publications/children-and-mental-health"
+    ],
+    "resolved_paths": [
+      "D:\\WORK\\VS_Code\\Python_projects\\AI_assistant_psyhoterapist\\data_sources\\literature_batches\\2026-03-13-nimh-anxiety-stress-child\\downloads\\remote_8bad16b01619.html",
+      "D:\\WORK\\VS_Code\\Python_projects\\AI_assistant_psyhoterapist\\data_sources\\literature_batches\\2026-03-13-nimh-anxiety-stress-child\\downloads\\remote_994fc421c4b1.html",
+      "D:\\WORK\\VS_Code\\Python_projects\\AI_assistant_psyhoterapist\\data_sources\\literature_batches\\2026-03-13-nimh-anxiety-stress-child\\downloads\\remote_de38bbc3d9f1.html",
+      "D:\\WORK\\VS_Code\\Python_projects\\AI_assistant_psyhoterapist\\data_sources\\literature_working\\2026-03-13-nimh-patient-cues.en.md"
+    ],
+    "downloaded_files": [
+      {
+        "url": "https://www.nimh.nih.gov/health/topics/anxiety-disorders",
+        "download_path": "data_sources\\literature_batches\\2026-03-13-nimh-anxiety-stress-child\\downloads\\remote_994fc421c4b1.html",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://www.nimh.nih.gov/health/publications/so-stressed-out-fact-sheet",
+        "download_path": "data_sources\\literature_batches\\2026-03-13-nimh-anxiety-stress-child\\downloads\\remote_8bad16b01619.html",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://www.nimh.nih.gov/health/publications/children-and-mental-health",
+        "download_path": "data_sources\\literature_batches\\2026-03-13-nimh-anxiety-stress-child\\downloads\\remote_de38bbc3d9f1.html",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  "counts": {
+    "documents": 4,
+    "chunks": 120,
+    "knowledge_snippets": 40,
+    "phrase_candidates": 48,
+    "trigger_candidates": 7,
+    "rule_hints": 3
+  },
+  "lang": "en",
+  "topic_hints": [
+    "nimh",
+    "research",
+    "health",
+    "mental",
+    "information",
+    "anxiety",
+    "disorders",
+    "more",
+    "your",
+    "help"
+  ]
+}
