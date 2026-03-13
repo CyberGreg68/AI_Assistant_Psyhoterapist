@@ -228,16 +228,18 @@
       gap: 14px;
     }
     .hero-head {
-      padding: 22px 24px 16px;
+      padding: 18px 24px;
       border: 1px solid var(--line);
       border-radius: 28px;
       background: linear-gradient(180deg, rgba(255,255,255,0.16), rgba(255,255,255,0.06)), var(--panel);
-      display: grid;
-      gap: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
       box-shadow: var(--shadow);
     }
-    .hero-top { display: flex; align-items: start; justify-content: space-between; gap: 18px; }
-    .brand { display: grid; gap: 10px; }
+    .hero-top { display: flex; align-items: center; justify-content: space-between; gap: 18px; width: 100%; }
+    .brand { display: flex; align-items: center; gap: 16px; min-width: 0; }
     .logo-pill {
       position: relative;
       display: inline-flex;
@@ -263,6 +265,24 @@
       pointer-events: none;
     }
     .brand img { width: 164px; height: auto; display: block; }
+    .header-account {
+      display: grid;
+      gap: 4px;
+      min-width: 0;
+    }
+    .header-primary {
+      font: 700 14px/1.2 "Courier New", monospace;
+      color: var(--ink);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .header-secondary {
+      color: var(--muted);
+      line-height: 1.35;
+    }
+    .header-secondary.hidden {
+      display: none;
+    }
     .top-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
     .header-language {
       display: grid;
@@ -274,13 +294,18 @@
     }
     .conversation-shell {
       display: grid;
-      grid-template-rows: auto auto auto 1fr auto auto;
+      grid-template-rows: auto auto auto auto 1fr auto auto;
       border: 1px solid var(--line);
       border-radius: 28px;
       background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.06)), var(--panel);
       box-shadow: var(--shadow);
       overflow: hidden;
       min-height: 0;
+    }
+    .conversation-intro {
+      padding: 20px 24px 0;
+      display: grid;
+      gap: 8px;
     }
     .toolbar { padding: 16px 24px 0; display: flex; gap: 10px; flex-wrap: wrap; }
     .banner {
@@ -453,7 +478,13 @@
       .hero-head, .toolbar, .timeline, .composer, .debug-shell { padding-left: 16px; padding-right: 16px; }
       .banner { margin-left: 16px; margin-right: 16px; }
       .composer-grid, .field-grid, .theme-controls { grid-template-columns: 1fr; }
-      .hero-top { flex-direction: column; }
+      .hero-head,
+      .hero-top,
+      .brand {
+        flex-direction: column;
+        align-items: start;
+      }
+      .top-actions { width: 100%; }
       .brand img { width: 136px; }
       h1 { font-size: 32px; }
       .composer-meta { align-items: start; }
@@ -587,9 +618,9 @@
         <div class="hero-top">
           <div class="brand">
             <div class="logo-pill"><img id="portal-logo" src="/assets/logo_light.png" alt="Patient portal logo"></div>
-            <div>
-              <p class="eyebrow">Psychotherapie-Assistent</p>
-              <h1 id="hero-title">Anonymer Therapie-Arbeitsbereich</h1>
+            <div class="header-account">
+              <div id="header-primary" class="header-primary">Laden</div>
+              <div id="header-secondary" class="header-secondary hidden"></div>
             </div>
           </div>
           <div class="top-actions">
@@ -601,9 +632,13 @@
             <button id="logout-button" class="secondary" type="button">Abmelden</button>
           </div>
         </div>
-        <p id="hero-copy" class="copy">Die Runtime sieht nur pseudonyme Subject-Keys. Die Zuordnung bleibt beim Kliniker oder in einem externen Register.</p>
       </header>
       <section class="conversation-shell">
+        <section class="conversation-intro">
+          <p id="hero-eyebrow" class="eyebrow">Psychotherapie-Assistent</p>
+          <h1 id="hero-title">Anonymer Therapie-Arbeitsbereich</h1>
+          <p id="hero-copy" class="copy">Die Runtime sieht nur pseudonyme Subject-Keys. Die Zuordnung bleibt beim Kliniker oder in einem externen Register.</p>
+        </section>
         <section class="toolbar">
           <button class="tab-button" data-quick="Ich schlafe in letzter Zeit schlecht." type="button">Schlaf</button>
           <button class="tab-button" data-quick="Ich bin ängstlich und brauche eine kurze Stabilisierung." type="button">Stabilisierung</button>
@@ -683,6 +718,8 @@
       session: null,
       supportedLanguages: ['hu', 'en', 'de'],
       currentLang: 'de',
+      statusKey: 'ready',
+      statusType: '',
       assistantVoiceMode: 'speak',
       patientAliases: [],
       selectedAlias: '',
@@ -846,6 +883,9 @@
     const sessionTitle = document.getElementById('session-title');
     const sessionCopy = document.getElementById('session-copy');
     const identityNote = document.getElementById('identity-note');
+    const headerPrimary = document.getElementById('header-primary');
+    const headerSecondary = document.getElementById('header-secondary');
+    const heroEyebrow = document.getElementById('hero-eyebrow');
     const heroTitle = document.getElementById('hero-title');
     const heroCopy = document.getElementById('hero-copy');
     const portalLogo = document.getElementById('portal-logo');
@@ -930,6 +970,8 @@
     function roleLabel(role) { return copyFor().roles[role] || role; }
     function viewLabel(view) { return copyFor().views[view] || view; }
     function setStatus(key, type = '') {
+      state.statusKey = key;
+      state.statusType = type;
       statusPill.textContent = (copyFor().status[key] || key);
       statusPill.className = type === 'warn' ? 'pill warn' : 'pill';
     }
@@ -1040,6 +1082,9 @@
         sessionTitle.textContent = copy.heroDefaultTitle;
         sessionCopy.textContent = copy.sessionLoading;
         identityNote.textContent = copy.identityPlaceholder;
+        headerPrimary.textContent = copy.loading;
+        headerSecondary.textContent = '';
+        headerSecondary.classList.add('hidden');
         heroTitle.textContent = copy.heroDefaultTitle;
         heroCopy.textContent = copy.heroDefaultCopy;
       }
@@ -1076,7 +1121,7 @@
       opsPanel.querySelectorAll('strong')[1].textContent = copy.operations;
       if (healthSummary.textContent === 'No data') healthSummary.textContent = copy.noData;
       if (operationsSummary.textContent === 'No data') operationsSummary.textContent = copy.noData;
-      document.querySelector('.brand .eyebrow').textContent = copy.heroEyebrow;
+      heroEyebrow.textContent = copy.heroEyebrow;
       setIconButton(recordButton, { icon: state.isRecording ? DESKTOP_BUTTON_ICONS.stop : DESKTOP_BUTTON_ICONS.record, label: state.isRecording ? copy.stop : copy.record, collapse: true });
       setIconButton(logoutButton, { icon: DESKTOP_BUTTON_ICONS.logout, label: copy.logout, collapse: true });
       setIconButton(sendButton, { icon: DESKTOP_BUTTON_ICONS.send, label: copy.send, collapse: true });
@@ -1100,6 +1145,7 @@
       assistantVoiceModeSelect.value = state.assistantVoiceMode;
       updateAudioUi();
       renderLanguages();
+      setStatus(state.statusKey, state.statusType);
       applyThemeOptions();
       applyThemeState({ text: messageInput.value, handoff: Boolean(state.lastPayload && state.lastPayload.handoff_triggered) });
     }
@@ -1146,6 +1192,15 @@
       identityNote.textContent = state.session.patient_alias_key ? copy.identityActive(state.session.patient_alias_key) : state.session.clinician_id ? copy.identityClinician(state.session.clinician_id) : copy.identityNone;
       heroTitle.textContent = copy.sessionTitle(viewLabel(state.session.active_view));
       heroCopy.textContent = copy.heroCopy[state.session.active_view] || copy.heroDefaultCopy;
+      const identityLabel = state.session.patient_alias_key || state.session.clinician_id || '';
+      headerPrimary.textContent = identityLabel ? `${roleLabel(state.session.role)} · ${identityLabel}` : roleLabel(state.session.role);
+      if (state.session.role === 'patient') {
+        headerSecondary.textContent = '';
+        headerSecondary.classList.add('hidden');
+      } else {
+        headerSecondary.textContent = viewLabel(state.session.active_view);
+        headerSecondary.classList.remove('hidden');
+      }
       viewSwitcher.innerHTML = '';
       state.session.allowed_views.forEach((view) => {
         const button = document.createElement('button');
@@ -1407,10 +1462,14 @@
       state.currentLang = state.supportedLanguages.includes(lang) ? lang : resolvePreferredLanguage();
       saveLanguagePreference(state.currentLang);
       updateStaticCopy();
+      if (!state.lastPayload && timeline.children.length <= 1) seedIntro();
       renderAliases();
       renderTokens();
       renderSession();
       updateCards(state.lastPayload || {});
+      if (state.session && state.session.role !== 'patient') {
+        loadOps().catch((error) => addBubble('system', error.message, ['ops']));
+      }
     }
     toolbarQuickButtons.forEach((button) => button.addEventListener('click', () => sendTextMessage(button.dataset.quick || '')));
     aliasSelect.addEventListener('change', () => {
@@ -1433,6 +1492,7 @@
     });
     themeModeInput.addEventListener('change', () => { state.themeMode = themeModeInput.value; saveThemePrefs(); applyThemeState(); });
     themeSkinInput.addEventListener('change', () => { state.manualSkin = themeSkinInput.value; saveThemePrefs(); applyThemeState(); });
+    state.currentLang = resolvePreferredLanguage(state.supportedLanguages, state.currentLang);
     loadThemePrefs();
     updateStaticCopy();
     seedIntro();

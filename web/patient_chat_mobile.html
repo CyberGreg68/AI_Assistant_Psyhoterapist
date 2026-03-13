@@ -133,9 +133,48 @@
 
     .hero {
       margin-top: calc(12px + env(safe-area-inset-top, 0px));
-      padding: 16px;
-      display: grid;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .brand-line {
+      display: flex;
+      align-items: center;
       gap: 12px;
+      min-width: 0;
+    }
+
+    .header-account {
+      display: grid;
+      gap: 4px;
+      min-width: 0;
+    }
+
+    .header-primary {
+      font: 700 13px/1.2 "Courier New", monospace;
+      color: var(--ink);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .header-secondary {
+      color: var(--muted);
+      line-height: 1.35;
+    }
+
+    .header-secondary.hidden {
+      display: none;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     .header-language {
@@ -156,6 +195,12 @@
       background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06)), var(--panel);
     }
 
+    .conversation-intro {
+      padding: 4px 12px 0;
+      display: grid;
+      gap: 8px;
+    }
+
     .hero-top,
     .row,
     .chip-row,
@@ -167,7 +212,6 @@
       align-items: center;
     }
 
-    .hero-top { justify-content: space-between; }
     .logo-pill {
       position: relative;
       display: inline-flex;
@@ -378,6 +422,22 @@
       gap: 6px;
     }
 
+    @media (max-width: 430px) {
+      .hero {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .brand-line,
+      .header-actions {
+        justify-content: space-between;
+      }
+
+      .header-language {
+        margin-left: 0;
+      }
+    }
+
     pre {
       margin: 0;
       font: 12px/1.5 "Courier New", monospace;
@@ -402,29 +462,20 @@
 <body>
   <main class="app">
     <section class="hero">
-      <div class="hero-top">
+      <div class="brand-line">
         <div class="logo-pill"><img id="mobile-portal-logo" src="/assets/logo_light.png" alt="Patientenportal-Logo"></div>
-        <span id="mobile-status-pill" class="pill live">Bereit</span>
-      </div>
-      <div class="hero-top">
-        <div class="row">
-          <span id="mobile-role-pill" class="pill">Rolle</span>
-          <span id="mobile-view-pill" class="pill">Ansicht</span>
+        <div class="header-account">
+          <div id="mobile-header-primary" class="header-primary">Laden</div>
+          <div id="mobile-header-secondary" class="header-secondary hidden"></div>
         </div>
+      </div>
+      <div class="header-actions">
+        <span id="mobile-status-pill" class="pill live">Bereit</span>
         <div class="header-language">
           <label id="mobile-language-select-label" for="mobile-language-select">Sprache</label>
           <select id="mobile-language-select"></select>
         </div>
-      </div>
-      <p class="eyebrow">Mobiles Rollenportal</p>
-      <h1 id="mobile-hero-title">Anonyme Patientensitzung mobil</h1>
-      <p id="mobile-hero-copy" class="copy">Pseudonyme Token-Sitzungen halten die Patientenidentität außerhalb der Runtime.</p>
-      <div id="mobile-view-switcher" class="chip-row"></div>
-      <div class="chip-row">
-        <button class="chip" data-quick="Ich schlafe in letzter Zeit schlecht." type="button">Schlaf</button>
-        <button class="chip" data-quick="Ich bin angespannt und brauche eine kurze Stabilisierungsübung." type="button">Stabilisierung</button>
-        <button class="chip" data-quick="Ich brauche jetzt dringend Hilfe." type="button">Dringend</button>
-        <a class="chip" href="/chat">Desktop</a>
+        <button id="mobile-logout-button" class="secondary" type="button">Abmelden</button>
       </div>
     </section>
 
@@ -473,6 +524,18 @@
     </section>
 
     <section class="conversation-shell">
+      <section class="conversation-intro">
+        <p id="mobile-hero-eyebrow" class="eyebrow">Mobiles Rollenportal</p>
+        <h1 id="mobile-hero-title">Anonyme Patientensitzung mobil</h1>
+        <p id="mobile-hero-copy" class="copy">Pseudonyme Token-Sitzungen halten die Patientenidentität außerhalb der Runtime.</p>
+        <div id="mobile-view-switcher" class="chip-row"></div>
+        <div class="chip-row">
+          <button class="chip" data-quick="Ich schlafe in letzter Zeit schlecht." type="button">Schlaf</button>
+          <button class="chip" data-quick="Ich bin angespannt und brauche eine kurze Stabilisierungsübung." type="button">Stabilisierung</button>
+          <button class="chip" data-quick="Ich brauche jetzt dringend Hilfe." type="button">Dringend</button>
+          <a class="chip" href="/chat">Desktop</a>
+        </div>
+      </section>
       <section id="mobile-timeline" class="timeline"></section>
 
       <section id="mobile-debug-panel" class="panel hidden">
@@ -497,7 +560,6 @@
         </div>
         <div class="composer-actions">
           <button id="mobile-send-button" class="primary" type="button">Senden</button>
-          <button id="mobile-logout-button" class="secondary" type="button">Abmelden</button>
         </div>
         <p id="mobile-voice-note" class="tiny">Audio-Upload ist verfügbar, wenn der Browser MediaRecorder unterstützt.</p>
       </section>
@@ -513,6 +575,7 @@
       session: null,
       supportedLanguages: ['hu', 'en', 'de'],
       currentLang: 'de',
+      statusKey: 'ready',
       assistantVoiceMode: 'speak',
       patientAliases: [],
       selectedAlias: '',
@@ -729,8 +792,8 @@
 
     const mobilePortalLogo = document.getElementById('mobile-portal-logo');
     const mobileStatusPill = document.getElementById('mobile-status-pill');
-    const mobileRolePill = document.getElementById('mobile-role-pill');
-    const mobileViewPill = document.getElementById('mobile-view-pill');
+    const mobileHeaderPrimary = document.getElementById('mobile-header-primary');
+    const mobileHeaderSecondary = document.getElementById('mobile-header-secondary');
     const mobileViewSwitcher = document.getElementById('mobile-view-switcher');
     const mobileThemeModeInput = document.getElementById('mobile-theme-mode');
     const mobileThemeSkinInput = document.getElementById('mobile-theme-skin');
@@ -759,6 +822,7 @@
     const mobileAssistantVoiceLabel = document.getElementById('mobile-assistant-voice-label');
     const mobileAssistantVoiceMode = document.getElementById('mobile-assistant-voice-mode');
     const mobileVoiceNote = document.getElementById('mobile-voice-note');
+    const mobileHeroEyebrow = document.getElementById('mobile-hero-eyebrow');
     const mobileHeroTitle = document.getElementById('mobile-hero-title');
     const mobileHeroCopy = document.getElementById('mobile-hero-copy');
     const MOBILE_BUTTON_ICONS = {
@@ -788,6 +852,7 @@
     function mobileSetStatus(key) {
       const copy = mobileCopyFor();
       const normalizedKey = String(key || '').toLowerCase();
+      mobileState.statusKey = normalizedKey;
       mobileStatusPill.textContent = copy.statuses[normalizedKey] || key;
     }
 
@@ -919,11 +984,14 @@
       const voiceCopy = mobileVoiceCopyFor();
       document.documentElement.lang = mobileState.currentLang;
       document.title = copy.pageTitle;
-      document.querySelector('.hero .eyebrow').textContent = copy.heroEyebrow;
+      mobileHeroEyebrow.textContent = copy.heroEyebrow;
       if (!mobileState.session) {
         mobileHeroTitle.textContent = copy.heroDefaultTitle;
         mobileHeroCopy.textContent = copy.heroDefaultCopy;
         mobileIdentityNote.textContent = copy.sessionLoading;
+        mobileHeaderPrimary.textContent = copy.sessionLoading;
+        mobileHeaderSecondary.textContent = '';
+        mobileHeaderSecondary.classList.add('hidden');
       }
       document.querySelectorAll('.chip[data-quick]').forEach((button, index) => {
         const [label, prompt] = copy.quicks[index];
@@ -955,6 +1023,7 @@
       mobileSetIconButton(mobileLogoutButton, { icon: MOBILE_BUTTON_ICONS.logout, label: copy.logout, collapse: true });
       mobileUpdateAudioUi();
       mobileRenderLanguages();
+      mobileSetStatus(mobileState.statusKey);
     }
 
     function mobileAddMessage(role, text, meta = []) {
@@ -1021,8 +1090,15 @@
 
     function mobileRenderSession() {
       const session = mobileState.session;
-      mobileRolePill.textContent = mobileRoleLabel(session.role);
-      mobileViewPill.textContent = mobileViewLabel(session.active_view);
+      const identityLabel = session.patient_alias_key || session.clinician_id || '';
+      mobileHeaderPrimary.textContent = identityLabel ? `${mobileRoleLabel(session.role)} · ${identityLabel}` : mobileRoleLabel(session.role);
+      if (session.role === 'patient') {
+        mobileHeaderSecondary.textContent = '';
+        mobileHeaderSecondary.classList.add('hidden');
+      } else {
+        mobileHeaderSecondary.textContent = mobileViewLabel(session.active_view);
+        mobileHeaderSecondary.classList.remove('hidden');
+      }
       mobileHeroTitle.textContent = `${mobileViewLabel(session.active_view)} mobile`;
       mobileHeroCopy.textContent = session.role === 'patient'
         ? mobileCopyFor().patientCopy
@@ -1158,7 +1234,7 @@
           }),
         });
         const selection = payload.selection || {};
-        mobileAddMessage('assistant', selection.text || '(no response)', selection.category ? [`cat:${selection.category}`] : []);
+        mobileAddMessage('assistant', selection.text || mobileCopyFor().noResponse, selection.category ? [`cat:${selection.category}`] : []);
         mobileDebugJson.textContent = JSON.stringify(payload.debug || {}, null, 2);
         if (mobileState.assistantVoiceMode === 'speak' && payload.tts && payload.tts.audio_url) {
           const audio = new Audio(payload.tts.audio_url);
@@ -1266,6 +1342,15 @@
       mobileState.currentLang = mobileLanguageSelect.value;
       mobileSaveLanguagePreference(mobileState.currentLang);
       mobileApplyStaticCopy();
+      if (mobileTimeline.children.length <= 1) {
+        mobileTimeline.innerHTML = '';
+        mobileAddMessage('system', mobileCopyFor().intro, ['privacy']);
+      }
+      mobileRenderAliases();
+      mobileRenderTokens();
+      if (mobileState.session) {
+        mobileRenderSession();
+      }
       mobileApplyThemeOptions();
       mobileApplyThemeState();
     });
@@ -1299,6 +1384,7 @@
     });
 
     mobileLoadThemePrefs();
+  mobileState.currentLang = mobileResolvePreferredLanguage(mobileState.supportedLanguages, mobileState.currentLang);
     mobileApplyStaticCopy();
     mobileAddMessage('system', mobileCopyFor().intro, ['privacy']);
     mobileUpdateAudioUi();
