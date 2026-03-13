@@ -21,6 +21,8 @@
       --assistant: #dff1ea;
       --system: #f8f1e4;
       --shadow: 0 22px 70px rgba(78, 62, 39, 0.15);
+      --font-display: Georgia, "Times New Roman", serif;
+      --font-ui: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
     }
 
     * { box-sizing: border-box; }
@@ -180,6 +182,20 @@
       gap: 14px;
       padding: 18px 22px 14px;
       border-bottom: 1px solid var(--line);
+    }
+
+    .topbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      min-width: 0;
+    }
+
+    .topbar-logo {
+      width: 136px;
+      height: auto;
+      display: block;
+      flex: 0 0 auto;
     }
 
     .topbar-actions {
@@ -567,29 +583,32 @@
       .bubble { max-width: 100%; }
       .floating-crisis { left: 12px; right: 12px; width: auto; }
       .debug-grid { grid-template-columns: 1fr; }
+      .topbar-brand { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .topbar-logo { width: 118px; }
     }
 
     html[data-skin="aare"] {
-      --canvas: #f7f1e6;
-      --panel: rgba(252, 247, 239, 0.86);
-      --panel-soft: rgba(251, 245, 236, 0.68);
-      --ink: #22322f;
-      --muted: #5d6c67;
-      --line: rgba(34, 50, 47, 0.1);
-      --accent: #2e7c72;
-      --accent-soft: rgba(46, 124, 114, 0.12);
-      --alert: #b85245;
-      --alert-soft: rgba(184, 82, 69, 0.12);
-      --warn: #c78d45;
-      --patient: #f4e6d5;
-      --assistant: #deefe8;
-      --system: #f6efe4;
-      --shadow: 0 26px 80px rgba(104, 85, 57, 0.14);
-      --glow-a: rgba(214, 165, 94, 0.22);
-      --glow-b: rgba(73, 142, 132, 0.18);
-      --glow-c: rgba(255, 255, 255, 0.55);
-      --font-display: "Palatino Linotype", "Book Antiqua", Georgia, serif;
-      --font-ui: "Trebuchet MS", "Gill Sans", sans-serif;
+      --canvas: #ededed;
+      --panel: rgba(255, 255, 255, 0.92);
+      --panel-soft: rgba(255, 255, 255, 0.78);
+      --ink: #676767;
+      --ink-strong: #4f4f4f;
+      --muted: #8b8b8b;
+      --line: #e3e3e3;
+      --accent: #4fc3d7;
+      --accent-soft: rgba(79, 195, 215, 0.12);
+      --alert: #c16a61;
+      --alert-soft: rgba(193, 106, 97, 0.12);
+      --warn: #6dbdcb;
+      --patient: #f5f5f5;
+      --assistant: #f9fdfd;
+      --system: #f6f6f6;
+      --shadow: 0 18px 34px rgba(0, 0, 0, 0.05);
+      --glow-a: rgba(255, 255, 255, 0.6);
+      --glow-b: rgba(79, 195, 215, 0.08);
+      --glow-c: rgba(255, 255, 255, 0.7);
+      --font-display: Georgia, "Times New Roman", serif;
+      --font-ui: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
     }
 
     html[data-skin="river"] {
@@ -658,8 +677,7 @@
       background:
         radial-gradient(circle at 8% 12%, var(--glow-a), transparent 24%),
         radial-gradient(circle at 86% 14%, var(--glow-b), transparent 28%),
-        radial-gradient(circle at 50% 100%, var(--glow-c), transparent 40%),
-        linear-gradient(148deg, color-mix(in srgb, var(--canvas) 92%, #fff 8%) 0%, var(--canvas) 56%, color-mix(in srgb, var(--canvas) 88%, #ece5db 12%) 100%);
+        linear-gradient(180deg, #f3f3f3 0%, var(--canvas) 100%);
       transition: background 420ms ease, color 220ms ease;
       position: relative;
       overflow-x: hidden;
@@ -720,7 +738,7 @@
     .chip,
     .star,
     .quick {
-      font-family: "Aptos Mono", "Courier New", monospace;
+      font-family: var(--font-ui);
     }
 
     h1,
@@ -728,8 +746,8 @@
     h3,
     .title {
       font-family: var(--font-display);
-      font-weight: 600;
-      letter-spacing: -0.02em;
+      font-weight: 400;
+      letter-spacing: 0;
     }
 
     .hero {
@@ -741,6 +759,11 @@
     .topbar {
       padding: 24px 26px 18px;
       border-bottom-color: var(--line);
+      background: rgba(255,255,255,0.94);
+    }
+
+    .topbar-logo {
+      width: 148px;
     }
 
     .trust-banner,
@@ -971,10 +994,13 @@
 
     <main class="panel hero">
       <header class="topbar">
-        <div class="title-wrap">
-          <div class="eyebrow">Patient Web Chat</div>
-          <h2 class="title">Gyors belepes, vilagos hatarok</h2>
-          <div class="microcopy">Mi a legfontosabb most? Egy mondat is eleg.</div>
+        <div class="topbar-brand">
+          <img class="topbar-logo" src="/assets/patient_portal_logo.svg" alt="AARE inspired therapy portal logo">
+          <div class="title-wrap">
+            <div class="eyebrow">Patient Web Chat</div>
+            <h2 class="title">Gyors belepes, vilagos hatarok</h2>
+            <div class="microcopy">Mi a legfontosabb most? Egy mondat is eleg.</div>
+          </div>
         </div>
         <div class="topbar-actions">
           <div id="status" class="status">Ready</div>
@@ -1346,7 +1372,7 @@
     let turnCounter = 0;
     let currentLang = DEFAULT_UI_CONFIG.default_language;
     let currentStatusKey = 'ready';
-    let themeMode = 'auto';
+    let themeMode = 'manual';
     let manualSkin = 'aare';
     let activeThemeState = null;
     let mediaRecorder = null;
@@ -1387,14 +1413,14 @@
           return;
         }
         const parsed = JSON.parse(raw);
-        if (parsed.mode === 'auto' || parsed.mode === 'manual') {
+        if (parsed.mode === 'manual') {
           themeMode = parsed.mode;
         }
         if (parsed.skin && ['aare', 'river', 'dusk'].includes(parsed.skin)) {
           manualSkin = parsed.skin;
         }
       } catch {
-        themeMode = 'auto';
+        themeMode = 'manual';
         manualSkin = 'aare';
       }
     }

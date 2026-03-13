@@ -207,415 +207,385 @@ def _render_login_page(auth_manager: PortalSessionAuth, next_path: str) -> str:
     <title>Psychotherapist Assistant Portal</title>
   <style>
     :root {{
-            --canvas: #f7f1e8;
-            --panel: rgba(255, 250, 243, 0.9);
-            --panel-soft: rgba(255, 250, 243, 0.72);
-            --ink: #1f2928;
-            --muted: #5e6c6a;
-            --line: rgba(31, 41, 40, 0.12);
-            --accent: #0f766a;
-            --accent-soft: rgba(15, 118, 106, 0.12);
-            --warm: #d88c29;
-            --patient: #efe2cf;
-            --assistant: #dff1ea;
-            --system: #f8f1e4;
-            --alert: #b4352d;
-            --shadow: 0 22px 70px rgba(78, 62, 39, 0.15);
+            --page: #ededed;
+            --surface: #ffffff;
+            --ink: #676767;
+            --ink-strong: #525252;
+            --muted: #8b8b8b;
+            --line: #e1e1e1;
+            --accent: #4fc3d7;
+            --accent-strong: #36b2c7;
+            --accent-soft: rgba(79, 195, 215, 0.12);
+            --shadow: 0 18px 34px rgba(0, 0, 0, 0.05);
     }}
     * {{ box-sizing: border-box; }}
     body {{
       margin: 0;
       min-height: 100vh;
-      background:
-                radial-gradient(circle at top left, rgba(216, 140, 41, 0.22), transparent 28%),
-                radial-gradient(circle at bottom right, rgba(15, 118, 106, 0.17), transparent 30%),
-                linear-gradient(145deg, #faf6ef 0%, #efe5d5 45%, var(--canvas) 100%);
+            background: var(--page);
             color: var(--ink);
-            font-family: Georgia, "Times New Roman", serif;
+            font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
     }}
-        body::before,
-        body::after {{
-            content: "";
-            position: fixed;
-            width: 36vw;
-            height: 36vw;
-            border-radius: 999px;
-            filter: blur(42px);
-            opacity: 0.45;
-            pointer-events: none;
-        }}
-        body::before {{
-            top: -8vw;
-            left: -10vw;
-            background: radial-gradient(circle, rgba(216, 140, 41, 0.34), transparent 68%);
-        }}
-        body::after {{
-            right: -8vw;
-            bottom: -12vw;
-            background: radial-gradient(circle, rgba(15, 118, 106, 0.28), transparent 70%);
-        }}
-        .shell {{
-            position: relative;
-            z-index: 1;
-            width: min(1240px, calc(100vw - 28px));
-            min-height: 100vh;
+        .page {{
+            width: min(1180px, calc(100vw - 32px));
             margin: 0 auto;
-            padding: 18px 0 24px;
-            display: grid;
-            grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
-            gap: 18px;
-            align-items: center;
+            padding: 16px 0 42px;
         }}
-        .panel {{
-      border: 1px solid var(--line);
-            border-radius: 26px;
-            background: var(--panel);
-            -webkit-backdrop-filter: blur(14px);
-            backdrop-filter: blur(14px);
-      box-shadow: var(--shadow);
-    }}
-        .scene {{
-            position: relative;
-            overflow: hidden;
-            min-height: 680px;
-            padding: 28px;
-            display: grid;
-            grid-template-rows: auto auto auto 1fr;
-            gap: 18px;
+        .topbar {{
+            background: var(--surface);
+            border-bottom: 1px solid var(--line);
         }}
-        .scene::before {{
-            content: "PSY";
-            position: absolute;
-            right: -10px;
-            top: 26px;
-            opacity: 0.07;
-            font: 700 min(12vw, 108px)/0.9 Georgia, serif;
-            letter-spacing: 0.08em;
-            color: var(--ink);
-        }}
-        .hero-row,
-        .status-row,
-        .quickbar,
-        .portal-links,
-        .brand-row {{
+        .topbar-inner {{
+            width: min(1180px, calc(100vw - 32px));
+            margin: 0 auto;
+            padding: 20px 0 16px;
             display: flex;
-            flex-wrap: wrap;
+            align-items: end;
+            justify-content: space-between;
+            gap: 20px;
+        }}
+        .brand {{
+            display: grid;
             gap: 10px;
-            align-items: center;
-            justify-content: space-between;
         }}
-    .eyebrow {{
-            margin: 0;
-      font: 700 12px/1.2 "Courier New", monospace;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--accent);
-    }}
-        .brand-lockup {{
-            display: flex;
-            gap: 14px;
-            align-items: center;
-        }}
-        .logo-badge {{
-            width: 72px;
-            height: 72px;
-            border-radius: 22px;
-            border: 1px solid rgba(31, 41, 40, 0.08);
-            background: rgba(255, 255, 255, 0.58);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.34);
-            padding: 10px;
-            object-fit: contain;
-        }}
-        .brand-copy {{
-            display: grid;
-            gap: 5px;
-        }}
-        .brand-title {{
-            margin: 0;
-            font-size: 21px;
-            line-height: 1.1;
-        }}
-        .status-pill,
-        .chip,
-        .portal-link,
-        .bubble-head,
-        label,
-        button {{
-            font: 700 11px/1.2 "Courier New", monospace;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }}
-        .status-pill,
-        .chip,
-        .portal-link {{
-            border-radius: 999px;
-            padding: 8px 12px;
-            border: 1px solid rgba(31, 41, 40, 0.08);
-            background: rgba(255, 255, 255, 0.62);
-            color: var(--muted);
-            text-decoration: none;
-        }}
-        .status-pill {{ color: var(--warm); }}
-        .portal-link.primary-link {{
-            background: var(--accent);
-            border-color: transparent;
-            color: #fffdf9;
-        }}
-        .hero-copy {{
-            position: relative;
-            z-index: 1;
-            max-width: 58ch;
-        }}
-        h1 {{
-            margin: 0 0 12px;
-            font-size: clamp(36px, 5vw, 62px);
-            line-height: 0.98;
-            max-width: 10ch;
-        }}
-        p {{
-            margin: 0;
-            color: var(--muted);
-            line-height: 1.58;
-        }}
-        .lede {{
-            font-size: 17px;
-            max-width: 54ch;
-        }}
-        .trust-banner {{
-            border: 1px solid var(--line);
-            border-radius: 20px;
-            padding: 14px 16px;
-            display: flex;
-            align-items: start;
-            justify-content: space-between;
-            gap: 14px;
-            background: rgba(255, 255, 255, 0.6);
-        }}
-        .trust-banner strong {{
+        .brand-logo {{
+            width: 184px;
+            height: auto;
             display: block;
-            margin-bottom: 4px;
-            color: var(--ink);
         }}
-        .preview-panel {{
-            position: relative;
-            z-index: 1;
+        .nav {{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding-bottom: 8px;
+        }}
+        .nav a {{
+            color: var(--ink-strong);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+        }}
+        .nav a:first-child,
+        .nav a:hover {{
+            color: var(--accent-strong);
+        }}
+        .hero-strip {{
             display: grid;
-            gap: 12px;
-            align-content: start;
-            padding: 18px;
-            border-radius: 24px;
+            grid-template-columns: 0.9fr 1.9fr;
+            gap: 0;
+            margin-top: 28px;
+            min-height: 280px;
+            background: var(--surface);
+            overflow: hidden;
+        }}
+        .hero-aside,
+        .hero-main {{
+            position: relative;
+            min-height: 280px;
+        }}
+        .hero-aside {{
             background:
-                linear-gradient(to bottom, rgba(255,255,255,0.12), rgba(255,255,255,0.02)),
-                repeating-linear-gradient(180deg, transparent, transparent 25px, rgba(31,41,40,0.026) 26px);
-            border: 1px solid rgba(31, 41, 40, 0.08);
+                linear-gradient(180deg, rgba(255,255,255,0.22), rgba(255,255,255,0)),
+                linear-gradient(135deg, rgba(102, 142, 170, 0.55), rgba(215, 210, 205, 0.2)),
+                radial-gradient(circle at 35% 26%, rgba(243, 231, 223, 0.95), rgba(170, 139, 121, 0.22) 45%, transparent 55%),
+                linear-gradient(180deg, #c7b5a6 0%, #7e8d95 100%);
         }}
-        .bubble {{
-            max-width: min(560px, 95%);
-            padding: 16px 18px;
-            border-radius: 22px;
-            border: 1px solid var(--line);
-            box-shadow: 0 12px 28px rgba(31, 41, 40, 0.06);
+        .hero-main {{
+            background:
+                linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.02)),
+                linear-gradient(0deg, rgba(114, 96, 74, 0.42) 0 22%, transparent 22%),
+                radial-gradient(circle at 66% 28%, rgba(244, 237, 227, 0.82), rgba(172, 149, 127, 0.18) 18%, transparent 19%),
+                radial-gradient(circle at 72% 18%, rgba(208, 190, 166, 0.5), transparent 11%),
+                linear-gradient(120deg, rgba(115, 120, 90, 0.48), rgba(129, 112, 88, 0.18) 40%, rgba(166, 180, 190, 0.22)),
+                linear-gradient(180deg, #776d5e 0%, #a89d8f 48%, #d1d0cb 100%);
         }}
-        .bubble.patient {{
-            margin-left: auto;
-            background: var(--patient);
-            border-bottom-right-radius: 8px;
+        .hero-main::before {{
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(90deg, rgba(65, 82, 51, 0.12), rgba(65, 82, 51, 0.12) 4px, transparent 4px, transparent 48px);
+            opacity: 0.3;
+            mix-blend-mode: multiply;
         }}
-        .bubble.assistant {{
-            background: var(--assistant);
-            border-bottom-left-radius: 8px;
+        .hero-logo-card {{
+            position: absolute;
+            left: 18%;
+            top: 28%;
+            width: 190px;
+            padding: 26px 22px 18px;
+            background: var(--accent-strong);
+            box-shadow: var(--shadow);
         }}
-        .bubble.system {{
-            background: var(--system);
-            max-width: 100%;
+        .hero-logo-card img {{
+            display: block;
+            width: 100%;
+            height: auto;
+            filter: brightness(0) invert(1);
         }}
-        .bubble-head {{
-            margin-bottom: 10px;
+        .quote {{
+            width: min(820px, calc(100vw - 96px));
+            margin: 34px auto 0;
+            color: #777;
+            font-size: 18px;
+            line-height: 1.7;
+            font-style: italic;
+            font-family: Georgia, "Times New Roman", serif;
+        }}
+        .quote cite {{
+            display: block;
+            margin-top: 10px;
             color: var(--muted);
+            font-size: 16px;
+            font-style: italic;
         }}
-        .bubble-body {{
-            white-space: pre-wrap;
+        .content {{
+            width: min(820px, calc(100vw - 96px));
+            margin: 58px auto 0;
+            display: grid;
+            grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+            gap: 44px;
+            align-items: start;
+        }}
+        .copy h1,
+        .login-card h2 {{
+            margin: 0 0 18px;
+            color: var(--ink-strong);
+            font-size: 33px;
+            font-weight: 300;
+            letter-spacing: 0.01em;
+        }}
+        .copy p {{
+            margin: 0 0 18px;
+            font-size: 15px;
             line-height: 1.6;
-            word-break: break-word;
+        }}
+        .signature {{
+            margin-top: 28px;
+            color: var(--ink-strong);
         }}
         .login-card {{
+            background: var(--surface);
+      border: 1px solid var(--line);
             padding: 28px;
-            display: grid;
-            gap: 18px;
+            box-shadow: var(--shadow);
+        }}
+        .eyebrow {{
+            margin: 0 0 12px;
+            color: var(--accent-strong);
+            text-transform: uppercase;
+            letter-spacing: 0.22em;
+            font-size: 11px;
+            font-weight: 600;
         }}
         .support-box {{
-            border-radius: 18px;
-            border: 1px solid rgba(31, 41, 40, 0.08);
-            background: linear-gradient(135deg, var(--accent-soft), rgba(255,255,255,0.45));
-            padding: 14px 16px;
+            margin-bottom: 18px;
+            padding: 15px 16px;
+            background: linear-gradient(180deg, rgba(79,195,215,0.1), rgba(79,195,215,0.04));
+            border-left: 3px solid var(--accent);
+            color: var(--ink);
         }}
         .support-box strong {{
             display: block;
-            margin-bottom: 4px;
-            color: var(--ink);
+            margin-bottom: 6px;
+            color: var(--ink-strong);
+            font-weight: 600;
         }}
         .field-grid {{
             display: grid;
-            gap: 12px;
+            gap: 10px;
         }}
         label {{
-            display: grid;
-            gap: 8px;
             color: var(--muted);
+            font-size: 12px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
         }}
-    input, button {{ font: inherit; }}
-    input {{
-      width: 100%;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 13px 14px;
-            background: rgba(255,255,255,0.82);
-      color: var(--ink);
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.3);
-    }}
+        input,
+        button {{
+            font: inherit;
+        }}
+        input {{
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid #d6d6d6;
+            background: #fbfbfb;
+            color: var(--ink-strong);
+        }}
         input:focus {{
-            outline: 2px solid rgba(15,118,106,0.18);
-            border-color: rgba(15,118,106,0.28);
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px var(--accent-soft);
         }}
-    button {{
-      width: 100%;
-      border: 0;
-      border-radius: 16px;
-      padding: 14px 16px;
-            background: linear-gradient(135deg, #0f766a, #145b63);
-      color: #fff;
-      cursor: pointer;
-            box-shadow: 0 16px 30px rgba(15,118,106,0.18);
+        button {{
+            width: 100%;
+            margin-top: 16px;
+            border: 0;
+            padding: 14px 16px;
+            background: var(--accent-strong);
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-size: 12px;
+            cursor: pointer;
         }}
         button:hover {{
-            filter: brightness(1.03);
-            transform: translateY(-1px);
+            background: #29a7bd;
         }}
         button:disabled {{
-            cursor: wait;
             opacity: 0.8;
-    }}
+            cursor: wait;
+        }}
         .hint {{
-            color: var(--ink);
-            background: rgba(23,111,103,0.08);
-            border: 1px solid rgba(23,111,103,0.14);
-            border-radius: 16px;
+            margin: 0 0 14px;
             padding: 12px 14px;
+            background: #f7fcfd;
+            border: 1px solid rgba(79, 195, 215, 0.22);
+            color: var(--ink);
+            font-size: 14px;
         }}
         .error {{
             min-height: 20px;
-            color: var(--alert);
-            margin-top: 6px;
-        }}
-        .footer-note {{
-            padding-top: 14px;
-            border-top: 1px solid rgba(31,41,40,0.08);
+            margin: 12px 0 0;
+            color: #b95e5e;
             font-size: 14px;
         }}
-        @media (max-width: 980px) {{
-            .shell {{
-                width: min(100vw - 20px, 760px);
-                grid-template-columns: 1fr;
-                padding: 10px 0 20px;
-            }}
-            .scene {{ min-height: auto; }}
-            .scene::before {{ font-size: 108px; }}
-            h1 {{ max-width: none; }}
+        .footer-note {{
+            margin-top: 18px;
+            padding-top: 16px;
+            border-top: 1px solid var(--line);
+            font-size: 13px;
+            line-height: 1.55;
+            color: var(--muted);
         }}
-        @media (max-width: 640px) {{
-            .shell {{ width: min(100vw - 16px, 100%); gap: 14px; }}
-            .scene,
-            .login-card {{ padding: 18px; }}
-            .hero-row,
-            .brand-row,
-            .portal-links {{
+        .mini-links {{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 16px;
+            margin-top: 16px;
+            font-size: 13px;
+        }}
+        .mini-links a {{
+            color: var(--accent-strong);
+            text-decoration: none;
+        }}
+        .mini-links a:hover {{
+            text-decoration: underline;
+        }}
+        @media (max-width: 900px) {{
+            .topbar-inner,
+            .page,
+            .quote,
+            .content {{
+                width: min(100vw - 24px, 100%);
+            }}
+            .topbar-inner {{
+                padding-left: 0;
+                padding-right: 0;
                 align-items: flex-start;
                 flex-direction: column;
             }}
-            .brand-lockup {{ align-items: flex-start; }}
-            .logo-badge {{ width: 60px; height: 60px; border-radius: 18px; }}
-            .quickbar {{ gap: 8px; }}
-            .status-pill,
-            .chip,
-            .portal-link {{ width: fit-content; }}
-            .bubble {{ max-width: 100%; }}
-            h1 {{ font-size: 32px; }}
-            .lede {{ font-size: 16px; }}
+            .hero-strip,
+            .content {{
+                grid-template-columns: 1fr;
+            }}
+            .hero-logo-card {{
+                left: 50%;
+                transform: translateX(-50%);
+            }}
+        }}
+        @media (max-width: 640px) {{
+            .page {{
+                width: min(100vw - 16px, 100%);
+                padding-bottom: 28px;
+            }}
+            .topbar-inner {{
+                width: min(100vw - 16px, 100%);
+            }}
+            .brand-logo {{
+                width: 156px;
+            }}
+            .nav {{
+                gap: 12px;
+            }}
+            .nav a {{
+                font-size: 13px;
+            }}
+            .hero-aside,
+            .hero-main {{
+                min-height: 220px;
+            }}
+            .hero-logo-card {{
+                width: 156px;
+                padding: 22px 16px 16px;
+            }}
+            .quote,
+            .content {{
+                width: min(100vw - 40px, 100%);
+            }}
+            .copy h1,
+            .login-card h2 {{
+                font-size: 27px;
+            }}
         }}
   </style>
 </head>
 <body>
-    <main class=\"shell\">
-        <section class=\"scene panel\">
-            <div class=\"hero-row\">
-                <div class=\"brand-lockup\">
-                    <img class=\"logo-badge\" src=\"/assets/patient_portal_logo.svg\" alt=\"Psychotherapist Assistant logo\">
-                    <div class=\"brand-copy\">
-                        <p class=\"eyebrow\">Patient Portal</p>
-                        <p class=\"brand-title\">Psychotherapist Assistant</p>
-                    </div>
+    <header class=\"topbar\">
+        <div class=\"topbar-inner\">
+            <div class=\"brand\">
+                <img class=\"brand-logo\" src=\"/assets/patient_portal_logo.svg\" alt=\"AARE inspired therapy portal logo\">
+            </div>
+            <nav class=\"nav\" aria-label=\"Patient portal sections\">
+                <a href=\"/login?next=/chat\">Home</a>
+                <a href=\"/chat\">Patient Chat</a>
+                <a href=\"/chat/mobile\">Mobile</a>
+                <a href=\"/operations\">Operations</a>
+                <a href=\"/health\">Health</a>
+            </nav>
+        </div>
+    </header>
+    <main class=\"page\">
+        <section class=\"hero-strip\" aria-hidden=\"true\">
+            <div class=\"hero-aside\"></div>
+            <div class=\"hero-main\">
+                <div class=\"hero-logo-card\">
+                    <img src=\"/assets/patient_portal_logo.svg\" alt=\"\">
                 </div>
-                <div class=\"status-pill\">Protected Session</div>
-            </div>
-            <div class=\"hero-copy\">
-                <h1>Védett belépés a terápiás felülethez</h1>
-                <p class=\"lede\">A belépési pont most már ugyanabból a meleg, üveges, nyugodt vizuális rendszerből épül, mint a chatfelület: ugyanaz a tónus, ugyanaz a tipográfiai ritmus, ugyanaz a gondosan visszafogott terápiás hangulat.</p>
-            </div>
-            <div class=\"trust-banner\">
-                <div>
-                    <strong>Nyugodt, biztonságos belépési pont</strong>
-                    <p>A session tokenes védelem a chatet, a voice-demót és a review-alapú működést is ugyanabban a védett kontextusban tartja.</p>
-                </div>
-                <div class=\"chip\">Audit-ready</div>
-            </div>
-            <div class=\"quickbar\">
-                <div class=\"chip\">Session token</div>
-                <div class=\"chip\">Voice demo</div>
-                <div class=\"chip\">Review-gated</div>
-                <div class=\"chip\">Local-first runtime</div>
-            </div>
-            <div class=\"preview-panel\">
-                <div class=\"portal-links\">
-                    <p class=\"eyebrow\">Interface Preview</p>
-                    <div class=\"portal-links\">
-                        <a class=\"portal-link primary-link\" href=\"/chat\">Desktop Chat</a>
-                        <a class=\"portal-link\" href=\"/chat/mobile\">Mobile Chat</a>
-                    </div>
-                </div>
-                <article class=\"bubble assistant\">
-                    <div class=\"bubble-head\">Assistant</div>
-                    <div class=\"bubble-body\">Örülök, hogy itt vagy. A mai beszélgetést nyugodt tempóban visszük, és végig jelezni fogom, mi történik helyben és mi igényel külön jóváhagyást.</div>
-                </article>
-                <article class=\"bubble patient\">
-                    <div class=\"bubble-head\">Patient</div>
-                    <div class=\"bubble-body\">Szeretném gyorsan átlátni, hogy biztonságban marad-e a session, ha szöveget és hangot is kipróbálok.</div>
-                </article>
-                <article class=\"bubble system\">
-                    <div class=\"bubble-head\">System</div>
-                    <div class=\"bubble-body\">Portal access active. A belépés után a desktop és mobil nézet ugyanazzal a sessionnel használható.</div>
-                </article>
             </div>
         </section>
-        <section class=\"login-card panel\">
-            <div class=\"brand-row\">
-                <div>
-                    <p class=\"eyebrow\">Session Access</p>
-                    <h2 class=\"brand-title\">Belépés a betegportálra</h2>
+        <blockquote class=\"quote\">
+            „A gondolatok tere is olyan, mint egy kert: amit figyelemmel gondozunk, abból lassan forma, ritmus és belső rend lesz.”
+            <cite>Patient Portal intro</cite>
+        </blockquote>
+        <section class=\"content\">
+            <article class=\"copy\">
+                <h1>Üdvözöljük</h1>
+                <p>Ez a belépőnézet most már a referenciaoldal könnyű, nyitott vizuális nyelvét használja: világos háttér, visszafogott szürke szöveg, türkiz akcentusok és szellős tördelés fogadja a felhasználót már az első képernyőn.</p>
+                <p>A cél itt nem egy technikai gate képernyő hangsúlyozása, hanem egy nyugodt, professzionális és bizalomkeltő átmenet a betegportál felé. A login után a chat és a mobil felület ugyanebben a védett sessionben marad.</p>
+                <p>Ha a következő körben még közelebb akarod húzni az eredetihez, tovább tudom vinni a navigációs kiosztást, a hero arányokat és akár külön desktop/mobile vizuális variánst is.</p>
+                <p class=\"signature\">Psychotherapist Assistant</p>
+            </article>
+            <aside class=\"login-card\">
+                <p class=\"eyebrow\">Protected Access</p>
+                <h2>Belépés a betegportálra</h2>
+                <div class=\"support-box\">
+                    <strong>Az eredeti oldal vizuális logikájára hangolva</strong>
+                    <p>A logó, a türkiz tónusok és a könnyedebb sans tipográfia most már közvetlenül ebben a nézetben is megjelennek.</p>
                 </div>
-                <div class=\"status-pill\">Desktop + Mobile</div>
-            </div>
-            <div class=\"support-box\">
-                <strong>Azonos arculat, kevesebb törés a flow-ban</strong>
-                <p>A belépőoldal most már nem különálló technikai képernyő, hanem ugyanannak a betegoldali élménynek az első állomása.</p>
-            </div>
-            {demo_hint}
-            <div class=\"field-grid\">
-                <label for=\"access-code\">Access Code</label>
-                <input id=\"access-code\" type=\"password\" autocomplete=\"current-password\" placeholder=\"Portal access code\">
-            </div>
-            <button id=\"login-button\" type=\"button\">Belépés</button>
-            <p id=\"login-error\" class=\"error\"></p>
-            <p class=\"footer-note\">A jelenlegi nézet külön optimalizált keskeny kijelzőre is, és közvetlenül ugyanazt a vizuális készletet használja, mint a desktop és mobil chatfelület.</p>
+                {demo_hint}
+                <div class=\"field-grid\">
+                    <label for=\"access-code\">Access Code</label>
+                    <input id=\"access-code\" type=\"password\" autocomplete=\"current-password\" placeholder=\"Portal access code\">
+                </div>
+                <button id=\"login-button\" type=\"button\">Belépés</button>
+                <p id=\"login-error\" class=\"error\"></p>
+                <div class=\"mini-links\">
+                    <a href=\"/chat\">Desktop chat preview</a>
+                    <a href=\"/chat/mobile\">Mobile preview</a>
+                </div>
+                <p class=\"footer-note\">A mostani állapot már a feltöltött referencia betűhangulatát, logóirányát és színvilágát használja, nem a korábbi saját márkajelzést.</p>
+            </aside>
         </section>
     </main>
   <script>
