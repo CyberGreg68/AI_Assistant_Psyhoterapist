@@ -1,0 +1,55 @@
+{
+  "batch_id": "2026-03-14-nimh-depression-selfcare",
+  "generated_at": "2026-03-13T23:25:42.414650+00:00",
+  "sources": {
+    "local_paths": [],
+    "urls": [
+      "https://www.nimh.nih.gov/health/topics/depression",
+      "https://www.nimh.nih.gov/health/topics/caring-for-your-mental-health",
+      "https://www.nimh.nih.gov/health/publications/tips-for-talking-with-your-health-care-provider"
+    ],
+    "resolved_paths": [
+      "D:\\WORK\\VS_Code\\Python_projects\\AI_assistant_psyhoterapist\\data_sources\\literature_batches\\2026-03-14-nimh-depression-selfcare\\downloads\\remote_caring-for-your-mental-health_6ef87c2f2421.html",
+      "D:\\WORK\\VS_Code\\Python_projects\\AI_assistant_psyhoterapist\\data_sources\\literature_batches\\2026-03-14-nimh-depression-selfcare\\downloads\\remote_depression_92cdfa4b91bf.html",
+      "D:\\WORK\\VS_Code\\Python_projects\\AI_assistant_psyhoterapist\\data_sources\\literature_batches\\2026-03-14-nimh-depression-selfcare\\downloads\\remote_tips-for-talking-with-your-health-care-provider_62242cc0869c.html"
+    ],
+    "downloaded_files": [
+      {
+        "url": "https://www.nimh.nih.gov/health/topics/depression",
+        "download_path": "data_sources\\literature_batches\\2026-03-14-nimh-depression-selfcare\\downloads\\remote_depression_92cdfa4b91bf.html",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://www.nimh.nih.gov/health/topics/caring-for-your-mental-health",
+        "download_path": "data_sources\\literature_batches\\2026-03-14-nimh-depression-selfcare\\downloads\\remote_caring-for-your-mental-health_6ef87c2f2421.html",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://www.nimh.nih.gov/health/publications/tips-for-talking-with-your-health-care-provider",
+        "download_path": "data_sources\\literature_batches\\2026-03-14-nimh-depression-selfcare\\downloads\\remote_tips-for-talking-with-your-health-care-provider_62242cc0869c.html",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  "counts": {
+    "documents": 3,
+    "chunks": 32,
+    "knowledge_snippets": 32,
+    "phrase_candidates": 43,
+    "trigger_candidates": 0,
+    "rule_hints": 3
+  },
+  "lang": "en",
+  "topic_hints": [
+    "your",
+    "health",
+    "depression",
+    "care",
+    "mental",
+    "help",
+    "provider",
+    "treatment",
+    "what",
+    "that"
+  ]
+}

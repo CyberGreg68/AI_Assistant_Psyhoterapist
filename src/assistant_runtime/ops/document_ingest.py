@@ -69,6 +69,51 @@ STOPWORDS = {
     "with",
 }
 
+_HTML_SKIP_LINE_EXACT = {
+    "additional links",
+    "additional federal resources",
+    "disclaimer",
+    "federal resources",
+    "here's how you know",
+    "here’s how you know",
+    "nimh resources",
+    "on this page",
+    "policies and notices",
+    "skip to main content",
+}
+
+_HTML_SKIP_LINE_PREFIXES = (
+    "an official website of the united states government",
+    "official websites use .gov",
+    "secure .gov websites use https",
+    "share this page",
+    "due to current hhs and nih restructuring",
+)
+
+_HTML_STOP_MARKERS = (
+    "featured fact sheets",
+    "featured videos",
+    "learn more",
+    "reprints",
+    "disclaimer",
+    "additional links",
+    "nimh resources",
+    "policies and notices",
+    "federal resources",
+)
+
+_HTML_NAVIGATION_TOKENS = {
+    "home",
+    "mental health information",
+    "get involved",
+    "research",
+    "funding",
+    "news & events",
+    "about us",
+    "health topics",
+    "brochures and fact sheets",
+}
+
 
 class _HTMLTextExtractor(HTMLParser):
     def __init__(self) -> None:
@@ -98,7 +143,66 @@ class _HTMLTextExtractor(HTMLParser):
             self.parts.append(stripped)
 
     def get_text(self) -> str:
-        return re.sub(r"\n{2,}", "\n", "\n".join(self.parts)).strip()
+        return re.sub(r"\n{3,}", "\n\n", "\n".join(self.parts)).strip()
+
+
+def _is_html_boilerplate_line(line: str) -> bool:
+    folded = normalize_ingest_text(line).casefold()
+    if not folded:
+        return True
+    if folded in _HTML_SKIP_LINE_EXACT:
+        return True
+    if any(folded.startswith(prefix) for prefix in _HTML_SKIP_LINE_PREFIXES):
+        return True
+    if folded in _HTML_NAVIGATION_TOKENS:
+        return True
+    if folded.startswith("share this page on "):
+        return True
+    if folded.startswith("in crisis? call or text 988"):
+        return True
+    return False
+
+
+def _strip_html_boilerplate(text: str) -> str:
+    cleaned_lines: list[str] = []
+    for raw_line in text.splitlines():
+        line = normalize_ingest_text(raw_line)
+        if not line:
+            if cleaned_lines and cleaned_lines[-1] != "":
+                cleaned_lines.append("")
+            continue
+        folded = line.casefold()
+        if any(folded == marker or folded.startswith(f"{marker} ") for marker in _HTML_STOP_MARKERS):
+            break
+        if _is_html_boilerplate_line(line):
+            continue
+        cleaned_lines.append(line)
+    while cleaned_lines and cleaned_lines[0] == "":
+        cleaned_lines.pop(0)
+    while cleaned_lines and cleaned_lines[-1] == "":
+        cleaned_lines.pop()
+    return "\n".join(cleaned_lines)
+
+
+def _extract_html_main_region(raw_html: str) -> str:
+    main_match = re.search(
+        r"<main\b[^>]*id=[\"']main-content[\"'][^>]*>(?P<body>.*?)</main>",
+        raw_html,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    if main_match:
+        return main_match.group("body")
+    fallback_match = re.search(r"<main\b[^>]*>(?P<body>.*?)</main>", raw_html, flags=re.IGNORECASE | re.DOTALL)
+    if fallback_match:
+        return fallback_match.group("body")
+    article_match = re.search(
+        r"<article\b[^>]*id=[\"']main_content_inner[\"'][^>]*>(?P<body>.*?)</article>",
+        raw_html,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    if article_match:
+        return article_match.group("body")
+    return raw_html
 
 
 def _read_xml_text(file_path: Path) -> str:
@@ -170,9 +274,10 @@ def read_document_text(file_path: Path) -> str:
         rows = [json.loads(line) for line in file_path.read_text(encoding="utf-8").splitlines() if line.strip()]
         return json.dumps(rows, ensure_ascii=False, indent=2)
     if suffix in {".html", ".htm"}:
+        raw_html = file_path.read_text(encoding="utf-8", errors="ignore")
         parser = _HTMLTextExtractor()
-        parser.feed(file_path.read_text(encoding="utf-8", errors="ignore"))
-        return parser.get_text()
+        parser.feed(_extract_html_main_region(raw_html))
+        return _strip_html_boilerplate(parser.get_text())
     if suffix == ".xml":
         return _read_xml_text(file_path)
     if suffix == ".docx":

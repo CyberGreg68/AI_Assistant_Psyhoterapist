@@ -1,0 +1,52 @@
+{
+  "rule_hints": [
+    {
+      "hint_type": "dominant_categories",
+      "items": [
+        {
+          "category": "variants",
+          "count": 32
+        }
+      ]
+    },
+    {
+      "hint_type": "risk_flags",
+      "items": []
+    },
+    {
+      "hint_type": "topic_hints",
+      "items": [
+        {
+          "topic": "your"
+        },
+        {
+          "topic": "health"
+        },
+        {
+          "topic": "depression"
+        },
+        {
+          "topic": "care"
+        },
+        {
+          "topic": "mental"
+        },
+        {
+          "topic": "help"
+        },
+        {
+          "topic": "provider"
+        },
+        {
+          "topic": "treatment"
+        },
+        {
+          "topic": "what"
+        },
+        {
+          "topic": "that"
+        }
+      ]
+    }
+  ]
+}

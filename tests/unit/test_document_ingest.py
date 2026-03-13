@@ -62,6 +62,35 @@ def test_read_document_text_ignores_html_script_and_style_blocks(tmp_path: Path)
     assert "color: red" not in extracted
 
 
+def test_read_document_text_strips_common_html_boilerplate_sections(tmp_path: Path) -> None:
+        html_path = tmp_path / "nimh_like.html"
+        html_path.write_text(
+                """
+                <html><body>
+                    <a href="#main-content">Skip to main content</a>
+                    <div>Here’s how you know</div>
+                    <div>An official website of the United States government</div>
+                    <h1>Depression</h1>
+                    <div>On this page</div>
+                    <ul><li>What is depression?</li><li>Find help and support</li></ul>
+                    <p>Depression can affect mood, energy, and daily functioning.</p>
+                    <p>Talk to a health care provider if symptoms persist or intensify.</p>
+                    <h2>Disclaimer</h2>
+                    <p>Additional Links</p>
+                </body></html>
+                """,
+                encoding="utf-8",
+        )
+
+        extracted = read_document_text(html_path)
+
+        assert "Depression" in extracted
+        assert "Depression can affect mood, energy, and daily functioning." in extracted
+        assert "Skip to main content" not in extracted
+        assert "Here’s how you know" not in extracted
+        assert "Additional Links" not in extracted
+
+
 def test_read_document_text_extracts_docx_paragraphs(tmp_path: Path) -> None:
     docx_path = tmp_path / "guide.docx"
     with ZipFile(docx_path, "w") as archive:
