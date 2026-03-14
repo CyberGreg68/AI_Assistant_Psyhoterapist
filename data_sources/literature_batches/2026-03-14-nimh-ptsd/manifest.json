@@ -1,0 +1,41 @@
+{
+  "batch_id": "2026-03-14-nimh-ptsd",
+  "generated_at": "2026-03-14T00:39:36.310249+00:00",
+  "sources": {
+    "local_paths": [],
+    "urls": [
+      "https://www.nimh.nih.gov/health/topics/post-traumatic-stress-disorder-ptsd"
+    ],
+    "resolved_paths": [
+      "D:\\WORK\\VS_Code\\Python_projects\\AI_assistant_psyhoterapist\\data_sources\\literature_batches\\2026-03-14-nimh-ptsd\\downloads\\remote_post-traumatic-stress-disorder-ptsd_34bb78526eb1.html"
+    ],
+    "downloaded_files": [
+      {
+        "url": "https://www.nimh.nih.gov/health/topics/post-traumatic-stress-disorder-ptsd",
+        "download_path": "data_sources\\literature_batches\\2026-03-14-nimh-ptsd\\downloads\\remote_post-traumatic-stress-disorder-ptsd_34bb78526eb1.html",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  "counts": {
+    "documents": 1,
+    "chunks": 13,
+    "knowledge_snippets": 13,
+    "phrase_candidates": 14,
+    "trigger_candidates": 0,
+    "rule_hints": 3
+  },
+  "lang": "en",
+  "topic_hints": [
+    "ptsd",
+    "research",
+    "people",
+    "traumatic",
+    "nimh",
+    "symptoms",
+    "health",
+    "information",
+    "more",
+    "trials"
+  ]
+}

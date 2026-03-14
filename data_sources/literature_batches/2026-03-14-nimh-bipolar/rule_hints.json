@@ -1,0 +1,52 @@
+{
+  "rule_hints": [
+    {
+      "hint_type": "dominant_categories",
+      "items": [
+        {
+          "category": "variants",
+          "count": 11
+        }
+      ]
+    },
+    {
+      "hint_type": "risk_flags",
+      "items": []
+    },
+    {
+      "hint_type": "topic_hints",
+      "items": [
+        {
+          "topic": "bipolar"
+        },
+        {
+          "topic": "disorder"
+        },
+        {
+          "topic": "nimh"
+        },
+        {
+          "topic": "research"
+        },
+        {
+          "topic": "people"
+        },
+        {
+          "topic": "symptoms"
+        },
+        {
+          "topic": "studies"
+        },
+        {
+          "topic": "trials"
+        },
+        {
+          "topic": "help"
+        },
+        {
+          "topic": "more"
+        }
+      ]
+    }
+  ]
+}

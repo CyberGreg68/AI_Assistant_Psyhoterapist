@@ -1,0 +1,52 @@
+{
+  "rule_hints": [
+    {
+      "hint_type": "dominant_categories",
+      "items": [
+        {
+          "category": "variants",
+          "count": 12
+        }
+      ]
+    },
+    {
+      "hint_type": "risk_flags",
+      "items": []
+    },
+    {
+      "hint_type": "topic_hints",
+      "items": [
+        {
+          "topic": "autism"
+        },
+        {
+          "topic": "disorder"
+        },
+        {
+          "topic": "research"
+        },
+        {
+          "topic": "health"
+        },
+        {
+          "topic": "spectrum"
+        },
+        {
+          "topic": "people"
+        },
+        {
+          "topic": "nimh"
+        },
+        {
+          "topic": "that"
+        },
+        {
+          "topic": "symptoms"
+        },
+        {
+          "topic": "information"
+        }
+      ]
+    }
+  ]
+}

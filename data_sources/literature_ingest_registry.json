@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-14T00:00:00Z",
+  "updated_at": "2026-03-14T01:45:00Z",
   "purpose": "Persistent ledger for downloaded literature sources, batch provenance, review state, and dedupe tracking.",
   "batches": [
     {
@@ -245,6 +245,671 @@
       "next_actions": [
         "Split import-eligible supportive wording from tightly governed crisis or caregiver-only phrasing.",
         "Consider adding a dedicated crisis review pass before any runtime promotion because several retained items describe suicide-specific intervention steps."
+      ]
+    },
+    {
+      "batch_id": "2026-03-14-nimh-adhd",
+      "lang": "en",
+      "source_profile": "remote_html",
+      "built_with_html_cleaning": true,
+      "review_status": "collection_complete_unreviewed",
+      "import_status": "not_started",
+      "reprocess_recommended": false,
+      "processing_actions": [
+        "Downloaded the public NIMH ADHD topic page.",
+        "Generated staged chunks, knowledge snippets, and phrase candidates with the cleaned HTML extractor."
+      ],
+      "counts": {
+        "documents": 1,
+        "chunks": 13,
+        "knowledge_snippets": 13,
+        "phrase_candidates": 12,
+        "trigger_candidates": 0,
+        "rule_hints": 3
+      },
+      "documents": [
+        {
+          "source_key": "https://www.nimh.nih.gov/health/topics/attention-deficit-hyperactivity-disorder-adhd",
+          "origin": "remote_html",
+          "title_hint": "Attention-Deficit/Hyperactivity Disorder (ADHD)",
+          "content_summary": "Definition, inattention/hyperactivity/impulsivity patterns, co-occurring conditions, and treatment/support options.",
+          "status": "downloaded_cleaned_batched",
+          "review_state": "unreviewed"
+        }
+      ],
+      "next_actions": [
+        "Review for patient-safe executive-function and coping phrasing.",
+        "Look for short attention, organization, and overwhelm-support variants during curation."
+      ]
+    },
+    {
+      "batch_id": "2026-03-14-nimh-autism",
+      "lang": "en",
+      "source_profile": "remote_html",
+      "built_with_html_cleaning": true,
+      "review_status": "collection_complete_unreviewed",
+      "import_status": "not_started",
+      "reprocess_recommended": false,
+      "processing_actions": [
+        "Downloaded the public NIMH autism spectrum disorder topic page.",
+        "Generated staged snippets and candidate phrases for later review."
+      ],
+      "counts": {
+        "documents": 1,
+        "chunks": 12,
+        "knowledge_snippets": 12,
+        "phrase_candidates": 13,
+        "trigger_candidates": 0,
+        "rule_hints": 3
+      },
+      "documents": [
+        {
+          "source_key": "https://www.nimh.nih.gov/health/topics/autism-spectrum-disorders-asd",
+          "origin": "remote_html",
+          "title_hint": "Autism Spectrum Disorder",
+          "content_summary": "Overview of autism, communication and developmental differences, service needs, and support across the lifespan.",
+          "status": "downloaded_cleaned_batched",
+          "review_state": "unreviewed"
+        }
+      ],
+      "next_actions": [
+        "Review for neurodiversity-respectful wording before any reuse.",
+        "Separate support-focused language from research-only descriptions."
+      ]
+    },
+    {
+      "batch_id": "2026-03-14-nimh-bipolar",
+      "lang": "en",
+      "source_profile": "remote_html",
+      "built_with_html_cleaning": true,
+      "review_status": "collection_complete_unreviewed",
+      "import_status": "not_started",
+      "reprocess_recommended": false,
+      "processing_actions": [
+        "Downloaded the public NIMH bipolar disorder topic page.",
+        "Generated batched knowledge and phrase candidates for later triage."
+      ],
+      "counts": {
+        "documents": 1,
+        "chunks": 11,
+        "knowledge_snippets": 11,
+        "phrase_candidates": 12,
+        "trigger_candidates": 0,
+        "rule_hints": 3
+      },
+      "documents": [
+        {
+          "source_key": "https://www.nimh.nih.gov/health/topics/bipolar-disorder",
+          "origin": "remote_html",
+          "title_hint": "Bipolar Disorder",
+          "content_summary": "Mood episode overview, functional impact, stigma/help-seeking context, and treatment importance.",
+          "status": "downloaded_cleaned_batched",
+          "review_state": "unreviewed"
+        }
+      ],
+      "next_actions": [
+        "Review for balanced, non-alarmist symptom wording.",
+        "Reserve psychosis- and mania-specific language for stricter safety review."
+      ]
+    },
+    {
+      "batch_id": "2026-03-14-nimh-borderline-personality",
+      "lang": "en",
+      "source_profile": "remote_html",
+      "built_with_html_cleaning": true,
+      "review_status": "collection_complete_unreviewed",
+      "import_status": "not_started",
+      "reprocess_recommended": false,
+      "processing_actions": [
+        "Downloaded the public NIMH borderline personality disorder topic page.",
+        "Generated staged candidates with provenance preserved for later review."
+      ],
+      "counts": {
+        "documents": 1,
+        "chunks": 11,
+        "knowledge_snippets": 11,
+        "phrase_candidates": 9,
+        "trigger_candidates": 0,
+        "rule_hints": 3
+      },
+      "documents": [
+        {
+          "source_key": "https://www.nimh.nih.gov/health/topics/borderline-personality-disorder",
+          "origin": "remote_html",
+          "title_hint": "Borderline Personality Disorder",
+          "content_summary": "Emotion regulation difficulties, relationship strain, self-harm risk context, and treatment references including DBT.",
+          "status": "downloaded_cleaned_batched",
+          "review_state": "unreviewed"
+        }
+      ],
+      "next_actions": [
+        "Require stricter review because the source contains self-harm-adjacent language.",
+        "Prefer supportive stabilization phrasing over diagnostic labels during later curation."
+      ]
+    },
+    {
+      "batch_id": "2026-03-14-nimh-covid-mental-health",
+      "lang": "en",
+      "source_profile": "remote_html",
+      "built_with_html_cleaning": true,
+      "review_status": "collection_complete_unreviewed",
+      "import_status": "not_started",
+      "reprocess_recommended": false,
+      "processing_actions": [
+        "Downloaded the public NIMH COVID-19 and mental health topic page.",
+        "Generated batched snippets and candidate responses for later review."
+      ],
+      "counts": {
+        "documents": 1,
+        "chunks": 10,
+        "knowledge_snippets": 10,
+        "phrase_candidates": 11,
+        "trigger_candidates": 0,
+        "rule_hints": 3
+      },
+      "documents": [
+        {
+          "source_key": "https://www.nimh.nih.gov/health/topics/covid-19-and-mental-health",
+          "origin": "remote_html",
+          "title_hint": "COVID-19 and Mental Health",
+          "content_summary": "Stress, isolation, uncertainty, coping, and help-seeking guidance related to pandemic mental health strain.",
+          "status": "downloaded_cleaned_batched",
+          "review_state": "unreviewed"
+        }
+      ],
+      "next_actions": [
+        "Review for still-relevant coping language rather than date-bound public health details.",
+        "Keep general stress-support phrasing if it survives topical aging."
+      ]
+    },
+    {
+      "batch_id": "2026-03-14-nimh-dmdd",
+      "lang": "en",
+      "source_profile": "remote_html",
+      "built_with_html_cleaning": true,
+      "review_status": "collection_complete_unreviewed",
+      "import_status": "not_started",
+      "reprocess_recommended": false,
+      "processing_actions": [
+        "Downloaded the public NIMH disruptive mood dysregulation disorder topic page.",
+        "Generated a staged batch for later review."
+      ],
+      "counts": {
+        "documents": 1,
+        "chunks": 9,
+        "knowledge_snippets": 9,
+        "phrase_candidates": 8,
+        "trigger_candidates": 0,
+        "rule_hints": 3
+      },
+      "documents": [
+        {
+          "source_key": "https://www.nimh.nih.gov/health/topics/disruptive-mood-dysregulation-disorder-dmdd",
+          "origin": "remote_html",
+          "title_hint": "Disruptive Mood Dysregulation Disorder (DMDD)",
+          "content_summary": "Severe irritability, temper outbursts, child/adolescent symptom framing, and treatment context.",
+          "status": "downloaded_cleaned_batched",
+          "review_state": "unreviewed"
+        }
+      ],
+      "next_actions": [
+        "Treat as child/family-context material during later review.",
+        "Avoid generic runtime reuse without age and role gating."
+      ]
+    },
+    {
+      "batch_id": "2026-03-14-nimh-eating-disorders",
+      "lang": "en",
+      "source_profile": "remote_html",
+      "built_with_html_cleaning": true,
+      "review_status": "collection_complete_unreviewed",
+      "import_status": "not_started",
+      "reprocess_recommended": false,
+      "processing_actions": [
+        "Downloaded the public NIMH eating disorders topic page.",
+        "Generated staged chunks and candidate phrasing for later review."
+      ],
+      "counts": {
+        "documents": 1,
+        "chunks": 10,
+        "knowledge_snippets": 10,
+        "phrase_candidates": 10,
+        "trigger_candidates": 0,
+        "rule_hints": 3
+      },
+      "documents": [
+        {
+          "source_key": "https://www.nimh.nih.gov/health/topics/eating-disorders",
+          "origin": "remote_html",
+          "title_hint": "Eating Disorders",
+          "content_summary": "Overview of disordered eating, fixation on weight/shape, co-occurring conditions, and early treatment value.",
+          "status": "downloaded_cleaned_batched",
+          "review_state": "unreviewed"
+        }
+      ],
+      "next_actions": [
+        "Require careful wording review to avoid reinforcing harmful food/body language.",
+        "Preserve only supportive, treatment-encouraging phrasing later."
+      ]
+    },
+    {
+      "batch_id": "2026-03-14-nimh-hiv-mental-health",
+      "lang": "en",
+      "source_profile": "remote_html",
+      "built_with_html_cleaning": true,
+      "review_status": "collection_complete_unreviewed",
+      "import_status": "not_started",
+      "reprocess_recommended": false,
+      "processing_actions": [
+        "Downloaded the public NIMH HIV and mental health topic page.",
+        "Generated a staged batch of snippets and phrases."
+      ],
+      "counts": {
+        "documents": 1,
+        "chunks": 12,
+        "knowledge_snippets": 12,
+        "phrase_candidates": 12,
+        "trigger_candidates": 0,
+        "rule_hints": 3
+      },
+      "documents": [
+        {
+          "source_key": "https://www.nimh.nih.gov/health/topics/hiv-aids",
+          "origin": "remote_html",
+          "title_hint": "HIV and Mental Health",
+          "content_summary": "Mental health impacts around HIV, stigma, treatment engagement, and integrated support considerations.",
+          "status": "downloaded_cleaned_batched",
+          "review_state": "unreviewed"
+        }
+      ],
+      "next_actions": [
+        "Review for stigma-sensitive wording.",
+        "Separate general support language from condition-specific medical content."
+      ]
+    },
+    {
+      "batch_id": "2026-03-14-nimh-mens-mental-health-listing",
+      "lang": "en",
+      "source_profile": "remote_html_listing",
+      "built_with_html_cleaning": true,
+      "review_status": "inventory_only",
+      "import_status": "not_started",
+      "reprocess_recommended": true,
+      "processing_actions": [
+        "Downloaded the public NIMH men's mental health listing page after the original direct publication guess returned 404.",
+        "Kept the listing output as a provenance record and source inventory, not as high-value phrase material."
+      ],
+      "counts": {
+        "documents": 1,
+        "chunks": 1,
+        "knowledge_snippets": 1,
+        "phrase_candidates": 2,
+        "trigger_candidates": 0,
+        "rule_hints": 3
+      },
+      "documents": [
+        {
+          "source_key": "https://www.nimh.nih.gov/health/publications/mens-mental-health-listing",
+          "origin": "remote_html_listing",
+          "title_hint": "Men's Mental Health Listing",
+          "content_summary": "Listing/index page for NIMH men's mental health brochures and fact sheets.",
+          "status": "downloaded_cleaned_batched",
+          "review_state": "inventory_only"
+        }
+      ],
+      "next_actions": [
+        "Follow the linked brochure pages later if richer men's mental health content is needed.",
+        "Do not prioritize these listing-derived candidates for import."
+      ]
+    },
+    {
+      "batch_id": "2026-03-14-nimh-ocd",
+      "lang": "en",
+      "source_profile": "remote_html",
+      "built_with_html_cleaning": true,
+      "review_status": "collection_complete_unreviewed",
+      "import_status": "not_started",
+      "reprocess_recommended": false,
+      "processing_actions": [
+        "Downloaded the public NIMH obsessive-compulsive disorder topic page.",
+        "Generated staged OCD-related knowledge and phrase candidates."
+      ],
+      "counts": {
+        "documents": 1,
+        "chunks": 9,
+        "knowledge_snippets": 9,
+        "phrase_candidates": 10,
+        "trigger_candidates": 0,
+        "rule_hints": 3
+      },
+      "documents": [
+        {
+          "source_key": "https://www.nimh.nih.gov/health/topics/obsessive-compulsive-disorder-ocd",
+          "origin": "remote_html",
+          "title_hint": "Obsessive-Compulsive Disorder (OCD)",
+          "content_summary": "Obsessions, compulsions, distress/impairment, and treatment references for OCD.",
+          "status": "downloaded_cleaned_batched",
+          "review_state": "unreviewed"
+        }
+      ],
+      "next_actions": [
+        "Review for concise descriptions of repetitive-thought and compulsion cues.",
+        "Avoid normalizing reassurance-seeking loops during later curation."
+      ]
+    },
+    {
+      "batch_id": "2026-03-14-nimh-ptsd",
+      "lang": "en",
+      "source_profile": "remote_html",
+      "built_with_html_cleaning": true,
+      "review_status": "collection_complete_unreviewed",
+      "import_status": "not_started",
+      "reprocess_recommended": false,
+      "processing_actions": [
+        "Downloaded the public NIMH PTSD topic page.",
+        "Generated a staged trauma/PTSD batch with cleaned extraction."
+      ],
+      "counts": {
+        "documents": 1,
+        "chunks": 13,
+        "knowledge_snippets": 13,
+        "phrase_candidates": 14,
+        "trigger_candidates": 0,
+        "rule_hints": 3
+      },
+      "documents": [
+        {
+          "source_key": "https://www.nimh.nih.gov/health/topics/post-traumatic-stress-disorder-ptsd",
+          "origin": "remote_html",
+          "title_hint": "Traumatic Events and Post-Traumatic Stress Disorder (PTSD)",
+          "content_summary": "Typical trauma reactions, PTSD persistence criteria, treatment/support context, and recovery framing.",
+          "status": "downloaded_cleaned_batched",
+          "review_state": "unreviewed"
+        }
+      ],
+      "next_actions": [
+        "Review for grounding, normalization, and trauma-sensitive help-routing candidates.",
+        "Separate initial post-trauma reactions from PTSD-specific language later."
+      ]
+    },
+    {
+      "batch_id": "2026-03-14-nimh-schizophrenia",
+      "lang": "en",
+      "source_profile": "remote_html",
+      "built_with_html_cleaning": true,
+      "review_status": "collection_complete_unreviewed",
+      "import_status": "not_started",
+      "reprocess_recommended": false,
+      "processing_actions": [
+        "Downloaded the public NIMH schizophrenia topic page.",
+        "Generated staged psychosis/schizophrenia knowledge and phrase candidates."
+      ],
+      "counts": {
+        "documents": 1,
+        "chunks": 13,
+        "knowledge_snippets": 13,
+        "phrase_candidates": 13,
+        "trigger_candidates": 0,
+        "rule_hints": 3
+      },
+      "documents": [
+        {
+          "source_key": "https://www.nimh.nih.gov/health/topics/schizophrenia",
+          "origin": "remote_html",
+          "title_hint": "Schizophrenia",
+          "content_summary": "Schizophrenia overview, psychosis context, early treatment importance, and coordinated specialty care references.",
+          "status": "downloaded_cleaned_batched",
+          "review_state": "unreviewed"
+        }
+      ],
+      "next_actions": [
+        "Require stricter review because psychosis content can imply crisis or severe impairment.",
+        "Prefer supportive routing and early-help wording during later curation."
+      ]
+    },
+    {
+      "batch_id": "2026-03-14-nimh-substance-use-cooccurring",
+      "lang": "en",
+      "source_profile": "remote_html",
+      "built_with_html_cleaning": true,
+      "review_status": "collection_complete_unreviewed",
+      "import_status": "not_started",
+      "reprocess_recommended": false,
+      "processing_actions": [
+        "Downloaded the public NIMH co-occurring substance use and mental disorders topic page.",
+        "Generated staged integrated-care and help-seeking candidates."
+      ],
+      "counts": {
+        "documents": 1,
+        "chunks": 10,
+        "knowledge_snippets": 10,
+        "phrase_candidates": 7,
+        "trigger_candidates": 0,
+        "rule_hints": 3
+      },
+      "documents": [
+        {
+          "source_key": "https://www.nimh.nih.gov/health/topics/substance-use-and-mental-health",
+          "origin": "remote_html",
+          "title_hint": "Finding Help for Co-Occurring Substance Use and Mental Disorders",
+          "content_summary": "Co-occurring mental health and substance use patterns, integrated care, diagnosis, and help-routing guidance.",
+          "status": "downloaded_cleaned_batched",
+          "review_state": "unreviewed"
+        }
+      ],
+      "next_actions": [
+        "Review for supportive addiction-adjacent language without adding stigma.",
+        "Keep treatment-routing content separated from any abstinence-implying wording later."
+      ]
+    },
+    {
+      "batch_id": "2026-03-14-nimh-trauma-listing",
+      "lang": "en",
+      "source_profile": "remote_html_listing",
+      "built_with_html_cleaning": true,
+      "review_status": "inventory_only",
+      "import_status": "not_started",
+      "reprocess_recommended": true,
+      "processing_actions": [
+        "Downloaded the public NIMH traumatic events listing page after the guessed direct coping URL returned 404.",
+        "Kept it as an inventory/provenance marker rather than a high-yield phrase source."
+      ],
+      "counts": {
+        "documents": 1,
+        "chunks": 1,
+        "knowledge_snippets": 1,
+        "phrase_candidates": 1,
+        "trigger_candidates": 0,
+        "rule_hints": 3
+      },
+      "documents": [
+        {
+          "source_key": "https://www.nimh.nih.gov/health/publications/trauma-listing",
+          "origin": "remote_html_listing",
+          "title_hint": "Traumatic Events Listing",
+          "content_summary": "Listing/index page for NIMH traumatic events brochures and fact sheets.",
+          "status": "downloaded_cleaned_batched",
+          "review_state": "inventory_only"
+        }
+      ],
+      "next_actions": [
+        "Follow the linked trauma brochures later if richer trauma-specific content is needed.",
+        "Do not prioritize listing-derived candidates for import."
+      ]
+    },
+    {
+      "batch_id": "2026-03-14-nimh-understanding-psychosis",
+      "lang": "en",
+      "source_profile": "remote_html",
+      "built_with_html_cleaning": true,
+      "review_status": "collection_complete_unreviewed",
+      "import_status": "not_started",
+      "reprocess_recommended": false,
+      "processing_actions": [
+        "Downloaded the public NIMH understanding psychosis publication.",
+        "Generated a staged batch focused on first-episode psychosis, early signs, and help routing."
+      ],
+      "counts": {
+        "documents": 1,
+        "chunks": 20,
+        "knowledge_snippets": 20,
+        "phrase_candidates": 14,
+        "trigger_candidates": 0,
+        "rule_hints": 3
+      },
+      "documents": [
+        {
+          "source_key": "https://www.nimh.nih.gov/health/publications/understanding-psychosis",
+          "origin": "remote_html",
+          "title_hint": "Understanding Psychosis",
+          "content_summary": "First-episode psychosis overview, early warning signs, treatment timing, and support recommendations for individuals and families.",
+          "status": "downloaded_cleaned_batched",
+          "review_state": "unreviewed"
+        }
+      ],
+      "next_actions": [
+        "Use later for psychosis-specific support routing and family guidance.",
+        "Require stricter safety review before any direct runtime promotion."
+      ]
+    },
+    {
+      "batch_id": "2026-03-14-nimh-womens-mental-health-listing",
+      "lang": "en",
+      "source_profile": "remote_html_listing",
+      "built_with_html_cleaning": true,
+      "review_status": "inventory_only",
+      "import_status": "not_started",
+      "reprocess_recommended": true,
+      "processing_actions": [
+        "Downloaded the public NIMH women's mental health listing page after the original direct publication guess returned 404.",
+        "Stored it as an inventory/provenance source rather than a high-yield phrase batch."
+      ],
+      "counts": {
+        "documents": 1,
+        "chunks": 2,
+        "knowledge_snippets": 2,
+        "phrase_candidates": 4,
+        "trigger_candidates": 0,
+        "rule_hints": 3
+      },
+      "documents": [
+        {
+          "source_key": "https://www.nimh.nih.gov/health/publications/womens-mental-health-listing",
+          "origin": "remote_html_listing",
+          "title_hint": "Women's Mental Health Listing",
+          "content_summary": "Listing/index page for NIMH women's mental health brochures and fact sheets.",
+          "status": "downloaded_cleaned_batched",
+          "review_state": "inventory_only"
+        }
+      ],
+      "next_actions": [
+        "Follow the linked brochures later if richer women's mental health content is needed.",
+        "Do not prioritize listing-derived candidates for import."
+      ]
+    },
+    {
+      "batch_id": "2026-03-14-nimh-anxiety-disorders-clean",
+      "lang": "en",
+      "source_profile": "remote_html",
+      "built_with_html_cleaning": true,
+      "review_status": "collection_complete_unreviewed",
+      "import_status": "not_started",
+      "reprocess_recommended": false,
+      "processing_actions": [
+        "Rebuilt the public NIMH anxiety disorders topic page with the newer cleaned HTML extractor.",
+        "Captured a cleaner replacement for the older legacy anxiety batch artifacts."
+      ],
+      "counts": {
+        "documents": 1,
+        "chunks": 11,
+        "knowledge_snippets": 11,
+        "phrase_candidates": 11,
+        "trigger_candidates": 0,
+        "rule_hints": 3
+      },
+      "documents": [
+        {
+          "source_key": "https://www.nimh.nih.gov/health/topics/anxiety-disorders",
+          "origin": "remote_html",
+          "title_hint": "Anxiety Disorders",
+          "content_summary": "Clean rebuild of the NIMH anxiety overview: symptoms, functional impact, treatment, and support routing.",
+          "status": "downloaded_cleaned_batched",
+          "review_state": "unreviewed"
+        }
+      ],
+      "next_actions": [
+        "Prefer this cleaned batch over the older 2026-03-13 anxiety outputs during later review.",
+        "Mine it later for concise anxiety and help-seeking variants."
+      ]
+    },
+    {
+      "batch_id": "2026-03-14-nimh-so-stressed-out-clean",
+      "lang": "en",
+      "source_profile": "remote_html",
+      "built_with_html_cleaning": true,
+      "review_status": "collection_complete_unreviewed",
+      "import_status": "not_started",
+      "reprocess_recommended": false,
+      "processing_actions": [
+        "Rebuilt the public NIMH so-stressed-out fact sheet with cleaned HTML extraction.",
+        "Captured a cleaner stress-focused batch to supersede the older mixed/noisy variant."
+      ],
+      "counts": {
+        "documents": 1,
+        "chunks": 11,
+        "knowledge_snippets": 11,
+        "phrase_candidates": 13,
+        "trigger_candidates": 0,
+        "rule_hints": 3
+      },
+      "documents": [
+        {
+          "source_key": "https://www.nimh.nih.gov/health/publications/so-stressed-out-fact-sheet",
+          "origin": "remote_html",
+          "title_hint": "So Stressed Out Fact Sheet",
+          "content_summary": "Clean stress-focused psychoeducation and coping guidance from NIMH.",
+          "status": "downloaded_cleaned_batched",
+          "review_state": "unreviewed"
+        }
+      ],
+      "next_actions": [
+        "Prefer this cleaned stress batch over the older 2026-03-13 stress/anxiety outputs.",
+        "Mine it later for coping, normalization, and stress-management variants."
+      ]
+    },
+    {
+      "batch_id": "2026-03-14-nimh-children-mental-health-clean",
+      "lang": "en",
+      "source_profile": "remote_html",
+      "built_with_html_cleaning": true,
+      "review_status": "collection_complete_unreviewed",
+      "import_status": "not_started",
+      "reprocess_recommended": false,
+      "processing_actions": [
+        "Rebuilt the public NIMH children and mental health page with cleaned HTML extraction.",
+        "Captured a much richer child/family-oriented batch than the older noisy mixed-source run."
+      ],
+      "counts": {
+        "documents": 1,
+        "chunks": 19,
+        "knowledge_snippets": 19,
+        "phrase_candidates": 31,
+        "trigger_candidates": 0,
+        "rule_hints": 3
+      },
+      "documents": [
+        {
+          "source_key": "https://www.nimh.nih.gov/health/publications/children-and-mental-health",
+          "origin": "remote_html",
+          "title_hint": "Children and Mental Health",
+          "content_summary": "Child and adolescent mental health overview, warning signs, family guidance, and help-seeking support content.",
+          "status": "downloaded_cleaned_batched",
+          "review_state": "unreviewed"
+        }
+      ],
+      "next_actions": [
+        "Prefer this cleaned child/family batch over the older 2026-03-13 mixed child batch.",
+        "Review later for parent-facing and caregiver-facing support variants with channel gating."
       ]
     }
   ]

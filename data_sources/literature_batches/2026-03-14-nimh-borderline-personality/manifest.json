@@ -1,0 +1,41 @@
+{
+  "batch_id": "2026-03-14-nimh-borderline-personality",
+  "generated_at": "2026-03-14T00:39:45.412367+00:00",
+  "sources": {
+    "local_paths": [],
+    "urls": [
+      "https://www.nimh.nih.gov/health/topics/borderline-personality-disorder"
+    ],
+    "resolved_paths": [
+      "D:\\WORK\\VS_Code\\Python_projects\\AI_assistant_psyhoterapist\\data_sources\\literature_batches\\2026-03-14-nimh-borderline-personality\\downloads\\remote_borderline-personality-disorder_c34eea18c17d.html"
+    ],
+    "downloaded_files": [
+      {
+        "url": "https://www.nimh.nih.gov/health/topics/borderline-personality-disorder",
+        "download_path": "data_sources\\literature_batches\\2026-03-14-nimh-borderline-personality\\downloads\\remote_borderline-personality-disorder_c34eea18c17d.html",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  "counts": {
+    "documents": 1,
+    "chunks": 11,
+    "knowledge_snippets": 11,
+    "phrase_candidates": 9,
+    "trigger_candidates": 0,
+    "rule_hints": 3
+  },
+  "lang": "en",
+  "topic_hints": [
+    "disorder",
+    "personality",
+    "borderline",
+    "trials",
+    "information",
+    "more",
+    "nimh",
+    "research",
+    "find",
+    "their"
+  ]
+}

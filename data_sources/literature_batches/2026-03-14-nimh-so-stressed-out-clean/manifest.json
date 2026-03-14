@@ -1,0 +1,41 @@
+{
+  "batch_id": "2026-03-14-nimh-so-stressed-out-clean",
+  "generated_at": "2026-03-14T00:43:17.304084+00:00",
+  "sources": {
+    "local_paths": [],
+    "urls": [
+      "https://www.nimh.nih.gov/health/publications/so-stressed-out-fact-sheet"
+    ],
+    "resolved_paths": [
+      "D:\\WORK\\VS_Code\\Python_projects\\AI_assistant_psyhoterapist\\data_sources\\literature_batches\\2026-03-14-nimh-so-stressed-out-clean\\downloads\\remote_so-stressed-out-fact-sheet_8bad16b01619.html"
+    ],
+    "downloaded_files": [
+      {
+        "url": "https://www.nimh.nih.gov/health/publications/so-stressed-out-fact-sheet",
+        "download_path": "data_sources\\literature_batches\\2026-03-14-nimh-so-stressed-out-clean\\downloads\\remote_so-stressed-out-fact-sheet_8bad16b01619.html",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  "counts": {
+    "documents": 1,
+    "chunks": 11,
+    "knowledge_snippets": 11,
+    "phrase_candidates": 13,
+    "trigger_candidates": 0,
+    "rule_hints": 3
+  },
+  "lang": "en",
+  "topic_hints": [
+    "stress",
+    "anxiety",
+    "your",
+    "health",
+    "such",
+    "mental",
+    "what",
+    "life",
+    "help",
+    "time"
+  ]
+}

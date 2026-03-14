@@ -1,0 +1,41 @@
+{
+  "batch_id": "2026-03-14-nimh-autism",
+  "generated_at": "2026-03-14T00:39:46.827815+00:00",
+  "sources": {
+    "local_paths": [],
+    "urls": [
+      "https://www.nimh.nih.gov/health/topics/autism-spectrum-disorders-asd"
+    ],
+    "resolved_paths": [
+      "D:\\WORK\\VS_Code\\Python_projects\\AI_assistant_psyhoterapist\\data_sources\\literature_batches\\2026-03-14-nimh-autism\\downloads\\remote_autism-spectrum-disorders-asd_82e2d623206c.html"
+    ],
+    "downloaded_files": [
+      {
+        "url": "https://www.nimh.nih.gov/health/topics/autism-spectrum-disorders-asd",
+        "download_path": "data_sources\\literature_batches\\2026-03-14-nimh-autism\\downloads\\remote_autism-spectrum-disorders-asd_82e2d623206c.html",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  "counts": {
+    "documents": 1,
+    "chunks": 12,
+    "knowledge_snippets": 12,
+    "phrase_candidates": 13,
+    "trigger_candidates": 0,
+    "rule_hints": 3
+  },
+  "lang": "en",
+  "topic_hints": [
+    "autism",
+    "disorder",
+    "research",
+    "health",
+    "spectrum",
+    "people",
+    "nimh",
+    "that",
+    "symptoms",
+    "information"
+  ]
+}

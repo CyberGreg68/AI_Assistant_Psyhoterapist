@@ -1,0 +1,52 @@
+{
+  "rule_hints": [
+    {
+      "hint_type": "dominant_categories",
+      "items": [
+        {
+          "category": "variants",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hint_type": "risk_flags",
+      "items": []
+    },
+    {
+      "hint_type": "topic_hints",
+      "items": [
+        {
+          "topic": "depression"
+        },
+        {
+          "topic": "eating"
+        },
+        {
+          "topic": "women"
+        },
+        {
+          "topic": "espa"
+        },
+        {
+          "topic": "disorders"
+        },
+        {
+          "topic": "information"
+        },
+        {
+          "topic": "including"
+        },
+        {
+          "topic": "help"
+        },
+        {
+          "topic": "signs"
+        },
+        {
+          "topic": "symptoms"
+        }
+      ]
+    }
+  ]
+}

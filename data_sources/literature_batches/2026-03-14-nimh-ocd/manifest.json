@@ -1,0 +1,41 @@
+{
+  "batch_id": "2026-03-14-nimh-ocd",
+  "generated_at": "2026-03-14T00:39:37.826833+00:00",
+  "sources": {
+    "local_paths": [],
+    "urls": [
+      "https://www.nimh.nih.gov/health/topics/obsessive-compulsive-disorder-ocd"
+    ],
+    "resolved_paths": [
+      "D:\\WORK\\VS_Code\\Python_projects\\AI_assistant_psyhoterapist\\data_sources\\literature_batches\\2026-03-14-nimh-ocd\\downloads\\remote_obsessive-compulsive-disorder-ocd_51fc2f154f43.html"
+    ],
+    "downloaded_files": [
+      {
+        "url": "https://www.nimh.nih.gov/health/topics/obsessive-compulsive-disorder-ocd",
+        "download_path": "data_sources\\literature_batches\\2026-03-14-nimh-ocd\\downloads\\remote_obsessive-compulsive-disorder-ocd_51fc2f154f43.html",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  "counts": {
+    "documents": 1,
+    "chunks": 9,
+    "knowledge_snippets": 9,
+    "phrase_candidates": 10,
+    "trigger_candidates": 0,
+    "rule_hints": 3
+  },
+  "lang": "en",
+  "topic_hints": [
+    "research",
+    "nimh",
+    "trials",
+    "disorder",
+    "find",
+    "symptoms",
+    "information",
+    "learn",
+    "more",
+    "help"
+  ]
+}

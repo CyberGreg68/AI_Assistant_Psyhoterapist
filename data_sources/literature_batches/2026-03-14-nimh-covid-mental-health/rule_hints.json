@@ -1,0 +1,52 @@
+{
+  "rule_hints": [
+    {
+      "hint_type": "dominant_categories",
+      "items": [
+        {
+          "category": "variants",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "hint_type": "risk_flags",
+      "items": []
+    },
+    {
+      "hint_type": "topic_hints",
+      "items": [
+        {
+          "topic": "covid"
+        },
+        {
+          "topic": "mental"
+        },
+        {
+          "topic": "health"
+        },
+        {
+          "topic": "research"
+        },
+        {
+          "topic": "nimh"
+        },
+        {
+          "topic": "people"
+        },
+        {
+          "topic": "pandemic"
+        },
+        {
+          "topic": "more"
+        },
+        {
+          "topic": "trials"
+        },
+        {
+          "topic": "find"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "batch_id": "2026-03-14-nimh-children-mental-health-clean",
+  "generated_at": "2026-03-14T00:43:18.770909+00:00",
+  "sources": {
+    "local_paths": [],
+    "urls": [
+      "https://www.nimh.nih.gov/health/publications/children-and-mental-health"
+    ],
+    "resolved_paths": [
+      "D:\\WORK\\VS_Code\\Python_projects\\AI_assistant_psyhoterapist\\data_sources\\literature_batches\\2026-03-14-nimh-children-mental-health-clean\\downloads\\remote_children-and-mental-health_de38bbc3d9f1.html"
+    ],
+    "downloaded_files": [
+      {
+        "url": "https://www.nimh.nih.gov/health/publications/children-and-mental-health",
+        "download_path": "data_sources\\literature_batches\\2026-03-14-nimh-children-mental-health-clean\\downloads\\remote_children-and-mental-health_de38bbc3d9f1.html",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  "counts": {
+    "documents": 1,
+    "chunks": 19,
+    "knowledge_snippets": 19,
+    "phrase_candidates": 31,
+    "trigger_candidates": 0,
+    "rule_hints": 3
+  },
+  "lang": "en",
+  "topic_hints": [
+    "child",
+    "health",
+    "your",
+    "mental",
+    "children",
+    "treatment",
+    "that",
+    "have",
+    "care",
+    "help"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "batch_id": "2026-03-14-nimh-understanding-psychosis",
+  "generated_at": "2026-03-14T00:40:22.595612+00:00",
+  "sources": {
+    "local_paths": [],
+    "urls": [
+      "https://www.nimh.nih.gov/health/publications/understanding-psychosis"
+    ],
+    "resolved_paths": [
+      "D:\\WORK\\VS_Code\\Python_projects\\AI_assistant_psyhoterapist\\data_sources\\literature_batches\\2026-03-14-nimh-understanding-psychosis\\downloads\\remote_understanding-psychosis_f5d72e519dc0.html"
+    ],
+    "downloaded_files": [
+      {
+        "url": "https://www.nimh.nih.gov/health/publications/understanding-psychosis",
+        "download_path": "data_sources\\literature_batches\\2026-03-14-nimh-understanding-psychosis\\downloads\\remote_understanding-psychosis_f5d72e519dc0.html",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  "counts": {
+    "documents": 1,
+    "chunks": 20,
+    "knowledge_snippets": 20,
+    "phrase_candidates": 14,
+    "trigger_candidates": 0,
+    "rule_hints": 3
+  },
+  "lang": "en",
+  "topic_hints": [
+    "psychosis",
+    "care",
+    "that",
+    "people",
+    "treatment",
+    "person",
+    "symptoms",
+    "health",
+    "help",
+    "coordinated"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "rule_hints": [
+    {
+      "hint_type": "dominant_categories",
+      "items": [
+        {
+          "category": "variants",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "hint_type": "risk_flags",
+      "items": []
+    },
+    {
+      "hint_type": "topic_hints",
+      "items": [
+        {
+          "topic": "research"
+        },
+        {
+          "topic": "nimh"
+        },
+        {
+          "topic": "trials"
+        },
+        {
+          "topic": "disorder"
+        },
+        {
+          "topic": "find"
+        },
+        {
+          "topic": "symptoms"
+        },
+        {
+          "topic": "information"
+        },
+        {
+          "topic": "learn"
+        },
+        {
+          "topic": "more"
+        },
+        {
+          "topic": "help"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "rule_hints": [
+    {
+      "hint_type": "dominant_categories",
+      "items": [
+        {
+          "category": "variants",
+          "count": 19
+        }
+      ]
+    },
+    {
+      "hint_type": "risk_flags",
+      "items": []
+    },
+    {
+      "hint_type": "topic_hints",
+      "items": [
+        {
+          "topic": "child"
+        },
+        {
+          "topic": "health"
+        },
+        {
+          "topic": "your"
+        },
+        {
+          "topic": "mental"
+        },
+        {
+          "topic": "children"
+        },
+        {
+          "topic": "treatment"
+        },
+        {
+          "topic": "that"
+        },
+        {
+          "topic": "have"
+        },
+        {
+          "topic": "care"
+        },
+        {
+          "topic": "help"
+        }
+      ]
+    }
+  ]
+}

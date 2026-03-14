@@ -1,0 +1,52 @@
+{
+  "rule_hints": [
+    {
+      "hint_type": "dominant_categories",
+      "items": [
+        {
+          "category": "variants",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "hint_type": "risk_flags",
+      "items": []
+    },
+    {
+      "hint_type": "topic_hints",
+      "items": [
+        {
+          "topic": "dmdd"
+        },
+        {
+          "topic": "nimh"
+        },
+        {
+          "topic": "children"
+        },
+        {
+          "topic": "disorder"
+        },
+        {
+          "topic": "trials"
+        },
+        {
+          "topic": "studies"
+        },
+        {
+          "topic": "more"
+        },
+        {
+          "topic": "research"
+        },
+        {
+          "topic": "find"
+        },
+        {
+          "topic": "health"
+        }
+      ]
+    }
+  ]
+}

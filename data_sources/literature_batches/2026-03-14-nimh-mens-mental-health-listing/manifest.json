@@ -1,0 +1,41 @@
+{
+  "batch_id": "2026-03-14-nimh-mens-mental-health-listing",
+  "generated_at": "2026-03-14T00:41:07.881271+00:00",
+  "sources": {
+    "local_paths": [],
+    "urls": [
+      "https://www.nimh.nih.gov/health/publications/mens-mental-health-listing"
+    ],
+    "resolved_paths": [
+      "D:\\WORK\\VS_Code\\Python_projects\\AI_assistant_psyhoterapist\\data_sources\\literature_batches\\2026-03-14-nimh-mens-mental-health-listing\\downloads\\remote_mens-mental-health-listing_6021e8da8be8.html"
+    ],
+    "downloaded_files": [
+      {
+        "url": "https://www.nimh.nih.gov/health/publications/mens-mental-health-listing",
+        "download_path": "data_sources\\literature_batches\\2026-03-14-nimh-mens-mental-health-listing\\downloads\\remote_mens-mental-health-listing_6021e8da8be8.html",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  "counts": {
+    "documents": 1,
+    "chunks": 1,
+    "knowledge_snippets": 1,
+    "phrase_candidates": 2,
+    "trigger_candidates": 0,
+    "rule_hints": 3
+  },
+  "lang": "en",
+  "topic_hints": [
+    "suicide",
+    "depression",
+    "signs",
+    "information",
+    "find",
+    "help",
+    "espa",
+    "warning",
+    "publications",
+    "mental"
+  ]
+}

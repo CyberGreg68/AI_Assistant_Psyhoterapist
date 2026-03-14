@@ -1,0 +1,41 @@
+{
+  "batch_id": "2026-03-14-nimh-womens-mental-health-listing",
+  "generated_at": "2026-03-14T00:41:09.331545+00:00",
+  "sources": {
+    "local_paths": [],
+    "urls": [
+      "https://www.nimh.nih.gov/health/publications/womens-mental-health-listing"
+    ],
+    "resolved_paths": [
+      "D:\\WORK\\VS_Code\\Python_projects\\AI_assistant_psyhoterapist\\data_sources\\literature_batches\\2026-03-14-nimh-womens-mental-health-listing\\downloads\\remote_womens-mental-health-listing_bec1e1297a7a.html"
+    ],
+    "downloaded_files": [
+      {
+        "url": "https://www.nimh.nih.gov/health/publications/womens-mental-health-listing",
+        "download_path": "data_sources\\literature_batches\\2026-03-14-nimh-womens-mental-health-listing\\downloads\\remote_womens-mental-health-listing_bec1e1297a7a.html",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  "counts": {
+    "documents": 1,
+    "chunks": 2,
+    "knowledge_snippets": 2,
+    "phrase_candidates": 4,
+    "trigger_candidates": 0,
+    "rule_hints": 3
+  },
+  "lang": "en",
+  "topic_hints": [
+    "depression",
+    "eating",
+    "women",
+    "espa",
+    "disorders",
+    "information",
+    "including",
+    "help",
+    "signs",
+    "symptoms"
+  ]
+}

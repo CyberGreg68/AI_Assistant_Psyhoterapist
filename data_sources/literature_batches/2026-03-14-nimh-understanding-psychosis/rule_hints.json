@@ -1,0 +1,52 @@
+{
+  "rule_hints": [
+    {
+      "hint_type": "dominant_categories",
+      "items": [
+        {
+          "category": "variants",
+          "count": 20
+        }
+      ]
+    },
+    {
+      "hint_type": "risk_flags",
+      "items": []
+    },
+    {
+      "hint_type": "topic_hints",
+      "items": [
+        {
+          "topic": "psychosis"
+        },
+        {
+          "topic": "care"
+        },
+        {
+          "topic": "that"
+        },
+        {
+          "topic": "people"
+        },
+        {
+          "topic": "treatment"
+        },
+        {
+          "topic": "person"
+        },
+        {
+          "topic": "symptoms"
+        },
+        {
+          "topic": "health"
+        },
+        {
+          "topic": "help"
+        },
+        {
+          "topic": "coordinated"
+        }
+      ]
+    }
+  ]
+}

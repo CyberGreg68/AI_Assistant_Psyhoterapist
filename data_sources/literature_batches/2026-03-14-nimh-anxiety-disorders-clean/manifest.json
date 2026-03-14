@@ -1,0 +1,41 @@
+{
+  "batch_id": "2026-03-14-nimh-anxiety-disorders-clean",
+  "generated_at": "2026-03-14T00:43:15.806270+00:00",
+  "sources": {
+    "local_paths": [],
+    "urls": [
+      "https://www.nimh.nih.gov/health/topics/anxiety-disorders"
+    ],
+    "resolved_paths": [
+      "D:\\WORK\\VS_Code\\Python_projects\\AI_assistant_psyhoterapist\\data_sources\\literature_batches\\2026-03-14-nimh-anxiety-disorders-clean\\downloads\\remote_anxiety-disorders_994fc421c4b1.html"
+    ],
+    "downloaded_files": [
+      {
+        "url": "https://www.nimh.nih.gov/health/topics/anxiety-disorders",
+        "download_path": "data_sources\\literature_batches\\2026-03-14-nimh-anxiety-disorders-clean\\downloads\\remote_anxiety-disorders_994fc421c4b1.html",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  "counts": {
+    "documents": 1,
+    "chunks": 11,
+    "knowledge_snippets": 11,
+    "phrase_candidates": 11,
+    "trigger_candidates": 0,
+    "rule_hints": 3
+  },
+  "lang": "en",
+  "topic_hints": [
+    "anxiety",
+    "disorders",
+    "nimh",
+    "research",
+    "studies",
+    "trials",
+    "more",
+    "find",
+    "health",
+    "including"
+  ]
+}

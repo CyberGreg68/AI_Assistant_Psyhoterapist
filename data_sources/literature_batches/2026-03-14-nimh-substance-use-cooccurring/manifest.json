@@ -1,0 +1,41 @@
+{
+  "batch_id": "2026-03-14-nimh-substance-use-cooccurring",
+  "generated_at": "2026-03-14T00:39:48.280371+00:00",
+  "sources": {
+    "local_paths": [],
+    "urls": [
+      "https://www.nimh.nih.gov/health/topics/substance-use-and-mental-health"
+    ],
+    "resolved_paths": [
+      "D:\\WORK\\VS_Code\\Python_projects\\AI_assistant_psyhoterapist\\data_sources\\literature_batches\\2026-03-14-nimh-substance-use-cooccurring\\downloads\\remote_substance-use-and-mental-health_ccd9c1d7863a.html"
+    ],
+    "downloaded_files": [
+      {
+        "url": "https://www.nimh.nih.gov/health/topics/substance-use-and-mental-health",
+        "download_path": "data_sources\\literature_batches\\2026-03-14-nimh-substance-use-cooccurring\\downloads\\remote_substance-use-and-mental-health_ccd9c1d7863a.html",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  "counts": {
+    "documents": 1,
+    "chunks": 10,
+    "knowledge_snippets": 10,
+    "phrase_candidates": 7,
+    "trigger_candidates": 0,
+    "rule_hints": 3
+  },
+  "lang": "en",
+  "topic_hints": [
+    "disorders",
+    "substance",
+    "mental",
+    "that",
+    "other",
+    "care",
+    "occurring",
+    "more",
+    "health",
+    "treatment"
+  ]
+}

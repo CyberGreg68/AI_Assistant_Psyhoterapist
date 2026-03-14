@@ -1,0 +1,52 @@
+{
+  "rule_hints": [
+    {
+      "hint_type": "dominant_categories",
+      "items": [
+        {
+          "category": "variants",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "hint_type": "risk_flags",
+      "items": []
+    },
+    {
+      "hint_type": "topic_hints",
+      "items": [
+        {
+          "topic": "disorders"
+        },
+        {
+          "topic": "substance"
+        },
+        {
+          "topic": "mental"
+        },
+        {
+          "topic": "that"
+        },
+        {
+          "topic": "other"
+        },
+        {
+          "topic": "care"
+        },
+        {
+          "topic": "occurring"
+        },
+        {
+          "topic": "more"
+        },
+        {
+          "topic": "health"
+        },
+        {
+          "topic": "treatment"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "batch_id": "2026-03-14-nimh-dmdd",
+  "generated_at": "2026-03-14T00:40:19.645717+00:00",
+  "sources": {
+    "local_paths": [],
+    "urls": [
+      "https://www.nimh.nih.gov/health/topics/disruptive-mood-dysregulation-disorder-dmdd"
+    ],
+    "resolved_paths": [
+      "D:\\WORK\\VS_Code\\Python_projects\\AI_assistant_psyhoterapist\\data_sources\\literature_batches\\2026-03-14-nimh-dmdd\\downloads\\remote_disruptive-mood-dysregulation-disorder-dmdd_f34a5bf42250.html"
+    ],
+    "downloaded_files": [
+      {
+        "url": "https://www.nimh.nih.gov/health/topics/disruptive-mood-dysregulation-disorder-dmdd",
+        "download_path": "data_sources\\literature_batches\\2026-03-14-nimh-dmdd\\downloads\\remote_disruptive-mood-dysregulation-disorder-dmdd_f34a5bf42250.html",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  "counts": {
+    "documents": 1,
+    "chunks": 9,
+    "knowledge_snippets": 9,
+    "phrase_candidates": 8,
+    "trigger_candidates": 0,
+    "rule_hints": 3
+  },
+  "lang": "en",
+  "topic_hints": [
+    "dmdd",
+    "nimh",
+    "children",
+    "disorder",
+    "trials",
+    "studies",
+    "more",
+    "research",
+    "find",
+    "health"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "batch_id": "2026-03-14-nimh-eating-disorders",
+  "generated_at": "2026-03-14T00:39:43.912438+00:00",
+  "sources": {
+    "local_paths": [],
+    "urls": [
+      "https://www.nimh.nih.gov/health/topics/eating-disorders"
+    ],
+    "resolved_paths": [
+      "D:\\WORK\\VS_Code\\Python_projects\\AI_assistant_psyhoterapist\\data_sources\\literature_batches\\2026-03-14-nimh-eating-disorders\\downloads\\remote_eating-disorders_b335efb6c8a2.html"
+    ],
+    "downloaded_files": [
+      {
+        "url": "https://www.nimh.nih.gov/health/topics/eating-disorders",
+        "download_path": "data_sources\\literature_batches\\2026-03-14-nimh-eating-disorders\\downloads\\remote_eating-disorders_b335efb6c8a2.html",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  "counts": {
+    "documents": 1,
+    "chunks": 10,
+    "knowledge_snippets": 10,
+    "phrase_candidates": 10,
+    "trigger_candidates": 0,
+    "rule_hints": 3
+  },
+  "lang": "en",
+  "topic_hints": [
+    "eating",
+    "disorders",
+    "research",
+    "nimh",
+    "trials",
+    "treatment",
+    "more",
+    "find",
+    "people",
+    "health"
+  ]
+}

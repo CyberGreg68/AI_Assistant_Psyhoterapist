@@ -1,0 +1,52 @@
+{
+  "rule_hints": [
+    {
+      "hint_type": "dominant_categories",
+      "items": [
+        {
+          "category": "variants",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hint_type": "risk_flags",
+      "items": []
+    },
+    {
+      "hint_type": "topic_hints",
+      "items": [
+        {
+          "topic": "suicide"
+        },
+        {
+          "topic": "depression"
+        },
+        {
+          "topic": "signs"
+        },
+        {
+          "topic": "information"
+        },
+        {
+          "topic": "find"
+        },
+        {
+          "topic": "help"
+        },
+        {
+          "topic": "espa"
+        },
+        {
+          "topic": "warning"
+        },
+        {
+          "topic": "publications"
+        },
+        {
+          "topic": "mental"
+        }
+      ]
+    }
+  ]
+}
